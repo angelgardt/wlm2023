@@ -1,0 +1,35 @@
+project:
+  type: book
+
+book:
+  title: "WLM 2023"
+  subtitle: "Анализ данных и машинное обучение для исследователей"
+  author:
+    - name: "Антон Ангельгардт"
+      email: "anton.angelgardt@gmail.com"
+      affiliations:
+        - name: "HSE UX LAB, HSE University"
+  date: "3/05/2023"
+  chapters:
+    - index.qmd
+    - part: part-r.qmd
+    - part: part-py.qmd
+    - part: part-math.qmd
+    - part: part-stat.qmd
+    - part: part-andan.qmd
+    - part: part-randan.qmd
+    - part: part-pyandan.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: 
+      light: [lightstyle.scss]
+      dark: [darkstyle.scss]
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
