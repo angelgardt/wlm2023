@@ -1,0 +1,29 @@
+/*-- scss:defaults --*/
+
+$lab-beginner-path:       "pics/lab_beginner.png" !default;
+$lab-intermediate-path:   "pics/lab_intermediate.png" !default;
+$lab-advanced-path:       "pics/lab_advanced.png" !default;
+
+
+/*-- scss:rules --*/
+
+.lab-chapter {
+  height: 1em;
+  margin: 0 0 1em 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.lab-beginner {
+  background-image: url($lab-beginner-path);
+}
+
+.lab-intermediate {
+  background-image: url($lab-intermediate-path);
+}
+
+.lab-advanced {
+  background-image: url($lab-advanced-path);
+}
+
