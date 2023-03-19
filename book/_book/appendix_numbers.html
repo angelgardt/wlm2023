@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - Источники</title>
+<title>WLM 2023 - 1&nbsp; Числа и железо</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix_git.html" rel="prev">
+<link href="./appendix_strings.html" rel="next">
+<link href="./part_appendices.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,7 +89,7 @@ div.csl-indent {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Источники</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Числа и железо</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -156,7 +138,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
+  <a href="./appendix_numbers.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -186,7 +168,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
   </div>
 </li>
     </ul>
@@ -194,14 +176,34 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#integer_iron" id="toc-integer_iron" class="nav-link active" data-scroll-target="#integer_iron"><span class="toc-section-number">1.1</span>  Целые числа</a>
+  <ul class="collapse">
+  <li><a href="#number_systems" id="toc-number_systems" class="nav-link" data-scroll-target="#number_systems"><span class="toc-section-number">1.1.1</span>  Системы счисления</a></li>
+  <li><a href="#system_to_system" id="toc-system_to_system" class="nav-link" data-scroll-target="#system_to_system"><span class="toc-section-number">1.1.2</span>  Перевод числа из одной системы счисления в другую</a></li>
+  <li><a href="#integer_types" id="toc-integer_types" class="nav-link" data-scroll-target="#integer_types"><span class="toc-section-number">1.1.3</span>  Целочисленные типы</a></li>
+  </ul></li>
+  <li><a href="#negative_iron" id="toc-negative_iron" class="nav-link" data-scroll-target="#negative_iron"><span class="toc-section-number">1.2</span>  Отрицательные числа</a>
+  <ul class="collapse">
+  <li><a href="#unsigned_type" id="toc-unsigned_type" class="nav-link" data-scroll-target="#unsigned_type"><span class="toc-section-number">1.2.1</span>  Знаковые и беззнаковые типы</a></li>
+  </ul></li>
+  <li><a href="#float_iron" id="toc-float_iron" class="nav-link" data-scroll-target="#float_iron"><span class="toc-section-number">1.3</span>  Числа с плавающей точкой</a>
+  <ul class="collapse">
+  <li><a href="#scientific_notation" id="toc-scientific_notation" class="nav-link" data-scroll-target="#scientific_notation"><span class="toc-section-number">1.3.1</span>  Экспоненциальная запись числа</a></li>
+  <li><a href="#float_types" id="toc-float_types" class="nav-link" data-scroll-target="#float_types"><span class="toc-section-number">1.3.2</span>  Типы чисел в плавающей точкой</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Источники</h1>
+<h1 class="title"><span id="appendix_numbers" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Числа и железо</span></span></h1>
 </div>
 
 
@@ -216,11 +218,36 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="doc-bibliography" style="display: none">
+<p><em>В ходе анализа данных мы непрерывно работаем с числами. Попробуем разобраться, как они храняться в памяти компа, и почему</em> <code>0.9 + 0.5 == 1.4</code> <em>далеко не во всех языках програмирования даёт результат</em> <code>TRUE</code>.</p>
+<section id="integer_iron" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="integer_iron"><span class="header-section-number">1.1</span> Целые числа</h2>
+<section id="number_systems" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="number_systems"><span class="header-section-number">1.1.1</span> Системы счисления</h3>
+</section>
+<section id="system_to_system" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="system_to_system"><span class="header-section-number">1.1.2</span> Перевод числа из одной системы счисления в другую</h3>
+</section>
+<section id="integer_types" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="integer_types"><span class="header-section-number">1.1.3</span> Целочисленные типы</h3>
+</section>
+</section>
+<section id="negative_iron" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="negative_iron"><span class="header-section-number">1.2</span> Отрицательные числа</h2>
+<section id="unsigned_type" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="unsigned_type"><span class="header-section-number">1.2.1</span> Знаковые и беззнаковые типы</h3>
+</section>
+</section>
+<section id="float_iron" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="float_iron"><span class="header-section-number">1.3</span> Числа с плавающей точкой</h2>
+<section id="scientific_notation" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="scientific_notation"><span class="header-section-number">1.3.1</span> Экспоненциальная запись числа</h3>
+</section>
+<section id="float_types" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="float_types"><span class="header-section-number">1.3.2</span> Типы чисел в плавающей точкой</h3>
 
-</div>
 
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -473,11 +500,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./appendix_git.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Git</span></span>
+      <a href="./part_appendices.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Приложения</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./appendix_strings.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Строки и железо</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
