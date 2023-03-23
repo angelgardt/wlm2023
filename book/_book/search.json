@@ -74,6 +74,6 @@
     "href": "appendix_git.html#cli",
     "title": "6  Git",
     "section": "6.3 CLI",
-    "text": "6.3 CLI\n\n6.3.1 git clone\n\n\n6.3.2 git status\n\n\n6.3.3 git diff\n\n\n6.3.4 git log\n\n\n6.3.5 git add\n\n\n6.3.6 git commit\n\n\n6.3.7 git push\n\n\n6.3.8 git pull\n\n\n6.3.9 git branch\n\n\n6.3.10 git checkout\n\n\n6.3.11 git config"
+    "text": "6.3 CLI\n\n6.3.1 git clone\n\n\n6.3.2 git status\n\n\n6.3.3 git diff\n\n\n6.3.4 git log\n\n\n6.3.5 git add\n\n\n6.3.6 git commit\n\n\n6.3.7 git push\n\n\n6.3.8 git pull\n\n\n6.3.9 git branch\n\n\n6.3.10 git checkout\n\n\n6.3.11 git config\n\ngit commit -am \"first commit\"\n\n\nlibrary(tidyverse)\ndata %>% \n  select(col1) %>% \n  slice(3:5) %>% \n  mutate(col3 = \"nope\",\n         col4 = FALSE)\n# comment"
   }
 ]

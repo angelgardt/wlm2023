@@ -28,3 +28,16 @@
 
 ### `git config`
 
+```{bash, eval=FALSE}
+git commit -am "first commit"
+```
+
+```{r, eval=FALSE}
+library(tidyverse)
+data %>% 
+  select(col1) %>% 
+  slice(3:5) %>% 
+  mutate(col3 = "nope",
+         col4 = FALSE)
+# comment
+```
