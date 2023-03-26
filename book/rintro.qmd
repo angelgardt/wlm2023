@@ -1,0 +1,28 @@
+# Введение в R {#rintro}
+
+```{r pkgs}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
+```{r df_simple_reg}
+tibble(
+  x = rnorm(50, 100, 15),
+  y = 8 + 3.4 * x + rnorm(50, 0, 30)
+) -> simple_reg
+```
+
+```{r simple_reg_figure}
+simple_reg %>% 
+  ggplot(aes(x, y)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm",
+              size = 2,
+              se = FALSE,
+              color = "red3")
+```
+
+```{r simple_reg_lm}
+fit <- lm(y ~ x, simple_reg)
+summary(fit)
+```
