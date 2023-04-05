@@ -30,7 +30,7 @@ function check(id)
     fb_test.hidden = false;
     fb_test.innerHTML = "В поле ответа пусто :(";
     fb_test.style.color = "#4142CE";
-  } else if (in_test.value.trim().replaceAll(" ", "") == ans[id])
+  } else if (in_test.value.replaceAll(" ", "") == ans[id])
   {
     fb_test.hidden = false;
     fb_test.innerHTML = "Верно!";
