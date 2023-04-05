@@ -210,8 +210,58 @@ body {
   font-weight: $body-font-weight;
 }
 
+code {
+  color: $gray-e6;
+}
 
 // Autochecks
+
+.autocheck input {
+  display: block;
+}
+
+.input-requirements {
+  font-size: .9em;
+  font-weight: 300;
+}
+
+.autocheck-input {
+  background-color: $gray-1e;
+  color: $gray-e6;
+  padding: .2em;
+  width: 100%;
+  padding-inline: .5em;
+  border: 1px solid $gray-05;
+  border-radius: 5px;
+  margin-bottom: 3%;
+}
+
+.autocheck-button {
+  background-color: $gray-1e;
+  color: $gray-f5;
+  border: 1px solid $gray-05;
+  border-radius: 5px;
+  padding: 1%;
+  padding-inline: 2% 
+}
+
+.autocheck-button:hover {
+  background-color: $gray-4b;
+}
+
+.autocheck-button:active {
+  background-color: $gray-82;
+}
+
+.autocheck-feedback {
+  background-color: $gray-1e;
+  padding: 1%;
+  padding-inline: 3%;
+  margin-bottom: 3%;
+  font-size: .9em;
+  border-radius: 5px;
+  font-weight: 300;
+}
 
 
 // Typography
