@@ -1,4 +1,5 @@
-function check(id)
+
+function checker(id, ans)
 {
   let in_test = document.getElementById(id);
   let fb_test = document.getElementById('fb-'+id);
