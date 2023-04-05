@@ -9,14 +9,11 @@
 Это задание простого задания `переменная`.
 
 ::: autocheck
-<div class="input-requirements">
-
+::: input-requirements
 В качестве ответа введите что-то
-</div>
+:::
 
-
-<input class="autocheck-input" type="text" id="in-test1"  placeholder="Введите ответ…">
-<input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()">
+<input class="autocheck-input" type="text" id="in-test1"  placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()">
 
 ::: {#fb-test1 .autocheck-feedback hidden=""}
 :::
@@ -70,11 +67,15 @@
 
 </details>
 
+
+
 ### #2
 
 <img class="level easy"/>
 
 Это еще одно простое задание.
+
+
 
 ### #3
 
@@ -82,11 +83,15 @@
 
 Это среднее задание.
 
+
+
 ### #4
 
 <img class="level medium"/>
 
 Это еще одно среднее задание.
+
+
 
 ### #5
 
@@ -94,9 +99,37 @@
 
 Это сложное задание.
 
+
+
+
+
 ## Дополнительные задания {#hw1_add}
 
-1.  <img class="level medium"/> Это среднее задание.
-2.  <img class="level hard"/> Это сложное задание.
-3.  <img class="level hard"/> Это еще одно сложное задание.
-4.  <img class="level extreme"/> Это очень сложное задание.
+### #1
+<img class="level medium"/>
+
+Это среднее задание.
+
+
+
+### #2
+
+<img class="level hard"/>
+
+Это сложное задание.
+
+
+
+### #3
+
+<img class="level hard"/>
+
+Это еще одно сложное задание.
+
+
+
+### #4
+
+<img class="level extreme"/>
+
+Это очень сложное задание.
