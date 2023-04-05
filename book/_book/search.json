@@ -30,23 +30,23 @@
   {
     "objectID": "appendix_numbers.html#integer_iron",
     "href": "appendix_numbers.html#integer_iron",
-    "title": "2  Числа и железо",
-    "section": "2.1 Целые числа",
-    "text": "2.1 Целые числа\n\n2.1.1 Системы счисления\n\n\n2.1.2 Перевод числа из одной системы счисления в другую\n\n\n2.1.3 Целочисленные типы"
+    "title": "11  Числа и железо",
+    "section": "11.1 Целые числа",
+    "text": "11.1 Целые числа\n\n11.1.1 Системы счисления\n\n\n11.1.2 Перевод числа из одной системы счисления в другую\n\n\n11.1.3 Целочисленные типы"
   },
   {
     "objectID": "appendix_numbers.html#negative_iron",
     "href": "appendix_numbers.html#negative_iron",
-    "title": "2  Числа и железо",
-    "section": "2.2 Отрицательные числа",
-    "text": "2.2 Отрицательные числа\n\n2.2.1 Знаковые и беззнаковые типы"
+    "title": "11  Числа и железо",
+    "section": "11.2 Отрицательные числа",
+    "text": "11.2 Отрицательные числа\n\n11.2.1 Знаковые и беззнаковые типы"
   },
   {
     "objectID": "appendix_numbers.html#float_iron",
     "href": "appendix_numbers.html#float_iron",
-    "title": "2  Числа и железо",
-    "section": "2.3 Числа с плавающей точкой",
-    "text": "2.3 Числа с плавающей точкой\n\n2.3.1 Экспоненциальная запись числа\n\n\n2.3.2 Типы чисел c плавающей точкой"
+    "title": "11  Числа и железо",
+    "section": "11.3 Числа с плавающей точкой",
+    "text": "11.3 Числа с плавающей точкой\n\n11.3.1 Экспоненциальная запись числа\n\n\n11.3.2 Типы чисел c плавающей точкой"
   },
   {
     "objectID": "index.html#thanks",
@@ -58,29 +58,57 @@
   {
     "objectID": "appendix_git.html#концепция-git",
     "href": "appendix_git.html#концепция-git",
-    "title": "7  Git",
-    "section": "7.1 Концепция Git",
-    "text": "7.1 Концепция Git"
+    "title": "16  Git",
+    "section": "16.1 Концепция Git",
+    "text": "16.1 Концепция Git"
   },
   {
     "objectID": "appendix_git.html#source-tree",
     "href": "appendix_git.html#source-tree",
-    "title": "7  Git",
-    "section": "7.2 Source Tree",
-    "text": "7.2 Source Tree"
+    "title": "16  Git",
+    "section": "16.2 Source Tree",
+    "text": "16.2 Source Tree"
   },
   {
     "objectID": "appendix_git.html#cli",
     "href": "appendix_git.html#cli",
-    "title": "7  Git",
-    "section": "7.3 CLI",
-    "text": "7.3 CLI\n\n7.3.1 git clone\n\n\n7.3.2 git status\n\n\n7.3.3 git diff\n\n\n7.3.4 git log\n\n\n7.3.5 git add\n\n\n7.3.6 git commit\n\n\n7.3.7 git push\n\n\n7.3.8 git pull\n\n\n7.3.9 git branch\n\n\n7.3.10 git checkout\n\n\n7.3.11 git config"
+    "title": "16  Git",
+    "section": "16.3 CLI",
+    "text": "16.3 CLI\n\n16.3.1 git clone\n\n\n16.3.2 git status\n\n\n16.3.3 git diff\n\n\n16.3.4 git log\n\n\n16.3.5 git add\n\n\n16.3.6 git commit\n\n\n16.3.7 git push\n\n\n16.3.8 git pull\n\n\n16.3.9 git branch\n\n\n16.3.10 git checkout\n\n\n16.3.11 git config"
   },
   {
     "objectID": "rintro.html",
     "href": "rintro.html",
     "title": "1  Введение в R",
     "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.1\n✔ readr   2.1.2     ✔ forcats 0.5.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\ntheme_set(theme_bw())\n\n\ntibble(\n  x = rnorm(50, 100, 15),\n  y = 8 + 3.4 * x + rnorm(50, 0, 30)\n) -> simple_reg\n\n\nsimple_reg %>% \n  ggplot(aes(x, y)) +\n  geom_point(size = 2) +\n  geom_smooth(method = \"lm\",\n              size = 2,\n              se = FALSE,\n              color = \"red3\")\n\n`geom_smooth()` using formula 'y ~ x'\n\n\n\n\n\n\nfit <- lm(y ~ x, simple_reg)\nsummary(fit)\n\n\nCall:\nlm(formula = y ~ x, data = simple_reg)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-60.696 -24.003   2.222  22.772  62.352 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  19.2731    25.7729   0.748    0.458    \nx             3.2549     0.2562  12.704   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 30.96 on 48 degrees of freedom\nMultiple R-squared:  0.7708,    Adjusted R-squared:  0.766 \nF-statistic: 161.4 on 1 and 48 DF,  p-value: < 2.2e-16"
+    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──\n\n\n✔ ggplot2 3.4.1     ✔ purrr   1.0.1\n✔ tibble  3.1.8     ✔ dplyr   1.1.0\n✔ tidyr   1.3.0     ✔ stringr 1.5.0\n✔ readr   1.4.0     ✔ forcats 0.5.0\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\ntheme_set(theme_bw())\n\n\ntibble(\n  x = rnorm(50, 100, 15),\n  y = 8 + 3.4 * x + rnorm(50, 0, 30)\n) -> simple_reg\n\n\nsimple_reg %>% \n  ggplot(aes(x, y)) +\n  geom_point(size = 2) +\n  geom_smooth(method = \"lm\",\n              size = 2,\n              se = FALSE,\n              color = \"red3\")\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nfit <- lm(y ~ x, simple_reg)\nsummary(fit)\n\n\nCall:\nlm(formula = y ~ x, data = simple_reg)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-51.725 -21.365  -5.773  13.407  95.097 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)   0.1268    25.1196   0.005    0.996    \nx             3.4933     0.2528  13.819   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 29.4 on 48 degrees of freedom\nMultiple R-squared:  0.7991,    Adjusted R-squared:  0.7949 \nF-statistic:   191 on 1 and 48 DF,  p-value: < 2.2e-16\n\n\n\n\nSession info\n\nsessionInfo()\n\nR version 4.0.3 (2020-10-10)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur 10.16\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] forcats_0.5.0   stringr_1.5.0   dplyr_1.1.0     purrr_1.0.1    \n[5] readr_1.4.0     tidyr_1.3.0     tibble_3.1.8    ggplot2_3.4.1  \n[9] tidyverse_1.3.0\n\nloaded via a namespace (and not attached):\n [1] tidyselect_1.2.0  xfun_0.31         lattice_0.20-41   splines_4.0.3    \n [5] haven_2.3.1       colorspace_2.1-0  vctrs_0.5.2       generics_0.1.3   \n [9] htmltools_0.5.3   mgcv_1.8-33       utf8_1.2.3        rlang_1.0.6      \n[13] pillar_1.8.1      glue_1.6.2        withr_2.5.0       DBI_1.1.0        \n[17] dbplyr_2.0.0      modelr_0.1.8      readxl_1.3.1      lifecycle_1.0.3  \n[21] munsell_0.5.0     gtable_0.3.1      cellranger_1.1.0  rvest_0.3.6      \n[25] htmlwidgets_1.5.3 evaluate_0.16     labeling_0.4.2    knitr_1.40       \n[29] fastmap_1.1.0     fansi_1.0.4       broom_0.7.6       Rcpp_1.0.10      \n[33] backports_1.2.0   scales_1.2.1      jsonlite_1.7.1    farver_2.1.1     \n[37] fs_1.5.0          hms_0.5.3         digest_0.6.27     stringi_1.7.12   \n[41] grid_4.0.3        cli_3.6.0         tools_4.0.3       magrittr_2.0.3   \n[45] crayon_1.3.4      pkgconfig_2.0.3   Matrix_1.2-18     xml2_1.3.2       \n[49] reprex_0.3.0      lubridate_1.7.10  assertthat_0.2.1  rmarkdown_2.14   \n[53] httr_1.4.2        rstudioapi_0.13   R6_2.5.1          nlme_3.1-149     \n[57] compiler_4.0.3"
+  },
+  {
+    "objectID": "rintro.html#rinstall",
+    "href": "rintro.html#rinstall",
+    "title": "1  Введение в R",
+    "section": "1.1 Установка",
+    "text": "1.1 Установка"
+  },
+  {
+    "objectID": "rintro.html#rinerface",
+    "href": "rintro.html#rinerface",
+    "title": "1  Введение в R",
+    "section": "1.2 Интерфейс",
+    "text": "1.2 Интерфейс\n\n\n\n\n\nSession info\n\nsessionInfo()\n\nR version 4.0.3 (2020-10-10)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur 10.16\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] digest_0.6.27     lifecycle_1.0.3   jsonlite_1.7.1    magrittr_2.0.3   \n [5] evaluate_0.16     rlang_1.0.6       stringi_1.7.12    cli_3.6.0        \n [9] rstudioapi_0.13   vctrs_0.5.2       rmarkdown_2.14    tools_4.0.3      \n[13] stringr_1.5.0     glue_1.6.2        htmlwidgets_1.5.3 xfun_0.31        \n[17] fastmap_1.1.0     compiler_4.0.3    htmltools_0.5.3   knitr_1.40"
+  },
+  {
+    "objectID": "index.html#book_structure",
+    "href": "index.html#book_structure",
+    "title": "WLM 2023",
+    "section": "Структура книги",
+    "text": "Структура книги"
+  },
+  {
+    "objectID": "index.html#book_signs",
+    "href": "index.html#book_signs",
+    "title": "WLM 2023",
+    "section": "Обозначения",
+    "text": "Обозначения"
   }
 ]

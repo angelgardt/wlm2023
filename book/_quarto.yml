@@ -14,8 +14,18 @@ book:
     - index.qmd
     - part: part-r.qmd
     - rintro.qmd
+    - rdtypes.qmd
+    - rdstructs.qmd
+    - rfuncs.qmd
+    - rstrings.qmd
+    - rdates.qmd
+    - rdata.qmd
+    - rvis.qmd
+    - rtidy.qmd
+    - rggplot2.qmd
     - part: part-py.qmd
     - part: part-math.qmd
+    - part: part-measurements.qmd
     - part: part-stat.qmd
     - part: part-andan.qmd
     - part: part-randan.qmd
@@ -48,5 +58,4 @@ format:
 
 highlight-style: github
 
-editor: visual
-
+editor: source
