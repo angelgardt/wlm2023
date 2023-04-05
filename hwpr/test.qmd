@@ -17,32 +17,6 @@
 
 ::: {#fb-test1 .autocheck-feedback hidden=""}
 :::
-
-```{=html}
-<script>
-    let in_test1 = document.getElementById('in-test1');
-    let fb_test1 = document.getElementById('fb-test1');
-  
-    function check_test1()
-    {
-      if (in_test1.value.trim() == "")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "В поле ответа пусто :(";
-        fb_test1.style = "color: #4142CE";
-      } else if (in_test1.value.trim() == "1.23")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Верно!";
-        fb_test1.style = "color:  #35D250";
-      } else {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Надо проверить вычисления…";
-        fb_test1.style = "color:  #D33E36";
-      }
-    }
-  </script>
-```
 :::
 
 <details class="hints">
@@ -59,7 +33,7 @@
 
 <details class="hint">
 
-<summary>Как создать матрицу?</summary>
+<summary>Что надо сделать?</summary>
 
 Текст подсказки.
 
@@ -67,23 +41,17 @@
 
 </details>
 
-
-
 ### #2
 
 <img class="level easy"/>
 
 Это еще одно простое задание.
 
-
-
 ### #3
 
 <img class="level medium"/>
 
 Это среднее задание.
-
-
 
 ### #4
 
@@ -91,26 +59,49 @@
 
 Это еще одно среднее задание.
 
-
-
 ### #5
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+### #6
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+### #7
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+### #8
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+### #9
 
 <img class="level hard"/>
 
 Это сложное задание.
 
+### #10
 
+<img class="level hard"/>
 
-
+Это сложное задание.
 
 ## Дополнительные задания {#hw1_add}
 
 ### #1
+
 <img class="level medium"/>
 
 Это среднее задание.
-
-
 
 ### #2
 
@@ -118,18 +109,24 @@
 
 Это сложное задание.
 
-
-
 ### #3
 
 <img class="level hard"/>
 
 Это еще одно сложное задание.
 
-
-
 ### #4
 
 <img class="level extreme"/>
 
 Это очень сложное задание.
+
+### #5
+
+<img class="level extreme"/>
+
+Это очень сложное задание.
+
+```{=html}
+<script type="text/javascript" src="test.js"></script>
+```
