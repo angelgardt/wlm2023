@@ -181,6 +181,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<!--
+HOW TO SET ID
+For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
+For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+-->
 <section id="hw1_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
 <section id="section" class="level3">
@@ -191,8 +196,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="input-requirements">
 <p>В качестве ответа введите что-то</p>
 </div>
-<p><input class="autocheck-input" type="text" id="in-test1" placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()"></p>
-<div id="fb-test1" class="autocheck-feedback" hidden="">
+<p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
+<div id="fb-hw1-1" class="autocheck-feedback" hidden="">
 
 </div>
 </div>

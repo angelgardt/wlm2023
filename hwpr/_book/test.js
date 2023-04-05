@@ -1,21 +1,29 @@
-    let in_test1 = document.getElementById('in-test1');
-    let fb_test1 = document.getElementById('fb-test1');
-  
-    function check_test1()
-    {
-      if (in_test1.value.trim() == "")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "В поле ответа пусто :(";
-        fb_test1.style.color = "#4142CE";
-      } else if (in_test1.value.trim().replaceAll(" ", "") == "1.23")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Верно!";
-        fb_test1.style.color = "#35D250";
-      } else {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Надо проверить вычисления…";
-        fb_test1.style.color = "#D33E36";
-      }
-    }
+/*
+HOW TO SET KEYS IN ANS
+hw<hw_n>-<task_n>, e.g. hw1-1
+*/
+
+var ans = {
+  "hw1-1": "1.23",
+};
+
+function check(id)
+{
+  let in_test = document.getElementById(id);
+  let fb_test = document.getElementById('fb-'+id);
+  if (in_test.value.trim() == "")
+  {
+    fb_test.hidden = false;
+    fb_test.innerHTML = "В поле ответа пусто :(";
+    fb_test.style.color = "#4142CE";
+  } else if (in_test.value.trim().replaceAll(" ", "") == ans[id])
+  {
+    fb_test.hidden = false;
+    fb_test.innerHTML = "Верно!";
+    fb_test.style.color = "#35D250";
+  } else {
+    fb_test.hidden = false;
+    fb_test.innerHTML = "Надо проверить вычисления…";
+    fb_test.style.color = "#D33E36";
+  }
+}

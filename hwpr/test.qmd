@@ -1,5 +1,12 @@
 # HW1. Типы данных. Векторы {#hw1 .unnumbered}
 
+```{=html}
+<!--
+HOW TO SET ID
+For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
+For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+-->
+```
 ## Основные задания {#hw1_main}
 
 ### #1
@@ -13,9 +20,11 @@
 В качестве ответа введите что-то
 :::
 
-<input class="autocheck-input" type="text" id="in-test1"  placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()">
+<input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…">
 
-::: {#fb-test1 .autocheck-feedback hidden=""}
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')">
+
+::: {#fb-hw1-1 .autocheck-feedback hidden=""}
 :::
 :::
 
