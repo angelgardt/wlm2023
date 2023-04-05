@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -174,7 +174,39 @@ ul.task-list li input[type="checkbox"] {
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img class="level easy"></p>
-<p>Это простое задание.</p>
+<p>Это задание простого задания <code>переменная</code>.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>В качестве ответа введите что-то</p>
+</div>
+<p><input class="autocheck-input" type="text" id="in-test1" placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()"></p>
+<div id="fb-test1" class="autocheck-feedback" hidden="">
+
+</div>
+<script>
+    let in_test1 = document.getElementById('in-test1');
+    let fb_test1 = document.getElementById('fb-test1');
+  
+    function check_test1()
+    {
+      if (in_test1.value.trim() == "")
+      {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "В поле ответа пусто :(";
+        fb_test1.style = "color:  #0000aa";
+      } else if (in_test1.value.trim() == "1.23")
+      {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "Верно!";
+        fb_test1.style = "color:  #00aa4a";
+      } else {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "Надо проверить вычисления…";
+        fb_test1.style = "color:  #b73239";
+      }
+    }
+  </script>
+</div>
 <details class="hints">
 <summary>
 Подсказки
@@ -183,13 +215,13 @@ ul.task-list li input[type="checkbox"] {
 <summary>
 Как делать задание?
 </summary>
-Текст подсказки.
+<p>Текст подсказки.</p>
 </details>
 <details class="hint">
 <summary>
 Как создать матрицу?
 </summary>
-Текст подсказки.
+<p>Текст подсказки.</p>
 </details>
 </details>
 </section>

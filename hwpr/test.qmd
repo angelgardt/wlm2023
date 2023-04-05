@@ -1,54 +1,102 @@
-# HW1. Типы данных. Векторы {.unnumbered #hw1}
+# HW1. Типы данных. Векторы {#hw1 .unnumbered}
 
 ## Основные задания {#hw1_main}
 
-
 ### #1
-<img class="level easy"> 
 
-Это простое задание.
+<img class="level easy"/>
+
+Это задание простого задания `переменная`.
+
+::: autocheck
+<div class="input-requirements">
+
+В качестве ответа введите что-то
+</div>
+
+
+<input class="autocheck-input" type="text" id="in-test1"  placeholder="Введите ответ…">
+<input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()">
+
+::: {#fb-test1 .autocheck-feedback hidden=""}
+:::
+
+```{=html}
+<script>
+    let in_test1 = document.getElementById('in-test1');
+    let fb_test1 = document.getElementById('fb-test1');
+  
+    function check_test1()
+    {
+      if (in_test1.value.trim() == "")
+      {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "В поле ответа пусто :(";
+        fb_test1.style = "color:  #0000aa";
+      } else if (in_test1.value.trim() == "1.23")
+      {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "Верно!";
+        fb_test1.style = "color:  #00aa4a";
+      } else {
+        fb_test1.hidden = false;
+        fb_test1.innerHTML = "Надо проверить вычисления…";
+        fb_test1.style = "color:  #b73239";
+      }
+    }
+  </script>
+```
+:::
 
 <details class="hints">
+
 <summary>Подсказки</summary>
+
 <details class="hint">
+
 <summary>Как делать задание?</summary>
+
 Текст подсказки.
+
 </details>
+
 <details class="hint">
+
 <summary>Как создать матрицу?</summary>
+
 Текст подсказки.
-</details>
+
 </details>
 
+</details>
 
-### #2 
-<img class="level easy">
+### #2
+
+<img class="level easy"/>
 
 Это еще одно простое задание.
 
-
 ### #3
-<img class="level medium">
+
+<img class="level medium"/>
 
 Это среднее задание.
 
+### #4
 
-### #4 
-<img class="level medium">
+<img class="level medium"/>
 
 Это еще одно среднее задание.
 
+### #5
 
-### #5 
-<img class="level hard">
+<img class="level hard"/>
 
 Это сложное задание.
 
-
-
 ## Дополнительные задания {#hw1_add}
 
-1. <img class="level medium"> Это среднее задание.
-2. <img class="level hard"> Это сложное задание.
-3. <img class="level hard"> Это еще одно сложное задание.
-4. <img class="level extreme"> Это очень сложное задание.
+1.  <img class="level medium"/> Это среднее задание.
+2.  <img class="level hard"/> Это сложное задание.
+3.  <img class="level hard"/> Это еще одно сложное задание.
+4.  <img class="level extreme"/> Это очень сложное задание.

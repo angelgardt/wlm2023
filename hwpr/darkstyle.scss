@@ -7,16 +7,17 @@ $theme: "darkly" !default;
 //
 
 $white:    #fff !default;
-$gray-100: #f5f5f5 !default;
-$gray-200: #e6e6e6 !default;
-$gray-300: #b4b4b4 !default;
-$gray-400: #828282 !default;
-$gray-500: #4b4b4b !default;
-$gray-600: #4b4b4b !default;
-$gray-700: #1e1e1e !default;
-$gray-800: #050505 !default;
-$gray-900: #222 !default;
+$gray-f5: #f5f5f5 !default;
+$gray-e6: #e6e6e6 !default;
+$gray-b4: #b4b4b4 !default;
+$gray-82: #828282 !default;
+$gray-4b: #4b4b4b !default;
+$gray-1e: #1e1e1e !default;
+$gray-05: #050505 !default;
+$gray-22: #222 !default;
 $black:    #000 !default;
+
+$gray-700: #1e1e1e !default; // for navbar compatibility
 
 $blue:    #226799 !default;
 $indigo:  #4142CE !default;
@@ -31,7 +32,7 @@ $cyan:    #359DD2 !default;
 
 // Body
 
-$body-bg:                   $gray-900 !default;
+$body-bg:                   $gray-22 !default;
 $body-color:                $white !default;
 @function body-mix($weight) {
     @return mix($body-bg, $body-color, $weight);
@@ -53,7 +54,7 @@ $min-contrast-ratio:   1.9 !default;
 
 // Links
 
-$link-color:                $gray-200 !default;
+$link-color:                $gray-e6 !default;
 
 // Fonts
 
@@ -209,6 +210,10 @@ body {
   font-weight: $body-font-weight;
 }
 
+
+// Autochecks
+
+
 // Typography
 
 .blockquote {
@@ -224,7 +229,7 @@ body {
 }
 
 .form-floating > label {
-  color: $gray-700;
+  color: $gray-1e;
 }
 
 // Navs
@@ -278,15 +283,15 @@ body {
 // Hints
 
 .hints {
-  background-color: $gray-700;
+  background-color: $gray-1e;
   padding: 1% 3%;
   border-radius: 10px;
-  color: $gray-300;
+  color: $gray-b4;
   font-size: $hint-font-size;
 }
 
 .hints>summary {
-  color: $gray-200;
+  color: $gray-e6;
   padding-top: 1%;
   padding-bottom: 1%;
 }
@@ -298,5 +303,5 @@ body {
 
 .hint>summary {
   font-weight: $h2-font-weight;
-  color: $gray-300;
+  color: $gray-b4;
 }
