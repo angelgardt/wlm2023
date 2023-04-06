@@ -36,9 +36,9 @@ function deployer {
 			echo -e "-----"
 			mkdir docs
 			touch docs/README.md
-			echo "-----"
-			echo "${BLUE}docs directory created${NC}"
-			echo "-----"
+			echo -e "-----"
+			echo -e "${BLUE}docs directory created${NC}"
+			echo -e "-----"
 		
 		else
 			mkdir tmp
@@ -86,4 +86,3 @@ fi
 }
 
 deployer $1
-
