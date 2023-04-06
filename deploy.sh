@@ -1,44 +1,53 @@
 #!/bin/bash
 
-set -e
+function deployer {
 
-if [ ! -f deploy_dirs.txt ]; then
-	echo "====="
-	echo "File deploy_dirs.txt does not exists"
-	echo "Create a deploy_dirs.txt file with a list of direstories that have to be deployed"
-	echo "Format of each line: <original_dir_name>:<deployed_dir_name>"
-	echo "====="
-else
-	mode="${1:-update}"
+	set -e
 	
-	if [ ! -d docs ]; then
-		mkdir docs
-		touch docs/README.md
-		echo "-----"
-		echo "docs directory created"
-		echo "-----"
-	fi
+	RED='\033[0;31m'
+	BLUE='\033[0;34m'
+	GREEN='\033[0;32m'
+	NC='\033[0m' # No Color
 
-	if [ "$mode" = "reset" ]; then
-		rm -rf docs
-		echo "docs directory removed"
-		mkdir docs
-		touch docs/README.md
-		echo "-----"
-		echo "docs directory created"
-		echo "-----"
-		
+	if [ ! -f deploy_dirs.txt ]; then
+		echo -e "${RED}=====${NC}"
+		echo -e "${RED}Deploy not completed${NC}"
+		echo -e "${RED}File deploy_dirs.txt does not exists${NC}"
+		echo -e "Create a deploy_dirs.txt file with a list of direstories (each on a new line) that have to be deployed"
+		echo -e "Format of each line: <original_dir_name>:<deployed_dir_name>"
+		echo -e "${RED}=====${NC}"
 	else
-		mkdir tmp
-		mv docs/README.md tmp
-		rm -rf docs
-		mkdir docs
-		mv tmp/README.md docs
-		rm -rf tmp
-	fi
-	
-	deploy_dirs=( $(cut -d ":" -f1 deploy_dirs.txt) )
-	deploy_names=( $(cut -d ":" -f2 deploy_dirs.txt) )
+		mode="${1:-update}"
+		deploy_dirs=( $(cut -d ":" -f1 deploy_dirs.txt) )
+		deploy_names=( $(cut -d ":" -f2 deploy_dirs.txt) )
+		
+		if [ ! -d docs ]; then
+			mkdir docs
+			touch docs/README.md
+			echo -e "-----"
+			echo -e "${BLUE}docs directory created${NC}"
+			echo -e "-----"
+		fi
+
+		if [ "$mode" = "reset" ]; then
+			rm -rf docs
+			echo -e "-----"
+			echo -e "${BLUE}docs directory removed${NC}"
+			echo -e "-----"
+			mkdir docs
+			touch docs/README.md
+			echo "-----"
+			echo "${BLUE}docs directory created${NC}"
+			echo "-----"
+		
+		else
+			mkdir tmp
+			mv docs/README.md tmp
+			rm -rf docs
+			mkdir docs
+			mv tmp/README.md docs
+			rm -rf tmp
+		fi
 	
 	echo "-----"
 	echo "Number of directories in deploy_dirs.txt: ${#deploy_dirs[*]}"
@@ -74,4 +83,7 @@ else
 	ls -Ral docs
 
 fi
+}
+
+deployer $1
 
