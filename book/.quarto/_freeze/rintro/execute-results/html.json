@@ -1,0 +1,16 @@
+{
+  "hash": "95991ba366af01efe0982fb517104559",
+  "result": {
+    "markdown": "# Введение в R {#rintro}\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.1\n✔ readr   2.1.2     ✔ forcats 0.5.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n```\n:::\n\n```{.r .cell-code}\ntheme_set(theme_bw())\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntibble(\n  x = rnorm(50, 100, 15),\n  y = 8 + 3.4 * x + rnorm(50, 0, 30)\n) -> simple_reg\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nsimple_reg %>% \n  ggplot(aes(x, y)) +\n  geom_point(size = 2) +\n  geom_smooth(method = \"lm\",\n              size = 2,\n              se = FALSE,\n              color = \"red3\")\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using formula 'y ~ x'\n```\n:::\n\n::: {.cell-output-display}\n![](rintro_files/figure-html/simple_reg_figure-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nfit <- lm(y ~ x, simple_reg)\nsummary(fit)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n\nCall:\nlm(formula = y ~ x, data = simple_reg)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-60.696 -24.003   2.222  22.772  62.352 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  19.2731    25.7729   0.748    0.458    \nx             3.2549     0.2562  12.704   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 30.96 on 48 degrees of freedom\nMultiple R-squared:  0.7708,\tAdjusted R-squared:  0.766 \nF-statistic: 161.4 on 1 and 48 DF,  p-value: < 2.2e-16\n```\n:::\n:::",
+    "supporting": [
+      "rintro_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
