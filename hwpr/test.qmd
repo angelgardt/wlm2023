@@ -1,5 +1,14 @@
 # HW1. Типы данных. Векторы {#hw1 .unnumbered}
 
+```{=html}
+<!--
+REPLACE ALL hw1 TO hm<n>
+
+HOW TO SET ID
+For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
+For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+-->
+```
 ## Основные задания {#hw1_main}
 
 ### #1
@@ -10,39 +19,15 @@
 
 ::: autocheck
 ::: input-requirements
-В качестве ответа введите что-то
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
 :::
 
-<input class="autocheck-input" type="text" id="in-test1"  placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()">
+<input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…">
 
-::: {#fb-test1 .autocheck-feedback hidden=""}
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')">
+
+::: {#fb-hw1-1 .autocheck-feedback hidden=""}
 :::
-
-```{=html}
-<script>
-    let in_test1 = document.getElementById('in-test1');
-    let fb_test1 = document.getElementById('fb-test1');
-  
-    function check_test1()
-    {
-      if (in_test1.value.trim() == "")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "В поле ответа пусто :(";
-        fb_test1.style = "color: #4142CE";
-      } else if (in_test1.value.trim() == "1.23")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Верно!";
-        fb_test1.style = "color:  #35D250";
-      } else {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Надо проверить вычисления…";
-        fb_test1.style = "color:  #D33E36";
-      }
-    }
-  </script>
-```
 :::
 
 <details class="hints">
@@ -59,7 +44,7 @@
 
 <details class="hint">
 
-<summary>Как создать матрицу?</summary>
+<summary>Что надо сделать?</summary>
 
 Текст подсказки.
 
@@ -67,15 +52,46 @@
 
 </details>
 
-
-
 ### #2
 
 <img class="level easy"/>
 
 Это еще одно простое задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')">
+
+::: {#fb-hw1-2 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #3
 
@@ -83,7 +99,40 @@
 
 Это среднее задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')">
+
+::: {#fb-hw1-3 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #4
 
@@ -91,26 +140,329 @@
 
 Это еще одно среднее задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')">
+
+::: {#fb-hw1-4 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #5
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')">
+
+::: {#fb-hw1-5 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #6
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')">
+
+::: {#fb-hw1-6 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #7
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')">
+
+::: {#fb-hw1-7 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #8
+
+<img class="level medium"/>
+
+Это еще одно среднее задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')">
+
+::: {#fb-hw1-8 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #9
 
 <img class="level hard"/>
 
 Это сложное задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…">
 
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')">
 
+::: {#fb-hw1-9 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #10
+
+<img class="level hard"/>
+
+Это сложное задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')">
+
+::: {#fb-hw1-10 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ## Дополнительные задания {#hw1_add}
 
 ### #1
+
 <img class="level medium"/>
 
 Это среднее задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')">
+
+::: {#fb-hw1-11 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #2
 
@@ -118,7 +470,40 @@
 
 Это сложное задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')">
+
+::: {#fb-hw1-12 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #3
 
@@ -126,10 +511,126 @@
 
 Это еще одно сложное задание.
 
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
 
+<input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')">
+
+::: {#fb-hw1-13 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
 
 ### #4
 
 <img class="level extreme"/>
 
 Это очень сложное задание.
+
+::: autocheck
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')">
+
+::: {#fb-hw1-14 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+### #5
+
+<img class="level extreme"/>
+
+Это очень сложное задание.
+
+::: {.autocheck hidden=""}
+::: input-requirements
+Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+:::
+
+<input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')">
+
+::: {#fb-hw1-15 .autocheck-feedback hidden=""}
+:::
+:::
+
+<details class="hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+Текст подсказки.
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+Текст подсказки.
+
+</details>
+
+</details>
+
+```{=html}
+<!--- CHANGE TEST TO hw<n> IN THE LINE BELOW--->
+<script type="text/javascript" src="ans_test.json"></script>
+<script type="text/javascript" src="checker.js"></script>
+<script type="text/javascript" src="check_test.js"></script>
+```

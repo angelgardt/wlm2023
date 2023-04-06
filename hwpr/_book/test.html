@@ -144,13 +144,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
   <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
   </ul></li>
   <li><a href="#hw1_add" id="toc-hw1_add" class="nav-link" data-scroll-target="#hw1_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#1</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#2</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#3</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#4</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -175,6 +181,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<!--
+REPLACE ALL hw1 TO hm<n>
+
+HOW TO SET ID
+For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
+For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+-->
 <section id="hw1_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
 <section id="section" class="level3">
@@ -183,35 +196,13 @@ ul.task-list li input[type="checkbox"] {
 <p>Это задание простого задания <code>переменная</code>.</p>
 <div class="autocheck">
 <div class="input-requirements">
-<p>В качестве ответа введите что-то</p>
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="in-test1" placeholder="Введите ответ…"> <input class="autocheck-button" type="button" value="Проверить" onclick="check_test1()"></p>
-<div id="fb-test1" class="autocheck-feedback" hidden="">
+<p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
+<div id="fb-hw1-1" class="autocheck-feedback" hidden="">
 
 </div>
-<script>
-    let in_test1 = document.getElementById('in-test1');
-    let fb_test1 = document.getElementById('fb-test1');
-  
-    function check_test1()
-    {
-      if (in_test1.value.trim() == "")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "В поле ответа пусто :(";
-        fb_test1.style = "color: #4142CE";
-      } else if (in_test1.value.trim() == "1.23")
-      {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Верно!";
-        fb_test1.style = "color:  #35D250";
-      } else {
-        fb_test1.hidden = false;
-        fb_test1.innerHTML = "Надо проверить вычисления…";
-        fb_test1.style = "color:  #D33E36";
-      }
-    }
-  </script>
 </div>
 <details class="hints">
 <summary>
@@ -225,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <details class="hint">
 <summary>
-Как создать матрицу?
+Что надо сделать?
 </summary>
 <p>Текст подсказки.</p>
 </details>
@@ -235,44 +226,456 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img class="level easy"></p>
 <p>Это еще одно простое задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')"></p>
+<div id="fb-hw1-2" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
 <section id="section-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img class="level medium"></p>
 <p>Это среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')"></p>
+<div id="fb-hw1-3" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
 <section id="section-3" class="level3">
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img class="level medium"></p>
 <p>Это еще одно среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')"></p>
+<div id="fb-hw1-4" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
 <section id="section-4" class="level3">
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<p><img class="level medium"></p>
+<p>Это еще одно среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')"></p>
+<div id="fb-hw1-5" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<p><img class="level medium"></p>
+<p>Это еще одно среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')"></p>
+<div id="fb-hw1-6" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<p><img class="level medium"></p>
+<p>Это еще одно среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')"></p>
+<div id="fb-hw1-7" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<p><img class="level medium"></p>
+<p>Это еще одно среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')"></p>
+<div id="fb-hw1-8" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img class="level hard"></p>
 <p>Это сложное задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')"></p>
+<div id="fb-hw1-9" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<p><img class="level hard"></p>
+<p>Это сложное задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')"></p>
+<div id="fb-hw1-10" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
 </section>
 <section id="hw1_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_add">Дополнительные задания</h2>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#1</h3>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">#1</h3>
 <p><img class="level medium"></p>
 <p>Это среднее задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')"></p>
+<div id="fb-hw1-11" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#2</h3>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">#2</h3>
 <p><img class="level hard"></p>
 <p>Это сложное задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')"></p>
+<div id="fb-hw1-12" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#3</h3>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">#3</h3>
 <p><img class="level hard"></p>
 <p>Это еще одно сложное задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')"></p>
+<div id="fb-hw1-13" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#4</h3>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">#4</h3>
 <p><img class="level extreme"></p>
 <p>Это очень сложное задание.</p>
+<div class="autocheck">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')"></p>
+<div id="fb-hw1-14" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<p><img class="level extreme"></p>
+<p>Это очень сложное задание.</p>
+<div class="autocheck" hidden="">
+<div class="input-requirements">
+<p>Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')"></p>
+<div id="fb-hw1-15" class="autocheck-feedback" hidden="">
+
+</div>
+</div>
+<details class="hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<p>Текст подсказки.</p>
+</details>
+</details>
+<!--- CHANGE TEST TO hw<n> IN THE LINE BELOW--->
+<script type="text/javascript" src="ans_test.json"></script>
+<script type="text/javascript" src="checker.js"></script>
+<script type="text/javascript" src="check_test.js"></script>
 
 
 </section>
