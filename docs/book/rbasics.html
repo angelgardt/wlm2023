@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 1&nbsp; Введение в R</title>
+<title>WLM 2023 - 1&nbsp; Основы R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./part-py.html" rel="next">
+<link href="./rdtypes.html" rel="next">
 <link href="./part-r.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Введение в R</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -117,7 +117,52 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Введение в R</span></a>
+  <a href="./rbasics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rdtypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Типы данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rdstructs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Структуры данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rfuncs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rstrings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Строки</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rdates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">rdates.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rdata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">rdata.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rvis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">rvis.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rtidy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">rtidy.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rggplot2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">rggplot2.html</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -125,6 +170,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Математика для анализа данных</span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Теория измерений</span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Статистика для анализа данных</span>
@@ -138,6 +186,39 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Анализ данных в Python</span>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Приложения</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Строки и железо</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_kilobytes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_memory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Память и процессор</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_proglang.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Языки программирования</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Git</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
@@ -152,11 +233,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#установка-r" id="toc-установка-r" class="nav-link active" data-scroll-target="#установка-r"><span class="toc-section-number">1.1</span>  Установка R</a></li>
-  <li><a href="#интерфейс-r" id="toc-интерфейс-r" class="nav-link" data-scroll-target="#интерфейс-r"><span class="toc-section-number">1.2</span>  Интерфейс R</a>
-  <ul class="collapse">
-  <li><a href="#console" id="toc-console" class="nav-link" data-scroll-target="#console"><span class="toc-section-number">1.2.1</span>  <code>Console</code></a></li>
-  </ul></li>
+  <li><a href="#rinstall" id="toc-rinstall" class="nav-link active" data-scroll-target="#rinstall"><span class="toc-section-number">1.1</span>  Установка</a></li>
+  <li><a href="#rinerface" id="toc-rinerface" class="nav-link" data-scroll-target="#rinerface"><span class="toc-section-number">1.2</span>  Интерфейс</a></li>
   </ul>
 </nav>
     </div>
@@ -165,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Введение в R</span></h1>
+<h1 class="title"><span id="rbasics" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></span></h1>
 </div>
 
 
@@ -180,39 +258,19 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Не следует, однако забывать, что новая модель организационной деятельности в значительной степени обуславливает создание новых предложений. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Таким образом новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Не следует, однако забывать, что сложившаяся структура организации требуют определения и уточнения существенных финансовых и административных условий.</p>
-<section id="установка-r" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="установка-r"><span class="header-section-number">1.1</span> Установка R</h2>
+<section id="rinstall" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="rinstall"><span class="header-section-number">1.1</span> Установка</h2>
 <div class="lab-chapter lab-beginner">
 
 </div>
-<p>Повседневная практика показывает, что консультация с широким активом требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры в значительной степени обуславливает создание новых предложений. С другой стороны укрепление и развитие структуры позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же рамки и место обучения кадров позволяет выполнять важные задания по разработке систем массового участия. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения направлений прогрессивного развития. Разнообразный и богатый опыт укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-<p>Равным образом рамки и место обучения кадров способствует подготовки и реализации новых предложений. С другой стороны консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же новая модель организационной деятельности требуют определения и уточнения дальнейших направлений развития.</p>
 </section>
-<section id="интерфейс-r" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="интерфейс-r"><span class="header-section-number">1.2</span> Интерфейс R</h2>
-<div class="lab-chapter lab-intermediate">
+<section id="rinerface" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="rinerface"><span class="header-section-number">1.2</span> Интерфейс</h2>
+<div class="lab-chapter lab-beginner">
 
 </div>
-<p>Задача организации, в особенности же сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.</p>
-<div class="task question">
-<p>Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.</p>
-</div>
-<div class="task math">
-<p>Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.</p>
-</div>
-<div class="task code">
-<p>Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.</p>
-</div>
-<section id="console" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="console"><span class="header-section-number">1.2.1</span> <code>Console</code></h3>
-<div class="lab-chapter lab-advanced">
-
-</div>
-<p>Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Таким образом реализация намеченных плановых заданий требуют от нас анализа дальнейших направлений развития.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -471,8 +529,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./part-py.html" class="pagination-link">
-        <span class="nav-page-text">Python</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./rdtypes.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Типы данных</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

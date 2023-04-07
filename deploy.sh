@@ -25,7 +25,7 @@ function deployer {
 	
 	# check mode
 	# abort function if not valid
-	elif [ "$mode" != "update" ] && [ "$PHONE_TYPE" != "reset" ] && [ "$PHONE_TYPE" != "render" ]; then
+	elif [ "$mode" != "update" ] && [ "$mode" != "reset" ] && [ "$mode" != "render" ]; then
 		
 		echo -e "${RED}=====${NC}"
 		echo -e "${RED}Deploy not completed${NC}"
@@ -87,14 +87,17 @@ function deployer {
   	    do
   		    printf "${GRAY}    %s\n${NC}" $item
   	    done
-  	    echo "-----"
+  	    echo -e "-----"
   	    
 		    for index in ${!deploy_dirs[*]}
 		    do
 		      # remove old _book dirs
 		      rm -rf `echo "${deploy_dirs[$index]}"/_book/`
+		      echo -e "-----"
+		      echo -e ${GRAY}${deploy_dirs[$index]}/_book/ ${BLUE}removed${NC}
+		      echo -e "-----"
 		      # render dirs
-		      quatro render ${deploy_dirs[$index]} --to html
+		      quarto render ${deploy_dirs[$index]} --to html
 		      # print dir render success
 		      echo -e "-----"
 		      echo -e "${GRAY}${deploy_dirs[$index]} ${BLUE}rendered${NC}"
@@ -112,7 +115,7 @@ function deployer {
     	echo -e "${BLUE}Directories to be deployed:${NC}"
     	for item in ${deploy_dirs[*]}
     	do
-    		printf "${GRAY}    %s\n" $item
+    		printf "${GRAY}    %s\n${NC}" $item
     	done
     	echo -e "-----"
     	
@@ -122,25 +125,28 @@ function deployer {
     			mkdir docs/"${deploy_names[$index]}"
     			echo -e "-----"
     			echo -e ${GRAY}docs/"${deploy_names[$index]}" ${BLUE}created${NC}
-    			echo "-----"
+    			echo -e "-----"
     		fi
     		
     		cp -R `echo "${deploy_dirs[$index]}"/_book/*` `echo docs/"${deploy_names[$index]}"`
-    		echo "-----"
-    		echo ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
-    		echo "-----"
+    		echo -e "-----"
+    		echo -e ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
+    		echo -e "-----"
     	done
     
+    	# print list of docs files
+    	ls -Ral docs
+    	# print deploy success
+    	echo -e "${GREEN}=====${NC}"
+    	echo -e "${GREEN}Deploy completed${NC}"
+    	echo -e "${GREEN}=====${NC}"
+    
     fi
-  	
-  	# print list of docs files
-  	ls -Ral docs
-  	# print deploy success
-  	echo "====="
-  	echo "Deploy completed"
-  	echo "====="
   
   fi
+  
+  # reset text color
+  echo -e "${NC}"
 }
 
 deployer $1
