@@ -96,8 +96,10 @@ function deployer {
 		      echo -e "-----"
 		      echo -e ${GRAY}${deploy_dirs[$index]}/_book/ ${BLUE}removed${NC}
 		      echo -e "-----"
+		      
 		      # render dirs
 		      quarto render ${deploy_dirs[$index]} --to html
+		      
 		      # print dir render success
 		      echo -e "-----"
 		      echo -e "${GRAY}${deploy_dirs[$index]} ${BLUE}rendered${NC}"
@@ -129,6 +131,7 @@ function deployer {
     		fi
     		
     		cp -R `echo "${deploy_dirs[$index]}"/_book/*` `echo docs/"${deploy_names[$index]}"`
+    	  
     		echo -e "-----"
     		echo -e ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
     		echo -e "-----"
