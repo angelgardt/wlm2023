@@ -357,6 +357,6 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 ```{=html}
 <!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="hw1.json"></script>
-<script type="module" src="handler.js"></script>
-<script type="module" src="hw_handler.js"></script>
+<script type="module" src="./js/handler.js"></script>
+<script type="module" src="./js/hw_handler.js"></script>
 ```

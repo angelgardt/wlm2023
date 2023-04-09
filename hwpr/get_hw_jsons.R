@@ -29,7 +29,7 @@ get_json <- function(hwn, hws_table) {
     pivot_wider(names_from = id,
                 values_from = value) %>% 
     jsonlite::toJSON(dataframe = "rows") %>%
-    paste0(hwn, "_json='[", ., "]'") %>% 
+    paste0(hwn, "_json='", ., "'") %>% 
     write(paste0(hwn, ".json"))
 }
 

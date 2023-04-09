@@ -1,25 +1,39 @@
 export class Handler {
   constructor(hw_json) {
-    this.hw_json = hw_json
+    this.hw_json = this.jsonHandler(hw_json);
   }
   
-  show_tasks() {
+  jsonHandler(hw_json) {
+    let handled_json = {};
+    let ntasks = hw_json.length;
+    
+    for (let i = 0; i < ntasks; i++) {
+      handled_json.set(hw_json[i][0], 
+      Object.fromEntries(Object.entries(hw_json[i]).slice(1, ntasks)));
+    }
+    return handled_json
+  }
+  
+  showTasks() {
+    let tasks = this.hw_json["task"]
+    for (let id in tasks) {
+      document.getElementById(id+"-task").innerHTML = tasks[id]
+    }
+  }
+  
+  showLevelLabs() {
     
   }
   
-  show_level_labs() {
+  showInputRequirements() {
     
   }
   
-  show_input_requirements() {
+  showHints() {
     
   }
   
-  show_hints() {
-    
-  }
-  
-  hide_autocheck() {
+  hideAutocheck() {
     
   }
   

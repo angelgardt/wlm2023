@@ -4,11 +4,11 @@ var hw_json = JSON.parse(hw1_json);
 
 const hw_handler = new Handler(hw_json);
 
-hw_handler.show_tasks();
-hw_handler.show_level_labs();
-hw_handler.show_input_requirements();
-hw_handler.show_hints();
-hw_handler.hide_autocheck();
+hw_handler.showTasks();
+hw_handler.showLevelLabs();
+hw_handler.showInputRequirements();
+hw_handler.showHints();
+hw_handler.hideAutocheck();
 
 // ans = hw_handler.get_ans();
 
