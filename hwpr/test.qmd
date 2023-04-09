@@ -3,7 +3,6 @@
 ```{=html}
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
-CHANGE test to hw<n> IN THE SCRIPT CHUNCK IN THE END OF THE FILE
 -->
 ```
 ## Основные задания {#hw1_main}
@@ -356,7 +355,8 @@ CHANGE test to hw<n> IN THE SCRIPT CHUNCK IN THE END OF THE FILE
 </details>
 
 ```{=html}
-<!--- CHANGE test TO hw<n> IN THE LINES BELOW--->
-<script type="text/javascript" src="test.json"></script>
-<script type="module" src="test.js"></script>
+<!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="hw1.json"></script>
+<script type="module" src="handler.js"></script>
+<script type="module" src="hw_handler.js"></script>
 ```

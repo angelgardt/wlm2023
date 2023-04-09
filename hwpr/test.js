@@ -1,6 +1,4 @@
+input_requirements = document.getElementsByClassName("input-requirements")
+console.log(input_requirements)
 
-var ans = JSON.parse(answers)[0]
-
-function check(id) {
-  checker(id, ans)
-}
+var hw_json = JSON.parse(hw1_json);

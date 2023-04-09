@@ -14,23 +14,39 @@ FIELDS = c("id",
 
 #Read google sheets data into R
 hws_table <- read_sheet('https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit#gid=1353840808') %>% 
-  select(FIELDS)
+  select(all_of(FIELDS))
 print(hws_table)
 
-get_json <- function(hw_n, hws_table) {
+get_json <- function(hwn, hws_table) {
   hws_table %>% 
-    filter(hw == hw_n) %>%
+    filter(hw == hwn) %>%
     mutate(
       across(everything(), ~replace_na(.x, ""))
     ) %>% 
     select(-hw, -n) %>%
+    mutate_at(vars(hint_titles, hints), ~str_replace_all(., "\n", "||")) %>%
     pivot_longer(cols = -id) %>% 
     pivot_wider(names_from = id,
                 values_from = value) %>% 
-    jsonlite::toJSON(dataframe = "rows",
-                     pretty = TRUE) %>% 
-    paste0(hw_n, "_json='", ., "'") %>% 
-    write(paste0(hw_n, ".json"))
+    jsonlite::toJSON(dataframe = "rows") %>%
+    paste0(hwn, "_json='[", ., "]'") %>% 
+    write(paste0(hwn, ".json"))
 }
 
 unique(hws_table$hw) %>% map(get_json, hws_table = hws_table)
+
+
+# hws_table %>%
+#   filter(hw == "hw1") %>%
+#   mutate(
+#     across(everything(), ~replace_na(.x, ""))
+#   ) %>%
+#   select(-hw, -n) %>%
+#   mutate_at(vars(hint_titles, hints), ~str_replace_all(., "\n", "||")) %>%
+#   pivot_longer(cols = -id) %>%
+#   pivot_wider(names_from = id,
+#               values_from = value) %>%
+#   jsonlite::toJSON(dataframe = "rows") %>%
+#   str_replace_all("[\r\n]", "||") %>%
+#   paste0("hw1", "_json='[", ., "]'")
+
