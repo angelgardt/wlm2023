@@ -29,8 +29,10 @@ get_json <- function(hwn, hws_table) {
     pivot_wider(names_from = id,
                 values_from = value) %>% 
     jsonlite::toJSON(dataframe = "rows") %>%
-    paste0(hwn, "_json='", ., "'") %>% 
-    write(paste0(hwn, ".json"))
+    paste0("hw_json='", ., "'", 
+           "\nN_TASKS=15",
+           "\nID='", hwn, "'") %>% 
+    write(paste0("js/", hwn, ".json"))
 }
 
 unique(hws_table$hw) %>% map(get_json, hws_table = hws_table)

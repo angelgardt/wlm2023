@@ -1,28 +1,40 @@
 export class Handler {
-  constructor(hw_json) {
-    this.hw_json = this.jsonHandler(hw_json);
+  constructor(info_json, N_TASKS, ID) {
+    this.info = this.jsonHandler(info_json);
+    this.N_TASKS = N_TASKS;
+    this.ID = ID
   }
   
-  jsonHandler(hw_json) {
-    let handled_json = {};
-    let ntasks = hw_json.length;
+  jsonHandler(info_json) {
+    let info = {};
     
-    for (let i = 0; i < ntasks; i++) {
-      handled_json.set(hw_json[i][0], 
-      Object.fromEntries(Object.entries(hw_json[i]).slice(1, ntasks)));
-    }
-    return handled_json
+    for (let i = 0; i < info_json.length; i++) {
+      info[info_json[i].name] = {};
+      if (info_json[i].name == "hints" || hw_json[i].name == "hint_titles") {
+          for (let t = 1; t <= this.N_TASKS; t++) {
+              id = ID + "-" + t;
+              hw_info[hw_json[i].name][id] = hw_json[i][id].split("||");
+          }
+      } else {
+          for (let t = 1; t <= this.N_TASKS; t++) {
+              id = this.ID + t;
+              handled_json[hw_json[i].name][id] = hw_json[i][id];
+          }
+      }
+  }
+    return info
   }
   
   showTasks() {
-    let tasks = this.hw_json["task"]
-    for (let id in tasks) {
-      document.getElementById(id+"-task").innerHTML = tasks[id]
+    for (let id in this.info["task"]) {
+      document.getElementById(id+"-task").innerHTML += this.info["task"][id]
     }
   }
   
   showLevelLabs() {
-    
+    for (let id in this.info["level"]) {
+      document.getElementById(id+"-complexity").innerHTML += this.info["task"][id]
+    }
   }
   
   showInputRequirements() {

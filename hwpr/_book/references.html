@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - HW1. Типы данных. Векторы</title>
+<title>WLM 2023 - Источники</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,8 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./part-hw.html" rel="prev">
+<link href="./test.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -89,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">HW1. Типы данных. Векторы</h1>
+      <h1 class="quarto-secondary-nav-title">Источники</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -120,12 +138,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active">HW1. Типы данных. Векторы</a>
+  <a href="./test.html" class="sidebar-item-text sidebar-link">HW1. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">Источники</a>
   </div>
 </li>
     </ul>
@@ -133,40 +151,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Содержание</h2>
-   
-  <ul>
-  <li><a href="#hw1_main" id="toc-hw1_main" class="nav-link active" data-scroll-target="#hw1_main">Основные задания</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  </ul></li>
-  <li><a href="#hw1_add" id="toc-hw1_add" class="nav-link" data-scroll-target="#hw1_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw1" class="quarto-section-identifier d-none d-lg-block">HW1. Типы данных. Векторы</span></h1>
+<h1 class="title d-none d-lg-block">Источники</h1>
 </div>
 
 
@@ -181,351 +173,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--
-REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
--->
-<section id="hw1_main" class="level2">
-<h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
-<p><img id="hw1-1-complexity" class="level"></p>
-<div id="hw1-1-task" class="task">
+<div id="refs" role="doc-bibliography" style="display: none">
 
 </div>
-<div class="autocheck">
-<div id="hw1-1-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
-<div id="hw1-1-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-1-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
-<p><img id="hw1-2-complexity" class="level"></p>
-<div id="hw1-2-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-2-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')"></p>
-<div id="hw1-2-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-2-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
-<p><img id="hw1-3-complexity" class="level"></p>
-<div id="hw1-3-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-3-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')"></p>
-<div id="hw1-3-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-3-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
-<p><img id="hw1-4-complexity" class="level"></p>
-<div id="hw1-4-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-4-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')"></p>
-<div id="hw1-4-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-4-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
-<p><img id="hw1-5-complexity" class="level"></p>
-<div id="hw1-5-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-5-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')"></p>
-<div id="hw1-5-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-5-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
-<p><img id="hw1-6-complexity" class="level"></p>
-<div id="hw1-6-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-6-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')"></p>
-<div id="hw1-6-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-6-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
-<p><img id="hw1-7-complexity" class="level"></p>
-<div id="hw1-7-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-7-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')"></p>
-<div id="hw1-7-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-7-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
-<p><img id="hw1-8-complexity" class="level"></p>
-<div id="hw1-8-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-8-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')"></p>
-<div id="hw1-8-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-8-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
-<p><img id="hw1-9-complexity" class="level"></p>
-<div id="hw1-9-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-9-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')"></p>
-<div id="hw1-9-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-9-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
-<p><img id="hw1-10-complexity" class="level"></p>
-<div id="hw1-10-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-10-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')"></p>
-<div id="hw1-10-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-10-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-</section>
-<section id="hw1_add" class="level2">
-<h2 class="anchored" data-anchor-id="hw1_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
-<p><img id="hw1-11-complexity" class="level"></p>
-<div id="hw1-11-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-11-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')"></p>
-<div id="hw1-11-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-11-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw1-12-complexity" class="level"></p>
-<div id="hw1-12-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-12-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')"></p>
-<div id="hw1-12-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-12-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
-<p><img id="hw1-13-complexity" class="level"></p>
-<div id="hw1-13-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-13-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')"></p>
-<div id="hw1-13-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-13-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
-<p><img id="hw1-14-complexity" class="level"></p>
-<div id="hw1-14-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-14-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')"></p>
-<div id="hw1-14-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-14-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
-<p><img id="hw1-15-complexity" class="level"></p>
-<div id="hw1-15-task" class="task">
-
-</div>
-<div class="autocheck">
-<div id="hw1-15-ir" class="input-requirements">
-
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')"></p>
-<div id="hw1-15-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<details class="hints" id="hw1-15-hints">
-<summary>
-Подсказки
-</summary>
-</details>
-<!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
-<script type="text/javascript" src="./js/hw1.json"></script>
-<script type="module" src="./js/hw_handler.js"></script>
-<script type="module" src="./js/handler.js"></script>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -778,14 +430,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./part-hw.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Домашки</span>
+      <a href="./test.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW1. Типы данных. Векторы</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">Источники</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

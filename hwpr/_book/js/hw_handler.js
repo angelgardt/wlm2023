@@ -1,8 +1,8 @@
 import { Handler } from './handler.js';
 
-var hw_json = JSON.parse(hw1_json);
+var hw_json_parced = JSON.parse(hw_json);
 
-const hw_handler = new Handler(hw_json);
+const hw_handler = new Handler(hw_json_parced, N_TASKS, ID);
 
 hw_handler.showTasks();
 hw_handler.showLevelLabs();
