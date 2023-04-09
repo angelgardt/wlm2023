@@ -2,24 +2,20 @@
 
 ```{=html}
 <!--
-REPLACE ALL hw1 TO hm<n>
-
-HOW TO SET ID
-For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
-For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
+CHANGE test to hw<n> IN THE SCRIPT CHUNCK IN THE END OF THE FILE
 -->
 ```
 ## Основные задания {#hw1_main}
 
 ### #1
 
-<img class="level easy"/>
+<img class="level" id="hw1-1-complexity">
 
 Это задание простого задания `переменная`.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-1-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…">
@@ -54,13 +50,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #2
 
-<img class="level easy"/>
+<img class="level" id="hw1-2-complexity">
 
 Это еще одно простое задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-2-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…">
@@ -95,13 +90,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #3
 
-<img class="level medium"/>
+<img class="level" id="hw1-3-complexity">
 
 Это среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-3-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…">
@@ -136,13 +130,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #4
 
-<img class="level medium"/>
+<img class="level" id="hw1-4-complexity">
 
 Это еще одно среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-4-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…">
@@ -177,13 +170,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #5
 
-<img class="level medium"/>
+<img class="level" id="hw1-5-complexity">
 
 Это еще одно среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-5-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…">
@@ -218,13 +210,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #6
 
-<img class="level medium"/>
+<img class="level" id="hw1-6-complexity">
 
 Это еще одно среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-6-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…">
@@ -259,13 +250,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #7
 
-<img class="level medium"/>
+<img class="level" id="hw1-7-complexity">
 
 Это еще одно среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-7-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…">
@@ -300,13 +290,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #8
 
-<img class="level medium"/>
+<img class="level" id="hw1-8-complexity">
 
 Это еще одно среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-8-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…">
@@ -341,13 +330,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #9
 
-<img class="level hard"/>
+<img class="level" id="hw1-9-complexity">
 
 Это сложное задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-9-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…">
@@ -382,13 +370,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #10
 
-<img class="level hard"/>
+<img class="level" id="hw1-10-complexity">
 
 Это сложное задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-10-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…">
@@ -425,13 +412,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #1
 
-<img class="level medium"/>
+<img class="level" id="hw1-11-complexity">
 
 Это среднее задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-11-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…">
@@ -466,13 +452,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #2
 
-<img class="level hard"/>
+<img class="level" id="hw1-12-complexity">
 
 Это сложное задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-12-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…">
@@ -507,13 +492,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #3
 
-<img class="level hard"/>
+<img class="level" id="hw1-13-complexity">
 
 Это еще одно сложное задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-13-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…">
@@ -548,13 +532,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #4
 
-<img class="level extreme"/>
+<img class="level" id="hw1-14-complexity">
 
 Это очень сложное задание.
 
 ::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {.input-requirements #hw1-14-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…">
@@ -589,13 +572,12 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 ### #5
 
-<img class="level extreme"/>
+<img class="level" id="hw1-15-complexity">
 
 Это очень сложное задание.
 
-::: {.autocheck hidden=""}
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: autocheck
+::: {.input-requirements #hw1-15-ir}
 :::
 
 <input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…">
@@ -629,7 +611,7 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 </details>
 
 ```{=html}
-<!--- CHANGE TEST TO hw<n> IN THE LINE BELOW--->
+<!--- CHANGE TEST TO hw<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="ans_test.json"></script>
 <script type="text/javascript" src="checker.js"></script>
 <script type="text/javascript" src="check_test.js"></script>
