@@ -98,7 +98,17 @@ function deployer {
 		      echo -e "-----"
 		      
 		      # render dirs
-		      quarto render ${deploy_dirs[$index]} --to html
+		      {
+		        # try
+		        quarto render ${deploy_dirs[$index]} --to html
+		      } || {
+		        # catch
+		        echo -e "${RED}=====${NC}"
+		        echo -e "${RED}Deploy not completed${NC}"
+		        echo -e "${RED}File rendering error${NC}"
+		        echo -e "${RED}=====${NC}"
+    		    exit
+		      }
 		      
 		      # print dir render success
 		      echo -e "-----"
@@ -130,7 +140,17 @@ function deployer {
     			echo -e "-----"
     		fi
     		
-    		cp -R `echo "${deploy_dirs[$index]}"/_book/*` `echo docs/"${deploy_names[$index]}"`
+    		{ 
+    		  # try
+    		  cp -R `echo "${deploy_dirs[$index]}"/_book/*` `echo docs/"${deploy_names[$index]}"` 
+    		} || {
+    		  # catch
+    		  echo -e "${RED}=====${NC}"
+		      echo -e "${RED}Deploy not completed${NC}"
+		      echo -e "${RED}File copying error${NC}"
+		      echo -e "${RED}=====${NC}"
+    		  exit
+    		}
     	  
     		echo -e "-----"
     		echo -e ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
