@@ -25,6 +25,8 @@ get_json <- function(hwn, hws_table) {
     ) %>% 
     select(-hw, -n) %>%
     mutate_at(vars(hint_titles, hints), ~str_replace_all(., "\n", "||")) %>%
+    mutate_at(vars(task, hint_titles, hints), ~str_replace_all(., "<", "<code>")) %>% 
+    mutate_at(vars(task, hint_titles, hints), ~str_replace_all(., ">", "</code>")) %>% 
     pivot_longer(cols = -id) %>% 
     pivot_wider(names_from = id,
                 values_from = value) %>% 
@@ -38,17 +40,19 @@ get_json <- function(hwn, hws_table) {
 unique(hws_table$hw) %>% map(get_json, hws_table = hws_table)
 
 
-# hws_table %>%
-#   filter(hw == "hw1") %>%
-#   mutate(
-#     across(everything(), ~replace_na(.x, ""))
-#   ) %>%
-#   select(-hw, -n) %>%
-#   mutate_at(vars(hint_titles, hints), ~str_replace_all(., "\n", "||")) %>%
-#   pivot_longer(cols = -id) %>%
-#   pivot_wider(names_from = id,
-#               values_from = value) %>%
-#   jsonlite::toJSON(dataframe = "rows") %>%
-#   str_replace_all("[\r\n]", "||") %>%
-#   paste0("hw1", "_json='[", ., "]'")
+hws_table %>%
+  filter(hw == "hw1") %>%
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+  ) %>%
+  select(-hw, -n) %>%
+  mutate_at(vars(hint_titles, hints), ~str_replace_all(., "\n", "||")) %>%
+  mutate_at(vars(task, hint_titles, hints), ~str_replace_all(., "<", "<code>")) %>% 
+  mutate_at(vars(task, hint_titles, hints), ~str_replace_all(., ">", "</code>")) %>% 
+  pivot_longer(cols = -id) %>%
+  pivot_wider(names_from = id,
+              values_from = value) %>%
+  jsonlite::toJSON(dataframe = "rows") %>%
+  str_replace_all("[\r\n]", "||") %>%
+  paste0("hw1", "_json='[", ., "]'")
 
