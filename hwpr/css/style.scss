@@ -1,9 +1,9 @@
 /*-- scss:defaults --*/
 
-$lab-easy-path:     "pics/lab_easy.png" !default;
-$lab-medium-path:   "pics/lab_medium.png" !default;
-$lab-hard-path:     "pics/lab_hard.png" !default;
-$lab-extreme-path:  "pics/lab_extreme.png" !default;
+$lab-easy-path:     "./pics/lab_easy.png" !default;
+$lab-medium-path:   "./pics/lab_medium.png" !default;
+$lab-hard-path:     "./pics/lab_hard.png" !default;
+$lab-extreme-path:  "./pics/lab_extreme.png" !default;
 
 
 /*-- scss:rules --*/
@@ -27,4 +27,10 @@ $lab-extreme-path:  "pics/lab_extreme.png" !default;
 
 .extreme {
   content: url($lab-extreme-path);
+}
+
+// Hints
+
+.hints {
+  display: none;
 }

@@ -185,7 +185,6 @@ $pre-color:                         inherit !default;
 
 /*-- scss:rules --*/
 
-
 // Variables
 
 // Headers
@@ -254,6 +253,7 @@ code {
 }
 
 .autocheck-feedback {
+  display: none;
   background-color: $gray-1e;
   padding: 1%;
   padding-inline: 3%;
