@@ -25,7 +25,7 @@ for (let id in info["has_autocheck"]) {
 
 
 var counter = {};
-for (id in info["autocheck_answer"]) {
+for (let id in info["autocheck_answer"]) {
   counter[id] = 0;
 }
 
