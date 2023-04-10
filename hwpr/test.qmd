@@ -2,35 +2,34 @@
 
 ```{=html}
 <!--
-REPLACE ALL hw1 TO hm<n>
-
-HOW TO SET ID
-For inputs: hw<hw_n>-<task_n>, e.g. hw1-1
-For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
+REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
 ```
 ## Основные задания {#hw1_main}
 
 ### #1
 
-<img class="level easy"/>
+<img id="hw1-1-level" class="level"/>
 
-Это задание простого задания `переменная`.
+::: {#hw1-1-task .task}
+Текст задания `переменная`.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-1-autocheck .autocheck}
+::: {#hw1-1-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')">
 
-::: {#fb-hw1-1 .autocheck-feedback hidden=""}
+::: {#hw1-1-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-1-hints">
 
 <summary>Подсказки</summary>
 
@@ -38,40 +37,48 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #2
 
-<img class="level easy"/>
+<img id="hw1-2-level" class="level"/>
 
-Это еще одно простое задание.
+::: {#hw1-2-task .task}
+Текст задания.
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+:::
+
+::: {#hw1-2-autocheck .autocheck}
+::: {#hw1-2-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')">
 
-::: {#fb-hw1-2 .autocheck-feedback hidden=""}
+::: {#hw1-2-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-2-hints">
 
 <summary>Подсказки</summary>
 
@@ -79,40 +86,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #3
 
-<img class="level medium"/>
+<img id="hw1-3-level" class="level"/>
 
-Это среднее задание.
+::: {#hw1-3-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-3-autocheck .autocheck}
+::: {#hw1-3-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')">
 
-::: {#fb-hw1-3 .autocheck-feedback hidden=""}
+::: {#hw1-3-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-3-hints">
 
 <summary>Подсказки</summary>
 
@@ -120,40 +133,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #4
 
-<img class="level medium"/>
+<img id="hw1-4-level" class="level"/>
 
-Это еще одно среднее задание.
+::: {#hw1-4-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-4-autocheck .autocheck}
+::: {#hw1-4-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')">
 
-::: {#fb-hw1-4 .autocheck-feedback hidden=""}
+::: {#hw1-4-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-4-hints">
 
 <summary>Подсказки</summary>
 
@@ -161,40 +180,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #5
 
-<img class="level medium"/>
+<img id="hw1-5-level" class="level"/>
 
-Это еще одно среднее задание.
+::: {#hw1-5-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-5-autocheck .autocheck}
+::: {#hw1-5-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')">
 
-::: {#fb-hw1-5 .autocheck-feedback hidden=""}
+::: {#hw1-5-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-5-hints">
 
 <summary>Подсказки</summary>
 
@@ -202,40 +227,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #6
 
-<img class="level medium"/>
+<img id="hw1-6-level" class="level"/>
 
-Это еще одно среднее задание.
+::: {#hw1-6-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-6-autocheck .autocheck}
+::: {#hw1-6-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')">
 
-::: {#fb-hw1-6 .autocheck-feedback hidden=""}
+::: {#hw1-6-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-6-hints">
 
 <summary>Подсказки</summary>
 
@@ -243,40 +274,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #7
 
-<img class="level medium"/>
+<img id="hw1-7-level" class="level"/>
 
-Это еще одно среднее задание.
+::: {#hw1-7-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-7-autocheck .autocheck}
+::: {#hw1-7-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')">
 
-::: {#fb-hw1-7 .autocheck-feedback hidden=""}
+::: {#hw1-7-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-7-hints">
 
 <summary>Подсказки</summary>
 
@@ -284,40 +321,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #8
 
-<img class="level medium"/>
+<img id="hw1-8-level" class="level"/>
 
-Это еще одно среднее задание.
+::: {#hw1-8-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-8-autocheck .autocheck}
+::: {#hw1-8-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')">
 
-::: {#fb-hw1-8 .autocheck-feedback hidden=""}
+::: {#hw1-8-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-8-hints">
 
 <summary>Подсказки</summary>
 
@@ -325,40 +368,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #9
 
-<img class="level hard"/>
+<img id="hw1-9-level" class="level"/>
 
-Это сложное задание.
+::: {#hw1-9-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-9-autocheck .autocheck}
+::: {#hw1-9-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')">
 
-::: {#fb-hw1-9 .autocheck-feedback hidden=""}
+::: {#hw1-9-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-9-hints">
 
 <summary>Подсказки</summary>
 
@@ -366,40 +415,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #10
 
-<img class="level hard"/>
+<img id="hw1-10-level" class="level"/>
 
-Это сложное задание.
+::: {#hw1-10-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-10-autocheck .autocheck}
+::: {#hw1-10-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')">
 
-::: {#fb-hw1-10 .autocheck-feedback hidden=""}
+::: {#hw1-10-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-10-hints">
 
 <summary>Подсказки</summary>
 
@@ -407,42 +462,48 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ## Дополнительные задания {#hw1_add}
 
 ### #1
 
-<img class="level medium"/>
+<img id="hw1-11-level" class="level"/>
 
-Это среднее задание.
+::: {#hw1-11-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-11-autocheck .autocheck}
+::: {#hw1-11-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')">
 
-::: {#fb-hw1-11 .autocheck-feedback hidden=""}
+::: {#hw1-11-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-11-hints">
 
 <summary>Подсказки</summary>
 
@@ -450,40 +511,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #2
 
-<img class="level hard"/>
+<img id="hw1-12-level" class="level"/>
 
-Это сложное задание.
+::: {#hw1-12-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-12-autocheck .autocheck}
+::: {#hw1-12-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')">
 
-::: {#fb-hw1-12 .autocheck-feedback hidden=""}
+::: {#hw1-12-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-12-hints">
 
 <summary>Подсказки</summary>
 
@@ -491,40 +558,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #3
 
-<img class="level hard"/>
+<img id="hw1-13-level" class="level"/>
 
-Это еще одно сложное задание.
+::: {#hw1-13-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-13-autocheck .autocheck}
+::: {#hw1-13-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')">
 
-::: {#fb-hw1-13 .autocheck-feedback hidden=""}
+::: {#hw1-13-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-13-hints">
 
 <summary>Подсказки</summary>
 
@@ -532,40 +605,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #4
 
-<img class="level extreme"/>
+<img id="hw1-14-level" class="level"/>
 
-Это очень сложное задание.
+::: {#hw1-14-task .task}
+Текст задания.
+:::
 
-::: autocheck
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-14-autocheck .autocheck}
+::: {#hw1-14-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')">
 
-::: {#fb-hw1-14 .autocheck-feedback hidden=""}
+::: {#hw1-14-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-14-hints">
 
 <summary>Подсказки</summary>
 
@@ -573,40 +652,46 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ### #5
 
-<img class="level extreme"/>
+<img id="hw1-15-level" class="level"/>
 
-Это очень сложное задание.
+::: {#hw1-15-task .task}
+Текст задания.
+:::
 
-::: {.autocheck hidden=""}
-::: input-requirements
-Описание формата инпута. Значение округлите до сотых по математическим плавилам. Проверка игнорирует все пробелы.
+::: {#hw1-15-autocheck .autocheck}
+::: {#hw1-15-ir .input-requirements}
+Описание формата инпута.
 :::
 
 <input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…">
 
 <input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')">
 
-::: {#fb-hw1-15 .autocheck-feedback hidden=""}
+::: {#hw1-15-fb .autocheck-feedback}
 :::
 :::
 
-<details class="hints">
+::: hints-wrapper
+<details class="hints" id="hw1-15-hints">
 
 <summary>Подсказки</summary>
 
@@ -614,23 +699,25 @@ For feedbacks: fb-hw<hw_n>-<task_n>, e.g. fb-hw1-1
 
 <summary>Как делать задание?</summary>
 
-Текст подсказки.
-
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
-Текст подсказки.
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
 
 </details>
 
 </details>
+:::
 
 ```{=html}
-<!--- CHANGE TEST TO hw<n> IN THE LINE BELOW--->
-<script type="text/javascript" src="ans_test.json"></script>
-<script type="text/javascript" src="checker.js"></script>
-<script type="text/javascript" src="check_test.js"></script>
+<!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw1.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
 ```

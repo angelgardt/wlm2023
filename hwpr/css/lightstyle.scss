@@ -131,7 +131,6 @@ $btn-close-hover-opacity:    1 !default;
 
 /*-- scss:rules --*/
 
-
 // Variables
 
 // Headers
@@ -199,6 +198,7 @@ code {
 }
 
 .autocheck-feedback {
+  display: none;
   background-color: $gray-f5;
   padding: 1%;
   padding-inline: 3%;
