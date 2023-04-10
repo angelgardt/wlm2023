@@ -1,74 +1,78 @@
-export class Handler {
+class Handler {
+  
   constructor(info_json, N_TASKS, ID) {
-    this.info = this.jsonHandler(info_json);
+    this.info = this.jsonHandler(info_json, N_TASKS, ID);
     this.N_TASKS = N_TASKS;
-    this.ID = ID
+    this.ID = ID;
+    this.counter = this.createCounter();
   }
   
-  jsonHandler(info_json) {
+  jsonHandler(info_json, N_TASKS, ID) {
     let info = {};
-    
     for (let i = 0; i < info_json.length; i++) {
       info[info_json[i].name] = {};
-      if (info_json[i].name == "hints" || hw_json[i].name == "hint_titles") {
-          for (let t = 1; t <= this.N_TASKS; t++) {
-              id = ID + "-" + t;
-              hw_info[hw_json[i].name][id] = hw_json[i][id].split("||");
-          }
-      } else {
-          for (let t = 1; t <= this.N_TASKS; t++) {
-              id = this.ID + t;
-              handled_json[hw_json[i].name][id] = hw_json[i][id];
-          }
+      for (let t = 1; t <= N_TASKS; t++) {
+        id = ID + "-" + t;
+        info[info_json[i].name][id] = info_json[i][id];
       }
-  }
+    }
     return info
   }
   
-  showTasks() {
-    for (let id in this.info["task"]) {
-      document.getElementById(id+"-task").innerHTML += this.info["task"][id]
-    }
-  }
-  
-  showLevelLabs() {
+  showLevelLabs(this.info) {
     for (let id in this.info["level"]) {
-      document.getElementById(id+"-complexity").innerHTML += this.info["task"][id]
+      document.getElementById(id+"-level").classList.add(info["level"][id]);
     }
   }
   
-  showInputRequirements() {
-    
+  hideAutocheck(this.info) {
+    for (let id in this.info["has_autocheck"]) {
+      if (info["has_autocheck"][id] == "False") {
+        document.getElementById(id+"-autocheck").style.display = "none";
+      }
+    }
   }
   
-  showHints() {
-    
+  createCounter(this.info) {
+    var counter = {};
+    for (id in info["autocheck_answer"]) {
+      counter[id] = 0;
+    }
+    return counter
   }
   
-  hideAutocheck() {
-    
+  showHints(id, this.counter) {
+    if (counter[id] > 2) {
+      document.getElementById(id+"-hints").style.display = "block";
+    }
   }
   
-  
-  checker(id, ans)
-  {
-    let in_test = document.getElementById(id);
-    let fb_test = document.getElementById('fb-'+id);
-    if (in_test.value.trim() == "")
+  checker(id, ans, counter = this.counter) {
+    let in_task = document.getElementById(id).value;
+    let fb_task = document.getElementById(id+"-fb");
+    if (in_task.trim() == "") 
     {
-      fb_test.hidden = false;
-      fb_test.innerHTML = "В поле ответа пусто :(";
-      fb_test.style.color = "#4142CE";
-    } else if (in_test.value.replaceAll(" ", "") == ans[id])
+      fb_task.style.display = "block";
+      fb_task.innerHTML = "В поле ответа пусто :(";
+      fb_task.style.color = "#4142CE";
+    } else if (in_task.replaceAll(" ", "") == ans)
     {
-      fb_test.hidden = false;
-      fb_test.innerHTML = "Верно!";
-      fb_test.style.color = "#35D250";
+      fb_task.style.display = "block";
+      fb_task.innerHTML = "Верно!";
+      fb_task.style.color = "#35D250";
     } else {
-      fb_test.hidden = false;
-      fb_test.innerHTML = "Надо проверить вычисления…";
-      fb_test.style.color = "#D33E36";
+      fb_task.style.display = "block";
+      fb_task.innerHTML = "Надо проверить вычисления…";
+      fb_task.style.color = "#D33E36";
+      counter[id]++;
+    }
+    if (counter[id] > 2) {
+      document.getElementById(id+"-hints").style.display = "block";
     }
   }
+  
+  check(id) {
+    checker(id = id, ans = this.info["autocheck_answer"][id]);
+  }
+  
 }
-
