@@ -17,10 +17,10 @@ book:
     - part: part-stat.qmd
     - part: part-andan.qmd
     - references.qmd
-  favicon: favicon.png
+  favicon: pics/favicon.png
   navbar: 
     title: "WLM 2023 // HSE UX LAB"
-    logo: logo.png
+    logo: pics/logo.png
     left: 
       - text: "Книга"
         href: ../book/index.html
@@ -39,7 +39,7 @@ bibliography: references.bib
 
 format:
   html:
-    cover-image: lec-cover.png
+    cover-image: pics/lec-cover.png
     theme: 
       light: [lightstyle.scss]
       dark: [darkstyle.scss]
