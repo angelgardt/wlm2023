@@ -1,8 +1,9 @@
 /*-- scss:defaults --*/
 
-$lab-beginner-path:       "pics/lab_beginner.png" !default;
-$lab-intermediate-path:   "pics/lab_intermediate.png" !default;
-$lab-advanced-path:       "pics/lab_advanced.png" !default;
+$lab-junior-path:       "pics/lab_junior.png" !default;
+$lab-middle-path:   "pics/lab_middle.png" !default;
+$lab-senior-path:       "pics/lab_senior.png" !default;
+$lab-guru-path:       "pics/lab_guru.png" !default;
 
 
 /*-- scss:rules --*/
@@ -15,15 +16,19 @@ $lab-advanced-path:       "pics/lab_advanced.png" !default;
   background-size: contain;
 }
 
-.lab-beginner {
-  background-image: url($lab-beginner-path);
+.lab-junior {
+  background-image: url($lab-junior-path);
 }
 
-.lab-intermediate {
-  background-image: url($lab-intermediate-path);
+.lab-middle {
+  background-image: url($lab-middle-path);
 }
 
-.lab-advanced {
-  background-image: url($lab-advanced-path);
+.lab-senior {
+  background-image: url($lab-senior-path);
+}
+
+.lab-guru {
+  background-image: url($lab-guru-path);
 }
 

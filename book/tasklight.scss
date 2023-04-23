@@ -5,6 +5,8 @@
 $lab-question-path:   "pics/lab_question_light.png" !default;
 $lab-math-path:       "pics/lab_math_light.png" !default;
 $lab-code-path:       "pics/lab_code_light.png" !default;
+$lab-advice-path:       "pics/lab_advice_light.png" !default;
+$lab-important-path:       "pics/lab_important_light.png" !default;
 
 
 // Colors
@@ -14,7 +16,7 @@ $task-border:   #1e1e1e !default;
 
 /*-- scss:rules --*/
 
-.task {
+.task, .note {
   background-color: $task-bg;
   border: 1px solid $task-border;
   border-radius: 20px;
@@ -22,7 +24,7 @@ $task-border:   #1e1e1e !default;
   margin: 2em 0 2em 0;
 }
 
-.task:before {
+.task:before, .note:before {
   background-size: 3em;
   background-repeat: no-repeat;
   position: relative;
@@ -45,4 +47,12 @@ $task-border:   #1e1e1e !default;
 
 .code::before {
   background-image: url($lab-code-path);
+}
+
+.advice:before {
+  background-image: url($lab-advice-path);
+}
+
+.important:before {
+  background-image: url($lab-important-path);
 }
