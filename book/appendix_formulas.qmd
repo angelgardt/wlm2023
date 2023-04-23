@@ -1,0 +1,68 @@
+# Формулы {#formulas}
+
+## Степени и корни {#formulas_power}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+      $$a^n \cdot a^m = a^{n+m}$$
+      $$\frac{a^n}{a^m} = a^{n-m}$$
+      $$(a^n)^m = a^{nm}$$
+      $$a^0 = 1$$
+      $$a^{-n}=\frac{1}{a^n}$$
+      $$(a \cdot b)^n = a^n \cdot b^n$$
+      $$\Big(\frac{a}{b}\Big)^n = \frac{a^n}{b^n}$$
+    </td>
+    <td valign="top">
+      $$a^{\frac{1}{n}}=\sqrt[n]{a}$$
+      $$a^{\frac{m}{n}}=\sqrt[n]{a^m}$$
+      $$\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}$$
+      $$(a \cdot b)^{\frac{1}{n}} = a^{\frac{1}{n}} \cdot b^{\frac{1}{n}}$$
+      $$\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}$$
+      $$\Big(\frac{a}{b}\Big)^{\frac{1}{n}} = \frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}$$
+    </td>
+   </tr>
+</table>
+
+ $$
+x^n = a \Rightarrow x = 
+\begin{cases}
+\pm \sqrt[n]{a}, &\quad x \mod 2 = 0 \\ 
+\sqrt[n]{a}, &\quad x \mod 2 = 1
+\end{cases}
+$$
+
+## Логарифмы {#formulas_log}
+
+$$\log_b a = c \Leftrightarrow a^c = b, a > 0, b > 0, b \neq 1$$
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\log_a a = 1$$
+    $$\log_c(ab) = \log_c a + \log_c b$$
+    $$\log_c\Big(\frac{a}{b}\Big) = \log_c a - \log_c b$$
+    </td>
+    <td valign="top">
+    $$\log_c 1 = 0$$
+    $$\log_c a^b = b \log_c a$$
+    $$\log_{c^b} a = \frac{1}{b} \log_c a$$
+    </td>
+   </tr>
+</table>
+
+
+## Модуль {#formulas_abs}
+
+$$
+|a| = 
+\begin{cases}
+a, &a \geq 0 \\
+-a, &a < 0
+\end{cases}
+$$
+
+$$|x| \leq a \Rightarrow -a \leq x \leq a \Leftrightarrow x \in [-a, a]$$
+
+$$|x| \geq a \Rightarrow x \leq -a \wedge x \geq a \Leftrightarrow x \in (-\infty, -a] \cup [a, +\infty)$$
+
