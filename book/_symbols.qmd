@@ -1,12 +1,20 @@
 
 <!--- Number sets--->
 \newcommand{\setN}{\mathbb{N}}
+\newcommand{\setNo}{\mathbb{N}_{0}}
 \newcommand{\setZ}{\mathbb{Z}}
-\newcommand{\setZp}{\mathbb{Z}_{+}}
-\newcomand{\setQ}{\mathbb{Q}}
+\newcommand{\setQ}{\mathbb{Q}}
 \newcommand{\setR}{\mathbb{R}}
 \newcommand{\setC}{\mathbb{C}}
+
+<!--- Linear Algebra --->
+\newcommand{\vm}[1]{\mathbf{#1}} <!--- vectors and matrices --->
+
+<!--- Probability --->
+\newcommand{\prob}{\mathbb{P}}
 
 <!--- Distributions --->
 \newcommand{\norm}{\mathcal{N}}
 \newcommand{\iid}{\overset{\text{iid}}{\thicksim}}
+
+
