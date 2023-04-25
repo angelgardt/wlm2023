@@ -1,0 +1,1428 @@
+# P10. Простая линейная регрессия. Множественная линейная регрессия {#pr10 .unnumbered}
+
+```{=html}
+<!--
+REPLACE ALL pr10 TO pr<n> WITH MATCH CASE
+-->
+```
+## Основные задания {#pr10_main}
+
+### #1
+
+<img id="pr10-1-level" class="level"/>
+
+::: {#pr10-1-task .task}
+Текст задания `переменная`.
+:::
+
+::: {#pr10-1-autocheck .autocheck}
+::: {#pr10-1-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-1" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-1')">
+
+::: {#pr10-1-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-1-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="pr10-2-level" class="level"/>
+
+::: {#pr10-2-task .task}
+Текст задания.
+
+$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+:::
+
+::: {#pr10-2-autocheck .autocheck}
+::: {#pr10-2-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-2" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-2')">
+
+::: {#pr10-2-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-2-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="pr10-3-level" class="level"/>
+
+::: {#pr10-3-task .task}
+Текст задания.
+:::
+
+::: {#pr10-3-autocheck .autocheck}
+::: {#pr10-3-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-3" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-3')">
+
+::: {#pr10-3-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-3-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="pr10-4-level" class="level"/>
+
+::: {#pr10-4-task .task}
+Текст задания.
+:::
+
+::: {#pr10-4-autocheck .autocheck}
+::: {#pr10-4-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-4" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-4')">
+
+::: {#pr10-4-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-4-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="pr10-5-level" class="level"/>
+
+::: {#pr10-5-task .task}
+Текст задания.
+:::
+
+::: {#pr10-5-autocheck .autocheck}
+::: {#pr10-5-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-5" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-5')">
+
+::: {#pr10-5-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-5-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #6
+
+<img id="pr10-6-level" class="level"/>
+
+::: {#pr10-6-task .task}
+Текст задания.
+:::
+
+::: {#pr10-6-autocheck .autocheck}
+::: {#pr10-6-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-6" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-6')">
+
+::: {#pr10-6-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-6-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #7
+
+<img id="pr10-7-level" class="level"/>
+
+::: {#pr10-7-task .task}
+Текст задания.
+:::
+
+::: {#pr10-7-autocheck .autocheck}
+::: {#pr10-7-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-7" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-7')">
+
+::: {#pr10-7-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-7-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #8
+
+<img id="pr10-8-level" class="level"/>
+
+::: {#pr10-8-task .task}
+Текст задания.
+:::
+
+::: {#pr10-8-autocheck .autocheck}
+::: {#pr10-8-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-8" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-8')">
+
+::: {#pr10-8-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-8-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #9
+
+<img id="pr10-9-level" class="level"/>
+
+::: {#pr10-9-task .task}
+Текст задания.
+:::
+
+::: {#pr10-9-autocheck .autocheck}
+::: {#pr10-9-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-9" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-9')">
+
+::: {#pr10-9-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-9-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #10
+
+<img id="pr10-10-level" class="level"/>
+
+::: {#pr10-10-task .task}
+Текст задания.
+:::
+
+::: {#pr10-10-autocheck .autocheck}
+::: {#pr10-10-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-10" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-10')">
+
+::: {#pr10-10-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-10-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #11
+
+<img id="pr10-11-level" class="level"/>
+
+::: {#pr10-11-task .task}
+Текст задания.
+:::
+
+::: {#pr10-11-autocheck .autocheck}
+::: {#pr10-11-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-11')">
+
+::: {#pr10-11-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-11-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #12
+
+<img class="level"/>
+
+::: {#pr10-12-task .task}
+Текст задания.
+:::
+
+::: {#pr10-12-autocheck .autocheck}
+::: {#pr10-12-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-12')">
+
+::: {#pr10-12-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-12-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #13
+
+<img id="pr10-13-level" class="level"/>
+
+::: task
+Текст задания.
+:::
+
+::: {#pr10-13-autocheck .autocheck}
+::: {#pr10-13-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-13')">
+
+::: {#pr10-13-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-13-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #14
+
+<img id="pr10-14-level" class="level"/>
+
+::: {#pr10-14-task .task}
+Текст задания.
+:::
+
+::: {#pr10-14-autocheck .autocheck}
+::: {#pr10-14-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-14')">
+
+::: {#pr10-14-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-14-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #15
+
+<img id="pr10-15-level" class="level"/>
+
+::: {#pr10-15-task .task}
+Текст задания.
+:::
+
+::: {#pr10-15-autocheck .autocheck}
+::: {#pr10-15-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-15')">
+
+::: {#pr10-15-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-15-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #16
+
+<img id="pr10-16-level" class="level"/>
+
+::: {#pr10-16-task .task}
+Текст задания.
+:::
+
+::: {#pr10-16-autocheck .autocheck}
+::: {#pr10-16-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-16" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-16')">
+
+::: {#pr10-16-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-16-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #17
+
+<img id="pr10-17-level" class="level"/>
+
+::: {#pr10-17-task .task}
+Текст задания.
+:::
+
+::: {#pr10-17-autocheck .autocheck}
+::: {#pr10-17-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-17" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-17')">
+
+::: {#pr10-17-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-17-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #18
+
+<img id="pr10-18-level" class="level"/>
+
+::: {#pr10-18-task .task}
+Текст задания.
+:::
+
+::: {#pr10-18-autocheck .autocheck}
+::: {#pr10-18-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-18" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-18')">
+
+::: {#pr10-18-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-18-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #19
+
+<img id="pr10-19-level" class="level"/>
+
+::: {#pr10-19-task .task}
+Текст задания.
+:::
+
+::: {#pr10-19-autocheck .autocheck}
+::: {#pr10-19-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-19" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-19')">
+
+::: {#pr10-19-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-19-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #20
+
+<img id="pr10-20-level" class="level"/>
+
+::: {#pr10-20-task .task}
+Текст задания.
+:::
+
+::: {#pr10-20-autocheck .autocheck}
+::: {#pr10-20-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-20" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-20')">
+
+::: {#pr10-20-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-20-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+## Дополнительные задания {#pr10_add}
+
+### #1
+
+<img id="pr10-21-level" class="level"/>
+
+::: {#pr10-21-task .task}
+Текст задания.
+:::
+
+::: {#pr10-21-autocheck .autocheck}
+::: {#pr10-21-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-21" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-21')">
+
+::: {#pr10-21-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-21-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="pr10-22-level" class="level"/>
+
+::: {#pr10-22-task .task}
+Текст задания.
+:::
+
+::: {#pr10-22-autocheck .autocheck}
+::: {#pr10-22-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-22" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-22')">
+
+::: {#pr10-22-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-22-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="pr10-23-level" class="level"/>
+
+::: {#pr10-23-task .task}
+Текст задания.
+:::
+
+::: {#pr10-23-autocheck .autocheck}
+::: {#pr10-23-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-23" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-23')">
+
+::: {#pr10-23-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-23-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="pr10-24-level" class="level"/>
+
+::: {#pr10-24-task .task}
+Текст задания.
+:::
+
+::: {#pr10-24-autocheck .autocheck}
+::: {#pr10-24-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-24" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-24')">
+
+::: {#pr10-24-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-24-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="pr10-25-level" class="level"/>
+
+::: {#pr10-25-task .task}
+Текст задания.
+:::
+
+::: {#pr10-25-autocheck .autocheck}
+::: {#pr10-25-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-25" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-25')">
+
+::: {#pr10-25-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-25-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #6
+
+<img id="pr10-26-level" class="level"/>
+
+::: {#pr10-26-task .task}
+Текст задания.
+:::
+
+::: {#pr10-26-autocheck .autocheck}
+::: {#pr10-26-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-26" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-26')">
+
+::: {#pr10-26-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-26-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #7
+
+<img id="pr10-27-level" class="level"/>
+
+::: {#pr10-27-task .task}
+Текст задания.
+:::
+
+::: {#pr10-27-autocheck .autocheck}
+::: {#pr10-27-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-27" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-27')">
+
+::: {#pr10-27-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-27-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #8
+
+<img id="pr10-28-level" class="level"/>
+
+::: {#pr10-28-task .task}
+Текст задания.
+:::
+
+::: {#pr10-28-autocheck .autocheck}
+::: {#pr10-28-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-28" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-28')">
+
+::: {#pr10-28-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-28-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #9
+
+<img id="pr10-29-level" class="level"/>
+
+::: {#pr10-29-task .task}
+Текст задания.
+:::
+
+::: {#pr10-29-autocheck .autocheck}
+::: {#pr10-29-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-29" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-29')">
+
+::: {#pr10-29-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-29-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #10
+
+<img id="pr10-30-level" class="level"/>
+
+::: {#pr10-30-task .task}
+Текст задания.
+:::
+
+::: {#pr10-30-autocheck .autocheck}
+::: {#pr10-30-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr10-30" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr10-30')">
+
+::: {#pr10-30-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="pr10-30-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+```{=html}
+<!--- CHANGE pr10 TO pr<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/pr10.json"></script>
+<script type="text/javascript" src="./js/pr.js"></script>
+```

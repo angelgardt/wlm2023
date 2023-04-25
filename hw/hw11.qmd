@@ -1,0 +1,723 @@
+# HW11. Логистическая регрессия. Пуассоновская регрессия {#hw11 .unnumbered}
+
+```{=html}
+<!--
+REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
+-->
+```
+## Основные задания {#hw11_main}
+
+### #1
+
+<img id="hw11-1-level" class="level"/>
+
+::: {#hw11-1-task .task}
+Текст задания `переменная`.
+:::
+
+::: {#hw11-1-autocheck .autocheck}
+::: {#hw11-1-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-1" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-1')">
+
+::: {#hw11-1-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-1-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw11-2-level" class="level"/>
+
+::: {#hw11-2-task .task}
+Текст задания.
+
+$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+:::
+
+::: {#hw11-2-autocheck .autocheck}
+::: {#hw11-2-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-2" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-2')">
+
+::: {#hw11-2-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-2-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw11-3-level" class="level"/>
+
+::: {#hw11-3-task .task}
+Текст задания.
+:::
+
+::: {#hw11-3-autocheck .autocheck}
+::: {#hw11-3-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-3" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-3')">
+
+::: {#hw11-3-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-3-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw11-4-level" class="level"/>
+
+::: {#hw11-4-task .task}
+Текст задания.
+:::
+
+::: {#hw11-4-autocheck .autocheck}
+::: {#hw11-4-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-4" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-4')">
+
+::: {#hw11-4-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-4-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw11-5-level" class="level"/>
+
+::: {#hw11-5-task .task}
+Текст задания.
+:::
+
+::: {#hw11-5-autocheck .autocheck}
+::: {#hw11-5-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-5" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-5')">
+
+::: {#hw11-5-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-5-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #6
+
+<img id="hw11-6-level" class="level"/>
+
+::: {#hw11-6-task .task}
+Текст задания.
+:::
+
+::: {#hw11-6-autocheck .autocheck}
+::: {#hw11-6-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-6" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-6')">
+
+::: {#hw11-6-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-6-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #7
+
+<img id="hw11-7-level" class="level"/>
+
+::: {#hw11-7-task .task}
+Текст задания.
+:::
+
+::: {#hw11-7-autocheck .autocheck}
+::: {#hw11-7-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-7" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-7')">
+
+::: {#hw11-7-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-7-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #8
+
+<img id="hw11-8-level" class="level"/>
+
+::: {#hw11-8-task .task}
+Текст задания.
+:::
+
+::: {#hw11-8-autocheck .autocheck}
+::: {#hw11-8-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-8" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-8')">
+
+::: {#hw11-8-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-8-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #9
+
+<img id="hw11-9-level" class="level"/>
+
+::: {#hw11-9-task .task}
+Текст задания.
+:::
+
+::: {#hw11-9-autocheck .autocheck}
+::: {#hw11-9-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-9" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-9')">
+
+::: {#hw11-9-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-9-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #10
+
+<img id="hw11-10-level" class="level"/>
+
+::: {#hw11-10-task .task}
+Текст задания.
+:::
+
+::: {#hw11-10-autocheck .autocheck}
+::: {#hw11-10-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-10" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-10')">
+
+::: {#hw11-10-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-10-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+## Дополнительные задания {#hw11_add}
+
+### #1
+
+<img id="hw11-11-level" class="level"/>
+
+::: {#hw11-11-task .task}
+Текст задания.
+:::
+
+::: {#hw11-11-autocheck .autocheck}
+::: {#hw11-11-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-11')">
+
+::: {#hw11-11-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-11-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw11-12-level" class="level"/>
+
+::: {#hw11-12-task .task}
+Текст задания.
+:::
+
+::: {#hw11-12-autocheck .autocheck}
+::: {#hw11-12-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-12')">
+
+::: {#hw11-12-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-12-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw11-13-level" class="level"/>
+
+::: {#hw11-13-task .task}
+Текст задания.
+:::
+
+::: {#hw11-13-autocheck .autocheck}
+::: {#hw11-13-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-13')">
+
+::: {#hw11-13-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-13-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw11-14-level" class="level"/>
+
+::: {#hw11-14-task .task}
+Текст задания.
+:::
+
+::: {#hw11-14-autocheck .autocheck}
+::: {#hw11-14-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-14')">
+
+::: {#hw11-14-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-14-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw11-15-level" class="level"/>
+
+::: {#hw11-15-task .task}
+Текст задания.
+:::
+
+::: {#hw11-15-autocheck .autocheck}
+::: {#hw11-15-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-15')">
+
+::: {#hw11-15-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw11-15-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+```{=html}
+<!--- CHANGE hw11 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw11.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
+```

@@ -1,0 +1,723 @@
+# HW12. Обобщенные аддитивные модели. Регуляризованная регрессия {#hw12 .unnumbered}
+
+```{=html}
+<!--
+REPLACE ALL hw12 TO hw<n> WITH MATCH CASE
+-->
+```
+## Основные задания {#hw12_main}
+
+### #1
+
+<img id="hw12-1-level" class="level"/>
+
+::: {#hw12-1-task .task}
+Текст задания `переменная`.
+:::
+
+::: {#hw12-1-autocheck .autocheck}
+::: {#hw12-1-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-1" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-1')">
+
+::: {#hw12-1-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-1-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw12-2-level" class="level"/>
+
+::: {#hw12-2-task .task}
+Текст задания.
+
+$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+:::
+
+::: {#hw12-2-autocheck .autocheck}
+::: {#hw12-2-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-2" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-2')">
+
+::: {#hw12-2-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-2-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw12-3-level" class="level"/>
+
+::: {#hw12-3-task .task}
+Текст задания.
+:::
+
+::: {#hw12-3-autocheck .autocheck}
+::: {#hw12-3-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-3" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-3')">
+
+::: {#hw12-3-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-3-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw12-4-level" class="level"/>
+
+::: {#hw12-4-task .task}
+Текст задания.
+:::
+
+::: {#hw12-4-autocheck .autocheck}
+::: {#hw12-4-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-4" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-4')">
+
+::: {#hw12-4-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-4-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw12-5-level" class="level"/>
+
+::: {#hw12-5-task .task}
+Текст задания.
+:::
+
+::: {#hw12-5-autocheck .autocheck}
+::: {#hw12-5-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-5" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-5')">
+
+::: {#hw12-5-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-5-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #6
+
+<img id="hw12-6-level" class="level"/>
+
+::: {#hw12-6-task .task}
+Текст задания.
+:::
+
+::: {#hw12-6-autocheck .autocheck}
+::: {#hw12-6-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-6" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-6')">
+
+::: {#hw12-6-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-6-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #7
+
+<img id="hw12-7-level" class="level"/>
+
+::: {#hw12-7-task .task}
+Текст задания.
+:::
+
+::: {#hw12-7-autocheck .autocheck}
+::: {#hw12-7-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-7" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-7')">
+
+::: {#hw12-7-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-7-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #8
+
+<img id="hw12-8-level" class="level"/>
+
+::: {#hw12-8-task .task}
+Текст задания.
+:::
+
+::: {#hw12-8-autocheck .autocheck}
+::: {#hw12-8-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-8" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-8')">
+
+::: {#hw12-8-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-8-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #9
+
+<img id="hw12-9-level" class="level"/>
+
+::: {#hw12-9-task .task}
+Текст задания.
+:::
+
+::: {#hw12-9-autocheck .autocheck}
+::: {#hw12-9-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-9" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-9')">
+
+::: {#hw12-9-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-9-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #10
+
+<img id="hw12-10-level" class="level"/>
+
+::: {#hw12-10-task .task}
+Текст задания.
+:::
+
+::: {#hw12-10-autocheck .autocheck}
+::: {#hw12-10-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-10" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-10')">
+
+::: {#hw12-10-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-10-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+## Дополнительные задания {#hw12_add}
+
+### #1
+
+<img id="hw12-11-level" class="level"/>
+
+::: {#hw12-11-task .task}
+Текст задания.
+:::
+
+::: {#hw12-11-autocheck .autocheck}
+::: {#hw12-11-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-11')">
+
+::: {#hw12-11-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-11-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw12-12-level" class="level"/>
+
+::: {#hw12-12-task .task}
+Текст задания.
+:::
+
+::: {#hw12-12-autocheck .autocheck}
+::: {#hw12-12-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-12')">
+
+::: {#hw12-12-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-12-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw12-13-level" class="level"/>
+
+::: {#hw12-13-task .task}
+Текст задания.
+:::
+
+::: {#hw12-13-autocheck .autocheck}
+::: {#hw12-13-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-13')">
+
+::: {#hw12-13-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-13-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw12-14-level" class="level"/>
+
+::: {#hw12-14-task .task}
+Текст задания.
+:::
+
+::: {#hw12-14-autocheck .autocheck}
+::: {#hw12-14-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-14')">
+
+::: {#hw12-14-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-14-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw12-15-level" class="level"/>
+
+::: {#hw12-15-task .task}
+Текст задания.
+:::
+
+::: {#hw12-15-autocheck .autocheck}
+::: {#hw12-15-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw12-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw12-15')">
+
+::: {#hw12-15-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
+<details class="hints" id="hw12-15-hints">
+
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+```{=html}
+<!--- CHANGE hw12 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw12.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
+```
