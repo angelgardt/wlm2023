@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "WLM 2023",
+    "section": "",
+    "text": "Вступление"
+  },
+  {
     "objectID": "index.html#book_structure",
     "href": "index.html#book_structure",
     "title": "WLM 2023",
@@ -11,7 +18,14 @@
     "href": "index.html#thanks",
     "title": "WLM 2023",
     "section": "Благодарности",
-    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.2.3 (2023-03-15)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur ... 10.16\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.2.3  fastmap_1.1.1   cli_3.6.1       tools_4.2.3    \n [5] htmltools_0.5.5 rstudioapi_0.14 rmarkdown_2.21  knitr_1.42     \n [9] xfun_0.38       digest_0.6.31   jsonlite_1.8.4  rlang_1.1.0    \n[13] evaluate_0.20"
+    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.2.3 (2023-03-15)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur ... 10.16\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] C/UTF-8/C/C/C/C\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.2 compiler_4.2.3    fastmap_1.1.1     cli_3.6.1        \n [5] tools_4.2.3       htmltools_0.5.5   rmarkdown_2.21    knitr_1.42       \n [9] jsonlite_1.8.4    xfun_0.38         digest_0.6.31     rlang_1.1.0      \n[13] evaluate_0.20"
+  },
+  {
+    "objectID": "signs.html#book_labels",
+    "href": "signs.html#book_labels",
+    "title": "Обозначения",
+    "section": "Лейблы",
+    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\n\n\n\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\n\n\n\nДля тех, кто разобрался с основами и хочет пойти дальше.\n\n\n\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\n\n\n\nДля тех, кто преисполнился и хочет жести."
   },
   {
     "objectID": "signs.html#book_icons",
@@ -98,34 +112,6 @@
     "text": "17.3 CLI\n\n17.3.1 git clone\n\n\n17.3.2 git status\n\n\n17.3.3 git diff\n\n\n17.3.4 git log\n\n\n17.3.5 git add\n\n\n17.3.6 git commit\n\n\n17.3.7 git push\n\n\n17.3.8 git pull\n\n\n17.3.9 git branch\n\n\n17.3.10 git checkout\n\n\n17.3.11 git config"
   },
   {
-    "objectID": "appendix_formulas.html#степени-и-корни",
-    "href": "appendix_formulas.html#степени-и-корни",
-    "title": "18  Формулы",
-    "section": "18.1 Степени и корни",
-    "text": "18.1 Степени и корни\n\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]"
-  },
-  {
-    "objectID": "appendix_formulas.html#модульь",
-    "href": "appendix_formulas.html#модульь",
-    "title": "18  Формулы",
-    "section": "18.2 Модульь",
-    "text": "18.2 Модульь"
-  },
-  {
-    "objectID": "appendix_formulas.html#логарифмы",
-    "href": "appendix_formulas.html#логарифмы",
-    "title": "18  Формулы",
-    "section": "18.2 Логарифмы",
-    "text": "18.2 Логарифмы\n\\[\\log_b a = c \\Leftrightarrow a^c = b, a > 0, b > 0, b \\neq 1\\]\n\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]"
-  },
-  {
-    "objectID": "appendix_formulas.html#модуль",
-    "href": "appendix_formulas.html#модуль",
-    "title": "18  Формулы",
-    "section": "18.3 Модуль",
-    "text": "18.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a < 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]"
-  },
-  {
     "objectID": "appendix_formulas.html#formulas_power",
     "href": "appendix_formulas.html#formulas_power",
     "title": "18  Формулы",
@@ -137,20 +123,13 @@
     "href": "appendix_formulas.html#formulas_log",
     "title": "18  Формулы",
     "section": "18.2 Логарифмы",
-    "text": "18.2 Логарифмы\n\\[\\log_b a = c \\Leftrightarrow a^c = b, a > 0, b > 0, b \\neq 1\\]\n\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]"
+    "text": "18.2 Логарифмы\n\\[\\log_b a = c \\Leftrightarrow a^c = b, a &gt; 0, b &gt; 0, b \\neq 1\\]\n\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]"
   },
   {
     "objectID": "appendix_formulas.html#formulas_abs",
     "href": "appendix_formulas.html#formulas_abs",
     "title": "18  Формулы",
     "section": "18.3 Модуль",
-    "text": "18.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a < 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]"
-  },
-  {
-    "objectID": "signs.html#book_labels",
-    "href": "signs.html#book_labels",
-    "title": "Обозначения",
-    "section": "Лейблы",
-    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\n\n\n\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\n\n\n\nДля тех, кто разобрался с основами и хочет пойти дальше.\n\n\n\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\n\n\n\nДля тех, кто преисполнился и хочет жести."
+    "text": "18.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a &lt; 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]"
   }
 ]

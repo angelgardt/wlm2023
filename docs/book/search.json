@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "WLM 2023",
+    "section": "",
+    "text": "Вступление"
+  },
+  {
     "objectID": "index.html#book_structure",
     "href": "index.html#book_structure",
     "title": "WLM 2023",
@@ -11,33 +18,40 @@
     "href": "index.html#thanks",
     "title": "WLM 2023",
     "section": "Благодарности",
-    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.2.3 (2023-03-15)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 22.04.2 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0\nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       \n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.2.3  fastmap_1.1.1   cli_3.6.1       tools_4.2.3    \n [5] htmltools_0.5.5 rmarkdown_2.21  knitr_1.42      xfun_0.38      \n [9] digest_0.6.31   jsonlite_1.8.4  rlang_1.1.0     evaluate_0.20"
+    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.2.3 (2023-03-15)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur ... 10.16\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] C/UTF-8/C/C/C/C\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.2 compiler_4.2.3    fastmap_1.1.1     cli_3.6.1        \n [5] tools_4.2.3       htmltools_0.5.5   rmarkdown_2.21    knitr_1.42       \n [9] jsonlite_1.8.4    xfun_0.38         digest_0.6.31     rlang_1.1.0      \n[13] evaluate_0.20"
+  },
+  {
+    "objectID": "signs.html#book_labels",
+    "href": "signs.html#book_labels",
+    "title": "Обозначения",
+    "section": "Лейблы",
+    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\n\n\n\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\n\n\n\nДля тех, кто разобрался с основами и хочет пойти дальше.\n\n\n\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\n\n\n\nДля тех, кто преисполнился и хочет жести."
   },
   {
     "objectID": "signs.html#book_icons",
     "href": "signs.html#book_icons",
     "title": "Обозначения",
     "section": "Иконки",
-    "text": "Иконки"
+    "text": "Иконки\n\nЭто вопрос, который позволит вспомнить предыдущий материал или немного глубже копнуть в текущую тему. Как правило, имеющихся знаний будет достаточно для ответа на него, но иногда придётся и погуглить.\n\n\nЭто задание, где нужно что-то посчитать. Можно с помощью кода, а можно и руками.\n\n\nЭто задание, в котором надо написать код или посчитать что-то с помощью кода.\n\n\nЭто важное замечание. Стоит обратить на него внимание.\n\n\nЭто совет, сформулированный на основе опыта работы автора с R, статистикой и данными. Возможно, стоит ему последовать."
   },
   {
     "objectID": "signs.html#book_symbols",
     "href": "signs.html#book_symbols",
     "title": "Обозначения",
     "section": "Символы",
-    "text": "Символы"
+    "text": "Символы\n\n\n\n\n\n\n\\(\\mathbb{N}\\) — множество натуральных чисел\n\\(\\mathbb{N}_{0}\\) — множество натуральных чисел, включая ноль\n\\(\\mathbb{Z}\\) — множество целых чисел\n\\(\\mathbb{Q}\\) — множество рациональных чисел\n\\(\\mathbb{R}\\) — множество вещественных (действительных) чисел\n\\(\\mathbb{C}\\) — множество комплексных чисел\n\\(\\alpha, \\beta, \\gamma, \\dots\\) — числа\n\\(a, b, c, \\dots, x, y, z\\) — числа, значения случайной величины\n\\(\\mathbf{a}, \\mathbf{b}, \\mathbf{c}, \\dots, \\mathbf{x}, \\mathbf{y}, \\mathbf{z}\\) — векторы\n\\(\\mathbf{A}, \\mathbf{B}, \\mathbf{C}, \\dots, \\mathbf{X}, \\mathbf{Y}, \\mathbf{Z}\\) — матрицы\n\\(\\mathbb{P}\\) — вероятность"
   },
   {
     "objectID": "test.html#установка-r",
     "href": "test.html#установка-r",
-    "title": "1  Введение в R",
+    "title": "1  ТЕСТ",
     "section": "1.1 Установка R",
     "text": "1.1 Установка R\n\n\n\nПовседневная практика показывает, что консультация с широким активом требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры в значительной степени обуславливает создание новых предложений. С другой стороны укрепление и развитие структуры позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же рамки и место обучения кадров позволяет выполнять важные задания по разработке систем массового участия. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения направлений прогрессивного развития. Разнообразный и богатый опыт укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.\nРавным образом рамки и место обучения кадров способствует подготовки и реализации новых предложений. С другой стороны консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же новая модель организационной деятельности требуют определения и уточнения дальнейших направлений развития."
   },
   {
     "objectID": "test.html#интерфейс-r",
     "href": "test.html#интерфейс-r",
-    "title": "1  Введение в R",
+    "title": "1  ТЕСТ",
     "section": "1.2 Интерфейс R",
     "text": "1.2 Интерфейс R\n\n\n\nЗадача организации, в особенности же сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.\n\nРазнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.\n\n\nРазнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.\n\n\nРазнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации форм развития.\n\n\n1.2.1 Console\n\n\n\nРазнообразный и богатый опыт реализация намеченных плановых заданий позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Таким образом реализация намеченных плановых заданий требуют от нас анализа дальнейших направлений развития."
   },
@@ -96,5 +110,26 @@
     "title": "17  Git",
     "section": "17.3 CLI",
     "text": "17.3 CLI\n\n17.3.1 git clone\n\n\n17.3.2 git status\n\n\n17.3.3 git diff\n\n\n17.3.4 git log\n\n\n17.3.5 git add\n\n\n17.3.6 git commit\n\n\n17.3.7 git push\n\n\n17.3.8 git pull\n\n\n17.3.9 git branch\n\n\n17.3.10 git checkout\n\n\n17.3.11 git config"
+  },
+  {
+    "objectID": "appendix_formulas.html#formulas_power",
+    "href": "appendix_formulas.html#formulas_power",
+    "title": "18  Формулы",
+    "section": "18.1 Степени и корни",
+    "text": "18.1 Степени и корни\n\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "appendix_formulas.html#formulas_log",
+    "href": "appendix_formulas.html#formulas_log",
+    "title": "18  Формулы",
+    "section": "18.2 Логарифмы",
+    "text": "18.2 Логарифмы\n\\[\\log_b a = c \\Leftrightarrow a^c = b, a &gt; 0, b &gt; 0, b \\neq 1\\]\n\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]"
+  },
+  {
+    "objectID": "appendix_formulas.html#formulas_abs",
+    "href": "appendix_formulas.html#formulas_abs",
+    "title": "18  Формулы",
+    "section": "18.3 Модуль",
+    "text": "18.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a &lt; 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]"
   }
 ]
