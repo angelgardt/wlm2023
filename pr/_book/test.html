@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - HW1. Типы данных. Векторы</title>
+<title>WLM 2023 - P1. Введение в R. Типы данных. Векторы</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">HW1. Типы данных. Векторы</h1>
+      <h1 class="quarto-secondary-nav-title">P1. Введение в R. Типы данных. Векторы</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active">HW1. Типы данных. Векторы</a>
+  <a href="./test.html" class="sidebar-item-text sidebar-link active">P1. Введение в R. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#hw1_main" id="toc-hw1_main" class="nav-link active" data-scroll-target="#hw1_main">Основные задания</a>
+  <li><a href="#pr1_main" id="toc-pr1_main" class="nav-link active" data-scroll-target="#pr1_main">Основные задания</a>
   <ul class="collapse">
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
@@ -171,14 +171,29 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
   <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
   <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#11</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#12</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#13</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#14</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#15</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">#16</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#17</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#18</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
   </ul></li>
-  <li><a href="#hw1_add" id="toc-hw1_add" class="nav-link" data-scroll-target="#hw1_add">Дополнительные задания</a>
+  <li><a href="#pr1_add" id="toc-pr1_add" class="nav-link" data-scroll-target="#pr1_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
+  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
+  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
+  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
+  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
+  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
+  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
+  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
+  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -188,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw1" class="quarto-section-identifier d-none d-lg-block">HW1. Типы данных. Векторы</span></h1>
+<h1 class="title"><span id="pr1" class="quarto-section-identifier d-none d-lg-block">P1. Введение в R. Типы данных. Векторы</span></h1>
 </div>
 
 
@@ -204,28 +219,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!--
-REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
+REPLACE ALL pr1 TO pr<n> WITH MATCH CASE
 -->
-<section id="hw1_main" class="level2">
-<h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
+<section id="pr1_main" class="level2">
+<h2 class="anchored" data-anchor-id="pr1_main">Основные задания</h2>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
-<p><img id="hw1-1-level" class="level"></p>
-<div id="hw1-1-task" class="task">
+<p><img id="pr1-1-level" class="level"></p>
+<div id="pr1-1-task" class="task">
 <p>Текст задания <code>переменная</code>.</p>
 </div>
-<div id="hw1-1-autocheck" class="autocheck">
-<div id="hw1-1-ir" class="input-requirements">
+<div id="pr1-1-autocheck" class="autocheck">
+<div id="pr1-1-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
-<div id="hw1-1-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-1')"></p>
+<div id="pr1-1-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-1-hints">
+<details class="hints" id="pr1-1-hints">
 <summary>
 Подсказки
 </summary>
@@ -249,23 +264,23 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
-<p><img id="hw1-2-level" class="level"></p>
-<div id="hw1-2-task" class="task">
+<p><img id="pr1-2-level" class="level"></p>
+<div id="pr1-2-task" class="task">
 <p>Текст задания.</p>
 <p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
 </div>
-<div id="hw1-2-autocheck" class="autocheck">
-<div id="hw1-2-ir" class="input-requirements">
+<div id="pr1-2-autocheck" class="autocheck">
+<div id="pr1-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')"></p>
-<div id="hw1-2-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-2')"></p>
+<div id="pr1-2-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-2-hints">
+<details class="hints" id="pr1-2-hints">
 <summary>
 Подсказки
 </summary>
@@ -289,22 +304,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
-<p><img id="hw1-3-level" class="level"></p>
-<div id="hw1-3-task" class="task">
+<p><img id="pr1-3-level" class="level"></p>
+<div id="pr1-3-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-3-autocheck" class="autocheck">
-<div id="hw1-3-ir" class="input-requirements">
+<div id="pr1-3-autocheck" class="autocheck">
+<div id="pr1-3-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')"></p>
-<div id="hw1-3-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-3')"></p>
+<div id="pr1-3-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-3-hints">
+<details class="hints" id="pr1-3-hints">
 <summary>
 Подсказки
 </summary>
@@ -328,22 +343,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-3" class="level3">
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
-<p><img id="hw1-4-level" class="level"></p>
-<div id="hw1-4-task" class="task">
+<p><img id="pr1-4-level" class="level"></p>
+<div id="pr1-4-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-4-autocheck" class="autocheck">
-<div id="hw1-4-ir" class="input-requirements">
+<div id="pr1-4-autocheck" class="autocheck">
+<div id="pr1-4-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')"></p>
-<div id="hw1-4-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-4')"></p>
+<div id="pr1-4-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-4-hints">
+<details class="hints" id="pr1-4-hints">
 <summary>
 Подсказки
 </summary>
@@ -367,22 +382,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-4" class="level3">
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
-<p><img id="hw1-5-level" class="level"></p>
-<div id="hw1-5-task" class="task">
+<p><img id="pr1-5-level" class="level"></p>
+<div id="pr1-5-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-5-autocheck" class="autocheck">
-<div id="hw1-5-ir" class="input-requirements">
+<div id="pr1-5-autocheck" class="autocheck">
+<div id="pr1-5-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')"></p>
-<div id="hw1-5-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-5')"></p>
+<div id="pr1-5-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-5-hints">
+<details class="hints" id="pr1-5-hints">
 <summary>
 Подсказки
 </summary>
@@ -406,22 +421,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-5" class="level3">
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
-<p><img id="hw1-6-level" class="level"></p>
-<div id="hw1-6-task" class="task">
+<p><img id="pr1-6-level" class="level"></p>
+<div id="pr1-6-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-6-autocheck" class="autocheck">
-<div id="hw1-6-ir" class="input-requirements">
+<div id="pr1-6-autocheck" class="autocheck">
+<div id="pr1-6-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')"></p>
-<div id="hw1-6-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-6')"></p>
+<div id="pr1-6-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-6-hints">
+<details class="hints" id="pr1-6-hints">
 <summary>
 Подсказки
 </summary>
@@ -445,22 +460,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-6" class="level3">
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
-<p><img id="hw1-7-level" class="level"></p>
-<div id="hw1-7-task" class="task">
+<p><img id="pr1-7-level" class="level"></p>
+<div id="pr1-7-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-7-autocheck" class="autocheck">
-<div id="hw1-7-ir" class="input-requirements">
+<div id="pr1-7-autocheck" class="autocheck">
+<div id="pr1-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')"></p>
-<div id="hw1-7-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-7')"></p>
+<div id="pr1-7-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-7-hints">
+<details class="hints" id="pr1-7-hints">
 <summary>
 Подсказки
 </summary>
@@ -484,22 +499,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-7" class="level3">
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
-<p><img id="hw1-8-level" class="level"></p>
-<div id="hw1-8-task" class="task">
+<p><img id="pr1-8-level" class="level"></p>
+<div id="pr1-8-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-8-autocheck" class="autocheck">
-<div id="hw1-8-ir" class="input-requirements">
+<div id="pr1-8-autocheck" class="autocheck">
+<div id="pr1-8-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')"></p>
-<div id="hw1-8-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-8')"></p>
+<div id="pr1-8-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-8-hints">
+<details class="hints" id="pr1-8-hints">
 <summary>
 Подсказки
 </summary>
@@ -523,22 +538,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-8" class="level3">
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
-<p><img id="hw1-9-level" class="level"></p>
-<div id="hw1-9-task" class="task">
+<p><img id="pr1-9-level" class="level"></p>
+<div id="pr1-9-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-9-autocheck" class="autocheck">
-<div id="hw1-9-ir" class="input-requirements">
+<div id="pr1-9-autocheck" class="autocheck">
+<div id="pr1-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')"></p>
-<div id="hw1-9-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-9')"></p>
+<div id="pr1-9-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-9-hints">
+<details class="hints" id="pr1-9-hints">
 <summary>
 Подсказки
 </summary>
@@ -562,22 +577,22 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="section-9" class="level3">
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
-<p><img id="hw1-10-level" class="level"></p>
-<div id="hw1-10-task" class="task">
+<p><img id="pr1-10-level" class="level"></p>
+<div id="pr1-10-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-10-autocheck" class="autocheck">
-<div id="hw1-10-ir" class="input-requirements">
+<div id="pr1-10-autocheck" class="autocheck">
+<div id="pr1-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')"></p>
-<div id="hw1-10-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-10')"></p>
+<div id="pr1-10-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-10-hints">
+<details class="hints" id="pr1-10-hints">
 <summary>
 Подсказки
 </summary>
@@ -599,27 +614,24 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-</section>
-<section id="hw1_add" class="level2">
-<h2 class="anchored" data-anchor-id="hw1_add">Дополнительные задания</h2>
 <section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
-<p><img id="hw1-11-level" class="level"></p>
-<div id="hw1-11-task" class="task">
+<h3 class="anchored" data-anchor-id="section-10">#11</h3>
+<p><img id="pr1-11-level" class="level"></p>
+<div id="pr1-11-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-11-autocheck" class="autocheck">
-<div id="hw1-11-ir" class="input-requirements">
+<div id="pr1-11-autocheck" class="autocheck">
+<div id="pr1-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')"></p>
-<div id="hw1-11-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-11')"></p>
+<div id="pr1-11-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-11-hints">
+<details class="hints" id="pr1-11-hints">
 <summary>
 Подсказки
 </summary>
@@ -642,23 +654,23 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 </section>
 <section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw1-12-level" class="level"></p>
-<div id="hw1-12-task" class="task">
+<h3 class="anchored" data-anchor-id="section-11">#12</h3>
+<p><img id="pr1-10-level" class="level"></p>
+<div id="pr1-12-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-12-autocheck" class="autocheck">
-<div id="hw1-12-ir" class="input-requirements">
+<div id="pr1-12-autocheck" class="autocheck">
+<div id="pr1-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')"></p>
-<div id="hw1-12-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-12')"></p>
+<div id="pr1-12-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-12-hints">
+<details class="hints" id="pr1-12-hints">
 <summary>
 Подсказки
 </summary>
@@ -681,23 +693,23 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 </section>
 <section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
-<p><img id="hw1-13-level" class="level"></p>
-<div id="hw1-13-task" class="task">
+<h3 class="anchored" data-anchor-id="section-12">#13</h3>
+<p><img id="pr1-13-level" class="level"></p>
+<div id="pr1-10-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-13-autocheck" class="autocheck">
-<div id="hw1-13-ir" class="input-requirements">
+<div id="pr1-13-autocheck" class="autocheck">
+<div id="pr1-13-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')"></p>
-<div id="hw1-13-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-13" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-13')"></p>
+<div id="pr1-13-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-13-hints">
+<details class="hints" id="pr1-13-hints">
 <summary>
 Подсказки
 </summary>
@@ -720,23 +732,23 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 </section>
 <section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
-<p><img id="hw1-14-level" class="level"></p>
-<div id="hw1-14-task" class="task">
+<h3 class="anchored" data-anchor-id="section-13">#14</h3>
+<p><img id="pr1-14-level" class="level"></p>
+<div id="pr1-14-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-14-autocheck" class="autocheck">
-<div id="hw1-14-ir" class="input-requirements">
+<div id="pr1-14-autocheck" class="autocheck">
+<div id="pr1-14-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')"></p>
-<div id="hw1-14-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-14" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-14')"></p>
+<div id="pr1-14-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-14-hints">
+<details class="hints" id="pr1-14-hints">
 <summary>
 Подсказки
 </summary>
@@ -759,23 +771,23 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 </section>
 <section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
-<p><img id="hw1-15-level" class="level"></p>
-<div id="hw1-15-task" class="task">
+<h3 class="anchored" data-anchor-id="section-14">#15</h3>
+<p><img id="pr1-15-level" class="level"></p>
+<div id="pr1-15-task" class="task">
 <p>Текст задания.</p>
 </div>
-<div id="hw1-15-autocheck" class="autocheck">
-<div id="hw1-15-ir" class="input-requirements">
+<div id="pr1-15-autocheck" class="autocheck">
+<div id="pr1-15-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
-<p><input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')"></p>
-<div id="hw1-15-fb" class="autocheck-feedback">
+<p><input class="autocheck-input" type="text" id="pr1-15" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-15')"></p>
+<div id="pr1-15-fb" class="autocheck-feedback">
 
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="hw1-15-hints">
+<details class="hints" id="pr1-15-hints">
 <summary>
 Подсказки
 </summary>
@@ -796,9 +808,597 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </details>
 </details>
 </div>
-<!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
-<script type="text/javascript" src="./js/hw1.json"></script>
-<script type="text/javascript" src="./js/hw.js"></script>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">#16</h3>
+<p><img id="pr1-16-level" class="level"></p>
+<div id="pr1-16-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-16-autocheck" class="autocheck">
+<div id="pr1-16-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-16" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-16')"></p>
+<div id="pr1-16-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-16-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">#17</h3>
+<p><img id="pr1-17-level" class="level"></p>
+<div id="pr1-17-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-17-autocheck" class="autocheck">
+<div id="pr1-17-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-17" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-17')"></p>
+<div id="pr1-17-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-17-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">#18</h3>
+<p><img id="pr1-18-level" class="level"></p>
+<div id="pr1-18-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-18-autocheck" class="autocheck">
+<div id="pr1-18-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-18" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-18')"></p>
+<div id="pr1-18-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-18-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">#19</h3>
+<p><img id="pr1-19-level" class="level"></p>
+<div id="pr1-19-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-19-autocheck" class="autocheck">
+<div id="pr1-19-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-19" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-19')"></p>
+<div id="pr1-19-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-19-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">#20</h3>
+<p><img id="pr1-20-level" class="level"></p>
+<div id="pr1-20-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-20-autocheck" class="autocheck">
+<div id="pr1-20-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-20" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-20')"></p>
+<div id="pr1-20-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-20-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+</section>
+<section id="pr1_add" class="level2">
+<h2 class="anchored" data-anchor-id="pr1_add">Дополнительные задания</h2>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">#1</h3>
+<p><img id="pr1-21-level" class="level"></p>
+<div id="pr1-21-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-21-autocheck" class="autocheck">
+<div id="pr1-21-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-21" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-21')"></p>
+<div id="pr1-21-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-21-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">#2</h3>
+<p><img id="pr1-22-level" class="level"></p>
+<div id="pr1-22-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-22-autocheck" class="autocheck">
+<div id="pr1-22-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-22" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-22')"></p>
+<div id="pr1-22-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-22-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-22" class="level3">
+<h3 class="anchored" data-anchor-id="section-22">#3</h3>
+<p><img id="pr1-23-level" class="level"></p>
+<div id="pr1-23-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-23-autocheck" class="autocheck">
+<div id="pr1-23-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-23" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-23')"></p>
+<div id="pr1-23-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-23-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-23" class="level3">
+<h3 class="anchored" data-anchor-id="section-23">#4</h3>
+<p><img id="pr1-24-level" class="level"></p>
+<div id="pr1-24-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-24-autocheck" class="autocheck">
+<div id="pr1-24-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-24" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-24')"></p>
+<div id="pr1-24-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-24-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-24" class="level3">
+<h3 class="anchored" data-anchor-id="section-24">#5</h3>
+<p><img id="pr1-25-level" class="level"></p>
+<div id="pr1-25-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-25-autocheck" class="autocheck">
+<div id="pr1-25-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-25" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-25')"></p>
+<div id="pr1-25-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-25-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-25" class="level3">
+<h3 class="anchored" data-anchor-id="section-25">#6</h3>
+<p><img id="pr1-26-level" class="level"></p>
+<div id="pr1-26-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-26-autocheck" class="autocheck">
+<div id="pr1-26-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-26" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-26')"></p>
+<div id="pr1-26-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-26-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-26" class="level3">
+<h3 class="anchored" data-anchor-id="section-26">#7</h3>
+<p><img id="pr1-27-level" class="level"></p>
+<div id="pr1-27-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-27-autocheck" class="autocheck">
+<div id="pr1-27-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-27" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-27')"></p>
+<div id="pr1-27-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-27-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-27" class="level3">
+<h3 class="anchored" data-anchor-id="section-27">#8</h3>
+<p><img id="pr1-28-level" class="level"></p>
+<div id="pr1-28-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-28-autocheck" class="autocheck">
+<div id="pr1-28-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-28" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-28')"></p>
+<div id="pr1-28-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-28-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-28" class="level3">
+<h3 class="anchored" data-anchor-id="section-28">#9</h3>
+<p><img id="pr1-29-level" class="level"></p>
+<div id="pr1-29-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-29-autocheck" class="autocheck">
+<div id="pr1-29-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-29" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-29')"></p>
+<div id="pr1-29-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-29-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="section-29" class="level3">
+<h3 class="anchored" data-anchor-id="section-29">#10</h3>
+<p><img id="pr1-30-level" class="level"></p>
+<div id="pr1-30-task" class="task">
+<p>Текст задания.</p>
+</div>
+<div id="pr1-30-autocheck" class="autocheck">
+<div id="pr1-30-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr1-30" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-30')"></p>
+<div id="pr1-30-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-30-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+<!--- CHANGE pr1 TO pr<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/pr1.json"></script>
+<script type="text/javascript" src="./js/pr.js"></script>
 
 
 </section>
