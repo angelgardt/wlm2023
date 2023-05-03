@@ -2,18 +2,43 @@ project:
   type: website
 
 website:
-  title: "hub"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "WLM 2023"
+  sidebar:
+    style: "docked"
+    search: false
+    contents:
+    - index.qmd
+    - what-is-it.qmd
+    - how-to-use.qmd
+    - how-to-support.qmd
+  navbar: 
+    title: "WLM 2023 // HSE UX LAB"
+    logo: pics/logo.png
+    left: 
+      - text: "Книга"
+        href: ../book/index.html
+      - text: "Лекции"
+        href: ../lectures/index.html
+      - text: "Практики"
+        href: ../practice/index.html
+      - text: "Домашки"
+        href: ../homeworks/index.html
+      - text: "Проекты"
+        href: ../projects/index.html
+    collapse: true
+    background: gray-700
+  page-footer: 
+    left: "© 2023, Anton Angelgardt" 
+    right: 
+      - icon: github
+        href: https://github.com/angelgardt
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: [lightstyle.scss]
+      dark: [darkstyle.scss]
     css: styles.css
     toc: true
 
-
-
+highlight-style: github
