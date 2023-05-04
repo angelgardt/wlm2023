@@ -34,6 +34,12 @@ $body-bg: $gray-22 !default;
 $body-color: $white !default;
 $link-color: $gray-b4 !default;
 
+$presentation-font-size-root: 30px;
+$presentation-h1-font-size: 2.5em;
+$presentation-h2-font-size: 1.7em;
+$presentation-h3-font-size: 1.3em;
+
+$presentation-title-slide-text-align: left;
 
 // Fonts
 
@@ -42,21 +48,9 @@ $link-color: $gray-b4 !default;
 $font-family-sans-serif: Montserrat !default;
 
 
-
-
 /*-- scss:rules --*/
-
-.reveal h1.title {
-  text-align: left;
-}
-
 .reveal .quarto-title-authors {
   margin-top: 1em;
-  justify-content: left !important;
-}
-
-.reveal .quarto-title-author {
-  padding-left: 0 !important;
 }
 
 code {
