@@ -1,0 +1,128 @@
+---
+title: "Заголовок презентации"
+author: "Антон Ангельгардт"
+format: 
+  revealjs:
+    logo: pics/logo.png
+    footer: "WLM 2023"
+    theme: style.scss
+    transition: fade
+    scrollable: true
+    smaller: false
+highlight-style: github
+---
+
+## Зачем?
+```{js favicon-loader}
+//  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
+
+var link = document.createElement('link');
+link.type = 'image/x-icon';
+link.rel = 'icon';
+document.head.appendChild(link);
+link.href = 'pics/favicon.png';
+```
+
+- Пункт плана
+- Пункт плана
+- Пункт плана
+
+## Текст
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+# Раздел
+
+## Списки
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Код
+
+When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r, echo=TRUE}
+1 + 1
+```
+
+
+## Формулы
+
+$$
+\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
+$$
+
+$$
+n \in \mathbb{N} \\
+x \thicksim \mathcal{N}(0, 1)
+$$
+
+
+## Колонки
+
+:::: {.columns}
+
+::: {.column width="60%"}
+Текст левой колонки
+:::
+
+::: {.column width="40%"}
+Текст правой колонки
+:::
+
+::::
+
+
+## Колонки с картинкой справа
+
+:::: {.columns}
+
+::: {.column width="60%"}
+Текст левой колонки
+:::
+
+::: {.column width="40%"}
+![](pics/test-pic.png)
+:::
+
+::::
+
+
+## Колонки с картинкой слева
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](pics/test-pic.png)
+:::
+
+::: {.column width="40%"}
+Текст
+:::
+
+::::
+
+
+## График
+
+```{r plot}
+plot(sample(1:100, 30))
+```
+
+## Итоги
+
+- Пункт итогов
+- Пункт итогов
+- Пункт итогов
+
+
+# Заголовок презентации {#end}
+
+:::: {.quarto-title-authors}
+::: {.quarto-title-author}
+Антон Ангельгардт
+:::
+::::
