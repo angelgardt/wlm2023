@@ -191,7 +191,6 @@ function deployer {
 			echo -e "-----"
 			
 			# remove extras
-			rm -r docs/slides/pics
 			find docs/slides -name "*.qmd" -type f -delete
 			echo -e "-----"
 			echo -e "${BLUE}Extras removed${NC}"
