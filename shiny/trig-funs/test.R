@@ -1,5 +1,4 @@
-library(ggplot2)
-library(tibble)
+library(tidyverse)
 library(ggforce)
 
 theme_set(theme_bw())
@@ -41,7 +40,7 @@ coords = tibble(func = factor(rep(funcs, each = 2),
        x = c(cosphi, cosphi, 0, cosphi, 0, 1, 0, 0, 1, 1, 0, cosphi),
        y = c(0, sinphi, 0, 0, 0, tanphi, 0, cscphi, 0, tanphi, cscphi, sinphi))
 
-# plot
+# plot circle
 ggplot() +
   # axes
   geom_hline(yintercept = 0, color = "gray") +
@@ -70,3 +69,25 @@ ggplot() +
   theme(legend.position = "bottom") +
   scale_color_manual(values = unlist(colors))
 
+
+# plot graphs
+tibble(x = seq(-5, 5, by = 0.01),
+      sin = sin(x),
+      cos = cos(x),
+      sec = ifelse(abs(cos) < 1e-3, NA, 1/cos),
+      csc = ifelse(abs(sin) < 1e-3, NA, 1/sin),
+      tan = ifelse(abs(cos) < 1e-3, NA, sin/cos),
+      cot = ifelse(abs(sin) < 1e-3, NA, cos/sin)) |> 
+  pivot_longer(cols = -x) -> graphs
+
+ggplot(data = graphs,
+       aes(x)) +
+  geom_vline(xintercept = 0, color = "gray") +
+  geom_hline(yintercept = 0, color = "gray") +
+  geom_line(aes(y = value, color = name)) +
+  xlim(-5, 5) +
+  coord_cartesian(ylim = c(-3, 3)) +
+  scale_color_manual(values = unlist(colors)) +
+  theme(legend.position = "bottom")
+  
+  
