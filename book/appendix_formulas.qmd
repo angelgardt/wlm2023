@@ -2,7 +2,24 @@
 
 {{< include _symbols.qmd >}}
 
+```{r require_tidyverse, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
 ## Степени и корни {#formulas_power}
+
+### Определения {#formulas_power_def}
+
+$$
+a^b \def \prod_{i=1}^b a_i
+$$
+
+$$
+\sqrt[n]a \def b \Leftrightarrow b^n = a
+$$
+
+### Свойства {#formulas_power_identities}
 
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
@@ -36,8 +53,12 @@ $$
 
 ## Логарифмы {#formulas_log}
 
-$$\log_b a = c \Leftrightarrow a^c = b, a > 0, b > 0, b \neq 1$$
+### Определение {#formulas_log_def}
 
+$$\log_b a \def c \Leftrightarrow a^c = b, a > 0, b > 0, b \neq 1$$
+
+
+### Свойства {#formulas_log_identities}
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
     <td width="50%" valign="top">
@@ -67,4 +88,283 @@ $$
 $$|x| \leq a \Rightarrow -a \leq x \leq a \Leftrightarrow x \in [-a, a]$$
 
 $$|x| \geq a \Rightarrow x \leq -a \wedge x \geq a \Leftrightarrow x \in (-\infty, -a] \cup [a, +\infty)$$
+
+
+## Тригонометрия {#formulas_trig}
+
+$$
+\sec \alpha = \frac{1}{\cos \alpha} \qquad
+\csc \alpha = \frac{1}{\sin \alpha} \qquad
+\tan \alpha = \frac{\sin \alpha}{\cos \alpha} \qquad
+\cot \alpha = \frac{\cos \alpha}{\sin \alpha}
+$$
+
+### Основное тригонометрическое тождество {#trig_pythagorean_identities}
+
+$$
+\sin^2 \alpha + \cos^2 \alpha = 1
+$$
+
+$$
+\sin \alpha = \pm \sqrt{1 - \cos^2 \alpha} \qquad \cos \alpha = \pm \sqrt{1 - \sin^2 \alpha}
+$$
+
+$$
+1 + \cot^2 \alpha = \csc^2 \alpha \qquad
+\tan^2 \alpha + 1 = \sec ^2 \alpha
+$$
+
+$$
+\sec^2 \alpha + \csc^2 \alpha = \sec^2 \alpha \cdot \csc^2 \alpha
+$$
+
+### Отражения {#trig_reflections}
+
+КАРТИНКА
+
+#### Относительно $\phi = 0$ {#trig_reflections_0}
+
+Выражает свойство чётности функции[^trig_odd_even_funs].
+
+[^trig_odd_even_funs]: Функция называется *чётной*, если $f(-x) = f(x)$, и нечётной, если $f(-x) = -f(x)$.
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (-\alpha) = -\sin \alpha$$
+    $$\tan (-\alpha) = -\tan \alpha$$
+    $$\sec (-\alpha) = \sec \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos (-\alpha) = \cos \alpha$$
+    $$\cot (-\alpha) = -\cot \alpha$$
+    $$\csc (-\alpha) = -\csc \alpha$$
+    </td>
+   </tr>
+</table>
+
+
+#### Относительно $\phi = \frac{\pi}{4}$ {#trig_reflections_pi4}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (\frac{\pi}{2}-\alpha) = \cos \alpha$$
+    $$\tan \Big(\frac{\pi}{2}-\alpha\Big) = \cot \alpha$$
+    $$\sec \Big(\frac{\pi}{2}-\alpha\Big) = \csc \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos \Big(\frac{\pi}{2}-\alpha\Big) = \sin \alpha$$
+    $$\cot \Big(\frac{\pi}{2}-\alpha\Big) = \tan \alpha$$
+    $$\csc \Big(\frac{\pi}{2}-\alpha\Big) = \sec \alpha$$
+    </td>
+   </tr>
+</table>
+
+#### Относительно $\phi = \frac{\pi}{2}$ {#trig_reflections_pi2}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (\pi-\alpha) = \sin \alpha$$
+    $$\tan (\pi-\alpha) = -\tan \alpha$$
+    $$\sec (\pi-\alpha) = -\sec \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos (\pi-\alpha) = -\cos \alpha$$
+    $$\cot (\pi-\alpha) = -\cot \alpha$$
+    $$\csc (\pi-\alpha) = \csc \alpha$$
+    </td>
+   </tr>
+</table>
+
+#### Относительно $\phi = \frac{3\pi}{4}$ {#trig_reflections_3pi2}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin \Big(\frac{3\pi}{2}-\alpha\Big) = -\cos \alpha$$
+    $$\tan \Big(\frac{3\pi}{2}-\alpha\Big) = \cot \alpha$$
+    $$\sec \Big(\frac{3\pi}{2}-\alpha\Big) = -\csc \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos \Big(\frac{3\pi}{2}-\alpha\Big) = -\sin \alpha$$
+    $$\cot \Big(\frac{3\pi}{2}-\alpha\Big) = \tan \alpha$$
+    $$\csc \Big(\frac{3\pi}{2}-\alpha\Big) = -\sec \alpha$$
+    </td>
+   </tr>
+</table>
+
+#### Относительно $\phi = \pi$ {#trig_reflections_pi}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (2\pi - \alpha) = -\sin \alpha = \sin (-\alpha)$$
+    $$\tan (2\pi - \alpha) = -\tan \alpha = \tan (-\alpha)$$
+    $$\sec (2\pi - \alpha) = \sec \alpha = \sec (-\alpha)$$
+    </td>
+    <td valign="top">
+    $$\cos (2\pi - \alpha) = \cos \alpha = \cos (-\alpha)$$
+    $$\cot (2\pi - \alpha) = -\cot \alpha = \cot (-\alpha)$$
+    $$\csc (2\pi - \alpha) = -\csc \alpha = \csc (-\alpha)$$
+    </td>
+   </tr>
+</table>
+
+### Сдвиг {#trig_shift}
+
+```{r, echo=FALSE}
+tibble(x = seq(-5, 5, by = 0.001),
+      sin = sin(x),
+      cos = cos(x),
+      sec = ifelse(abs(cos) < 1e-3, NA, 1/cos),
+      csc = ifelse(abs(sin) < 1e-3, NA, 1/sin),
+      tan = ifelse(abs(cos) < 1e-3, NA, sin/cos),
+      cot = ifelse(abs(sin) < 1e-3, NA, cos/sin)) |> 
+  # summarise(min(abs(sin)), min(abs(cos)))
+  pivot_longer(cols = -x) |> 
+  mutate(name = factor(name, 
+                       ordered = TRUE, 
+                       levels = c("sin", "cos", "csc", "sec", "tan", "cot"))) -> graphs
+
+ggplot(data = graphs,
+       aes(x)) +
+  geom_vline(xintercept = 0, color = "gray") +
+  geom_hline(yintercept = 0, color = "gray") +
+  geom_line(aes(y = value, color = name)) +
+  facet_wrap(~ name, nrow = 3) +
+  xlim(-5, 5) +
+  coord_fixed(ylim = c(-3, 3)) +
+  guides(color = "none") +
+  labs(y = NULL,
+       x = latex2exp::TeX("\\alpha")) +
+  scale_color_manual(values = c(sin = "salmon",
+                                cos = "royalblue",
+                                csc = "orchid",
+                                sec = "turquoise",
+                                tan = "tan4",
+                                cot = "orange2"))
+```
+
+Так как все тригонометрические функции периодические, результат сдвига функции определяется её периодом. Для функций $\sin, \cos, \sec$ и $\csc$ период равен $2\pi$. Для $\tan$ и $\cot$ он составляет $\pi$.
+
+#### На четверть периода {#trig_shift_by_one_quarter}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin \Big(\alpha \pm \frac{\pi}{2}\Big) = \pm\cos \alpha$$
+    $$\tan \Big(\alpha \pm \frac{\pi}{4}\Big) = \frac{\tan \alpha \pm 1}{1 \mp \tan \alpha}$$
+    $$\sec \Big(2\pi - \frac{\pi}{2}\Big) = \mp \csc \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos \Big(\alpha \pm \frac{\pi}{2}\Big) = \mp \sin \alpha$$
+    $$\cot \Big(\alpha \pm \frac{\pi}{4}\Big) = \frac{\cot \alpha \mp 1}{1 \pm \cot \alpha}$$
+    $$\csc \Big(\alpha \pm \frac{\pi}{2}\Big) = \pm \sec \alpha$$
+    </td>
+   </tr>
+</table>
+
+
+#### На половину периода {#trig_shift_by_half}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (\alpha + \pi) = -\sin \alpha$$
+    $$\tan \Big(\alpha + \frac{\pi}{2}\Big) = -\cot \alpha$$
+    $$\sec (\alpha + \pi) = -\sec \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos (\alpha + \pi) = -\cos \alpha$$
+    $$\cot \Big(\alpha + \frac{\pi}{2}\Big) = -\tan \alpha$$
+    $$\csc (\alpha + \pi) = -\csc \alpha$$
+    </td>
+   </tr>
+</table>
+
+
+#### На полный период {#trig_shift_by_full}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$\sin (\alpha + 2\pi) = \sin \alpha$$
+    $$\tan (\alpha + \pi) = \tan \alpha$$
+    $$\sec (\alpha + 2\pi) = \sec \alpha$$
+    </td>
+    <td valign="top">
+    $$\cos (\alpha + 2\pi) = \cos \alpha$$
+    $$\cot (\alpha + \pi) = \cot \alpha$$
+    $$\csc (\alpha + 2\pi) = \csc \alpha$$
+    </td>
+   </tr>
+</table>
+
+### Соотношение знаков {#trig_sgn}
+
+$$
+\sgn \sin \alpha = \sgn \csc \alpha \qquad \sgn \cos \alpha = \sgn \sec \alpha
+$$
+$$
+\sgn \tan \alpha = \sgn \cot \alpha
+$$
+
+### Функции суммы с разности аргументов {#trig_angle_sum}
+$$
+\sin (\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta
+$$
+
+$$
+\cos (\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta
+$$
+
+$$
+\tan (\alpha \pm \beta) = \frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta}
+$$
+
+$$
+\cot (\alpha \pm \beta) = \frac{\cot \alpha \cot \beta \mp 1}{\cot \beta \pm \cot \alpha}
+$$
+$$
+\sec (\alpha \pm \beta) = \frac{\sec \alpha \sec \beta \csc \alpha \csc \beta}{\csc \alpha \csc \beta \mp \sec \alpha \sec \beta}
+$$
+
+$$
+\csc (\alpha \pm \beta) = \frac{\sec \alpha \sec \beta \csc \alpha \csc \beta}{\sec \alpha \csc \beta \pm \sec \alpha \sec \beta}
+$$
+
+### Формулы двойного аргумента {#trig_double_arg}
+
+### Формулы тройного аргумента {#trig_triple_arg}
+
+### Формулы половинного аргумента {#trig_half_arg}
+
+### Формулы понижения степени {#trig_power_reduction}
+
+### Преобразование произведения в сумму {#trig_prod_to_sum}
+
+### Преобразование суммы в произведение {#trig_sum_to_prod}
+
+$$
+\sin \alpha \pm \sin \beta = 2 \sin \Big(\frac{\alpha \pm \beta}{2}\Big) \cos \Big(\frac{\alpha \mp \beta}{2}\Big)
+$$
+
+$$
+\cos \alpha + \cos \beta = 2 \cos \Big(\frac{\alpha + \beta}{2}\Big) \cos \Big(\frac{\alpha - \beta}{2}\Big)
+$$
+
+$$
+\cos \alpha - \cos \beta = -2 \sin \Big(\frac{\alpha + \beta}{2}\Big) \sin \Big(\frac{\alpha - \beta}{2}\Big)
+$$
+
+$$
+\tan \alpha \pm \tan \beta = \frac{sin(\alpha + \beta)}{\cos \alpha \cos \beta}
+$$
+
+
+
+
+
 
