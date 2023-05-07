@@ -65,8 +65,8 @@ format:
   html:
     cover-image: pics/book-cover.png
     theme: 
-      light: [lightstyle.scss, chapterlabs.scss, tasklight.scss]
-      dark: [darkstyle.scss, chapterlabs.scss, taskdark.scss]
+      light: [lightstyle.scss, custom.scss, tasklight.scss]
+      dark: [darkstyle.scss, custom.scss, taskdark.scss]
   pdf:
     documentclass: scrreprt
 
