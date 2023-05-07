@@ -157,7 +157,7 @@ ggplot() +
   geom_point(aes(x = y, y = x), color = clrs[2]) +
   annotate(geom = "text", 
            x = y+label_shift, y = x+label_shift, 
-           label = TeX(r"($(-x, y)$)"), color = clrs[2]) +
+           label = TeX(r"($(y, x)$)"), color = clrs[2]) +
   # green
   geom_vline(xintercept = 0,
               linetype = "dashed", color = clrs[3], linewidth = .2) +
@@ -170,7 +170,7 @@ ggplot() +
   geom_point(aes(x = -x, y = y), color = clrs[3]) +
   annotate(geom = "text", 
            x = -x-label_shift*1.3, y = y+label_shift, 
-           label = TeX(r"($(-x, -y)$)"), color = clrs[3]) +
+           label = TeX(r"($(-x, y)$)"), color = clrs[3]) +
   # blue
   geom_abline(intercept = 0, slope = tan(3*pi/4),
               linetype = "dashed", color = clrs[4], linewidth = .2) +
@@ -183,7 +183,7 @@ ggplot() +
   geom_point(aes(x = -y, y = -x), color = clrs[4]) +
   annotate(geom = "text", 
            x = -y-label_shift, y = -x-label_shift, 
-           label = TeX(r"($(x, -y)$)"), color = clrs[4]) +
+           label = TeX(r"($(-y, -x)$)"), color = clrs[4]) +
   # purple
   geom_hline(yintercept = 0,
               linetype = "dashed", color = clrs[5], linewidth = .2) +
@@ -196,7 +196,7 @@ ggplot() +
   geom_point(aes(x = x, y = -y), color = clrs[5]) +
   annotate(geom = "text", 
            x = x+label_shift, y = -y-label_shift, 
-           label = TeX(r"($(x, y)$)"), color = clrs[5]) +
+           label = TeX(r"($(x, -y)$)"), color = clrs[5]) +
   # arcs
   # gray
   geom_arc(aes(x0 = 0, y0 = 0, r = .25, 
