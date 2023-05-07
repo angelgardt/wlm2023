@@ -256,24 +256,35 @@ ggplot() +
   annotate(geom = "text", 
            x = x+1.4*label_shift, y = y-.4*label_shift, 
            label = TeX(r"($(x, y)$)"), color = clrs[5]) +
-  geom_arc(aes(x0 = 0, y0 = 0, r = .25, start = 2*pi/6, end = 3*pi/6 )) +
-  # geom_circle(aes(x0=0, y0=0, r = .25), color = clrs[1]) +
-  #geom_curve(aes(x = .25, y = 0, xend = 0.2165, yend = 0.125), color = clrs[1], curvature = .25) +
-  #geom_circle(aes(x0=0, y0=0, r = .35), color = clrs[2]) +
-  #geom_curve(aes(x = .35, y = 0, xend = -0.3031, yend = 0.175), color = clrs[2], curvature = .755) +
-  #y_1 = 0.1750000000000831
-  #x_1 = -0.3031088913246975
-  #geom_circle(aes(x0=0, y0=0, r = .45), color = clrs[3]) +
-  geom_curve(aes(x = .45, y = 0, xend = -0.3897, yend = -0.225),
-             color = clrs[3], curvature = .65) +
-  #x = -0.389711431702997
-  #y = -0.225
-  # geom_circle(aes(x0=0, y0=0, r = .55), color = clrs[4]) +
-  geom_curve(aes(x = .55, y = 0, xend = 0.4763, yend = -0.275),
-             color = clrs[4], curvature = .25) +
-  # x = 0.476313972081441
-  # y = -0.275
-  geom_circle(aes(x0=0, y0=0, r = .65), color = clrs[5]) +
+  geom_arc(aes(x0 = 0, y0 = 0, r = .25, 
+               start = 2*pi/6, end = 3*pi/6 ),
+           color = clrs[1], linetype = "dotted") +
+  annotate(geom = "text",
+           x = .165, y = .05,
+           label = TeX(r"(\alpha)"), color = clrs[1]) +
+  geom_arc(aes(x0 = 0, y0 = 0, r = .35, 
+               start = -2*pi/6, end = 3*pi/6 ),
+           color = clrs[2], linetype = "dotted") +
+  annotate(geom = "text",
+           x = -.125, y = .2,
+           label = TeX(r"(\alpha + \frac{\pi}{2})"), color = clrs[2]) +
+  geom_arc(aes(x0 = 0, y0 = 0, r = .45, 
+               start = -4*pi/6, end = 3*pi/6 ),
+           color = clrs[3], linetype = "dotted") +
+  annotate(geom = "text",
+           x = -.3, y = -.05,
+           label = TeX(r"(\alpha + \pi)"), color = clrs[3]) +
+  geom_arc(aes(x0 = 0, y0 = 0, r = .55, 
+               start = -8*pi/6, end = 3*pi/6 ),
+           color = clrs[4], linetype = "dotted") +
+  annotate(geom = "text",
+           x = .2, y = -.3,
+           label = TeX(r"(\alpha + \frac{3\pi}{2})"), color = clrs[4]) +
+  geom_circle(aes(x0=0, y0=0, r = .65), 
+              color = clrs[5], linetype = "dotted") +
+  annotate(geom = "text",
+           x = .75, y = .3,
+           label = TeX(r"(\alpha + 2\pi)"), color = clrs[5]) +
   coord_fixed(xlim=c(-1.2, 1.2)) +
   labs(x = NULL, y = NULL)
 ```
