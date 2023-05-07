@@ -131,6 +131,10 @@ ggplot() +
   # axes
   geom_vline(xintercept = 0, color = "gray") +
   geom_hline(yintercept = 0, color = "gray") +
+  # zero phi
+  annotate(geom = "text", 
+           x = 1.125, y = 0.1, 
+           label = TeX(r"($\varphi = 0$)"), color = "gray") +
   # circle
   geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
   # angle / red
@@ -144,83 +148,104 @@ ggplot() +
   # orange
   geom_abline(intercept = 0, slope = tan(pi/4),
               linetype = "dashed", color = clrs[2], linewidth = .2) +
+  annotate(geom = "text", 
+           x = .875, y = 1.125, 
+           label = TeX(r"($\varphi = \frac{\pi}{4}$)"), color = clrs[2]) +
   geom_line(aes(x = c(0, y), 
                 y = c(0, x)), 
             color = clrs[2]) +
   geom_point(aes(x = y, y = x), color = clrs[2]) +
   annotate(geom = "text", 
-           x = -x-label_shift, y = y+label_shift, 
+           x = y+label_shift, y = x+label_shift, 
            label = TeX(r"($(-x, y)$)"), color = clrs[2]) +
   # green
   geom_vline(xintercept = 0,
               linetype = "dashed", color = clrs[3], linewidth = .2) +
+  annotate(geom = "text", 
+           x = .125, y = 1.125, 
+           label = TeX(r"($\varphi = \frac{\pi}{2}$)"), color = clrs[3]) +
   geom_line(aes(x = c(0, -x), 
                 y = c(0, y)), 
             color = clrs[3]) +
   geom_point(aes(x = -x, y = y), color = clrs[3]) +
   annotate(geom = "text", 
-           x = -x-label_shift, y = -y-label_shift, 
+           x = -x-label_shift*1.3, y = y+label_shift, 
            label = TeX(r"($(-x, -y)$)"), color = clrs[3]) +
   # blue
   geom_abline(intercept = 0, slope = tan(3*pi/4),
               linetype = "dashed", color = clrs[4], linewidth = .2) +
+  annotate(geom = "text", 
+           x = -.875, y = 1.125, 
+           label = TeX(r"($\varphi = \frac{3\pi}{4}$)"), color = clrs[4]) +
   geom_line(aes(x = c(0, -y), 
                 y = c(0, -x)), 
             color = clrs[4]) +
   geom_point(aes(x = -y, y = -x), color = clrs[4]) +
   annotate(geom = "text", 
-           x = x+label_shift, y = -y-label_shift, 
+           x = -y-label_shift, y = -x-label_shift, 
            label = TeX(r"($(x, -y)$)"), color = clrs[4]) +
   # purple
   geom_hline(yintercept = 0,
               linetype = "dashed", color = clrs[5], linewidth = .2) +
+  annotate(geom = "text", 
+           x = -1.125, y = 0.1, 
+           label = TeX(r"($\varphi = \pi$)"), color = clrs[5]) +
   geom_line(aes(x = c(0, x), 
                 y = c(0, -y)), 
             color = clrs[5]) +
   geom_point(aes(x = x, y = -y), color = clrs[5]) +
   annotate(geom = "text", 
-           x = x+1.4*label_shift, y = y-.4*label_shift, 
+           x = x+label_shift, y = -y-label_shift, 
            label = TeX(r"($(x, y)$)"), color = clrs[5]) +
   # arcs
+  # gray
+  geom_arc(aes(x0 = 0, y0 = 0, r = .25, 
+               start = 3*pi/6, end = 4*pi/6 ),
+           color = "gray", linetype = "dotted") +
+  annotate(geom = "text",
+           x = .165, y = -.05,
+           label = TeX(r"($-\alpha$)"), color = "gray") +
   # red
   geom_arc(aes(x0 = 0, y0 = 0, r = .25, 
                start = 2*pi/6, end = 3*pi/6 ),
            color = clrs[1], linetype = "dotted") +
   annotate(geom = "text",
            x = .165, y = .05,
-           label = TeX(r"(\alpha)"), color = clrs[1]) +
+           label = TeX(r"($\alpha$)"), color = clrs[1]) +
   # orange
   geom_arc(aes(x0 = 0, y0 = 0, r = .35, 
-               start = -2*pi/6, end = 3*pi/6 ),
+               start = pi/6, end = 3*pi/6 ),
            color = clrs[2], linetype = "dotted") +
   annotate(geom = "text",
-           x = -.125, y = .2,
-           label = TeX(r"(\alpha + \frac{\pi}{2})"), color = clrs[2]) +
+           x = .25, y = .8,
+           label = TeX(r"($\frac{\pi}{2} - \alpha$)"), color = clrs[2]) +
   # green
   geom_arc(aes(x0 = 0, y0 = 0, r = .45, 
-               start = -4*pi/6, end = 3*pi/6 ),
+               start = -2*pi/6, end = 3*pi/6 ),
            color = clrs[3], linetype = "dotted") +
   annotate(geom = "text",
-           x = -.3, y = -.05,
-           label = TeX(r"(\alpha + \pi)"), color = clrs[3]) +
+           x = -.8, y = .3,
+           label = TeX(r"($\pi - \alpha$)"), color = clrs[3]) +
   # blue
   geom_arc(aes(x0 = 0, y0 = 0, r = .55, 
-               start = -8*pi/6, end = 3*pi/6 ),
+               start = -5*pi/6, end = 3*pi/6),
            color = clrs[4], linetype = "dotted") +
   annotate(geom = "text",
-           x = .2, y = -.3,
-           label = TeX(r"(\alpha + \frac{3\pi}{2})"), color = clrs[4]) +
+           x = -.2, y = -.8,
+           label = TeX(r"($\frac{3\pi}{2} - \alpha$)"), color = clrs[4]) +
   # purple
-  geom_circle(aes(x0=0, y0=0, r = .65), 
+  geom_arc(aes(x0=0, y0=0, r = .65,
+                  start = -8*pi/6, end = 3*pi/6), 
               color = clrs[5], linetype = "dotted") +
   annotate(geom = "text",
-           x = .75, y = .3,
-           label = TeX(r"(\alpha + 2\pi)"), color = clrs[5]) +
-  coord_fixed(xlim=c(-1.2, 1.2)) +
+           x = .75, y = -.25,
+           label = TeX(r"($2\pi - \alpha$)"), color = clrs[5]) +
+  coord_fixed(xlim=c(-1.2, 1.2),
+              ylim=c(-1.2, 1.2)) +
   labs(x = NULL, y = NULL)
 ```
 
-#### Относительно $\phi = 0$ {#trig_reflections_0}
+#### Относительно $\varphi = 0$ {#trig_reflections_0}
 
 Выражает свойство чётности функции[^trig_odd_even_funs].
 
@@ -242,7 +267,7 @@ ggplot() +
 </table>
 
 
-#### Относительно $\phi = \frac{\pi}{4}$ {#trig_reflections_pi4}
+#### Относительно $\varphi = \frac{\pi}{4}$ {#trig_reflections_pi4}
 
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
@@ -259,7 +284,7 @@ ggplot() +
    </tr>
 </table>
 
-#### Относительно $\phi = \frac{\pi}{2}$ {#trig_reflections_pi2}
+#### Относительно $\varphi = \frac{\pi}{2}$ {#trig_reflections_pi2}
 
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
@@ -276,7 +301,7 @@ ggplot() +
    </tr>
 </table>
 
-#### Относительно $\phi = \frac{3\pi}{4}$ {#trig_reflections_3pi2}
+#### Относительно $\varphi = \frac{3\pi}{4}$ {#trig_reflections_3pi2}
 
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
@@ -293,7 +318,7 @@ ggplot() +
    </tr>
 </table>
 
-#### Относительно $\phi = \pi$ {#trig_reflections_pi}
+#### Относительно $\varphi = \pi$ {#trig_reflections_pi}
 
 <table width="100%" cellspacing="0" cellpadding="5">
    <tr> 
@@ -357,30 +382,30 @@ ggplot() +
            color = clrs[1], linetype = "dotted") +
   annotate(geom = "text",
            x = .165, y = .05,
-           label = TeX(r"(\alpha)"), color = clrs[1]) +
+           label = TeX(r"($\alpha$)"), color = clrs[1]) +
   geom_arc(aes(x0 = 0, y0 = 0, r = .35, 
                start = -2*pi/6, end = 3*pi/6 ),
            color = clrs[2], linetype = "dotted") +
   annotate(geom = "text",
            x = -.125, y = .2,
-           label = TeX(r"(\alpha + \frac{\pi}{2})"), color = clrs[2]) +
+           label = TeX(r"($\alpha + \frac{\pi}{2}$)"), color = clrs[2]) +
   geom_arc(aes(x0 = 0, y0 = 0, r = .45, 
                start = -4*pi/6, end = 3*pi/6 ),
            color = clrs[3], linetype = "dotted") +
   annotate(geom = "text",
            x = -.3, y = -.05,
-           label = TeX(r"(\alpha + \pi)"), color = clrs[3]) +
+           label = TeX(r"($\alpha + \pi$)"), color = clrs[3]) +
   geom_arc(aes(x0 = 0, y0 = 0, r = .55, 
                start = -8*pi/6, end = 3*pi/6 ),
            color = clrs[4], linetype = "dotted") +
   annotate(geom = "text",
            x = .2, y = -.3,
-           label = TeX(r"(\alpha + \frac{3\pi}{2})"), color = clrs[4]) +
+           label = TeX(r"($\alpha + \frac{3\pi}{2}$)"), color = clrs[4]) +
   geom_circle(aes(x0=0, y0=0, r = .65), 
               color = clrs[5], linetype = "dotted") +
   annotate(geom = "text",
            x = .75, y = .3,
-           label = TeX(r"(\alpha + 2\pi)"), color = clrs[5]) +
+           label = TeX(r"($\alpha + 2\pi$)"), color = clrs[5]) +
   coord_fixed(xlim=c(-1.2, 1.2)) +
   labs(x = NULL, y = NULL)
 ```
