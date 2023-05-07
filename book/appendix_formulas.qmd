@@ -94,6 +94,9 @@ $$|x| \geq a \Rightarrow x \leq -a \wedge x \geq a \Leftrightarrow x \in (-\inft
 
 ## Тригонометрия {#formulas_trig}
 
+
+### Производные тригонометрические функции {#trig_funs_def}
+
 $$
 \sec \alpha = \frac{1}{\cos \alpha} \qquad
 \csc \alpha = \frac{1}{\sin \alpha} \qquad
@@ -452,7 +455,7 @@ ggplot(data = graphs,
     <td width="50%" valign="top">
     $$\sin \Big(\alpha \pm \frac{\pi}{2}\Big) = \pm\cos \alpha$$
     $$\tan \Big(\alpha \pm \frac{\pi}{4}\Big) = \frac{\tan \alpha \pm 1}{1 \mp \tan \alpha}$$
-    $$\sec \Big(2\pi - \frac{\pi}{2}\Big) = \mp \csc \alpha$$
+    $$\sec \Big(\alpha \pm \frac{\pi}{2}\Big) = \mp \csc \alpha$$
     </td>
     <td valign="top">
     $$\cos \Big(\alpha \pm \frac{\pi}{2}\Big) = \mp \sin \alpha$$
