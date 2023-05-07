@@ -543,7 +543,12 @@ a, &amp;a \geq 0 \\
 <h3 data-number="18.4.3" class="anchored" data-anchor-id="trig_shift"><span class="header-section-number">18.4.3</span> Сдвиг</h3>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="appendix_formulas_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="appendix_formulas_files/figure-html/trig_shift_circle-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="appendix_formulas_files/figure-html/trig_shift_graphs-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Так как все тригонометрические функции периодические, результат сдвига функции определяется её периодом. Для функций <span class="math inline">\(\sin, \cos, \sec\)</span> и <span class="math inline">\(\csc\)</span> период равен <span class="math inline">\(2\pi\)</span>. Для <span class="math inline">\(\tan\)</span> и <span class="math inline">\(\cot\)</span> он составляет <span class="math inline">\(\pi\)</span>.</p>
@@ -623,18 +628,131 @@ a, &amp;a \geq 0 \\
 </section>
 <section id="trig_double_arg" class="level3" data-number="18.4.6">
 <h3 data-number="18.4.6" class="anchored" data-anchor-id="trig_double_arg"><span class="header-section-number">18.4.6</span> Формулы двойного аргумента</h3>
+<p><span class="math display">\[
+\sin 2\alpha = 2\sin \alpha \cos \alpha = (\sin \alpha + \cos \alpha)^2 -1 = \frac{2\tan \alpha}{1 + \tan^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\cos 2\alpha = \cos^2 \alpha - \sin^2 \alpha = 2\cos^2 \alpha - 1 = 1 - 2\sin^2 \alpha = \frac{1 - \tan^2 \alpha}{1 + \tan^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\cot 2\alpha = \frac{\cot^2 \alpha - 1}{2 \cot \alpha} = \frac{1 - \tan^2 \alpha}{2 \tan \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\sec 2\alpha = \frac{\sec^2 \alpha}{2 - \sec^2 \alpha} = \frac{1 + \tan^2 \alpha}{1 - \tan^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\csc 2\alpha = \frac{\sec \alpha \csc \alpha}{2} = \frac{1 + \tan^2 \alpha}{2 \tan \alpha}
+\]</span></p>
 </section>
 <section id="trig_triple_arg" class="level3" data-number="18.4.7">
 <h3 data-number="18.4.7" class="anchored" data-anchor-id="trig_triple_arg"><span class="header-section-number">18.4.7</span> Формулы тройного аргумента</h3>
+<p><span class="math display">\[
+\sin 3\alpha = 3\sin \alpha - 4 \sin^3 \alpha = 4\sin \alpha \sin \Big( \frac{\pi}{3} - \alpha\Big) \sin \Big( \frac{\pi}{3} + \alpha \Big)
+\]</span></p>
+<p><span class="math display">\[
+\cos 3\alpha = 4\cos^3 \alpha - 3 \cos \alpha = 4\cos \alpha \cos \Big(\frac{\pi}{3} - \alpha\Big) \cos \Big(\frac{\pi}{3} + \alpha\Big)
+\]</span></p>
+<p><span class="math display">\[
+\tan 3\alpha = \frac{3\tan \alpha - \tan^3 \alpha}{1 - 3\tan^2 \alpha} = \tan \alpha \tan \Big( \frac{\pi}{3} - \alpha \Big) \tan \Big(\frac{\pi}{3} + \alpha \Big)
+\]</span></p>
+<p><span class="math display">\[
+\cot 3\alpha = \frac{3 \cot \alpha - \cot^3 \alpha}{1 - 3\cot^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\sec 3\alpha = \frac{\sec^3 \alpha}{4 - 3\sec^2 \alpha}
+\]</span></p>
+<p><span class="math display">\[
+\csc 3\alpha = \frac{\csc^3 \alpha}{3\csc^2 \alpha -4}
+\]</span></p>
 </section>
 <section id="trig_half_arg" class="level3" data-number="18.4.8">
 <h3 data-number="18.4.8" class="anchored" data-anchor-id="trig_half_arg"><span class="header-section-number">18.4.8</span> Формулы половинного аргумента</h3>
+<p><span class="math display">\[
+\sin \frac{\alpha}{2} = \text{sgn}\Big(\sin \frac{\alpha}{2} \Big) \sqrt{\frac{1 - \cos \alpha}{2}}
+\]</span></p>
+<p><span class="math display">\[
+\cos \frac{\alpha}{2} = \text{sgn}\Big( \cos \frac{\alpha}{2} \Big) \sqrt{\frac{1 + \cos \alpha}{2}}
+\]</span></p>
+<p><span class="math display">\[
+\tan \frac{\alpha}{2} = \frac{1 - \cos\alpha}{\sin \alpha} = \frac{\sin \alpha}{1 + \cos \alpha} = \csc \alpha - \cot \alpha = \frac{\tan \alpha}{1 + \sec \alpha} = \text{sgn}(\sin \alpha) \sqrt{\frac{1 - \cos \alpha}{1 + \cos \alpha}}
+\]</span></p>
+<p><span class="math display">\[
+\cot \frac{\alpha}{2} = \frac{1 + \cos \alpha}{\sin \alpha} = \frac{\sin \alpha}{1 - \cos \alpha} = \csc \alpha + \cot \alpha = \text{sgn}(\sin \alpha) \sqrt{\frac{1 + \cos \alpha}{1 - \cos{\alpha}}}
+\]</span></p>
+<p><span class="math display">\[
+\sec \frac{\alpha}{2} = \text{sgn}\Big( \cos \frac{\alpha}{2} \Big) \sqrt{\frac{2}{1 + \cos \alpha}}
+\]</span></p>
+<p><span class="math display">\[
+\csc \frac{\alpha}{2} = \text{sgn}\Big( \sin \frac{\alpha}{2}  \Big) \sqrt{\frac{2}{1 - \cos \alpha}}
+\]</span></p>
 </section>
 <section id="trig_power_reduction" class="level3" data-number="18.4.9">
 <h3 data-number="18.4.9" class="anchored" data-anchor-id="trig_power_reduction"><span class="header-section-number">18.4.9</span> Формулы понижения степени</h3>
+
+<table width="100%" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<td width="50%" valign="top">
+<span class="math display">\[
+\sin^2 \alpha = \frac{1 - \cos 2\alpha}{2}
+\]</span>
+</td>
+<td valign="top">
+<span class="math display">\[
+\cos^2 \alpha = \frac{1 + \cos 2\alpha}{2}
+\]</span>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<span class="math display">\[
+\tan^2 \alpha = \frac{1 - \cos 2\alpha}{1 + \cos 2\alpha}
+\]</span>
+</td>
+<td valign="top">
+<span class="math display">\[
+\cot^2 \alpha = \frac{1 + \cos 2\alpha}{1 - \cos 2\alpha}
+\]</span>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<span class="math display">\[
+\sec^2 \alpha = \frac{2}{1 + \cos 2\alpha}
+\]</span>
+</td>
+<td valign="top">
+<span class="math display">\[
+\csc^2 \alpha = \frac{2}{1 - \cos 2\alpha}
+\]</span>
+</td>
+<td valign="top">
+</td></tr>
+
+</tbody></table>
 </section>
 <section id="trig_prod_to_sum" class="level3" data-number="18.4.10">
 <h3 data-number="18.4.10" class="anchored" data-anchor-id="trig_prod_to_sum"><span class="header-section-number">18.4.10</span> Преобразование произведения в сумму</h3>
+<p><span class="math display">\[
+\cos \alpha \cos \beta = \frac{\cos (\alpha - \beta) + \cos (\alpha + \beta)}{2}
+\]</span></p>
+<p><span class="math display">\[
+\sin \alpha \sin \beta = \frac{\cos (\alpha - \beta) - \cos (\alpha + \beta)}{2}
+\]</span></p>
+<p><span class="math display">\[
+\sin \alpha \cos \beta = \frac{\sin (\alpha + \beta) + \sin (\alpha - \beta)}{2}
+\]</span></p>
+<p><span class="math display">\[
+\cos \alpha \sin \beta = \frac{\sin (\alpha + \beta) - \sin (\alpha - \beta)}{2}
+\]</span></p>
+<p><span class="math display">\[
+\tan \alpha \tan \beta = \frac{\cos (\alpha - \beta) - \cos (\alpha + \beta)}{\cos (\alpha - \beta) + \cos (\alpha + \beta)}
+\]</span></p>
+<p><span class="math display">\[
+\tan \alpha \cot \beta = \frac{\sin (\alpha + \beta) + \sin (\alpha - \beta)}{\sin (\alpha + \beta) - \sin (\alpha - \beta)}
+\]</span></p>
 </section>
 <section id="trig_sum_to_prod" class="level3" data-number="18.4.11">
 <h3 data-number="18.4.11" class="anchored" data-anchor-id="trig_sum_to_prod"><span class="header-section-number">18.4.11</span> Преобразование суммы в произведение</h3>

@@ -4,6 +4,8 @@
 
 ```{r require_tidyverse, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
+library(ggforce)
+library(latex2exp)
 theme_set(theme_bw())
 ```
 
@@ -214,7 +216,69 @@ $$
 
 ### Сдвиг {#trig_shift}
 
-```{r, echo=FALSE}
+```{r trig_shift_circle, echo=FALSE, message=FALSE, warning=FALSE}
+x = cos(pi/6); y = sin(pi/6)
+clrs = c('red3', 'orange3', 'green3', 'blue3', 'purple3')
+label_shift = 0.12
+
+ggplot() +
+  geom_vline(xintercept = 0, color = "gray") +
+  geom_hline(yintercept = 0, color = "gray") +
+  geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
+  geom_line(aes(x = c(0, x), 
+                y = c(0, y)), 
+            color = clrs[1]) +
+  geom_point(aes(x = x, y = y), color = clrs[1]) +
+  annotate(geom = "text", 
+           x = x+label_shift, y = y+label_shift, 
+           label = TeX(r"($(x, y)$)"), color = clrs[1]) +
+  geom_line(aes(x = c(0, -x), 
+                y = c(0, y)), 
+            color = clrs[2]) +
+  geom_point(aes(x = -x, y = y), color = clrs[2]) +
+  annotate(geom = "text", 
+           x = -x-label_shift, y = y+label_shift, 
+           label = TeX(r"($(-x, y)$)"), color = clrs[2]) +
+  geom_line(aes(x = c(0, -x), 
+                y = c(0, -y)), 
+            color = clrs[3]) +
+  geom_point(aes(x = -x, y = -y), color = clrs[3]) +
+  annotate(geom = "text", 
+           x = -x-label_shift, y = -y-label_shift, 
+           label = TeX(r"($(-x, -y)$)"), color = clrs[3]) +
+  geom_line(aes(x = c(0, x), 
+                y = c(0, -y)), 
+            color = clrs[4]) +
+  geom_point(aes(x = x, y = -y), color = clrs[4]) +
+  annotate(geom = "text", 
+           x = x+label_shift, y = -y-label_shift, 
+           label = TeX(r"($(x, -y)$)"), color = clrs[4]) +
+  annotate(geom = "text", 
+           x = x+1.4*label_shift, y = y-.4*label_shift, 
+           label = TeX(r"($(x, y)$)"), color = clrs[5]) +
+  geom_arc(aes(x0 = 0, y0 = 0, r = .25, start = 2*pi/6, end = 3*pi/6 )) +
+  # geom_circle(aes(x0=0, y0=0, r = .25), color = clrs[1]) +
+  #geom_curve(aes(x = .25, y = 0, xend = 0.2165, yend = 0.125), color = clrs[1], curvature = .25) +
+  #geom_circle(aes(x0=0, y0=0, r = .35), color = clrs[2]) +
+  #geom_curve(aes(x = .35, y = 0, xend = -0.3031, yend = 0.175), color = clrs[2], curvature = .755) +
+  #y_1 = 0.1750000000000831
+  #x_1 = -0.3031088913246975
+  #geom_circle(aes(x0=0, y0=0, r = .45), color = clrs[3]) +
+  geom_curve(aes(x = .45, y = 0, xend = -0.3897, yend = -0.225),
+             color = clrs[3], curvature = .65) +
+  #x = -0.389711431702997
+  #y = -0.225
+  # geom_circle(aes(x0=0, y0=0, r = .55), color = clrs[4]) +
+  geom_curve(aes(x = .55, y = 0, xend = 0.4763, yend = -0.275),
+             color = clrs[4], curvature = .25) +
+  # x = 0.476313972081441
+  # y = -0.275
+  geom_circle(aes(x0=0, y0=0, r = .65), color = clrs[5]) +
+  coord_fixed(xlim=c(-1.2, 1.2)) +
+  labs(x = NULL, y = NULL)
+```
+
+```{r trig_shift_graphs, echo=FALSE}
 tibble(x = seq(-5, 5, by = 0.001),
       sin = sin(x),
       cos = cos(x),
@@ -238,7 +302,7 @@ ggplot(data = graphs,
   coord_fixed(ylim = c(-3, 3)) +
   guides(color = "none") +
   labs(y = NULL,
-       x = latex2exp::TeX("\\alpha")) +
+       x = TeX("\\alpha, rad")) +
   scale_color_manual(values = c(sin = "salmon",
                                 cos = "royalblue",
                                 csc = "orchid",
@@ -337,13 +401,152 @@ $$
 
 ### Формулы двойного аргумента {#trig_double_arg}
 
+$$
+\sin 2\alpha = 2\sin \alpha \cos \alpha = (\sin \alpha + \cos \alpha)^2 -1 = \frac{2\tan \alpha}{1 + \tan^2 \alpha}
+$$
+
+$$
+\cos 2\alpha = \cos^2 \alpha - \sin^2 \alpha = 2\cos^2 \alpha - 1 = 1 - 2\sin^2 \alpha = \frac{1 - \tan^2 \alpha}{1 + \tan^2 \alpha}
+$$
+
+$$
+\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^2 \alpha}
+$$
+
+$$
+\cot 2\alpha = \frac{\cot^2 \alpha - 1}{2 \cot \alpha} = \frac{1 - \tan^2 \alpha}{2 \tan \alpha}
+$$
+
+$$
+\sec 2\alpha = \frac{\sec^2 \alpha}{2 - \sec^2 \alpha} = \frac{1 + \tan^2 \alpha}{1 - \tan^2 \alpha}
+$$
+
+$$
+\csc 2\alpha = \frac{\sec \alpha \csc \alpha}{2} = \frac{1 + \tan^2 \alpha}{2 \tan \alpha}
+$$
+
 ### Формулы тройного аргумента {#trig_triple_arg}
+
+$$
+\sin 3\alpha = 3\sin \alpha - 4 \sin^3 \alpha = 4\sin \alpha \sin \Big( \frac{\pi}{3} - \alpha\Big) \sin \Big( \frac{\pi}{3} + \alpha \Big)
+$$
+
+$$
+\cos 3\alpha = 4\cos^3 \alpha - 3 \cos \alpha = 4\cos \alpha \cos \Big(\frac{\pi}{3} - \alpha\Big) \cos \Big(\frac{\pi}{3} + \alpha\Big)
+$$
+
+$$
+\tan 3\alpha = \frac{3\tan \alpha - \tan^3 \alpha}{1 - 3\tan^2 \alpha} = \tan \alpha \tan \Big( \frac{\pi}{3} - \alpha \Big) \tan \Big(\frac{\pi}{3} + \alpha \Big)
+$$
+
+$$
+\cot 3\alpha = \frac{3 \cot \alpha - \cot^3 \alpha}{1 - 3\cot^2 \alpha}
+$$
+
+$$
+\sec 3\alpha = \frac{\sec^3 \alpha}{4 - 3\sec^2 \alpha}
+$$
+
+$$
+\csc 3\alpha = \frac{\csc^3 \alpha}{3\csc^2 \alpha -4}
+$$
+
 
 ### Формулы половинного аргумента {#trig_half_arg}
 
+$$
+\sin \frac{\alpha}{2} = \sgn \Big(\sin \frac{\alpha}{2} \Big) \sqrt{\frac{1 - \cos \alpha}{2}}
+$$
+
+$$
+\cos \frac{\alpha}{2} = \sgn \Big( \cos \frac{\alpha}{2} \Big) \sqrt{\frac{1 + \cos \alpha}{2}}
+$$
+
+$$
+\tan \frac{\alpha}{2} = \frac{1 - \cos\alpha}{\sin \alpha} = \frac{\sin \alpha}{1 + \cos \alpha} = \csc \alpha - \cot \alpha = \frac{\tan \alpha}{1 + \sec \alpha} = \sgn (\sin \alpha) \sqrt{\frac{1 - \cos \alpha}{1 + \cos \alpha}}
+$$
+
+$$
+\cot \frac{\alpha}{2} = \frac{1 + \cos \alpha}{\sin \alpha} = \frac{\sin \alpha}{1 - \cos \alpha} = \csc \alpha + \cot \alpha = \sgn(\sin \alpha) \sqrt{\frac{1 + \cos \alpha}{1 - \cos{\alpha}}}
+$$
+
+$$
+\sec \frac{\alpha}{2} = \sgn \Big( \cos \frac{\alpha}{2} \Big) \sqrt{\frac{2}{1 + \cos \alpha}}
+$$
+
+$$
+\csc \frac{\alpha}{2} = \sgn \Big( \sin \frac{\alpha}{2}  \Big) \sqrt{\frac{2}{1 - \cos \alpha}}
+$$
+
 ### Формулы понижения степени {#trig_power_reduction}
 
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+$$
+\sin^2 \alpha = \frac{1 - \cos 2\alpha}{2}
+$$
+    </td>
+    <td valign="top">
+$$
+\cos^2 \alpha = \frac{1 + \cos 2\alpha}{2}
+$$
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+$$
+\tan^2 \alpha = \frac{1 - \cos 2\alpha}{1 + \cos 2\alpha}
+$$
+    </td>
+    <td valign="top">
+$$
+\cot^2 \alpha = \frac{1 + \cos 2\alpha}{1 - \cos 2\alpha}
+$$
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+$$
+\sec^2 \alpha = \frac{2}{1 + \cos 2\alpha}
+$$
+    </td>
+    <td valign="top">
+$$
+\csc^2 \alpha = \frac{2}{1 - \cos 2\alpha}
+$$
+    </td>
+    <td valign="top">
+  </tr>
+</table>
+
+
 ### Преобразование произведения в сумму {#trig_prod_to_sum}
+
+$$
+\cos \alpha \cos \beta = \frac{\cos (\alpha - \beta) + \cos (\alpha + \beta)}{2}
+$$
+
+$$
+\sin \alpha \sin \beta = \frac{\cos (\alpha - \beta) - \cos (\alpha + \beta)}{2}
+$$
+
+$$
+\sin \alpha \cos \beta = \frac{\sin (\alpha + \beta) + \sin (\alpha - \beta)}{2}
+$$
+
+$$
+\cos \alpha \sin \beta = \frac{\sin (\alpha + \beta) - \sin (\alpha - \beta)}{2}
+$$
+
+$$
+\tan \alpha \tan \beta = \frac{\cos (\alpha - \beta) - \cos (\alpha + \beta)}{\cos (\alpha - \beta) + \cos (\alpha + \beta)}
+$$
+
+$$
+\tan \alpha \cot \beta = \frac{\sin (\alpha + \beta) + \sin (\alpha - \beta)}{\sin (\alpha + \beta) - \sin (\alpha - \beta)}
+$$
+
 
 ### Преобразование суммы в произведение {#trig_sum_to_prod}
 
