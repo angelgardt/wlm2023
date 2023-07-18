@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./rdates.html" rel="next">
-<link href="./rfuncs.html" rel="prev">
+<link href="./rcontrolflow.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -151,12 +151,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Обозначения</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ТЕСТ</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">R</span></span>
@@ -164,25 +158,31 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rbasics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Основы R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rdtypes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Типы данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Типы данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rdstructs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Структуры данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Структуры данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rfuncs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Функции</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Функции</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rcontrolflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -307,7 +307,35 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#rstrings-packages" id="toc-rstrings-packages" class="nav-link active" data-scroll-target="#rstrings-packages"><span class="header-section-number">6.1</span> Установка дополнительных пакетов</a>
+  <ul class="collapse">
+  <li><a href="#rstrings-packages-cran" id="toc-rstrings-packages-cran" class="nav-link" data-scroll-target="#rstrings-packages-cran"><span class="header-section-number">6.1.1</span> Установка с CRAN</a></li>
+  <li><a href="#rstrings-packages-mirrors" id="toc-rstrings-packages-mirrors" class="nav-link" data-scroll-target="#rstrings-packages-mirrors"><span class="header-section-number">6.1.2</span> Установка с недефолтных зеркал</a></li>
+  <li><a href="#rstrings-packages-github" id="toc-rstrings-packages-github" class="nav-link" data-scroll-target="#rstrings-packages-github"><span class="header-section-number">6.1.3</span> Установка с GitHub</a></li>
+  </ul></li>
+  <li><a href="#rstrings-manipulations" id="toc-rstrings-manipulations" class="nav-link" data-scroll-target="#rstrings-manipulations"><span class="header-section-number">6.2</span> Манипуляции со строками</a>
+  <ul class="collapse">
+  <li><a href="#rstrings-manipulations-creation" id="toc-rstrings-manipulations-creation" class="nav-link" data-scroll-target="#rstrings-manipulations-creation"><span class="header-section-number">6.2.1</span> Создание строк</a></li>
+  <li><a href="#rstrings-manipulations-concat" id="toc-rstrings-manipulations-concat" class="nav-link" data-scroll-target="#rstrings-manipulations-concat"><span class="header-section-number">6.2.2</span> Конкатенация строк</a></li>
+  <li><a href="#rstrings-split" id="toc-rstrings-split" class="nav-link" data-scroll-target="#rstrings-split"><span class="header-section-number">6.2.3</span> Разделение строк</a></li>
+  <li><a href="#rstrings-manipulations-sort" id="toc-rstrings-manipulations-sort" class="nav-link" data-scroll-target="#rstrings-manipulations-sort"><span class="header-section-number">6.2.4</span> Сортировка строк</a></li>
+  <li><a href="#rstrings-manipulations-case" id="toc-rstrings-manipulations-case" class="nav-link" data-scroll-target="#rstrings-manipulations-case"><span class="header-section-number">6.2.5</span> Изменение регистра</a></li>
+  <li><a href="#rstrings-manipulations-detect" id="toc-rstrings-manipulations-detect" class="nav-link" data-scroll-target="#rstrings-manipulations-detect"><span class="header-section-number">6.2.6</span> Поиск подстроки</a></li>
+  <li><a href="#rstrings-manipulations-extract" id="toc-rstrings-manipulations-extract" class="nav-link" data-scroll-target="#rstrings-manipulations-extract"><span class="header-section-number">6.2.7</span> Извлечение подстроки</a></li>
+  <li><a href="#rstrings-manipulations-replace" id="toc-rstrings-manipulations-replace" class="nav-link" data-scroll-target="#rstrings-manipulations-replace"><span class="header-section-number">6.2.8</span> Замена подстроки</a></li>
+  </ul></li>
+  <li><a href="#rstrings-regex" id="toc-rstrings-regex" class="nav-link" data-scroll-target="#rstrings-regex"><span class="header-section-number">6.3</span> Регулярные выражения</a>
+  <ul class="collapse">
+  <li><a href="#rstrings-regex-startend" id="toc-rstrings-regex-startend" class="nav-link" data-scroll-target="#rstrings-regex-startend"><span class="header-section-number">6.3.1</span> Начало и конце строки</a></li>
+  <li><a href="#rstrings-regex-classes" id="toc-rstrings-regex-classes" class="nav-link" data-scroll-target="#rstrings-regex-classes"><span class="header-section-number">6.3.2</span> Классы символов</a></li>
+  <li><a href="#rstrings-regex-repetition" id="toc-rstrings-regex-repetition" class="nav-link" data-scroll-target="#rstrings-regex-repetition"><span class="header-section-number">6.3.3</span> Повторения</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -329,8 +357,60 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="rstrings-packages" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="rstrings-packages"><span class="header-section-number">6.1</span> Установка дополнительных пакетов</h2>
+<section id="rstrings-packages-cran" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="rstrings-packages-cran"><span class="header-section-number">6.1.1</span> Установка с CRAN</h3>
+</section>
+<section id="rstrings-packages-mirrors" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="rstrings-packages-mirrors"><span class="header-section-number">6.1.2</span> Установка с недефолтных зеркал</h3>
+</section>
+<section id="rstrings-packages-github" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="rstrings-packages-github"><span class="header-section-number">6.1.3</span> Установка с GitHub</h3>
+</section>
+</section>
+<section id="rstrings-manipulations" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="rstrings-manipulations"><span class="header-section-number">6.2</span> Манипуляции со строками</h2>
+<section id="rstrings-manipulations-creation" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="rstrings-manipulations-creation"><span class="header-section-number">6.2.1</span> Создание строк</h3>
+</section>
+<section id="rstrings-manipulations-concat" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="rstrings-manipulations-concat"><span class="header-section-number">6.2.2</span> Конкатенация строк</h3>
+</section>
+<section id="rstrings-split" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="rstrings-split"><span class="header-section-number">6.2.3</span> Разделение строк</h3>
+</section>
+<section id="rstrings-manipulations-sort" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="rstrings-manipulations-sort"><span class="header-section-number">6.2.4</span> Сортировка строк</h3>
+</section>
+<section id="rstrings-manipulations-case" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="rstrings-manipulations-case"><span class="header-section-number">6.2.5</span> Изменение регистра</h3>
+</section>
+<section id="rstrings-manipulations-detect" class="level3" data-number="6.2.6">
+<h3 data-number="6.2.6" class="anchored" data-anchor-id="rstrings-manipulations-detect"><span class="header-section-number">6.2.6</span> Поиск подстроки</h3>
+</section>
+<section id="rstrings-manipulations-extract" class="level3" data-number="6.2.7">
+<h3 data-number="6.2.7" class="anchored" data-anchor-id="rstrings-manipulations-extract"><span class="header-section-number">6.2.7</span> Извлечение подстроки</h3>
+</section>
+<section id="rstrings-manipulations-replace" class="level3" data-number="6.2.8">
+<h3 data-number="6.2.8" class="anchored" data-anchor-id="rstrings-manipulations-replace"><span class="header-section-number">6.2.8</span> Замена подстроки</h3>
+</section>
+</section>
+<section id="rstrings-regex" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="rstrings-regex"><span class="header-section-number">6.3</span> Регулярные выражения</h2>
+<p>https://rpubs.com/iPhuoc/stringr_manipulation</p>
+<section id="rstrings-regex-startend" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="rstrings-regex-startend"><span class="header-section-number">6.3.1</span> Начало и конце строки</h3>
+</section>
+<section id="rstrings-regex-classes" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="rstrings-regex-classes"><span class="header-section-number">6.3.2</span> Классы символов</h3>
+</section>
+<section id="rstrings-regex-repetition" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="rstrings-regex-repetition"><span class="header-section-number">6.3.3</span> Повторения</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -683,8 +763,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./rfuncs.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Функции</span></span>
+      <a href="./rcontrolflow.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Управляющие конструкции</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
