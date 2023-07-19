@@ -116,6 +116,12 @@ $navbar-padding-y:                  1rem !default;
 $navbar-light-bg:                   $primary !default;
 $navbar-dark-bg:                    $success !default;
 
+// Sidebar
+
+.sidebar-item-section {
+  font-weight: $h1-font-weight;
+}
+
 // Pagination
 
 $pagination-color:                  $body-color !default;
