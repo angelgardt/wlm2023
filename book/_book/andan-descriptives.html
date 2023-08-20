@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -846,7 +865,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <p>Итак, мы хотим описать наши данные. Точнее, распределения переменных, которые у нас в данных есть. Хотим сделать это просто и ёмко. Насколько просто и ёмко? Ну, допустим максимально — одним числом. Для этого неплохо подойдет значение переменной, которое лежит <em>в центре</em> распределения.</p>
-<p>Как мы будем искать, что там в центре распределения? Зависит от <a href="">шкалы</a>, в которой измерена конкретная переменная (<a href="#tbl-scales-cental-tendencies">Таблица&nbsp;<span>17.1</span></a>).</p>
+<p>Как мы будем искать, что там в центре распределения? Зависит от <a href="">шкалы</a> <span class="citation" data-cites="stevens46">(<a href="references.html#ref-stevens46" role="doc-biblioref">Stevens 1946</a>)</span>, в которой измерена конкретная переменная (<a href="#tbl-scales-cental-tendencies">Таблица&nbsp;<span>17.1</span></a>).</p>
 <div id="tbl-scales-cental-tendencies" class="anchored">
 <table class="table">
 <caption>Таблица&nbsp;17.1: Шкалы и меры центральной тенденции</caption>
@@ -1001,8 +1020,134 @@ Take-home: мода
 <div class="lab-chapter lab-junior">
 
 </div>
-<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em>.</p>
-<p>ПРОДОЛЖИТЬ</p>
+<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em> (см. <a href="#fig-norm-mode">Рисунок&nbsp;<span>17.4</span></a>, <a href="#fig-binom-mode">Рисунок&nbsp;<span>17.5</span></a>, <a href="#fig-poiss-mode">Рисунок&nbsp;<span>17.6</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-norm-mode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-norm-mode-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-binom-mode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-binom-mode-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-poiss-mode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-poiss-mode-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Это теоретические распределения. С эмпирическими распределениями дело обстоит так же, хотя они обычно менее гладенькие и красивые (см. <a href="#fig-mode-norm-sample">Рисунок&nbsp;<span>17.7</span></a> и <a href="#fig-mode-nbinom-sample">Рисунок&nbsp;<span>17.8</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mode-norm-sample" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-mode-norm-sample-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mode-nbinom-sample" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-mode-nbinom-sample-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Однако на практике возможны и другие ситуации. Например, такие (<a href="#fig-bimodal">Рисунок&nbsp;<span>17.9</span></a>, <a href="#fig-polymodal">Рисунок&nbsp;<span>17.10</span></a>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-polymodal" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-polymodal-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>В первом случае (<a href="#fig-bimodal">Рисунок&nbsp;<span>17.9</span></a>) мы видим <em>два локальных максимума</em> функции плотности вероятности — такое распределение называется <strong>бимодальным</strong>. Во втором случае (<a href="#fig-polymodal">Рисунок&nbsp;<span>17.10</span></a>) функция плотности вероятности имеет <em>три локальных максимума</em> — такое распределение называется <strong>полимодальным</strong>. Бимональное распределение является частным случаем полимодального распределения.</p>
+<p>В прицнипе, пиков может быть и больше, однако при работе с реальными данными чаще всего мы сталкиваемся с бимодальными распределениями.</p>
+<p><strong>Что это значит и что с этим делать?</strong></p>
+<p>Бимодальное распределение сигнализирует нам о <strong>гетерогенности выборки</strong>. Если мы видим два выделяющихся пика, стоит подумать о том, что наша выборка неоднородна и в ней выделяются две подвыборки. Посмотрим на структуру выборки из примера выше (<a href="#fig-bimodal-struct">Рисунок&nbsp;<span>17.11</span></a>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-struct" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-bimodal-struct-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.11: Структура бимодального распределения из <a href="#fig-bimodal">Рисунок&nbsp;<span>17.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Действительно, наше распределение состоит из двух других распределений, у каждого из которого есть своя мода — поэтому итоговое распределение получается бимодальным. Конечно, сейчас нам это очень удобно показать, потому что мы знаем, как это распределение генерировалось. Когда же у нас есть реальные данные и мы там наблюдаем такого «верблюда», бывает достаточно сложно сказать, что «пошло не так».</p>
+<p>Само по себе распределение не даст нам ответ на вопрос, почему оно бимодальное — чтобы выяснить причины такого поведения переменной нам потребуются другие данные. Обычно у вас в данных есть «соцдем» — пол, возраст, сфера и место работы, уровень обрвазования и др. Попробуйте построить распределение с разбиением исследуемой бимодальной переменной по переменным «соцдема». Это, к сожалению, не является рецептом успеха, поскольку причина гетерогенности выборки может и не содержаться в ваших данных, но такое изучение данных станет хорошим показателем того, что вы не просто «забили» на странное распределение своей переменной, а поисследователи возможные его причины.</p>
+<p>Если вам удалось найти причины гетерогенности выборки — допустим, у вас выделяются подвыборки «бакалавры» и «магистры» — стоит подумать о том, как обойтись с этой переменной в планируемом анализе, так как игнорировать её, по-видимому, нельзя, поскольку она влияет на вариатиность данных.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Соцдем лишним не бывает">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Соцдем лишним не бывает
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>На этапе планирования исследования подумайте о том, чем могут отличаться ваши респонденты или испытуемые между собой, помимо индивидуальных различий.</p>
+<ul>
+<li>Если в эксперименте используете задачу мысленного вращения (mental rotation, <span class="citation" data-cites="shepard71">(<a href="references.html#ref-shepard71" role="doc-biblioref">Shepard and Metzler 1971</a>)</span>), вполне возможно, испытуемые, работающие в сфере 3D-моделирования или дизайна интерьеров, могут сформировать подвыборку.</li>
+<li>В случае HR-исследования, где фиксируется доход респондента, необходимо записать город, в котором он проживает и/или работает.</li>
+<li>При изучении удовлетворенности городским пространством важными пунктами станут беременность, наличие/отсутствие детей, наличие/отсутствие автомобиля и др.</li>
+</ul>
+<p>И так далее. Примеров для каждого случая можно подобрать много.</p>
+<p>Стоит ли, скажем, в первом случае сразу исключить из выборки 3D-моделлеров? Зависит. От количества времени и денег на проведение исследования. Однако <em>как минимум эту информацию надо зафиксировать в данных</em>. А решить, исключать ли этих респондентов из выборки или нет, можно и позже. Главно об этом написать в отчете/статье, когда будете описывать предобработку данных.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: бимодальное распределение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Take-home: бимодальное распределение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>бимодальное распределение намекает на неоднородность данных — скорее всего, в выборке есть две подвыборки</li>
+<li>необходимо поискать в данных причины этой неодноросности, например, в социально-демографических переменных</li>
+<li>если удалось найти переменную, объясняющую бимодальность, стоит подумать о том, как её учитывать в планируемом анализе</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="andan-descriptives-median" class="level3" data-number="17.2.3">
 <h3 data-number="17.2.3" class="anchored" data-anchor-id="andan-descriptives-median"><span class="header-section-number">17.2.3</span> Медиана</h3>
@@ -1057,6 +1202,8 @@ Take-home: мода
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Помимо того, что среднее и медиана информативны сами по себе, полезно смотреть на их взаимное расположение.</p>
+<p>ПРОДОЛЖИТЬ</p>
 </section>
 </section>
 <section id="andan-descriptives-variability" class="level2" data-number="17.3">
@@ -1135,6 +1282,14 @@ Take-home: мода
 <h2 data-number="17.6" class="anchored" data-anchor-id="andan-descriptives-final"><span class="header-section-number">17.6</span> Итоги</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-shepard71" class="csl-entry" role="listitem">
+Shepard, Roger N., and Jacqueline Metzler. 1971. <span>“Mental Rotation of Three-Dimensional Objects.”</span> <em>Science</em> 171 (3972): 701–3. <a href="https://doi.org/10.1126/science.171.3972.701">https://doi.org/10.1126/science.171.3972.701</a>.
+</div>
+<div id="ref-stevens46" class="csl-entry" role="listitem">
+Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science</em> 103 (2684): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
