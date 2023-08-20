@@ -755,8 +755,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#andan-descriptives-central-tendency" id="toc-andan-descriptives-central-tendency" class="nav-link" data-scroll-target="#andan-descriptives-central-tendency"><span class="header-section-number">17.2</span> Меры центральной тенденции</a>
   <ul class="collapse">
   <li><a href="#andan-descriptives-mode" id="toc-andan-descriptives-mode" class="nav-link" data-scroll-target="#andan-descriptives-mode"><span class="header-section-number">17.2.1</span> Мода</a></li>
-  <li><a href="#andan-descriptives-median" id="toc-andan-descriptives-median" class="nav-link" data-scroll-target="#andan-descriptives-median"><span class="header-section-number">17.2.2</span> Медиана</a></li>
-  <li><a href="#andan-descriptives-mean" id="toc-andan-descriptives-mean" class="nav-link" data-scroll-target="#andan-descriptives-mean"><span class="header-section-number">17.2.3</span> Среднее</a></li>
+  <li><a href="#andan-descriptives-unimodal-bimodal" id="toc-andan-descriptives-unimodal-bimodal" class="nav-link" data-scroll-target="#andan-descriptives-unimodal-bimodal"><span class="header-section-number">17.2.2</span> Унимодальные и полимодальные распределения</a></li>
+  <li><a href="#andan-descriptives-median" id="toc-andan-descriptives-median" class="nav-link" data-scroll-target="#andan-descriptives-median"><span class="header-section-number">17.2.3</span> Медиана</a></li>
+  <li><a href="#andan-descriptives-mean" id="toc-andan-descriptives-mean" class="nav-link" data-scroll-target="#andan-descriptives-mean"><span class="header-section-number">17.2.4</span> Среднее</a></li>
+  <li><a href="#andan-descriptives-mean-vs-median" id="toc-andan-descriptives-mean-vs-median" class="nav-link" data-scroll-target="#andan-descriptives-mean-vs-median"><span class="header-section-number">17.2.5</span> Среднее vs медиана</a></li>
   </ul></li>
   <li><a href="#andan-descriptives-variability" id="toc-andan-descriptives-variability" class="nav-link" data-scroll-target="#andan-descriptives-variability"><span class="header-section-number">17.3</span> Меры разброса</a>
   <ul class="collapse">
@@ -817,8 +819,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Состоит из двух компонентов — <em>тестирования статистических гипотез</em> и <em>статистических методов</em>.</li>
 </ul></li>
 </ul>
-<div class="note important">
-<p><strong>Замечание о машинном обучении</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Замечание о машинном обучении">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Замечание о машинном обучении
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>В названии книги упомянуто «машинное обучение». Иногда его причисляют к статистике, иногда рассматривают отдельно. На самом же деле, статистические методы лежат где-то между статистикой вывода и машинным обучением.</p>
 <p>Почему?</p>
 <p>Дело в том, что на статистические методы можно смотреть по-разному.</p>
@@ -827,6 +837,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Если перед нами стоит задача хорошо <strong>предсказывать</strong> одни переменные на основании значений других — например, выдавать рекомендации на Яндекс.Музыке или в Яндекс.Лавке&nbsp;— то мы будем смотреть на те же статистические модели с точки зрения машинного обучения.</li>
 </ul>
 <p>То есть, модели в анализе данных и машинном обучении одни и те же, но то, какую модель мы назовем хорошей и как мы эту «хорошесть» определим, будет отличаться в зависимости от задачи&nbsp;— <em>исследовательская</em> или <em>предиктивная</em>&nbsp;— которая перед нами стоит.</p>
+</div>
 </div>
 </section>
 <section id="andan-descriptives-central-tendency" class="level2" data-number="17.2">
@@ -875,7 +886,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="lab-chapter lab-junior">
 
 </div>
-<p>Самый простой вариант найти центральную тенденцию — это определить <strong>наиболее часто встречающееся значение переменной</strong>. Это значение называется <strong>модой (mode)</strong>.</p>
+<p>Самый простой вариант найти центральную тенденцию — это определить наиболее часто встречающееся значение переменной. Это значение называется <em>модой (mode)</em>.</p>
+<div id="def-mode-discrete" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 17.1 </strong></span><strong>Мода</strong> [дискретной переменной] — наиболее часто встречающееся значение данной переменной.</p>
+</div>
 <p>Например, у нас есть следующий ряд наблюдений по какой-то переменной:</p>
 <p><span class="math display">\[
 \begin{bmatrix}
@@ -903,17 +917,26 @@ ul.task-list li input[type="checkbox"] {
 \end{matrix}
 \]</span></p>
 <p>Мода — <span class="math inline">\(\text{IST}\)</span> (Международный аэропорт Стамбула, İstanbul Havalimanı).</p>
-<p>Так мы действуем в случае с эмпирическим распределением. Если нам известна <a href="">функция вероятности переменной (probability mass function, PMF)</a>, то мы можем определить моду, основываясь на ней — это будет значение переменной, при котором PMF принимает своё максимальное значение:</p>
-<p><span class="math display">\[
-\text{mode}(X) = \arg \max(\text{PMF}(X)) = \arg \max_{x_i}(\mathbb{P}(X = x_i))
-\]</span></p>
+<p>Так мы действуем в случае с эмпирическим распределением. Если нам известна <a href="">функция вероятности переменной (probability mass function, PMF)</a>, то мы можем определить моду, основываясь на ней:</p>
+<div id="def-mode-discrete-pmf" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 17.2 </strong></span><strong>Мода</strong> [дискретной переменной] — это значение переменной, при котором её функция вероятности принимает своё максимальное значение.</p>
+</div>
+<p><span id="eq-mode-pmf"><span class="math display">\[
+\text{mode}(X) = \arg \max(\text{PMF}(X)) = \arg \max_{x_i}(\mathbb{P}(X = x_i)),
+\tag{17.1}\]</span></span></p>
+<p>где <span class="math inline">\(X\)</span> — дискретная случайная величина, <span class="math inline">\(x_i\)</span> — значение этой случайной величины.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/mode-pmf-1.png" class="img-fluid" width="672"></p>
+<div id="fig-mode-pmf" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-mode-pmf-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.1: Определение моды с помощью функции вероятности</figcaption>
+</figure>
+</div>
 </div>
 </div>
 <p>Окей, мы видим, что <em>мода отлично считается на дискретных переменных</em>. А как же быть с непрерывными?</p>
-<p><a href="">Напомним себе</a>, что вероятного того, что непрерывная случайная величина примет своё конкретное значение, равна нулю. Из этого следует, что все значения непрерывной случайное величины уникальны — каждое повторяется только один раз. Получается, что строить частотную таблицу бессмысленно…</p>
+<p><a href="">Напомним себе</a>, что вероятность того, что непрерывная случайная величина примет своё конкретное значение, равна нулю. Из этого следует, что все значения непрерывной случайное величины уникальны — каждое повторяется только один раз. Получается, что строить частотную таблицу бессмысленно…</p>
 <p>По этой причине <strong>для непрерывных переменных моду не считают</strong>.</p>
 <section id="andan-descriptives-mode-contunious" class="level4" data-number="17.2.1.1">
 <h4 data-number="17.2.1.1" class="anchored" data-anchor-id="andan-descriptives-mode-contunious"><span class="header-section-number">17.2.1.1</span> Мода для непрерывной переменной</h4>
@@ -924,22 +947,45 @@ ul.task-list li input[type="checkbox"] {
 <p>Если мы посмотрим на <a href="">график плотности вероятности</a> (probability density function, PDF), который является аналогом PMF для дискретных переменных, мы увидим, что какие-то значения встречаются чаще, а какие-то реже. Что в общем-то логично. Напомним себе, <a href="">как это выглядит</a>, например, для любимого [стандартного] <a href="">нормального распределения</a>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/mode-continuous-freqs-1.png" class="img-fluid" width="672"></p>
+<div id="fig-continuous-freqs" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-continuous-freqs-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения</figcaption>
+</figure>
 </div>
 </div>
-<p>То есть, самые часто встречающиеся значения — это пик распредления. Там и должна быть мода. Визуально это выглядит достаточно справедливо.</p>
+</div>
+<p>То есть, самые часто встречающиеся значения — это <strong>пик распределения</strong>. Там и должна быть мода. Визуально это выглядит достаточно справедливо.</p>
+<p>Математики так и решили:</p>
+<div id="def-mode-continuous" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 17.3 </strong></span><strong>Мода</strong> [непрерывной переменной] — это значение переменной, при котором её функция плотности вероятности достигает локального<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> максимума.</p>
+</div>
+<p><span id="eq-mode-pdf"><span class="math display">\[
+\text{mode}(X) = \arg \max(\text{PDF}(X)) = \arg \max_{x \in S}f(x),
+\tag{17.2}\]</span></span></p>
+<p>гдe <span class="math inline">\(X\)</span> — непрерывная случайная величина, <span class="math inline">\(x\)</span> — значение этой случайной величины, <span class="math inline">\(S\)</span> — имеющаяся выборка значений переменной.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/mode-continuous-mode-1.png" class="img-fluid" width="672"></p>
+<div id="fig-continuous-mode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-continuous-mode-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.3: Положение моды на функции плотности [стандартного] нормального распределения</figcaption>
+</figure>
 </div>
 </div>
-<p>Математики так и решили — <strong>мода для непрерывной переменной</strong>* определяется как <strong><a href="">локальный максимум</a> (или локальные максимумы) функции плотности распределения</strong>:</p>
-<p><span class="math display">\[
-\text{mode}(X) = \arg \max(\text{PDF}(X)) = \arg \max_{x \in S}f(x),
-\]</span></p>
-<p>гдe <span class="math inline">\(S\)</span> — имеющаяся выборка значений переменной.</p>
+</div>
+<p>Хотя моду для непрерывной переменной вычислить можно, обычно этого не делают, так как достаточно других мер центральной тенденции для описания распределения.</p>
 <hr>
-<div class="note important">
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: мода">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Take-home: мода
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>мода — это значение переменной, которое встречается в выборке чаще всего</li>
 <li>на практике она рассчитывается через построение частотной таблицы</li>
@@ -947,55 +993,70 @@ ul.task-list li input[type="checkbox"] {
 <li>для непрерывных переменных её рассчитать можно, но обычного этого не делают</li>
 </ul>
 </div>
+</div>
 </section>
 </section>
-<section id="andan-descriptives-median" class="level3" data-number="17.2.2">
-<h3 data-number="17.2.2" class="anchored" data-anchor-id="andan-descriptives-median"><span class="header-section-number">17.2.2</span> Медиана</h3>
+<section id="andan-descriptives-unimodal-bimodal" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="andan-descriptives-unimodal-bimodal"><span class="header-section-number">17.2.2</span> Унимодальные и полимодальные распределения</h3>
+<div class="lab-chapter lab-junior">
+
+</div>
+<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em>.</p>
+<p>ПРОДОЛЖИТЬ</p>
+</section>
+<section id="andan-descriptives-median" class="level3" data-number="17.2.3">
+<h3 data-number="17.2.3" class="anchored" data-anchor-id="andan-descriptives-median"><span class="header-section-number">17.2.3</span> Медиана</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-<section id="andan-descriptives-mean" class="level3" data-number="17.2.3">
-<h3 data-number="17.2.3" class="anchored" data-anchor-id="andan-descriptives-mean"><span class="header-section-number">17.2.3</span> Среднее</h3>
+<section id="andan-descriptives-mean" class="level3" data-number="17.2.4">
+<h3 data-number="17.2.4" class="anchored" data-anchor-id="andan-descriptives-mean"><span class="header-section-number">17.2.4</span> Среднее</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
-<section id="andan-descriptives-arithmetic-mean" class="level4" data-number="17.2.3.1">
-<h4 data-number="17.2.3.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean"><span class="header-section-number">17.2.3.1</span> Арифметическое среднее</h4>
-<div class="lab-chapter lab-junior">
-
-</div>
-</section>
-<section id="andan-descriptives-trimmed-mean" class="level4" data-number="17.2.3.2">
-<h4 data-number="17.2.3.2" class="anchored" data-anchor-id="andan-descriptives-trimmed-mean"><span class="header-section-number">17.2.3.2</span> Усеченное среднее</h4>
+<section id="andan-descriptives-arithmetic-mean" class="level4" data-number="17.2.4.1">
+<h4 data-number="17.2.4.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean"><span class="header-section-number">17.2.4.1</span> Арифметическое среднее</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-<section id="andan-descriptives-geometric-mean" class="level4" data-number="17.2.3.3">
-<h4 data-number="17.2.3.3" class="anchored" data-anchor-id="andan-descriptives-geometric-mean"><span class="header-section-number">17.2.3.3</span> Геометрическое среднее</h4>
+<section id="andan-descriptives-trimmed-mean" class="level4" data-number="17.2.4.2">
+<h4 data-number="17.2.4.2" class="anchored" data-anchor-id="andan-descriptives-trimmed-mean"><span class="header-section-number">17.2.4.2</span> Усеченное среднее</h4>
+<div class="lab-chapter lab-junior">
+
+</div>
+</section>
+<section id="andan-descriptives-geometric-mean" class="level4" data-number="17.2.4.3">
+<h4 data-number="17.2.4.3" class="anchored" data-anchor-id="andan-descriptives-geometric-mean"><span class="header-section-number">17.2.4.3</span> Геометрическое среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
-<section id="andan-descriptives-quandratic-mean" class="level4" data-number="17.2.3.4">
-<h4 data-number="17.2.3.4" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">17.2.3.4</span> Квардатичное среднее</h4>
+<section id="andan-descriptives-quandratic-mean" class="level4" data-number="17.2.4.4">
+<h4 data-number="17.2.4.4" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">17.2.4.4</span> Квардатичное среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
-<section id="andan-descriptives-harmonic-mean" class="level4" data-number="17.2.3.5">
-<h4 data-number="17.2.3.5" class="anchored" data-anchor-id="andan-descriptives-harmonic-mean"><span class="header-section-number">17.2.3.5</span> Гармоническое среднее</h4>
+<section id="andan-descriptives-harmonic-mean" class="level4" data-number="17.2.4.5">
+<h4 data-number="17.2.4.5" class="anchored" data-anchor-id="andan-descriptives-harmonic-mean"><span class="header-section-number">17.2.4.5</span> Гармоническое среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
-<section id="andan-descriptives-weighted-mean" class="level4" data-number="17.2.3.6">
-<h4 data-number="17.2.3.6" class="anchored" data-anchor-id="andan-descriptives-weighted-mean"><span class="header-section-number">17.2.3.6</span> Взвешенное среднее</h4>
+<section id="andan-descriptives-weighted-mean" class="level4" data-number="17.2.4.6">
+<h4 data-number="17.2.4.6" class="anchored" data-anchor-id="andan-descriptives-weighted-mean"><span class="header-section-number">17.2.4.6</span> Взвешенное среднее</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
+</section>
+<section id="andan-descriptives-mean-vs-median" class="level3" data-number="17.2.5">
+<h3 data-number="17.2.5" class="anchored" data-anchor-id="andan-descriptives-mean-vs-median"><span class="header-section-number">17.2.5</span> Среднее vs медиана</h3>
+<div class="lab-chapter lab-junior">
+
+</div>
 </section>
 </section>
 <section id="andan-descriptives-variability" class="level2" data-number="17.3">
@@ -1080,6 +1141,7 @@ ul.task-list li input[type="checkbox"] {
 <ol>
 <li id="fn1"><p>Mass (uncountable) noun<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Countable noun, plural in this case<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Здесь в примере локальный максимум функции плотности вероятности на интервале <span class="math inline">\((-4, \, 4)\)</span> совпадает с глобальным максимумом — мы об этом знаем, потому что форма распределения нам известна. В случае эмпрического распределения корректнее говорить именно о локальном максимуме, так как глобальный максимум нам не доступен ввиду того, что мы работаем с выборкой.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
