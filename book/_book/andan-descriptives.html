@@ -785,6 +785,8 @@ div.csl-indent {
   <li><a href="#andan-descriptives-average-absolute-deviation" id="toc-andan-descriptives-average-absolute-deviation" class="nav-link" data-scroll-target="#andan-descriptives-average-absolute-deviation"><span class="header-section-number">17.3.2</span> Среднее абсолютное отклонение</a></li>
   <li><a href="#andan-descriptives-variance" id="toc-andan-descriptives-variance" class="nav-link" data-scroll-target="#andan-descriptives-variance"><span class="header-section-number">17.3.3</span> Дисперсия</a></li>
   <li><a href="#andan-descriptives-standard-deviation" id="toc-andan-descriptives-standard-deviation" class="nav-link" data-scroll-target="#andan-descriptives-standard-deviation"><span class="header-section-number">17.3.4</span> Стандартное отклонение</a></li>
+  <li><a href="#andan-descriptives-quantiles" id="toc-andan-descriptives-quantiles" class="nav-link" data-scroll-target="#andan-descriptives-quantiles"><span class="header-section-number">17.3.5</span> Квантили</a></li>
+  <li><a href="#andan-descriptives-quartiles" id="toc-andan-descriptives-quartiles" class="nav-link" data-scroll-target="#andan-descriptives-quartiles"><span class="header-section-number">17.3.6</span> Квартили</a></li>
   </ul></li>
   <li><a href="#andan-descriptives-skewness" id="toc-andan-descriptives-skewness" class="nav-link" data-scroll-target="#andan-descriptives-skewness"><span class="header-section-number">17.4</span> Асимметрия</a></li>
   <li><a href="#andan-descriptives-kurtosis" id="toc-andan-descriptives-kurtosis" class="nav-link" data-scroll-target="#andan-descriptives-kurtosis"><span class="header-section-number">17.5</span> Эксцесс</a></li>
@@ -1154,6 +1156,122 @@ Take-home: бимодальное распределение
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Для номинальной шкалы мода — это единственно возможная мера центральной тенденции, потому что на этой шкале отсутствует порядок элементов. На других шкалах наблюдения уже можно сортировать по возрастнию или убыванию, поскольку начиная с ранговой (порядковой) шкалы на всех них определена операция сравнения на «больше-меньше».</p>
+<p>Возьмем тот же ряд наблюдений, что и в предыдущем разделе:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 3 &amp; 4 &amp; 6 &amp; 3 &amp; 2 &amp; 3 &amp; 3 &amp; 2 &amp; 4 &amp; 1
+\end{bmatrix}
+\]</span></p>
+<p>Отсортируем наблюдения по возрастанию:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1  &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 &amp; 3 &amp; 4 &amp; 4 &amp; 6
+\end{bmatrix}
+\]</span></p>
+<p>Наша задача — определить центральную тенденцию. Давайте посмотрим, что оказалось в середине отсортированного ряда:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; \mathbf{3} &amp; 3 &amp; 3 &amp; 4 &amp; 4 &amp; 6
+\end{bmatrix}
+\]</span></p>
+<p>Это медиана. В данном случае она равна <span class="math inline">\(3\)</span>.</p>
+<div id="def-median" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 17.4 </strong></span><strong>Медиана (median)</strong> — это значение, которое располагается на середине отсортированного ряда значений переменной.</p>
+</div>
+<p>Медиана делит все наблюдения переменной ровно пополам и половина наблюдений оказывается по одну сторону от медианы, а половина — по другую.</p>
+<p>Если число наблюдений нечётное, то всё ясно — в середине отсортированного ряда будет какое-то значение. А если число наблюдений чётное? Тогда мы попадаем между значениями.</p>
+<p>Возьмем для примера такой вектор наблюдений:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+14 &amp; 10 &amp; 9 &amp; 16 &amp; 30 &amp; 3 &amp; 25 &amp; 8 &amp; 18 &amp; 7
+\end{bmatrix}
+\]</span></p>
+<p>Отсортируем:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+3 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 14 &amp; 16 &amp; 18 &amp; 25 &amp; 30
+\end{bmatrix}
+\]</span></p>
+<p>Найдем середину:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+3 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; | &amp; 14 &amp; 16 &amp; 18 &amp; 25 &amp; 30
+\end{bmatrix}
+\]</span></p>
+<p>В таком случае в качестве медианы берется среднее между двумя срединными значениями:</p>
+<p><span class="math display">\[
+\text{median} = \frac{10 + 14}{2} = 12
+\]</span></p>
+<p>Итого, формализовать вычисление медианы можно следующим образом:</p>
+<p><span id="eq-median-formula"><span class="math display">\[
+\text{median}(X) = X(a) =
+\cases{
+X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
+\dfrac{X(\frac{n}{2}) + X(\frac{n}{2} + 1)}{2}, &amp; otherwise
+}
+\tag{17.3}\]</span></span></p>
+<p>где <span class="math inline">\(X\)</span> — ряд наблюдений случайной величины, <span class="math inline">\(n\)</span> — число наблюдений, <span class="math inline">\(X(a)\)</span> — наблюдение с индексом <span class="math inline">\(a\)</span> в отсортированном векторе <span class="math inline">\(X\)</span>.</p>
+<p>Если мы будем смотреть на медиану с позиции описания распределения, то она будет той самой линией, которая разделит площадь под графиком функции плотности вероятности пополам:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-norm" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-median-norm-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.12: Медиана нормального распределения</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>При этом форма распределения не имеет значения — площадь под графиком всегда будет делиться пополам:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-left-skew" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-median-left-skew-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.13: Медиана распределения с отрицательной асимметрией.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-right-skew" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-median-right-skew-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.14: Медиана распределения с положительной асимметрией.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-bimodal" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fig-median-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рисунок&nbsp;17.15: Медиана бимодального распределения.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: медиана">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Take-home: медиана
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>медиану можно расчитать только на шкалах, где задан порядок (ранговая, интервальная, абсолютная)</li>
+<li>медиана делит выборку наблюдений на две равные части</li>
+<li>линия медианы раздели площадь под графиком функции плотности вероятности пополам</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="andan-descriptives-mean" class="level3" data-number="17.2.4">
 <h3 data-number="17.2.4" class="anchored" data-anchor-id="andan-descriptives-mean"><span class="header-section-number">17.2.4</span> Среднее</h3>
@@ -1179,7 +1297,7 @@ Take-home: бимодальное распределение
 </div>
 </section>
 <section id="andan-descriptives-quandratic-mean" class="level4" data-number="17.2.4.4">
-<h4 data-number="17.2.4.4" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">17.2.4.4</span> Квардатичное среднее</h4>
+<h4 data-number="17.2.4.4" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">17.2.4.4</span> Квадратичное среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
@@ -1261,6 +1379,18 @@ Take-home: бимодальное распределение
 </section>
 <section id="andan-descriptives-standard-deviation" class="level3" data-number="17.3.4">
 <h3 data-number="17.3.4" class="anchored" data-anchor-id="andan-descriptives-standard-deviation"><span class="header-section-number">17.3.4</span> Стандартное отклонение</h3>
+<div class="lab-chapter lab-junior">
+
+</div>
+</section>
+<section id="andan-descriptives-quantiles" class="level3" data-number="17.3.5">
+<h3 data-number="17.3.5" class="anchored" data-anchor-id="andan-descriptives-quantiles"><span class="header-section-number">17.3.5</span> Квантили</h3>
+<div class="lab-chapter lab-junior">
+
+</div>
+</section>
+<section id="andan-descriptives-quartiles" class="level3" data-number="17.3.6">
+<h3 data-number="17.3.6" class="anchored" data-anchor-id="andan-descriptives-quartiles"><span class="header-section-number">17.3.6</span> Квартили</h3>
 <div class="lab-chapter lab-junior">
 
 </div>

@@ -405,6 +405,260 @@ gridExtra::grid.arrange(
 ::: {.lab-chapter .lab-junior}
 :::
 
+Для номинальной шкалы мода --- это единственно возможная мера центральной тенденции, потому что на этой шкале отсутствует порядок элементов. На других шкалах наблюдения уже можно сортировать по возрастнию или убыванию, поскольку начиная с ранговой (порядковой) шкалы на всех них определена операция сравнения на «больше-меньше».
+
+Возьмем тот же ряд наблюдений, что и в предыдущем разделе:
+
+$$
+\begin{bmatrix}
+1 & 3 & 4 & 6 & 3 & 2 & 3 & 3 & 2 & 4 & 1
+\end{bmatrix}
+$$
+
+Отсортируем наблюдения по возрастанию:
+
+$$
+\begin{bmatrix}
+1  & 1 & 2 & 2 & 3 & 3 & 3 & 3 & 4 & 4 & 6
+\end{bmatrix}
+$$
+
+Наша задача --- определить центральную тенденцию. Давайте посмотрим, что оказалось в середине отсортированного ряда:
+
+
+$$
+\begin{bmatrix}
+1 & 1 & 2 & 2 & 3 & \mathbf{3} & 3 & 3 & 4 & 4 & 6
+\end{bmatrix}
+$$
+
+Это медиана. В данном случае она равна $3$.
+
+::: {#def-median}
+**Медиана (median)** --- это значение, которое располагается на середине отсортированного ряда значений переменной. 
+:::
+
+Медиана делит все наблюдения переменной ровно пополам и половина наблюдений оказывается по одну сторону от медианы, а половина --- по другую.
+
+Если число наблюдений нечётное, то всё ясно --- в середине отсортированного ряда будет какое-то значение. А если число наблюдений чётное? Тогда мы попадаем между значениями. 
+
+Возьмем для примера такой вектор наблюдений:
+
+$$
+\begin{bmatrix}
+14 & 10 & 9 & 16 & 30 & 3 & 25 & 8 & 18 & 7
+\end{bmatrix}
+$$
+
+Отсортируем:
+
+$$
+\begin{bmatrix}
+3 & 7 & 8 & 9 & 10 & 14 & 16 & 18 & 25 & 30
+\end{bmatrix}
+$$
+
+Найдем середину:
+
+$$
+\begin{bmatrix}
+3 & 7 & 8 & 9 & 10 & | & 14 & 16 & 18 & 25 & 30
+\end{bmatrix}
+$$
+
+В таком случае в качестве медианы берется среднее между двумя срединными значениями:
+
+$$
+\text{median} = \frac{10 + 14}{2} = 12
+$$
+
+Итого, формализовать вычисление медианы можно следующим образом:
+
+$$
+\text{median}(X) = X(a) =
+\cases{
+X\left(\frac{n+1}{2}\right), & if  2 | n \\
+\dfrac{X(\frac{n}{2}) + X(\frac{n}{2} + 1)}{2}, & otherwise
+}
+$$ {#eq-median-formula}
+
+где $X$ --- ряд наблюдений случайной величины, $n$ --- число наблюдений, $X(a)$ --- наблюдение с индексом $a$ в отсортированном векторе $X$.
+
+Если мы будем смотреть на медиану с позиции описания распределения, то она будет той самой линией, которая разделит площадь под графиком функции плотности вероятности пополам:
+
+```{r median-norm, echo=FALSE}
+#| label: fig-median-norm
+#| fig-cap: "Медиана нормального распределения"
+
+tibble(x = seq(-4, 4, by = .01),
+       y = dnorm(x)) -> median_norm_data 
+median_norm_data |> filter(x >= 0) -> median_norm_upper
+median_norm_data |> filter(x <= 0) -> median_norm_lower
+median_norm_data |> 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_polygon(data = tibble(y = c(0, 0), x = c(4, 0)) |> 
+                 bind_rows(median_norm_upper),
+               fill = "seagreen", alpha = 0.5) +
+  geom_polygon(data = tibble(y = c(0, 0), x = c(0, -4)) |> 
+                 bind_rows(median_norm_lower),
+               fill = "royalblue", alpha = 0.5) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  annotate(geom = "text", label = "эти значения\nбольше медианы \n\n 50%", 
+           color = "darkgreen", x = 1, y = 0.05) +
+  annotate(geom = "text", label = "эти значения\nменьше медианы \n\n 50%", 
+           color = "darkblue", x = -1, y = 0.05) +
+  annotate(geom = "text", label = "это медиана", 
+           x = -0.01, y = 0)
+```
+
+При этом форма распределения не имеет значения --- площадь под графиком всегда будет делиться пополам:
+
+```{r median-left-skew, echo=FALSE}
+#| label: fig-median-left-skew
+#| fig-cap: Медиана распределения с отрицательной асимметрией.
+
+set.seed(115)
+tibble(x = seq(0.3, 1, by = .001),
+       y = dbeta(x, 7, 1.5)) -> median_leftskew_data
+
+median_leftskew_data |> 
+  filter(x >= .845) %>%
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(max(median_leftskew_data$x), .845)),
+    .) -> median_leftskew_data_upper
+
+median_leftskew_data |> 
+  filter(x <= .845) %>%
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(.845, min(median_leftskew_data$x))),
+    .) -> median_leftskew_data_lower
+
+# DescTools::AUC(median_leftskew_data_upper$x,
+#                median_leftskew_data_upper$y)
+
+median_leftskew_data |> 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_polygon(data = median_leftskew_data_lower, 
+               aes(x = x, y = y), fill = "royalblue", alpha = .5) +
+  geom_polygon(data = median_leftskew_data_upper, 
+               aes(x = x, y = y), fill = "seagreen", alpha = .5) +
+  geom_vline(xintercept = 0.845, linetype = "dashed") +
+  annotate(geom = "text", label = "50%", 
+           color = "darkgreen", x = .9, y = 1) +
+  annotate(geom = "text", label = "50%", 
+           color = "darkblue", x = .8, y = 1) +
+  labs(x = "Value", y = "Density")
+```
+
+```{r median-right-skew, echo=FALSE}
+#| label: fig-median-right-skew
+#| fig-cap: Медиана распределения с положительной асимметрией.
+
+set.seed(115)
+tibble(x = seq(0, 5, by = .001),
+       y = dgamma(x, 2, 2)) -> median_rightskew_data
+
+median_rightskew_data |>
+  filter(x >= .85) %>%
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(max(median_rightskew_data$x), .85)),
+    .) -> median_rightskew_data_upper
+
+median_rightskew_data |>
+  filter(x <= .85) %>%
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(.85, min(median_rightskew_data$x))),
+    .) -> median_rightskew_data_lower
+
+# DescTools::AUC(median_rightskew_data_lower$x,
+#                median_rightskew_data_lower$y)
+
+median_rightskew_data |> 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_polygon(data = median_rightskew_data_lower, 
+               aes(x = x, y = y), fill = "royalblue", alpha = .5) +
+  geom_polygon(data = median_rightskew_data_upper, 
+               aes(x = x, y = y), fill = "seagreen", alpha = .5) +
+  annotate(geom = "text", label = "50%", 
+           color = "darkgreen", x = 1.25, y = .2) +
+  annotate(geom = "text", label = "50%", 
+           color = "darkblue", x = .5, y = .2) +
+  geom_vline(xintercept = 0.85, linetype = "dashed") +
+  labs(x = "Value", y = "Density")
+```
+
+```{r median-bimodal, echo=FALSE}
+#| label: fig-median-bimodal
+#| fig-cap: Медиана бимодального распределения.
+
+set.seed(115)
+tibble(x = c(rnorm(80, 1.5, 0.4), rnorm(40, 4, 0.5))) -> median_bimodal_data
+
+median_bimodal_data |> 
+  ggplot(aes(x)) +
+  geom_density() -> g
+ggplot_build(g) -> b
+b$data[[1]] -> median_bimodal_data_build
+
+median_bimodal_data$x |> median() -> m
+# median_bimodal_data_build$x |> median() -> m
+
+median_bimodal_data_build |> 
+  select(y, x) |> 
+  filter(x >= m) %>% 
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(max(median_bimodal_data_build$x), m)),
+    .) -> median_bimodal_data_build_upper
+
+median_bimodal_data_build |>
+  select(y, x) |> 
+  filter(x <= m) %>%
+  bind_rows(
+    tibble(y = c(0, 0),
+           x = c(m , min(median_bimodal_data_build$x))),
+    .) -> median_bimodal_data_build_lower
+
+# DescTools::AUC(x = median_bimodal_data_build_upper$x,
+#                y = median_bimodal_data_build_upper$y)
+# DescTools::AUC(x = median_bimodal_data_build_lower$x,
+#                y = median_bimodal_data_build_lower$y)
+
+median_bimodal_data_build |> 
+  ggplot(aes(x, y)) +
+  geom_histogram(data = median_bimodal_data,
+                 aes(x = x, y = after_stat(density)), 
+                 fill = "gray90", binwidth = .4) +
+  geom_line() +
+  geom_polygon(data = median_bimodal_data_build_lower, 
+               aes(x = x, y = y), fill = "royalblue", alpha = .5) +
+  geom_polygon(data = median_bimodal_data_build_upper, 
+               aes(x = x, y = y), fill = "seagreen", alpha = .5) +
+  geom_vline(xintercept = m, linetype = "dashed") +
+  annotate(geom = "text", label = "50%", 
+           color = "darkgreen", x = 2.25, y = .1) +
+  annotate(geom = "text", label = "50%", 
+           color = "darkblue", x = 1.25, y = .1) +
+  labs(x = "Value", y = "Density")
+```
+
+***
+
+::: {.callout-warning title="Take-home: медиана"}
+- медиану можно расчитать только на шкалах, где задан порядок (ранговая, интервальная, абсолютная)
+- медиана делит выборку наблюдений на две равные части
+- линия медианы раздели площадь под графиком функции плотности вероятности пополам
+:::
+
+
+
 ### Среднее {#andan-descriptives-mean}
 ::: {.lab-chapter .lab-junior}
 :::
@@ -421,7 +675,7 @@ gridExtra::grid.arrange(
 ::: {.lab-chapter .lab-middle}
 :::
 
-#### Квардатичное среднее {#andan-descriptives-quandratic-mean}
+#### Квадратичное среднее {#andan-descriptives-quandratic-mean}
 ::: {.lab-chapter .lab-middle}
 :::
 
@@ -484,6 +738,14 @@ gridExtra::grid.arrange(
 :::
 
 
+### Квантили {#andan-descriptives-quantiles}
+::: {.lab-chapter .lab-junior}
+:::
+
+
+### Квартили {#andan-descriptives-quartiles}
+::: {.lab-chapter .lab-junior}
+:::
 
 
 ## Асимметрия {#andan-descriptives-skewness}
