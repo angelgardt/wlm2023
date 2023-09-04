@@ -70,7 +70,8 @@ RStudio это не единственная среда для работы с R
 Если вы пользователь Linux, значит R с RStudio вы ставили через Terminal. Скорее всего, всё прошло хорошо, и всё работает. Проблемки могут случиться чуть дальше, когда мы будем ставить дополнительные аровские пакеты, в которых будет идти основная наша работа --- R может не найти некоторые системные пакеты. Такая проблема у меня возникла на Ubuntu 22.04 --- помогла команда ниже:
 
 ```
-PASTE COMMAND HERE
+sudo apt install r-base-dev
+sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev linfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 ```
 
 Сначала мы будем знакомиться с базовым R и работать только в нём, но имейте в виду, что тут есть некая команда, которая может пригодиться.
