@@ -1,1 +1,17 @@
 # Корреляционный анализ {#andan-corr}
+{{< include _symbols.qmd >}}
+
+## Преобразование Фишера {#andan-cor-fisher-transform}
+
+$$
+z_i = \frac{1}{2} \ln \frac{1 + r_i}{1 - r_i} = \artanh (r_i)
+$$
+
+
+$$
+r_P = \dfrac{e^{2z_P} - 1}{e^{2z_P} + 1} = \tanh(z_P)
+$$
+
+
+
+

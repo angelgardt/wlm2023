@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 27&nbsp; Корреляционный анализ</title>
+<title>WLM 2023 - 21&nbsp; Случайные величины</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./andan-nonparam.html" rel="next">
-<link href="./andan-chisq.html" rel="prev">
+<link href="./stats-estim.html" rel="next">
+<link href="./stats-rand-exp.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,7 +64,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -117,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -252,27 +251,27 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">stats-intro.html</span></a>
+  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">stats-rand-exp.html</span></a>
+  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">stats-rand-values.html</span></a>
+  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">stats-estim.html</span></a>
+  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">stats-testing.html</span></a>
+  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -295,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
+  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -676,7 +675,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#andan-cor-fisher-transform" id="toc-andan-cor-fisher-transform" class="nav-link active" data-scroll-target="#andan-cor-fisher-transform"><span class="toc-section-number">27.1</span>  Преобразование Фишера</a></li>
+  <li><a href="#stats-rand-values-discrete" id="toc-stats-rand-values-discrete" class="nav-link active" data-scroll-target="#stats-rand-values-discrete"><span class="toc-section-number">21.1</span>  Дискретные случайные величины</a>
+  <ul class="collapse">
+  <li><a href="#stats-rand-values-discrete-distribution" id="toc-stats-rand-values-discrete-distribution" class="nav-link" data-scroll-target="#stats-rand-values-discrete-distribution"><span class="toc-section-number">21.1.1</span>  Распределение дискретной случайной величины</a></li>
+  </ul></li>
+  <li><a href="#stats-rand-values-continuous" id="toc-stats-rand-values-continuous" class="nav-link" data-scroll-target="#stats-rand-values-continuous"><span class="toc-section-number">21.2</span>  Непрерывные случайные величины</a>
+  <ul class="collapse">
+  <li><a href="#stats-rand-values-continuous-distribution" id="toc-stats-rand-values-continuous-distribution" class="nav-link" data-scroll-target="#stats-rand-values-continuous-distribution"><span class="toc-section-number">21.2.1</span>  Распределение непрерывной случайной величины</a></li>
+  </ul></li>
+  <li><a href="#stats-rand-values-moments" id="toc-stats-rand-values-moments" class="nav-link" data-scroll-target="#stats-rand-values-moments"><span class="toc-section-number">21.3</span>  Характеристики распределения случайный величин</a></li>
+  <li><a href="#stats-rand-values-distributions" id="toc-stats-rand-values-distributions" class="nav-link" data-scroll-target="#stats-rand-values-distributions"><span class="toc-section-number">21.4</span>  Распределения случайных величин</a>
+  <ul class="collapse">
+  <li><a href="#stats-rand-values-bernoulli" id="toc-stats-rand-values-bernoulli" class="nav-link" data-scroll-target="#stats-rand-values-bernoulli"><span class="toc-section-number">21.4.1</span>  Распределение Бернулли</a></li>
+  <li><a href="#stats-rand-values-binom" id="toc-stats-rand-values-binom" class="nav-link" data-scroll-target="#stats-rand-values-binom"><span class="toc-section-number">21.4.2</span>  Биноминальное распределение</a></li>
+  <li><a href="#stats-rand-values-pois" id="toc-stats-rand-values-pois" class="nav-link" data-scroll-target="#stats-rand-values-pois"><span class="toc-section-number">21.4.3</span>  Распределение Пуассона</a></li>
+  <li><a href="#stats-rand-values-exp" id="toc-stats-rand-values-exp" class="nav-link" data-scroll-target="#stats-rand-values-exp"><span class="toc-section-number">21.4.4</span>  Экспоненциальное распределение</a></li>
+  <li><a href="#stats-rand-values-uniform" id="toc-stats-rand-values-uniform" class="nav-link" data-scroll-target="#stats-rand-values-uniform"><span class="toc-section-number">21.4.5</span>  Равномерное распределение</a></li>
+  <li><a href="#stats-rand-values-norm" id="toc-stats-rand-values-norm" class="nav-link" data-scroll-target="#stats-rand-values-norm"><span class="toc-section-number">21.4.6</span>  Нормальное распределение</a></li>
+  <li><a href="#stats-rand-values-geom" id="toc-stats-rand-values-geom" class="nav-link" data-scroll-target="#stats-rand-values-geom"><span class="toc-section-number">21.4.7</span>  Геометрическое распределение</a></li>
+  <li><a href="#stats-rand-values-negbinom" id="toc-stats-rand-values-negbinom" class="nav-link" data-scroll-target="#stats-rand-values-negbinom"><span class="toc-section-number">21.4.8</span>  Отрицательное биномиальное распределение</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -685,7 +703,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="andan-corr" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></span></h1>
+<h1 class="title"><span id="stats-rand-values" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></span></h1>
 </div>
 
 
@@ -700,24 +718,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--- {{< include _symbols.qmd >}} --->
-<!--- Number sets--->
-<!--- Linear Algebra --->
-<!--- vectors and matrices --->
-<!--- Probability --->
-<!--- Distributions --->
-<!--- Other --->
-<!--- Trig --->
-<section id="andan-cor-fisher-transform" class="level2" data-number="27.1">
-<h2 data-number="27.1" class="anchored" data-anchor-id="andan-cor-fisher-transform"><span class="header-section-number">27.1</span> Преобразование Фишера</h2>
-<p><span class="math display">\[
-z_i = \frac{1}{2} \ln \frac{1 + r_i}{1 - r_i} = \mathop{\mathrm{artanh}}(r_i)
-\]</span></p>
-<p><span class="math display">\[
-r_P = \dfrac{e^{2z_P} - 1}{e^{2z_P} + 1} = \tanh(z_P)
-\]</span></p>
+<section id="stats-rand-values-discrete" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="stats-rand-values-discrete"><span class="header-section-number">21.1</span> Дискретные случайные величины</h2>
+<section id="stats-rand-values-discrete-distribution" class="level3" data-number="21.1.1">
+<h3 data-number="21.1.1" class="anchored" data-anchor-id="stats-rand-values-discrete-distribution"><span class="header-section-number">21.1.1</span> Распределение дискретной случайной величины</h3>
+</section>
+</section>
+<section id="stats-rand-values-continuous" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="stats-rand-values-continuous"><span class="header-section-number">21.2</span> Непрерывные случайные величины</h2>
+<section id="stats-rand-values-continuous-distribution" class="level3" data-number="21.2.1">
+<h3 data-number="21.2.1" class="anchored" data-anchor-id="stats-rand-values-continuous-distribution"><span class="header-section-number">21.2.1</span> Распределение непрерывной случайной величины</h3>
+</section>
+</section>
+<section id="stats-rand-values-moments" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="stats-rand-values-moments"><span class="header-section-number">21.3</span> Характеристики распределения случайный величин</h2>
+</section>
+<section id="stats-rand-values-distributions" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="stats-rand-values-distributions"><span class="header-section-number">21.4</span> Распределения случайных величин</h2>
+<section id="stats-rand-values-bernoulli" class="level3" data-number="21.4.1">
+<h3 data-number="21.4.1" class="anchored" data-anchor-id="stats-rand-values-bernoulli"><span class="header-section-number">21.4.1</span> Распределение Бернулли</h3>
+</section>
+<section id="stats-rand-values-binom" class="level3" data-number="21.4.2">
+<h3 data-number="21.4.2" class="anchored" data-anchor-id="stats-rand-values-binom"><span class="header-section-number">21.4.2</span> Биноминальное распределение</h3>
+</section>
+<section id="stats-rand-values-pois" class="level3" data-number="21.4.3">
+<h3 data-number="21.4.3" class="anchored" data-anchor-id="stats-rand-values-pois"><span class="header-section-number">21.4.3</span> Распределение Пуассона</h3>
+</section>
+<section id="stats-rand-values-exp" class="level3" data-number="21.4.4">
+<h3 data-number="21.4.4" class="anchored" data-anchor-id="stats-rand-values-exp"><span class="header-section-number">21.4.4</span> Экспоненциальное распределение</h3>
+</section>
+<section id="stats-rand-values-uniform" class="level3" data-number="21.4.5">
+<h3 data-number="21.4.5" class="anchored" data-anchor-id="stats-rand-values-uniform"><span class="header-section-number">21.4.5</span> Равномерное распределение</h3>
+</section>
+<section id="stats-rand-values-norm" class="level3" data-number="21.4.6">
+<h3 data-number="21.4.6" class="anchored" data-anchor-id="stats-rand-values-norm"><span class="header-section-number">21.4.6</span> Нормальное распределение</h3>
+</section>
+<section id="stats-rand-values-geom" class="level3" data-number="21.4.7">
+<h3 data-number="21.4.7" class="anchored" data-anchor-id="stats-rand-values-geom"><span class="header-section-number">21.4.7</span> Геометрическое распределение</h3>
+</section>
+<section id="stats-rand-values-negbinom" class="level3" data-number="21.4.8">
+<h3 data-number="21.4.8" class="anchored" data-anchor-id="stats-rand-values-negbinom"><span class="header-section-number">21.4.8</span> Отрицательное биномиальное распределение</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -971,13 +1014,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./andan-chisq.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></span>
+      <a href="./stats-rand-exp.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./andan-nonparam.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./stats-estim.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

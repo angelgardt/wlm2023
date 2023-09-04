@@ -1,3 +1,4 @@
+<!--- {{< include _symbols.qmd >}} --->
 
 <!--- Number sets--->
 \newcommand{\setN}{\mathbb{N}}
@@ -20,3 +21,7 @@
 <!--- Other --->
 \newcommand{\def}{\overset{\text{def}}{=}}
 \newcommand{\sgn}{\text{sgn}}
+
+<!--- Trig --->
+\usepackage{amsmath}
+\DeclareMathOperator\artanh{artanh}

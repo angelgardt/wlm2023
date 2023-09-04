@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 27&nbsp; Корреляционный анализ</title>
+<title>WLM 2023 - 19&nbsp; Введение в статистику</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./andan-nonparam.html" rel="next">
-<link href="./andan-chisq.html" rel="prev">
+<link href="./stats-rand-exp.html" rel="next">
+<link href="./part-stats.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,7 +64,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -117,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -252,27 +251,27 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">stats-intro.html</span></a>
+  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">stats-rand-exp.html</span></a>
+  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">stats-rand-values.html</span></a>
+  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">stats-estim.html</span></a>
+  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">stats-testing.html</span></a>
+  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -295,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
+  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -676,7 +675,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#andan-cor-fisher-transform" id="toc-andan-cor-fisher-transform" class="nav-link active" data-scroll-target="#andan-cor-fisher-transform"><span class="toc-section-number">27.1</span>  Преобразование Фишера</a></li>
+  <li><a href="#stats-goals" id="toc-stats-goals" class="nav-link active" data-scroll-target="#stats-goals"><span class="toc-section-number">19.1</span>  Задачи статистики</a></li>
+  <li><a href="#stats-research" id="toc-stats-research" class="nav-link" data-scroll-target="#stats-research"><span class="toc-section-number">19.2</span>  Исследование с точки зрения статистики</a>
+  <ul class="collapse">
+  <li><a href="#stats-population-sample" id="toc-stats-population-sample" class="nav-link" data-scroll-target="#stats-population-sample"><span class="toc-section-number">19.2.1</span>  Генеральная совокупность и выборка</a></li>
+  <li><a href="#stats-parameters" id="toc-stats-parameters" class="nav-link" data-scroll-target="#stats-parameters"><span class="toc-section-number">19.2.2</span>  Параметр, индикатор, статистика</a></li>
+  <li><a href="#stats-hypotheses" id="toc-stats-hypotheses" class="nav-link" data-scroll-target="#stats-hypotheses"><span class="toc-section-number">19.2.3</span>  Исследовательский вопрос и гипотезы</a></li>
+  </ul></li>
+  <li><a href="#stats-data" id="toc-stats-data" class="nav-link" data-scroll-target="#stats-data"><span class="toc-section-number">19.3</span>  Виды статистических данных</a></li>
+  <li><a href="#stats-kinds" id="toc-stats-kinds" class="nav-link" data-scroll-target="#stats-kinds"><span class="toc-section-number">19.4</span>  Виды статистики</a></li>
   </ul>
 </nav>
     </div>
@@ -685,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="andan-corr" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></span></h1>
+<h1 class="title"><span id="stats-intro" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></span></h1>
 </div>
 
 
@@ -700,24 +707,50 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--- {{< include _symbols.qmd >}} --->
-<!--- Number sets--->
-<!--- Linear Algebra --->
-<!--- vectors and matrices --->
-<!--- Probability --->
-<!--- Distributions --->
-<!--- Other --->
-<!--- Trig --->
-<section id="andan-cor-fisher-transform" class="level2" data-number="27.1">
-<h2 data-number="27.1" class="anchored" data-anchor-id="andan-cor-fisher-transform"><span class="header-section-number">27.1</span> Преобразование Фишера</h2>
-<p><span class="math display">\[
-z_i = \frac{1}{2} \ln \frac{1 + r_i}{1 - r_i} = \mathop{\mathrm{artanh}}(r_i)
-\]</span></p>
-<p><span class="math display">\[
-r_P = \dfrac{e^{2z_P} - 1}{e^{2z_P} + 1} = \tanh(z_P)
-\]</span></p>
+<section id="stats-goals" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="stats-goals"><span class="header-section-number">19.1</span> Задачи статистики</h2>
+</section>
+<section id="stats-research" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="stats-research"><span class="header-section-number">19.2</span> Исследование с точки зрения статистики</h2>
+<section id="stats-population-sample" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="stats-population-sample"><span class="header-section-number">19.2.1</span> Генеральная совокупность и выборка</h3>
+</section>
+<section id="stats-parameters" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="stats-parameters"><span class="header-section-number">19.2.2</span> Параметр, индикатор, статистика</h3>
+</section>
+<section id="stats-hypotheses" class="level3" data-number="19.2.3">
+<h3 data-number="19.2.3" class="anchored" data-anchor-id="stats-hypotheses"><span class="header-section-number">19.2.3</span> Исследовательский вопрос и гипотезы</h3>
+</section>
+</section>
+<section id="stats-data" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="stats-data"><span class="header-section-number">19.3</span> Виды статистических данных</h2>
+</section>
+<section id="stats-kinds" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="stats-kinds"><span class="header-section-number">19.4</span> Виды статистики</h2>
+<p>Cтатистика же как набор методов и инструментов делится на два вида:</p>
+<ul>
+<li><strong>Описательная статистика (descriptive statistics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)</strong> занимается обработкой статистических данных, их наглядным представлением, и собственно описанием через некоторые характеристики.
+<ul>
+<li>Эти характеристики, количественно описывающие особенности имеющихся данных, называются <strong>описательными статистиками (descriptive statistics<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>)</strong>.</li>
+<li><em>Задача описательной статистики</em> — ёмко описать имеющиеся данные и составить на основе этих описаний общее представление о них, а также обнаружить особенности, которые могут повлиять на дальнейший анализ.</li>
+</ul></li>
+<li><strong>Статистика вывода (inferential statistics)</strong> занимается поиском ответов на содержательные вопросы, которые мы задаем данным в ходе их анализа в рамках научных и практических исследований.
+<ul>
+<li>Состоит из двух компонентов — <em>тестирования статистических гипотез</em> и <em>статистических методов</em>.</li>
+</ul></li>
+</ul>
+<div class="task question">
+<p>Ок, статистика вывода отвечает на вопросы, а описательная статистика описывает данные. А можно ли отвечать на вопросы с помощью описательной статистики?</p>
+</div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Mass (uncountable) noun<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Countable noun, plural in this case<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -971,13 +1004,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./andan-chisq.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></span>
+      <a href="./part-stats.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Статистика для анализа данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./andan-nonparam.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./stats-rand-exp.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
