@@ -9,7 +9,8 @@ book:
       email: "anton.angelgardt@gmail.com"
       affiliations:
         - name: "HSE UX LAB, HSE University"
-  date: "3/05/2023"
+  date: last-modified
+  date-format: "MMM D, YYYY"
   chapters:
     - index.qmd
     - signs.qmd
@@ -112,20 +113,22 @@ book:
     - randan-path.qmd
     - randan-timeseries.qmd
     - part: part-pyandan.qmd
-    - part: part_appendices.qmd
-    - appendix_numbers.qmd
-    - appendix_strings.qmd
-    - appendix_kilobytes.qmd
-    - appendix_memory.qmd
-    - appendix_proglang.qmd
-    - appendix_git.qmd
-    - appendix_formulas.qmd
+    - part: part-appendices.qmd
+    - appendix-numbers.qmd
+    - appendix-strings.qmd
+    - appendix-kilobytes.qmd
+    - appendix-memory.qmd
+    - appendix-proglang.qmd
+    - appendix-git.qmd
+    - appendix-formulas.qmd
     - references.qmd
   favicon: pics/favicon.png
   navbar: 
     title: "WLM 2023 // HSE UX LAB"
     logo: pics/logo.png
-    left: 
+    left:
+      - text: "Домой"
+        href: ../hub/index.html
       - text: "Книга"
         href: ../book/index.html
       - text: "Лекции"

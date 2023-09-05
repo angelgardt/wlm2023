@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 23&nbsp; Тестирование статистических гипотез</title>
+<title>WLM 2023 - 94&nbsp; Килобайты</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./part-andan.html" rel="next">
-<link href="./stats-estim.html" rel="prev">
+<link href="./appendix-memory.html" rel="next">
+<link href="./appendix-strings.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,7 +64,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -121,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -276,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
+  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -643,7 +642,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-kilobytes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
+  <a href="./appendix-kilobytes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -676,35 +675,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Содержание</h2>
-   
-  <ul>
-  <li><a href="#stats-testing-hyotheses" id="toc-stats-testing-hyotheses" class="nav-link active" data-scroll-target="#stats-testing-hyotheses"><span class="toc-section-number">23.1</span>  Нулевая и альтернативная гипотезы</a></li>
-  <li><a href="#stats-testing-approaches" id="toc-stats-testing-approaches" class="nav-link" data-scroll-target="#stats-testing-approaches"><span class="toc-section-number">23.2</span>  Подходы к тестированию статистических гипотез</a>
-  <ul class="collapse">
-  <li><a href="#stats-testing-nhst" id="toc-stats-testing-nhst" class="nav-link" data-scroll-target="#stats-testing-nhst"><span class="toc-section-number">23.2.1</span>  Фреквентистский подход</a></li>
-  <li><a href="#stats-testing-bayes" id="toc-stats-testing-bayes" class="nav-link" data-scroll-target="#stats-testing-bayes"><span class="toc-section-number">23.2.2</span>  Байесовский подход</a></li>
-  </ul></li>
-  <li><a href="#stats-testing-results" id="toc-stats-testing-results" class="nav-link" data-scroll-target="#stats-testing-results"><span class="toc-section-number">23.3</span>  Возможные результаты проверки гипотез</a>
-  <ul class="collapse">
-  <li><a href="#stats-testing-asymmetry" id="toc-stats-testing-asymmetry" class="nav-link" data-scroll-target="#stats-testing-asymmetry"><span class="toc-section-number">23.3.1</span>  Асимметрия статистического вывода</a></li>
-  <li><a href="#stats-testing-errors-connection" id="toc-stats-testing-errors-connection" class="nav-link" data-scroll-target="#stats-testing-errors-connection"><span class="toc-section-number">23.3.2</span>  Связь ошибки первого и второга рода</a></li>
-  </ul></li>
-  <li><a href="#stats-testing-algorithm" id="toc-stats-testing-algorithm" class="nav-link" data-scroll-target="#stats-testing-algorithm"><span class="toc-section-number">23.4</span>  Агоритм тестирования статистических гипотез</a></li>
-  <li><a href="#stats-testing-multiple-comparisons" id="toc-stats-testing-multiple-comparisons" class="nav-link" data-scroll-target="#stats-testing-multiple-comparisons"><span class="toc-section-number">23.5</span>  Проблема множественных сравнений</a></li>
-  <li><a href="#stats-testing-multiple-testing" id="toc-stats-testing-multiple-testing" class="nav-link" data-scroll-target="#stats-testing-multiple-testing"><span class="toc-section-number">23.6</span>  Проблема количества статистических тестов</a></li>
-  <li><a href="#stats-testing-effect-size" id="toc-stats-testing-effect-size" class="nav-link" data-scroll-target="#stats-testing-effect-size"><span class="toc-section-number">23.7</span>  Размер эффекта</a></li>
-  <li><a href="#stats-testing-power" id="toc-stats-testing-power" class="nav-link" data-scroll-target="#stats-testing-power"><span class="toc-section-number">23.8</span>  Статистическая мощность</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="stats-testing" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></span></h1>
+<h1 class="title"><span id="appendix_kilobytes" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></span></h1>
 </div>
 
 
@@ -719,101 +697,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>В ходе статистического анализа мы, главным образом, заняты тем, что тестируем статистические гипотезы. Ведь на какого рода вопросы мы отвечаем с помощью анализа?</p>
-<ul>
-<li>Различаются ли группы между собой?</li>
-<li>Значимо ли влияние какого-либо фактора? → Различаются ли группы между собой?</li>
-<li>Хороша ли та модель, которую мы построили? → Отличается ли она от нулевой модели?</li>
-</ul>
-<p>И так далее. Так или иначе, всё сводится в тому, что мы ищем какие-то различия. Но силу того, что у нас неопределённость и вариация в данных, мы просто так «в лоб» сказать о различиях по оценкам параметров не можем. Приходится тестировать статистические гипотезы.</p>
-<section id="stats-testing-hyotheses" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="stats-testing-hyotheses"><span class="header-section-number">23.1</span> Нулевая и альтернативная гипотезы</h2>
-<p>Еще раз тезисно <a href="stats-intro.html#stats-hypotheses">вспомним о гипотезах</a> в целом:</p>
-<ul>
-<li><strong>Гипотеза</strong> (<span class="math inline">\(H\)</span>) — это предположение, которое подлежит проверке на основе результатов наблюдений.</li>
-<li>Гипотезы бывают:
-<ul>
-<li><strong>теоретические</strong> — про конструкты</li>
-<li><strong>эмпирические</strong> — про переменные</li>
-<li><strong>статистические</strong> — про параметры [генеральной совокупности] и данные</li>
-</ul></li>
-</ul>
-<p>Статистические гипотезы бывают простыми и сложными:</p>
-<ul>
-<li><strong>Простая гипотеза</strong> — это такое предположение, которое включает в себя какое-либо однозначно определеяемое утверждение. Например, истинная величина параметра соответствует некоторому строго заданному значению: <span class="math inline">\(H : \theta = \theta_0\)</span>. Другой вариант — две генеральные совокупности имеют одно и то же значение одной и той же характеристики: <span class="math inline">\(H : \theta_1 = \theta_2\)</span>.</li>
-<li><strong>Сложная гипотеза</strong> предполагает множественность вариантов для параметра, которые укладываются в рамки проверяемого предположения. Например, <span class="math inline">\(H : \theta &gt; \theta_0\)</span> или <span class="math inline">\(H : \theta_1 \neq \theta_2\)</span>.</li>
-</ul>
-<p>В рамках самого хода тестирования гипотез существует <strong>проверяемая (нулевая) гипотеза</strong> (<span class="math inline">\(H_0\)</span>). Её обычно стараются предельно упростить, поэтому она формулируется как простая гипотеза. В противовес ей выдвигается <strong>альтернативная гипотеза</strong> (<span class="math inline">\(H_1\)</span>), которая будет иметь вид сложной гипотезы.</p>
-<p>Для проверки гипотезы необходимы две вещи:</p>
-<ul>
-<li>результаты наблюдений и</li>
-<li>критерий.</li>
-</ul>
-<p>Результаты наблюдений, полученные на выборке, сами по себе, как правило, не используются. Однако на их основе рассчитываются выборочные статистики (показатели), которые непосредственно участвуют в проверке гипотезы.</p>
-</section>
-<section id="stats-testing-approaches" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="stats-testing-approaches"><span class="header-section-number">23.2</span> Подходы к тестированию статистических гипотез</h2>
-<section id="stats-testing-nhst" class="level3" data-number="23.2.1">
-<h3 data-number="23.2.1" class="anchored" data-anchor-id="stats-testing-nhst"><span class="header-section-number">23.2.1</span> Фреквентистский подход</h3>
-</section>
-<section id="stats-testing-bayes" class="level3" data-number="23.2.2">
-<h3 data-number="23.2.2" class="anchored" data-anchor-id="stats-testing-bayes"><span class="header-section-number">23.2.2</span> Байесовский подход</h3>
-</section>
-</section>
-<section id="stats-testing-results" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="stats-testing-results"><span class="header-section-number">23.3</span> Возможные результаты проверки гипотез</h2>
-<p>В результате проверки статистических гипотез могут возникнуть четыре ситуации.</p>
-<p>Мы изучаем в исследовании какую-либо закономерность, которая в реальном мире может существовать, а может и не существовать. В силу неопределённости и вариативности наших данных мы может либо обнаружить интересующую нас закономерность, либо не обнаружить.</p>
-<p>В качестве нулевой гипотезы мы выдвигаем предположение о том, что закономерность отсутствует — так мы упрощаем нашу нулевую гипотезу. Пусть <span class="math inline">\(H_0\)</span> обозначает, что предположение, которое мы проверяем справедливо, а <span class="math inline">\(H_1\)</span> — не справедливо. На основании данных мы можем либо не отклонить наше предположение (<span class="math inline">\(\hat H_0\)</span>), либо отклонить (<span class="math inline">\(\hat H_1\)</span>).</p>
-<p>Тогда имеем следующую ситуацию:</p>
-<p>ТАБЛИЦА</p>
-<ul>
-<li><strong>Ошибка I рода</strong> возникает, когда в генеральной совокупности <em>искомой закономерности нет</em>, но мы в силу случайных флуктуаций в данных <em>её нашли</em>.</li>
-<li><strong>Ошибка II рода</strong> возникает, когда в генеральной совокупности <em>искомая закономерность есть</em>, но мы в силу каких-либо причин её <em>не нашли</em>.</li>
-</ul>
-<p>Ошибки — это нехорошо, они нас не устраивают. Надо каким-то образом их контролировать.</p>
-<ul>
-<li><strong>Ошибка I рода</strong> контролируется достаточно просто. Так как мы <em>нашли</em> закономерность, которую искали, мы можем посчитать вероятность, с которой потенциально ошиблись. А собственно контролировать ошибку мы будем с помощью <strong>уровня значимости</strong> <span class="math inline">\(\alpha\)</span>, который <em>выбирается до начала процедуры тестирования гипотезы</em>. Он и задает вероятность, с который мы позволяем себе ошибиться — отклонить нулевую гипотезу, при условии, что она верна.</li>
-<li><strong>Ошибку II рода</strong> контролировать сложнее, так как мы <em>не нашли</em> закономерность, которую искали. Нам нужна какая-то метрика, которая позволит сказать, что мы сделали всё возможное для того, чтобы обнаружить искомую закономерность. Вероятность ошибки II рода обозначается <span class="math inline">\(\beta\)</span> — тогда вероятность того, что мы не совершили ошибку II рода будет <span class="math inline">\(1 - \beta\)</span>. Эта величина называется <a href="#stats-testing-effect-size"><strong>статистической мощностью</strong></a>, и она связана с <a href="#stats-testing-effect-size"><em>размером эффекта</em></a> и <em>объемом выборки</em>. Статистическую мощность можно рассчитать как до проведения статистического анализа для расчета требуемого объема выборки — так и после — для определения достигнутой статистической мощности.</li>
-</ul>
-<section id="stats-testing-asymmetry" class="level3" data-number="23.3.1">
-<h3 data-number="23.3.1" class="anchored" data-anchor-id="stats-testing-asymmetry"><span class="header-section-number">23.3.1</span> Асимметрия статистического вывода</h3>
-</section>
-<section id="stats-testing-errors-connection" class="level3" data-number="23.3.2">
-<h3 data-number="23.3.2" class="anchored" data-anchor-id="stats-testing-errors-connection"><span class="header-section-number">23.3.2</span> Связь ошибки первого и второга рода</h3>
-</section>
-</section>
-<section id="stats-testing-algorithm" class="level2" data-number="23.4">
-<h2 data-number="23.4" class="anchored" data-anchor-id="stats-testing-algorithm"><span class="header-section-number">23.4</span> Агоритм тестирования статистических гипотез</h2>
-</section>
-<section id="stats-testing-multiple-comparisons" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="stats-testing-multiple-comparisons"><span class="header-section-number">23.5</span> Проблема множественных сравнений</h2>
-</section>
-<section id="stats-testing-multiple-testing" class="level2" data-number="23.6">
-<h2 data-number="23.6" class="anchored" data-anchor-id="stats-testing-multiple-testing"><span class="header-section-number">23.6</span> Проблема количества статистических тестов</h2>
-</section>
-<section id="stats-testing-effect-size" class="level2" data-number="23.7">
-<h2 data-number="23.7" class="anchored" data-anchor-id="stats-testing-effect-size"><span class="header-section-number">23.7</span> Размер эффекта</h2>
-</section>
-<section id="stats-testing-power" class="level2" data-number="23.8">
-<h2 data-number="23.8" class="anchored" data-anchor-id="stats-testing-power"><span class="header-section-number">23.8</span> Статистическая мощность</h2>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body" title="">
-<p>НАПИСАТЬ</p>
-<p>кажется, нет, так как эффект уже нашли</p>
-</div>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1066,13 +951,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./stats-estim.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></span>
+      <a href="./appendix-strings.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">Строки и железо</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./part-andan.html" class="pagination-link">
-        <span class="nav-page-text">Методы анализа данных</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./appendix-memory.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">Память и процессор</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

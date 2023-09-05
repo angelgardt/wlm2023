@@ -59,6 +59,7 @@ $h2-font-weight:              500;
 $h3-font-size:                1.3rem !default;
 $body-font-weight:            400;
 $body-font-size:              0.9rem;
+$body-line-height:            1.5rem;
 
 $font-family-code:            Courier Prime !default;
 
@@ -96,6 +97,7 @@ $navbar-dark-active-color:          $primary !default;
 
 $navbar-dark-brand-color:                 $white !default;
 $navbar-dark-brand-hover-color:           $navbar-dark-brand-color !default;
+
 
 // Pagination
 
@@ -157,6 +159,7 @@ p.subtitle.lead {
 body {
   font-weight: $body-font-weight;
   font-size: $body-font-size;
+  line-height: $body-line-height;
 }
 
 // Code
@@ -193,12 +196,6 @@ code {
   a:hover {
     text-decoration: none;
   }
-}
-
-// Sidebar
-
-.sidebar-item-section {
-  font-weight: $h1-font-weight;
 }
 
 // Indicators

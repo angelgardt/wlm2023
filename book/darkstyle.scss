@@ -70,6 +70,7 @@ $h2-font-weight:              500;
 $h3-font-size:                1.3rem !default;
 $body-font-weight:            400;
 $body-font-size:              0.9rem;
+$body-line-height:            1.5rem;
 $text-muted:                  body-mix(75%) !default;
 
 $font-family-code:            Courier Prime !default;
@@ -220,6 +221,7 @@ p.subtitle.lead {
 body {
   font-weight: $body-font-weight;
   font-size: $body-font-size;
+  line-height: $body-line-height;
 }
 
 // Typography
