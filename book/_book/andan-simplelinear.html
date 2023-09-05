@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 22&nbsp; Общие линейные модели. Простая линейная регрессия</title>
+<title>WLM 2023 - 29&nbsp; Общие линейные модели. Простая линейная регрессия</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -86,6 +87,10 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../hub/index.html">
+ <span class="menu-text">Домой</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./../book/index.html">
  <span class="menu-text">Книга</span></a>
@@ -116,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -236,180 +241,215 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Теория измерений</span>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measurements-social-sci.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Измерение в социальных науках</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measurements-psychomentrics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">measurements-psychomentrics.html</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Статистика для анализа данных</span>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">Методы анализа данных</span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-descriptives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a>
+  <a href="./andan-descriptives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Сравнение средних</span></a>
+  <a href="./andan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Сравнение средних</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></a>
+  <a href="./andan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
+  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></a>
+  <a href="./andan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-simplelinear.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></a>
+  <a href="./andan-simplelinear.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></a>
+  <a href="./andan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия</span></a>
+  <a href="./andan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Support Vector Regression</span></a>
+  <a href="./andan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Support Vector Regression</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия</span></a>
+  <a href="./andan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Дисперсионный анализ</span></a>
+  <a href="./andan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Дисперсионный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Ковариационный анализ</span></a>
+  <a href="./andan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ</span></a>
+  <a href="./andan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия</span></a>
+  <a href="./andan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия</span></a>
+  <a href="./andan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной</span></a>
+  <a href="./andan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия</span></a>
+  <a href="./andan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия</span></a>
+  <a href="./andan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия</span></a>
+  <a href="./andan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></a>
+  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></a>
+  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
+  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация</span></a>
+  <a href="./andan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация</span></a>
+  <a href="./andan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Кластерный анализ</span></a>
+  <a href="./andan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ</span></a>
+  <a href="./andan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Анализ главных компонент</span></a>
+  <a href="./andan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Анализ главных компонент</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Анализ независимых компонент</span></a>
+  <a href="./andan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Анализ независимых компонент</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент</span></a>
+  <a href="./andan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ</span></a>
+  <a href="./andan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями</span></a>
+  <a href="./andan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ</span></a>
+  <a href="./andan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Путевой анализ</span></a>
+  <a href="./andan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Путевой анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов</span></a>
+  <a href="./andan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -417,172 +457,172 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-descriptives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Описательные статистики в R</span></a>
+  <a href="./randan-descriptives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Описательные статистики в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Сравнение средних в R</span></a>
+  <a href="./randan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Сравнение средних в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Анализ категориальных данных в R</span></a>
+  <a href="./randan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Анализ категориальных данных в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Корреляционный анализ в R</span></a>
+  <a href="./randan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Корреляционный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных в R</span></a>
+  <a href="./randan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-simplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия в R</span></a>
+  <a href="./randan-simplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия в R</span></a>
+  <a href="./randan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия в R</span></a>
+  <a href="./randan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Support Vector Regression в R</span></a>
+  <a href="./randan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Support Vector Regression в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия в R</span></a>
+  <a href="./randan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Дисперсионный анализ в R</span></a>
+  <a href="./randan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Дисперсионный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Ковариационный анализ в R</span></a>
+  <a href="./randan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Ковариационный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ в R</span></a>
+  <a href="./randan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия в R</span></a>
+  <a href="./randan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия в R</span></a>
+  <a href="./randan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной в R</span></a>
+  <a href="./randan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия в R</span></a>
+  <a href="./randan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия в R</span></a>
+  <a href="./randan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия в R</span></a>
+  <a href="./randan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></a>
+  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></a>
+  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
+  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация в R</span></a>
+  <a href="./randan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация в R</span></a>
+  <a href="./randan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Кластерный анализ в R</span></a>
+  <a href="./randan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">Кластерный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ в R</span></a>
+  <a href="./randan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Анализ главных компонент в R</span></a>
+  <a href="./randan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">Анализ главных компонент в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Анализ независимых компонент в R</span></a>
+  <a href="./randan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">Анализ независимых компонент в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент в R</span></a>
+  <a href="./randan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ в R</span></a>
+  <a href="./randan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями в R</span></a>
+  <a href="./randan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ в R</span></a>
+  <a href="./randan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">Путевой анализ в R</span></a>
+  <a href="./randan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">Путевой анализ в R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов в R</span></a>
+  <a href="./randan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов в R</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -593,37 +633,37 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
+  <a href="./appendix-numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">Строки и железо</span></a>
+  <a href="./appendix-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">Строки и железо</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_kilobytes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
+  <a href="./appendix-kilobytes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_memory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Память и процессор</span></a>
+  <a href="./appendix-memory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">Память и процессор</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_proglang.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">Языки программирования</span></a>
+  <a href="./appendix-proglang.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">Языки программирования</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">Git</span></a>
+  <a href="./appendix-git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">Git</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_formulas.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">Формулы</span></a>
+  <a href="./appendix-formulas.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">Формулы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -636,14 +676,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#вычисление-коэффициентов-линейной-регрессии" id="toc-вычисление-коэффициентов-линейной-регрессии" class="nav-link active" data-scroll-target="#вычисление-коэффициентов-линейной-регрессии"><span class="toc-section-number">29.1</span>  Вычисление коэффициентов линейной регрессии</a>
+  <ul class="collapse">
+  <li><a href="#матричное-вычисление-коэффициентов" id="toc-матричное-вычисление-коэффициентов" class="nav-link" data-scroll-target="#матричное-вычисление-коэффициентов"><span class="toc-section-number">29.1.1</span>  Матричное вычисление коэффициентов</a></li>
+  <li><a href="#аналитическое-вычисление-коэффициентов" id="toc-аналитическое-вычисление-коэффициентов" class="nav-link" data-scroll-target="#аналитическое-вычисление-коэффициентов"><span class="toc-section-number">29.1.2</span>  Аналитическое вычисление коэффициентов</a></li>
+  <li><a href="#угловой-коэффициент-и-коэффициент-корреляции" id="toc-угловой-коэффициент-и-коэффициент-корреляции" class="nav-link" data-scroll-target="#угловой-коэффициент-и-коэффициент-корреляции"><span class="toc-section-number">29.1.3</span>  Угловой коэффициент и коэффициент корреляции</a></li>
+  <li><a href="#tss-ess-rss" id="toc-tss-ess-rss" class="nav-link" data-scroll-target="#tss-ess-rss"><span class="toc-section-number">29.1.4</span>  TSS = ESS + RSS?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="andan-simplelinear" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></span></h1>
+<h1 class="title"><span id="andan-simplelinear" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></span></h1>
 </div>
 
 
@@ -658,8 +710,189 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<!--- {{< include _symbols.qmd >}} --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<section id="вычисление-коэффициентов-линейной-регрессии" class="level2" data-number="29.1">
+<h2 data-number="29.1" class="anchored" data-anchor-id="вычисление-коэффициентов-линейной-регрессии"><span class="header-section-number">29.1</span> Вычисление коэффициентов линейной регрессии</h2>
+<div class="lab-chapter lab-senior">
+
+</div>
+<section id="матричное-вычисление-коэффициентов" class="level3" data-number="29.1.1">
+<h3 data-number="29.1.1" class="anchored" data-anchor-id="матричное-вычисление-коэффициентов"><span class="header-section-number">29.1.1</span> Матричное вычисление коэффициентов</h3>
+</section>
+<section id="аналитическое-вычисление-коэффициентов" class="level3" data-number="29.1.2">
+<h3 data-number="29.1.2" class="anchored" data-anchor-id="аналитическое-вычисление-коэффициентов"><span class="header-section-number">29.1.2</span> Аналитическое вычисление коэффициентов</h3>
+<p><span class="math display">\[
+f(b_0, b_1) = \sum (y_i - \hat y_i)^2 = \sum (y_i - b_0 - b_1x_i)^2 \rightarrow \min_{b_0, b_1}
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) =
+\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) =
+\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)
+\]</span></p>
+<p><span class="math display">\[
+\frac{f(b_0, b_1)}{\partial b_0} = \sum (-2y_i + 2b_0 + 2x_ib_1) =
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big)
+\]</span></p>
+<p><span class="math display">\[
+\frac{f(b_0, b_1)}{\partial b_1} = \sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i
+\]</span></p>
+<p><span class="math display">\[
+\cases {
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+\sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum y_i - \sum b_0 + \sum b_1 x_i = 0 \\
+\sum y_i x_i - \sum b_0 x_i + \sum b_1 x^2_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum b_0 + \sum b_1 x_i = \sum y_i \\
+\sum b_0 x_i + \sum b_1 x_i^2 = \sum y_i x_i
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+b1 \sum x_i + n b_0 = \sum y_i \\
+b1 \sum x^2_i + b_0 \sum x_i = \sum y_i x_i
+}
+\]</span></p>
+<p><span class="math display">\[
+b_0 = \frac{\sum y_i}{n} - b_1 \frac{\sum x_i}{n} = \bar y - b_1 \bar x
+\]</span></p>
+<p><span class="math display">\[
+b1 \sum x_i^2 + (\bar y - b_1 \bar x) \sum x_i = \sum x_i y_i
+\]</span></p>
+<p><span class="math display">\[
+\underline{b_1 \sum x_i^2} + \bar y \sum x_i - \underline{b_1 \bar x \sum x_i} = \sum x_i y_i
+\]</span></p>
+<p><span class="math display">\[
+b_1 \Big( \sum x_i^2 - \bar x \sum x_i \Big) =
+\sum x_i y_i - \bar y \sum x_i
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum x_i y_i - \bar y \sum x_i}{\sum x_i^2 - \bar x \sum x_i} =
+\frac{(\sum x_i y_i - \bar y \sum x_i) \times n}{(\sum x_i^2 - \bar x \sum x_i) \times n}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\overline{xy} - \bar x \bar y}{\overline{x^2} - \bar x^2} =
+\frac{\overline{xy} - \bar x \bar y}{\sigma_X^2}
+\]</span></p>
+</section>
+<section id="угловой-коэффициент-и-коэффициент-корреляции" class="level3" data-number="29.1.3">
+<h3 data-number="29.1.3" class="anchored" data-anchor-id="угловой-коэффициент-и-коэффициент-корреляции"><span class="header-section-number">29.1.3</span> Угловой коэффициент и коэффициент корреляции</h3>
+<div class="lab-chapter lab-senior">
+
+</div>
+<p><span class="math display">\[
+b_1 = r_{X,Y} \times \frac{s_Y}{s_X}
+\]</span></p>
+<p><span class="math display">\[
+r_{X,Y} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+\times
+\frac{s_Y}{s_X}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+\times
+\frac{\sqrt{\sum (y_i - \bar y)^2 / (n-1)}}{\sqrt{\sum (x_i - \bar x)^2 / (n-1)}}
+\]</span></p>
+<p>Сократим дробь:</p>
+<p><span class="math display">\[
+\frac{\sqrt{(y_i - \bar y)^2 / (n-1)}}{\sqrt{(x_i - \bar x)^2 / (n-1)}} =
+\frac{\sqrt{(y_i - \bar y)^2} \times \sqrt{(n-1)}}{\sqrt{(x_i - \bar x)^2} \times \sqrt{(n-1)}} = \frac{\sqrt{(y_i - \bar y)^2}}{\sqrt{(x_i - \bar x)^2}}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2} \times \color{green}{\sqrt{\sum(y_i - \bar y)^2}}}
+\times
+\frac{\color{green}{\sqrt{\sum(y_i - \bar y)^2}}}{\sqrt{\sum(x_i - \bar x)^2}}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sum(x_i - \bar x)^2}
+\]</span></p>
+<p>Сумма отклонений от среднего <a href="">равна нулю</a>:</p>
+<p><span class="math display">\[
+\sum(x_i - \bar x) = \sum (y_i - \bar y) = 0
+\]</span></p>
+<p>Разложим числитель:</p>
+<p><span class="math display">\[
+\sum (x_i - \bar x) (y_i - \bar y) =
+\sum x_i (y_i - \bar y) - \sum \bar x (y_i - \bar y) =
+\sum x_i (y_i - \bar y)
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum x_i (y_i - \bar y)}{\sum (x_i - \bar x)^2} =
+\frac{\Big( \sum x_i (y_i - \bar y) \Big) \times n}{\Big( \sum (x_i - \bar x)^2 \Big) \times n} = \frac{\overline{xy} - \bar x \bar y}{\sigma_X^2}
+\]</span></p>
+</section>
+<section id="tss-ess-rss" class="level3" data-number="29.1.4">
+<h3 data-number="29.1.4" class="anchored" data-anchor-id="tss-ess-rss"><span class="header-section-number">29.1.4</span> TSS = ESS + RSS?</h3>
+<div class="lab-chapter lab-guru">
+
+</div>
+<p><span class="math display">\[
+\mathrm{TSS} =
+\sum (y_i - \bar y)^2 =
+\sum (y_i - \hat y + \hat y - \bar y)^2 =
+\sum \big( (y_i - \hat y_i) + (\hat y_i - \bar y) \big)^2 =
+\]</span></p>
+<p><span class="math display">\[
+= \sum (y_i - \hat y_i) = \sum (\hat y_i - \bar y) + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) =
+\]</span></p>
+<p><span class="math display">\[
+= \mathrm{RSS} + \mathrm{ESS} + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y)
+\]</span></p>
+<p>Окей, осталось доказать, что <span class="math inline">\(2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = 0\)</span>, и все будет найс.</p>
+<p>Так как <span class="math inline">\(b_0 = \bar y - b_1 x\)</span>.</p>
+<p><span class="math display">\[
+\sum (y_i - \hat y_i)(\hat y_i - \bar y) = \sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \bar y) =
+\]</span></p>
+<p><span class="math display">\[
+= \sum (y_i - \bar y + b_1 \bar x - b_1x_i) (\bar y - b_1 \bar x + b_1 x_i - \bar y) =
+\]</span></p>
+<p><span class="math display">\[
+= \sum \big( (y_i - \bar y) - b_1(x_i - \bar x) \big) \times b_1 (x_i - \bar x) =
+\sum \big( b_1 (x_i - \bar x) (y_i - \bar y) - b_1^2 (x_i - \bar x)^2 \big) =
+\]</span></p>
+<p><span class="math display">\[
+= b_1 \sum (x_i - \bar x) (y_i - \bar y) - b_1^2 \sum (x_i - \bar x)
+\]</span></p>
+<p>Так как <span class="math inline">\(b_1 = \frac{\sum(x_i - \bar x)(y_i - \bar y)}{\sum (x_i - \bar x)^2}\)</span>, получается, что:</p>
+<p><span class="math display">\[
+\frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2 \times \sum (x_i - \bar x)^2}{\Big( \sum (x_i - \bar x)^2\Big)^2} =
+\]</span></p>
+<p><span class="math display">\[
+= \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} = 0
+\]</span></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -913,12 +1146,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./andan-nonparam.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./andan-multiplelinear.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

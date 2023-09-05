@@ -1,25 +1,76 @@
 # Оценивание статистических параметров {#stats-estim}
+{{< include _symbols.qmd >}}
 
 ## Точечные оценки
+::: {.lab-chapter .lab-junior}
+:::
 
 ### Метод моментов
+::: {.lab-chapter .lab-junior}
+:::
 
 ### Метод максимального правдоподобия
+::: {.lab-chapter .lab-middle}
+:::
 
 ### Bootstrap
+::: {.lab-chapter .lab-middle}
+:::
 
 ### Свойства точечных оценок
+::: {.lab-chapter .lab-middle}
+:::
 
 #### Несмещенность
+::: {.lab-chapter .lab-middle}
+:::
 
 #### Состоятельность
+::: {.lab-chapter .lab-middle}
+:::
 
 #### Эффективность
+::: {.lab-chapter .lab-middle}
+:::
 
 
 ## Интервальные оценки
+::: {.lab-chapter .lab-junior}
+:::
 
 ### Стандартная ошибка
+::: {.lab-chapter .lab-junior}
+:::
+
+
+#### Почему $\se(X) = \frac{sd(X)}{\sqrt{n}}$
+::: {.lab-chapter .lab-senior}
+:::
+
+$$
+\var (X + Y) = \var (X) + \var(Y) + 2 \cov (X, Y)
+$$
+
+$$
+\var (aX) = a^2 \var (X)
+$$
+
+Так как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то
+
+$$
+\cov (X_i, X_j) = 0, \sigma_{X_i} = \sigma_{X_j} = \sigma
+$$
+
+$$
+\var \Big( \frac{1}{n} \sum X_i \Big) = \frac{1}{n^2} \sum \var(X_i) = \frac{1}{n^2} \sum \sigma^2 = \frac{n}{n^2} \sigma^2 = \frac{\sigma^2}{n}
+$$
+
+$$
+\se_X = \sqrt{ \var \Big( \frac{1}{n} \sum X_i \Big)} = \sqrt{\frac{\sigma^2}{n}} = \frac{\sigma}{\sqrt{n}}
+$$
+
 
 ### Доверительный интервал
+::: {.lab-chapter .lab-junior}
+:::
 

@@ -1,5 +1,8 @@
 <!--- {{< include _symbols.qmd >}} --->
 
+\usepackage{xcolor}
+\usepackage{soul}
+
 <!--- Number sets--->
 \newcommand{\setN}{\mathbb{N}}
 \newcommand{\setNo}{\mathbb{N}_{0}}
@@ -11,8 +14,16 @@
 <!--- Linear Algebra --->
 \newcommand{\vm}[1]{\mathbf{#1}} <!--- vectors and matrices --->
 
-<!--- Probability --->
+<!--- Probability, Random Vars --->
 \newcommand{\prob}{\mathbb{P}}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\cor}{\text{cor}}
+\newcommand{\se}{\text{se}}
+
+\newsavebox{\MBox}
+\newcommand{\Cline}[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
 
 <!--- Distributions --->
 \newcommand{\norm}{\mathcal{N}}

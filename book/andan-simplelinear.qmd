@@ -1,1 +1,229 @@
 # Общие линейные модели. Простая линейная регрессия {#andan-simplelinear}
+{{< include _symbols.qmd >}}
+
+
+## Вычисление коэффициентов линейной регрессии
+::: {.lab-chapter .lab-senior}
+:::
+
+### Матричное вычисление коэффициентов
+
+
+### Аналитическое вычисление коэффициентов
+
+$$
+f(b_0, b_1) = \sum (y_i - \hat y_i)^2 = \sum (y_i - b_0 - b_1x_i)^2 \rightarrow \min_{b_0, b_1}
+$$
+
+$$
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)
+$$
+
+$$
+f(b_0, b_1) = 
+\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)
+$$
+
+$$
+f(b_0, b_1) = 
+\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)
+$$
+
+$$
+\frac{f(b_0, b_1)}{\partial b_0} = \sum (-2y_i + 2b_0 + 2x_ib_1) = 
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big)
+$$
+
+$$
+\frac{f(b_0, b_1)}{\partial b_1} = \sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i
+$$
+
+$$
+\cases {
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+$$
+
+$$
+\cases{
+\sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+\sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+$$
+
+$$
+\cases{
+\sum y_i - \sum b_0 + \sum b_1 x_i = 0 \\
+\sum y_i x_i - \sum b_0 x_i + \sum b_1 x^2_i = 0
+}
+$$
+
+$$
+\cases{
+\sum b_0 + \sum b_1 x_i = \sum y_i \\
+\sum b_0 x_i + \sum b_1 x_i^2 = \sum y_i x_i
+}
+$$
+
+$$
+\cases{
+b1 \sum x_i + n b_0 = \sum y_i \\
+b1 \sum x^2_i + b_0 \sum x_i = \sum y_i x_i
+}
+$$
+
+$$
+b_0 = \frac{\sum y_i}{n} - b_1 \frac{\sum x_i}{n} = \bar y - b_1 \bar x
+$$
+
+$$
+b1 \sum x_i^2 + (\bar y - b_1 \bar x) \sum x_i = \sum x_i y_i
+$$
+
+$$
+\underline{b_1 \sum x_i^2} + \bar y \sum x_i - \underline{b_1 \bar x \sum x_i} = \sum x_i y_i
+$$
+
+$$
+b_1 \Big( \sum x_i^2 - \bar x \sum x_i \Big) = 
+\sum x_i y_i - \bar y \sum x_i
+$$
+
+$$
+b_1 = \frac{\sum x_i y_i - \bar y \sum x_i}{\sum x_i^2 - \bar x \sum x_i} = 
+\frac{(\sum x_i y_i - \bar y \sum x_i) \times n}{(\sum x_i^2 - \bar x \sum x_i) \times n}
+$$
+
+$$
+b_1 = \frac{\overline{xy} - \bar x \bar y}{\overline{x^2} - \bar x^2} = 
+\frac{\overline{xy} - \bar x \bar y}{\sigma_X^2}
+$$
+
+### Угловой коэффициент и коэффициент корреляции
+:::{.lab-chapter .lab-senior}
+:::
+
+$$
+b_1 = r_{X,Y} \times \frac{s_Y}{s_X}
+$$
+
+$$
+r_{X,Y} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+$$
+
+$$
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+\times
+\frac{s_Y}{s_X}
+$$
+
+$$
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2 \sum(y_i - \bar y)^2}}
+\times
+\frac{\sqrt{\sum (y_i - \bar y)^2 / (n-1)}}{\sqrt{\sum (x_i - \bar x)^2 / (n-1)}}
+$$
+
+Сократим дробь:
+
+$$
+\frac{\sqrt{(y_i - \bar y)^2 / (n-1)}}{\sqrt{(x_i - \bar x)^2 / (n-1)}} = 
+\frac{\sqrt{(y_i - \bar y)^2} \times \sqrt{(n-1)}}{\sqrt{(x_i - \bar x)^2} \times \sqrt{(n-1)}} = \frac{\sqrt{(y_i - \bar y)^2}}{\sqrt{(x_i - \bar x)^2}}
+$$
+
+
+
+$$
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt{\sum(x_i - \bar x)^2} \times \color{green}{\sqrt{\sum(y_i - \bar y)^2}}}
+\times
+\frac{\color{green}{\sqrt{\sum(y_i - \bar y)^2}}}{\sqrt{\sum(x_i - \bar x)^2}}
+$$
+
+$$
+b_1 = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sum(x_i - \bar x)^2}
+$$
+
+Сумма отклонений от среднего [равна нулю]():
+
+$$
+\sum(x_i - \bar x) = \sum (y_i - \bar y) = 0
+$$
+
+Разложим числитель:
+
+$$
+\sum (x_i - \bar x) (y_i - \bar y) = 
+\sum x_i (y_i - \bar y) - \sum \bar x (y_i - \bar y) = 
+\sum x_i (y_i - \bar y)
+$$
+
+$$
+b_1 = \frac{\sum x_i (y_i - \bar y)}{\sum (x_i - \bar x)^2} = 
+\frac{\Big( \sum x_i (y_i - \bar y) \Big) \times n}{\Big( \sum (x_i - \bar x)^2 \Big) \times n} = \frac{\overline{xy} - \bar x \bar y}{\sigma_X^2}
+$$
+
+
+### TSS = ESS + RSS?
+:::{.lab-chapter .lab-guru}
+:::
+
+$$
+\mathrm{TSS} = 
+\sum (y_i - \bar y)^2 = 
+\sum (y_i - \hat y + \hat y - \bar y)^2 = 
+\sum \big( (y_i - \hat y_i) + (\hat y_i - \bar y) \big)^2 = 
+$$
+
+$$
+= \sum (y_i - \hat y_i) = \sum (\hat y_i - \bar y) + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = 
+$$
+
+$$
+= \mathrm{RSS} + \mathrm{ESS} + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y)
+$$
+
+Окей, осталось доказать, что $2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = 0$, и все будет найс.
+
+Так как $b_0 = \bar y - b_1 x$.
+
+$$
+\sum (y_i - \hat y_i)(\hat y_i - \bar y) = \sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \bar y) =
+$$
+
+$$
+= \sum (y_i - \bar y + b_1 \bar x - b_1x_i) (\bar y - b_1 \bar x + b_1 x_i - \bar y) =
+$$
+
+$$
+= \sum \big( (y_i - \bar y) - b_1(x_i - \bar x) \big) \times b_1 (x_i - \bar x) = 
+\sum \big( b_1 (x_i - \bar x) (y_i - \bar y) - b_1^2 (x_i - \bar x)^2 \big) = 
+$$
+
+$$
+= b_1 \sum (x_i - \bar x) (y_i - \bar y) - b_1^2 \sum (x_i - \bar x)
+$$
+
+Так как $b_1 = \frac{\sum(x_i - \bar x)(y_i - \bar y)}{\sum (x_i - \bar x)^2}$, получается, что:
+
+$$
+\frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2 \times \sum (x_i - \bar x)^2}{\Big( \sum (x_i - \bar x)^2\Big)^2} = 
+$$
+
+$$
+= \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} = 0
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
