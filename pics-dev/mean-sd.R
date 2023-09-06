@@ -7,7 +7,7 @@ set.seed(123)
 rnorm(10^6, mean = 300, sd = 100) -> pop
 
 var_pop <- function (x) { sum((x - mean(x))^2) / length(x) }
-mad <- function (x) { sum(abs(x - mean(x))) / length(x)} # mead absolute deviation
+mad <- function (x) { sum(abs(x - mean(x))) / length(x)} # mean absolute deviation
 
 sim <- list()
 
