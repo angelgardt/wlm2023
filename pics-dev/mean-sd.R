@@ -6,6 +6,8 @@ theme_set(theme_bw())
 set.seed(123)
 rnorm(10^6, mean = 300, sd = 100) -> pop
 
+hist(pop)
+
 var_pop <- function (x) { sum((x - mean(x))^2) / length(x) }
 mad <- function (x) { sum(abs(x - mean(x))) / length(x)} # mean absolute deviation
 
@@ -23,8 +25,8 @@ ggplot(NULL) +
   geom_vline(xintercept = mean(means)) +
   geom_vline(xintercept = 300, color = "darkred")
 
-vars <- map(sim, var) |> unlist()
-vars_pop <- map(sim, var_pop) |> unlist()
+vars <- map(sim, var) |> unlist() # n-1
+vars_pop <- map(sim, var_pop) |> unlist() # n
 
 ggplot(NULL) +
   geom_density(aes(x = vars)) +
@@ -59,21 +61,21 @@ sim2_agg <- tibble(n = map(sim2, length) |> unlist(),
 sim2_agg |> 
   ggplot(aes(n, mean)) +
   geom_point(alpha = .3, color = "gray") +
-  geom_smooth() +
-  geom_hline(yintercept = 300, color = "blue")
+  geom_hline(yintercept = 300, color = "red") +
+  geom_smooth()
 
 
 sim2_agg |> 
   ggplot(aes(n, var)) +
   geom_point(alpha = .3, color = "gray") +
-  geom_smooth() +
-  geom_hline(yintercept = 100^2, color = "blue")
+  geom_hline(yintercept = 100^2, color = "red") +
+  geom_smooth()
 
 sim2_agg |> 
   ggplot(aes(n, var_pop)) +
   geom_point(alpha = .3, color = "gray") +
-  geom_smooth() +
-  geom_hline(yintercept = 100^2, color = "blue")
+  geom_hline(yintercept = 100^2, color = "red") +
+  geom_smooth() 
 
 sim3 <- tibble()
 set.seed(987)
