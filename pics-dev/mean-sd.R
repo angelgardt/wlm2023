@@ -2,80 +2,102 @@ setwd("~/wlm2023/pics-dev")
 
 library(tidyverse)
 theme_set(theme_bw())
+library(plotly)
 
 set.seed(123)
 rnorm(10^6, mean = 300, sd = 100) -> pop
 
-hist(pop)
+ggplot(NULL) +
+  geom_histogram(aes(x = pop),
+                 binwidth = 15,
+                 fill = "gray50", 
+                 color = "gray30") +
+  geom_vline(xintercept = 300) +
+  scale_x_continuous(breaks = seq(-200, 800, by = 100))
 
 var_pop <- function (x) { sum((x - mean(x))^2) / length(x) }
 mad <- function (x) { sum(abs(x - mean(x))) / length(x)} # mean absolute deviation
 
-sim <- list()
+set.seed(567)
+size <- 100 # sample size
+n <-  2000 # num of samples
+sim <- matrix(sample(pop, size * n), size)
+
+means <- apply(sim, 2, mean)
+
+ggplot(NULL) +
+  geom_histogram(aes(x = means),
+                 binwidth = 1,
+                 fill = "gray50",
+                 color = "gray30") +
+  #geom_density(aes(x = means)) +
+  geom_vline(xintercept = 300) +
+  geom_vline(xintercept = mean(means),
+             color = "darkred", linetype = "dashed")
+
+
+vars <- apply(sim, 2, var) # n-1
+vars_pop <- apply(sim, 2, var_pop) # n
+
+(ggplot(NULL) +
+  # geom_density(aes(x = vars)) +
+  geom_histogram(aes(x = vars),
+                 binwidth = 150,
+                 fill = "gray50",
+                 color = "gray30") +
+  geom_vline(xintercept = 100^2) + 
+  geom_vline(xintercept = mean(vars), color = "darkred", linetype = "dashed") +
+  geom_vline(xintercept = mean(vars_pop), color = "darkgreen")) |> 
+  ggplotly()
+
+
+ggplot(NULL) +
+  geom_histogram(aes(x = sqrt(vars)),
+                 binwidth = 1,
+                 fill = "gray50",
+                 color = "gray30") +
+  # geom_density(aes(x = sqrt(vars))) +
+  geom_vline(xintercept = 100) +
+  geom_vline(xintercept = mean(sqrt(vars)), color = "darkred", linetype = "dashed") +
+  geom_vline(xintercept = mean(sqrt(vars_pop)), color = "darkgreen")
+
+
 
 set.seed(567)
-for (i in 1:1000) {
-  sim[[i]] <- sample(pop, size = 200)
-}
+n = 100
+sim2 <- 3:200 |> map(function(x) {matrix(sample(pop, x * n), x)})
 
-means <- map(sim, mean) |> unlist()
+str(sim2)
 
-ggplot(NULL) +
-  geom_density(aes(x = means)) +
-  geom_vline(xintercept = mean(means)) +
-  geom_vline(xintercept = 300, color = "darkred")
-
-vars <- map(sim, var) |> unlist() # n-1
-vars_pop <- map(sim, var_pop) |> unlist() # n
-
-ggplot(NULL) +
-  geom_density(aes(x = vars)) +
-  geom_vline(xintercept = mean(vars)) +
-  geom_vline(xintercept = mean(vars_pop), color = "darkgreen") +
-  geom_vline(xintercept = 100^2, color = "darkred")
-
-ggplot(NULL) +
-  geom_density(aes(x = sqrt(vars))) +
-  geom_vline(xintercept = mean(sqrt(vars))) +
-  geom_vline(xintercept = mean(sqrt(vars_pop)), color = "darkgreen") +
-  geom_vline(xintercept = 100, color = "darkred")
-
-sim2 <- list()
-
-set.seed(567)
-for (i in 2:200) {
-  for (j in 1:50) {
-    name <- paste0(i, "-", j)
-    sim2[[name]] <- sample(pop, i)
-  }
-}
-
-sim2_agg <- tibble(n = map(sim2, length) |> unlist(),
-                   mean = map(sim2, mean) |> unlist(),
-                   var = map(sim2, var) |> unlist(),
-                   var_pop = map(sim2, var_pop) |> unlist(),
-                   sd = map(sim2, sd) |> unlist(),
-                   sd_pop = map(sim2, function(x) sqrt(var_pop(x))) |> unlist(),
-                   mad = map(sim2, mad) |> unlist())
+sim2_agg <- tibble(n = map(sim2, apply, MARGIN = 2, FUN = length) |> unlist(),
+                   mean = map(sim2, apply, MARGIN = 2, FUN = mean) |> unlist(),
+                   var = map(sim2, apply, MARGIN = 2, FUN = var) |> unlist(),
+                   var_pop = map(sim2, apply, MARGIN = 2, FUN = var_pop) |> unlist(),
+                   sd = map(sim2, apply, MARGIN = 2, FUN = sd) |> unlist(),
+                   sd_pop = map(sim2, apply, MARGIN = 2, FUN = function(x) sqrt(var_pop(x))) |> unlist(),
+                   mad = map(sim2, apply, MARGIN = 2, FUN = mad) |> unlist())
 
 sim2_agg |> 
   ggplot(aes(n, mean)) +
   geom_point(alpha = .3, color = "gray") +
   geom_hline(yintercept = 300, color = "red") +
-  geom_smooth()
+  # geom_smooth(color = "black") +
+  labs(x = "Sample size", y = "Means")
 
 
 sim2_agg |> 
   ggplot(aes(n, var)) +
   geom_point(alpha = .3, color = "gray") +
   geom_hline(yintercept = 100^2, color = "red") +
-  geom_smooth()
+  # geom_smooth(color = "black") +
+  labs(x = "Sample size", y = "Variances")
 
 sim2_agg |> 
   ggplot(aes(n, var_pop)) +
   geom_point(alpha = .3, color = "gray") +
   geom_hline(yintercept = 100^2, color = "red") +
-  geom_smooth() 
+  geom_smooth(color = "black") +
+  labs(x = "Sample size", y = "Variances")
 
 sim3 <- tibble()
 set.seed(987)
