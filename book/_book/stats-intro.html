@@ -64,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -128,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -692,7 +693,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -711,8 +712,44 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p><strong>Статистика</strong> — это междисциплинарная область знаний, а также практической деятельности, изучающая массовые явления, а также прицнипи и методы работы с данными, характеризующими эти явления.</p>
+<p>Звучит красиво. Осталось понять, что это значит.</p>
+<p>Массовые явления затрагивают огромные массы людей. Огромность масс, конечно, различна. Скажем, базовые перцептивные закономерности, связанные с тем, как устроена зрительная система, охватывают <em>всех людей</em>. Уровень удовлетворенности жизнью россиян охватывает только <em>население России</em>. Городские блага москвичей — только для <em>жителей Москвы</em>. Учебная мотивация студентов департамента психологии НИУ ВШЭ — это только про <em>людей с психологических бакалариата и магистратур НИУ ВШЭ</em>.</p>
+<p><strong>Генеральная совокупность</strong> — множество всех [существующих] исследуемых объектов, а также сведения о них.</p>
+<p><strong>Объем совокупности</strong> (<span class="math inline">\(N\)</span>) — число единиц, образующих совокупность.</p>
+<p>Короче, надо исследовать много людей, а времени и денег нет. Приходится из генеральной совокупности извлекать <strong>выборку</strong> — некоторую часть нашей генеральной совокупности (объемом <span class="math inline">\(n\)</span>). При этом <span class="math inline">\(n \ll N\)</span> (много меньше).</p>
+<p>Нас, конечно же, интересуют какие-то <strong>признаки</strong>, которыми обладают объект нашей генеральной совокупности. Эти признаки могут быть выражены количественно в определенных <strong>показателях</strong>.</p>
+<p>Например,</p>
+<p>ТАБЛИЦА</p>
+<p>Признаки могут быть очень разными, как и показатели, которыми мы их пытаемся измерить. Это мы рассмотрим в <a href="#measurements-social-sci">теории измерений</a>.</p>
+<p>Что нам важно сейчас: генеральная совокупность характеризуется <em>параметром</em>.</p>
+<p><strong>Параметр</strong> — относительно постоянная [от одной совокупности к другой] величина, характеризующая генеральную совокупность по некоторому показателю.</p>
+<p>Ну, то есть в принципе существует <em>средний уровень нейротизма по BFI студента-психолога</em> или <em>индекс индивидуализма/коллетивизма для конкретной культуры</em>. Проблема в том, что <strong>величина параметра, который мы изучаем, неизвестна</strong>. И никогда не будет известна.</p>
+<p>Но почему?</p>
+<ul>
+<li>Мы не можем изучать всю генеральную совокупность — слишком много объектов</li>
+<li>Наши измерения всегда содержат ошибку — мы даже длину линейкой точно не можем измерить, что уж о психологических измерениях говорить</li>
+</ul>
+<p>Поэтому величину параметра мы можем только предсказать с определённой статистической точностью. Измеряя что-либо на выборке, мы получаем <strong>выборочную характеристику (оценку)</strong> — эмпирический (измеримый) аналог параметра.</p>
 <section id="stats-goals" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="stats-goals"><span class="header-section-number">19.1</span> Задачи статистики</h2>
+<p>Мы в какой-то малоприятной ситуации… Мы пытаемся измерить то, что в определенном смысле невозможно измерить, при этом достаточно точно, чтобы потом это можно было сравнивать или строить какие-то модели. Задача выглядит заведомо провальной…</p>
+<p>Однако именно в этот момент на помощь нам приходит статистика. Не в гордом одиночестве, конечно. Она проводит с собой теорию измерений, психометрику, теорию обнаружения сигнала и др. Всё это работает в нашей психологической науке в комлексе. Мы же в данном курсе сосредотачиваемся на статистической части этого салата.</p>
+<p>Статистика даёт на теоретический и математический инструментарий, чтобы мы могли делать какие-либо выводы по нашим собранным данным. К сожалению, как бы нам не хотелось, мы не можем делать выводы по сырым данным, потому что измерения по выборке не отражают вот прям ровно то, что есть в генеральной совокупности. Нам их надо определенным образом обсчитать, чтобы наши выводы были корректными. Этим и занимается статистика.</p>
+<p>Возможно, это звучит достаточно абстрактно, но я хочу, чтобы на данном моменте вы поймали некоторое интуитивное понимание того, зачем нужна статистика. Далее это обрастёт содержанием и уложится, я надеюсь, в достаточно стройную систему.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body" title="Важно">
+<p>Статистика помогает нам делать выводы о нашей генеральной совокупности по выборке.</p>
+</div>
+</div>
 </section>
 <section id="stats-research" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="stats-research"><span class="header-section-number">19.2</span> Исследование с точки зрения статистики</h2>
@@ -1006,7 +1043,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./part-stats.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Статистика для анализа данных</span>
