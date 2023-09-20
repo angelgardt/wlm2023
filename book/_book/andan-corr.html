@@ -815,7 +815,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#andan-cor-fisher-transform" id="toc-andan-cor-fisher-transform" class="nav-link active" data-scroll-target="#andan-cor-fisher-transform"><span class="header-section-number">27.1</span> Преобразование Фишера</a></li>
+  <li><a href="#andan-corr-cov" id="toc-andan-corr-cov" class="nav-link active" data-scroll-target="#andan-corr-cov"><span class="header-section-number">27.1</span> Ковариация</a></li>
+  <li><a href="#andan-corr-cor" id="toc-andan-corr-cor" class="nav-link" data-scroll-target="#andan-corr-cor"><span class="header-section-number">27.2</span> Корреляция</a>
+  <ul class="collapse">
+  <li><a href="#andan-corr-test" id="toc-andan-corr-test" class="nav-link" data-scroll-target="#andan-corr-test"><span class="header-section-number">27.2.1</span> Тестирование статистической значимости коэффициента корреляции</a></li>
+  <li><a href="#доверительный-интервал-для-коэффициента-корреляции" id="toc-доверительный-интервал-для-коэффициента-корреляции" class="nav-link" data-scroll-target="#доверительный-интервал-для-коэффициента-корреляции"><span class="header-section-number">27.2.2</span> Доверительный интервал для коэффициента корреляции</a></li>
+  </ul></li>
+  <li><a href="#andan-corr-scales" id="toc-andan-corr-scales" class="nav-link" data-scroll-target="#andan-corr-scales"><span class="header-section-number">27.3</span> Коэффициенты корреляции для разных шкал</a></li>
+  <li><a href="#частный-и-множественный-коэффициент-корреляции" id="toc-частный-и-множественный-коэффициент-корреляции" class="nav-link" data-scroll-target="#частный-и-множественный-коэффициент-корреляции"><span class="header-section-number">27.4</span> Частный и множественный коэффициент корреляции</a></li>
+  <li><a href="#другие-корреляции" id="toc-другие-корреляции" class="nav-link" data-scroll-target="#другие-корреляции"><span class="header-section-number">27.5</span> Другие корреляции</a>
+  <ul class="collapse">
+  <li><a href="#phi-коэффициент" id="toc-phi-коэффициент" class="nav-link" data-scroll-target="#phi-коэффициент"><span class="header-section-number">27.5.1</span> <span class="math inline">\(\phi\)</span>-коэффициент</a></li>
+  <li><a href="#бисериальный-коэффициент-корреляции" id="toc-бисериальный-коэффициент-корреляции" class="nav-link" data-scroll-target="#бисериальный-коэффициент-корреляции"><span class="header-section-number">27.5.2</span> Бисериальный коэффициент корреляции</a></li>
+  <li><a href="#рангово-бисериальный-коэффициент-корреляции" id="toc-рангово-бисериальный-коэффициент-корреляции" class="nav-link" data-scroll-target="#рангово-бисериальный-коэффициент-корреляции"><span class="header-section-number">27.5.3</span> Рангово-бисериальный коэффициент корреляции</a></li>
+  </ul></li>
+  <li><a href="#andan-cor-fisher-transform" id="toc-andan-cor-fisher-transform" class="nav-link" data-scroll-target="#andan-cor-fisher-transform"><span class="header-section-number">27.6</span> Преобразование Фишера</a></li>
   </ul>
 </nav>
     </div>
@@ -847,8 +861,297 @@ ul.task-list li input[type="checkbox"] {
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
-<section id="andan-cor-fisher-transform" class="level2" data-number="27.1">
-<h2 data-number="27.1" class="anchored" data-anchor-id="andan-cor-fisher-transform"><span class="header-section-number">27.1</span> Преобразование Фишера</h2>
+<p>До этого момента мы рассматривали только отдельные переменные и их характерики, однако в практике мы редко работаем только с одной переменной. Как правило, у нас есть многомерное пространство признаков, и нас интересуют взаимосвязи между ними.</p>
+<section id="andan-corr-cov" class="level2" data-number="27.1">
+<h2 data-number="27.1" class="anchored" data-anchor-id="andan-corr-cov"><span class="header-section-number">27.1</span> Ковариация</h2>
+<p>Мы хотим описать имеющиеся взаимосвязи как можно проще и опираясь на то, что у нас уже есть. Мы говорили, что дисперсия, или вариация, заключает в себе информацию об изменчивости признака. Если мы хотим исследовать взаимосвязь между признаками, то логично будет посмотреть, как изменяется один из признаков при изменении другого — иначе говоря, рассчитать <em>совместную изменчивость признаков</em>, или <strong>ко-вариацию (covariance)</strong>.</p>
+<p>Как мы её будем считать? Подумаем графически. Расположим две переменные на осях и сопоставим каждому имеющемуся наблюдению точку на плоскости.</p>
+<p>КАРТИНКА</p>
+<p>Отметим средние значения по обеим переменным.</p>
+<p>КАРТИНКА</p>
+<p>Заметим, что если наши наблюдения по переменной <span class="math inline">\(x_1\)</span> отклоняются в большую сторону, то они отклоняются в большую сторону и по переменной <span class="math inline">\(x_2\)</span>. Аналогично, если они будут отклоняться в меньшую сторону по <span class="math inline">\(x_1\)</span>, то в меньшую же сторону они будут отклоняться и по <span class="math inline">\(x_2\)</span>.</p>
+<p>КАРТИНКА</p>
+<p>Получается, мы можем на основании согласованности отклонений уже заключить о направлении связи. <em>Произведение отклонений по обеим величинам будет положительно, если отклонения сонаправленны</em>. Запишем это математически.</p>
+<p><span class="math display">\[
+(\bar x_1 - x_{i1}) (\bar x_2 - x_{i2}) &gt; 0 \Leftarrow \big( (\bar x_1 - x_{i1}) &gt; 0 \wedge (\bar x_2 - x_{i2}) &gt; 0 \big) \vee \big( (\bar x_1 - x_{i1}) &lt; 0 \wedge (\bar x_2 - x_{i2}) &lt; 0 \big)
+\]</span></p>
+<p>Соответственно, если отклонения будут направлены в разные стороны, из произведение будет отрицательным. Ну, осталось только понять, как совместные отклонения организованы в среднем — это и будет ковариацией двух величин:</p>
+<p><span class="math display">\[
+\mathrm{cov}(X_1, X_2) = \frac{1}{n-1} \sum_{i=1}^n (\bar x_1 - x_{i1}) (\bar x_2 - x_{i2})
+\]</span></p>
+<div class="task question">
+<p>Что такое ковариация величины самой с собой (<span class="math inline">\(\mathrm{cov}(X_1, X_1)\)</span>)?</p>
+<p>Попробуйте получить ответ через вывод формулы.</p>
+</div>
+<p>Важно отметить, что ковариация улавливается только <em>линейную составляющую</em> взаимосвязи между признаками, поэтому если <span class="math inline">\(\mathrm{cov}(X_1,X_2) = 0\)</span>, то мы можем сказать, что между переменными нет <em>линейной</em> взаимосвязи, однако это не значит, что между этими переменными нет никакой другой зависимости.</p>
+<p>КАРТИНКА</p>
+<p>У ковариации есть два важных недостатка:</p>
+<ul>
+<li>это размерная величина, поэтому её значение зависит от единиц измерения признаков,</li>
+<li>она зависит от дисперсий признаков, поэтому по её значению можно определить только направление связи (прямая или обратная), однако ничего нельзая сказать о силе связи.</li>
+</ul>
+<p>Поэтому нам нужно как-то модицифировать эту статистику, чтобы мы могли больше вытащить из её значения.</p>
+</section>
+<section id="andan-corr-cor" class="level2" data-number="27.2">
+<h2 data-number="27.2" class="anchored" data-anchor-id="andan-corr-cor"><span class="header-section-number">27.2</span> Корреляция</h2>
+<p>Раз ковариация зависит от дисперсии, то можно сделать некоторые математические преобразования, чтобы привести эмпирические распределения к какому-то одному виду — сделать так, чтобы они имели одинакое математическое ожидание (среднее) и одинаковую дисперсию. С этой задачей прекрасно справляется <a href="#standartization">стандартизация</a>. Напоминаю формулу:</p>
+<p><span class="math display">\[
+x_i^* = \frac{x_i - \bar x}{s}
+\]</span></p>
+<p>После такого преобразования математическое ожидание нашего распределения будет равно нуля, а стандартное отклонение — единице. Это избавит нас от влияния дисперсии на значение ковариации. Ковариация двух стандартно нормально распределенных величин называется <strong>корреляцией (correlation)</strong>.</p>
+<p><span class="math display">\[
+\mathrm{cov}(X_1^*, X_2^*) = \frac{1}{n-1} \sum_{i=1}^n x_{i1}^* x_{i2}^* = \mathrm{corr}(X_1, X_2),
+\]</span> где <span class="math inline">\(X_1^*\)</span> и <span class="math inline">\(X_2^*\)</span> — стандартизированные величины <span class="math inline">\(X_1\)</span> и <span class="math inline">\(X_2\)</span> соответственно.</p>
+<p>Корреляцию можно выразить через ковариацию:</p>
+<p><span class="math display">\[
+\mathrm{corr}(X_1, X_2) = \frac{1}{n-1} \sum_{i=1}^n \Big( \frac{\bar x_1 - x_{i1}}{s_1} \Big) \Big( \frac{\bar x_2 - x_{i2}}{s_2} \Big) =
+\frac{1}{s_1 s_2} \Big( \frac{1}{n-1} \sum_{i=1}^n (\bar x_1 - x_{i1})(\bar x_2 - x_{i2}) \Big) = \frac{\mathrm{cov}(X_1, X_2)}{s_1 s_2}
+\]</span></p>
+<p>Если внимательно всмотреться в формуле, то можно обнаружить, что корреляция это не что иное, как стандартизированное значение ковариации.</p>
+<p>Коэффициент корреляции имеет четкие пределы изменения: <span class="math inline">\([-1; \,1]\)</span>. Крайнее левое значение говорит о том, что присутствует полная обратная линейная взаимосвязь, крайнее правое — что присутствует полная прямая линейная взаимосвязь. Как и ковариация, корреляция ловит <em>только линейную составляющую</em> связи, поэтому нулевое значение корреляци показывает, что между переменными отсутствует <em>линейная взаимосвязь</em>. Это всё еще не значит, что связи нет вовсе.</p>
+<section id="andan-corr-test" class="level3" data-number="27.2.1">
+<h3 data-number="27.2.1" class="anchored" data-anchor-id="andan-corr-test"><span class="header-section-number">27.2.1</span> Тестирование статистической значимости коэффициента корреляции</h3>
+<p>Оценку коэффициента корреляции мы получаем методом моментов, заменяя истинный момент <span class="math inline">\(\rho_{ij}\)</span> выборочным <span class="math inline">\(r_{ij}\)</span>:</p>
+<p><span class="math display">\[
+\hat \rho_{ij} = \overline{\big( (X_{ki} - \bar X_i) (X_{kj} - \bar X_j) \big)} = r_{ij}
+\]</span></p>
+<p>Если в генеральной совокупности связь между признаками отсутствует, то есть <span class="math inline">\(\rho_{ij} = 0\)</span>, будет ли равен нулю <span class="math inline">\(r_{ij}\)</span>? Можно с уверенностью сказать, что не будет, так как выборочный коэффициент корреляции — случайная величина. А мы помним, что вероятность принятия случайной величиной своего конкретного значения равна нулю.</p>
+<p>Тогда необходимо протестировать статистическую гипотезу:</p>
+<p><span class="math display">\[
+H_0: \rho_{ij} = 0 \; \text{(линейной связи нет)} \\
+H_1: \rho_{ij} \neq 0 \text{(наиболее частый вариант альтернативы)}
+\]</span></p>
+<p>Для проверки нулевой гипотезы используется следующая статистика:</p>
+<p><span class="math display">\[
+t = \frac{r_{ij}}{\sqrt{\frac{1 - r^2_{ij}}{n-2}}} \overset{H_0}{\thicksim} t(\nu = n-2)
+\]</span></p>
+<p>Вывод о статистической значимости коэффициента корреляции делается согласно <a href="#statestim">алгоритму тестировния статистических гипотез</a>.</p>
+</section>
+<section id="доверительный-интервал-для-коэффициента-корреляции" class="level3" data-number="27.2.2">
+<h3 data-number="27.2.2" class="anchored" data-anchor-id="доверительный-интервал-для-коэффициента-корреляции"><span class="header-section-number">27.2.2</span> Доверительный интервал для коэффициента корреляции</h3>
+<p>С построением интервальной оценки коэффциента корреляции возникают некоторые сложности. Наша задача состоит в том, чтобы определить в каких границах будет лежать значение истинного коэффициента корреляции с заданной вероятностью:</p>
+<p><span class="math display">\[
+\mathrm{P} (\rho_{ij,\min} &lt; \rho_{ij} &lt; \rho_{ij,\max}) = \gamma
+\]</span></p>
+<p>Нам необходимо найти статистику, закон распределения корой известен, однако ранее упомянутся статистика не подходит, так как она имеет распределение Стьюдента, когда верна нулевая гипотеза об отсутствии связи. Если же мы строим интервальную оценку, нас интересует случай наличия связи.</p>
+<p>Такую статистику искали долго, и её удалось найти, когда ввели определённое преобразование выборочного критерия корреяции — <em>z-преобразования Фишера</em>:</p>
+<p><span class="math display">\[
+z(r_{ij}) = \frac{1}{2} \ln \frac{1 + r_{ij}}{1 - r_{ij}} \thicksim \mathrm{N}(\bar z_{ij}, \tfrac{1}{n-3}),
+\]</span> где <span class="math inline">\(n\)</span> — объём выборки, а <span class="math inline">\(\bar z_{ij}\)</span> получается расчётом по указанной формуле после подставления точечной оценки коэффициента корреляции.</p>
+<p>Тогда интервальная оценка для величины <span class="math inline">\(z_{ij, \mathrm{true}}\)</span> приобретает такой вид:</p>
+<p><span class="math display">\[
+\mathrm{P} \Big( \bar z_{ij} - t_\gamma \sqrt{\tfrac{1}{n-3}} &lt; z_{ij, \mathrm{true}} &lt; \bar z_{ij} + t_\gamma \sqrt{\tfrac{1}{n-3}}  \Big) = \gamma = \Phi(t_\gamma)
+\]</span></p>
+<p>Далее путём обратного преобразования получаются значения границ интервала <span class="math inline">\((\rho_{ij,\min}, \; \rho_{ij,\max})\)</span>.</p>
+</section>
+</section>
+<section id="andan-corr-scales" class="level2" data-number="27.3">
+<h2 data-number="27.3" class="anchored" data-anchor-id="andan-corr-scales"><span class="header-section-number">27.3</span> Коэффициенты корреляции для разных шкал</h2>
+<p>Дла разных шкал разработаны разные коэффициенты корреляции. Оценки коэффициентов будут рассчитываться по-разному, но логика тестирования статистических гипотез остаётся одинаковой.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Переменная <span class="math inline">\(X\)</span></th>
+<th style="text-align: center;">Переменная <span class="math inline">\(Y\)</span></th>
+<th style="text-align: center;">Мера связи</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Коэффициент Пирсона</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ранговая, интервальная или отношений</td>
+<td style="text-align: center;">Ранговая, интервальная или отношений</td>
+<td style="text-align: center;">Коэффициент Спирмена</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Коэффициент Кенделла</td>
+</tr>
+</tbody>
+</table>
+<p>В функциях <code>cor()</code> и <code>cor.test()</code> требуемый коэффициент задаётся черед аргумент <code>method</code>:</p>
+</section>
+<section id="частный-и-множественный-коэффициент-корреляции" class="level2" data-number="27.4">
+<h2 data-number="27.4" class="anchored" data-anchor-id="частный-и-множественный-коэффициент-корреляции"><span class="header-section-number">27.4</span> Частный и множественный коэффициент корреляции</h2>
+<p>Если у нас два признака, то с ними всё достаточно понятно. А если признаком много? Тогда у нас могут быть сложные взаимосвязи, и возможен такой случай, что некоторый признак оказывает связан как с одним, так и с другим из интересующих нас. Таким образом, мы можем наблюдать <em>ложную корреляцию</em>. Чтобы избавиться от влияния сторонних признаков, используюся частные коэффициенты корреляции.</p>
+<p>Функция <code>cor()</code> может возвращать не только оценку одного коэффициента корреляции, но и <strong>корреляционную матрицу</strong>, отобрадающую связи всех признаков со всеми. Например, продолжим работать со шкалой морального возмущения и изучим взаимосвязи внутри неё:</p>
+<p>В корреляционной матрице на главной диагонали стоят единицы, отражающай связь переменной в самой собой — разумеется, она будет абсолютно линейная.</p>
+<img class="taskimg" src="img/code.png">
+<div class="task">
+<p>А как посчитать <em>ковариационную</em> матрицу?</p>
+</div>
+<p>В общем виде корреляционная матрица имеет следующий вид:</p>
+<p><span class="math display">\[
+R =
+\begin{pmatrix}
+1 &amp; r_{12} &amp; \dots &amp; r_{1p} \\
+r_{12} &amp; 1 &amp; \dots &amp; r_{2p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+r_{p1} &amp; r_{p2} &amp; \dots &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p>Матрица, как можно заметить, симметрична относительно главной диагонали, так как <span class="math inline">\(r_{ij} = r_{ji}\)</span>.</p>
+<p>Её можно визуализироать, например, так:</p>
+<p>Но можно и усовершенствовать визуализацию, отобразив сами значения:</p>
+<p>На основе этой матрицы мы можем протестировать статистическую значимость каждого из коэффициентов (не забыв про поправки на множественные сравнения!):</p>
+<p>Чтобы перенести их на график, нам нужно получить матрицу из p-значений:</p>
+<p>Ну, у нас ничего не поменялось, так как коэффициенты все оказались значимы. Эх…</p>
+<p>Но вот для примера на одно из встроенных датасетов:</p>
+<p>Итак, возвращается к частному коэффициенту корреляции. Он определяется так:</p>
+<p><span class="math display">\[
+r_{ij, J(i,j)} = - \frac{A_{ij}}{\sqrt{A_{ii} A_{jj}}},
+\]</span></p>
+<p>где <span class="math inline">\(A\)</span> — алгебраическое дополнение.</p>
+<p>В общем виде это осознать сложно, поэтому давайте на примере трёх признаков.</p>
+<p><span class="math display">\[
+R =
+\begin{pmatrix}
+1 &amp; r_{12} &amp; r_{13} \\
+r_{21} &amp; 1 &amp; r_{23} \\
+r_{31} &amp; r_{32} &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+r_{12,3} = \frac{r_{12} - r_{13} \cdot r_{23}}{\sqrt{(1 - r^2_{23})(1-r^2{13})}}
+\]</span></p>
+<p><span class="math display">\[
+H_0: \rho_{12,3} = 0 \\
+H_1: \rho_{12,3} \neq 0 \\
+t = \frac{r_{12,3} \sqrt{n-3}}{\sqrt{1 - r^2_{12,3}}} \overset{H_0}{\thicksim} t(\nu = n-3)
+\]</span></p>
+<p>Но слава богу, что в R это все делается в одну строку:</p>
+<p>Хорошо, а если нас интересует связь одного признака с несколькими сразу? Тогда нам нужен множественный коэффициент корреляции. Он также вычисляется на основе корреляционной матрицы и определяется следующим образом. Пусть нас интересует связь первого признака со всеми остальными:</p>
+<p><span class="math display">\[
+R_1 = \sqrt{1 - \frac{\det R}{A_{11}}}
+\]</span></p>
+<p>Квадрат множественонго коэффициента корреляции называется <em>коэффициентом детерминации</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Он показывает, во-первых, степень тесноты связи данного признака со всеми остальными, но, кроме того, ещё и долю дисперсии данного признака, определяемую вариацией все остальных признаков, включенных в данную корреляционную модель.</p>
+<p>Мы подробнее его изучим в следуюшей теме, а также увидим, где нам его найти, чтобы не считать руками.</p>
+</section>
+<section id="другие-корреляции" class="level2" data-number="27.5">
+<h2 data-number="27.5" class="anchored" data-anchor-id="другие-корреляции"><span class="header-section-number">27.5</span> Другие корреляции</h2>
+<p>Можно коррелировать не только количественные и ранговые шкалы между собой, но и качественные тоже:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Переменная <span class="math inline">\(X\)</span></th>
+<th style="text-align: center;">Переменная <span class="math inline">\(Y\)</span></th>
+<th style="text-align: center;">Мера связи</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;"><span class="math inline">\(\phi\)</span>-коэффициент</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Рангово-бисериальный коэффициент</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Бисериальный коэффициент</td>
+</tr>
+</tbody>
+</table>
+<section id="phi-коэффициент" class="level3" data-number="27.5.1">
+<h3 data-number="27.5.1" class="anchored" data-anchor-id="phi-коэффициент"><span class="header-section-number">27.5.1</span> <span class="math inline">\(\phi\)</span>-коэффициент</h3>
+<p>Этот коэффициент позволяет рассчитать корреляцию между двумы дихотомическими шкалами. Он основан на расчёте статистики <span class="math inline">\(\chi^2\)</span>.</p>
+<p>По двум дихотомическим переменным можно построить таблицу сопряженности. Разберемся на <a href="https://raw.githubusercontent.com/angelgardt/hseuxlab-wlm2021/master/book/wlm2021-book/data/cats_n_dogs.csv">котиках и пёсиках</a>:</p>
+<p>По данной таблице можно рассчитать <strong>критерий согласия Пирсона (<span class="math inline">\(\chi^2\)</span>)</strong>:</p>
+<p>Сам хи-квадрат тестирует гипотезу о том, что между двумя категориальными переменными нет связи. Он это делает путём сравнения теоретической и эмпирической таблицы частот.</p>
+<p>Эмпирическую таблицу частот мы получаем по результатам наблюдений (то, что мы делаем с помощью функции <code>table()</code>):</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(X_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(Y_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_1,Y_1} = a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_2,Y_1} = b\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Y_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_1,Y_2} = c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_2,Y_2} = d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Далее вычисляются теоретические частоты:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(X_1^*\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X_2^*\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(Y_1^*\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(a+b) \times (a+c)}{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(b+a) \times (b+d)}{N}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Y_2^*\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(c+d) \times (a+c)}{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(d+c) \times (b + d)}{N}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>где <span class="math inline">\(N = a + b + c + d\)</span>.</p>
+<p>Затем считаются расхождения частот, которые суммируются и получается статистика <span class="math inline">\(\chi^2\)</span>:</p>
+<p><span class="math display">\[
+\chi^2 = \sum_{i,j} \frac{p_{X_i,Y_j} - p_{X_i^*,Y_j^*}}{p_{X_i^*,Y_j^*}}
+\]</span></p>
+<p>Статистика подчиняется распределению <span class="math inline">\(\chi^2\)</span>, и чем больше значение этой статистики, тем сильнее связаны признаки. В нашем случае мы получили значение 0, что говорит о абсолютном отсутствии связи между видом животного и его размером.</p>
+<p>Но по значению <span class="math inline">\(\chi^2\)</span> сложно что-то сказать о силе связи, поэтому его нормируют следующим образом, чтобы получить значения от 0 до 1, которые можно интерпретироват аналогично коэффициенту корреляции:</p>
+<p><span class="math display">\[
+\phi = \sqrt{\frac{\chi^2}{N}}
+\]</span></p>
+<p>Так как в нашем случае значение <span class="math inline">\(\chi^2\)</span> было 0, то и коэффициент <span class="math inline">\(\phi\)</span> мы получили 0.</p>
+</section>
+<section id="бисериальный-коэффициент-корреляции" class="level3" data-number="27.5.2">
+<h3 data-number="27.5.2" class="anchored" data-anchor-id="бисериальный-коэффициент-корреляции"><span class="header-section-number">27.5.2</span> Бисериальный коэффициент корреляции</h3>
+<p>Этот коэффициент используется для вычисления корреляции между количественной (<span class="math inline">\(y\)</span>) и категориальной (<span class="math inline">\(x\)</span>) шкалой и рассчитывается следующим образом:</p>
+<p><span class="math display">\[
+r = \frac{\bar x_1 - \bar x_2}{s_y} \sqrt{\frac{n_1 n_2}{N(N-1)}},
+\]</span> где <span class="math inline">\(\bar x_1\)</span> — среднее по элементам переменной <span class="math inline">\(y\)</span> из группы <span class="math inline">\(x_1\)</span>, <span class="math inline">\(\bar x_2\)</span> — среднее по элементам <span class="math inline">\(y\)</span> из группы <span class="math inline">\(x_2\)</span>, <span class="math inline">\(s_y\)</span> — стандартное отклонение по переменной <span class="math inline">\(y\)</span>, <span class="math inline">\(n_1\)</span> — число элементов в группе <span class="math inline">\(x_1\)</span>, <span class="math inline">\(n_2\)</span> — число элементов в группе <span class="math inline">\(x_2\)</span>, <span class="math inline">\(N\)</span> — общее число элементов.</p>
+<p>Важно отметить, что несмотря на то, что значение коэффициента может быть как положительным, так и отрицательным, это <em>не влияет на интерпретацию</em>. Это одно из исключений из общего правила.</p>
+<p>В R его можно вычислить так:</p>
+</section>
+<section id="рангово-бисериальный-коэффициент-корреляции" class="level3" data-number="27.5.3">
+<h3 data-number="27.5.3" class="anchored" data-anchor-id="рангово-бисериальный-коэффициент-корреляции"><span class="header-section-number">27.5.3</span> Рангово-бисериальный коэффициент корреляции</h3>
+<p>Если у нас не количественная, а ранговая шкала, то применяется рангово-бисериальный коэффициент:</p>
+<p><span class="math display">\[
+r = \frac{2(\bar x_1 - \bar x_2)}{N},
+\]</span> где <span class="math inline">\(\bar x_1\)</span> — средний ранг в группе <span class="math inline">\(x_1\)</span>, <span class="math inline">\(\bar x_2\)</span> — средний ранг в группе <span class="math inline">\(x_2\)</span>, <span class="math inline">\(N\)</span> — общее количество наблюдений.</p>
+</section>
+</section>
+<section id="andan-cor-fisher-transform" class="level2" data-number="27.6">
+<h2 data-number="27.6" class="anchored" data-anchor-id="andan-cor-fisher-transform"><span class="header-section-number">27.6</span> Преобразование Фишера</h2>
 <p><span class="math display">\[
 z_i = \frac{1}{2} \ln \frac{1 + r_i}{1 - r_i} = \mathop{\mathrm{artanh}}(r_i)
 \]</span></p>
@@ -857,6 +1160,12 @@ r_P = \dfrac{e^{2z_P} - 1}{e^{2z_P} + 1} = \tanh(z_P)
 \]</span></p>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Вы точно видели это словосочетание, когда сталкивались с линейной регресией.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

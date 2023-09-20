@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -60,7 +94,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Поиск"></div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -145,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stats-estim.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Поиск" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -157,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Поиск"></div>
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -857,16 +892,105 @@ ul.task-list li input[type="checkbox"] {
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
+<p>Мы оказываемся в сложной, но интересной ситуации. Мы хотим знать что-то про генеральную совокупность — значение некоторого <em>параметра</em>. Но мы его никогда не узнаем, потому что не можем работать с целой генеральной совокупностью. Нам остаётся работать только с <em>выборочной совокупность (выборкой)</em> и опираться на статистические данные, которые мы собираем на ней.</p>
+<p>Выборка извлекается из генеральной совокупности случайным образом, поэтому что там именно — с точки зрения данных — в нашей выборке будет нам также неизвестно. Отсюда происходят два ключевых свойства статистических данных — <em>неопредлённость</em> и <em>вариативность</em>.</p>
+<p><strong>Неопределённость</strong> нам говорит о том, что мы не знаем, что именно мы получим в результате наших измерений для конкретной выборки. В том числе потому, что мы работаем на просторах случайных величин.</p>
+<p><strong>Вариативность</strong> означает, что наши данные будут различатся ещё и от респондента к респонденту. И между выборками тоже. Здесь и ошибка измерения, и различные смешения и ещё куча всего.</p>
+<p>В итоге что мы имеем: так как нам не доступны <em>истинные</em> значения параметров, придётся использовать <em>оценки</em> этих параметров.</p>
 <section id="точечные-оценки" class="level2" data-number="22.1">
 <h2 data-number="22.1" class="anchored" data-anchor-id="точечные-оценки"><span class="header-section-number">22.1</span> Точечные оценки</h2>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Параметр обычно обозначается греческой буквой. Пусть у нас есть некоторый параметр генеральной совокупности <span class="math inline">\(\theta\)</span>. Его аналогом на выборочной совокупности является его <em>точечная оценка</em> <span class="math inline">\(\hat \theta\)</span>. Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, она является функцией от результатов наблюдений:</p>
+<p><span class="math display">\[
+\hat \theta = \hat \theta (x), \; x = (x_1, x_2, \dots, x_n)
+\]</span></p>
+<p>Что это значит? То, что на разных выборках эта оценка может различаться. Возьмем для примера такой параметр как среднее значение. Предположим, что мы исследуем интеллект, и наша <em>генеральная совокупность</em> представлена таким набором наблюдений:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+     id    IQ
+  &lt;int&gt; &lt;dbl&gt;
+1     1    93
+2     2    72
+3     3    93
+4     4    91
+5     5    97
+6     6   102</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+     id    IQ
+  &lt;int&gt; &lt;dbl&gt;
+1  9995   112
+2  9996   106
+3  9997    66
+4  9998    91
+5  9999    71
+6 10000    99</code></pre>
+</div>
+</div>
+<p>Так как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра <span class="math inline">\(\mu\)</span>. <strong>В реальной жизни мы этого сделать не можем!</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 99.6743</code></pre>
+</div>
+</div>
+<p>Вполне ожидаемое значение<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Теперь попробуем наизвлекать выборок человек по 50 и посчитать <em>оценки среднего (выборочные средние)</em> <span class="math inline">\(\hat \mu\)</span> на них:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>means <span class="ot">&lt;-</span> <span class="fu">numeric</span>()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  means[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">sample</span>(iq<span class="sc">$</span>IQ, <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="cn">NULL</span>, <span class="fu">aes</span>(means)) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="st">'royalblue4'</span>, <span class="at">color =</span> <span class="st">'lightgray'</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(iq<span class="sc">$</span>IQ)) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Выборочные средние IQ'</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">'Количество'</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="stats-estim_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Наблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом <em>неопределённость и вариация</em>.</p>
 <section id="метод-моментов" class="level3" data-number="22.1.1">
 <h3 data-number="22.1.1" class="anchored" data-anchor-id="метод-моментов"><span class="header-section-number">22.1.1</span> Метод моментов</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Чтобы получить точечные оценки параметров, используются разные методы в зависимости от конкретной модели анализа. Сейчас мы познакомимся с самым простым — <strong>методом моментов</strong>.</p>
+<p>Само название метода отсылает нас к обсуждению <a href="#moments_distributions">характеристик распределений случайных величин</a>. Мы говорили о том, что распредления характеризуются их <em>моментами</em>. В методе моментов есть три этапа:</p>
+<ol type="1">
+<li>устанавливается связь между оцениваемым параметром и моментом распределения</li>
+</ol>
+<p><span class="math display">\[
+\theta = \xi(\nu_k) \quad \text{или} \quad \theta = \xi(\mu_k)
+\]</span></p>
+<ol start="2" type="1">
+<li>находятся выборочные моменты</li>
+</ol>
+<p><span class="math display">\[
+\hat \theta = \xi(\nu_k^*) \quad \text{или} \quad \hat \theta = \xi(\mu_k^*)
+\]</span></p>
+<ol start="3" type="1">
+<li>истинный момент заменяется на выборочный — получается оценка.</li>
+</ol>
+<p>Для примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается <a href="#normal_distribution">нормальному закону</a>. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:</p>
+<p><span class="math display">\[
+\mu = \mathbb{E}X
+\]</span></p>
+<p>Выборочным аналогом математического ожидания является выборочное среднее:</p>
+<p><span class="math display">\[
+\hat \mu = \frac{1}{n} \sum_{i=1}^n x_i
+\]</span></p>
+<p>И это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)</p>
 </section>
 <section id="метод-максимального-правдоподобия" class="level3" data-number="22.1.2">
 <h3 data-number="22.1.2" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">22.1.2</span> Метод максимального правдоподобия</h3>
@@ -885,23 +1009,39 @@ ul.task-list li input[type="checkbox"] {
 <div class="lab-chapter lab-middle">
 
 </div>
+<p>Так как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: <em>несмещённость</em>, <em>состоятельность</em> и <em>эффективность</em>.</p>
 <section id="несмещенность" class="level4" data-number="22.1.4.1">
 <h4 data-number="22.1.4.1" class="anchored" data-anchor-id="несмещенность"><span class="header-section-number">22.1.4.1</span> Несмещенность</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<p><strong>Несмещённость</strong> выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.</p>
+<p><span class="math display">\[
+\forall n \; \mathbb{E} \hat \theta = \theta, \quad (\mathbb{E}\hat \theta - \theta) \rightarrow 0,
+\]</span> где <span class="math inline">\(n\)</span> — объём выборки, <span class="math inline">\((\mathbb{E}\hat \theta - \theta)\)</span> — смещение.</p>
+<p>Слева представлено требование <em>несмещённости при любом объёме выборки</em>, а справа — <em>ассимптотической несмещённости</em>.</p>
 </section>
 <section id="состоятельность" class="level4" data-number="22.1.4.2">
 <h4 data-number="22.1.4.2" class="anchored" data-anchor-id="состоятельность"><span class="header-section-number">22.1.4.2</span> Состоятельность</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<p>Математически <strong>состоятельность</strong> определяется следующим образом:</p>
+<p><span class="math display">\[
+\lim_{n \rightarrow \infty} \mathrm{P}(|\hat \theta - \theta| &lt; \varepsilon) = 1, \, \varepsilon &gt; 0
+\]</span></p>
+<p>Содержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.</p>
 </section>
 <section id="эффективность" class="level4" data-number="22.1.4.3">
 <h4 data-number="22.1.4.3" class="anchored" data-anchor-id="эффективность"><span class="header-section-number">22.1.4.3</span> Эффективность</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<p>Эффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть <em>дисперсия</em>. Чтобы оценка была <strong>эффективна</strong>, её дисперсия должна быть минимальной:</p>
+<p><span class="math display">\[
+\sigma^2_{\hat \theta} = \min
+\]</span></p>
+<p>Пример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.</p>
 </section>
 </section>
 </section>
@@ -910,13 +1050,20 @@ ul.task-list li input[type="checkbox"] {
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Кроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как <strong>надёжность</strong>:</p>
+<p><span class="math display">\[
+\gamma = \mathrm{P}(\theta_\min &lt; \theta &lt; \theta_\max)
+\]</span></p>
+<p>Такая форма оценки называется <strong>интервальной оценкой параметра</strong>, так как мы указываем <em>интервал</em>, в котором находится истинное значение с определённой вероятностью.</p>
+<p>Такая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.</p>
+<p>Значение надежности <span class="math inline">\(\gamma\)</span> может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.</p>
 <section id="стандартная-ошибка" class="level3" data-number="22.2.1">
 <h3 data-number="22.2.1" class="anchored" data-anchor-id="стандартная-ошибка"><span class="header-section-number">22.2.1</span> Стандартная ошибка</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
-<section id="почему-textsex-fracsdxsqrtn" class="level4" data-number="22.2.1.1">
-<h4 data-number="22.2.1.1" class="anchored" data-anchor-id="почему-textsex-fracsdxsqrtn"><span class="header-section-number">22.2.1.1</span> Почему <span class="math inline">\(\text{se}(X) = \frac{sd(X)}{\sqrt{n}}\)</span></h4>
+<section id="почему-textsex-fractextsdxsqrtn" class="level4" data-number="22.2.1.1">
+<h4 data-number="22.2.1.1" class="anchored" data-anchor-id="почему-textsex-fractextsdxsqrtn"><span class="header-section-number">22.2.1.1</span> Почему <span class="math inline">\(\text{se}(X) = \frac{\text{sd}(X)}{\sqrt{n}}\)</span></h4>
 <div class="lab-chapter lab-senior">
 
 </div>
@@ -943,9 +1090,63 @@ ul.task-list li input[type="checkbox"] {
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Вариантом интервальной оценки является <strong>доверительный интервал (confidence interval)</strong>. Итак, ещё раз:</p>
+<p><span class="math display">\[
+\mathrm{P}(\theta_\min &lt; \theta &lt; \theta_\max) = \gamma, \; \gamma \rightarrow 1
+\]</span></p>
+<p><span class="math inline">\(theta_\min\)</span> и <span class="math inline">\(\theta_\max\)</span> — границы доверительного интервала, <span class="math inline">\(\gamma\)</span> — доверительная вероятность. На практике её значение чаще всего принимается равным <span class="math inline">\(0.95\)</span>.</p>
+<p><strong>Алгоритм определения интервальной оценки</strong> следующий:</p>
+<ol type="1">
+<li>Найсти статистику <span class="math inline">\(\zeta(\theta)\)</span>, связанную с оцениваниемым параметром, закон распределения которой известен <span class="math inline">\(f(\zeta)\)</span>.</li>
+<li>Определить значения <span class="math inline">\(\zeta_\min\)</span> и <span class="math inline">\(\zeta_\max\)</span>, в пределах которых статистика находится с вероятностью <span class="math inline">\(\gamma\)</span>.</li>
+<li>Зная связь <span class="math inline">\(\zeta(\theta)\)</span> перейти к границам <span class="math inline">\(\theta_\min\)</span> и <span class="math inline">\(\theta_\max\)</span>.</li>
+</ol>
+<p>Разберемся с этим на примере построения доверительного интервала для генерального среднего.</p>
+<p>Первая задача — найти статистику. Мы воспользуемся тем, что за нас поработали учёные-статистики и сказали, что вот такая вполне подойдёт:</p>
+<p><span class="math display">\[
+t = \frac{\bar x - \mu}{s}\sqrt{n-1},
+\]</span></p>
+<p>где <span class="math inline">\(t\)</span> — значение статистики, <span class="math inline">\(\bar x\)</span> — выборочное среднее, <span class="math inline">\(\mu\)</span> — генеральное среднее, <span class="math inline">\(s\)</span> — выборочное стандартное отклонение, <span class="math inline">\(n\)</span> — объём выборки.</p>
+<p>Известен ли закон её распредления? Да. Эта статистика подчинается <span class="math inline">\(t\)</span>-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:</p>
+<center>
+<img src="img/student_pdf.jpg">
+</center>
+<p>Теперь надо сформулировать вид интервальной оценки для генерального среднего. Путем арифметических преобразований формулы выше мы имеет следующее:</p>
+<p><span class="math display">\[
+\mu = \bar x - t \frac{s}{\sqrt{n-1}}
+\]</span></p>
+<p>Значит вид интервальной оценки будет таков:</p>
+<p><span class="math display">\[
+\mathrm{P}\Big( \bar x - t_\alpha \frac{s}{\sqrt{n-1}} &lt; \mu &lt;
+\bar x + t_\alpha \frac{s}{\sqrt{n-1}}\Big) = 1 - \alpha = \gamma
+\]</span></p>
+<p>Посмотрим на картинку:</p>
+<center>
+<img src="img/mean_ci_graph.jpeg">
+</center>
+<p>Видим на ней наш доверительный интвервал и значения <span class="math inline">\(t_\alpha\)</span> и <span class="math inline">\(-t_\alpha\)</span>. Сама <span class="math inline">\(\alpha\)</span> обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.</p>
+<p>Хорошо, что весь этот ужас в R скрыт под капотом:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_normal</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        y    ymin    ymax
+1 99.6743 99.3795 99.9691</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_boot</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        y     ymin     ymax
+1 99.6743 99.38316 99.96825</code></pre>
+</div>
+</div>
 
 
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Шкала IQ устроена так, что её среднее значение равно 100, а стандартное отклонение 15.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

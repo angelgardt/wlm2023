@@ -827,10 +827,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#stats-testing-errors-connection" id="toc-stats-testing-errors-connection" class="nav-link" data-scroll-target="#stats-testing-errors-connection"><span class="header-section-number">23.3.2</span> Связь ошибки первого и второга рода</a></li>
   </ul></li>
   <li><a href="#stats-testing-algorithm" id="toc-stats-testing-algorithm" class="nav-link" data-scroll-target="#stats-testing-algorithm"><span class="header-section-number">23.4</span> Агоритм тестирования статистических гипотез</a></li>
-  <li><a href="#stats-testing-multiple-comparisons" id="toc-stats-testing-multiple-comparisons" class="nav-link" data-scroll-target="#stats-testing-multiple-comparisons"><span class="header-section-number">23.5</span> Проблема множественных сравнений</a></li>
-  <li><a href="#stats-testing-multiple-testing" id="toc-stats-testing-multiple-testing" class="nav-link" data-scroll-target="#stats-testing-multiple-testing"><span class="header-section-number">23.6</span> Проблема количества статистических тестов</a></li>
-  <li><a href="#stats-testing-effect-size" id="toc-stats-testing-effect-size" class="nav-link" data-scroll-target="#stats-testing-effect-size"><span class="header-section-number">23.7</span> Размер эффекта</a></li>
-  <li><a href="#stats-testing-power" id="toc-stats-testing-power" class="nav-link" data-scroll-target="#stats-testing-power"><span class="header-section-number">23.8</span> Статистическая мощность</a></li>
+  <li><a href="#stats-testing-effect-size" id="toc-stats-testing-effect-size" class="nav-link" data-scroll-target="#stats-testing-effect-size"><span class="header-section-number">23.5</span> Размер эффекта</a></li>
+  <li><a href="#stats-testing-power" id="toc-stats-testing-power" class="nav-link" data-scroll-target="#stats-testing-power"><span class="header-section-number">23.6</span> Статистическая мощность</a></li>
+  <li><a href="#stats-testing-false-positive" id="toc-stats-testing-false-positive" class="nav-link" data-scroll-target="#stats-testing-false-positive"><span class="header-section-number">23.7</span> Ложноположительный вывод</a>
+  <ul class="collapse">
+  <li><a href="#stats-testing-multiple-comparisons" id="toc-stats-testing-multiple-comparisons" class="nav-link" data-scroll-target="#stats-testing-multiple-comparisons"><span class="header-section-number">23.7.1</span> Проблема множественных сравнений</a></li>
+  <li><a href="#stats-testing-multiple-testing" id="toc-stats-testing-multiple-testing" class="nav-link" data-scroll-target="#stats-testing-multiple-testing"><span class="header-section-number">23.7.2</span> Проблема количества статистических тестов</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -854,6 +857,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<!--- {{< include _symbols.qmd >}} --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
 <p>В ходе статистического анализа мы, главным образом, заняты тем, что тестируем статистические гипотезы. Ведь на какого рода вопросы мы отвечаем с помощью анализа?</p>
 <ul>
 <li>Различаются ли группы между собой?</li>
@@ -863,7 +874,7 @@ ul.task-list li input[type="checkbox"] {
 <p>И так далее. Так или иначе, всё сводится в тому, что мы ищем какие-то различия. Но силу того, что у нас неопределённость и вариация в данных, мы просто так «в лоб» сказать о различиях по оценкам параметров не можем. Приходится тестировать статистические гипотезы.</p>
 <section id="stats-testing-hyotheses" class="level2" data-number="23.1">
 <h2 data-number="23.1" class="anchored" data-anchor-id="stats-testing-hyotheses"><span class="header-section-number">23.1</span> Нулевая и альтернативная гипотезы</h2>
-<p>Еще раз тезисно <a href="#stats-hypotheses">вспомним о гипотезах</a> в целом:</p>
+<p>Еще раз тезисно <a href="stats-intro.html#stats-hypotheses">вспомним о гипотезах</a> в целом:</p>
 <ul>
 <li><strong>Гипотеза</strong> (<span class="math inline">\(H\)</span>) — это предположение, которое подлежит проверке на основе результатов наблюдений.</li>
 <li>Гипотезы бывают:
@@ -901,7 +912,27 @@ ul.task-list li input[type="checkbox"] {
 <p>Мы изучаем в исследовании какую-либо закономерность, которая в реальном мире может существовать, а может и не существовать. В силу неопределённости и вариативности наших данных мы может либо обнаружить интересующую нас закономерность, либо не обнаружить.</p>
 <p>В качестве нулевой гипотезы мы выдвигаем предположение о том, что закономерность отсутствует — так мы упрощаем нашу нулевую гипотезу. Пусть <span class="math inline">\(H_0\)</span> обозначает, что предположение, которое мы проверяем справедливо, а <span class="math inline">\(H_1\)</span> — не справедливо. На основании данных мы можем либо не отклонить наше предположение (<span class="math inline">\(\hat H_0\)</span>), либо отклонить (<span class="math inline">\(\hat H_1\)</span>).</p>
 <p>Тогда имеем следующую ситуацию:</p>
-<p>ТАБЛИЦА</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(H_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(H_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat H_0\)</span></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">Ошибка II рода</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\hat H_1\)</span></td>
+<td style="text-align: center;">Ошибка I рода</td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Ошибка I рода</strong> возникает, когда в генеральной совокупности <em>искомой закономерности нет</em>, но мы в силу случайных флуктуаций в данных <em>её нашли</em>.</li>
 <li><strong>Ошибка II рода</strong> возникает, когда в генеральной совокупности <em>искомая закономерность есть</em>, но мы в силу каких-либо причин её <em>не нашли</em>.</li>
@@ -911,8 +942,90 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Ошибка I рода</strong> контролируется достаточно просто. Так как мы <em>нашли</em> закономерность, которую искали, мы можем посчитать вероятность, с которой потенциально ошиблись. А собственно контролировать ошибку мы будем с помощью <strong>уровня значимости</strong> <span class="math inline">\(\alpha\)</span>, который <em>выбирается до начала процедуры тестирования гипотезы</em>. Он и задает вероятность, с который мы позволяем себе ошибиться — отклонить нулевую гипотезу, при условии, что она верна.</li>
 <li><strong>Ошибку II рода</strong> контролировать сложнее, так как мы <em>не нашли</em> закономерность, которую искали. Нам нужна какая-то метрика, которая позволит сказать, что мы сделали всё возможное для того, чтобы обнаружить искомую закономерность. Вероятность ошибки II рода обозначается <span class="math inline">\(\beta\)</span> — тогда вероятность того, что мы не совершили ошибку II рода будет <span class="math inline">\(1 - \beta\)</span>. Эта величина называется <a href="#stats-testing-effect-size"><strong>статистической мощностью</strong></a>, и она связана с <a href="#stats-testing-effect-size"><em>размером эффекта</em></a> и <em>объемом выборки</em>. Статистическую мощность можно рассчитать как до проведения статистического анализа для расчета требуемого объема выборки — так и после — для определения достигнутой статистической мощности.</li>
 </ul>
+<p>Соберем все обозначения в единую табличку<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 42%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(H_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(H_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat H_0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_0 | H_0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_0 | H_1) = \beta\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\hat H_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_1 | H_0) = \alpha\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_1 | H_1) = 1 - \beta\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Уровень значимости <span class="math inline">\(\alpha\)</span> <strong>выбирается близким к нулю</strong> — всем знакомо конвенциональное значение <span class="math inline">\(0.05\)</span>. Вообще <span class="math inline">\(\alpha\)</span> можно выбрать сколь угодно малым, однако при выборе уровня значимости руководствуются принципом разумной достаточности, так как если устремить <span class="math inline">\(\alpha\)</span> к нулю, то устремиться к нулю и вероятность отклонения нулевой гипотезы.</p>
+<div class="advanced">
+<details>
+<summary>
+<em>Математические руны</em>
+</summary>
+<span class="math display">\[
+\mathrm P (\hat H_1) = \mathrm P (\hat H_1 | H_0) \cdot \mathrm P (H_0) = \alpha \cdot \mathrm P(H_0)
+\]</span>
+</details>
+</div>
+<p>Достаточной статистической мощностью считается <span class="math inline">\(0.8\)</span>. Аналогично, устремляя мощность к единице (<span class="math inline">\((1 - \beta) \rightarrow 1 \Rightarrow \beta \rightarrow 0\)</span>), мы устремляем вероятность не отклонения нулевой гипотезы к нулю:</p>
+<div class="advanced">
+<details>
+<summary>
+<em>Ещё математические руны</em>
+</summary>
+<span class="math display">\[
+\mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_1) \cdot \mathrm P (H_1) = \beta \cdot \mathrm P (H_1)
+\]</span>
+</details>
+</div>
+<p>Необходимо также помнить, что ошибки первого и второго рода связаны между собой так, что</p>
+<p><span class="math display">\[
+\alpha \rightarrow 0 \Rightarrow \beta \rightarrow 1
+\]</span></p>
+<div class="advanced">
+<details>
+<summary>
+<em>Опять математические руны</em>
+</summary>
+<span class="math display">\[
+\beta \cdot \mathrm P (H_1) = \mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_0) \cdot \mathrm P (H_0) \Rightarrow \beta = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot \mathrm P(\hat H_0 | H_0) \\
+\beta = \frac{1}{\mathrm P (H_1)} \cdot \big (1 - \mathrm P (H_1 | H_0)\big) = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot (1 - \alpha)
+\]</span>
+</details>
+</div>
 <section id="stats-testing-asymmetry" class="level3" data-number="23.3.1">
 <h3 data-number="23.3.1" class="anchored" data-anchor-id="stats-testing-asymmetry"><span class="header-section-number">23.3.1</span> Асимметрия статистического вывода</h3>
+<p>Выше мы сказали, что для проверки гипотезы нужны две вещи:</p>
+<ul>
+<li>результаты наблюдений и</li>
+<li>критерий.</li>
+</ul>
+<p>С результатами наблюдений более-менее очевидно.</p>
+<p><strong>Критерий</strong> — это правило, согласно которому гипотезу либо принимают, либо отклоняют. Однако перед тем как проверять гипотезу, её так-то нужно сформулировать, и сделать это правильно, поскольку от формулировки гипотезы зависит интерпретация результатов проверки и дальнейшее использование полученной информации.</p>
+<p>Используемая статистика сама по себе является [непрерывной] случайной величиной, а значит может быть построено её распределение. Критерий будет разделять это распределение на непересекающиеся области. В результате чего возникает <strong>критическая область</strong> — область отклонения гипотезы. Дополнением к ней является область неотклонения гипотезы.</p>
+<p>Критическая область может быть односторонней (при <span class="math inline">\(H_1:\theta &gt; \theta_0\)</span> или <span class="math inline">\(H_1: \theta &lt; \theta_0\)</span>) и двусторонней (при <span class="math inline">\(H_1:\theta \neq \theta_0\)</span>). «Размер» критической области определяется <strong>уровнем значимости</strong>.</p>
+<p>Статистический вывод — заключение о том, получили ли мы подтверждение альтернативной гипотезы — по структуре представляет собой <em>импликацию</em>. Если вам не знаком этот термин из логики, то вот:</p>
+<ul>
+<li>Если значение нашей статистики, которое мы рассчитали на выборке, <em>попало в критическую область</em>, то мы говорим о том, что <em>нулевая гипотеза отклоняется</em>.</li>
+<li>Если значение нашей статистики, которое мы рассчитали на выборке, <em>не попало в критическую область</em>, то мы <em>не получаем оснований для того, чтобы отклонить нулевую гипотезу</em>. Однако <em>мы также не получаем оснований, чтобы её «принять»</em>. Мы остаёмся в некотором неведении: мы не нашли различий, а есть они там или нет — хто ж их знает… Итого, мы не можем сделать никакого вывода.</li>
+</ul>
+<p>В этом и заключается асимметрия статистического вывода. Как раз для того, чтобы с ней как-то жить, мы работаем со статистической мощностью.</p>
+<hr>
+<p>Посмотреть, как все эти штуки друг с другом соотносятся можно <a href="https://rpsychologist.com/d3/nhst/">тут</a>.</p>
+<hr>
 </section>
 <section id="stats-testing-errors-connection" class="level3" data-number="23.3.2">
 <h3 data-number="23.3.2" class="anchored" data-anchor-id="stats-testing-errors-connection"><span class="header-section-number">23.3.2</span> Связь ошибки первого и второга рода</h3>
@@ -920,18 +1033,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="stats-testing-algorithm" class="level2" data-number="23.4">
 <h2 data-number="23.4" class="anchored" data-anchor-id="stats-testing-algorithm"><span class="header-section-number">23.4</span> Агоритм тестирования статистических гипотез</h2>
+<p>Для тестирования гипотез есть два сценария: <em>первый</em> и <em>тот, которым мы будем пользоваться</em>. Первый вариант чуть более классический, второй — более гибкий.</p>
+<p><strong>Сценарий номер раз</strong></p>
+<ol type="1">
+<li>Формулировка гипотезы</li>
+<li>Выбор статистического критерия</li>
+<li>Выбор уровня значимости <span class="math inline">\(\alpha\)</span></li>
+<li>Построение закона распредления статистики критерия при условии, что нулевая гипотеза верна</li>
+<li>Определение границ критической области</li>
+<li>Расчёт выборочной статистики</li>
+<li>Определение, попадает ли наблюдемое значение статистики в критическую область и вынесение решения</li>
+</ol>
+<p><strong>Сценарий номер два</strong></p>
+<ol type="1">
+<li>Формулировка гипотезы</li>
+<li>Выбор статистического критерия</li>
+<li>Выбор уровня значимости <span class="math inline">\(\alpha\)</span></li>
+<li>Построение закона распредлеения статистики критерия при условии, что нулевая гипотеза верна</li>
+<li>Расчёт выборочной статистики</li>
+<li>Расчёт достигнутого уровня значимости <em>p-value</em></li>
+<li>Сопоставление <span class="math inline">\(\alpha\)</span> и <em>p-value</em> и вынесение решения</li>
+</ol>
+<p>Почему второй вариант более гибкий? Представим, что мы захотели понизить уровень значимости с <span class="math inline">\(0.05\)</span> до <span class="math inline">\(0.01\)</span> — такие уровни значимости всречаются, например, в медицине. Если мы идем по первому сценарию, то нам надо заново пересчитать критические значения и вновь проанализировать, попадает ли наблюдаемое значение в критическую область. Если мы адепты второго сценария, то нам надо только выполнить одно новое сравнение нашего <em>p-value</em> с новым уровнем значимости.</p>
 </section>
-<section id="stats-testing-multiple-comparisons" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="stats-testing-multiple-comparisons"><span class="header-section-number">23.5</span> Проблема множественных сравнений</h2>
+<section id="stats-testing-effect-size" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="stats-testing-effect-size"><span class="header-section-number">23.5</span> Размер эффекта</h2>
 </section>
-<section id="stats-testing-multiple-testing" class="level2" data-number="23.6">
-<h2 data-number="23.6" class="anchored" data-anchor-id="stats-testing-multiple-testing"><span class="header-section-number">23.6</span> Проблема количества статистических тестов</h2>
-</section>
-<section id="stats-testing-effect-size" class="level2" data-number="23.7">
-<h2 data-number="23.7" class="anchored" data-anchor-id="stats-testing-effect-size"><span class="header-section-number">23.7</span> Размер эффекта</h2>
-</section>
-<section id="stats-testing-power" class="level2" data-number="23.8">
-<h2 data-number="23.8" class="anchored" data-anchor-id="stats-testing-power"><span class="header-section-number">23.8</span> Статистическая мощность</h2>
+<section id="stats-testing-power" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="stats-testing-power"><span class="header-section-number">23.6</span> Статистическая мощность</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Статистическая мощность Post hoc">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -943,11 +1072,62 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>НАПИСАТЬ</p>
+<p>есть ли смысл рассчитывать статистическую мощность пост хок?</p>
 <p>кажется, нет, так как эффект уже нашли</p>
 </div>
 </div>
+</section>
+<section id="stats-testing-false-positive" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="stats-testing-false-positive"><span class="header-section-number">23.7</span> Ложноположительный вывод</h2>
+<section id="stats-testing-multiple-comparisons" class="level3" data-number="23.7.1">
+<h3 data-number="23.7.1" class="anchored" data-anchor-id="stats-testing-multiple-comparisons"><span class="header-section-number">23.7.1</span> Проблема множественных сравнений</h3>
+<p>Итак, мы сравниваем попарно все группы наблюдений между собой. В каждом сравнении мы фиксируем вероятность ошибки первого рода с помощью уровня значимости на уровне <span class="math inline">\(0.05\)</span>. А какова будет вероятность ошибки, если мы проводим несколько сравнений?</p>
+<p>Считаем, что наши сравнения независимы, поэтому вероятности будут перемножаться1. Если верояность ошибиться в одном сравнении равна <span class="math inline">\(\alpha\)</span>, то вероятность сделать правильный вывод — <span class="math inline">\(1 - \alpha\)</span>. Тогда вероятность сделать правильный вывод в <span class="math inline">\(m\)</span> сравнениях — <span class="math inline">\((1 - \alpha)^m\)</span>. Отсюда мы можем вывести вероятность ошибиться хотя бы в одном сравнении:</p>
+<p><span class="math display">\[
+\mathbb{P}^′ = 1 - (1 - \alpha)^m
+\]</span></p>
+<p>Пусть у нас есть три группы, которые нам надо сравнить друг с другом — получается необходимо провести три сравнения. Итого вероятность ошибиться получается:</p>
+<p><span class="math display">\[
+\mathbb{P}^′ = 1 - (1 - 0.05)^3 \approx 0.143
+\]</span></p>
+<p>Значительно больше, чем <span class="math inline">\(0.05\)</span>, что нехорошо. И дальше только хуже. Поэтому нам надо либо корректировать уровень значимости, либо использовать мощные методы типа дисперсионного анализа.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="stats-testing_files/figure-html/alpha-raise-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Рост вероятности ошибки первого рода при увеличении числа попарных сравнений</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="stats-testing-correction" class="level4" data-number="23.7.1.1">
+<h4 data-number="23.7.1.1" class="anchored" data-anchor-id="stats-testing-correction"><span class="header-section-number">23.7.1.1</span> Корректировка уровня значимости</h4>
+<p>Корректировать уровень значимости можно по-разному. Например, можно разделить <span class="math inline">\(\alpha\)</span> на количество попарных сравнений — такой способ называется поправкой Бонферрони (Bonferroni):</p>
+<p><span class="math display">\[
+\alpha’ = \frac{\alpha}{n},
+\]</span></p>
+<p>где <span class="math inline">\(n\)</span> — число попарных сравнений.</p>
+<p>Поправка Бонферрони считается самой консервативной поправкой — она достаточно сильно уменьшает уровень значимости, и мы можем не поймать искомую закономерность, то есть совершить ошибку второго рода2. Поэтому придумали более либеральные поправки, например, поправку Холма (Холма–Бонферрони, Holm) или поправку Тьюки (Tukey’s HSD test). Можно посмотреть на их формулы, но в целом, не обяз, потому что их все равно никто не знает, а в статистических пакетах мы либо допишем аргумент в функцию, либо нужную галку поставим.</p>
+<p>На практике в силу того, что в статистических пакетах мы работаем с p-value, корректируется именно его значение.</p>
+<p>По достаточно незамысловатой логике Здесь: вариант для поправки Бонферрони.</p>
+<p><span class="math display">\[
+p &lt; \frac{\alpha}{n} \Rightarrow np &lt; \alpha
+\]</span></p>
+<p>Таким образом, мы просто сравниваем уже скорретированное p-value, которое нам считает программа, с тем же самым <span class="math inline">\(\alpha = 0.05\)</span>. Жизнь становится значительно проще и приятнее.</p>
+</section>
+</section>
+<section id="stats-testing-multiple-testing" class="level3" data-number="23.7.2">
+<h3 data-number="23.7.2" class="anchored" data-anchor-id="stats-testing-multiple-testing"><span class="header-section-number">23.7.2</span> Проблема количества статистических тестов</h3>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Здесь использовано обозначение условной вероятности <span class="math inline">\(\mathrm P(A|B)\)</span>, то есть это вероятность того, что случилось событие <span class="math inline">\(A\)</span> при условии, что случилось событие <span class="math inline">\(B\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
