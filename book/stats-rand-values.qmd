@@ -1,5 +1,19 @@
 # Случайные величины {#stats-rand-values}
 
+{{< include _symbols.qmd >}}
+
+```{r stats-rand-values-opts, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+source("clrs.R")
+```
+
+```{r stats-rand-values-pkgs}
+library(tidyverse)
+theme_set(theme_bw())
+library(latex2exp)
+alpha <- 0.5
+```
+
 ## Дискретные случайные величины {#stats-rand-values-discrete}
 
 ### Распределение дискретной случайной величины {#stats-rand-values-discrete-distribution}
@@ -26,6 +40,154 @@
 ### Равномерное распределение {#stats-rand-values-uniform}
 
 ### Нормальное распределение {#stats-rand-values-norm}
+
+$$
+X \sim \norm(\mu, \sigma^2)
+$$
+
+$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{x - \mu}{\sigma}\big)^2}
+$$
+
+Более того, известны вероятности, с которыми значения случайной величины, распределенной по нормальному закону, попадают в определенные интервалы стандартных отклонений (@fig-norm):
+
+$$
+\prob \big( X \in (\mu\!-\!\sigma, \mu\!+\!\sigma) \big) = 0.682
+$$
+
+$$
+\prob \big( X \in (\mu\!-\!2\sigma, \mu\!+\!2\sigma) \big) = 0.954
+$$
+
+$$
+\prob \big( X \in (\mu\!-\!3\sigma, \mu\!+\!3\sigma) \big) = 0.996
+$$
+
+```{r norm}
+#| label: fig-norm
+#| fig-cap: "Нормальное распределение"
+
+tibble(x = seq(-4, 4, by = .001),
+       d = dnorm(x)) -> stnorm
+stnorm |> filter(x > 0 & x < 1) |> bind_rows(tibble(x = c(1, 0), d = c(0, 0))) -> poly01
+stnorm |> filter(x < 0 & x > -1) |> bind_rows(tibble(x = c(0, -1), d = c(0, 0))) -> poly0m1
+stnorm |> filter(x > 1 & x < 2) |> bind_rows(tibble(x = c(2, 1), d = c(0, 0))) -> poly12
+stnorm |> filter(x < -1 & x > -2) |> bind_rows(tibble(x = c(-1, -2), d = c(0, 0))) -> polym1m2
+stnorm |> filter(x > 2 & x < 3) |> bind_rows(tibble(x = c(3, 2), d = c(0, 0))) -> poly23
+stnorm |> filter(x < -2 & x > -3) |> bind_rows(tibble(x = c(-2, -3), d = c(0, 0))) -> polym2m3
+stnorm |> filter(x > 3) |> bind_rows(tibble(x = c(4, 3), d = c(0, 0))) -> poly34
+stnorm |> filter(x < -3) |> bind_rows(tibble(x = c(-3, -4), d = c(0, 0))) -> polym3m4
+
+stnorm |> 
+  ggplot(aes(x, d)) +
+  geom_polygon(data = poly01, 
+               fill = clrs$blue2, 
+               alpha = alpha) +
+  geom_polygon(data = poly0m1, 
+               fill = clrs$blue2, 
+               alpha = alpha) +
+  geom_polygon(data = poly12, 
+               fill = clrs$springgreen2, 
+               alpha = alpha) +
+  geom_polygon(data = polym1m2, 
+               fill = clrs$springgreen2, 
+               alpha = alpha) +
+  geom_polygon(data = poly23, 
+               fill = clrs$orange2, 
+               alpha = alpha) +
+  geom_polygon(data = polym2m3, 
+               fill = clrs$orange2, 
+               alpha = alpha) +
+  geom_polygon(data = poly34, 
+               fill = clrs$red2, 
+               alpha = alpha) +
+  geom_polygon(data = polym3m4, 
+               fill = clrs$red2, 
+               alpha = alpha) +
+  geom_line() +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = c(-3, -2, -1, 1, 2, 3), linetype = "dotted") +
+  annotate(geom = "text", 
+           label = c("34.1%", "34.1%", "13.6%", "13.6%", "2.1%", "2.1%", "0.1%", "0.1%"),
+           x = c(.5, -.5, 1.5, -1.5, 2.5, -2.5, 3.5, -3.5),
+           y = .05) +
+  scale_x_continuous(breaks = -4:4,
+                     labels = TeX(
+                       c("", "$$\\mu - 3\\sigma$$", "$$\\mu - 2\\sigma$$", "$$\\mu - \\sigma$$",
+                         "$$\\mu$$",
+                         "$$\\mu + \\sigma$$", "$$\\mu + 2\\sigma$$", "$$\\mu + 3\\sigma$$", "")
+                       )
+                     ) +
+  labs(x = "Values", y = "Density")
+```
+
+Задавая различные параметры распределения (математическое ожидание и дисперсию), мы можем получать разные нормальные распределения (@fig-norms).
+
+```{r norms}
+#| label: fig-norms
+#| fig-cap: Нормальное распределение в разными параметрами
+
+tibble(x = seq(-5, 7, by = .001),
+       ...0_1 = dnorm(x, mean = 0, sd = 1),
+       ...1_1 = dnorm(x, mean = 1, sd = 1),
+       ...1_2 = dnorm(x, mean = 1, sd = 2),
+       ...m1.5_0.5 = dnorm(x, mean = -1.5, sd = 0.5)) |> 
+  pivot_longer(cols = -x, names_to = "params", values_to = "d") |> 
+  mutate(params = str_replace(params, "...", "μ = ") |> 
+           str_replace("_", ", σ = ") |> 
+           str_replace("m", "−")) -> norms
+
+norms |> 
+  ggplot(aes(x, d, color = params)) +
+  geom_line() +
+  labs(x = "Value", y = "Density", color = "Parameters") +
+  scale_color_manual(values = c(clrs$red4, clrs$springgreen4, clrs$violet4, clrs$lightblue4)) +
+  theme(legend.position = "bottom")
+
+```
+
+#### Стандартное нормальное распределение {#stats-rand-values-stnorm}
+
+```{r stnorm}
+#| label: fig-stnorm
+#| fig-cap: "Стандартное нормальное распределение"
+
+stnorm |> 
+  ggplot(aes(x, d)) +
+  geom_polygon(data = poly01, 
+               fill = clrs$blue2,
+               alpha = alpha) +
+  geom_polygon(data = poly0m1,
+               fill = clrs$blue2,
+               alpha = alpha) +
+  geom_polygon(data = poly12,
+               fill = clrs$springgreen2,
+               alpha = alpha) +
+  geom_polygon(data = polym1m2,
+               fill = clrs$springgreen2,
+               alpha = alpha) +
+  geom_polygon(data = poly23,
+               fill = clrs$orange2,
+               alpha = alpha) +
+  geom_polygon(data = polym2m3,
+               fill = clrs$orange2,
+               alpha = alpha) +
+  geom_polygon(data = poly34,
+               fill = clrs$red2,
+               alpha = alpha) +
+  geom_polygon(data = polym3m4,
+               fill = clrs$red2,
+               alpha = alpha) +
+  geom_line() +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = c(-3, -2, -1, 1, 2, 3), linetype = "dotted") +
+  annotate(geom = "text", 
+           label = c("34.1%", "34.1%", "13.6%", "13.6%", "2.1%", "2.1%", "0.1%", "0.1%"),
+           x = c(.5, -.5, 1.5, -1.5, 2.5, -2.5, 3.5, -3.5),
+           y = .05) +
+  scale_x_continuous(breaks = -4:4) +
+  labs(x = "Values", y = "Density")
+```
 
 ### Геометрическое распределение {#stats-rand-values-geom}
 
