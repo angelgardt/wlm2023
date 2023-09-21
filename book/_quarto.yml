@@ -149,8 +149,8 @@ format:
   html:
     cover-image: pics/book-cover.png
     theme: 
-      light: [lightstyle.scss, custom.scss, tasklight.scss]
-      dark: [darkstyle.scss, custom.scss, taskdark.scss]
+      light: [css/lightstyle.scss, css/custom.scss, css/tasklight.scss]
+      dark: [css/darkstyle.scss, css/custom.scss, css/taskdark.scss]
   pdf:
     documentclass: scrreprt
 
