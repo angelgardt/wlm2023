@@ -11,6 +11,15 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 
 <img id="hw1-1-level" class="level"/>
 
+```{r, include=FALSE}
+library(checkdown)
+check_question(answer = "тру",
+               wrong = "wrong",
+               right = "cool!",
+               button_label = "Check!")
+```
+
+
 ::: {#hw1-1-task .task}
 Текст задания `переменная`.
 :::
