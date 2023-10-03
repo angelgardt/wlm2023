@@ -240,7 +240,7 @@ class(FALSE)
 
 ### `NA`
 
-Пропущенное значение (**N**ot **A**vailable). Обобзначает отсутствие значения там, где оно вроде бы должно быть. Причины могут быть разные:
+Пропущенное значение (**N**ot **A**vailable). Обозначает отсутствие значения там, где оно вроде бы должно быть. Причины могут быть разные:
 
 - технические ошибки записи данных
 - ошибки настройки платформы --- забыли сделать ответы обязательными
@@ -317,7 +317,7 @@ ggplot(NULL) +
 
 ## От направленного отрезка к набору чисел [2]
 
-[Договоримся](), что все векторы у нас начинаются из точки $(0, 0)$:
+Договоримся, что все векторы у нас начинаются из точки $(0, 0)$:
 
 ```{r vec-free, echo=FALSE}
 ggplot(NULL) +
@@ -400,6 +400,31 @@ v_num[v_num > 5] # по условию
 ```
 
 
+## Векторизация
+
+Для того, чтобы выполнить операцию на всем векторе поэлементно, не нужно перебирать его элементы.
+
+```{r}
+vec <- 1:4
+vec - 1
+vec^2
+sqrt(vec)
+```
+
+
+## Recycling
+
+Если мы будем, например, складывать два вектора разной длины, то более короткий зациклится.
+
+```{r}
+vec1 <- 1:10
+vec2 <- 1:2
+
+vec1
+vec2
+vec1 + vec2
+```
+
 ## Матрицы
 
 <center>
@@ -445,7 +470,7 @@ m1[1:2, 2:4] # часть матрицы
 
 - Вектор --- одномерный массив.
 - Матрица --- двумерный массив.
-- **Массивы** --- структуры,которые объединяют данные только одного типа.
+- **Массивы** --- структуры, которые объединяют данные только одного типа.
 
 ```{r}
 c(2, TRUE)
@@ -532,96 +557,416 @@ diam[1:4, c("carat", "price")] # вытащить отдельные строк�
 
 ## Функции
 
-When you click the **Render** button a document will be generated that includes:
+> Если какой-либо кусок кода повторяется более трех раз, имеет смысл обернуть его в функцию.
 
--   Content authored with markdown
--   Output from executable code
+**Функция** --- это некий черный ящик, который
+
+- принимает что-либо на вход
+- проделывает с этим какие-либо операции
+- и что-то возвращает
+
+## Синтаксис функции
+
+```{r, eval=FALSE}
+function_name <- function(arguments) {
+    ...
+    body
+    ...
+    return()
+}
+```
+
+Элементы функции:
+
+- имя функции (`function_name`) --- как мы к ней будем обращаться при вызове
+- аргументы функции (`arguments`) --- какие значения и объекты она принимает на вход
+- тело функции (`body`) --- что она делает с входными объектами
+- возвращаемое значение (`return()`) --- что функция вернет в качестве результата работы
+
+Вызов функции:
+
+```{r, eval=FALSE}
+function_name(arguments)
+```
+
+
+## Пример функции
+
+```{r}
+cot <- function(x) {
+  result <- 1 / tan(x)
+  return(result)
+}
+cot(3)
+```
+
+
+## Упростим синтаксис
+
+Если функция простая, можно не создавать временные объекты:
+
+```{r}
+cot <- function(x) {
+  return(1 / tan(x))
+}
+cot(3)
+```
+
+Если функция короткая, можно даже не писать `return()`:
+
+```{r}
+cot <- function(x) {
+  1 / tan(x)
+}
+cot(3)
+```
+
+
+## Пример более полезной функции
+
+```{r, eval=FALSE}
+mr_preproc <- function(d) {
+
+  require(tidyverse)
+  
+  d |> select(
+    # select columns we need
+    "Индивидуальный_код",
+    correctAns,
+    base_pic,
+    rotated_pic,
+    resp_MR_easy.keys,
+    resp_MR_easy.corr,
+    resp_MR_easy.rt
+  ) |>
+    drop_na() |> # remove technical NAs (recording artefacts, not missing data)
+    mutate(task = "MR",
+           # add task name (mental rotation)
+           level = "easy",
+           # add difficulty level
+           trial = 1:16) |> # number trials
+    rename(
+      "id" = "Индивидуальный_код",
+      # rename columns for handy usage
+      "key" = resp_MR_easy.keys,
+      "is_correct" = resp_MR_easy.corr,
+      "rt" = resp_MR_easy.rt
+    ) -> MR_easy # ready to use
+  
+  
+  d |> select(
+    # select columns we need
+    "Индивидуальный_код",
+    correctAns,
+    base_pic,
+    rotated_pic,
+    resp_MR_medium.keys,
+    resp_MR_medium.corr,
+    resp_MR_medium.rt
+  ) |>
+    drop_na() |> # remove technical NAs (recording artefacts, not missing data)
+    mutate(task = "MR",
+           # add task name (mental rotation)
+           level = "medium",
+           # add difficulty level
+           trial = 1:16) |>  # number trials
+    rename(
+      # rename columns for handy usage
+      "id" = "Индивидуальный_код",
+      "key" = resp_MR_medium.keys,
+      "is_correct" = resp_MR_medium.corr,
+      "rt" = resp_MR_medium.rt
+    ) -> MR_medium # ready to use
+  
+  
+  
+  d |> select(
+    # select columns we need
+    "Индивидуальный_код",
+    correctAns,
+    base_pic,
+    rotated_pic,
+    resp_MR_hard.keys,
+    resp_MR_hard.corr,
+    resp_MR_hard.rt
+  ) |>
+    drop_na() |> # remove technical NAs (recording artefacts, not missing data)
+    mutate(task = "MR",
+           # add task name (mental rotation)
+           level = "hard",
+           # add difficulty level
+           trial = 1:16) |> # number trials
+    rename(
+      # rename columns for handy usage
+      "id" = "Индивидуальный_код",
+      "key" = resp_MR_hard.keys,
+      "is_correct" = resp_MR_hard.corr,
+      "rt" = resp_MR_hard.rt
+    ) -> MR_hard # ready to use
+  
+  # bind all conditions of mental rotation task to one tibble
+  
+  bind_rows(MR_easy, MR_medium, MR_hard) -> MR
+  
+  return(MR)
+ 
+}
+```
 
 ## Условный оператор
+
+Иногда при написании функции может понадобиться обработать какие-то важные случаи.
+
+- Например, в двух запусках сбора данных столбцы были названы по-разному: если это не учесть, код будет ломаться.
+
+Для этого подойдет условный оператор.
+
+## Структура условного оператора
+
+```{r, eval=FALSE}
+if (condition) {
+  ...
+  body
+  ...
+} else {
+  ...
+  body
+  ...
+}
+```
+
+
+## Пример функции с условным оператором
+
+```{r}
+odd_even <- function(x) {
+  
+  if (x %% 2 == 0) {
+    
+    return("even")
+    
+  } else {
+    
+    return("odd")
+    
+  }
+  
+}
+
+```
+
+```{r}
+odd_even(2)
+odd_even(34)
+odd_even(11)
+odd_even(135)
+```
+
+
+## Пример функции из реального проекта с условным оператором
+
+```{r}
+ms_preproc <- function(d) {
+  
+  require(tidyverse)
+  
+  # Since we our participants could fill the fields in any order, 
+  # here is a function which allows us to count correct inputs 
+  # our subjects made.
+  
+  if ("mouse_MSe.time" %in% colnames(d)) {
+    
+    d |> select(
+      "Индивидуальный_код",
+      matches("^noun"),
+      matches("resp\\d\\.text$"),
+      "mouse_MSe.time"
+    ) |>
+      filter_at(vars(paste0("noun", 1:3)), all_vars(!is.na(.))) |>
+      filter_at(vars(paste0("noun", 4:7)), all_vars(is.na(.))) |>
+      mutate(task = "MS",
+             level = "easy") |>
+      rename(
+        "resp1" = resp1.text,
+        "resp2" = resp2.text,
+        "resp3" = resp3.text,
+        "id" = "Индивидуальный_код",
+        "rt" = "mouse_MSe.time"
+      ) |>
+      select(-c(paste0("noun", 4:7))) -> MS_easy
+    
+    d |> select(
+      "Индивидуальный_код",
+      matches("^noun"),
+      matches("MSm.text$"),
+      "mouse_MSm.time"
+    ) |>
+      filter_at(vars(paste0("noun", 4:5)), all_vars(!is.na(.))) |>
+      filter_at(vars(paste0("noun", 6:7)), all_vars(is.na(.))) |>
+      mutate(task = "MS",
+             level = "medium") |> 
+      rename("id" = "Индивидуальный_код",
+             "rt" = "mouse_MSm.time") |>
+      rename_with(.fn = str_replace_all, 
+                  pattern = "_MSm\\.text", 
+                  replacement = "") |> 
+      select(-noun6, -noun7) -> MS_medium
+    
+    
+    d |> select(
+      "Индивидуальный_код",
+      matches("^noun"),
+      matches("MSh.text$"),
+      "mouse_MSh.time"
+    ) |>
+      filter_at(vars(paste0("noun", 1:7)), all_vars(!is.na(.))) |>
+      mutate(task = "MS",
+             level = "hard") |>
+      rename("id" = "Индивидуальный_код",
+             "rt" = "mouse_MSh.time") |> 
+      rename_with(.fn = str_replace_all,
+                  pattern = "_MSh\\.text",
+                  replacement = "") -> MS_hard
+    
+  } else {
+    
+    d |> select("Индивидуальный_код",
+                matches("^noun"),
+                matches("resp\\d\\.text$")) |>
+      filter_at(vars(paste0("noun", 1:3)), all_vars(!is.na(.))) |>
+      filter_at(vars(paste0("noun", 4:7)), all_vars(is.na(.))) |>
+      mutate(task = "MS",
+             level = "easy",
+             rt = NA) |>
+      rename(
+        "resp1" = resp1.text,
+        "resp2" = resp2.text,
+        "resp3" = resp3.text,
+        "id" = "Индивидуальный_код"
+      ) |>
+      select(-c(paste0("noun", 4:7))) -> MS_easy
+    
+    d |> select("Индивидуальный_код",
+                matches("^noun"),
+                matches("MSm.text$")) |>
+      filter_at(vars(paste0("noun", 4:5)), all_vars(!is.na(.))) |>
+      filter_at(vars(paste0("noun", 6:7)), all_vars(is.na(.))) |>
+      mutate(task = "MS",
+             level = "medium",
+             rt = NA) |>
+      rename("id" = "Индивидуальный_код") |>
+      rename_with(.fn = str_replace_all,
+                  pattern = "_MSm\\.text",
+                  replacement = "") |> 
+      select(-noun6, -noun7) -> MS_medium
+    
+    
+    d |> select("Индивидуальный_код",
+                matches("^noun"),
+                matches("MSh.text$")) |>
+      filter_at(vars(paste0("noun", 1:7)), all_vars(!is.na(.))) |>
+      mutate(task = "MS",
+             level = "hard",
+             rt = NA) |>
+      rename("id" = "Индивидуальный_код") |> 
+      rename_with(.fn = str_replace_all,
+                  pattern = "_MSh\\.text", 
+                  replacement = "") -> MS_hard
+  }
+  
+  tibble(
+    id = MS_easy$id[1],
+    trials = 1:16,
+    MS_easy_n = n_count(MS_easy),
+    MS_easy_rt = MS_easy$rt,
+    MS_medium_n = n_count(MS_medium),
+    MS_medium_rt = MS_medium$rt,
+    MS_hard_n = n_count(MS_hard),
+    MS_hard_rt = MS_hard$rt
+  ) |>
+    pivot_longer(cols = -c("id", "trials"), values_to = "value") |>
+    separate(name, c("task", "level", "name")) |>
+    pivot_wider(values_from = value, names_from = name) |>
+    mutate(acc = ifelse(level == "easy", n / 3,
+                        ifelse(
+                          level == "medium", n / 5,
+                          ifelse(level == "hard", n / 7, NA)
+                        ))) -> MS
+  
+  return(MS)
+  
+}
+```
+
+
+## Вне функций
+
+Вне функций условный оператор практически не используется, потому что для предобработки данных есть удобная функция `ifelse()`.
 
 
 ## Циклы
 
+То, что мы написали функция, чтобы не дублировать код --- это хорошо, однако эту функцию нам все равно придется запускать много раз, если нам надо этот кусок кода повторить.
 
+Поэтому используем цикл:
 
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r, echo=TRUE}
-1 + 1
+```{r, eval=FALSE}
+for (i in a:b) {
+  ...
+  body
+  ...
+}
 ```
 
 
-## Формулы
+## Пример простеньких циклов
 
-$$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
-$$
-
-$$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-$$
-
-
-## Колонки
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-Текст правой колонки
-:::
-
-::::
-
-
-## Колонки с картинкой справа
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
-
-
-## Колонки с картинкой слева
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
-
-
-## График
-
-```{r plot}
-plot(sample(1:100, 30))
+```{r}
+for (i in 1:10) {
+  print(i)
+}
 ```
 
-## Итоги
+```{r}
+for (j in 1:10) {
+  print(sqrt(j) + j^2)
+}
+```
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+
+## Пример цикла для чтения и предоработки данных
+
+```{r, eval=FALSE}
+for (i in 1:length(files)) {
+  
+  print(files[i])
+  
+  d <- read_csv(files[i], show_col_types = FALSE)
+  
+  MR_data |> bind_rows(mr_preproc(d) |> mutate(file = files[i])) -> MR_data
+  ST_data |> bind_rows(st_preproc(d) |> mutate(file = files[i])) -> ST_data
+  MS_data |> bind_rows(ms_preproc(d) |> mutate(file = files[i])) -> MS_data
+  NASATLX_data |> bind_rows(nasatlx_preproc(d) |> mutate(file = files[i])) -> NASATLX_data
+  SEQUENCE_data |> bind_rows(sequence_preproc(d) |> mutate(file = files[i])) -> SEQUENCE_data
+
+}
+```
 
 
-# L1. Основы R. Типы и структуры данных {#end}
+
+## Циклы в R --- это зло! Они долго работают!
+
+> Да, циклы работает не быстро --- это правда. Но, с другой стороны, мы и не терабайты данных анализируем.
+
+Допустим, у нас 50 респондентов. Цикл, подобный тому, что на предыдущем слайде, отбработает секунд за 5. Даже чай не успеете заварить.
+
+Безусловно, есть более изящные и быстрые инструменты, и с ними мы познакомимся на предобработке данных. Но в целом, можно и циклом обойтись.
+
+Конечно, если у вас огромные датасеты и вы работаете с Big Data, то прогон цикла может значительно занянуться --- в этом случае разумно сразу использовать другие инструменты.
+
+
+
+# L1 // Основы R. Типы и структуры данных {#end}
 
 :::: {.quarto-title-authors}
 ::: {.quarto-title-author}
