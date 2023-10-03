@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,49 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +73,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -79,10 +113,12 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -101,48 +137,70 @@ div.csl-indent {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../hub/index.html">
+    <a class="nav-link" href="./../hub/index.html" rel="" target="">
  <span class="menu-text">Домой</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
+    <a class="nav-link" href="./../book/index.html" rel="" target="">
  <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
+    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
  <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
+    <a class="nav-link" href="./../practice/index.html" rel="" target="">
  <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
+    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
  <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
+    <a class="nav-link" href="./../projects/index.html" rel="" target="">
  <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./WLM-2023.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./WLM-2023.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./andan-descriptives.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -150,576 +208,698 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./signs.html" class="sidebar-item-text sidebar-link">Обозначения</a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">R</span>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-dtypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Типы данных</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-dstructs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Структуры данных</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-funcs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Функции</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-controlflow.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Управляющие конструкции</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Работа с данными</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Строки</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-dates.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дата и время</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-vis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Визуализация</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-tidy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tidy Data</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r-ggplot2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><code>ggplot2</code></span></a>
+  <a href="./signs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Обозначения</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Python</span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Математика для анализа данных</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./math-logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Элементы алгебры логики</span></a>
+  <a href="./r-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Основы R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./math-settheory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Элементы теории множеств</span></a>
+  <a href="./r-dtypes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Типы данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./math-combinatorics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Элементы комбинаторики</span></a>
+  <a href="./r-dstructs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Структуры данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./math-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Элементы математического анализа</span></a>
+  <a href="./r-funcs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Функции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./math-linal.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Элементы линейной алгебры</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Теория измерений</span>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./measurements-social-sci.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Измерение в социальных науках</span></a>
+  <a href="./r-controlflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./measurements-psychomentrics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">measurements-psychomentrics.html</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Статистика для анализа данных</span>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></a>
+  <a href="./r-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Работа с данными</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></a>
+  <a href="./r-strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Строки</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></a>
+  <a href="./r-dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Дата и время</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></a>
+  <a href="./r-vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Визуализация</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></a>
+  <a href="./r-tidy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tidy Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r-ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><code>ggplot2</code></span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Методы анализа данных</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Python</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика для анализа данных</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-descriptives.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a>
+  <a href="./math-logic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Элементы алгебры логики</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Сравнение средних</span></a>
+  <a href="./math-settheory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Элементы теории множеств</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></a>
+  <a href="./math-combinatorics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Элементы комбинаторики</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></a>
+  <a href="./math-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Элементы математического анализа</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-simplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Support Vector Regression</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Дисперсионный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Ковариационный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Кластерный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Анализ главных компонент</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Анализ независимых компонент</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Путевой анализ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов</span></a>
+  <a href="./math-linal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Элементы линейной алгебры</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Анализ данных в R</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Теория измерений</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-descriptives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Описательные статистики в R</span></a>
+  <a href="./measurements-social-sci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Измерение в социальных науках</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-ttest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Сравнение средних в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-chisq.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Анализ категориальных данных в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-corr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Корреляционный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-nonparam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-simplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-multiplelinear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-polynomial.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-svr.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Support Vector Regression в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-regreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-anova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Дисперсионный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-ancova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Ковариационный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-manova.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-treesreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-randforestreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-distributions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-logreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-multinomlogreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-poissonreg.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-treesclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-randforestclass.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-cluster.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">Кластерный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-lda.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-pca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">Анализ главных компонент в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-ica.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">Анализ независимых компонент в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-cca.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-efa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-sem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-cfa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">Путевой анализ в R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./randan-timeseries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов в R</span></a>
+  <a href="./measurements-psychomentrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">measurements-psychomentrics.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Анализ данных в Python</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Статистика для анализа данных</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Введение в статистику</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-rand-exp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Случайный эксперимент</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-rand-values.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Случайные величины</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Оценивание статистических параметров</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stats-testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Тестирование статистических гипотез</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Методы анализа данных</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-descriptives.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-ttest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Сравнение средних</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-chisq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Анализ категориальных данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Корреляционный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-nonparam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-simplelinear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-multiplelinear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-svr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Support Vector Regression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-regreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-anova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Дисперсионный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-ancova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Ковариационный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-manova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-treesreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-randforestreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-logreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-multinomlogreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-poissonreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-treesclass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-randforestclass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-cluster.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Кластерный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-lda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-pca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Анализ главных компонент</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-ica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Анализ независимых компонент</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-cca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-efa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-sem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-cfa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-path.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Путевой анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-timeseries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных в R</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-descriptives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Описательные статистики в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-ttest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Сравнение средних в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-chisq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Анализ категориальных данных в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Корреляционный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-nonparam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Непараметрические методы анализа данных в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-simplelinear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Общие линейные модели. Простая линейная регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-multiplelinear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">Множественная линейная регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Полиномиальная регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-svr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">Support Vector Regression в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-regreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">Регуляризованная регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-anova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">Дисперсионный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-ancova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">Ковариационный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-manova.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">Многомерный дисперсионный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-treesreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">Деревья решений. Регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-randforestreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">Случайный лес. Регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">Определение вида распределения переменной в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-logreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">Обобщенные линейные модели. Логистическая регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-multinomlogreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Мультиномиальная логистическая регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-poissonreg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">Пуассоновская регрессия в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andan-svm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Support Vector Machine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-treesclass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Деревья решений. Классификация в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-randforestclass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">Случайный лес. Классификация в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-cluster.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">Кластерный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-lda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">Линейный дискриминантный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-pca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">Анализ главных компонент в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-ica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">Анализ независимых компонент в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-cca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">Анализ скоррелированных компонент в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-efa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">Эксплораторный факторный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-sem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">Моделирование структурными уравнениями в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-cfa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">Конфирматорный факторный анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-path.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">Путевой анализ в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./randan-timeseries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">Основы анализа временных рядов в R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных в Python</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Приложения</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Приложения</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">Числа и железо</span></a>
+  <a href="./appendix-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">Числа и железо</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">Строки и железо</span></a>
+  <a href="./appendix-strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">Строки и железо</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-kilobytes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></a>
+  <a href="./appendix-kilobytes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">Килобайты</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-memory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">Память и процессор</span></a>
+  <a href="./appendix-memory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">Память и процессор</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-proglang.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">Языки программирования</span></a>
+  <a href="./appendix-proglang.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">Языки программирования</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">Git</span></a>
+  <a href="./appendix-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">Git</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-formulas.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">Формулы</span></a>
+  <a href="./appendix-formulas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">Формулы</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#andan-descriptives-kinds-of-stats" id="toc-andan-descriptives-kinds-of-stats" class="nav-link active" data-scroll-target="#andan-descriptives-kinds-of-stats"><span class="toc-section-number">24.1</span>  Виды статистики</a></li>
-  <li><a href="#andan-descriptives-central-tendency" id="toc-andan-descriptives-central-tendency" class="nav-link" data-scroll-target="#andan-descriptives-central-tendency"><span class="toc-section-number">24.2</span>  Меры центральной тенденции</a>
+  <li><a href="#andan-descriptives-kinds-of-stats" id="toc-andan-descriptives-kinds-of-stats" class="nav-link active" data-scroll-target="#andan-descriptives-kinds-of-stats"><span class="header-section-number">24.1</span> Виды статистики</a></li>
+  <li><a href="#andan-descriptives-central-tendency" id="toc-andan-descriptives-central-tendency" class="nav-link" data-scroll-target="#andan-descriptives-central-tendency"><span class="header-section-number">24.2</span> Меры центральной тенденции</a>
   <ul class="collapse">
-  <li><a href="#andan-descriptives-mode" id="toc-andan-descriptives-mode" class="nav-link" data-scroll-target="#andan-descriptives-mode"><span class="toc-section-number">24.2.1</span>  Мода</a></li>
-  <li><a href="#andan-descriptives-unimodal-bimodal" id="toc-andan-descriptives-unimodal-bimodal" class="nav-link" data-scroll-target="#andan-descriptives-unimodal-bimodal"><span class="toc-section-number">24.2.2</span>  Унимодальные и полимодальные распределения</a></li>
-  <li><a href="#andan-descriptives-median" id="toc-andan-descriptives-median" class="nav-link" data-scroll-target="#andan-descriptives-median"><span class="toc-section-number">24.2.3</span>  Медиана</a></li>
-  <li><a href="#andan-descriptives-mean" id="toc-andan-descriptives-mean" class="nav-link" data-scroll-target="#andan-descriptives-mean"><span class="toc-section-number">24.2.4</span>  Среднее</a></li>
-  <li><a href="#andan-descriptives-mean-vs-median" id="toc-andan-descriptives-mean-vs-median" class="nav-link" data-scroll-target="#andan-descriptives-mean-vs-median"><span class="toc-section-number">24.2.5</span>  Среднее vs медиана</a></li>
+  <li><a href="#andan-descriptives-mode" id="toc-andan-descriptives-mode" class="nav-link" data-scroll-target="#andan-descriptives-mode"><span class="header-section-number">24.2.1</span> Мода</a></li>
+  <li><a href="#andan-descriptives-unimodal-bimodal" id="toc-andan-descriptives-unimodal-bimodal" class="nav-link" data-scroll-target="#andan-descriptives-unimodal-bimodal"><span class="header-section-number">24.2.2</span> Унимодальные и полимодальные распределения</a></li>
+  <li><a href="#andan-descriptives-median" id="toc-andan-descriptives-median" class="nav-link" data-scroll-target="#andan-descriptives-median"><span class="header-section-number">24.2.3</span> Медиана</a></li>
+  <li><a href="#andan-descriptives-mean" id="toc-andan-descriptives-mean" class="nav-link" data-scroll-target="#andan-descriptives-mean"><span class="header-section-number">24.2.4</span> Среднее</a></li>
+  <li><a href="#andan-descriptives-mean-vs-median" id="toc-andan-descriptives-mean-vs-median" class="nav-link" data-scroll-target="#andan-descriptives-mean-vs-median"><span class="header-section-number">24.2.5</span> Среднее vs медиана</a></li>
   </ul></li>
-  <li><a href="#andan-descriptives-variability" id="toc-andan-descriptives-variability" class="nav-link" data-scroll-target="#andan-descriptives-variability"><span class="toc-section-number">24.3</span>  Меры разброса</a>
+  <li><a href="#andan-descriptives-variability" id="toc-andan-descriptives-variability" class="nav-link" data-scroll-target="#andan-descriptives-variability"><span class="header-section-number">24.3</span> Меры разброса</a></li>
+  <li><a href="#why_we_need_variation" id="toc-why_we_need_variation" class="nav-link" data-scroll-target="#why_we_need_variation"><span class="header-section-number">24.4</span> Зачем нужны меры разброса</a>
   <ul class="collapse">
-  <li><a href="#andan-descriptives-range" id="toc-andan-descriptives-range" class="nav-link" data-scroll-target="#andan-descriptives-range"><span class="toc-section-number">24.3.1</span>  Минимум, максимум, размах</a></li>
-  <li><a href="#andan-descriptives-average-absolute-deviation" id="toc-andan-descriptives-average-absolute-deviation" class="nav-link" data-scroll-target="#andan-descriptives-average-absolute-deviation"><span class="toc-section-number">24.3.2</span>  Среднее абсолютное отклонение</a></li>
-  <li><a href="#andan-descriptives-variance" id="toc-andan-descriptives-variance" class="nav-link" data-scroll-target="#andan-descriptives-variance"><span class="toc-section-number">24.3.3</span>  Дисперсия</a></li>
-  <li><a href="#andan-descriptives-standard-deviation" id="toc-andan-descriptives-standard-deviation" class="nav-link" data-scroll-target="#andan-descriptives-standard-deviation"><span class="toc-section-number">24.3.4</span>  Стандартное отклонение</a></li>
-  <li><a href="#andan-descriptives-quantiles" id="toc-andan-descriptives-quantiles" class="nav-link" data-scroll-target="#andan-descriptives-quantiles"><span class="toc-section-number">24.3.5</span>  Квантили</a></li>
-  <li><a href="#andan-descriptives-quartiles" id="toc-andan-descriptives-quartiles" class="nav-link" data-scroll-target="#andan-descriptives-quartiles"><span class="toc-section-number">24.3.6</span>  Квартили</a></li>
+  <li><a href="#key_features_of_data" id="toc-key_features_of_data" class="nav-link" data-scroll-target="#key_features_of_data"><span class="header-section-number">24.4.1</span> Основные характеристики статистических данных</a></li>
+  <li><a href="#andan-descriptives-range" id="toc-andan-descriptives-range" class="nav-link" data-scroll-target="#andan-descriptives-range"><span class="header-section-number">24.4.2</span> Минимум, максимум, размах</a></li>
+  <li><a href="#andan-descriptives-average-absolute-deviation" id="toc-andan-descriptives-average-absolute-deviation" class="nav-link" data-scroll-target="#andan-descriptives-average-absolute-deviation"><span class="header-section-number">24.4.3</span> Среднее абсолютное отклонение</a></li>
+  <li><a href="#andan-descriptives-variance" id="toc-andan-descriptives-variance" class="nav-link" data-scroll-target="#andan-descriptives-variance"><span class="header-section-number">24.4.4</span> Дисперсия</a></li>
+  <li><a href="#andan-descriptives-standard-deviation" id="toc-andan-descriptives-standard-deviation" class="nav-link" data-scroll-target="#andan-descriptives-standard-deviation"><span class="header-section-number">24.4.5</span> Стандартное отклонение</a></li>
+  <li><a href="#andan_descriptives_var_features" id="toc-andan_descriptives_var_features" class="nav-link" data-scroll-target="#andan_descriptives_var_features"><span class="header-section-number">24.4.6</span> Свойства дисперсии и стандартного отклонения</a></li>
+  <li><a href="#andan-descriptives-quantiles" id="toc-andan-descriptives-quantiles" class="nav-link" data-scroll-target="#andan-descriptives-quantiles"><span class="header-section-number">24.4.7</span> Квантили</a></li>
   </ul></li>
-  <li><a href="#andan-descriptives-skewness" id="toc-andan-descriptives-skewness" class="nav-link" data-scroll-target="#andan-descriptives-skewness"><span class="toc-section-number">24.4</span>  Асимметрия</a></li>
-  <li><a href="#andan-descriptives-kurtosis" id="toc-andan-descriptives-kurtosis" class="nav-link" data-scroll-target="#andan-descriptives-kurtosis"><span class="toc-section-number">24.5</span>  Эксцесс</a></li>
-  <li><a href="#andan-descriptives-final" id="toc-andan-descriptives-final" class="nav-link" data-scroll-target="#andan-descriptives-final"><span class="toc-section-number">24.6</span>  Итоги</a></li>
+  <li><a href="#quantiles" id="toc-quantiles" class="nav-link" data-scroll-target="#quantiles"><span class="header-section-number">24.5</span> Квантили</a>
+  <ul class="collapse">
+  <li><a href="#quartiles" id="toc-quartiles" class="nav-link" data-scroll-target="#quartiles"><span class="header-section-number">24.5.1</span> Квартили</a></li>
+  <li><a href="#deciles" id="toc-deciles" class="nav-link" data-scroll-target="#deciles"><span class="header-section-number">24.5.2</span> Децили</a></li>
+  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles"><span class="header-section-number">24.5.3</span> Перцентили</a></li>
+  <li><a href="#iqr" id="toc-iqr" class="nav-link" data-scroll-target="#iqr"><span class="header-section-number">24.5.4</span> Интерквартильный размах</a></li>
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">24.5.5</span> Визуализация квартилей. Боксплот</a></li>
+  </ul></li>
+  <li><a href="#andan-descriptives_variation_comparison" id="toc-andan-descriptives_variation_comparison" class="nav-link" data-scroll-target="#andan-descriptives_variation_comparison"><span class="header-section-number">24.6</span> Сравнение мер разброса</a></li>
+  <li><a href="#andan-descriptives-skewness" id="toc-andan-descriptives-skewness" class="nav-link" data-scroll-target="#andan-descriptives-skewness"><span class="header-section-number">24.7</span> Асимметрия</a></li>
+  <li><a href="#andan-descriptives-kurtosis" id="toc-andan-descriptives-kurtosis" class="nav-link" data-scroll-target="#andan-descriptives-kurtosis"><span class="header-section-number">24.8</span> Эксцесс</a></li>
+  <li><a href="#andan-descriptives-final" id="toc-andan-descriptives-final" class="nav-link" data-scroll-target="#andan-descriptives-final"><span class="header-section-number">24.9</span> Итоги</a></li>
   </ul>
 </nav>
     </div>
@@ -728,7 +908,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="andan-descriptives" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></span></h1>
+<h1 class="title"><span id="andan-descriptives" class="quarto-section-identifier"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></span></h1>
 </div>
 
 
@@ -744,9 +924,6 @@ div.csl-indent {
 </header>
 
 <div class="lab-chapter lab-junior">
-
-</div>
-<div class="cell">
 
 </div>
 <!--- {{< include _symbols.qmd >}} --->
@@ -774,16 +951,16 @@ div.csl-indent {
 <li>Состоит из двух компонентов — <em>тестирования статистических гипотез</em> и <em>статистических методов</em>.</li>
 </ul></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled" title="Замечание о машинном обучении">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
+<div class="callout-title-container flex-fill">
+Замечание о машинном обучении
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Замечание о машинном обучении">
+<div class="callout-body-container callout-body">
 <p>В названии книги упомянуто «машинное обучение». Иногда его причисляют к статистике, иногда рассматривают отдельно. На самом же деле, статистические методы лежат где-то между статистикой вывода и машинным обучением.</p>
 <p>Почему?</p>
 <p>Дело в том, что на статистические методы можно смотреть по-разному.</p>
@@ -885,7 +1062,7 @@ Note
 <div id="fig-mode-pmf" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-mode-pmf-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.1: Определение моды с помощью функции вероятности</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.1: Определение моды с помощью функции вероятности</figcaption>
 </figure>
 </div>
 </div>
@@ -901,14 +1078,11 @@ Note
 <p>Да, это так. Действительно, посчитать моду для непрерывной переменной способом, аналогичным тому, что мы увидели выше, не получится. Однако математиков это не остановило.</p>
 <p>Если мы посмотрим на <a href="">график плотности вероятности</a> (probability density function, PDF), который является аналогом PMF для дискретных переменных, мы увидим, что какие-то значения встречаются чаще, а какие-то реже. Что в общем-то логично. Напомним себе, <a href="">как это выглядит</a>, например, для любимого [стандартного] <a href="">нормального распределения</a>:</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-continuous-freqs" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-continuous-freqs-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения</figcaption>
 </figure>
 </div>
 </div>
@@ -927,23 +1101,23 @@ Note
 <div id="fig-continuous-mode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-continuous-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.3: Положение моды на функции плотности [стандартного] нормального распределения</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.3: Положение моды на функции плотности [стандартного] нормального распределения</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Хотя моду для непрерывной переменной вычислить можно, обычно этого не делают, так как достаточно других мер центральной тенденции для описания распределения.</p>
 <hr>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: мода">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<div class="callout-title-container flex-fill">
+Take-home: мода
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Take-home: мода">
+<div class="callout-body-container callout-body">
 <ul>
 <li>мода — это значение переменной, которое встречается в выборке чаще всего</li>
 <li>на практике она рассчитывается через построение частотной таблицы</li>
@@ -965,7 +1139,7 @@ Warning
 <div id="fig-norm-mode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-norm-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.</figcaption>
 </figure>
 </div>
 </div>
@@ -975,7 +1149,7 @@ Warning
 <div id="fig-binom-mode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-binom-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.</figcaption>
 </figure>
 </div>
 </div>
@@ -985,7 +1159,7 @@ Warning
 <div id="fig-poiss-mode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-poiss-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.</figcaption>
 </figure>
 </div>
 </div>
@@ -996,7 +1170,7 @@ Warning
 <div id="fig-mode-norm-sample" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-mode-norm-sample-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
 </figure>
 </div>
 </div>
@@ -1006,7 +1180,7 @@ Warning
 <div id="fig-mode-nbinom-sample" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-mode-nbinom-sample-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
 </figure>
 </div>
 </div>
@@ -1017,7 +1191,7 @@ Warning
 <div id="fig-bimodal" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
 </figure>
 </div>
 </div>
@@ -1027,7 +1201,7 @@ Warning
 <div id="fig-polymodal" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-polymodal-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
 </figure>
 </div>
 </div>
@@ -1041,7 +1215,7 @@ Warning
 <div id="fig-bimodal-struct" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-bimodal-struct-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.11: Структура бимодального распределения из <a href="#fig-bimodal">Рисунок&nbsp;<span>24.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.11: Структура бимодального распределения из <a href="#fig-bimodal">Рисунок&nbsp;<span>24.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.</figcaption>
 </figure>
 </div>
 </div>
@@ -1049,16 +1223,16 @@ Warning
 <p>Действительно, наше распределение состоит из двух других распределений, у каждого из которого есть своя мода — поэтому итоговое распределение получается бимодальным. Конечно, сейчас нам это очень удобно показать, потому что мы знаем, как это распределение генерировалось. Когда же у нас есть реальные данные и мы там наблюдаем такого «верблюда», бывает достаточно сложно сказать, что «пошло не так».</p>
 <p>Само по себе распределение не даст нам ответ на вопрос, почему оно бимодальное — чтобы выяснить причины такого поведения переменной нам потребуются другие данные. Обычно у вас в данных есть «соцдем» — пол, возраст, сфера и место работы, уровень обрвазования и др. Попробуйте построить распределение с разбиением исследуемой бимодальной переменной по переменным «соцдема». Это, к сожалению, не является рецептом успеха, поскольку причина гетерогенности выборки может и не содержаться в ваших данных, но такое изучение данных станет хорошим показателем того, что вы не просто «забили» на странное распределение своей переменной, а поисследователи возможные его причины.</p>
 <p>Если вам удалось найти причины гетерогенности выборки — допустим, у вас выделяются подвыборки «бакалавры» и «магистры» — стоит подумать о том, как обойтись с этой переменной в планируемом анализе, так как игнорировать её, по-видимому, нельзя, поскольку она влияет на вариатиность данных.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Соцдем лишним не бывает">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Соцдем лишним не бывает
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Соцдем лишним не бывает">
+<div class="callout-body-container callout-body">
 <p>На этапе планирования исследования подумайте о том, чем могут отличаться ваши респонденты или испытуемые между собой, помимо индивидуальных различий.</p>
 <ul>
 <li>Если в эксперименте используете задачу мысленного вращения (mental rotation, <span class="citation" data-cites="shepard71">(<a href="references.html#ref-shepard71" role="doc-biblioref">Shepard and Metzler 1971</a>)</span>), вполне возможно, испытуемые, работающие в сфере 3D-моделирования или дизайна интерьеров, могут сформировать подвыборку.</li>
@@ -1070,16 +1244,16 @@ Tip
 </div>
 </div>
 <hr>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: бимодальное распределение">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<div class="callout-title-container flex-fill">
+Take-home: бимодальное распределение
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Take-home: бимодальное распределение">
+<div class="callout-body-container callout-body">
 <ul>
 <li>бимодальное распределение намекает на неоднородность данных — скорее всего, в выборке есть две подвыборки</li>
 <li>необходимо поискать в данных причины этой неодноросности, например, в социально-демографических переменных</li>
@@ -1155,7 +1329,7 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <div id="fig-median-norm" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-median-norm-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.12: Медиана нормального распределения</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.12: Медиана нормального распределения</figcaption>
 </figure>
 </div>
 </div>
@@ -1166,7 +1340,7 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <div id="fig-median-left-skew" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-median-left-skew-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.13: Медиана распределения с отрицательной асимметрией.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.13: Медиана распределения с отрицательной асимметрией.</figcaption>
 </figure>
 </div>
 </div>
@@ -1176,7 +1350,7 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <div id="fig-median-right-skew" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-median-right-skew-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.14: Медиана распределения с положительной асимметрией.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.14: Медиана распределения с положительной асимметрией.</figcaption>
 </figure>
 </div>
 </div>
@@ -1186,22 +1360,22 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <div id="fig-median-bimodal" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="andan-descriptives_files/figure-html/fig-median-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;24.15: Медиана бимодального распределения.</figcaption><p></p>
+<figcaption class="figure-caption">Рисунок&nbsp;24.15: Медиана бимодального распределения.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <hr>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled" title="Take-home: медиана">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<div class="callout-title-container flex-fill">
+Take-home: медиана
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Take-home: медиана">
+<div class="callout-body-container callout-body">
 <ul>
 <li>медиану можно расчитать только на шкалах, где задан порядок (ранговая, интервальная, абсолютная)</li>
 <li>медиана делит выборку наблюдений на две равные части</li>
@@ -1215,41 +1389,155 @@ Warning
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Если наша переменная измерена в самых мощных шкалах — интервальной или абсолютной — то нам доступна ещё одна мера центральной тенденции.</p>
 <section id="andan-descriptives-arithmetic-mean" class="level4" data-number="24.2.4.1">
 <h4 data-number="24.2.4.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean"><span class="header-section-number">24.2.4.1</span> Арифметическое среднее</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>С этим существом все знакомы еще со школы. <strong>Арифметическое среднее (arithmetic mean, mean, average)</strong> считается так:</p>
+<p><span class="math display">\[
+M_{X} = \bar x = \dfrac{\sum_{i=1}^{n}x_i}{n},
+\]</span></p>
+<p>где <span class="math inline">\(\bar X\)</span> — среднее арифметическое, <span class="math inline">\(x_i\)</span> — наблюдение в векторе <span class="math inline">\(X\)</span>, <span class="math inline">\(n\)</span> — количество наблюдений.</p>
+<p>Ну, то есть всё сложить и поделить на количество того, чего сложили. Изи.</p>
+<section id="andan-descriptives-arithmetic-mean-features" class="level5" data-number="24.2.4.1.1">
+<h5 data-number="24.2.4.1.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean-features"><span class="header-section-number">24.2.4.1.1</span> Свойства среднего арифметического</h5>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то среднее увеличится на это же константу.</strong></li>
+</ul>
+<p><span class="math display">\[
+M_{X+c} = M_X + c
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+M_{X+c} = \frac{\sum_{i=1}^n (x_i + c)}{n} = \frac{\sum_{i=1}^n x_i + nc}{n} = \frac{\sum_{i=1}^n x_i}{n} + c = M_X + c
+\]</span></p>
+<p>Иначе говоря, распределение просто сдвинется. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/mean_feature_1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то среднее увеличится во столько же раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+M_{X \times c} = M_X \times c
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+M_{X \times c} = \frac{\sum_{i=1}^n (x_i \times c)}{n} = \frac{c \times \sum_{i=1}^n x_i}{n} = \frac{\sum_{i=1}^n x_i}{n} \times c = M_X \times c
+\]</span></p>
+<p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/mean_feature_2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Тут, правда, явно <a href="#var_features">что-то ещё</a> произошло, но мы пока этого не знаем. Однако, отметит этот факт.</p>
+<ul>
+<li><strong>Сумма отклонений от среднего значения равна нулю.</strong></li>
+</ul>
+<p><span class="math display">\[
+\sum_{i=1}^n(x_i - M_X) = 0
+\]</span></p>
+<p>Элегантное доказательство:</p>
+<p><span class="math display">\[
+\sum_{i=1}^n(x_i - M_X) = \sum_{i=1}^n x_i - \sum_{i=1}^n M_X = \sum_{i=1}^n x_i - nM_X = \\
+= \sum_{i=1}^n x_i - n \times \frac{1}{n} \sum_{i=1}^n x_i = \sum_{i=1}^n x_i - \sum_{i=1}^n x_i = 0
+\]</span></p>
+<p>Но можно это осмыслить и более просто графически.</p>
+<p><strong>Отклонение</strong> — это разность между средним и конкретным значением переменной. И, действительно, так как среднее находится в центре распределения, то часть значений лежит справа, а часть слева. Значит, будут как положительные, так и отрицательные отклонения — и их сумма в итоге будет равна нулю.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/zero_deviation_sum-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
 </section>
 <section id="andan-descriptives-trimmed-mean" class="level4" data-number="24.2.4.2">
 <h4 data-number="24.2.4.2" class="anchored" data-anchor-id="andan-descriptives-trimmed-mean"><span class="header-section-number">24.2.4.2</span> Усеченное среднее</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>ПРО УСЕЧЕННОЕ СРЕДНЕЕ</p>
+<p>Среднее арифметическое не одиноко — есть и другие. Встретяться они вам примерно нигде — то есть о-о-о-очень редко и, скорее всего, в каком-то изощрённом виде. Но упомянуть их, пожалуй, стоит.</p>
 </section>
 <section id="andan-descriptives-geometric-mean" class="level4" data-number="24.2.4.3">
 <h4 data-number="24.2.4.3" class="anchored" data-anchor-id="andan-descriptives-geometric-mean"><span class="header-section-number">24.2.4.3</span> Геометрическое среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<p>Редко встречается в научных работах, но заради общего представления пусть будет. Поскольку оно считается через умножение, то может быть рассчитано только на абсолютной шкале.</p>
+<p><span class="math display">\[
+G_{X} = \sqrt[n]{\prod_{i=1}^n x_i} = \Big(\prod_{i=1}^n x_i\Big)^{\tfrac{1}{n}}
+\]</span></p>
 </section>
 <section id="andan-descriptives-quandratic-mean" class="level4" data-number="24.2.4.4">
 <h4 data-number="24.2.4.4" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">24.2.4.4</span> Квадратичное среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<blockquote class="blockquote">
+<p>А вот это уже более полезная история. Мы с ним столкнёмся далее, правда под разными масками.</p>
+</blockquote>
+<p><strong>Квадратичное среднее (quadratic mean, root mean square, RMS)</strong> — это квадратный корень из среднего квадрата наблюдений. Ничего не понятно, поэтому по порядку.</p>
+<ul>
+<li>есть наблюдение <span class="math inline">\(x_i\)</span></li>
+<li>значит есть и его квадрат <span class="math inline">\(x_i^2\)</span></li>
+<li>мы умеем считать обычно среднее арифметическое, но ведь <span class="math inline">\(x_i^2\)</span> — это тоже наблюдение, просто в квадрате, так?</li>
+<li>значит можем посчитать среднее арифметическое квадратов наблюдений — <em>средний квадрат</em></li>
+</ul>
+<p><span class="math display">\[
+\frac{\sum_{i=1}^n x_i^2}{n}
+\]</span></p>
+<ul>
+<li>норм, а теперь извлечём из этого дела корень — получим то, что там надо</li>
+</ul>
+<p><span class="math display">\[
+X_{\mathrm{RMS}} = \sqrt{\frac{\sum_{i=1}^n x_i^2}{n}}
+\]</span></p>
+<p>Per se<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> мы его вряд ли ещё когда-то увидим, но пару раз оно внезапно всплывет.</p>
 </section>
 <section id="andan-descriptives-harmonic-mean" class="level4" data-number="24.2.4.5">
 <h4 data-number="24.2.4.5" class="anchored" data-anchor-id="andan-descriptives-harmonic-mean"><span class="header-section-number">24.2.4.5</span> Гармоническое среднее</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
+<blockquote class="blockquote">
+<p>Суперэкзотичный покемон.</p>
+</blockquote>
+<p><span class="math display">\[
+H_X = \frac{n \prod_{i=1}^n x_i}{\sum_{i=1}^n (\tfrac{1}{x} \prod_{j=1}^n x_j)} = \frac{n}{\sum_{i=1}^n \tfrac{1}{x_i}}
+\]</span></p>
 </section>
 <section id="andan-descriptives-weighted-mean" class="level4" data-number="24.2.4.6">
 <h4 data-number="24.2.4.6" class="anchored" data-anchor-id="andan-descriptives-weighted-mean"><span class="header-section-number">24.2.4.6</span> Взвешенное среднее</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Часто бывает такая ситуация, что нас нужно посчитать среднее по каким-либо имеющимся параметрам, но одни параметры для нас важнее, чем другие. Например, мы хотим вычислить суммарный балл обучающегося за курс на основе ряда работ, выполненных в течение курса, однако мы понимаем, что тест из десяти вопросов с множественном выбором явно менее показателен, чем, например, аналитическое эссе или экзаменационная оценка. Что делать? Взвесить параметры!</p>
+<p>Что значит взвесить? Умножить на некоторое число. На самом деле, любое. Пусть мы посчитали, что написать эссе в три абстрактных раза тяжелее, чем написать тест, а сдать экзамен в два раза тяжелее, чем написать эссе. Тогда мы можем присвоить баллу за тест вес <span class="math inline">\(1\)</span>, баллу за аналитическое эссе вес <span class="math inline">\(3\)</span>, а экзамену — вес <span class="math inline">\(6\)</span>. Тогда итоговая оценка за курс будет рассчитываться следующим образом:</p>
+<p><span class="math display">\[
+\text{final score } = 1 \cdot \text{test} + 3 \cdot \text{essay} + 6 \cdot \text{exam}
+\]</span></p>
+<p>Суперкласс. Однако! Весьма вероятно, что в учебном заведении принята единая система оценки для всех видов работ (ну, скажем, некая абстрактная десятибалльная система в сферическом вакууме). Получается, если и за тест, и за эссе, и за экзамен у студента по 10 баллов, то суммарный балл 100, что, кажется, больше, чем 10. Чтобы вернуться к изначальным границам баллов, нужно моделить суммарный балл на сумму весов параметров:</p>
+<p><span class="math display">\[
+\text{final score } = \frac{1 \cdot \text{test} + 3 \cdot \text{essay} + 6 \cdot \text{exam}}{1 + 3 + 6}
+\]</span></p>
+<p>Кайф! Собственно, это и есть взвешенное среднее. Коэффициенты, на которые мы умножаем значение парамернов, называются <em>весами параметров</em>. И в общем виде формула принимает следующий вид.</p>
+<p><span class="math display">\[
+\bar x = \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i} = \sum_{i=1}^n w_i' x_i,
+\]</span></p>
+<p>где <span class="math inline">\(x_i\)</span> — значения конкретных параметров, <span class="math inline">\(w_i\)</span> — веса конкретных параметров, <span class="math inline">\(w_i'\)</span> — нормированные веса параметров.</p>
+<p>Вторая часть формулы показывается нам, что можно облегчить себе вычислительную жизнь, если заранее нормировать веса, то есть разделить каждый коэффициент на сумму коэффициентов:</p>
+<p><span class="math display">\[
+w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
+\]</span></p>
+<p>Тогда сумма коэффициентов будет равна единице. Так чаще всего и поступают, так как тогда коэффициент будет представлять долю, которую весит данный параметр в суммарной оценке. Удобно, практично, красиво.</p>
+<p>Взвещенное среднее часто применяется именно во всякого рода ассессментах, и не только образовательных. Например, вы HR-аналитик и оцениваете персонал. Вы аналитически вычисляете веса коэффициентов (допустим, с помощью линейной регрессии), а далее на их основе высчитаете интегральный балл, по которому будете оценивать сотрудников. Это как один из индустриальных примеров.</p>
+<p>Также оно применяется, когда в наших данных есть какая-то группировка (например, когорты), при этом группы неравномерны.</p>
 </section>
 </section>
 <section id="andan-descriptives-mean-vs-median" class="level3" data-number="24.2.5">
@@ -1258,7 +1546,125 @@ Warning
 
 </div>
 <p>Помимо того, что среднее и медиана информативны сами по себе, полезно смотреть на их взаимное расположение.</p>
-<p>ПРОДОЛЖИТЬ</p>
+<blockquote class="blockquote">
+<p>Сравнивать будем моду, медиану и среднее [арифметическое].</p>
+</blockquote>
+<p>Итак, все три статистики — мода, медиана и среднее — описывают центральную тенденцию — некоторое значение изучаемой нами переменной, вокруг которого собираются другие значения. Но если их три и все они используются, значит между ними должны быть какие-то различия. Посмотрим, какие.</p>
+<p>Во-первых, очевидно, что <em>моду невозможно посчитать для непрерывной переменной</em>.</p>
+<div class="advanced">
+<details>
+<summary>
+<em>Нет, не очевидно</em>
+</summary>
+Так как вероятность того, что непрерывная случайная величина принимает своё конкретное значение, равна нулю, каждое наблюдение в нашей выборке будет уникально — встретится ровно <em>один раз</em>. Вспомните [посмотрите] пример из предыдущей главы, где мы набирали числа из отрезка. Получается, что мода теряет свой смысл.
+</details>
+</div>
+<p>Во-вторых, <em>медиану нельзя посчитать на номинальной шкале</em>. Кстати, почему?</p>
+<div class="advanced">
+<details>
+<summary>
+<em>Потому что</em>
+</summary>
+на номинальной шкале нет отношения порядка между элементами. Помните, на ней нельзя сравнивать на больше-меньше. Поэтому невозможно отсортировать наблюдения, а значит, и найти медиану.
+</details>
+</div>
+<p>В-третьих, <em>среднее тоже нельзя посчитать на номинальной шкале</em>.</p>
+<div class="advanced">
+<details>
+<summary>
+<em>Можно, но осторожно</em>
+</summary>
+<p>Вообще, конечно, да — нельзя, потому что на номинальной шкале не определена операция сложения, входящая в вычисление среднего. Однако если на номинальной шкале есть только <em>две категории</em>, которые закодированы <code>0</code> и <code>1</code>, то посчитать среднее можно. Но что оно будет значить?</p>
+<p>Исходный математический смысл среднего явно утерян. Посмотрим на это по-другому: посчитать сумму единиц это всё равно, что посчитать <em>количество</em> единиц. То есть, если мы сложим все нули и единицы, то получим количество единиц среди всех наших наблюдений. А разделив количество единиц на количество наблюдений, мы получим <em>долю единиц</em> — то есть долю наблюдений с лейблом <code>1</code>.</p>
+Вот так вот.
+</details>
+</div>
+<p>В-четвертых, <em>для дискретной переменной значение среднего арифметического будет не особо осмысленно.</em> Ну, скажем, странно сказать, что в аудитории в среднем стоят 15.86 столов или в российских семьях в среднем 1.5 ребенка. Конечно, в ряде случаев можно это как-то более-менее водержательно интерпретировать, но это требует усилий, а мы ленивые, поэтому лучше использовать медиану.</p>
+<p><strong>Итого, делаем следующие выводы</strong>:</p>
+<ul>
+<li>для номинальной шкалы пригодна только мода</li>
+<li>для дискретных переменных подходят мода и медиана
+<ul>
+<li>мода иногда лучше, так как точно всегда будет целым числом</li>
+</ul></li>
+<li>для непрерывных переменных подходят медиана и среднее</li>
+</ul>
+<p>Теперь нам надо разобраться, как будут себя вести меры центральной тенденции в зависимости от <em>формы распределения</em>.</p>
+<p><strong>На симметричном распределении мода, медиана и среднее совпадают</strong> [или, по крайней мере, находятся очень близко друг к другу]. Здесь и далее: красная линия — среднее, синяя — медиана, зелёная — мода.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(density)` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_symm-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>На асимметричном распределении мода [практически] в пике.</strong> Практически, потому что функция плотности вероятности [черная линия на графике] на всегда точно аппроксимирует (в данном случае то же, что и сглаживает) эмпирическое распределение. На картинке ниже мы видим, что на гистограмме мода — самый высокий столбик, что и показывает нам зелёная линия, которой обозначена мода. Однако при сглаживании гистограммы пик немного съехал, и мода оказалась не совсем в вершине графика функции плотности вероятности.</p>
+<p>Вообще-то это нормально, потому что мода для непрерывной величины, которую мы и визуализируем с помощью графика плотности, либо не может быть посчитана вовсе, либо — если так получилось, и у нас все же есть повторяющиеся значения — не слишком хорошая мера центральной тенденции. В целом, и на симметричном распределении мода тоже может находиться немного в стороне от пика.</p>
+<p><strong>На асимметричном распределении медиана и среднее смещены в сторону хвоста. Среднее смещено сильнее медианы.</strong> Это связано с тем, что медиана зависит только от количества наблюдений, а среднее ещё и от самих значений. На картинке ниже пример для распределения с <em>правосторонней</em> асимметрии (потому что хвост справа) — среднее (красная линия) <em>правее</em> медианы (синяя линия).</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_right-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>А это пример для распределения с <em>левосторонней</em> асимметрией (так как хвост слева) — среднее (красная линия) <em>левее</em> медианы (синяя линия).</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_left-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Для того, чтобы лучше разобраться с тем, как большие и малые значения влияют на моду и медиану посмотрим такой пример. Пусть у нас есть оценки за выпускную квалификационную работу. Например, такие:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>marks</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6 7 7 8 8</code></pre>
+</div>
+</div>
+<p>Посчитаем медиану и среднее:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.2</code></pre>
+</div>
+</div>
+<p>Среднее <span class="math inline">\(7.2\)</span> округлиться до <span class="math inline">\(7\)</span>, то есть можно считать, что среднее и медиана совпали. Ну, ок.</p>
+<p>Но в комиссии сидят два требовательных доктора наук, которые поставили оценки, сильно отличающиеся от остальных:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>marks</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6 7 7 8 8 3 4</code></pre>
+</div>
+</div>
+<p>Посчитаем медиану и среднее теперь:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.142857</code></pre>
+</div>
+</div>
+<p>Медиана осталась на месте — всё ещё <span class="math inline">\(7\)</span>. А вот среднее <span class="math inline">\(6.1\)</span> округлится до <span class="math inline">\(6\)</span>. Казалось бы, это немного, но в смысле оценок — это прилично, и может сильно повлиять на GPA.</p>
+<p>Итого, среднее более чувствительно к нетипичным значениям (очень большим или очень малым).</p>
+<p>Есть ещё один интересный вариант распределений — <strong>бимодальные</strong>. Значит ли, что у этого распределения две моды? Не всегда. Посмотрим пример ниже:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_bimodal-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Мы видим, что на графике есть два пика, однако строго математически мода одна (зеленая линия) — и она в более высоком пике. Это логично, ибо там самые часто встречающиеся значения.</p>
+<div class="advanced">
+<p>И все жё содержательно мы не можем пренебречь вторым пиком. Почему нам он важен? Обычно бимодальное распределение — это повод задуматься о том, что наша выборка неоднородна. <em>Бимодальное распределение как бы сложено из двух с центрами в двух пиках.</em> То есть в нашей выборке как будто бы <em>две подвыборки</em>, которые обладают разными распределениями интересующего нам признака.</p>
+<p>Что с этим делать? Хорошо всегда иметь в данным какие-либо дополнительные переменные — как минимум соцдем — чтобы мы могли по данным попытаться предположить, какую группировку мы могли забыть учесть при планировании исследования.</p>
+</div>
+<p>Со средним и медианой происходит примерно то же, что и в случае асимметричного распределения. Второй пик смещает к себе обе меры центральной тенденции, причем среднее вновь сильнее, чем медиану.</p>
 </section>
 </section>
 <section id="andan-descriptives-variability" class="level2" data-number="24.3">
@@ -1266,94 +1672,406 @@ Warning
 <div class="lab-chapter lab-junior">
 
 </div>
-<section id="andan-descriptives-range" class="level3" data-number="24.3.1">
-<h3 data-number="24.3.1" class="anchored" data-anchor-id="andan-descriptives-range"><span class="header-section-number">24.3.1</span> Минимум, максимум, размах</h3>
+<p>Итак, мы разобрались с мерами центральной тенденции. Однако для описания распределения их оказвается недостаточно. Почему?</p>
+</section>
+<section id="why_we_need_variation" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="why_we_need_variation"><span class="header-section-number">24.4</span> Зачем нужны меры разброса</h2>
+<p>Посмотрим на несколько распределений:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">x1 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">1</span>),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x2 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">3</span>),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x3 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)) <span class="ot">-&gt;</span> rnorm_three</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Методом пристального взгляда можно установить, что у всех распределений одинаковые средние:</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_mean-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Однако мы видим, что значения по-разному группируются вокруг среднего. Как они группируются — плотно, как на третьем рисунке, или не особо, как на втором — можно описать с помощью <strong>мер разброса</strong>, или <strong>мер вариативности</strong>.</p>
+<section id="key_features_of_data" class="level3" data-number="24.4.1">
+<h3 data-number="24.4.1" class="anchored" data-anchor-id="key_features_of_data"><span class="header-section-number">24.4.1</span> Основные характеристики статистических данных</h3>
+<p>Вообще если посмотреть на это более свысока, то необходимость описания разброса определяется тем, что статистические данные обладают двумя ключевыми особенностями — <em>неопределенностью</em> и <em>вариативностью</em>.</p>
+<ul>
+<li><strong>Неопределённость</strong> нам говорит о том, что мы не знаем, что именно мы получим в результате наших измерений для конкретной выборки. В том числе потому, что мы работаем на просторах случайных величин.</li>
+<li><strong>Вариативность</strong> означает, что наши данные будут различатся ещё и от респондента к респонденту. И между выборками тоже. Здесь и ошибка измерения, и различные смешения и ещё куча всего.</li>
+</ul>
+<p>Более того, вариативность настолько важна, что она входит в расчёт любого статистического критерия. Именно вариативность — а не центральная тенденция — позволяет нам сделать вывод о том, что наши выборки различаются (или нет).</p>
+</section>
+<section id="andan-descriptives-range" class="level3" data-number="24.4.2">
+<h3 data-number="24.4.2" class="anchored" data-anchor-id="andan-descriptives-range"><span class="header-section-number">24.4.2</span> Минимум, максимум, размах</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
+<p>Начнем с самого простого. Как наиболее просто описать вариативность? Мы работаем с выборкой, а в выборке, как известно, ограниченное число наблюдений. А если оно ограниченое, значит среди них точно есть наибольшее — <em>максимальное</em> — и наименьшее — <em>минимальное</em>.</p>
+<p>Допустим, мы открыли ведомость по «Анатомии и физиологии ЦНС» некоторой академической группы и пронаблюли следующее:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>anat_marks</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  7  4  6  9 10  5  6  9  6  6  3  6  8  8  5 10  7  5  7  3  9  4  8  3  8
+[26]  4  6  8  7  5</code></pre>
+</div>
+</div>
+<p>Мы можем посчитать минимальное и максимальне значение по этому ряду наблюдений:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(anat_marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(anat_marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p>Получается, что оценки варьируются от <span class="math inline">\(3\)</span> до <span class="math inline">\(10\)</span>. Ну, приемлемо. Разница между максимальным и минимальным значением называется <strong>размах (range)</strong>:</p>
+<p><span class="math display">\[
+\mathrm{range}(X) = \max(X) - \min(X)
+\]</span></p>
+<p>Правда вот функция <code>range</code> в <code>R</code> вернёт не само значение размаха, а минимальное и максимальное значение. Ну, ладно.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(anat_marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 10</code></pre>
+</div>
+</div>
+<p>И вот мы преисполнившиеся идёт описывать вариативность переменной с помощью размаха, но обнаруживаем в другой ведомости этой же группы (по «Введению в психологию») вот что:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>intro_psy_marks</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  6  8  4  6  7  5  7 10  4  6  7  8  7  6  8 10  8  7  7  6  8  7  6  8  6
+[26]  3  8  6  6  4</code></pre>
+</div>
+</div>
+<p>Размах вроде как такой же:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(intro_psy_marks)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 10</code></pre>
+</div>
+</div>
+<p>Значит ли это, что вариативность одинаковая?</p>
+<p>Нарисуем.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/range_problem-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Кажется, что вариативность различна. Распределение оценок по «Анатомии и физиологии ЦНС» более равномерное, в то время как оценки по «Введению в психологию» активнее группируются где-то в середине.</p>
+<p>Штош, размах хоть и дает нам некоторую информацию о вариативности, нам этого маловато. Будем искать другие меры разброса.</p>
 </section>
-<section id="andan-descriptives-average-absolute-deviation" class="level3" data-number="24.3.2">
-<h3 data-number="24.3.2" class="anchored" data-anchor-id="andan-descriptives-average-absolute-deviation"><span class="header-section-number">24.3.2</span> Среднее абсолютное отклонение</h3>
+<section id="andan-descriptives-average-absolute-deviation" class="level3" data-number="24.4.3">
+<h3 data-number="24.4.3" class="anchored" data-anchor-id="andan-descriptives-average-absolute-deviation"><span class="header-section-number">24.4.3</span> Среднее абсолютное отклонение</h3>
 <div class="lab-chapter lab-middle">
 
 </div>
-<section id="andan-descriptives-mean-absolute-deviation-around-the-mean" class="level4" data-number="24.3.2.1">
-<h4 data-number="24.3.2.1" class="anchored" data-anchor-id="andan-descriptives-mean-absolute-deviation-around-the-mean"><span class="header-section-number">24.3.2.1</span> Среднее абсолютное отклонение от среднего</h4>
+<section id="andan-descriptives-mean-absolute-deviation-around-the-mean" class="level4" data-number="24.4.3.1">
+<h4 data-number="24.4.3.1" class="anchored" data-anchor-id="andan-descriptives-mean-absolute-deviation-around-the-mean"><span class="header-section-number">24.4.3.1</span> Среднее абсолютное отклонение от среднего</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
-<section id="andan-descriptives-mean-absolute-deviation-around-the-median" class="level4" data-number="24.3.2.2">
-<h4 data-number="24.3.2.2" class="anchored" data-anchor-id="andan-descriptives-mean-absolute-deviation-around-the-median"><span class="header-section-number">24.3.2.2</span> Среднее абсолютное отклонение от медианы</h4>
+<section id="andan-descriptives-mean-absolute-deviation-around-the-median" class="level4" data-number="24.4.3.2">
+<h4 data-number="24.4.3.2" class="anchored" data-anchor-id="andan-descriptives-mean-absolute-deviation-around-the-median"><span class="header-section-number">24.4.3.2</span> Среднее абсолютное отклонение от медианы</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
-<section id="andan-descriptives-median-absolute-deviation" class="level4" data-number="24.3.2.3">
-<h4 data-number="24.3.2.3" class="anchored" data-anchor-id="andan-descriptives-median-absolute-deviation"><span class="header-section-number">24.3.2.3</span> Медианное абсолютное отклонение</h4>
+<section id="andan-descriptives-median-absolute-deviation" class="level4" data-number="24.4.3.3">
+<h4 data-number="24.4.3.3" class="anchored" data-anchor-id="andan-descriptives-median-absolute-deviation"><span class="header-section-number">24.4.3.3</span> Медианное абсолютное отклонение</h4>
 <div class="lab-chapter lab-middle">
 
 </div>
 </section>
 </section>
-<section id="andan-descriptives-variance" class="level3" data-number="24.3.3">
-<h3 data-number="24.3.3" class="anchored" data-anchor-id="andan-descriptives-variance"><span class="header-section-number">24.3.3</span> Дисперсия</h3>
+<section id="andan-descriptives-variance" class="level3" data-number="24.4.4">
+<h3 data-number="24.4.4" class="anchored" data-anchor-id="andan-descriptives-variance"><span class="header-section-number">24.4.4</span> Дисперсия</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
-<section id="andan-descriptives-population-variance" class="level4" data-number="24.3.3.1">
-<h4 data-number="24.3.3.1" class="anchored" data-anchor-id="andan-descriptives-population-variance"><span class="header-section-number">24.3.3.1</span> Дисперсия генеральной совокупности</h4>
+<p>Хотя описание разброса переменных с помощью квантилей (в частности, квартилей) может дать нам много полезной информации, все же у них есть существенный недостаток: они никак не взаимодействуют с самими значениями нашей переменной.</p>
+<p>Действительно, мы делим нашу сортированную выборку на равные части, и смотрим, что в эти части попало. Но хотелось бы как-то учесть ещё и сами значения переменной в некотрой числовой мере разброса.</p>
+<p>Ну, хорошо. Поступим следующим образом. Мы все ещё хотим узнать, как наши значения группируются вокруг среднего. В предыдущей главе мы уже видели, что наши наблюдения отклоняются от среднего значения — значит мы можем посчитать отклонение для каждого наблюдения:</p>
+<p><span class="math display">\[
+\bar x - x_i
+\]</span></p>
+<p>Окей. Если мы сложим все отклоненияи и поделим на их количество (которое равно количеству наблюдений), то мы получим среднее отклонение, да?</p>
+<p><span class="math display">\[
+\frac{1}{n} \sum_{i=1}^n \bar x - x_i
+\]</span></p>
+<p>Да. Однако есть одна проблема. В прошлой главе мы <a href="#mean_features">выяснили</a>, что сумма отклонений от среднего равна нулю, а значит и среднее отклонение также будет равно нулю.</p>
+<p>Хорошо. Но отрицательные значения ведь можно победить! Есть два пути:</p>
+<ul>
+<li><strong>Модуль.</strong> Преимущество первого в том, что размерность величины разброса остается той же, что и у измеряемой переменной.</li>
+<li><strong>Квадрат.</strong> Преимущество второго в том, что сильные отклонения будут оказывать более сильное влияние на окончательное значение статистики, в то время как для первого малые и большие отклонения равноценны.</li>
+</ul>
+<p>Второй путь на практике оказывается полезнее, так как мы хотим, чтобы сильно отличающиеся наблюдения вносили вклад в меру разброса.</p>
+<p>Возведя отклонения в квадрат, получим формулу <strong>дисперсии (вариации, variation)</strong>:</p>
+<p><span class="math display">\[
+D(X) = \mathrm{var}(X) = \sigma^2 = \frac{1}{n} \sum_{i=1}^n (\bar x - x_i)^2
+\]</span></p>
+<p>Гениально.</p>
+<p>Не совсем. Формула, которую мы получили, пригодна для расчета <strong>дисперсии генеральной совокупности</strong> — на выборке же она будет давать неточную оценку.</p>
+<p>Чтобы получить точную (несмещенную) оценку <strong>дисперсии по выборке</strong>, нам нужно исправить знаменатель дроби — вместо <span class="math inline">\(n\)</span> использовать <span class="math inline">\(n-1\)</span>:</p>
+<p><span class="math display">\[
+s^2 = \frac{1}{n-1} \sum_{i=1}^n (\bar x - x_i)^2
+\]</span></p>
+<p>Но почему?</p>
+<section id="andan-descriptives-df" class="level4" data-number="24.4.4.1">
+<h4 data-number="24.4.4.1" class="anchored" data-anchor-id="andan-descriptives-df"><span class="header-section-number">24.4.4.1</span> Степени свободы</h4>
+<p>Во всём виновата выборка.</p>
+<p>Взглянем на формулу дисперсии: в неё входит среднее арифметическое. То есть для того, чтобы рассчитать дисперсию на выборке, <em>сначала</em> нам необходимо <em>на этой же выборке</em> рассчитать среднее. Тем самым, мы как бы «фиксируем» нашу выборку этим средним значением — у значений нашего распределения становится меньше свободы для варьирования. Теперь свободно варьироваться могут <span class="math inline">\(n-1\)</span> наблюдение, так как последнее всегда будет возможно высчитать, исходя из среднего значения. По этой причине нам необходимо корректировать исходную формулу расчета дисперсии.</p>
+<p>А что если не корректировать?</p>
+<p>Мы стремимся к тому, чтобы наши расчеты на выборке достаточно точно [на столько, на сколько это возможно] отражали то, что происходит в генеральной совокупности. Математики-статистики выяснили, что та оценка, которая хорошо подходит для расчета дисперсии генеральной совокупности, при применении на выборке даёт <em>смещенные</em> оценки. То есть оценка выборочной дисперсии по формуле дисперсии для генеральной совокупности содержит в себе <em>смещение</em> — некоторую систематическую ошибку. Это нехорошо.</p>
+<p>К концепту степеней свободы мы ещё неоднократно вернемся. Сейчас хотелось бы, чтобы сформировалось какое-то минимальное более-менее освязаемое понимание того, почему они вообще нам нужны. Если на основе предыдущих абзацев раздела этого сделать не получилось, то давайте попробуеи воспользоваться следующим рассуждением.</p>
+<p>На выборке происходят некоторые статистические преколы, которые несколько портят нам жизнь, и нам их неободимо учесть, чтобы адекватно оценивать то, что происходит в генеральной совокупности. В частности, нам необходимо учитывать количество степеней свободы, которое есть в нашей выборке. Для расчета выборочной дисперсии оно равно <span class="math inline">\(n-1\)</span>, так как мы для того, чтобы рассчитать дисперсию по выборке, нам сначала <em>по той же самой выборке</em> надо рассчитать <em>ещё одну</em> оценку — среднее арифметическое. Этот расчет заберет одну степень свободы у нашей выборки.</p>
+</section>
+<section id="andan-descriptives-population-variance" class="level4" data-number="24.4.4.2">
+<h4 data-number="24.4.4.2" class="anchored" data-anchor-id="andan-descriptives-population-variance"><span class="header-section-number">24.4.4.2</span> Дисперсия генеральной совокупности</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-<section id="andan-descriptives-sample-variance" class="level4" data-number="24.3.3.2">
-<h4 data-number="24.3.3.2" class="anchored" data-anchor-id="andan-descriptives-sample-variance"><span class="header-section-number">24.3.3.2</span> Дисперсия выборки</h4>
+<section id="andan-descriptives-sample-variance" class="level4" data-number="24.4.4.3">
+<h4 data-number="24.4.4.3" class="anchored" data-anchor-id="andan-descriptives-sample-variance"><span class="header-section-number">24.4.4.3</span> Дисперсия выборки</h4>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
 </section>
-<section id="andan-descriptives-standard-deviation" class="level3" data-number="24.3.4">
-<h3 data-number="24.3.4" class="anchored" data-anchor-id="andan-descriptives-standard-deviation"><span class="header-section-number">24.3.4</span> Стандартное отклонение</h3>
+<section id="andan-descriptives-standard-deviation" class="level3" data-number="24.4.5">
+<h3 data-number="24.4.5" class="anchored" data-anchor-id="andan-descriptives-standard-deviation"><span class="header-section-number">24.4.5</span> Стандартное отклонение</h3>
+<div class="lab-chapter lab-junior">
+
+</div>
+<p>И вот мы получили невероятное! У нас есть формула расчета меры разброса, которая позволяет учесть сами значения переменной! Ну не чудо ли!</p>
+<p>Чудо, конечно, однако есть некоторая проблема. Мы возводили отклонения в квадрат. Представим, что мы хотим посчитатить дисперсию роста студентов психфака. Пусть мы измеряли рост в метрах. Отклонения тоже будут в метрах (потому что среднее — это тоже метры, а если из метров вычитать метры, то мы получим метры). А при возведении метров в квадрат получаются метры в квадрате. Очевидно, что если мы модели квадратные метры на некоторое число (<span class="math inline">\(n\)</span>), они все еще останутся метрами в квадрате.</p>
+<p>О, нет! А счастье было так близко, так возможно! Получается, мы не можем интерпретировать эту меру разброса? Не сможем даже нарисовать?</p>
+<p>Да, но это не очень большая беда. Для того, чтобы вернуться обратно к единицам измерения нашей переменной, нам всего лишь нужно извлечь корень из дисперсии:</p>
+<p><span class="math display">\[
+\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (\bar x - x_i)^2}
+\]</span></p>
+<p>Мы получили величину, называемую <strong>стандартным отклонением (standard deviation)</strong>. Чем она хороша? Тем, что её размерность совпадает с размерностью нашей переменной. Стандартное отклонение уже может быть достаточно интерпретабельно и хорошо визуализируемо.</p>
+<p>Кстати, формула выше, которая <a href="#quadratic_mean">что-то очень напоминает</a>, — это <strong>стандартное отклонение генеральной совокупности</strong>, потому что под корнем стоит дисперсия генеральной совокупности.</p>
+<p>Чтобы посчитать <strong>стандартное отклонение по выборке</strong>, нам надо извлечь корень из выборочной дисперсии:</p>
+<p><span class="math display">\[
+s = \sqrt{s^2} = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (\bar x - x_i)^2}
+\]</span></p>
+</section>
+<section id="andan_descriptives_var_features" class="level3" data-number="24.4.6">
+<h3 data-number="24.4.6" class="anchored" data-anchor-id="andan_descriptives_var_features"><span class="header-section-number">24.4.6</span> Свойства дисперсии и стандартного отклонения</h3>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то дисперсия не изменится.</strong></li>
+</ul>
+<p><span class="math display">\[
+D_{x+c} = D_{x}
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+D_{x+c} = \frac{\sum_{i=1}^n \big((\bar x + c) - (x_i + c)\big)^2}{n-1} = \frac{\sum_{i=1}^n \big(\bar x + c - x_i - c\big)^2}{n-1} = \frac{\sum_{i=1}^n \big(\bar x - x_i\big)^2}{n-1} = D_x
+\]</span></p>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то дисперсия увеличится в</strong> <span class="math inline">\(c^2\)</span> <strong>раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+D_{x \times c} = D_{x} \times c^2
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+D_{x \times c} = \frac{\sum_{i=1}^n (c\bar x - cx_i)^2}{n-1} = \frac{\sum_{i=1}^n c^2(\bar x - x_i)^2}{n-1} = \frac{c^2 \sum_{i=1}^n (\bar x - x_i)^2}{n-1} = D_x \times c^2
+\]</span></p>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то стандартное отклонение не изменится.</strong></li>
+</ul>
+<p><span class="math display">\[
+s_{x+c} = s_x
+\]</span></p>
+<p>Это следует из свойства дисперсии:</p>
+<p><span class="math display">\[
+s_{x+c} = \sqrt{D_{x+c}} = \sqrt{D_x} = s_x
+\]</span></p>
+<p>Как мы уже видели, распределение просто сдвигается на константу. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное — разброс у обоих распределений одинаковый:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/sd_feature_1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то стандартное отклонение увеличится во столько же раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+s_{x \times c} = s_x \times c
+\]</span></p>
+<p>Это также следует из свойства дисперсии:</p>
+<p><span class="math display">\[
+s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
+\]</span></p>
+<p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное — разброс также увеличился в три раза, поэтому распределение более плоское:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/sd_feature_2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="andan-descriptives-quantiles" class="level3" data-number="24.4.7">
+<h3 data-number="24.4.7" class="anchored" data-anchor-id="andan-descriptives-quantiles"><span class="header-section-number">24.4.7</span> Квантили</h3>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-<section id="andan-descriptives-quantiles" class="level3" data-number="24.3.5">
-<h3 data-number="24.3.5" class="anchored" data-anchor-id="andan-descriptives-quantiles"><span class="header-section-number">24.3.5</span> Квантили</h3>
+</section>
+<section id="quantiles" class="level2" data-number="24.5">
+<h2 data-number="24.5" class="anchored" data-anchor-id="quantiles"><span class="header-section-number">24.5</span> Квантили</h2>
+<p>Возьмем распределение суммарного балла по шкале «Доверие к техническим интеллектуальным системам». Выглядит оно как-то так:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/taia_score_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Теперь нам понадобится определение квантиля распределения.</p>
+<p><strong>Квантиль</strong> — это значение переменной, которое <em>не превышается</em> с определенной вероятностью (обозначим её <span class="math inline">\(p\)</span>). Иначе говоря, <em>слева</em> от значения квантиля лежит <span class="math inline">\(p\%\)</span> наблюдений.</p>
+<p>Посмотрим на картинки.</p>
+<p><em>Слева</em> относительно квантиля-0.05 (<span class="math inline">\(x_{0.05}\)</span>) лежит 5% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/fifth_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><em>Слева</em> относительно квантиля-0.68 (<span class="math inline">\(x_{0.68}\)</span>) лежит 68% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/68_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><em>Слева</em> относительно квантиля-0.99 (<span class="math inline">\(x_{0.99}\)</span>) лежит 99% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/99_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Итак, мы поняли, а также приняли и осознали, что такое квантиль. Неясно только, как он нам поможет описать вариативность данных.</p>
+<section id="quartiles" class="level3" data-number="24.5.1">
+<h3 data-number="24.5.1" class="anchored" data-anchor-id="quartiles"><span class="header-section-number">24.5.1</span> Квартили</h3>
+<p>Для этого нам пригодятся специально обученные квантили. Оказалось достаточно удобно поделить все наблюдение на <em>четыре</em> равные части — вот так:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/quartiles_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Значения переменной, которые делят выборку на <em>четыре</em> равные части называются <strong>квартили</strong>. Получается, что</p>
+<ul>
+<li>слева от <strong>первого (нижнего) квартиля</strong> (<span class="math inline">\(Q_1\)</span>, <span class="math inline">\(x_{0.25}\)</span>) лежит 25% наблюдений</li>
+<li>слева от <strong>второго (среднего) квартиля</strong> (<span class="math inline">\(Q_2\)</span>, <span class="math inline">\(x_{0.50}\)</span>) лежит 50% наблюдений
+<ul>
+<li>а значит и справа 50% — получается второй квартиль делит выборку пополам — это <strong>медиана</strong></li>
+</ul></li>
+<li>слева от <strong>третьего (верхнего) квартиля</strong> (<span class="math inline">\(Q_3\)</span>, <span class="math inline">\(x_{0.75}\)</span>) лежит 75% наблюдений</li>
+</ul>
+<p>Четвертый квартиль не используется, потому что это максимальное значение — слева от него лежит 100% наблюдений.</p>
+<p>Кстати, можно также отметить, что первый квартиль — это медиана нижней (меньшей) половины наблюдений, а третий — медиана верней (большей) половины наблюдений.</p>
+<p>Вот такая вот прикольная история.</p>
+</section>
+<section id="deciles" class="level3" data-number="24.5.2">
+<h3 data-number="24.5.2" class="anchored" data-anchor-id="deciles"><span class="header-section-number">24.5.2</span> Децили</h3>
+<p>К слову, делить выборку можно не только на четверти — можно поделить, скажем, на 10 частей и получить <strong>децили</strong>. Так, слева от <em>первого дециля</em> (<span class="math inline">\(x_{0.10}\)</span>) лежит 10% наблюдений, а слева от <em>третьего</em> (<span class="math inline">\(x_{0.30}\)</span>) — 30%.</p>
+<p>Децили встречаются редко (в основном в психометрике), но знать о них полезно.</p>
+</section>
+<section id="percentiles" class="level3" data-number="24.5.3">
+<h3 data-number="24.5.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">24.5.3</span> Перцентили</h3>
+<p>Гораздо чаще встречаются <strong>перцентили</strong> — значения переменной, которые делят выборку на 100 равных частей. Например, так устроен ваш рейтинг. Только стоит помнить, что в рейтинге отсчет ведется от максимального среднего балла, поэтому если у вас <em>нулевой перцентиль</em> (<span class="math inline">\(x_{0.00}\)</span>) по программе, значит <em>выше</em> вас в рейтинге никого нет. А если ваш перцентиль, скажем, 36-ой (<span class="math inline">\(x_{0.36}\)</span>), то выше вас в рейтинге 36% ваших однокурсников, то есть вы все ещё в первой половине рейтинга, что очень неплохо!</p>
+</section>
+<section id="iqr" class="level3" data-number="24.5.4">
+<h3 data-number="24.5.4" class="anchored" data-anchor-id="iqr"><span class="header-section-number">24.5.4</span> Интерквартильный размах</h3>
+<p>И — о, ура! — мы наконец-то добрались до того, ради чего тут собрались! Зная первый и третий квартили распределения, можно рассчитать <strong>интерквартильный (межквартильный) размах (interquartile range, IQR)</strong>.</p>
+<p><span class="math display">\[
+\mathrm{IQR}(X) = Q_3(X) - Q_1(X)
+\]</span></p>
+<p>Интерквартильный размах — это разница между третьим и первым квартилем распределения. Эта величина описывает интервал значений признака, в котором лежит 50% наблюдений.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/iqr_vis-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>В данном случае он равен 40:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(taia<span class="sc">$</span>DT)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 40</code></pre>
+</div>
+</div>
+<p>То есть 50% наблюдений лежит в пределах 40 единиц шкалы.</p>
+</section>
+<section id="boxplot" class="level3" data-number="24.5.5">
+<h3 data-number="24.5.5" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">24.5.5</span> Визуализация квартилей. Боксплот</h3>
+<p>Отображать квартили на гистограмме, во-первых, совершенно неудобно, а во-вторых, не то чтобы график получается информативный. Для визуализации квартилей придумали специальный тип графика — <strong>ящик с усами, или боксплот (boxplot)</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/boxplot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Прикольная ерунда. Научимся его читать.</p>
+<p>Значения переменной идут по вертикальной оси (оси ординат). По горизонтальной оси (оси абсцисс) здесь ничего не идет<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Жирная линия по середине ящика — медиана (второй квартиль). Нижняя граница ящика — первый квартиль, верхняя — третий. Получается, что границы ящика показывают нам значения, в пределах которых лежит половина наблюдений.</p>
+<p>Нижний ус — первый квартиль минус полтора межквартильных размаха. Верхний ус — третий квартиль плюс полтора мехквартильных размаха.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="andan-descriptives_files/figure-html/boxplot_annotated-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="advanced">
+<details>
+<summary>
+<em>Замечание</em>
+</summary>
+Ящик может быть асимметричным — то есть верхняя его часть (расстояние между медианой и третьим квартилем) и нижняя его часть (расстояние между медианой и первым квартилем) могут быть разными. Это нам говорит об асимметричности распределения. Усы также могут быть неравными, если один из них упирается в максимум / минимум — тоже по причине асимметричности распределения.
+</details>
+</div>
+<p>Ну, допустим. А что тогда точки?</p>
+<section id="andan-descriptives-XX-iqr_outliers" class="level4" data-number="24.5.5.1">
+<h4 data-number="24.5.5.1" class="anchored" data-anchor-id="andan-descriptives-XX-iqr_outliers"><span class="header-section-number">24.5.5.1</span> Выбросы</h4>
+<p>Вообще справедливо было бы задаться вопросом, а зачем нам вообще усы на этом графике? И почему мы прибавляем полтора межквартильных размаха?</p>
+<p>Это <em>один из подходов</em> к определению нехарактерных значений — выбросов. При исследовании данных мы часто задаемся вопросом, если ли в наших данных такие значения, которые сильно отличаются от распределения той или иной переменной. Но как определить это самое «сильно»?</p>
+<p>Вот один из подходов. Будем считать, что значения, которые укладываются в интервал <span class="math inline">\((Q_1 - 1.5 \times \mathrm{IQR}, \, Q_3 + 1.5 \times \mathrm{IQR})\)</span>, нас устраивают. Все что попадает в этот интервал — это «нормальные», типичные значения нашей переменной. Те же, которые будут находиться за пределами этого интервала, мы назовем нетипичными, аномальными значениями, или <strong>выбросами</strong>. Эти значения и будут отмечены точками на графике boxplot.</p>
+<p>Что с ними делать? Во-первых, содержательной анализировать. Выбросы могут возникнуть по разным причинам. Может быть испытуемый отвлекся на прилетевшего в окно голубя, и у нас в данных появилось время реакции 200 секунд. Такие выбросы мы можем исключить из данных. А возможно в нашу выборку попали какие-то люди, которые, скажем, очень сильно или очень слабо доверяют искусственному интеллекту (как в примере на рисунке). Эти наблюдения необходимо дополнительно проанализировать — возможно, это представители специфических групп нашей генеральной совокупности (например, программисты-разработчики или люди пенсионного возраста). Анализ принесет нам дополнительную информацию, которую мы могли не учесть при планировании исследования. Крч, думать надо. И собирать побольше данных, чтобы можно было найти содержательную интерпретацию происходящему.</p>
+</section>
+</section>
+</section>
+<section id="andan-descriptives_variation_comparison" class="level2" data-number="24.6">
+<h2 data-number="24.6" class="anchored" data-anchor-id="andan-descriptives_variation_comparison"><span class="header-section-number">24.6</span> Сравнение мер разброса</h2>
+<p>Как и разные меры центральной тенденции, разные меры разброса по-своему хороши. Более того, они дружат с мерами центральной тенденции. Так, <em>с медианой используется мехквартильных размах</em>, а <em>со средним арифметическим — стандартное отклонение</em>.</p>
+<p>Размах подходит для всего сразу. Его стоит рассчитать, чтобы составить самое первое представление в разбросе, о границах измерения изучаемого признака [на нашей выборке].</p>
+<p>Стоит также отметить, что все, что мы тут обсуждали, совершенно не годиться для номинативных переменных. Однако у них тоже есть вариативность. Согласитель, что выборка из Питера, Москвы, и Казани более вариативна, чем выборка из Москвы. Аналогом меры разброса для номинальной переменной можно назвать количество уникальных значений этой переменной.</p>
+</section>
+<section id="andan-descriptives-skewness" class="level2" data-number="24.7">
+<h2 data-number="24.7" class="anchored" data-anchor-id="andan-descriptives-skewness"><span class="header-section-number">24.7</span> Асимметрия</h2>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-<section id="andan-descriptives-quartiles" class="level3" data-number="24.3.6">
-<h3 data-number="24.3.6" class="anchored" data-anchor-id="andan-descriptives-quartiles"><span class="header-section-number">24.3.6</span> Квартили</h3>
+<section id="andan-descriptives-kurtosis" class="level2" data-number="24.8">
+<h2 data-number="24.8" class="anchored" data-anchor-id="andan-descriptives-kurtosis"><span class="header-section-number">24.8</span> Эксцесс</h2>
 <div class="lab-chapter lab-junior">
 
 </div>
 </section>
-</section>
-<section id="andan-descriptives-skewness" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="andan-descriptives-skewness"><span class="header-section-number">24.4</span> Асимметрия</h2>
-<div class="lab-chapter lab-junior">
-
-</div>
-</section>
-<section id="andan-descriptives-kurtosis" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="andan-descriptives-kurtosis"><span class="header-section-number">24.5</span> Эксцесс</h2>
-<div class="lab-chapter lab-junior">
-
-</div>
-</section>
-<section id="andan-descriptives-final" class="level2" data-number="24.6">
-<h2 data-number="24.6" class="anchored" data-anchor-id="andan-descriptives-final"><span class="header-section-number">24.6</span> Итоги</h2>
+<section id="andan-descriptives-final" class="level2" data-number="24.9">
+<h2 data-number="24.9" class="anchored" data-anchor-id="andan-descriptives-final"><span class="header-section-number">24.9</span> Итоги</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-shepard71" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-shepard71" class="csl-entry" role="listitem">
 Shepard, Roger N., and Jacqueline Metzler. 1971. <span>“Mental Rotation of Three-Dimensional Objects.”</span> <em>Science</em> 171 (3972): 701–3. <a href="https://doi.org/10.1126/science.171.3972.701">https://doi.org/10.1126/science.171.3972.701</a>.
 </div>
-<div id="ref-stevens46" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stevens46" class="csl-entry" role="listitem">
 Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science</em> 103 (2684): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.
 </div>
 </div>
@@ -1364,6 +2082,8 @@ Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> 
 <li id="fn1"><p>Mass (uncountable) noun<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Countable noun, plural in this case<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Здесь в примере локальный максимум функции плотности вероятности на интервале <span class="math inline">\((-4, \, 4)\)</span> совпадает с глобальным максимумом — мы об этом знаем, потому что форма распределения нам известна. В случае эмпрического распределения корректнее говорить именно о локальном максимуме, так как глобальный максимум нам не доступен ввиду того, что мы работаем с выборкой.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Per se (лат.) — «само по себе», «как таковое», «в чистом виде».<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Но если мы рисуем несколько боксплотов рядом, то на оси <code>x</code> будет категориальная переменная.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1510,9 +2230,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1577,6 +2311,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
