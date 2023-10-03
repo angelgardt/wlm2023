@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 1&nbsp; L1. Основы R</title>
+<title>WLM 2023 - 1&nbsp; L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1. Основы R</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1. Основы R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -260,14 +260,47 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#установка-r-и-rstudio" id="toc-установка-r-и-rstudio" class="nav-link active" data-scroll-target="#установка-r-и-rstudio"><span class="header-section-number">1.1</span> Установка R и RStudio</a></li>
+  <li><a href="#r-как-язык-программирования.-команды" id="toc-r-как-язык-программирования.-команды" class="nav-link" data-scroll-target="#r-как-язык-программирования.-команды"><span class="header-section-number">1.2</span> R как язык программирования. Команды</a>
+  <ul class="collapse">
+  <li><a href="#математические-операции" id="toc-математические-операции" class="nav-link" data-scroll-target="#математические-операции"><span class="header-section-number">1.2.1</span> Математические операции</a></li>
+  <li><a href="#математические-функции" id="toc-математические-функции" class="nav-link" data-scroll-target="#математические-функции"><span class="header-section-number">1.2.2</span> Математические функции</a></li>
+  <li><a href="#логические-операции" id="toc-логические-операции" class="nav-link" data-scroll-target="#логические-операции"><span class="header-section-number">1.2.3</span> Логические операции</a></li>
+  <li><a href="#переменные-и-объекты" id="toc-переменные-и-объекты" class="nav-link" data-scroll-target="#переменные-и-объекты"><span class="header-section-number">1.2.4</span> Переменные и объекты</a></li>
+  </ul></li>
+  <li><a href="#типы-данных" id="toc-типы-данных" class="nav-link" data-scroll-target="#типы-данных"><span class="header-section-number">1.3</span> Типы данных</a>
+  <ul class="collapse">
+  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="header-section-number">1.3.1</span> <code>numeric</code></a></li>
+  <li><a href="#integer" id="toc-integer" class="nav-link" data-scroll-target="#integer"><span class="header-section-number">1.3.2</span> <code>integer</code></a></li>
+  <li><a href="#complex" id="toc-complex" class="nav-link" data-scroll-target="#complex"><span class="header-section-number">1.3.3</span> <code>complex</code></a></li>
+  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="header-section-number">1.3.4</span> <code>character</code></a></li>
+  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="header-section-number">1.3.5</span> <code>factor</code></a></li>
+  <li><a href="#специальные-литералы" id="toc-специальные-литералы" class="nav-link" data-scroll-target="#специальные-литералы"><span class="header-section-number">1.3.6</span> Специальные литералы</a></li>
+  </ul></li>
+  <li><a href="#структуры-данных" id="toc-структуры-данных" class="nav-link" data-scroll-target="#структуры-данных"><span class="header-section-number">1.4</span> Структуры данных</a>
+  <ul class="collapse">
+  <li><a href="#датафрейм" id="toc-датафрейм" class="nav-link" data-scroll-target="#датафрейм"><span class="header-section-number">1.4.1</span> Датафрейм</a></li>
+  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="header-section-number">1.4.2</span> Векторы</a></li>
+  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="header-section-number">1.4.3</span> Матрицы</a></li>
+  <li><a href="#списки" id="toc-списки" class="nav-link" data-scroll-target="#списки"><span class="header-section-number">1.4.4</span> Списки</a></li>
+  </ul></li>
+  <li><a href="#собираем-датафрейм" id="toc-собираем-датафрейм" class="nav-link" data-scroll-target="#собираем-датафрейм"><span class="header-section-number">1.5</span> Собираем датафрейм</a></li>
+  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="header-section-number">1.6</span> Функции</a></li>
+  <li><a href="#условный-оператор" id="toc-условный-оператор" class="nav-link" data-scroll-target="#условный-оператор"><span class="header-section-number">1.7</span> Условный оператор</a></li>
+  <li><a href="#циклы" id="toc-циклы" class="nav-link" data-scroll-target="#циклы"><span class="header-section-number">1.8</span> Циклы</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1. Основы R</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></h1>
 </div>
 
 
@@ -282,8 +315,80 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="установка-r-и-rstudio" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="установка-r-и-rstudio"><span class="header-section-number">1.1</span> Установка R и RStudio</h2>
+</section>
+<section id="r-как-язык-программирования.-команды" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="r-как-язык-программирования.-команды"><span class="header-section-number">1.2</span> R как язык программирования. Команды</h2>
+<section id="математические-операции" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="математические-операции"><span class="header-section-number">1.2.1</span> Математические операции</h3>
+</section>
+<section id="математические-функции" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="математические-функции"><span class="header-section-number">1.2.2</span> Математические функции</h3>
+</section>
+<section id="логические-операции" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="логические-операции"><span class="header-section-number">1.2.3</span> Логические операции</h3>
+</section>
+<section id="переменные-и-объекты" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="переменные-и-объекты"><span class="header-section-number">1.2.4</span> Переменные и объекты</h3>
+</section>
+</section>
+<section id="типы-данных" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="типы-данных"><span class="header-section-number">1.3</span> Типы данных</h2>
+<section id="numeric" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="numeric"><span class="header-section-number">1.3.1</span> <code>numeric</code></h3>
+</section>
+<section id="integer" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="integer"><span class="header-section-number">1.3.2</span> <code>integer</code></h3>
+</section>
+<section id="complex" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="complex"><span class="header-section-number">1.3.3</span> <code>complex</code></h3>
+</section>
+<section id="character" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="character"><span class="header-section-number">1.3.4</span> <code>character</code></h3>
+</section>
+<section id="factor" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="factor"><span class="header-section-number">1.3.5</span> <code>factor</code></h3>
+</section>
+<section id="специальные-литералы" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="специальные-литералы"><span class="header-section-number">1.3.6</span> Специальные литералы</h3>
+</section>
+</section>
+<section id="структуры-данных" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="структуры-данных"><span class="header-section-number">1.4</span> Структуры данных</h2>
+<section id="датафрейм" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="датафрейм"><span class="header-section-number">1.4.1</span> Датафрейм</h3>
+</section>
+<section id="векторы" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="векторы"><span class="header-section-number">1.4.2</span> Векторы</h3>
+<section id="векторизация" class="level4" data-number="1.4.2.1">
+<h4 data-number="1.4.2.1" class="anchored" data-anchor-id="векторизация"><span class="header-section-number">1.4.2.1</span> Векторизация</h4>
+</section>
+<section id="recycling" class="level4" data-number="1.4.2.2">
+<h4 data-number="1.4.2.2" class="anchored" data-anchor-id="recycling"><span class="header-section-number">1.4.2.2</span> Recycling</h4>
+</section>
+</section>
+<section id="матрицы" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="матрицы"><span class="header-section-number">1.4.3</span> Матрицы</h3>
+</section>
+<section id="списки" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="списки"><span class="header-section-number">1.4.4</span> Списки</h3>
+</section>
+</section>
+<section id="собираем-датафрейм" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="собираем-датафрейм"><span class="header-section-number">1.5</span> Собираем датафрейм</h2>
+</section>
+<section id="функции" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="функции"><span class="header-section-number">1.6</span> Функции</h2>
+</section>
+<section id="условный-оператор" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="условный-оператор"><span class="header-section-number">1.7</span> Условный оператор</h2>
+</section>
+<section id="циклы" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="циклы"><span class="header-section-number">1.8</span> Циклы</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
