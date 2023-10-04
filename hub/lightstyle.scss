@@ -52,12 +52,14 @@ $link-color:                $gray-600 !default;
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 $font-family-sans-serif:      Montserrat !default;
-$h1-font-size:                3rem !default;
+$h1-font-size:                2rem !default;
 $h1-font-weight:              600;
-$h2-font-size:                2.5rem !default;
+$h2-font-size:                1.5rem !default;
 $h2-font-weight:              500;
-$h3-font-size:                2rem !default;
+$h3-font-size:                1.3rem !default;
 $body-font-weight:            400;
+$body-font-size:              0.9rem;
+$body-line-height:            1.5rem;
 
 $font-family-code:            Courier Prime !default;
 
@@ -155,6 +157,8 @@ p.subtitle.lead {
 
 body {
   font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
 }
 
 // Code
