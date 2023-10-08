@@ -1,4 +1,4 @@
-var info_json = JSON.parse(hw_json);
+var info_json = JSON.parse(pr_json);
 
 
 let info = {};

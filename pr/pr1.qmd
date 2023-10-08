@@ -1,315 +1,141 @@
 # P1. Введение в R. Типы данных. Векторы {#pr1 .unnumbered}
 
+{{< include ../book/_symbols.qmd >}}
+
 ```{=html}
 <!--
 REPLACE ALL pr1 TO pr<n> WITH MATCH CASE
 -->
 ```
+
 ## Основные задания {#pr1_main}
 
-### #1
+### #1 {#pr1-1}
 
 <img id="pr1-1-level" class="level"/>
 
 ::: {#pr1-1-task .task}
-Текст задания `переменная`.
+Вычислите:
+
+a. $-14^7 - 6 \times 2^{11}$
+a. $\sin^2 64$
+a. $e^{8 + \pi}$
+a. $\log_{12} 34$
+a. $\sqrt{5 + 2i}$
 :::
 
-::: {#pr1-1-autocheck .autocheck}
-::: {#pr1-1-ir .input-requirements}
-Описание формата инпута.
-:::
 
-<input class="autocheck-input" type="text" id="pr1-1" placeholder="Введите ответ…">
 
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-1')">
-
-::: {#pr1-1-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr1-1-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #2
+### #2 {#pr1-2}
 
 <img id="pr1-2-level" class="level"/>
 
 ::: {#pr1-2-task .task}
-Текст задания.
+Присвойте переменным `x` и `y` значения `3` и `-1.44` соответственно.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Вычислите:
+
+a. $\log_{\sqrt[x]{24}} 17^{\sin{4.8\pi}}$
+a. $\dfrac{e^{x + y^2}}{1 + e^{x+y^2}}$
+a. $\sqrt{\ln \Bigg( \dfrac{\cos\Big( \dfrac{2}{3x^2} \Big)}{|y| + x} \Bigg)}$
+a. $\Bigg( \log_{e^x} \sin^2 \Big(3 \cos \dfrac{y}{2} \Big) \Bigg) ^ {|y - x|}$
+a. $\sin \big( \dfrac{\pi}{4x} \big) + \cos \big( \dfrac{2\pi}{\sqrt{y} - 1} \big)$
+
 :::
 
-::: {#pr1-2-autocheck .autocheck}
-::: {#pr1-2-ir .input-requirements}
-Описание формата инпута.
-:::
 
-<input class="autocheck-input" type="text" id="pr1-2" placeholder="Введите ответ…">
 
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-2')">
-
-::: {#pr1-2-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr1-2-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #3
+### #3 {#pr1-3}
 
 <img id="pr1-3-level" class="level"/>
 
 ::: {#pr1-3-task .task}
-Текст задания.
+Создайте следующие векторы:
+
+a. $\pmatrix{4 & 8 & 12}$
+a. $\pmatrix{1 & 2 & 3 & \dots & 9 & 10}$
+a. $\pmatrix{10 & 9 & 8 & \dots & 2 & 1 & 0 & -1 & -2 & \dots & -9 & -10}$
+a. $\pmatrix{1 & 2 & 3 & \dots & 9 & 10 & 9 & \dots  & 3 & 2 & 1}$
 :::
 
-::: {#pr1-3-autocheck .autocheck}
-::: {#pr1-3-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-3" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-3')">
-
-::: {#pr1-3-fb .autocheck-feedback}
-:::
-:::
 
 ::: hints-wrapper
 <details class="hints" id="pr1-3-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`` ?`:` ``
 
 </details>
 :::
 
-### #4
+### #4 {#pr1-4}
 
 <img id="pr1-4-level" class="level"/>
 
 ::: {#pr1-4-task .task}
-Текст задания.
-:::
+Создайте следующие векторы:
 
-::: {#pr1-4-autocheck .autocheck}
-::: {#pr1-4-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-4" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-4')">
-
-::: {#pr1-4-fb .autocheck-feedback}
-:::
+a. $\pmatrix{2 & 4 & 8 & 12 & \dots & 26 & 28 & 30}$
+a. $\pmatrix{0 & 0.5 & 1 & 1.5 & 2 \dots & 8.5 & 9.5 & 10}$
+a. $\pmatrix{-3 & -2.75 & -2.5 & -2.25 & \dots & 2.25 & 2.5 & 2.75 & 3}$
 :::
 
 ::: hints-wrapper
 <details class="hints" id="pr1-4-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`` ?seq() ``
 
 </details>
 :::
 
-### #5
+### #5 {#pr1-5}
 
 <img id="pr1-5-level" class="level"/>
 
 ::: {#pr1-5-task .task}
-Текст задания.
-:::
+Возьмите вектор (a) из [задания 3](#pr1-3) и на основе него создайте следующие векторы:
 
-::: {#pr1-5-autocheck .autocheck}
-::: {#pr1-5-ir .input-requirements}
-Описание формата инпута.
-:::
+a. $\pmatrix{4 & 8 & 12 & 4 & 8 & 12 & \dots & 4 & 8 & 12}$, где $4$ повторяется восемь раз
+a. $\pmatrix{4 & 8 & 12 & 4 & 8 & 12 & \dots & 4 & 8 & 12 & 8 & 12}$, где $4$ повторяется восемь раз, а $8$ и $12$ повторяются по 5 раз
+a. $\pmatrix{4 & 4 & \dots & 4 & 8 & 8 & \dots & 8 & 12 & 12 & \dots & 12}$, где $4$ повторяется 10 раз, $8$ --- 20 раз, а $12$ --- 30 раз.
 
-<input class="autocheck-input" type="text" id="pr1-5" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-5')">
-
-::: {#pr1-5-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
 <details class="hints" id="pr1-5-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
+`` ?rep() ``
 </details>
 :::
 
-### #6
+### #6 {#pr1-6}
 
 <img id="pr1-6-level" class="level"/>
 
 ::: {#pr1-6-task .task}
-Текст задания.
-:::
-
-::: {#pr1-6-autocheck .autocheck}
-::: {#pr1-6-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-6" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-6')">
-
-::: {#pr1-6-fb .autocheck-feedback}
-:::
+Пусть вектор (а) из [предыдущего задания](#pr1-5) --- это количество стимулов в пробах эксперимента. Приведите его к текстовому формату, чтобы он корректно интерпретировался статистическими функциями.
 :::
 
 ::: hints-wrapper
 <details class="hints" id="pr1-6-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
+`` ?character() ``
 </details>
 :::
 
-### #7
+### #7 {#pr1-7}
 
 <img id="pr1-7-level" class="level"/>
 
 ::: {#pr1-7-task .task}
-Текст задания.
-:::
-
-::: {#pr1-7-autocheck .autocheck}
-::: {#pr1-7-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-7" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-7')">
-
-::: {#pr1-7-fb .autocheck-feedback}
-:::
+Пусть в нашем исследовании есть три группы респондентов --- `group 1`, `group 2` и `group 3`. Создайте вектор из 90 значений, который будет описывать принадлежность респондентов к какой-либо группе.
 :::
 
 ::: hints-wrapper
@@ -319,44 +145,40 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Варианты результата</summary>
+
+Возможны два варинта результата:
+
+* так
+```{r, echo=FALSE}
+paste("group", rep(1:3, each = 30))
+```
+
+* или так
+
+```{r, echo=FALSE}
+paste("group", rep(1:3, times = 30))
+```
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Есть полезная функция</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+```paste()```
 
 </details>
 
 </details>
 :::
 
-### #8
+### #8 {#pr1-8}
 
 <img id="pr1-8-level" class="level"/>
 
 ::: {#pr1-8-task .task}
 Текст задания.
-:::
-
-::: {#pr1-8-autocheck .autocheck}
-::: {#pr1-8-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-8" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-8')">
-
-::: {#pr1-8-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -385,25 +207,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#pr1-9}
 
 <img id="pr1-9-level" class="level"/>
 
 ::: {#pr1-9-task .task}
 Текст задания.
-:::
-
-::: {#pr1-9-autocheck .autocheck}
-::: {#pr1-9-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-9" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-9')">
-
-::: {#pr1-9-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -432,25 +241,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#pr1-10}
 
 <img id="pr1-10-level" class="level"/>
 
 ::: {#pr1-10-task .task}
 Текст задания.
-:::
-
-::: {#pr1-10-autocheck .autocheck}
-::: {#pr1-10-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-10" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-10')">
-
-::: {#pr1-10-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -479,25 +275,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #11
+### #11 {#pr1-11}
 
 <img id="pr1-11-level" class="level"/>
 
 ::: {#pr1-11-task .task}
 Текст задания.
-:::
-
-::: {#pr1-11-autocheck .autocheck}
-::: {#pr1-11-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-11" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-11')">
-
-::: {#pr1-11-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -526,25 +309,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #12
+### #12 {#pr1-12}
 
-<img class="level"/>
+<img id="pr1-12-level" class="level"/>
 
 ::: {#pr1-12-task .task}
 Текст задания.
-:::
-
-::: {#pr1-12-autocheck .autocheck}
-::: {#pr1-12-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-12" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-12')">
-
-::: {#pr1-12-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -573,25 +343,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #13
+### #13 {#pr1-13}
 
 <img id="pr1-13-level" class="level"/>
 
 ::: task
 Текст задания.
-:::
-
-::: {#pr1-13-autocheck .autocheck}
-::: {#pr1-13-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-13" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-13')">
-
-::: {#pr1-13-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -620,25 +377,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #14
+### #14 {#pr1-14}
 
 <img id="pr1-14-level" class="level"/>
 
 ::: {#pr1-14-task .task}
 Текст задания.
-:::
-
-::: {#pr1-14-autocheck .autocheck}
-::: {#pr1-14-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-14" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-14')">
-
-::: {#pr1-14-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -667,25 +411,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #15
+### #15 {#pr1-15}
 
 <img id="pr1-15-level" class="level"/>
 
 ::: {#pr1-15-task .task}
 Текст задания.
-:::
-
-::: {#pr1-15-autocheck .autocheck}
-::: {#pr1-15-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-15" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-15')">
-
-::: {#pr1-15-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -714,25 +445,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #16
+### #16 {#pr1-16}
 
 <img id="pr1-16-level" class="level"/>
 
 ::: {#pr1-16-task .task}
 Текст задания.
-:::
-
-::: {#pr1-16-autocheck .autocheck}
-::: {#pr1-16-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-16" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-16')">
-
-::: {#pr1-16-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -761,25 +479,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #17
+### #17 {#pr1-17}
 
 <img id="pr1-17-level" class="level"/>
 
 ::: {#pr1-17-task .task}
 Текст задания.
-:::
-
-::: {#pr1-17-autocheck .autocheck}
-::: {#pr1-17-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-17" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-17')">
-
-::: {#pr1-17-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -808,25 +513,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #18
+### #18 {#pr1-18}
 
 <img id="pr1-18-level" class="level"/>
 
 ::: {#pr1-18-task .task}
 Текст задания.
-:::
-
-::: {#pr1-18-autocheck .autocheck}
-::: {#pr1-18-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-18" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-18')">
-
-::: {#pr1-18-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -855,25 +547,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #19
+### #19 {#pr1-19}
 
 <img id="pr1-19-level" class="level"/>
 
 ::: {#pr1-19-task .task}
 Текст задания.
-:::
-
-::: {#pr1-19-autocheck .autocheck}
-::: {#pr1-19-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-19" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-19')">
-
-::: {#pr1-19-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -902,25 +581,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #20
+### #20 {#pr1-20}
 
 <img id="pr1-20-level" class="level"/>
 
 ::: {#pr1-20-task .task}
 Текст задания.
-:::
-
-::: {#pr1-20-autocheck .autocheck}
-::: {#pr1-20-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-20" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-20')">
-
-::: {#pr1-20-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -951,25 +617,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ## Дополнительные задания {#pr1_add}
 
-### #1
+### #1 {#pr1-21}
 
 <img id="pr1-21-level" class="level"/>
 
 ::: {#pr1-21-task .task}
 Текст задания.
-:::
-
-::: {#pr1-21-autocheck .autocheck}
-::: {#pr1-21-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-21" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-21')">
-
-::: {#pr1-21-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -998,25 +651,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+### #2 {#pr1-22}
 
 <img id="pr1-22-level" class="level"/>
 
 ::: {#pr1-22-task .task}
 Текст задания.
-:::
-
-::: {#pr1-22-autocheck .autocheck}
-::: {#pr1-22-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-22" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-22')">
-
-::: {#pr1-22-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1045,25 +685,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#pr1-23}
 
 <img id="pr1-23-level" class="level"/>
 
 ::: {#pr1-23-task .task}
 Текст задания.
-:::
-
-::: {#pr1-23-autocheck .autocheck}
-::: {#pr1-23-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-23" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-23')">
-
-::: {#pr1-23-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1092,25 +719,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#pr1-24}
 
 <img id="pr1-24-level" class="level"/>
 
 ::: {#pr1-24-task .task}
 Текст задания.
-:::
-
-::: {#pr1-24-autocheck .autocheck}
-::: {#pr1-24-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-24" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-24')">
-
-::: {#pr1-24-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1139,25 +753,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#pr1-25}
 
 <img id="pr1-25-level" class="level"/>
 
 ::: {#pr1-25-task .task}
 Текст задания.
-:::
-
-::: {#pr1-25-autocheck .autocheck}
-::: {#pr1-25-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-25" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-25')">
-
-::: {#pr1-25-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1186,25 +787,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#pr1-26}
 
 <img id="pr1-26-level" class="level"/>
 
 ::: {#pr1-26-task .task}
 Текст задания.
-:::
-
-::: {#pr1-26-autocheck .autocheck}
-::: {#pr1-26-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-26" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-26')">
-
-::: {#pr1-26-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1233,25 +821,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #7
+### #7 {#pr1-27}
 
 <img id="pr1-27-level" class="level"/>
 
 ::: {#pr1-27-task .task}
 Текст задания.
-:::
-
-::: {#pr1-27-autocheck .autocheck}
-::: {#pr1-27-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-27" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-27')">
-
-::: {#pr1-27-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1280,25 +855,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#pr1-28}
 
 <img id="pr1-28-level" class="level"/>
 
 ::: {#pr1-28-task .task}
 Текст задания.
-:::
-
-::: {#pr1-28-autocheck .autocheck}
-::: {#pr1-28-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-28" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-28')">
-
-::: {#pr1-28-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1327,25 +889,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#pr1-29}
 
 <img id="pr1-29-level" class="level"/>
 
 ::: {#pr1-29-task .task}
 Текст задания.
-:::
-
-::: {#pr1-29-autocheck .autocheck}
-::: {#pr1-29-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-29" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-29')">
-
-::: {#pr1-29-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
@@ -1374,25 +923,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#pr1-30}
 
 <img id="pr1-30-level" class="level"/>
 
 ::: {#pr1-30-task .task}
 Текст задания.
-:::
-
-::: {#pr1-30-autocheck .autocheck}
-::: {#pr1-30-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr1-30" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr1-30')">
-
-::: {#pr1-30-fb .autocheck-feedback}
-:::
 :::
 
 ::: hints-wrapper
