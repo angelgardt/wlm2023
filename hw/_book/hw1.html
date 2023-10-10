@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - HW1. Введение в R. Типы данных. Векторы</title>
+<title>WLM 2023 - HW1 // Введение в R. Типы данных. Векторы</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw1.html">HW1. Введение в R. Типы данных. Векторы</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw1.html">HW1 // Введение в R. Типы данных. Векторы</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -151,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW1. Введение в R. Типы данных. Векторы</span></a>
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -289,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw1" class="quarto-section-identifier">HW1. Введение в R. Типы данных. Векторы</span></h1>
+<h1 class="title"><span id="hw1" class="quarto-section-identifier">HW1 // Введение в R. Типы данных. Векторы</span></h1>
 </div>
 
 
@@ -307,17 +341,36 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Напоминалка о контроле случайности
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Все задания построены на работе со сгенерированным вектором чисел. Генерация каждый раз происходит (псевдо)случайным образом. Если вы хотите пользоваться возможностью самопроверки, перед каждой строчкой кода, где происходит генерация — используются функции <code>rnorm()</code>, <code>sample()</code> — добавьте строку с установкой зерна датчика случайный чисел</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">420</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>и выполняйте код генерации вместе с данной строкой.</p>
+<p>Автопроверка настроена на результаты, получающиеся при таких генерациях. Во всех других случаях ваши результаты будут отличаться.</p>
+<p>Отсутствие строк с установкой зерна датчика случайных чисел при проверке работ тьюторами <strong>не будет считаться ошибкой</strong>.</p>
+</div>
+</div>
 <section id="hw1_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw1-1-level" class="level"></p>
 <div id="hw1-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Сгенерируйте распределение некоторой изучаемой переменной в генеральной совокупности из 350 000 объектов с помощью функции <code>rnorm()</code> с параметрами <code>mean = 80</code> и <code>sd = 21</code>. Сохраните результат генерации в переменную <code>pop</code>.</p>
 </div>
 <div id="hw1-1-autocheck" class="autocheck">
 <div id="hw1-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки скопируйте из консоли в поле ниже два первых значения получившегося вектора. Разделите значения запятой. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
@@ -334,16 +387,21 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Используя функцию <code>rnorm()</code> нужно сгенерировать вектор. Для этого её нужно передать три аргумента: количество значений, которые нужно сгененировать, среднее (<code>mean</code>) и стандартное отклонение (<code>sd</code>).</li>
+<li>Обратите внимание на порядок аргументов: следовать они должны именно так, как перечислены в предыдущем пункте.</li>
+<li>Сохраните результат генерации в переменной <code>pop</code> с помощью оператора присваивания <code>&lt;-</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, разделили ли вы значения запятой.</li>
+<li>Округлять значения не нужно. После точки должно быть 5 знаков.</li>
+</ul>
 </details>
 </details>
 </div>
