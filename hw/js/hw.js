@@ -32,6 +32,7 @@ for (let id in info["autocheck_answer"]) {
 function checker(id, ans)
   {
     let in_task = document.getElementById(id).value;
+    console.log(in_task)
     let fb_task = document.getElementById(id+"-fb");
     if (in_task.trim() == "")
     {

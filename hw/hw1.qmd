@@ -29,7 +29,7 @@ set.seed(420)
 
 ## Основные задания {#hw1_main}
 
-### #1 {#hw1-1}
+### #1 {#hw1-1-title}
 
 <img id="hw1-1-level" class="level"/>
 
@@ -88,7 +88,7 @@ pop[1:2]
 </details>
 :::
 
-### #2 {#hw1-2}
+### #2 {#hw1-2-title}
 
 <img id="hw1-2-level" class="level"/>
 
@@ -147,7 +147,7 @@ sum(first_banch)
 </details>
 :::
 
-### #3 {#hw1-3}
+### #3 {#hw1-3-title}
 
 <img id="hw1-3-level" class="level"/>
 
@@ -221,7 +221,7 @@ sum(first_banch)
 </details>
 :::
 
-### #4 {#hw1-4}
+### #4 {#hw1-4-title}
 
 <img id="hw1-4-level" class="level"/>
 
@@ -266,7 +266,7 @@ length(obs)
 
 
 
-### #5 {#hw1-5}
+### #5 {#hw1-5-title}
 
 <img id="hw1-5-level" class="level"/>
 
@@ -329,7 +329,7 @@ sum(is.na(obs))
 </details>
 :::
 
-### #6 {#hw1-6}
+### #6 {#hw1-6-title}
 
 <img id="hw1-6-level" class="level"/>
 
@@ -404,7 +404,7 @@ length(obs)
 </details>
 :::
 
-### #7 {#hw1-7}
+### #7 {#hw1-7-title}
 
 <img id="hw1-7-level" class="level"/>
 
@@ -451,7 +451,7 @@ min(obs); max(obs); mean(obs); median(obs)
 </details>
 :::
 
-### #8 {#hw1-8}
+### #8 {#hw1-8-title}
 
 <img id="hw1-8-level" class="level"/>
 
@@ -522,7 +522,7 @@ median(sort(obs)[round(length(obs)/2):length(obs)])
 
 :::
 
-### #9 {#hw1-9}
+### #9 {#hw1-9-title}
 
 <img id="hw1-9-level" class="level"/>
 
@@ -574,7 +574,7 @@ condition <- sample(c("gr1", "gr2", "gr3", "gr4", "gr5"), length(obs), replace =
 </details>
 :::
 
-### #10 {#hw1-10}
+### #10 {#hw1-10-title}
 
 <img id="hw1-10-level" class="level"/>
 
@@ -623,7 +623,7 @@ condition <- sample(c("gr1", "gr2", "gr3", "gr4", "gr5"), length(obs), replace =
 
 ## Дополнительные задания {#hw1_add}
 
-### #1 {#hw1-11}
+### #1 {#hw1-11-title}
 
 <img id="hw1-11-level" class="level"/>
 
@@ -682,14 +682,14 @@ names(obs) <- condition
 
 
 
-### #2 {#hw1-12}
+### #2 {#hw1-12-title}
 
 <img id="hw1-13-level" class="level"/>
 
 ::: {#hw1-13-task .task}
-В [задании 7](#hw1-7) мы рассчитали несколько значений, описывающих изучаемый нами вектор. Теперь, когда мы познакомились с именованным вектором, мы можем объединить все рассчитанные значения в один вектор и подписать их, чтобы не забыть, что есть что.
+В [задании 7](#hw1-7-title) мы рассчитали несколько значений, описывающих изучаемый нами вектор. Теперь, когда мы познакомились с именованным вектором, мы можем объединить все рассчитанные значения в один вектор и подписать их, чтобы не забыть, что есть что.
 
-Возьмите код из [задания 7](#hw1-7) и дополните его так, чтобы результаты вычислений собирались в один именованный вектор. Необходимый результат представлен ниже.
+Возьмите код из [задания 7](#hw1-7-title) и дополните его так, чтобы результаты вычислений собирались в один именованный вектор. Необходимый результат представлен ниже.
 
 ```{r 12, eval=TRUE}
 c(min = min(obs),
@@ -741,7 +741,7 @@ c(name1 = "x1", name2 = "x2", ...)
 :::
 
 
-### #3 {#hw1-13}
+### #3 {#hw1-13-title}
 
 <img id="hw1-12-level" class="level"/>
 
@@ -771,7 +771,7 @@ sam2 <- obs[-indices]
 
 
 
-### #4 {#hw1-14}
+### #4 {#hw1-14-title}
 
 <img id="hw1-14-level" class="level"/>
 
@@ -797,7 +797,7 @@ table(names(sam2))
 
 
 
-### #5 {#hw1-15}
+### #5 {#hw1-15-title}
 
 <img id="hw1-15-level" class="level"/>
 
@@ -817,7 +817,7 @@ $$
 
 ::: {#hw1-15-autocheck .autocheck}
 ::: {#hw1-15-ir .input-requirements}
-Для самопроверки введите последний элемент получившегося вектора. Используйте научную нотацию числа.
+Для самопроверки введите последний элемент получившегося вектора. Используйте научную нотацию числа (формата `1.23e+04`).
 :::
 
 <input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…">
