@@ -1,5 +1,7 @@
 # P2 // Матрицы и списки. Функции и строки {#pr2 .unnumbered}
 
+
+
 {{< include ../book/_symbols.qmd >}}
 
 ```{r opts, echo=FALSE}
@@ -101,31 +103,7 @@ m[, 2:3]
 
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-3-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #4 {#pr2-4}
 
@@ -139,31 +117,7 @@ m[, 2:3]
 m[2, ] == m[, 3]
 ```
 
-::: hints-wrapper
-<details class="hints" id="pr2-4-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #5 {#pr2-5}
 
@@ -179,31 +133,6 @@ multab
 ```
 
 
-::: hints-wrapper
-<details class="hints" id="pr2-5-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #6 {#pr2-6}
 
@@ -228,31 +157,7 @@ multab
 
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-6-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #7 {#pr2-7}
 
@@ -271,62 +176,42 @@ mean(multab, na.rm = TRUE)
 median(multab, na.rm = TRUE)
 ```
 
-::: hints-wrapper
-<details class="hints" id="pr2-7-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #8 {#pr2-8}
 
 <img id="pr2-8-level" class="level"/>
 
 ::: {#pr2-8-task .task}
-Текст задания.
+
+**8.1** Для матрицы `m` посчитайте сумму:
+
+a. по каждой строке
+
+```{r 8-1a}
+apply(m, 1, sum)
+```
+
+b. по каждому столбцу
+
+```{r 8-1b}
+apply(m, 2, sum)
+```
+
+**8.2** Для матрицы `multab` посчитайте сумму по каждому столбцу.
+
+```{r 8-2}
+apply(multab, 2, sum, na.rm = TRUE)
+```
+
 :::
 
 ::: hints-wrapper
 <details class="hints" id="pr2-8-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`apply()`
 
 </details>
 :::
@@ -336,136 +221,127 @@ median(multab, na.rm = TRUE)
 <img id="pr2-9-level" class="level"/>
 
 ::: {#pr2-9-task .task}
-Текст задания.
+Создайте список, который будет содержать следующие элементы:
+
+* вектор `letters` под названием `alphabet`
+* значение `TRUE` под названием `logic`
+* матрицу `multab` под названием `multab`
+
+Сохраните список в переменную `first_list`.
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-9-hints">
+```{r 9}
+first_list <- list(alphabet = letters,
+                   logic = TRUE,
+                   multab = multab)
+first_list
+```
 
-<summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #10 {#pr2-10}
 
 <img id="pr2-10-level" class="level"/>
 
 ::: {#pr2-10-task .task}
-Текст задания.
+
+Выделите из списка `first_list`:
+
+a. первый элемент (по номеру) --- должен вернуться список
+
+```{r 10a}
+first_list[1]
+```
+
+b. матрицу `multab` (по названия) --- должен вернуться список
+
+```{r 10b}
+first_list["multab"]
+```
+
+c. матрицу `multab` --- должна вернуться матрица
+
+```{r 10c}
+first_list$multab
+```
+
+d. логический элемент `logic` --- должен вернуться вектор
+
+```{r 10d}
+first_list$logic
+```
+
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-10-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #11 {#pr2-11}
 
 <img id="pr2-11-level" class="level"/>
 
 ::: {#pr2-11-task .task}
-Текст задания.
+Выделите из списка `first_list`: 
+
+a. первые 5 элементов вектора `alphabet`
+
+```{r 11a}
+first_list$alphabet[1:5]
+```
+
+b. два последних столбца матрицы `multab`
+
+```{r 11b}
+first_list$multab[, 8:9]
+```
+
+
+с. третий элемент логического вектора `logic`
+
+```{r 11c}
+first_list$logic[3]
+```
+
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-11-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #12 {#pr2-12}
 
 <img class="level"/>
 
 ::: {#pr2-12-task .task}
-Текст задания.
+a. Напишите функцию `mul(x, y)`, которая будет перемножать два своих аргумента.
+
+```{r 12a}
+mul <- function(x, y) {
+  return(x * y)
+}
+```
+
+```{r 12a-call, echo=TRUE}
+mul(2,3)
+mul(-4, -8)
+mul(0.5, 6)
+```
+
+b. Напишите функцию `sqrtn(x, n)`, которая будет извлекать корень любой степени из любого числа.
+
+```{r 12b}
+sqrtn <- function(x, n) {
+  message("n is negative\n")
+  x^(1/n)
+}
+```
+
+```{r 12b-call}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+```
+
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-12-hints">
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #13 {#pr2-13}
 

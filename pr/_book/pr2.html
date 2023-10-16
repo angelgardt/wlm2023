@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,49 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +73,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -79,10 +113,12 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -101,44 +137,49 @@ div.csl-indent {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
+    <a class="nav-link" href="./../book/index.html" rel="" target="">
  <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
+    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
  <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
+    <a class="nav-link" href="./../practice/index.html" rel="" target="">
  <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
+    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
  <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
+    <a class="nav-link" href="./../projects/index.html" rel="" target="">
  <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">P2 // Матрицы и списки. Функции и строки</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr2.html">P2 // Матрицы и списки. Функции и строки</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -146,112 +187,132 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr1.html" class="sidebar-item-text sidebar-link">P1 // Введение в R. Типы данных. Векторы</a>
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr2.html" class="sidebar-item-text sidebar-link active">P2 // Матрицы и списки. Функции и строки</a>
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">P2 // Матрицы и списки. Функции и строки</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr3.html" class="sidebar-item-text sidebar-link">P3 // Датафреймы. Исследование данных</a>
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr4.html" class="sidebar-item-text sidebar-link">P4 // Предобработка данных</a>
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P4 // Предобработка данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr5.html" class="sidebar-item-text sidebar-link">P5 // Визуализация данных</a>
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P5 // Визуализация данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr6.html" class="sidebar-item-text sidebar-link">P6 // Математика и теория измерений</a>
+  <a href="./pr6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P6 // Математика и теория измерений</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr7.html" class="sidebar-item-text sidebar-link">P7 // Случайный эксперимент. Случайные величины</a>
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr8.html" class="sidebar-item-text sidebar-link">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr9.html" class="sidebar-item-text sidebar-link">P9 // Описательные статистики. Корреляционный анализ</a>
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr10.html" class="sidebar-item-text sidebar-link">P10 // Простая линейная регрессия. Множественная линейная регрессия</a>
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr11.html" class="sidebar-item-text sidebar-link">P11 // Дисперсионный анализ. Ковариационный анализ</a>
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr12.html" class="sidebar-item-text sidebar-link">P12 // Логистическая регрессия. Пуассоновская регрессия</a>
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr13.html" class="sidebar-item-text sidebar-link">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr14.html" class="sidebar-item-text sidebar-link">P14 // Смешанные линейные модели</a>
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P14 // Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr15.html" class="sidebar-item-text sidebar-link">P15 // Кластерный анализ</a>
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P15 // Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr16.html" class="sidebar-item-text sidebar-link">P16 // Анализ главных компонент. Эксплораторный факторный анализ</a>
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr17.html" class="sidebar-item-text sidebar-link">P17 // Конфирматорный факторный анализ</a>
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -302,7 +363,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="pr2" class="quarto-section-identifier d-none d-lg-block">P2 // Матрицы и списки. Функции и строки</span></h1>
+<h1 class="title"><span id="pr2" class="quarto-section-identifier">P2 // Матрицы и списки. Функции и строки</span></h1>
 </div>
 
 
@@ -325,9 +386,6 @@ div.csl-indent {
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
-<div class="cell">
-
-</div>
 <!--
 REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 -->
@@ -435,28 +493,6 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 </div>
 </div>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-3-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
 </section>
 <section id="pr2-4" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-4">#4</h3>
@@ -468,28 +504,6 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE TRUE TRUE TRUE TRUE</code></pre>
 </div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-4-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
 </div>
 </section>
 <section id="pr2-5" class="level3">
@@ -511,28 +525,6 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
  [8,]    8   16   24   32   40   48   56   64   72
  [9,]    9   18   27   36   45   54   63   72   81</code></pre>
 </div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-5-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
 </div>
 </section>
 <section id="pr2-6" class="level3">
@@ -566,28 +558,6 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 </div>
 </div>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-6-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
 </section>
 <section id="pr2-7" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-7">#7</h3>
@@ -607,55 +577,41 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 <pre><code>[1] 28</code></pre>
 </div>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-7-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
 </section>
 <section id="pr2-8" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-8">#8</h3>
 <p><img id="pr2-8-level" class="level"></p>
 <div id="pr2-8-task" class="task">
-<p>Текст задания.</p>
+<p><strong>8.1</strong> Для матрицы <code>m</code> посчитайте сумму:</p>
+<ol type="a">
+<li>по каждой строке</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 2 2 2 5</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>по каждому столбцу</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 2 2 2 5</code></pre>
+</div>
+</div>
+<p><strong>8.2</strong> Для матрицы <code>multab</code> посчитайте сумму по каждому столбцу.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   0  70 117 168 220 264 308 352 396</code></pre>
+</div>
+</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr2-8-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>apply()</code></p>
 </details>
 </div>
 </section>
@@ -663,116 +619,179 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr2-9">#9</h3>
 <p><img id="pr2-9-level" class="level"></p>
 <div id="pr2-9-task" class="task">
-<p>Текст задания.</p>
+<p>Создайте список, который будет содержать следующие элементы:</p>
+<ul>
+<li>вектор <code>letters</code> под названием <code>alphabet</code></li>
+<li>значение <code>TRUE</code> под названием <code>logic</code></li>
+<li>матрицу <code>multab</code> под названием <code>multab</code></li>
+</ul>
+<p>Сохраните список в переменную <code>first_list</code>.</p>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-9-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$alphabet
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+[20] "t" "u" "v" "w" "x" "y" "z"
+
+$logic
+[1] TRUE
+
+$multab
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
 </div>
 </section>
 <section id="pr2-10" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-10">#10</h3>
 <p><img id="pr2-10-level" class="level"></p>
 <div id="pr2-10-task" class="task">
-<p>Текст задания.</p>
+<p>Выделите из списка <code>first_list</code>:</p>
+<ol type="a">
+<li>первый элемент (по номеру) — должен вернуться список</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$alphabet
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+[20] "t" "u" "v" "w" "x" "y" "z"</code></pre>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-10-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+</div>
+<ol start="2" type="a">
+<li>матрицу <code>multab</code> (по названия) — должен вернуться список</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$multab
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>матрицу <code>multab</code> — должна вернуться матрица</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+<ol start="4" type="a">
+<li>логический элемент <code>logic</code> — должен вернуться вектор</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="pr2-11" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-11">#11</h3>
 <p><img id="pr2-11-level" class="level"></p>
 <div id="pr2-11-task" class="task">
-<p>Текст задания.</p>
+<p>Выделите из списка <code>first_list</code>:</p>
+<ol type="a">
+<li>первые 5 элементов вектора <code>alphabet</code></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "b" "c" "d" "e"</code></pre>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+</div>
+<ol start="2" type="a">
+<li>два последних столбца матрицы <code>multab</code></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2]
+ [1,]   NA   NA
+ [2,]   16   18
+ [3,]   24   27
+ [4,]   32   36
+ [5,]   40   45
+ [6,]   48   54
+ [7,]   56   63
+ [8,]   64   72
+ [9,]   72   81</code></pre>
+</div>
+</div>
+<p>с. третий элемент логического вектора <code>logic</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="pr2-12" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-12">#12</h3>
 <p><img class="level"></p>
 <div id="pr2-12-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Напишите функцию <code>mul(x, y)</code>, которая будет перемножать два своих аргумента.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-12-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="sc">-</span><span class="dv">8</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="fl">0.5</span>, <span class="dv">6</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Напишите функцию <code>sqrtn(x, n)</code>, которая будет извлекать корень любой степени из любого числа.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>n is negative</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>n is negative</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>n is negative</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="pr2-13" class="level3">
@@ -1282,11 +1301,11 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 <script type="text/javascript" src="./js/pr.js"></script>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-grinberg-rexercises" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-grinberg-rexercises" class="csl-entry" role="listitem">
 Grinberg, Nastasiya, and Robin Reed. 2016. <em>Programming Exercises for r</em>. <a href="https://doi.org/10.13140/RG.2.1.1530.7281">https://doi.org/10.13140/RG.2.1.1530.7281</a>.
 </div>
-<div id="ref-moroz-dh4dl" class="csl-entry" role="doc-biblioentry">
+<div id="ref-moroz-dh4dl" class="csl-entry" role="listitem">
 Мороз, Г. 2022. <em>Наука о Данных в r Для Программы Цифровых Гуманитарных Исследований</em>. <a href="https://agricolamz.github.io/DS_for_DH/">https://agricolamz.github.io/DS_for_DH/</a>.
 </div>
 </div>
@@ -1436,9 +1455,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1503,6 +1536,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
