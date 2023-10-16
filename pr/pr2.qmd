@@ -1,5 +1,11 @@
 # P2 // Матрицы и списки. Функции и строки {#pr2 .unnumbered}
 
+{{< include ../book/_symbols.qmd >}}
+
+```{r opts, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ```{=html}
 <!--
 REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
@@ -12,44 +18,27 @@ REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
 <img id="pr2-1-level" class="level"/>
 
 ::: {#pr2-1-task .task}
-Текст задания `переменная`.
+Создайте матрицу, размером 5×5, из единиц. Сохраните её в переменную `m`.
 :::
 
-::: hints-wrapper
-<details class="hints" id="pr2-1-hints">
+```{r 1}
+m <- matrix(1, nrow = 5, ncol = 5)
+m
+```
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #2 {#pr2-2}
 
 <img id="pr2-2-level" class="level"/>
 
 ::: {#pr2-2-task .task}
-Текст задания.
-
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Замените все некрайние значения на нули. Перезапишите переменную `m`.
 :::
+
+```{r 2}
+m[2:4, 2:4] <- 0
+m
+```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-2-hints">
@@ -77,12 +66,39 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+
 ### #3 {#pr2-3}
 
 <img id="pr2-3-level" class="level"/>
 
 ::: {#pr2-3-task .task}
-Текст задания.
+
+Выделите из матрицы `m`:
+
+a. вторую строку
+
+```{r 3a}
+m[2,]
+```
+
+b. первый столбец
+
+```{r 3b}
+m[, 1]
+```
+
+c. строки с третьей по пятую
+
+```{r 3c}
+m[3:5, ]
+```
+
+d. второй и третий столбы
+
+```{r 3d}
+m[, 2:3]
+```
+
 :::
 
 ::: hints-wrapper
@@ -116,8 +132,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr2-4-level" class="level"/>
 
 ::: {#pr2-4-task .task}
-Текст задания.
+Сравните вторую строку и третий столбец матрицы `m`.
 :::
+
+```{r 4}
+m[2, ] == m[, 3]
+```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-4-hints">
@@ -150,8 +170,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr2-5-level" class="level"/>
 
 ::: {#pr2-5-task .task}
-Текст задания.
+Создайте таблицу умножения. Это должна быть матрица, размером 9×9, в которой на пересечении $i$-ой строки и $j$-го столбца находится произведение $i \times j$. Сохраните результат в переменную `multab`.
 :::
+
+```{r 5}
+multab <- matrix(rep(1:9, each = 9) * rep(1:9, times = 9), ncol = 9)
+multab
+```
+
 
 ::: hints-wrapper
 <details class="hints" id="pr2-5-hints">
@@ -184,7 +210,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr2-6-level" class="level"/>
 
 ::: {#pr2-6-task .task}
-Текст задания.
+
+Поработайте с переменной `multab`.
+
+a. выделите 71-ый элемент матрицы
+
+```{r 6a}
+multab[71]
+```
+
+b. замените все значения, меньшие 10, на пропуски (`NA`)
+
+```{r 6b}
+multab[multab < 10] <- NA
+multab
+```
+
 :::
 
 ::: hints-wrapper
@@ -218,8 +259,17 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr2-7-level" class="level"/>
 
 ::: {#pr2-7-task .task}
-Текст задания.
+Примените к матрице `multab` функции `sum()`, `mean()`, `median()`, которые мы применяли к векторам. Учтите, что в данных есть пропуски --- ведь мы их туда своими руками добавили.
+
+Что получилось? Почему так?
+
 :::
+
+```{r 7}
+sum(multab, na.rm = TRUE)
+mean(multab, na.rm = TRUE)
+median(multab, na.rm = TRUE)
+```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-7-hints">
