@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,10 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,13 +46,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -94,12 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить",
-    "search-label": "Search"
+    "search-submit-button-title": "Отправить"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -118,49 +145,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
+    <a class="nav-link" href="./../book/index.html">
  <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
+    <a class="nav-link" href="./../lectures/index.html">
  <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
+    <a class="nav-link" href="./../practice/index.html">
  <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
+    <a class="nav-link" href="./../homeworks/index.html">
  <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
+    <a class="nav-link" href="./../projects/index.html">
  <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw1.html">HW1 // Введение в R. Типы данных. Векторы</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">HW1 // Введение в R. Типы данных. Векторы</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -168,126 +190,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Вступление</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link active">HW1 // Введение в R. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW2 // Матрицы и списки. Функции и строки</span></a>
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link">HW2 // Матрицы и списки. Функции и строки</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">HW3 // Датафреймы. Исследование данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW4 // Предобработка данных</span></a>
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link">HW4 // Предобработка данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW5 // Визуализация данных</span></a>
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">HW5 // Визуализация данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">HW6 // Случайный эксперимент. Случайные величины</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">HW8 // Описательные статистики. Корреляционный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">HW9 // Простая линейная регрессия. Множественная линейная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">HW10 // Дисперсионный анализ. Ковариационный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">HW11 // Логистическая регрессия. Пуассоновская регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">HW13 // Смешанные линейные модели</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">HW14 // Кластерный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">HW16 // Конфирматорный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Источники</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -323,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw1" class="quarto-section-identifier">HW1 // Введение в R. Типы данных. Векторы</span></h1>
+<h1 class="title"><span id="hw1" class="quarto-section-identifier d-none d-lg-block">HW1 // Введение в R. Типы данных. Векторы</span></h1>
 </div>
 
 
@@ -341,12 +344,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="cell">
+
+</div>
+<div class="callout-warning callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Напоминалка о контроле случайности
 </div>
 </div>
@@ -367,6 +373,12 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p><img id="hw1-1-level" class="level"></p>
 <div id="hw1-1-task" class="task">
 <p>Сгенерируйте распределение некоторой изучаемой переменной в генеральной совокупности из 350 000 объектов с помощью функции <code>rnorm()</code> с параметрами <code>mean = 80</code> и <code>sd = 21</code>. Сохраните результат генерации в переменную <code>pop</code>.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-1-autocheck" class="autocheck">
 <div id="hw1-1-ir" class="input-requirements">
@@ -412,6 +424,12 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <div id="hw1-2-task" class="task">
 <p>Сгенерируйте случайную выборку из генеральной совокупности (<code>pop</code>) объемом 150 значений. Считайте, что все объекты генеральной совокупности равновероятно попадают в выборку. Сохраните результаты генерации в переменную <code>first_banch</code>.</p>
 </div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
 <div id="hw1-2-autocheck" class="autocheck">
 <div id="hw1-2-ir" class="input-requirements">
 <p>Для самопроверки в поле ниже введите сумму по получившемуся вектору.</p>
@@ -454,6 +472,12 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p><img id="hw1-3-level" class="level"></p>
 <div id="hw1-3-task" class="task">
 <p>Удалите из полученный выборки 5 наибольших и 5 наименьших значений — посчитаем их нехарактерными значениями (выбросами). Перезапишите вектор <code>first_banch</code>.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-3-autocheck" class="autocheck">
 <div id="hw1-3-ir" class="input-requirements">
@@ -518,6 +542,12 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 <p>Объедините векторы <code>first_banch</code> и <code>second_banch</code> в один для дальнейшей работы. Назовите получившийся вектор <code>obs</code>.</p>
 </div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
 <div id="hw1-4-autocheck" class="autocheck">
 <div id="hw1-4-ir" class="input-requirements">
 <p>Для самопроверки в поле ниже введите длину получившегося вектора.</p>
@@ -539,6 +569,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <li>если ли в нем пропущенные значения?</li>
 <li>если есть, сколько их?</li>
 </ul>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-5-autocheck" class="autocheck">
 <div id="hw1-5-ir" class="input-requirements">
@@ -589,6 +622,12 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <li>скорректируйте тип данных</li>
 </ul>
 <p>Перезапишите объект <code>obs</code>.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-6-autocheck" class="autocheck">
 <div id="hw1-6-ir" class="input-requirements">
@@ -651,6 +690,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <li>медиану</li>
 </ul>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw1-7-autocheck" class="autocheck">
 <div id="hw1-7-ir" class="input-requirements">
 <p>Для самопроверки введите через запятую полученные значения в порядке, указанном в задании. Проверка игнорирует все пробелы.</p>
@@ -685,6 +727,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <li>Найдите медиану второй (большей) половины значений</li>
 </ol>
 <p>Так как количество элементов нечетное, считайте, что срединное значение входит в обе половины.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-8-autocheck" class="autocheck">
 <div id="hw1-8-ir" class="input-requirements">
@@ -739,6 +784,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p><img id="hw1-9-level" class="level"></p>
 <div id="hw1-9-task" class="task">
 <p>Выборка нашего исследования включала в себя респондентов из пяти групп. Сгенерируйте группирующий вектор такой же длины, как и наша переменная, случайным образом из значений <code>gr1</code>, <code>gr2</code>, <code>gr3</code>, <code>gr4</code> и <code>gr5</code>. Сохраните результат генерации в переменную <code>condition</code>.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-9-autocheck" class="autocheck">
 <div id="hw1-9-ir" class="input-requirements">
@@ -821,6 +869,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <div id="hw1-11-task" class="task">
 <p>Сейчас у нас лежат отдельно наблюдения (<code>obs</code>) и отдельно группы респондентов (<code>condition</code>). Хотелось бы как-то их связать друг с другом. Хоть мы и владеем из всех структур данных пока только вектором, у нас есть способ осуществить желаемое. Это <strong>именованный вектор</strong>.</p>
 <p>Задайте элементам вектора <code>obs</code> имена, которыми будут элементы вектора <code>condition</code>. Таким образом, мы будем знать, к какой группе относиться каждое наблюдение.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-11-autocheck" class="autocheck">
 <div id="hw1-11-ir" class="input-requirements">
@@ -909,6 +960,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <div id="hw1-12-task" class="task">
 <p>Возьмите получившийся вектор <code>obs</code> с наблюдениями и группами и разделите выборку на две равные подвыборки случайным образом. Сохраните результаты в переменные <code>sam1</code> и <code>sam2</code>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw1-12-autocheck" class="autocheck">
 <div id="hw1-12-ir" class="input-requirements">
 
@@ -925,6 +979,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p><img id="hw1-14-level" class="level"></p>
 <div id="hw1-14-task" class="task">
 <p>Проверьте сбалансированность групп по количеству наблюдений в получившихся подвыборках.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-14-autocheck" class="autocheck">
 <div id="hw1-14-ir" class="input-requirements">
@@ -945,6 +1002,9 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p><span class="math display">\[
 x(n) = \frac{n^n}{\sqrt[n]{n}}
 \]</span></p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw1-15-autocheck" class="autocheck">
 <div id="hw1-15-ir" class="input-requirements">
@@ -1107,23 +1167,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -1188,92 +1234,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
