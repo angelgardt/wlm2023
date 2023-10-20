@@ -395,6 +395,44 @@ sqrtn(-27, 3)
 <img id="pr2-14-level" class="level"/>
 
 ::: {#pr2-14-task .task}
+Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.
+
+Модифицируйте функцию из [предыдущего задания](#pr2-13) так, чтобы по умолчанию она возвращала `NaN`, если `x` отрицательный, но могла вычислить значение при необходимости.
+
+
+:::
+
+```{r 14}
+sqrtn <- function(x, n, complex = FALSE) {
+  if (x < 0 & complex) x <- as.complex(x)
+  x^(1/n)
+}
+```
+
+```{r 14-calls, echo=TRUE}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-2, 2, complex = TRUE)
+```
+
+::: hints-wrapper
+<details class="hints" id="pr2-14-hints">
+
+<summary>Подсказка</summary>
+
+Нужен дополнительный аргумент (в примерах он назван `complex`), который по умолчанию будет равен `FALSE`.
+
+</details>
+:::
+
+
+### #15 {#pr2-15}
+
+<img id="pr2-15-level" class="level"/>
+
+::: {#pr2-15-task .task}
 Напишите функцию, которая реализует следующую математическую функцию:
 
 $$
@@ -408,7 +446,7 @@ $$
 
 Сохраните результат в переменную `qcres`.
 
-```{r 14}
+```{r 15}
 quad_cube <- function(x) {
   result <- numeric(length(x))
   
@@ -428,19 +466,17 @@ quad_cube <- function(x) {
 qcres <- quad_cube(seq(-5, 5, by = .1))
 ```
 
-```{r 14-res, echo=TRUE}
+```{r 15-res, echo=TRUE}
 qcres
 ```
 
 Воспользуйтесь командой ниже, чтобы визуализировать вектор и сравнить результат с ожидаемым.
 
-```{r 14-vis, echo=TRUE}
+```{r 15-vis, echo=TRUE}
 plot(qcres, type = "l")
 ```
 
 :::
-
-
 
 ::: hints-wrapper
 <details class="hints" id="pr2-14-hints">
@@ -451,7 +487,7 @@ plot(qcres, type = "l")
 
 * для одного понадобиться
 
-```{r 14-hint1, echo=TRUE, eval=FALSE}
+```{r 15-hint1, echo=TRUE, eval=FALSE}
 for (variable in vector) {
   ...
 }
@@ -459,60 +495,14 @@ for (variable in vector) {
 
 * для другого
 
-```{r 14-hint2, echo=TRUE, eval=FALSE}
+```{r 15-hint2, echo=TRUE, eval=FALSE}
 Map(function, vector)
 unlist(list)
 ```
 </details>
 :::
 
-### #15 {#pr2-15}
 
-<img id="pr2-15-level" class="level"/>
-
-::: {#pr2-15-task .task}
-Создадим список с результатами статистических тестов. Вот такой:
-
-```{r 15-list, echo=TRUE}
-ttests <- list(test1 = list(t = 1.33,
-                            p = 0.1),
-               test2 = list(t = 2.306,
-                            p = 0.025),
-               test3 = list(t = 3.527,
-                            p = 0.001))
-ttests
-```
-
-Этот список состоит из результатов неких трёх t-тестов --- `test1`, `test2`, `test3` --- которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений --- `t` и `p`.
-
-Вытащите из списка `ttests` p-значения. Результатом должен быть вектор из трех значений.
-
-```{r 15}
-pvals <- numeric()
-for (i in 1:length(ttests)) {
-  pvals[i] <- ttests[[i]]$p
-}
-pvals
-```
-
-:::
-
-
-::: hints-wrapper
-<details class="hints" id="pr2-15-hints">
-
-<summary>Подсказка</summary>
-
-Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет 
-
-```{r 15-hint, echo=TRUE, eval=FALSE}
-for (variable in vector) {
-  ...
-}
-```
-
-</details>
-:::
 
 ### #16 {#pr2-16}
 
@@ -563,42 +553,56 @@ rownames()
 
 :::
 
+
+
 ### #17 {#pr2-17}
 
 <img id="pr2-17-level" class="level"/>
 
 ::: {#pr2-17-task .task}
-Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.
+Создадим список с результатами статистических тестов. Вот такой:
 
-Модифицируйте функцию из предыдущего задания так, чтобы по умолчанию она возвращала `NaN`, если `x` отрицательный, но могла вычислить значение при необходимости.
+```{r 17-list, echo=TRUE}
+ttests <- list(test1 = list(t = 1.33,
+                            p = 0.1),
+               test2 = list(t = 2.306,
+                            p = 0.025),
+               test3 = list(t = 3.527,
+                            p = 0.001))
+ttests
+```
 
+Этот список состоит из результатов неких трёх t-тестов --- `test1`, `test2`, `test3` --- которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений --- `t` и `p`.
+
+Вытащите из списка `ttests` p-значения. Результатом должен быть вектор из трех значений.
+
+```{r 17}
+pvals <- numeric()
+for (i in 1:length(ttests)) {
+  pvals[i] <- ttests[[i]]$p
+}
+pvals
+```
 
 :::
 
-```{r 17}
-sqrtn <- function(x, n, complex = FALSE) {
-  if (x < 0 & complex) x <- as.complex(x)
-  x^(1/n)
-}
-```
-
-```{r 17-calls, echo=TRUE}
-sqrtn(4, 2)
-sqrtn(27, 3)
-sqrtn(30, -5)
-sqrtn(-2, 2)
-sqrtn(-2, 2, complex = TRUE)
-```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-17-hints">
 
 <summary>Подсказка</summary>
 
-Нужен дополнительный аргумент (в примерах он назван `complex`), который по умолчанию будет равен `FALSE`.
+Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет 
+
+```{r 17-hint, echo=TRUE, eval=FALSE}
+for (variable in vector) {
+  ...
+}
+```
 
 </details>
 :::
+
 
 ### #18 {#pr2-18}
 
@@ -607,7 +611,7 @@ sqrtn(-2, 2, complex = TRUE)
 ::: {#pr2-18-task .task}
 Функции, которые внутри себя содержат цикл --- это что-то сложное. Можно вынести его из функции и использовать функцию внутри цикла. Но и то, и другое выглядит громоздко и работает медленно. Есть более красивый вариант.
 
-Ниже представлена функция из [задания 14](#pr2-14), из которой удален цикл --- теперь она может работать только с одним значением `x` (вектором, длины 1). Согласитель, читаться стало проще:
+Ниже представлена функция из [задания 15](#pr2-15), из которой удален цикл --- теперь она может работать только с одним значением `x` (вектором, длины 1). Согласитель, читаться стало проще:
 
 ```{r 18-fun, echo=TRUE, eval=TRUE}
 quad_cube2 <- function(x) {
@@ -687,7 +691,7 @@ Map(function(x) ..., vector)
 
 ::: {#pr2-20-task .task}
 
-Вытащите p-значения из списка `ttests` из [задания 15](#pr2-15) без использования цикла и создания функций. Результат должен быть вектором.
+Вытащите p-значения из списка `ttests` из [задания 17](#pr2-17) без использования цикла и создания функций. Результат должен быть вектором.
 
 :::
 
@@ -697,7 +701,7 @@ unlist(Map(function(x) x$p, ttests))
 
 ::: hints-wrapper
 
-<details class="hints" id="pr2-15-hints">
+<details class="hints" id="pr2-20-hints">
 
 <summary>Подсказки</summary>
 
@@ -758,8 +762,33 @@ apply(sim, 2, sd)
 <img id="pr2-23-level" class="level"/>
 
 ::: {#pr2-23-task .task}
-Текст задания.
+
+Продолжим работу над функцией из [задания 14](#pr2-14).
+
+Модифицируйте её так, чтобы она выводила предупреждение (warning) с содержанием `Warning: x has negative value`, если в качестве аргумента `x` передано отрицательное число и аргумент `complex` равен `FALSE`.
+
 :::
+
+```{r 23}
+sqrtn <- function(x, n, complex = FALSE) {
+  if (x < 0) {
+    if (complex) {
+      x <- as.complex(x)
+    } else {
+      warning("x has negative value\n")
+    }
+  }
+  return(x^(1/n))
+}
+```
+
+```{r 23-calls, echo=TRUE}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-2, 2, complex = TRUE)
+```
 
 
 ::: hints-wrapper
@@ -767,23 +796,10 @@ apply(sim, 2, sd)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+```{r 23-hints, echo=TRUE, eval=FALSE}
+warning()
+"\n" # new line
+```
 
 </details>
 :::
@@ -793,7 +809,46 @@ apply(sim, 2, sd)
 <img id="pr2-24-level" class="level"/>
 
 ::: {#pr2-24-task .task}
-Текст задания.
+
+Продолжим работу над функцией из [предыдущего задания](#pr2-23).
+
+Модифицируйте её так, чтобы она выводила сообщение (message) с содержанием `x coerced to complex`, если в качестве аргумента `x` передано отрицательное число и аргумент `complex` равен `TRUE`, чтобы пользователь был проинформирован о том, что происходит.
+
+:::
+
+```{r 24}
+sqrtn <- function(x, n, complex = FALSE) {
+  if (x < 0) {
+    if (complex) {
+      x <- as.complex(x)
+      message("x coerced to complex")
+    } else {
+      warning("x has negative value\n")
+    }
+  }
+  return(x^(1/n))
+}
+```
+
+```{r 24-calls, echo=TRUE}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-2, 2, complex = TRUE)
+```
+
+
+::: hints-wrapper
+<details class="hints" id="pr2-24-hints">
+
+<summary>Подсказка</summary>
+
+```{r 24-hint, echo=TRUE, eval=FALSE}
+message()
+```
+
+</details>
 :::
 
 
@@ -802,32 +857,46 @@ apply(sim, 2, sd)
 <img id="pr2-25-level" class="level"/>
 
 ::: {#pr2-25-task .task}
-Текст задания.
+Продолжим работу над функцией из [предыдущего задания](#pr2-24) и доведем её до совершенства.
+
+Модифицируйте её так, чтобы она заканчивала работу с ошибкой (error) с содержанием ```argument `complex` must be a logical constant```, если в качестве аргумента `complex` передано какое-либо значение, кроме логического.
+
 :::
 
+```{r 25}
+sqrtn <- function(x, n, complex = FALSE) {
+  
+  if(!is.logical(complex)) stop("argument `complex` must be a logical constant")
+  
+  if (x < 0) {
+    if (complex) {
+      x <- as.complex(x)
+      message("x coerced to complex")
+    } else {
+      warning("x has negative value\n")
+    }
+  }
+  return(x^(1/n))
+}
+```
+
+```{r 25-calls, echo=TRUE, error=TRUE}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-2, 2, complex = TRUE)
+sqrtn(-2, 2, complex = "no")
+```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-25-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+```{r 25-hint, echo=TRUE, eval=FALSE}
+stop()
+```
 
 </details>
 :::
@@ -836,172 +905,192 @@ apply(sim, 2, sd)
 
 <img id="pr2-26-level" class="level"/>
 
+::: {#pr2-26-task .task}
+В [задании 16](#pr2-16) мы сделали функцию, которая считает сумму, среднее и медиану по столбцам матрицы.
+
+а. Попробуйте вызвать её на матрице `multab`. Каков результат? Почему так?
+
+```{r 26a, include=FALSE}
+mat_desc(multab)
+```
+
+b. Модифицируйте функцию так, чтобы она могла принимать на вход аргументы, необходимые для её внутренних функций, и пробрасывать их им. Функция должна корректно обрабатывать любые необходимые аргументы.
+
+:::
+
+```{r 26}
+mat_desc <- function(m, ...) {
+  sums <- apply(m, 2, sum, ...)
+  means <- apply(m, 2, mean, ...)
+  medians <- apply(m, 2, median, ...)
+  result <- rbind(sums, means, medians)
+  rownames(result) <- c("sum", "mean", "median")
+  return(result)
+}
+```
+
+```{r 26-call, echo=TRUE}
+mat_desc(multab)
+mat_desc(multab, na.rm = TRUE)
+mat_desc(sim)
+mat_desc(sim, trim = .5)
+```
+
 
 ::: hints-wrapper
+
 <details class="hints" id="pr2-26-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+```{r 26-hint, echo=TRUE, eval=FALSE}
+help("...")
+```
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
+
+
 
 ### #7 {#pr2-27}
 
 <img id="pr2-27-level" class="level"/>
 
 ::: {#pr2-27-task .task}
-Текст задания.
+До этого мы генерировали случайные вектора только из нормального распределения (`rnorm()`), однако мир распределений одним нормальным не ограничивается.
+
+Напишите функцию, которая генерирует [независимые] выборки из любого заданного распределения.
+
+Функция --- назовем её `gen_dist` --- должна:
+
+* принимать на вход следующие параметры:
+    * количество выборок, которые необходимо сгенерировать --- `n_samples`
+    * количество наблюдений в одной выборке --- `n_obs`
+    * функцию распределения, из которого необходимо выполнить генерацию --- `fun`
+       * по умолчанию функция должна генерировать выборки из нормального распределения
+    * другие аргументы, необходимые для работы функции распределения
+* возвращать матрицу, размером `n_obs`×`n_samples`, содержащую сгенерированные значения
+
 :::
 
+```{r 27}
+gen_dist <- function(n_samples, n_obs, fun = rnorm, ...) {
+  matrix(fun(n_obs*n_samples, ...),
+              nrow = n_obs)
+}
+```
 
-::: hints-wrapper
-<details class="hints" id="pr2-27-hints">
+```{r 27-calls, echo=TRUE}
+gen_dist(5, 10)
+gen_dist(5, 3, mean = 8, sd = 12)
+gen_dist(3, 5, fun = rbeta, shape1 = 2, shape2 = 3)
+```
 
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #8 {#pr2-28}
 
 <img id="pr2-28-level" class="level"/>
 
 ::: {#pr2-28-task .task}
-Текст задания.
-:::
 
+Вычислите:
+
+a. $\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{1 + j}$
+
+```{r 28a}
+sum((1:30)^4) / sum(1 + (1:10))
+```
+
+b. $\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{i + j}$
+
+```{r 28b}
+sum((1:30)^4) / sum(outer(1:30, 1:10, "+"))
+```
+
+:::
 
 ::: hints-wrapper
-<details class="hints" id="pr2-28-hints">
 
-<summary>Подсказки</summary>
+<details class="hints" id="pr2-26-hints">
 
-<details class="hint">
+<summary>Подсказка</summary>
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+```{r 28-hint, echo=TRUE, eval=FALSE}
+outer()
+```
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
+
 
 ### #9 {#pr2-29}
 
 <img id="pr2-29-level" class="level"/>
 
 ::: {#pr2-29-task .task}
-Текст задания.
-:::
 
+Вычислите:
+
+a. $\sum_{i=1}^{10}\sum_{j=2}^8\sum_{k=3}^6 \frac{i^k}{i-j}$
+
+```{r 29a}
+sum(outer(1:10, 3:6, "*")) / sum(outer(1:10, 2:8, "-"))
+```
+
+b. $\sum_{i=1}^{10}\sum_{j=1}^i \frac{i^4}{3 + ij}$
+
+```{r 29b}
+sum(outer(1:10, 1:10, 
+          function(i, j) { (i >= j) * i^4 / (3 + i * j) }))
+```
+
+:::
 
 ::: hints-wrapper
-<details class="hints" id="pr2-29-hints">
 
-<summary>Подсказки</summary>
+<details class="hints" id="pr2-26-hints">
 
-<details class="hint">
+<summary>Подсказка</summary>
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+```{r 29-hint, echo=TRUE, eval=FALSE}
+outer(..., ..., function)
+```
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
+
+
 
 ### #10 {#pr2-30}
 
 <img id="pr2-30-level" class="level"/>
 
 ::: {#pr2-30-task .task}
-Текст задания.
+Вычислите первые 20 чисел Фибоначчи. Первым числом считайте $F_0 = 0$.
+
+Числа Фибоначчи задаются следующей последовательностью:
+
+$$
+F_0 = 0, \quad F_1 = 1, F_n = F_{n-1} + F_{n-2}
+$$
+
 :::
 
-
-::: hints-wrapper
-<details class="hints" id="pr2-30-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
+```{r 30}
+fib <- function(n) {
+  fib <- numeric(20)
+  fib[1] <- 0
+  fib[2] <- 1
+  for (i in 3:n) {
+    fib[i] <- fib[i-1] + fib[i-2]
+  }
+  return(fib)
+}
+fib(20)
+```
 
 ***
 

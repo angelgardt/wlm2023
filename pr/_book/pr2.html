@@ -852,6 +852,47 @@ $multab
 <h3 class="anchored" data-anchor-id="pr2-14">#14</h3>
 <p><img id="pr2-14-level" class="level"></p>
 <div id="pr2-14-task" class="task">
+<p>Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.</p>
+<p>Модифицируйте функцию из <a href="#pr2-13">предыдущего задания</a> так, чтобы по умолчанию она возвращала <code>NaN</code>, если <code>x</code> отрицательный, но могла вычислить значение при необходимости.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-14-hints">
+<summary>
+Подсказка
+</summary>
+<p>Нужен дополнительный аргумент (в примерах он назван <code>complex</code>), который по умолчанию будет равен <code>FALSE</code>.</p>
+</details>
+</div>
+</section>
+<section id="pr2-15" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-15">#15</h3>
+<p><img id="pr2-15-level" class="level"></p>
+<div id="pr2-15-task" class="task">
 <p>Напишите функцию, которая реализует следующую математическую функцию:</p>
 <p><span class="math display">\[
 f(x) = \cases{
@@ -865,7 +906,7 @@ x^3,  \quad x &gt; 1}
 
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>qcres</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>qcres</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
  [10]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
@@ -883,9 +924,9 @@ x^3,  \quad x &gt; 1}
 </div>
 <p>Воспользуйтесь командой ниже, чтобы визуализировать вектор и сравнить результат с ожидаемым.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(qcres, <span class="at">type =</span> <span class="st">"l"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(qcres, <span class="at">type =</span> <span class="st">"l"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="pr2_files/figure-html/14-vis-1.png" class="img-fluid" width="672"></p>
+<p><img src="pr2_files/figure-html/15-vis-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -899,76 +940,16 @@ x^3,  \quad x &gt; 1}
 <li>для одного понадобиться</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>для другого</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>, vector)</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</details>
-</div>
-</section>
-<section id="pr2-15" class="level3">
-<h3 class="anchored" data-anchor-id="pr2-15">#15</h3>
-<p><img id="pr2-15-level" class="level"></p>
-<div id="pr2-15-task" class="task">
-<p>Создадим список с результатами статистических тестов. Вот такой:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>ttests <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">test1 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">1.33</span>,</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.1</span>),</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">test2 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">2.306</span>,</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.025</span>),</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">test3 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">3.527</span>,</span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.001</span>))</span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>ttests</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$test1
-$test1$t
-[1] 1.33
-
-$test1$p
-[1] 0.1
-
-
-$test2
-$test2$t
-[1] 2.306
-
-$test2$p
-[1] 0.025
-
-
-$test3
-$test3$t
-[1] 3.527
-
-$test3$p
-[1] 0.001</code></pre>
-</div>
-</div>
-<p>Этот список состоит из результатов неких трёх t-тестов — <code>test1</code>, <code>test2</code>, <code>test3</code> — которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений — <code>t</code> и <code>p</code>.</p>
-<p>Вытащите из списка <code>ttests</code> p-значения. Результатом должен быть вектор из трех значений.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.100 0.025 0.001</code></pre>
-</div>
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-15-hints">
-<summary>
-Подсказка
-</summary>
-<p>Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>, vector)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </details>
 </div>
@@ -1003,9 +984,9 @@ median    1  0.0  0.0  0.0    1</code></pre>
 Подсказки
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>()</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>()</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>()</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>()</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </details>
 </div>
@@ -1014,32 +995,46 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-17">#17</h3>
 <p><img id="pr2-17-level" class="level"></p>
 <div id="pr2-17-task" class="task">
-<p>Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.</p>
-<p>Модифицируйте функцию из предыдущего задания так, чтобы по умолчанию она возвращала <code>NaN</code>, если <code>x</code> отрицательный, но могла вычислить значение при необходимости.</p>
-</div>
+<p>Создадим список с результатами статистических тестов. Вот такой:</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>ttests <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">test1 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">1.33</span>,</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.1</span>),</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">test2 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">2.306</span>,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.025</span>),</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">test3 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">3.527</span>,</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.001</span>))</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>ttests</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$test1
+$test1$t
+[1] 1.33
 
+$test1$p
+[1] 0.1
+
+
+$test2
+$test2$t
+[1] 2.306
+
+$test2$p
+[1] 0.025
+
+
+$test3
+$test3$t
+[1] 3.527
+
+$test3$p
+[1] 0.001</code></pre>
 </div>
+</div>
+<p>Этот список состоит из результатов неких трёх t-тестов — <code>test1</code>, <code>test2</code>, <code>test3</code> — которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений — <code>t</code> и <code>p</code>.</p>
+<p>Вытащите из списка <code>ttests</code> p-значения. Результатом должен быть вектор из трех значений.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>[1] 0.100 0.025 0.001</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5064957</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NaN</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0+1.414214i</code></pre>
 </div>
 </div>
 <div class="hints-wrapper">
@@ -1047,7 +1042,12 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <summary>
 Подсказка
 </summary>
-<p>Нужен дополнительный аргумент (в примерах он назван <code>complex</code>), который по умолчанию будет равен <code>FALSE</code>.</p>
+<p>Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
@@ -1056,7 +1056,7 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <p><img id="pr2-18-level" class="level"></p>
 <div id="pr2-18-task" class="task">
 <p>Функции, которые внутри себя содержат цикл — это что-то сложное. Можно вынести его из функции и использовать функцию внутри цикла. Но и то, и другое выглядит громоздко и работает медленно. Есть более красивый вариант.</p>
-<p>Ниже представлена функция из <a href="#pr2-14">задания 14</a>, из которой удален цикл — теперь она может работать только с одним значением <code>x</code> (вектором, длины 1). Согласитель, читаться стало проще:</p>
+<p>Ниже представлена функция из <a href="#pr2-15">задания 15</a>, из которой удален цикл — теперь она может работать только с одним значением <code>x</code> (вектором, длины 1). Согласитель, читаться стало проще:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>quad_cube2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="dv">0</span>)</span>
@@ -1117,7 +1117,7 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-20">#20</h3>
 <p><img id="pr2-20-level" class="level"></p>
 <div id="pr2-20-task" class="task">
-<p>Вытащите p-значения из списка <code>ttests</code> из <a href="#pr2-15">задания 15</a> без использования цикла и создания функций. Результат должен быть вектором.</p>
+<p>Вытащите p-значения из списка <code>ttests</code> из <a href="#pr2-17">задания 17</a> без использования цикла и создания функций. Результат должен быть вектором.</p>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -1126,7 +1126,7 @@ median    1  0.0  0.0  0.0    1</code></pre>
 </div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="pr2-15-hints">
+<details class="hints" id="pr2-20-hints">
 <summary>
 Подсказки
 </summary>
@@ -1205,28 +1205,46 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-23">#3</h3>
 <p><img id="pr2-23-level" class="level"></p>
 <div id="pr2-23-task" class="task">
-<p>Текст задания.</p>
+<p>Продолжим работу над функцией из <a href="#pr2-14">задания 14</a>.</p>
+<p>Модифицируйте её так, чтобы она выводила предупреждение (warning) с содержанием <code>Warning: x has negative value</code>, если в качестве аргумента <code>x</code> передано отрицательное число и аргумент <code>complex</code> равен <code>FALSE</code>.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr2-23-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">warning</span>()</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="st">"</span><span class="sc">\n</span><span class="st">"</span> <span class="co"># new line</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
@@ -1234,61 +1252,155 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-24">#4</h3>
 <p><img id="pr2-24-level" class="level"></p>
 <div id="pr2-24-task" class="task">
-<p>Текст задания.</p>
+<p>Продолжим работу над функцией из <a href="#pr2-23">предыдущего задания</a>.</p>
+<p>Модифицируйте её так, чтобы она выводила сообщение (message) с содержанием <code>x coerced to complex</code>, если в качестве аргумента <code>x</code> передано отрицательное число и аргумент <code>complex</code> равен <code>TRUE</code>, чтобы пользователь был проинформирован о том, что происходит.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x coerced to complex</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-24-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
 </div>
 </section>
 <section id="pr2-25" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-25">#5</h3>
 <p><img id="pr2-25-level" class="level"></p>
 <div id="pr2-25-task" class="task">
-<p>Текст задания.</p>
+<p>Продолжим работу над функцией из <a href="#pr2-24">предыдущего задания</a> и доведем её до совершенства.</p>
+<p>Модифицируйте её так, чтобы она заканчивала работу с ошибкой (error) с содержанием <code>argument `complex` must be a logical constant</code>, если в качестве аргумента <code>complex</code> передано какое-либо значение, кроме логического.</p>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x coerced to complex</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="st">"no"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in sqrtn(-2, 2, complex = "no"): argument `complex` must be a logical constant</code></pre>
+</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr2-25-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stop</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
 <section id="pr2-26" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-26">#6</h3>
 <p><img id="pr2-26-level" class="level"></p>
+<div id="pr2-26-task" class="task">
+<p>В <a href="#pr2-16">задании 16</a> мы сделали функцию, которая считает сумму, среднее и медиану по столбцам матрицы.</p>
+<p>а. Попробуйте вызвать её на матрице <code>multab</code>. Каков результат? Почему так?</p>
+<ol start="2" type="a">
+<li>Модифицируйте функцию так, чтобы она могла принимать на вход аргументы, необходимые для её внутренних функций, и пробрасывать их им. Функция должна корректно обрабатывать любые необходимые аргументы.</li>
+</ol>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(multab)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+sum      NA   NA   NA   NA   NA   NA   NA   NA   NA
+mean     NA   NA   NA   NA   NA   NA   NA   NA   NA
+median   NA   NA   NA   NA   NA   NA   NA   NA   NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(multab, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1] [,2]  [,3] [,4]  [,5] [,6]  [,7] [,8]  [,9]
+sum       0   70 117.0  168 220.0  264 308.0  352 396.0
+mean    NaN   14  19.5   24  27.5   33  38.5   44  49.5
+median   NA   14  19.5   24  27.5   33  38.5   44  49.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(sim)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]       [,2]       [,3]       [,4]       [,5]
+sum    198.528225 287.474567 172.137252 211.080367 258.770756
+mean     6.617608   9.582486   5.737908   7.036012   8.625692
+median   7.895935  10.844637   8.984648   5.523392  11.177839</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(sim, <span class="at">trim =</span> .<span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]      [,2]       [,3]       [,4]      [,5]
+sum    199.028225 287.97457 172.637252 211.580367 259.27076
+mean     7.895935  10.84464   8.984648   5.523392  11.17784
+median   7.895935  10.84464   8.984648   5.523392  11.17784</code></pre>
+</div>
+</div>
 <div class="hints-wrapper">
 <details class="hints" id="pr2-26-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"..."</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
@@ -1296,57 +1408,89 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-27">#7</h3>
 <p><img id="pr2-27-level" class="level"></p>
 <div id="pr2-27-task" class="task">
-<p>Текст задания.</p>
+<p>До этого мы генерировали случайные вектора только из нормального распределения (<code>rnorm()</code>), однако мир распределений одним нормальным не ограничивается.</p>
+<p>Напишите функцию, которая генерирует [независимые] выборки из любого заданного распределения.</p>
+<p>Функция — назовем её <code>gen_dist</code> — должна:</p>
+<ul>
+<li>принимать на вход следующие параметры:
+<ul>
+<li>количество выборок, которые необходимо сгенерировать — <code>n_samples</code></li>
+<li>количество наблюдений в одной выборке — <code>n_obs</code></li>
+<li>функцию распределения, из которого необходимо выполнить генерацию — <code>fun</code>
+<ul>
+<li>по умолчанию функция должна генерировать выборки из нормального распределения</li>
+</ul></li>
+<li>другие аргументы, необходимые для работы функции распределения</li>
+</ul></li>
+<li>возвращать матрицу, размером <code>n_obs</code>×<code>n_samples</code>, содержащую сгенерированные значения</li>
+</ul>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-27-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">5</span>, <span class="dv">10</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]        [,2]       [,3]       [,4]       [,5]
+ [1,] -0.07045269 -0.28676782  1.3595626 -0.2782413  0.3287331
+ [2,] -0.75031916 -0.52928746  1.3923633  1.1369704  1.2029108
+ [3,] -0.09401376 -0.55704503 -1.6319603  0.9784894 -1.1780358
+ [4,]  0.41274946 -0.54843891  0.9944335  1.6473931  0.9161471
+ [5,] -1.25747896  0.06374339  1.5975855 -1.5064649 -0.3907390
+ [6,]  0.19706349 -1.17805997 -0.6759391 -1.7938317 -0.3312926
+ [7,] -1.89231492 -1.37490185  0.5056523 -1.3929986 -0.8074692
+ [8,]  0.25217616  0.33334974  0.8613147  0.4638977  0.1419368
+ [9,] -0.64785092  0.55974467  0.7455506  0.7481314  0.3662677
+[10,] -0.26605768 -1.15775671  0.9483999  1.2235673 -2.0921697</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">5</span>, <span class="dv">3</span>, <span class="at">mean =</span> <span class="dv">8</span>, <span class="at">sd =</span> <span class="dv">12</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]      [,2]        [,3]       [,4]       [,5]
+[1,]  7.752419 14.334106 13.17928270  27.391833 -0.7910348
+[2,] -2.844010 -5.938432 22.74866106 -26.272741 28.1433925
+[3,] 33.761001 11.920114 -0.07093902   1.166308 12.6606099</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="at">fun =</span> rbeta, <span class="at">shape1 =</span> <span class="dv">2</span>, <span class="at">shape2 =</span> <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]      [,2]      [,3]
+[1,] 0.3045953 0.4159781 0.5546832
+[2,] 0.1453501 0.3029234 0.1187707
+[3,] 0.5764221 0.4637129 0.1048004
+[4,] 0.6585448 0.3387338 0.2995576
+[5,] 0.2085483 0.1863473 0.3125800</code></pre>
+</div>
 </div>
 </section>
 <section id="pr2-28" class="level3">
 <h3 class="anchored" data-anchor-id="pr2-28">#8</h3>
 <p><img id="pr2-28-level" class="level"></p>
 <div id="pr2-28-task" class="task">
-<p>Текст задания.</p>
+<p>Вычислите:</p>
+<ol type="a">
+<li><span class="math inline">\(\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{1 + j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 81138.45</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li><span class="math inline">\(\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{i + j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 837.1427</code></pre>
+</div>
+</div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="pr2-28-hints">
+<details class="hints" id="pr2-26-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">outer</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
@@ -1354,28 +1498,32 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-29">#9</h3>
 <p><img id="pr2-29-level" class="level"></p>
 <div id="pr2-29-task" class="task">
-<p>Текст задания.</p>
+<p>Вычислите:</p>
+<ol type="a">
+<li><span class="math inline">\(\sum_{i=1}^{10}\sum_{j=2}^8\sum_{k=3}^6 \frac{i^k}{i-j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28.28571</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li><span class="math inline">\(\sum_{i=1}^{10}\sum_{j=1}^i \frac{i^4}{3 + ij}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6944.743</code></pre>
+</div>
+</div>
 </div>
 <div class="hints-wrapper">
-<details class="hints" id="pr2-29-hints">
+<details class="hints" id="pr2-26-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">outer</span>(..., ..., <span class="cf">function</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </div>
 </section>
@@ -1383,29 +1531,17 @@ median    1  0.0  0.0  0.0    1</code></pre>
 <h3 class="anchored" data-anchor-id="pr2-30">#10</h3>
 <p><img id="pr2-30-level" class="level"></p>
 <div id="pr2-30-task" class="task">
-<p>Текст задания.</p>
+<p>Вычислите первые 20 чисел Фибоначчи. Первым числом считайте <span class="math inline">\(F_0 = 0\)</span>.</p>
+<p>Числа Фибоначчи задаются следующей последовательностью:</p>
+<p><span class="math display">\[
+F_0 = 0, \quad F_1 = 1, F_n = F_{n-1} + F_{n-2}
+\]</span></p>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="pr2-30-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]    0    1    1    2    3    5    8   13   21   34   55   89  144  233  377
+[16]  610  987 1597 2584 4181</code></pre>
+</div>
 </div>
 <hr>
 <p>Некоторые задания, а также форматы заданий, подсмотрены у <span class="citation" data-cites="moroz-dh4dl">Мороз (<a href="references.html#ref-moroz-dh4dl" role="doc-biblioref">2022</a>)</span> и <span class="citation" data-cites="grinberg-rexercises">Grinberg and Reed (<a href="references.html#ref-grinberg-rexercises" role="doc-biblioref">2016</a>)</span>.</p>
