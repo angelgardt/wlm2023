@@ -1,5 +1,4 @@
-# P2 // Матрицы и списки. Функции и строки {#pr2 .unnumbered}
-
+# P2 // Матрицы и списки. Функции {#pr2 .unnumbered}
 
 
 {{< include ../book/_symbols.qmd >}}
@@ -328,19 +327,33 @@ b. Напишите функцию `sqrtn(x, n)`, которая будет из
 
 ```{r 12b}
 sqrtn <- function(x, n) {
-  message("n is negative\n")
+  # message("n is negative\n")
   x^(1/n)
 }
 ```
 
-```{r 12b-call}
+```{r 12b-call, echo=TRUE}
 sqrtn(4, 2)
 sqrtn(27, 3)
 sqrtn(30, -5)
+sqrtn(-2, 2)
 ```
 
 :::
 
+::: hints-wrapper
+
+<details class="hints" id="pr2-8-hints">
+
+<summary>Подсказка</summary>
+
+$$
+\sqrt[n]{x} = x^{\frac{1}{n}}
+$$
+
+</details>
+
+:::
 
 
 ### #13 {#pr2-13}
@@ -348,31 +361,31 @@ sqrtn(30, -5)
 <img id="pr2-13-level" class="level"/>
 
 ::: task
-Текст задания.
+Модифицируйте функцию из [предыдущего задания](#pr2-12), чтобы она могла обрабатывать отрицательный `x` при любом `n` --- то есть функция не должна возвращать `NaN`.
+
+```{r 13}
+sqrtn <- function(x, n) {
+  if (x < 0) x <- as.complex(x)
+  x^(1/n)
+}
+```
+
+```{r 13-call}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-27, 3)
+```
+
 :::
 
 ::: hints-wrapper
 <details class="hints" id="pr2-13-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Чтобы извлечь корень из отрицательного числа, необходимо привести его типу `complex`.
 
 </details>
 :::
@@ -382,32 +395,74 @@ sqrtn(30, -5)
 <img id="pr2-14-level" class="level"/>
 
 ::: {#pr2-14-task .task}
-Текст задания.
+Напишите функцию, которая реализует следующую математическую функцию:
+
+$$
+f(x) = \cases{
+0,  \quad x < 0 \\ 
+x^2,  \quad 0 \leq x \leq 1 \\
+x^3,  \quad x > 1}
+$$
+
+Сохраните её в переменную `quad_cube` и выполните на векторе $\pmatrix{-5.0 & -4.9 & -4.8 & \dots -0.9 & 0.0 & 0.1 & \dots & 4.8 & 4.9 & 5.0}$.
+
+Сохраните результат в переменную `qcres`.
+
+```{r 14}
+quad_cube <- function(x) {
+  result <- numeric(length(x))
+  
+  for (i in 1:length(x)) {
+    if (x[i] < 0) {
+      result[i] <- 0 
+    } else if (x[i] > 1) {
+      result[i] <- x[i]^3 
+    }
+    else {
+      result[i] <- x[i]^2
+    }
+  }
+  
+  return(result)
+}
+qcres <- quad_cube(seq(-5, 5, by = .1))
+```
+
+```{r 14-res, echo=TRUE}
+qcres
+```
+
+Воспользуйтесь командой ниже, чтобы визуализировать вектор и сравнить результат с ожидаемым.
+
+```{r 14-vis, echo=TRUE}
+plot(qcres, type = "l")
+```
+
 :::
+
+
 
 ::: hints-wrapper
 <details class="hints" id="pr2-14-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
+Может быть два решения:
 
-<summary>Как делать задание?</summary>
+* для одного понадобиться
 
-</details>
+```{r 14-hint1, echo=TRUE, eval=FALSE}
+for (variable in vector) {
+  ...
+}
+```
 
-<details class="hint">
+* для другого
 
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
+```{r 14-hint2, echo=TRUE, eval=FALSE}
+Map(function, vector)
+unlist(list)
+```
 </details>
 :::
 
@@ -416,32 +471,45 @@ sqrtn(30, -5)
 <img id="pr2-15-level" class="level"/>
 
 ::: {#pr2-15-task .task}
-Текст задания.
+Создадим список с результатами статистических тестов. Вот такой:
+
+```{r 15-list, echo=TRUE}
+ttests <- list(test1 = list(t = 1.33,
+                            p = 0.1),
+               test2 = list(t = 2.306,
+                            p = 0.025),
+               test3 = list(t = 3.527,
+                            p = 0.001))
+ttests
+```
+
+Этот список состоит из результатов неких трёх t-тестов --- `test1`, `test2`, `test3` --- которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений --- `t` и `p`.
+
+Вытащите из списка `ttests` p-значения. Результатом должен быть вектор из трех значений.
+
+```{r 15}
+pvals <- numeric()
+for (i in 1:length(ttests)) {
+  pvals[i] <- ttests[[i]]$p
+}
+pvals
+```
+
 :::
 
 
 ::: hints-wrapper
 <details class="hints" id="pr2-15-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
+Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет 
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+```{r 15-hint, echo=TRUE, eval=FALSE}
+for (variable in vector) {
+  ...
+}
+```
 
 </details>
 :::
@@ -451,34 +519,48 @@ sqrtn(30, -5)
 <img id="pr2-16-level" class="level"/>
 
 ::: {#pr2-16-task .task}
-Текст задания.
+В [задании 8](#pr2-8) мы считали сумму по столбцам матрицы. Но что делать, если нам нужно посчитать несколько статистик по столбцам?
+
+Напишите функцию `mat_desc(m)`, которая будет считать сумму, среднее и медиану по столбцам матрицы.
+
+Фунция должна:
+
+* принимать на вход матрицу произвольного размера
+* возвращать матрицу с числом столбцов, равным числу столбцов входной матрицы, в которой в первой строке будут суммы, во второй --- средние, в третьей --- медианы, рассчитанные по столбцам входной матрицы
+* строки матрицы должны быть подписаны `sum`, `mean` и `median` соответственно
+
 :::
+
+```{r 16}
+mat_desc <- function(m) {
+  sums <- apply(m, 2, sum)
+  means <- apply(m, 2, mean)
+  medians <- apply(m, 2, median)
+  result <- rbind(sums, means, medians)
+  rownames(result) <- c("sum", "mean", "median")
+  return(result)
+}
+```
+
+```{r 16-call}
+mat_desc(m)
+```
 
 
 ::: hints-wrapper
+
 <details class="hints" id="pr2-16-hints">
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+```{r 16-hint, echo=TRUE, eval=FALSE}
+apply()
+rbind()
+rownames()
+```
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #17 {#pr2-17}
@@ -486,32 +568,34 @@ sqrtn(30, -5)
 <img id="pr2-17-level" class="level"/>
 
 ::: {#pr2-17-task .task}
-Текст задания.
+Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.
+
+Модифицируйте функцию из предыдущего задания так, чтобы по умолчанию она возвращала `NaN`, если `x` отрицательный, но могла вычислить значение при необходимости.
+
+
 :::
 
+```{r 17}
+sqrtn <- function(x, n, complex = FALSE) {
+  if (x < 0 & complex) x <- as.complex(x)
+  x^(1/n)
+}
+```
+
+```{r 17-calls, echo=TRUE}
+sqrtn(4, 2)
+sqrtn(27, 3)
+sqrtn(30, -5)
+sqrtn(-2, 2)
+sqrtn(-2, 2, complex = TRUE)
+```
 
 ::: hints-wrapper
 <details class="hints" id="pr2-17-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Нужен дополнительный аргумент (в примерах он назван `complex`), который по умолчанию будет равен `FALSE`.
 
 </details>
 :::
@@ -521,8 +605,36 @@ sqrtn(30, -5)
 <img id="pr2-18-level" class="level"/>
 
 ::: {#pr2-18-task .task}
-Текст задания.
+Функции, которые внутри себя содержат цикл --- это что-то сложное. Можно вынести его из функции и использовать функцию внутри цикла. Но и то, и другое выглядит громоздко и работает медленно. Есть более красивый вариант.
+
+Ниже представлена функция из [задания 14](#pr2-14), из которой удален цикл --- теперь она может работать только с одним значением `x` (вектором, длины 1). Согласитель, читаться стало проще:
+
+```{r 18-fun, echo=TRUE, eval=TRUE}
+quad_cube2 <- function(x) {
+    if (x < 0) return(0)
+    else if (x > 1) return(x^3)
+    else return(x^2)
+}
+```
+
+C помощью функции `Map()` выполните её на векторе $\pmatrix{-5.0 & -4.9 & -4.8 & \dots -0.9 & 0.0 & 0.1 & \dots & 4.8 & 4.9 & 5.0}$.
+
+Изучите результат. При необходимости, переведите его в вектор.
+
+Сохраните результат в переменную `qcres2`.
+
+```{r 18}
+qcres2 <- unlist(Map(quad_cube2, seq(-5, 5, by = .1)))
+```
+
+Воспользуйтесь командой ниже, чтобы убедиться, что мы получили тот же самый результат.
+
+```{r 18-vis, echo=TRUE}
+plot(qcres2, type = "l")
+```
+
 :::
+
 
 
 ::: hints-wrapper
@@ -530,23 +642,10 @@ sqrtn(30, -5)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+```{r 18-hints, echo=TRUE, eval=FALSE}
+Map(function, vector)
+unlist(list)
+```
 
 </details>
 :::
@@ -556,34 +655,30 @@ sqrtn(30, -5)
 <img id="pr2-19-level" class="level"/>
 
 ::: {#pr2-19-task .task}
-Текст задания.
+Давайте аналогичным способом возведем каждый элемент вектора в квадрат. Возьмите вектор $\pmatrix{1 & 2 & 3 & 4 & 5}$ и возведите каждый его элемент в квадрат с помощью функции `Map()`.
+
+Можно написать для этого функцию, но она будет очень короткая и простая и лишь займет место в скрипте. Пропишите функцию прямо в функции `Map()`.
+
 :::
+
+```{r 19}
+unlist(Map(function(x) x^2, 1:5))
+```
+
 
 
 ::: hints-wrapper
+
 <details class="hints" id="pr2-19-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+```{r 19-hint, echo=TRUE, eval=FALSE}
+Map(function(x) ..., vector)
+```
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #20 {#pr2-20}
@@ -591,35 +686,35 @@ sqrtn(30, -5)
 <img id="pr2-20-level" class="level"/>
 
 ::: {#pr2-20-task .task}
-Текст задания.
+
+Вытащите p-значения из списка `ttests` из [задания 15](#pr2-15) без использования цикла и создания функций. Результат должен быть вектором.
+
 :::
 
+```{r 20}
+unlist(Map(function(x) x$p, ttests))
+```
 
 ::: hints-wrapper
-<details class="hints" id="pr2-20-hints">
+
+<details class="hints" id="pr2-15-hints">
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+```{r 20-hint1, echo=TRUE, eval=FALSE}
+Map(function, list)
+unlist(list)
+```
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+```{r 20-hint2, echo=TRUE, eval=FALSE}
+Map(function(x) ..., list)
+```
 
 </details>
 
-</details>
 :::
+
+
 
 ## Дополнительные задания {#pr2_add}
 
@@ -628,70 +723,35 @@ sqrtn(30, -5)
 <img id="pr2-21-level" class="level"/>
 
 ::: {#pr2-21-task .task}
-Текст задания.
+Сгенерируйте 5 [независимых] выборок по 30 наблюдений из генеральной совокупности с нормальным распределением `rnorm(..., mean = 10, sd = 20)`. Результат генерации должен быть представлен в виде матрицы 30×5, где каждый столбец --- это одна выборка. Сохраните результат генерации в переменной `sim`.
+
+Пример сгенерирован при `set.seed(24)`.
+
 :::
 
+```{r 21}
+set.seed(24)
+sim <- matrix(rnorm(30*5, mean = 10, sd = 20),
+              nrow = 30)
+sim
+```
 
-::: hints-wrapper
-<details class="hints" id="pr2-21-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #2 {#pr2-22}
 
 <img id="pr2-22-level" class="level"/>
 
 ::: {#pr2-22-task .task}
-Текст задания.
+
+Посчитайте среднее (`mean()`) и стандартное отклонение (`sd()`) по каждой сгенерированной выборке.
+
 :::
 
+```{r 22}
+apply(sim, 2, mean)
+apply(sim, 2, sd)
+```
 
-::: hints-wrapper
-<details class="hints" id="pr2-22-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ### #3 {#pr2-23}
 
