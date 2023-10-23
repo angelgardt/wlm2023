@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,10 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,13 +46,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -94,12 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить",
-    "search-label": "Search"
+    "search-submit-button-title": "Отправить"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -118,49 +145,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
+    <a class="nav-link" href="./../book/index.html">
  <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
+    <a class="nav-link" href="./../lectures/index.html">
  <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
+    <a class="nav-link" href="./../practice/index.html">
  <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
+    <a class="nav-link" href="./../homeworks/index.html">
  <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
+    <a class="nav-link" href="./../projects/index.html">
  <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw2.html">HW2 // Матрицы и списки. Функции и строки</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">HW2 // Матрицы и списки. Функции и строки</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -168,126 +190,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Вступление</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link">HW1 // Введение в R. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW2 // Матрицы и списки. Функции и строки</span></a>
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link active">HW2 // Матрицы и списки. Функции и строки</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">HW3 // Датафреймы. Исследование данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW4 // Предобработка данных</span></a>
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link">HW4 // Предобработка данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW5 // Визуализация данных</span></a>
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">HW5 // Визуализация данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">HW6 // Случайный эксперимент. Случайные величины</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">HW8 // Описательные статистики. Корреляционный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">HW9 // Простая линейная регрессия. Множественная линейная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">HW10 // Дисперсионный анализ. Ковариационный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">HW11 // Логистическая регрессия. Пуассоновская регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">HW13 // Смешанные линейные модели</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">HW14 // Кластерный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">HW16 // Конфирматорный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Источники</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -323,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw2" class="quarto-section-identifier">HW2 // Матрицы и списки. Функции и строки</span></h1>
+<h1 class="title"><span id="hw2" class="quarto-section-identifier d-none d-lg-block">HW2 // Матрицы и списки. Функции и строки</span></h1>
 </div>
 
 
@@ -341,6 +344,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!--
 REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 -->
+<div class="cell">
+
+</div>
 <section id="hw2_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw2_main">Основные задания</h2>
 <section id="hw2-1-title" class="level3">
@@ -348,12 +354,12 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p><img id="hw2-1-level" class="level"></p>
 <div id="hw2-1-task" class="task">
 <p>Сгенерируйте две матрицы, которые будут содержать по 50 выборок, объемом по 70 наблюдений, из генеральной совокупности, в которой распределение некоторого признака подчиняется нормальному распределению (<code>rnorm()</code>) с параметрами <code>mean = 20.5</code> и <code>sd = 3.48</code>. Каждой выборке в матрице должен соответствовать один столбец. Сохраните результаты генерации в перемененые <code>sim1</code> и <code>sim2</code>.</p>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-warning callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Ослабим контроль случайности
 </div>
 </div>
@@ -367,6 +373,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p>Автопроверка настроена на результаты, получаемы при значении зерна датчика случайных чисел <code>set.seed(420)</code>.</p>
 </div>
 </div>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-1-autocheck" class="autocheck">
 <div id="hw2-1-ir" class="input-requirements">
@@ -387,16 +396,22 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Используя функцию <code>rnorm()</code> нужно сгенерировать вектор, длиной равной количеству выборок, умноженному на количество наблюдений в одной выборке.</li>
+<li>Затем «сложить» вектор в матрицу, размером число наблюдений в выборке × число выборок.</li>
+<li>Сохранить результат генерации в переменную <code>sim1</code>.</li>
+<li>Повторить шаги генерации и сохранить результат в переменную <code>sim2</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, разделили ли вы значения запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -407,6 +422,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <div id="hw2-2-task" class="task">
 <p>Напишите функцию <code>mean_sd</code>, которая будет вычислять среднее (<code>mean()</code>) и стандартное отклонение (<code>sd()</code>) по всем выборкам (столбцам) одной матрицы.</p>
 <p>Функция должна принимать на вход матрицу произвольного размера и возвращать матрицу, в которой первой строкой будут средние по каждому столбцу матрицы, а второй — стандартные отклонения. Количество столбцов матрицы аутпута (результата работы функции) должно совпадать с количеством столбцов входной матрицы.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-2-autocheck" class="autocheck">
 <div id="hw2-2-ir" class="input-requirements">
@@ -432,16 +450,21 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>В функции необходимо вызвать функцию <code>apply()</code> для расчета каждой из статистик — среднего и стандартного отклонения.</li>
+<li>Результаты работы функций необходимо объединить в матрицу — можно воспользоваться <code>matrix()</code> или <code>rbind()</code>.</li>
+<li>При использовании <code>matrix()</code> необходимо указать число столбцов, которе равно числу столбцов входной матрицы.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте правильность создания или генерации тестовой матрицы.</li>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -451,6 +474,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p><img id="hw2-3-level" class="level"></p>
 <div id="hw2-3-task" class="task">
 <p>Примените функцию, написанную в <a href="#hw2-2-title">задании 2</a>, к матрице <code>sim1</code>.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-3-autocheck" class="autocheck">
 <div id="hw2-3-ir" class="input-requirements">
@@ -471,16 +497,20 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Необходимо вызвать созданную функцию <code>mean_sd()</code> на ранее сгенерированной матрице <code>sim1</code>.</li>
+<li>Для округления можно использоваться функцию <code>round()</code>, где вторым аргументом указать <code>2</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -490,11 +520,14 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p><img id="hw2-4-level" class="level"></p>
 <div id="hw2-4-task" class="task">
 <p>Выполните t-тест на первых колонках матриц <code>sim1</code> и <code>sim2</code> и сохраните результат в переменную <code>ttest_res</code>.</p>
-<p>t-тест выполняется с помощью функции <code>t.test()</code>, в которуб необходимо передать в качестве аргументов два вектора. Синтаксис выглядит так:</p>
+<p>t-тест выполняется с помощью функции <code>t.test()</code>, в которую необходимо передать в качестве аргументов два вектора. Синтаксис выглядит так:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(vector1, vector2)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Понимание статистики, стоящей за данной функцией, для выполнения задания не требуется.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-4-autocheck" class="autocheck">
 <div id="hw2-4-ir" class="input-requirements">
@@ -515,18 +548,24 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Выделите первые колонки сгенерированных матриц <code>sim1</code> и <code>sim2</code></li>
+<li>Передайте их в функцию <code>t.test()</code></li>
+<li>Сохраните результат работы функции в переменную <code>ttest</code></li>
+<li>Выведите содержимое переменной в консоль, чтобы получить значение для ввода в поле самопроверки.</li>
+</ul>
 </details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что из матриц были выделены колонки.</li>
+<li>Проверьте, что были выделены имеено первые колонки.</li>
+<li>Проверьте, что в поле самопроверки вы вводите именно значение t-статистики.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
-</details>
+
 </div>
 </section>
 <section id="hw2-5-title" class="level3">
@@ -534,6 +573,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p><img id="hw2-5-level" class="level"></p>
 <div id="hw2-5-task" class="task">
 <p>Извлеките из результатов t-теста оценки средних по выборкам (<code>estimate</code>), значение статистики (<code>statistic</code>) и p-value (<code>p.value</code>).</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-5-autocheck" class="autocheck">
 <div id="hw2-5-ir" class="input-requirements">
@@ -554,16 +596,11 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Изучите структуру переменной <code>ttest</code> — это список.</li>
+<li>Проиндексируйте список с помощью имен его элементов.</li>
+<li>Выведите значения в консоль.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -573,6 +610,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <p><img id="hw2-6-level" class="level"></p>
 <div id="hw2-6-task" class="task">
 <p>Объедините извлеченные значения в именнованый список. Названия элементов сохраните исходными — <code>estimate</code>, <code>statistic</code> и <code>p.value</code> соответственно.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-6-autocheck" class="autocheck">
 <div id="hw2-6-ir" class="input-requirements">
@@ -593,16 +633,10 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Необходимо создать список, в который сохранить часть значений из переменной <code>ttest</code>.</li>
+<li>Список должен состоять из трех элементов, которым необходимо присвоить при создании имена, указанные в задании.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -624,6 +658,9 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 A = \pmatrix{1 &amp; 4 &amp; 7 \\ 2 &amp; 5 &amp; 8 \\ 3 &amp; 6 &amp; 9}, \quad
 B = \pmatrix{10 &amp; 40 &amp; 70 \\ 20 &amp; 50 &amp; 80 \\ 30 &amp; 60 &amp; 90}
 \]</span></p>
+</div>
+<div class="cell">
+
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stat_testing</span>(A, B) <span class="co"># A and B both are matrices</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -686,16 +723,14 @@ mean of x mean of y
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Необходимо создать функцию, аргументами которой будут две матрицы</li>
+<li>Внутри функции должен быть цикл, который будет перебирать столбцы матриц и выполнять на них t-тест</li>
+<li>Из результатов t-тесты необходимо извлекать три значения, аналогично заданию 6.</li>
+<li>Извлеченные результаты должны сохраняться в список результатов, который необходимо создать в начале функции.</li>
+<li>В конце тела функции с помощью <code>return()</code> нужно вернуть получившийся список с результатами.</li>
+<li>Количество элементов списка результатов должно совпадать с числом колонок входных матриц.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -705,6 +740,9 @@ mean of x mean of y
 <p><img id="hw2-8-level" class="level"></p>
 <div id="hw2-8-task" class="task">
 <p>Выполните функцию из <a href="#hw2-7-title">задания 7</a> на матрицах <code>sim1</code> и <code>sim2</code>. Результат работы функции сохраните в переменную <code>stat_testing_res</code>.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-8-autocheck" class="autocheck">
 <div id="hw2-8-ir" class="input-requirements">
@@ -716,7 +754,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-8-hints">
 <summary>
 Подсказки
@@ -745,6 +783,9 @@ mean of x mean of y
 <div id="hw2-9-task" class="task">
 <p>Извлеките из списка <code>stat_testing_res</code> вектор p-значений (<code>p.value</code>).</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw2-9-autocheck" class="autocheck">
 <div id="hw2-9-ir" class="input-requirements">
 <p>Для самопроверки в качестве ответа введите десятое значение получившегося вектора, округленное до сотых по арифметическим правилам.</p>
@@ -764,16 +805,22 @@ mean of x mean of y
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Чтобы извлечь p-значения, необходимо выполнить функцию, которая извлекает p-значения, на элементах списка.</li>
+<li>Используйте для этого функцию <code>Map()</code></li>
+<li>В качестве её первого аргумента пропишите анонимную функцию, которая вытаскивает элемент <code>p.value</code> из списка путем индексации по имени.</li>
+<li>Функция <code>Map()</code> возвращается список, который необходимо превратить в вектор с помощью функции <code>unlist()</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что в вектор извлекаются именно p-значения.</li>
+<li>Проверьте, что индексируете необходимый элемент вектора.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -783,6 +830,9 @@ mean of x mean of y
 <p><img id="hw2-10-level" class="level"></p>
 <div id="hw2-10-task" class="task">
 <p>Проверьте, сколько результатов тестов было статистически значимым. Считайте статистически значимым те результаты, где p-значение было меньше 0.05.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw2-10-autocheck" class="autocheck">
 <div id="hw2-10-ir" class="input-requirements">
@@ -794,7 +844,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-10-hints">
 <summary>
 Подсказки
@@ -827,6 +877,9 @@ mean of x mean of y
 <p>Модифицируйте функцию из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте строки были подписаны соответственно <code>mean</code> и <code>sd</code>.</p>
 <p>Сохраните модифицированную функцию в переменную <code>mean_sd_1</code>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw2-11-autocheck" class="autocheck">
 <div id="hw2-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -837,7 +890,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-11-hints">
 <summary>
 Подсказки
@@ -867,6 +920,9 @@ mean of x mean of y
 <p>Продолжите модификацию функции из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте столбцы унаследовали названия из входной матрицы, если они есть.</p>
 <p>Сохраните модифицированную функцию в переменную <code>mean_sd_2</code>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw2-12-autocheck" class="autocheck">
 <div id="hw2-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -877,7 +933,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-12-hints">
 <summary>
 Подсказки
@@ -914,6 +970,9 @@ mean of x mean of y
 <li>можно было задать параметр <code>paired</code> для t-тестов с дефолтным значением таким же, как у функции <code>t.test()</code></li>
 </ul>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw2-13-autocheck" class="autocheck">
 <div id="hw2-13-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -924,7 +983,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-13-hints">
 <summary>
 Подсказки
@@ -953,6 +1012,9 @@ mean of x mean of y
 <div id="hw2-14-task" class="task">
 <p>Модифицируйте функцию из <a href="#hw2-13-title">предыдущего задания</a>, чтобы можно было использовать для статистических тестов не только функцию <code>t.test()</code>, но и другие. Функция должна без ошибок обрабатывать входные параметры внутренних статистических функций. Сохраните модифицированную функцию в переменную <code>stat_testing_2</code>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw2-14-autocheck" class="autocheck">
 <div id="hw2-14-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -963,7 +1025,7 @@ mean of x mean of y
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-14-hints">
 <summary>
 Подсказки
@@ -989,7 +1051,7 @@ mean of x mean of y
 <section id="hw2-15-title" class="level3">
 <h3 class="anchored" data-anchor-id="hw2-15-title">#5</h3>
 <p><img id="hw2-15-level" class="level"></p>
-<div id="hw2-15-task" class="task">
+<div class="hints-wrapper" hidden="true">
 <p>Напишите функцию, которая решает квадратные уравнения.</p>
 <p>Квадратное уравнение задается тремя коэффициентами <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span>:</p>
 <p><span class="math display">\[
@@ -1019,6 +1081,9 @@ ax^2 + bx + c = 0
 </ul>
 <p>Сохраните функцию в переменную <code>quadeqsolve</code>.</p>
 <p>Примеры работы функции представлены ниже.</p>
+</div>
+<div class="cell">
+
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">c =</span> <span class="dv">4</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1235,23 +1300,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -1316,92 +1367,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
