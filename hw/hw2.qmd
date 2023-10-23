@@ -230,7 +230,7 @@ t.test(vector1, vector2)
 :::
 
 ```{r 4}
-ttest <- t.test(sim1[, 1], sim2[, 2])
+ttest <- t.test(sim1[, 1], sim2[, 1])
 round(ttest$statistic, 2)
 ```
 
