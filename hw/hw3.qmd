@@ -5,19 +5,83 @@
 REPLACE ALL hw3 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE)
+```
+
+```{r create_data, include=FALSE}
+library(tidyverse)
+start_date <- as.numeric(as.POSIXct("2022-08-06", format="%Y-%m-%d"))
+end_date <- as.numeric(as.POSIXct("2022-12-18", format="%Y-%m-%d"))
+
+set.seed(123)
+tibble(timestamp = sample(start_date:end_date, 204, replace = TRUE),
+       id = sample(paste0(stringi::stri_rand_strings(204, 4, "[A-Z]"), 1:204), 204),
+       q1 = sample(1:5, size = 204, replace = TRUE),
+       q2 = sample(1:5, size = 204, replace = TRUE),
+       q3 = sample(1:5, size = 204, replace = TRUE),
+       q4 = sample(1:5, size = 204, replace = TRUE),
+       q5 = sample(1:5, size = 204, replace = TRUE),
+       q6 = sample(1:5, size = 204, replace = TRUE),
+       q7 = sample(1:5, size = 204, replace = TRUE),
+       q8 = sample(1:5, size = 204, replace = TRUE),
+       q9 = sample(1:5, size = 204, replace = TRUE),
+       q10 = sample(1:5, size = 204, replace = TRUE),
+       q11 = sample(1:5, size = 204, replace = TRUE),
+       q12 = sample(1:5, size = 204, replace = TRUE)) %>% 
+  mutate(date = as_datetime(timestamp)) %>% 
+  select(-timestamp)-> dd_fake
+
+length(dd_fake$id)
+unique(dd_fake$id) %>% length()
+
+min(dd_fake$date)
+max(dd_fake$date)
+
+204/6
+30 + 22 + 16 + 40 + 76 + 20
+
+smpls <- list(-5)
+sizes <- c(30, 22, 16, 40, 76, 20)
+
+for (i in 1:6) {
+  smpl <- sample((1:204)[!((1:204) %in% unlist(smpls))], sizes[i])
+  smpls[[i]] <- smpl
+}
+
+for (i in 1:6) {
+  dd_fake %>% 
+    slice(smpls[[i]]) %>% 
+    write_csv(paste0("data/hw3/set", i, ".csv"))
+}
+
+```
+
+
 ## Основные задания {#hw3_main}
 
-### #1
+### #1 {#hw3-1-title}
 
 <img id="hw3-1-level" class="level"/>
 
 ::: {#hw3-1-task .task}
-Текст задания `переменная`.
+
+Сегодня мы работаем с данными опросника Тёмная дюжина (Dirty Dozen), которые собирались в одном из офлайн-исследований. Так как данные были собраны на разных компьютерах, несколько файлов были объединены в архив. 
+
+Скачайте [архив с данными](https://github.com/angelgardt/wlm2023/raw/master/data/hw3.zip) и разархивируйте его в проект курса, который мы создали на практическом занятии. В папке проекта должна появиться папка `hw3`. Мы будем работать с ней.
+
+Сколько всего файлов содержится в папке `hw3`? Выведете число файлов с помощью кода.
+
+```{r 1}
+length(dir("../data/hw3"))
+```
+
 :::
 
 ::: {#hw3-1-autocheck .autocheck}
 ::: {#hw3-1-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите количество файлов в папке.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-1" placeholder="Введите ответ…">
@@ -37,36 +101,52 @@ REPLACE ALL hw3 TO hw<n> WITH MATCH CASE
 
 <summary>Как делать задание?</summary>
 
+* Необходимо вывести названия файлов, содержащихся в папке `hw3` в виде вектора
+* И далее определить длину (количество элементов) этого вектора
+
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
+* Выведите названия файлов, содержащихся в папке `hw3`, с помощью функции `dir()`
+* Функция вернет вектор названий файлов
+* Определите длину (количество элементов) этого вектора с помощью функции `length()`
+
 </details>
 
 <details class="hint">
 
-<summary>Ответ неверный</summary>
+<summary>Код падает с ошибкой</summary>
+
+* Проверьте, что вы разархивировали скачанных архив в папку проекта
+* Проверьте, что вы работаете в проекте
+* Проверьте, что вы не опечатались в названии папки
 
 </details>
 
 </details>
 :::
 
-### #2
+### #2 {#hw3-2-title}
 
 <img id="hw3-2-level" class="level"/>
 
 ::: {#hw3-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Данные собирались на одном и том же программном обеспечении, поэтому структура файлов одинакова. Возьмите первый датасет `set1.csv` из папки с данными и загрузите его в переменную `set1`.
+
+```{r 2}
+set1 <- read.csv("../data/hw3/set1.csv")
+nrow(set1)
+```
+
 :::
 
 ::: {#hw3-2-autocheck .autocheck}
 ::: {#hw3-2-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите число строк в датасете.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-2" placeholder="Введите ответ…">
@@ -77,7 +157,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-2-hints">
 
 <summary>Подсказки</summary>
@@ -103,17 +183,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw3-3-title}
 
 <img id="hw3-3-level" class="level"/>
 
 ::: {#hw3-3-task .task}
-Текст задания.
+
+Проверьте структуру полученного датафрейма. Выведите типы данных всех переменные и первые несколько значений каждой из них с помощью одной команды.
+
+```{r 3}
+str(set1)
+```
+
 :::
 
 ::: {#hw3-3-autocheck .autocheck}
 ::: {#hw3-3-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите название типа данных, переменных которого больше всего в датасете. Проверка примет только полное название типа.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-3" placeholder="Введите ответ…">
@@ -133,11 +219,18 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Как делать задание?</summary>
 
+* Выведете структуру датафрейма
+* Посмотрите, переменных какого типа больше всего
+
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
+
+* С помощью функции `str()` вывести структуру датафрейма
+* Функция вернет список переменных, их тип и первые несколько значений каждой из них
+* Определите, переменных какого типа больше всего
 
 </details>
 
@@ -145,22 +238,32 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Ответ неверный</summary>
 
+Проверьте, с помощью какой функции вы загружаете данные. В случае `read.csv()` ответ будет верный, в случае `read_csv()` из пакета `tidyverse` ответ будет отличаться.
+
 </details>
 
 </details>
 :::
 
-### #4
+### #4 {#hw3-4-title}
 
 <img id="hw3-4-level" class="level"/>
 
 ::: {#hw3-4-task .task}
-Текст задания.
+
+a. Выведите первые 10 строк датафрейма.
+b. Выведите 5 последних строк датафрейма.
+
+```{r}
+head(set1, n = 10)
+tail(set1, n = 5)
+```
+
 :::
 
 ::: {#hw3-4-autocheck .autocheck}
 ::: {#hw3-4-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите через запятую `id` первого и последнего наблюдения (строки) в датасете.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-4" placeholder="Введите ответ…">
@@ -171,7 +274,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-4-hints">
 
 <summary>Подсказки</summary>
@@ -197,17 +300,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw3-5-title}
 
 <img id="hw3-5-level" class="level"/>
 
 ::: {#hw3-5-task .task}
-Текст задания.
+
+Выведите базовые описательные статистики по всем колонкам датасета с помощью одной функции.
+
+```{r 5}
+summary(set1)
+```
+
 :::
 
 ::: {#hw3-5-autocheck .autocheck}
 ::: {#hw3-5-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите среднее (`mean`) по переменной `q6`, округлённое до трёх десятичных знаков.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-5" placeholder="Введите ответ…">
@@ -225,13 +334,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
 <summary>Что надо сделать?</summary>
+
+* Выведите базовые описательные статистики по всем переменных датафрейма с помощью функции `summary()`.
 
 </details>
 
@@ -239,22 +344,36 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Ответ неверный</summary>
 
+Проверьте, что вы вводите среднее значение именно для переменной `q6`.
+
 </details>
 
 </details>
 :::
 
-### #6
+### #6 {#hw3-6-title}
 
 <img id="hw3-6-level" class="level"/>
 
 ::: {#hw3-6-task .task}
-Текст задания.
+
+Данные первично исследованы. Теперь можно объединить все файлы в единый датасет.
+
+Загрузите все файлы данных и объедините их в один датафрейм. Назовите его `dd`. Сделайте это с помощью цикла.
+
+```{r 6}
+files <- paste0("../data/hw3/", dir("../data/hw3"))
+dd <- data.frame()
+for (i in 1:length(files)) {
+  dd <- rbind(dd, read.csv(files[i]))
+}
+```
+
 :::
 
 ::: {#hw3-6-autocheck .autocheck}
 ::: {#hw3-6-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите количество строк в получившемся датафрейме.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-6" placeholder="Введите ответ…">
@@ -274,11 +393,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Как делать задание?</summary>
 
+* Напишите цикл, который проходится по вектору названий файлов, и читает каждый из указанных файлов
+* Учтите, что функция `dir()` возвращает только названия файлов, а чтобы они были прочитаны, необходимо добавить к их названиям имя папки, в которой они лежат
+* В теле цикла необходимо присоединять только что прочитанный файл к уже прочитанным и перезаписывать переменную
+* Не забудьте, что первый прочитанный файл также нужно к чему-то присоединить
+
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
+
+* Возьмите за основу функцию `read.csv()`, которая читает файлы, и возвращает датафрейм.
+* Используйте функцию `rbind()`, чтобы объединить два датафрейма по строкам.
+* Чтобы первый загруженный датафрейм было к чему присоединять, создайте пустой датафрейм функцией `data.frame()`.
+* Присоединить имя папки к названию файла, чтобы сформировать полный путь, можно с помощью функции `paste0()`.
 
 </details>
 
@@ -286,22 +415,36 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Ответ неверный</summary>
 
+* Проверьте, что цикл выполнился столько раз, сколько файлов есть в папке (посмотрите на значение переменной-итератора в Environment).
+* Проверьте, что какой-либо из файлов не прочитался более одного раза.
+
 </details>
 
 </details>
 :::
 
-### #7
+### #7 {#hw3-7-title}
 
 <img id="hw3-7-level" class="level"/>
 
 ::: {#hw3-7-task .task}
-Текст задания.
+
+Проверьте, есть ли в файлах данные, собранные в разные года. Для этого поработайте с переменной `date`. Обратите внимание на её тип.
+
+Для выполнения понадобится библиотека `lubridate`.
+
+```{r 7}
+dd$dt <- as_datetime(dd$date)
+unique(year(dd$dt))
+```
+
 :::
 
 ::: {#hw3-7-autocheck .autocheck}
 ::: {#hw3-7-ir .input-requirements}
-Описание формата инпута.
+
+Для самопроверки в поле ниже введите *нет*, если в данных есть наблюдения из разных лет, и полученный год, если все данные собраны в одном году.
+
 :::
 
 <input class="autocheck-input" type="text" id="hw3-7" placeholder="Введите ответ…">
@@ -321,34 +464,46 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Как делать задание?</summary>
 
+* Определите тип переменной `date` и скорректируйте его --- измените на `datetime` при необходимости.
+* Выделите из даты год
+* Посчитайте число уникальных значений
+
 </details>
 
 <details class="hint">
 
 <summary>Что надо сделать?</summary>
 
+* Проверьте тип переменной `date` с помощью функции `class()`.
+* Перезапишите переменную, приведя её к типу `datetime` с помощью соответствующей функции из пакета `lubridate`.
+* Чтобы перезаписать переменную, необходимо использовать синтаксис с индексацией по имени вместе и оператором присваивания `<-`
+* Выделите из перезаписанной переменной `date` год с помощью соответствующей функции из `lubridate`.
+* Определите число уникальных значений года
+
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
 
 </details>
 :::
 
-### #8
+### #8 {#hw3-8-title}
 
 <img id="hw3-8-level" class="level"/>
 
 ::: {#hw3-8-task .task}
-Текст задания.
+
+Отберите из всего датасета только те данные, которые были собраны в осенний период --- сентябрь, октябрь, ноябрь. Сохраните результат в переменную `dd_fall`.
+
+```{r 8}
+dd_fall <- dd[8 < month(dd$dt) & month(dd$dt) < 12, ]
+nrow(dd_fall)
+```
+
 :::
 
 ::: {#hw3-8-autocheck .autocheck}
 ::: {#hw3-8-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопрверки введите количество строк в получившемся датафрейме.
 :::
 
 <input class="autocheck-input" type="text" id="hw3-8" placeholder="Введите ответ…">
@@ -368,6 +523,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Как делать задание?</summary>
 
+* Выделите из переменной с датой месяц
+* Проиндексируйте датафрей по необходимому условию аналогично индексации матрицы
+* В датафрейме необходимо сохранить все колонки
+* Сохраните результат в переменную
+
 </details>
 
 <details class="hint">
@@ -380,17 +540,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Ответ неверный</summary>
 
+Проверьте условия индексации --- в сабсет должны попасть только месяца `9`, `10` и `11`.
+
 </details>
 
 </details>
 :::
 
-### #9
+### #9 {#hw3-9-title}
 
 <img id="hw3-9-level" class="level"/>
 
 ::: {#hw3-9-task .task}
-Текст задания.
+
+Создайте в рабочей директории папку с названием `hw3-prepdata`.
+
 :::
 
 ::: {#hw3-9-autocheck .autocheck}
@@ -406,7 +570,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-9-hints">
 
 <summary>Подсказки</summary>
@@ -432,12 +596,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#hw3-10-title}
 
 <img id="hw3-10-level" class="level"/>
 
 ::: {#hw3-10-task .task}
-Текст задания.
+
+Экспортируйте датасет с осенними наблюдениями в созданную папку `hw3-prepdata`.
+
 :::
 
 ::: {#hw3-10-autocheck .autocheck}
@@ -453,7 +619,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-10-hints">
 
 <summary>Подсказки</summary>
@@ -479,14 +645,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+
+
+
+
 ## Дополнительные задания {#hw3_add}
 
-### #1
+### #1 {#hw3-11-title}
 
 <img id="hw3-11-level" class="level"/>
 
 ::: {#hw3-11-task .task}
-Текст задания.
+На практике мы создали проект для нашего курса. Давайте создадим в нем структуру.
+
+Создайте в директории проекта три папки: `data`, `scripts` и `graphs`, в которых будут храниться данные, скрипты и визуализации, которые мы впоследствии будем создавать.
+
+*Распределите файлы, накопившиеся в ходе курса, по соответствующих папкам. Можете создать дополнительные подпапки внутри `data`, `scripts` и `graphs`, если считаете нужным. Задание выполняется без кода.*
+
 :::
 
 ::: {#hw3-11-autocheck .autocheck}
@@ -502,7 +677,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-11-hints">
 
 <summary>Подсказки</summary>
@@ -528,12 +703,17 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+
+### #2 {#hw3-12-title}
 
 <img id="hw3-12-level" class="level"/>
 
 ::: {#hw3-12-task .task}
-Текст задания.
+
+Напишите функцию, которая загружает все файлы из папки в один датафрейм.
+
+Функция должна принимать на вход путь в папке и возвращать датафрейм, в котором будут содержать все данные из её файлов. Считайте, что папка содержит только файлы данных формата CSV, а их структура одинакова.
+
 :::
 
 ::: {#hw3-12-autocheck .autocheck}
@@ -549,7 +729,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-12-hints">
 
 <summary>Подсказки</summary>
@@ -575,12 +755,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw3-13-title}
 
 <img id="hw3-13-level" class="level"/>
 
 ::: {#hw3-13-task .task}
-Текст задания.
+
+Возьмите [файл](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw3-13.csv) и загрузите его в R c помощью функции `read.table()`. С ним есть проблема, которую вам необходимо решить. [Тут](https://www.online-decoder.com/ru) есть полезный инструмент.
+
+```{r 13-file}
+tibble(text = str_split("Это файл с кодировкой Windows-1251", pattern = " ") %>% unlist()) %>% 
+  write.csv("../data/hw3-13.csv", fileEncoding = "Windows-1251", row.names = FALSE)
+```
+
+```{r}
+read.table("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw3-13.csv", encoding = "Windows-1251")
+```
+
 :::
 
 ::: {#hw3-13-autocheck .autocheck}
@@ -596,7 +787,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-13-hints">
 
 <summary>Подсказки</summary>
@@ -622,12 +813,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw3-14-title}
 
 <img id="hw3-14-level" class="level"/>
 
 ::: {#hw3-14-task .task}
-Текст задания.
+
+Модифицируйте функцию из [дополнительного задания 2](#hw3-12) так, чтобы она могла обрабатывать различные кодировки файлов. Основное поведение функции должно остаться прежним.
+
 :::
 
 ::: {#hw3-14-autocheck .autocheck}
@@ -643,7 +836,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-14-hints">
 
 <summary>Подсказки</summary>
@@ -669,12 +862,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw3-15-title}
 
 <img id="hw3-15-level" class="level"/>
 
 ::: {#hw3-15-task .task}
-Текст задания.
+
+Превратите директорию проекта курса в git-репозиторий (локальный или глобальный).
+
+*Выполните задание, если вы знакомы с git. Иначе, пропустите задание.*
+
 :::
 
 ::: {#hw3-15-autocheck .autocheck}
@@ -690,7 +887,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw3-15-hints">
 
 <summary>Подсказки</summary>
