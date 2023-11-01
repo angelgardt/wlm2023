@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - HW2. Матрицы и списки. Функции и строки</title>
+<title>WLM 2023 - HW2 // Матрицы и списки. Функции и строки</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw2.html">HW2. Матрицы и списки. Функции и строки</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw2.html">HW2 // Матрицы и списки. Функции и строки</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -151,97 +185,97 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW1. Введение в R. Типы данных. Векторы</span></a>
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW2. Матрицы и списки. Функции и строки</span></a>
+ <span class="menu-text">HW2 // Матрицы и списки. Функции и строки</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW3. Датафреймы. Исследование данных</span></a>
+ <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW4. Предобработка данных</span></a>
+ <span class="menu-text">HW4 // Предобработка данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW5. Визуализация данных</span></a>
+ <span class="menu-text">HW5 // Визуализация данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW6. Случайный эксперимент. Случайные величины</span></a>
+ <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW7. Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+ <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW8. Описательные статистики. Корреляционный анализ</span></a>
+ <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW9. Простая линейная регрессия. Множественная линейная регрессия</span></a>
+ <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW10. Дисперсионный анализ. Ковариационный анализ</span></a>
+ <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW11. Логистическая регрессия. Пуассоновская регрессия</span></a>
+ <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW12. Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+ <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW13. Смешанные линейные модели</span></a>
+ <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW14. Кластерный анализ</span></a>
+ <span class="menu-text">HW14 // Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW15. Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+ <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW16. Конфирматорный факторный анализ</span></a>
+ <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -262,24 +296,24 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#hw2_main" id="toc-hw2_main" class="nav-link active" data-scroll-target="#hw2_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw2-1-title" id="toc-hw2-1-title" class="nav-link" data-scroll-target="#hw2-1-title">#1</a></li>
+  <li><a href="#hw2-2-title" id="toc-hw2-2-title" class="nav-link" data-scroll-target="#hw2-2-title">#2</a></li>
+  <li><a href="#hw2-3-title" id="toc-hw2-3-title" class="nav-link" data-scroll-target="#hw2-3-title">#3</a></li>
+  <li><a href="#hw2-4-title" id="toc-hw2-4-title" class="nav-link" data-scroll-target="#hw2-4-title">#4</a></li>
+  <li><a href="#hw2-5-title" id="toc-hw2-5-title" class="nav-link" data-scroll-target="#hw2-5-title">#5</a></li>
+  <li><a href="#hw2-6-title" id="toc-hw2-6-title" class="nav-link" data-scroll-target="#hw2-6-title">#6</a></li>
+  <li><a href="#hw2-7-title" id="toc-hw2-7-title" class="nav-link" data-scroll-target="#hw2-7-title">#7</a></li>
+  <li><a href="#hw2-8-title" id="toc-hw2-8-title" class="nav-link" data-scroll-target="#hw2-8-title">#8</a></li>
+  <li><a href="#hw2-9-title" id="toc-hw2-9-title" class="nav-link" data-scroll-target="#hw2-9-title">#9</a></li>
+  <li><a href="#hw2-10-title" id="toc-hw2-10-title" class="nav-link" data-scroll-target="#hw2-10-title">#10</a></li>
   </ul></li>
   <li><a href="#hw2_add" id="toc-hw2_add" class="nav-link" data-scroll-target="#hw2_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw2-11-title" id="toc-hw2-11-title" class="nav-link" data-scroll-target="#hw2-11-title">#1</a></li>
+  <li><a href="#hw2-12-title" id="toc-hw2-12-title" class="nav-link" data-scroll-target="#hw2-12-title">#2</a></li>
+  <li><a href="#hw2-13-title" id="toc-hw2-13-title" class="nav-link" data-scroll-target="#hw2-13-title">#3</a></li>
+  <li><a href="#hw2-14-title" id="toc-hw2-14-title" class="nav-link" data-scroll-target="#hw2-14-title">#4</a></li>
+  <li><a href="#hw2-15-title" id="toc-hw2-15-title" class="nav-link" data-scroll-target="#hw2-15-title">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -289,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw2" class="quarto-section-identifier">HW2. Матрицы и списки. Функции и строки</span></h1>
+<h1 class="title"><span id="hw2" class="quarto-section-identifier">HW2 // Матрицы и списки. Функции и строки</span></h1>
 </div>
 
 
@@ -309,15 +343,34 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 -->
 <section id="hw2_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw2_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<section id="hw2-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-1-title">#1</h3>
 <p><img id="hw2-1-level" class="level"></p>
 <div id="hw2-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Сгенерируйте две матрицы, которые будут содержать по 50 выборок, объемом по 70 наблюдений, из генеральной совокупности, в которой распределение некоторого признака подчиняется нормальному распределению (<code>rnorm()</code>) с параметрами <code>mean = 20.5</code> и <code>sd = 3.48</code>. Каждой выборке в матрице должен соответствовать один столбец. Сохраните результаты генерации в перемененые <code>sim1</code> и <code>sim2</code>.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ослабим контроль случайности
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Так как задание подразумевает генерацию случайных чисел, для воспроизводимых результатов нужно установить зерно датчика случайных чисел. Однако нам нужно сгенерировать две разные матрицы — нет смысла работать с двумя одинаковыми. Если же мы установим одинаковое зерно датчика перед обоими строками с генерацией матриц, то получим как раз две одинаковые матрицы. Поэтому в данном задании <code>set.seed</code> нужно выполнить один раз перед двумя последующими генерациями. Шаблон кода будет выглядеть так</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">420</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sim1 <span class="ot">&lt;-</span> ...</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sim2 <span class="ot">&lt;-</span> ...</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Автопроверка настроена на результаты, получаемы при значении зерна датчика случайных чисел <code>set.seed(420)</code>.</p>
+</div>
+</div>
 </div>
 <div id="hw2-1-autocheck" class="autocheck">
 <div id="hw2-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве самопроверки введите значения из первой строки первого солбца первой и второй матриц (иммено в таком порядке). Значения округлите до сотых по арифметическим правилам и разделите запятой. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-1')"></p>
@@ -334,30 +387,41 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Используя функцию <code>rnorm()</code> нужно сгенерировать вектор, длиной равной количеству выборок, умноженному на количество наблюдений в одной выборке.</li>
+<li>Затем «сложить» вектор в матрицу, размером число наблюдений в выборке × число выборок.</li>
+<li>Сохранить результат генерации в переменную <code>sim1</code>.</li>
+<li>Повторить шаги генерации и сохранить результат в переменную <code>sim2</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, разделили ли вы значения запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="hw2-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-2-title">#2</h3>
 <p><img id="hw2-2-level" class="level"></p>
 <div id="hw2-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Напишите функцию <code>mean_sd</code>, которая будет вычислять среднее (<code>mean()</code>) и стандартное отклонение (<code>sd()</code>) по всем выборкам (столбцам) одной матрицы.</p>
+<p>Функция должна принимать на вход матрицу произвольного размера и возвращать матрицу, в которой первой строкой будут средние по каждому столбцу матрицы, а второй — стандартные отклонения. Количество столбцов матрицы аутпута (результата работы функции) должно совпадать с количеством столбцов входной матрицы.</p>
 </div>
 <div id="hw2-2-autocheck" class="autocheck">
 <div id="hw2-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для проверки корректности работы функции выполните её на матрице</p>
+<p><span class="math display">\[
+\pmatrix{1 &amp; 4 &amp; 7 \\ 2 &amp; 5 &amp; 8 \\ 3 &amp; 6 &amp; 9}
+\]</span> В поле ответа введите сначала строку со средними, разделив их запятыми, затем точку с запятой, а затем строку со стандартными отклонениями, также разделив их запятыми. Проверка проигнорирует все пробелы, поэтому для удобства ввода можете их использовать.</p>
+<p>Привет формата ответа:</p>
+<p><code>1.2, 2.3, 3.4; 0.1, 0.2, 0.3</code>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-2')"></p>
@@ -374,29 +438,34 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>В функции необходимо вызвать функцию <code>apply()</code> для расчета каждой из статистик — среднего и стандартного отклонения.</li>
+<li>Результаты работы функций необходимо объединить в матрицу — можно воспользоваться <code>matrix()</code> или <code>rbind()</code>.</li>
+<li>При использовании <code>matrix()</code> необходимо указать число столбцов, которе равно числу столбцов входной матрицы.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте правильность создания или генерации тестовой матрицы.</li>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="hw2-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-3-title">#3</h3>
 <p><img id="hw2-3-level" class="level"></p>
 <div id="hw2-3-task" class="task">
-<p>Текст задания.</p>
+<p>Примените функцию, написанную в <a href="#hw2-2-title">задании 2</a>, к матрице <code>sim1</code>.</p>
 </div>
 <div id="hw2-3-autocheck" class="autocheck">
 <div id="hw2-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введи в поле ответа первые три средних, разделённые запятыми, далее точку с запятой и затем первые три стандартных отклонения, также разделенные запятыми. Значения округлите до сотых по арифметическим правилам. Проверка проигнорирует все пробелы, поэтому для удобства ввода можете их использовать.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-3')"></p>
@@ -413,29 +482,38 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Необходимо вызвать созданную функцию <code>mean_sd()</code> на ранее сгенерированной матрице <code>sim1</code>.</li>
+<li>Для округления можно использоваться функцию <code>round()</code>, где вторым аргументом указать <code>2</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="hw2-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-4-title">#4</h3>
 <p><img id="hw2-4-level" class="level"></p>
 <div id="hw2-4-task" class="task">
-<p>Текст задания.</p>
+<p>Выполните t-тест на первых колонках матриц <code>sim1</code> и <code>sim2</code> и сохраните результат в переменную <code>ttest_res</code>.</p>
+<p>t-тест выполняется с помощью функции <code>t.test()</code>, в которую необходимо передать в качестве аргументов два вектора. Синтаксис выглядит так:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(vector1, vector2)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Понимание статистики, стоящей за данной функцией, для выполнения задания не требуется.</p>
 </div>
 <div id="hw2-4-autocheck" class="autocheck">
 <div id="hw2-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите t-значение (<code>statistics</code>), полученное при выполнении теста, округленная до сотых по арифметическим правилам.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-4')"></p>
@@ -452,25 +530,31 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Выделите первые колонки сгенерированных матриц <code>sim1</code> и <code>sim2</code></li>
+<li>Передайте их в функцию <code>t.test()</code></li>
+<li>Сохраните результат работы функции в переменную <code>ttest</code></li>
+<li>Выведите содержимое переменной в консоль, чтобы получить значение для ввода в поле самопроверки.</li>
+</ul>
 </details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что из матриц были выделены колонки.</li>
+<li>Проверьте, что были выделены имеено первые колонки.</li>
+<li>Проверьте, что в поле самопроверки вы вводите именно значение t-статистики.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
-</details>
+
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="hw2-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-5-title">#5</h3>
 <p><img id="hw2-5-level" class="level"></p>
 <div id="hw2-5-task" class="task">
-<p>Текст задания.</p>
+<p>Извлеките из результатов t-теста оценки средних по выборкам (<code>estimate</code>), значение статистики (<code>statistic</code>) и p-value (<code>p.value</code>).</p>
 </div>
 <div id="hw2-5-autocheck" class="autocheck">
 <div id="hw2-5-ir" class="input-requirements">
@@ -491,25 +575,20 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Изучите структуру переменной <code>ttest</code> — это список.</li>
+<li>Проиндексируйте список с помощью имен его элементов.</li>
+<li>Выведите значения в консоль.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="hw2-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-6-title">#6</h3>
 <p><img id="hw2-6-level" class="level"></p>
 <div id="hw2-6-task" class="task">
-<p>Текст задания.</p>
+<p>Объедините извлеченные значения в именнованый список. Названия элементов сохраните исходными — <code>estimate</code>, <code>statistic</code> и <code>p.value</code> соответственно.</p>
 </div>
 <div id="hw2-6-autocheck" class="autocheck">
 <div id="hw2-6-ir" class="input-requirements">
@@ -530,25 +609,73 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Необходимо создать список, в который сохранить часть значений из переменной <code>ttest</code>.</li>
+<li>Список должен состоять из трех элементов, которым необходимо присвоить при создании имена, указанные в задании.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="hw2-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-7-title">#7</h3>
 <p><img id="hw2-7-level" class="level"></p>
 <div id="hw2-7-task" class="task">
-<p>Текст задания.</p>
+<p>У нас есть кирпичики для сбора новой функции.</p>
+<p>Основываясь на предыдущих заданиях, напишите функцию, которая выполняет серию t-тестов на соответствующих выборках (столбцах матриц). Сохраните функцию в переменную <code>stat_testing</code>.</p>
+<p>Функция должна:</p>
+<ul>
+<li>принимать на вход две матрицы</li>
+<li>возвращать список, каждый элементов которого является результат одного t-теста</li>
+<li>каждый результат t-теста также является списком и состоит из трех элементов — <code>estimate</code>, <code>statistic</code> и <code>p.value</code> (как в <a href="#hw2-6-title">задании 6</a>)</li>
+</ul>
+<p>Пример синтаксиса функции и результата её работы на матрицах <code>A</code> и <code>B</code>:</p>
+<p><span class="math display">\[
+A = \pmatrix{1 &amp; 4 &amp; 7 \\ 2 &amp; 5 &amp; 8 \\ 3 &amp; 6 &amp; 9}, \quad
+B = \pmatrix{10 &amp; 40 &amp; 70 \\ 20 &amp; 50 &amp; 80 \\ 30 &amp; 60 &amp; 90}
+\]</span></p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stat_testing</span>(A, B) <span class="co"># A and B both are matrices</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[[1]]$estimate
+mean of x mean of y 
+        2        20 
+
+[[1]]$statistic
+        t 
+-3.102219 
+
+[[1]]$p.value
+[1] 0.0878746
+
+
+[[2]]
+[[2]]$estimate
+mean of x mean of y 
+        5        50 
+
+[[2]]$statistic
+        t 
+-7.755547 
+
+[[2]]$p.value
+[1] 0.0153293
+
+
+[[3]]
+[[3]]$estimate
+mean of x mean of y 
+        8        80 
+
+[[3]]$statistic
+        t 
+-12.40888 
+
+[[3]]$p.value
+[1] 0.005968456</code></pre>
+</div>
 </div>
 <div id="hw2-7-autocheck" class="autocheck">
 <div id="hw2-7-ir" class="input-requirements">
@@ -569,29 +696,27 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Необходимо создать функцию, аргументами которой будут две матрицы</li>
+<li>Внутри функции должен быть цикл, который будет перебирать столбцы матриц и выполнять на них t-тест</li>
+<li>Из результатов t-тесты необходимо извлекать три значения, аналогично заданию 6.</li>
+<li>Извлеченные результаты должны сохраняться в список результатов, который необходимо создать в начале функции.</li>
+<li>В конце тела функции с помощью <code>return()</code> нужно вернуть получившийся список с результатами.</li>
+<li>Количество элементов списка результатов должно совпадать с числом колонок входных матриц.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="hw2-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-8-title">#8</h3>
 <p><img id="hw2-8-level" class="level"></p>
 <div id="hw2-8-task" class="task">
-<p>Текст задания.</p>
+<p>Выполните функцию из <a href="#hw2-7-title">задания 7</a> на матрицах <code>sim1</code> и <code>sim2</code>. Результат работы функции сохраните в переменную <code>stat_testing_res</code>.</p>
 </div>
 <div id="hw2-8-autocheck" class="autocheck">
 <div id="hw2-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в качестве ответа введите среднее значение (<code>estimate</code>) по выборке <code>y</code> (<code>mean of y</code>) из 30-го t-теста, округленное до сотых по арифметическим правилам.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-8')"></p>
@@ -599,7 +724,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-8-hints">
 <summary>
 Подсказки
@@ -622,15 +747,15 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="hw2-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-9-title">#9</h3>
 <p><img id="hw2-9-level" class="level"></p>
 <div id="hw2-9-task" class="task">
-<p>Текст задания.</p>
+<p>Извлеките из списка <code>stat_testing_res</code> вектор p-значений (<code>p.value</code>).</p>
 </div>
 <div id="hw2-9-autocheck" class="autocheck">
 <div id="hw2-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в качестве ответа введите десятое значение получившегося вектора, округленное до сотых по арифметическим правилам.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-9')"></p>
@@ -647,29 +772,35 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Чтобы извлечь p-значения, необходимо выполнить функцию, которая извлекает p-значения, на элементах списка.</li>
+<li>Используйте для этого функцию <code>Map()</code></li>
+<li>В качестве её первого аргумента пропишите анонимную функцию, которая вытаскивает элемент <code>p.value</code> из списка путем индексации по имени.</li>
+<li>Функция <code>Map()</code> возвращается список, который необходимо превратить в вектор с помощью функции <code>unlist()</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что в вектор извлекаются именно p-значения.</li>
+<li>Проверьте, что индексируете необходимый элемент вектора.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="hw2-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-10-title">#10</h3>
 <p><img id="hw2-10-level" class="level"></p>
 <div id="hw2-10-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте, сколько результатов тестов было статистически значимым. Считайте статистически значимым те результаты, где p-значение было меньше 0.05.</p>
 </div>
 <div id="hw2-10-autocheck" class="autocheck">
 <div id="hw2-10-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите получившееся значение.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw2-10" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-10')"></p>
@@ -677,7 +808,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-10-hints">
 <summary>
 Подсказки
@@ -703,11 +834,12 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw2_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw2_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="hw2-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-11-title">#1</h3>
 <p><img id="hw2-11-level" class="level"></p>
 <div id="hw2-11-task" class="task">
-<p>Текст задания.</p>
+<p>Модифицируйте функцию из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте строки были подписаны соответственно <code>mean</code> и <code>sd</code>.</p>
+<p>Сохраните модифицированную функцию в переменную <code>mean_sd_1</code>.</p>
 </div>
 <div id="hw2-11-autocheck" class="autocheck">
 <div id="hw2-11-ir" class="input-requirements">
@@ -719,7 +851,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-11-hints">
 <summary>
 Подсказки
@@ -742,11 +874,12 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
+<section id="hw2-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-12-title">#2</h3>
 <p><img id="hw2-12-level" class="level"></p>
 <div id="hw2-12-task" class="task">
-<p>Текст задания.</p>
+<p>Продолжите модификацию функции из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте столбцы унаследовали названия из входной матрицы, если они есть.</p>
+<p>Сохраните модифицированную функцию в переменную <code>mean_sd_2</code>.</p>
 </div>
 <div id="hw2-12-autocheck" class="autocheck">
 <div id="hw2-12-ir" class="input-requirements">
@@ -758,7 +891,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-12-hints">
 <summary>
 Подсказки
@@ -781,11 +914,19 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="hw2-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-13-title">#3</h3>
 <p><img id="hw2-13-level" class="level"></p>
 <div id="hw2-13-task" class="task">
-<p>Текст задания.</p>
+<p>Модифицируйте функцию из <a href="#hw2-7-title">задания 7</a>, чтобы:</p>
+<ul>
+<li>она проверяла, совпадает ли количество столбцов во входных матрицах,
+<ul>
+<li>в случае совпадения выполняла свой основной код</li>
+<li>в случае несовпадения заканчивала свою работу с ошибкой <code>Number of columns does not match</code></li>
+</ul></li>
+<li>можно было задать параметр <code>paired</code> для t-тестов с дефолтным значением таким же, как у функции <code>t.test()</code></li>
+</ul>
 </div>
 <div id="hw2-13-autocheck" class="autocheck">
 <div id="hw2-13-ir" class="input-requirements">
@@ -797,7 +938,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-13-hints">
 <summary>
 Подсказки
@@ -820,11 +961,11 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="hw2-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-14-title">#4</h3>
 <p><img id="hw2-14-level" class="level"></p>
 <div id="hw2-14-task" class="task">
-<p>Текст задания.</p>
+<p>Модифицируйте функцию из <a href="#hw2-13-title">предыдущего задания</a>, чтобы можно было использовать для статистических тестов не только функцию <code>t.test()</code>, но и другие. Функция должна без ошибок обрабатывать входные параметры внутренних статистических функций. Сохраните модифицированную функцию в переменную <code>stat_testing_2</code>.</p>
 </div>
 <div id="hw2-14-autocheck" class="autocheck">
 <div id="hw2-14-ir" class="input-requirements">
@@ -836,7 +977,7 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw2-14-hints">
 <summary>
 Подсказки
@@ -859,11 +1000,71 @@ REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="hw2-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-15-title">#5</h3>
 <p><img id="hw2-15-level" class="level"></p>
-<div id="hw2-15-task" class="task">
-<p>Текст задания.</p>
+<div class="hints-wrapper" hidden="true">
+<p>Напишите функцию, которая решает квадратные уравнения.</p>
+<p>Квадратное уравнение задается тремя коэффициентами <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span>:</p>
+<p><span class="math display">\[
+ax^2 + bx + c = 0
+\]</span></p>
+<p>Функция должна:</p>
+<ul>
+<li>принимать на вход три аргумента — коэффициенты квадратного уравнения <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span>
+<ul>
+<li>коэффициент <span class="math inline">\(a\)</span> является обязательным, иначе уравнение не является квадратным
+<ul>
+<li>значение <span class="math inline">\(a\)</span> не может равняться нулю по той же причине — функция должна в этом случае выдать ошибку <code>The equation is not quadratic</code></li>
+</ul></li>
+<li>если какой-либо из коэффициентов <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span> не передан в функцию, его значение считается равным нулю</li>
+</ul></li>
+<li>возвращать именованный вектор решений квадратного уравнения
+<ul>
+<li>если два решения различны, необходимо вернуть оба с именами <code>x1</code> и <code>x2</code> в порядке возрастания</li>
+<li>если два решения совпадают, необходимо вернуть только одно с именем <code>x</code></li>
+<li>если решений нет, необходимо вернуть пропущенное значение и сообщение <code>No solutions</code></li>
+</ul></li>
+</ul>
+<p>Известно, что уравнения вида <span class="math inline">\(x^2 + 1 = 0\)</span> в общем случае корректны, и функция должна уметь их решать.</p>
+<ul>
+<li>По умолчанию функция должна решать уравнение в вещественных числах.</li>
+<li>Если пользователь хочет, чтобы уравнение решалось в комплексных числах, ему необходимо указать аргумент функции <code>complex = TRUE</code>.</li>
+</ul>
+<p>Сохраните функцию в переменную <code>quadeqsolve</code>.</p>
+<p>Примеры работы функции представлены ниже.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">c =</span> <span class="dv">4</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x1 x2 
+ 1  4 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">b =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in quadeqsolve(b = -3, c = 2): argument "a" is missing, with no default</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in quadeqsolve(a = 0, b = -3, c = 2): The equation is not quadratic</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        x1         x2 
+ 0.7071068 -0.7071068 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>No solutions</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          x1           x2 
+0-0.8164966i 0+0.8164966i</code></pre>
+</div>
 </div>
 <div id="hw2-15-autocheck" class="autocheck">
 <div id="hw2-15-ir" class="input-requirements">
@@ -1257,12 +1458,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./hw1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW1. Введение в R. Типы данных. Векторы</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW1 // Введение в R. Типы данных. Векторы</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./hw3.html" class="pagination-link">
-        <span class="nav-page-text">HW3. Датафреймы. Исследование данных</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">HW3 // Датафреймы. Исследование данных</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

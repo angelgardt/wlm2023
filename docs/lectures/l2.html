@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - 2&nbsp; L2. Реальные данные. Предобработка данных. Визуализация данных</title>
+<title>WLM 2023 - 2&nbsp; L2 // Предобработка данных. Дата и время Визуализация данных</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2. Реальные данные. Предобработка данных. Визуализация данных</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -153,13 +153,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1. Основы R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2. Реальные данные. Предобработка данных. Визуализация данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -260,14 +260,61 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#работа-с-данными" id="toc-работа-с-данными" class="nav-link active" data-scroll-target="#работа-с-данными"><span class="header-section-number">2.1</span> Работа с данными</a></li>
+  <li><a href="#организация-рабочего-пространства" id="toc-организация-рабочего-пространства" class="nav-link" data-scroll-target="#организация-рабочего-пространства"><span class="header-section-number">2.2</span> Организация рабочего пространства</a></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects"><span class="header-section-number">2.3</span> Projects</a></li>
+  <li><a href="#форматы-данных" id="toc-форматы-данных" class="nav-link" data-scroll-target="#форматы-данных"><span class="header-section-number">2.4</span> Форматы данных</a></li>
+  <li><a href="#кодировка" id="toc-кодировка" class="nav-link" data-scroll-target="#кодировка"><span class="header-section-number">2.5</span> Кодировка</a></li>
+  <li><a href="#локаль" id="toc-локаль" class="nav-link" data-scroll-target="#локаль"><span class="header-section-number">2.6</span> Локаль</a></li>
+  <li><a href="#первичное-исследование-данных" id="toc-первичное-исследование-данных" class="nav-link" data-scroll-target="#первичное-исследование-данных"><span class="header-section-number">2.7</span> Первичное исследование данных</a></li>
+  <li><a href="#предобработка-данных" id="toc-предобработка-данных" class="nav-link" data-scroll-target="#предобработка-данных"><span class="header-section-number">2.8</span> Предобработка данных</a></li>
+  <li><a href="#концепция-tidy-data" id="toc-концепция-tidy-data" class="nav-link" data-scroll-target="#концепция-tidy-data"><span class="header-section-number">2.9</span> Концепция Tidy Data</a></li>
+  <li><a href="#семейство-пакетов-tidyverse" id="toc-семейство-пакетов-tidyverse" class="nav-link" data-scroll-target="#семейство-пакетов-tidyverse"><span class="header-section-number">2.10</span> Семейство пакетов <code>tidyverse</code></a></li>
+  <li><a href="#импорт-данных" id="toc-импорт-данных" class="nav-link" data-scroll-target="#импорт-данных"><span class="header-section-number">2.11</span> Импорт данных</a></li>
+  <li><a href="#переименование-переменных" id="toc-переименование-переменных" class="nav-link" data-scroll-target="#переименование-переменных"><span class="header-section-number">2.12</span> Переименование переменных</a></li>
+  <li><a href="#фильтрация-данных.-строки" id="toc-фильтрация-данных.-строки" class="nav-link" data-scroll-target="#фильтрация-данных.-строки"><span class="header-section-number">2.13</span> Фильтрация данных. Строки</a></li>
+  <li><a href="#фильтрация-данных.-столбцы" id="toc-фильтрация-данных.-столбцы" class="nav-link" data-scroll-target="#фильтрация-данных.-столбцы"><span class="header-section-number">2.14</span> Фильтрация данных. Столбцы</a></li>
+  <li><a href="#сортировка-данных" id="toc-сортировка-данных" class="nav-link" data-scroll-target="#сортировка-данных"><span class="header-section-number">2.15</span> Сортировка данных</a></li>
+  <li><a href="#создание-и-изменение-переменных" id="toc-создание-и-изменение-переменных" class="nav-link" data-scroll-target="#создание-и-изменение-переменных"><span class="header-section-number">2.16</span> Создание и изменение переменных</a></li>
+  <li><a href="#группировка-и-аггрегация-данных" id="toc-группировка-и-аггрегация-данных" class="nav-link" data-scroll-target="#группировка-и-аггрегация-данных"><span class="header-section-number">2.17</span> Группировка и аггрегация данных</a></li>
+  <li><a href="#объединение-датасетов.-строки-и-столбцы" id="toc-объединение-датасетов.-строки-и-столбцы" class="nav-link" data-scroll-target="#объединение-датасетов.-строки-и-столбцы"><span class="header-section-number">2.18</span> Объединение датасетов. Строки и столбцы</a></li>
+  <li><a href="#объединение-датасетов.-ключ" id="toc-объединение-датасетов.-ключ" class="nav-link" data-scroll-target="#объединение-датасетов.-ключ"><span class="header-section-number">2.19</span> Объединение датасетов. Ключ</a></li>
+  <li><a href="#широкий-и-длинный-форматы-данных" id="toc-широкий-и-длинный-форматы-данных" class="nav-link" data-scroll-target="#широкий-и-длинный-форматы-данных"><span class="header-section-number">2.20</span> Широкий и длинный форматы данных</a></li>
+  <li><a href="#строки" id="toc-строки" class="nav-link" data-scroll-target="#строки"><span class="header-section-number">2.21</span> Строки</a></li>
+  <li><a href="#операции-над-строками" id="toc-операции-над-строками" class="nav-link" data-scroll-target="#операции-над-строками"><span class="header-section-number">2.22</span> Операции над строками</a></li>
+  <li><a href="#регулярные-выражения" id="toc-регулярные-выражения" class="nav-link" data-scroll-target="#регулярные-выражения"><span class="header-section-number">2.23</span> Регулярные выражения</a></li>
+  <li><a href="#дата-и-время" id="toc-дата-и-время" class="nav-link" data-scroll-target="#дата-и-время"><span class="header-section-number">2.24</span> Дата и время</a></li>
+  <li><a href="#форматы-даты-и-времени" id="toc-форматы-даты-и-времени" class="nav-link" data-scroll-target="#форматы-даты-и-времени"><span class="header-section-number">2.25</span> Форматы даты и времени</a></li>
+  <li><a href="#операции-над-датами" id="toc-операции-над-датами" class="nav-link" data-scroll-target="#операции-над-датами"><span class="header-section-number">2.26</span> Операции над датами</a></li>
+  <li><a href="#визуализация-данных" id="toc-визуализация-данных" class="nav-link" data-scroll-target="#визуализация-данных"><span class="header-section-number">2.27</span> Визуализация данных</a></li>
+  <li><a href="#зачем-нужна-визуализация" id="toc-зачем-нужна-визуализация" class="nav-link" data-scroll-target="#зачем-нужна-визуализация"><span class="header-section-number">2.28</span> Зачем нужна визуализация?</a></li>
+  <li><a href="#виды-графиков.-bar-plot" id="toc-виды-графиков.-bar-plot" class="nav-link" data-scroll-target="#виды-графиков.-bar-plot"><span class="header-section-number">2.29</span> Виды графиков. Bar plot</a></li>
+  <li><a href="#виды-графиков.-histogram" id="toc-виды-графиков.-histogram" class="nav-link" data-scroll-target="#виды-графиков.-histogram"><span class="header-section-number">2.30</span> Виды графиков. Histogram</a></li>
+  <li><a href="#виды-графиков.-density-plot" id="toc-виды-графиков.-density-plot" class="nav-link" data-scroll-target="#виды-графиков.-density-plot"><span class="header-section-number">2.31</span> Виды графиков. Density plot</a></li>
+  <li><a href="#виды-графиков.-dot-plot" id="toc-виды-графиков.-dot-plot" class="nav-link" data-scroll-target="#виды-графиков.-dot-plot"><span class="header-section-number">2.32</span> Виды графиков. Dot plot</a></li>
+  <li><a href="#виды-графиков.-boxplot" id="toc-виды-графиков.-boxplot" class="nav-link" data-scroll-target="#виды-графиков.-boxplot"><span class="header-section-number">2.33</span> Виды графиков. Boxplot</a></li>
+  <li><a href="#виды-графиков.-violin-plot" id="toc-виды-графиков.-violin-plot" class="nav-link" data-scroll-target="#виды-графиков.-violin-plot"><span class="header-section-number">2.34</span> Виды графиков. Violin plot</a></li>
+  <li><a href="#виды-графиков.-error-bar" id="toc-виды-графиков.-error-bar" class="nav-link" data-scroll-target="#виды-графиков.-error-bar"><span class="header-section-number">2.35</span> Виды графиков. Error bar</a></li>
+  <li><a href="#виды-графиков.-line-plot" id="toc-виды-графиков.-line-plot" class="nav-link" data-scroll-target="#виды-графиков.-line-plot"><span class="header-section-number">2.36</span> Виды графиков. Line plot</a></li>
+  <li><a href="#виды-графиков.-scatter-plot" id="toc-виды-графиков.-scatter-plot" class="nav-link" data-scroll-target="#виды-графиков.-scatter-plot"><span class="header-section-number">2.37</span> Виды графиков. Scatter plot</a></li>
+  <li><a href="#виды-графиков.-corrplot" id="toc-виды-графиков.-corrplot" class="nav-link" data-scroll-target="#виды-графиков.-corrplot"><span class="header-section-number">2.38</span> Виды графиков. Corrplot</a></li>
+  <li><a href="#good-bad-practices-в-визуализации" id="toc-good-bad-practices-в-визуализации" class="nav-link" data-scroll-target="#good-bad-practices-в-визуализации"><span class="header-section-number">2.39</span> Good &amp; Bad practices в визуализации</a></li>
+  <li><a href="#основные-ошибки-в-визуализации" id="toc-основные-ошибки-в-визуализации" class="nav-link" data-scroll-target="#основные-ошибки-в-визуализации"><span class="header-section-number">2.40</span> Основные ошибки в визуализации</a></li>
+  <li><a href="#философия-a-layered-grammar-of-graphics" id="toc-философия-a-layered-grammar-of-graphics" class="nav-link" data-scroll-target="#философия-a-layered-grammar-of-graphics"><span class="header-section-number">2.41</span> Философия A Layered Grammar of Graphics</a></li>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><span class="header-section-number">2.42</span> <code>ggplot2</code></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2. Реальные данные. Предобработка данных. Визуализация данных</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></h1>
 </div>
 
 
@@ -282,8 +329,134 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="работа-с-данными" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="работа-с-данными"><span class="header-section-number">2.1</span> Работа с данными</h2>
+</section>
+<section id="организация-рабочего-пространства" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="организация-рабочего-пространства"><span class="header-section-number">2.2</span> Организация рабочего пространства</h2>
+</section>
+<section id="projects" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="projects"><span class="header-section-number">2.3</span> Projects</h2>
+</section>
+<section id="форматы-данных" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="форматы-данных"><span class="header-section-number">2.4</span> Форматы данных</h2>
+</section>
+<section id="кодировка" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="кодировка"><span class="header-section-number">2.5</span> Кодировка</h2>
+</section>
+<section id="локаль" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="локаль"><span class="header-section-number">2.6</span> Локаль</h2>
+</section>
+<section id="первичное-исследование-данных" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="первичное-исследование-данных"><span class="header-section-number">2.7</span> Первичное исследование данных</h2>
+</section>
+<section id="предобработка-данных" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="предобработка-данных"><span class="header-section-number">2.8</span> Предобработка данных</h2>
+</section>
+<section id="концепция-tidy-data" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="концепция-tidy-data"><span class="header-section-number">2.9</span> Концепция Tidy Data</h2>
+</section>
+<section id="семейство-пакетов-tidyverse" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="семейство-пакетов-tidyverse"><span class="header-section-number">2.10</span> Семейство пакетов <code>tidyverse</code></h2>
+</section>
+<section id="импорт-данных" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="импорт-данных"><span class="header-section-number">2.11</span> Импорт данных</h2>
+</section>
+<section id="переименование-переменных" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="переименование-переменных"><span class="header-section-number">2.12</span> Переименование переменных</h2>
+</section>
+<section id="фильтрация-данных.-строки" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="фильтрация-данных.-строки"><span class="header-section-number">2.13</span> Фильтрация данных. Строки</h2>
+</section>
+<section id="фильтрация-данных.-столбцы" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="фильтрация-данных.-столбцы"><span class="header-section-number">2.14</span> Фильтрация данных. Столбцы</h2>
+</section>
+<section id="сортировка-данных" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="сортировка-данных"><span class="header-section-number">2.15</span> Сортировка данных</h2>
+</section>
+<section id="создание-и-изменение-переменных" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="создание-и-изменение-переменных"><span class="header-section-number">2.16</span> Создание и изменение переменных</h2>
+</section>
+<section id="группировка-и-аггрегация-данных" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="группировка-и-аггрегация-данных"><span class="header-section-number">2.17</span> Группировка и аггрегация данных</h2>
+</section>
+<section id="объединение-датасетов.-строки-и-столбцы" class="level2" data-number="2.18">
+<h2 data-number="2.18" class="anchored" data-anchor-id="объединение-датасетов.-строки-и-столбцы"><span class="header-section-number">2.18</span> Объединение датасетов. Строки и столбцы</h2>
+</section>
+<section id="объединение-датасетов.-ключ" class="level2" data-number="2.19">
+<h2 data-number="2.19" class="anchored" data-anchor-id="объединение-датасетов.-ключ"><span class="header-section-number">2.19</span> Объединение датасетов. Ключ</h2>
+</section>
+<section id="широкий-и-длинный-форматы-данных" class="level2" data-number="2.20">
+<h2 data-number="2.20" class="anchored" data-anchor-id="широкий-и-длинный-форматы-данных"><span class="header-section-number">2.20</span> Широкий и длинный форматы данных</h2>
+</section>
+<section id="строки" class="level2" data-number="2.21">
+<h2 data-number="2.21" class="anchored" data-anchor-id="строки"><span class="header-section-number">2.21</span> Строки</h2>
+</section>
+<section id="операции-над-строками" class="level2" data-number="2.22">
+<h2 data-number="2.22" class="anchored" data-anchor-id="операции-над-строками"><span class="header-section-number">2.22</span> Операции над строками</h2>
+</section>
+<section id="регулярные-выражения" class="level2" data-number="2.23">
+<h2 data-number="2.23" class="anchored" data-anchor-id="регулярные-выражения"><span class="header-section-number">2.23</span> Регулярные выражения</h2>
+</section>
+<section id="дата-и-время" class="level2" data-number="2.24">
+<h2 data-number="2.24" class="anchored" data-anchor-id="дата-и-время"><span class="header-section-number">2.24</span> Дата и время</h2>
+</section>
+<section id="форматы-даты-и-времени" class="level2" data-number="2.25">
+<h2 data-number="2.25" class="anchored" data-anchor-id="форматы-даты-и-времени"><span class="header-section-number">2.25</span> Форматы даты и времени</h2>
+</section>
+<section id="операции-над-датами" class="level2" data-number="2.26">
+<h2 data-number="2.26" class="anchored" data-anchor-id="операции-над-датами"><span class="header-section-number">2.26</span> Операции над датами</h2>
+</section>
+<section id="визуализация-данных" class="level2" data-number="2.27">
+<h2 data-number="2.27" class="anchored" data-anchor-id="визуализация-данных"><span class="header-section-number">2.27</span> Визуализация данных</h2>
+</section>
+<section id="зачем-нужна-визуализация" class="level2" data-number="2.28">
+<h2 data-number="2.28" class="anchored" data-anchor-id="зачем-нужна-визуализация"><span class="header-section-number">2.28</span> Зачем нужна визуализация?</h2>
+</section>
+<section id="виды-графиков.-bar-plot" class="level2" data-number="2.29">
+<h2 data-number="2.29" class="anchored" data-anchor-id="виды-графиков.-bar-plot"><span class="header-section-number">2.29</span> Виды графиков. Bar plot</h2>
+</section>
+<section id="виды-графиков.-histogram" class="level2" data-number="2.30">
+<h2 data-number="2.30" class="anchored" data-anchor-id="виды-графиков.-histogram"><span class="header-section-number">2.30</span> Виды графиков. Histogram</h2>
+</section>
+<section id="виды-графиков.-density-plot" class="level2" data-number="2.31">
+<h2 data-number="2.31" class="anchored" data-anchor-id="виды-графиков.-density-plot"><span class="header-section-number">2.31</span> Виды графиков. Density plot</h2>
+</section>
+<section id="виды-графиков.-dot-plot" class="level2" data-number="2.32">
+<h2 data-number="2.32" class="anchored" data-anchor-id="виды-графиков.-dot-plot"><span class="header-section-number">2.32</span> Виды графиков. Dot plot</h2>
+</section>
+<section id="виды-графиков.-boxplot" class="level2" data-number="2.33">
+<h2 data-number="2.33" class="anchored" data-anchor-id="виды-графиков.-boxplot"><span class="header-section-number">2.33</span> Виды графиков. Boxplot</h2>
+</section>
+<section id="виды-графиков.-violin-plot" class="level2" data-number="2.34">
+<h2 data-number="2.34" class="anchored" data-anchor-id="виды-графиков.-violin-plot"><span class="header-section-number">2.34</span> Виды графиков. Violin plot</h2>
+</section>
+<section id="виды-графиков.-error-bar" class="level2" data-number="2.35">
+<h2 data-number="2.35" class="anchored" data-anchor-id="виды-графиков.-error-bar"><span class="header-section-number">2.35</span> Виды графиков. Error bar</h2>
+</section>
+<section id="виды-графиков.-line-plot" class="level2" data-number="2.36">
+<h2 data-number="2.36" class="anchored" data-anchor-id="виды-графиков.-line-plot"><span class="header-section-number">2.36</span> Виды графиков. Line plot</h2>
+</section>
+<section id="виды-графиков.-scatter-plot" class="level2" data-number="2.37">
+<h2 data-number="2.37" class="anchored" data-anchor-id="виды-графиков.-scatter-plot"><span class="header-section-number">2.37</span> Виды графиков. Scatter plot</h2>
+</section>
+<section id="виды-графиков.-corrplot" class="level2" data-number="2.38">
+<h2 data-number="2.38" class="anchored" data-anchor-id="виды-графиков.-corrplot"><span class="header-section-number">2.38</span> Виды графиков. Corrplot</h2>
+</section>
+<section id="good-bad-practices-в-визуализации" class="level2" data-number="2.39">
+<h2 data-number="2.39" class="anchored" data-anchor-id="good-bad-practices-в-визуализации"><span class="header-section-number">2.39</span> Good &amp; Bad practices в визуализации</h2>
+</section>
+<section id="основные-ошибки-в-визуализации" class="level2" data-number="2.40">
+<h2 data-number="2.40" class="anchored" data-anchor-id="основные-ошибки-в-визуализации"><span class="header-section-number">2.40</span> Основные ошибки в визуализации</h2>
+</section>
+<section id="философия-a-layered-grammar-of-graphics" class="level2" data-number="2.41">
+<h2 data-number="2.41" class="anchored" data-anchor-id="философия-a-layered-grammar-of-graphics"><span class="header-section-number">2.41</span> Философия A Layered Grammar of Graphics</h2>
+</section>
+<section id="ggplot2" class="level2" data-number="2.42">
+<h2 data-number="2.42" class="anchored" data-anchor-id="ggplot2"><span class="header-section-number">2.42</span> <code>ggplot2</code></h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -637,7 +810,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./l1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1. Основы R</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

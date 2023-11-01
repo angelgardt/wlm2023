@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - HW1. Введение в R. Типы данных. Векторы</title>
+<title>WLM 2023 - HW1 // Введение в R. Типы данных. Векторы</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw1.html">HW1. Введение в R. Типы данных. Векторы</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw1.html">HW1 // Введение в R. Типы данных. Векторы</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -151,97 +185,97 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW1. Введение в R. Типы данных. Векторы</span></a>
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW2. Матрицы и списки. Функции и строки</span></a>
+ <span class="menu-text">HW2 // Матрицы и списки. Функции и строки</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW3. Датафреймы. Исследование данных</span></a>
+ <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW4. Предобработка данных</span></a>
+ <span class="menu-text">HW4 // Предобработка данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW5. Визуализация данных</span></a>
+ <span class="menu-text">HW5 // Визуализация данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW6. Случайный эксперимент. Случайные величины</span></a>
+ <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW7. Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+ <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW8. Описательные статистики. Корреляционный анализ</span></a>
+ <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW9. Простая линейная регрессия. Множественная линейная регрессия</span></a>
+ <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW10. Дисперсионный анализ. Ковариационный анализ</span></a>
+ <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW11. Логистическая регрессия. Пуассоновская регрессия</span></a>
+ <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW12. Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+ <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW13. Смешанные линейные модели</span></a>
+ <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW14. Кластерный анализ</span></a>
+ <span class="menu-text">HW14 // Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW15. Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+ <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW16. Конфирматорный факторный анализ</span></a>
+ <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -262,24 +296,24 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#hw1_main" id="toc-hw1_main" class="nav-link active" data-scroll-target="#hw1_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw1-1-title" id="toc-hw1-1-title" class="nav-link" data-scroll-target="#hw1-1-title">#1</a></li>
+  <li><a href="#hw1-2-title" id="toc-hw1-2-title" class="nav-link" data-scroll-target="#hw1-2-title">#2</a></li>
+  <li><a href="#hw1-3-title" id="toc-hw1-3-title" class="nav-link" data-scroll-target="#hw1-3-title">#3</a></li>
+  <li><a href="#hw1-4-title" id="toc-hw1-4-title" class="nav-link" data-scroll-target="#hw1-4-title">#4</a></li>
+  <li><a href="#hw1-5-title" id="toc-hw1-5-title" class="nav-link" data-scroll-target="#hw1-5-title">#5</a></li>
+  <li><a href="#hw1-6-title" id="toc-hw1-6-title" class="nav-link" data-scroll-target="#hw1-6-title">#6</a></li>
+  <li><a href="#hw1-7-title" id="toc-hw1-7-title" class="nav-link" data-scroll-target="#hw1-7-title">#7</a></li>
+  <li><a href="#hw1-8-title" id="toc-hw1-8-title" class="nav-link" data-scroll-target="#hw1-8-title">#8</a></li>
+  <li><a href="#hw1-9-title" id="toc-hw1-9-title" class="nav-link" data-scroll-target="#hw1-9-title">#9</a></li>
+  <li><a href="#hw1-10-title" id="toc-hw1-10-title" class="nav-link" data-scroll-target="#hw1-10-title">#10</a></li>
   </ul></li>
   <li><a href="#hw1_add" id="toc-hw1_add" class="nav-link" data-scroll-target="#hw1_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw1-11-title" id="toc-hw1-11-title" class="nav-link" data-scroll-target="#hw1-11-title">#1</a></li>
+  <li><a href="#hw1-12-title" id="toc-hw1-12-title" class="nav-link" data-scroll-target="#hw1-12-title">#2</a></li>
+  <li><a href="#hw1-13-title" id="toc-hw1-13-title" class="nav-link" data-scroll-target="#hw1-13-title">#3</a></li>
+  <li><a href="#hw1-14-title" id="toc-hw1-14-title" class="nav-link" data-scroll-target="#hw1-14-title">#4</a></li>
+  <li><a href="#hw1-15-title" id="toc-hw1-15-title" class="nav-link" data-scroll-target="#hw1-15-title">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -289,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw1" class="quarto-section-identifier">HW1. Введение в R. Типы данных. Векторы</span></h1>
+<h1 class="title"><span id="hw1" class="quarto-section-identifier">HW1 // Введение в R. Типы данных. Векторы</span></h1>
 </div>
 
 
@@ -307,17 +341,36 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Напоминалка о контроле случайности
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Все задания построены на работе со сгенерированным вектором чисел. Генерация каждый раз происходит (псевдо)случайным образом. Если вы хотите пользоваться возможностью самопроверки, перед каждой строчкой кода, где происходит генерация — используются функции <code>rnorm()</code>, <code>sample()</code> — добавьте строку с установкой зерна датчика случайных чисел</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">420</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>и выполняйте код генерации вместе с данной строкой.</p>
+<p>Автопроверка настроена на результаты, получающиеся при таких генерациях. Во всех других случаях ваши результаты будут отличаться.</p>
+<p>Отсутствие строк с установкой зерна датчика случайных чисел при проверке работ тьюторами <strong>не будет считаться ошибкой</strong>.</p>
+</div>
+</div>
 <section id="hw1_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<section id="hw1-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-1-title">#1</h3>
 <p><img id="hw1-1-level" class="level"></p>
 <div id="hw1-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Сгенерируйте распределение некоторой изучаемой переменной в генеральной совокупности из 350 000 объектов с помощью функции <code>rnorm()</code> с параметрами <code>mean = 80</code> и <code>sd = 21</code>. Сохраните результат генерации в переменную <code>pop</code>.</p>
 </div>
 <div id="hw1-1-autocheck" class="autocheck">
 <div id="hw1-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки скопируйте из консоли в поле ниже два первых значения получившегося вектора. Разделите значения запятой. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-1')"></p>
@@ -334,30 +387,34 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Используя функцию <code>rnorm()</code> нужно сгенерировать вектор. Для этого ей нужно передать три аргумента: количество значений, которые нужно сгененировать, среднее (<code>mean</code>) и стандартное отклонение (<code>sd</code>).</li>
+<li>Обратите внимание на порядок аргументов: следовать они должны именно так, как перечислены в предыдущем пункте.</li>
+<li>Сохраните результат генерации в переменной <code>pop</code> с помощью оператора присваивания <code>&lt;-</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, разделили ли вы значения запятой.</li>
+<li>Округлять значения не нужно.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="hw1-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-2-title">#2</h3>
 <p><img id="hw1-2-level" class="level"></p>
 <div id="hw1-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Сгенерируйте случайную выборку из генеральной совокупности (<code>pop</code>) объемом 150 значений. Считайте, что все объекты генеральной совокупности равновероятно попадают в выборку. Сохраните результаты генерации в переменную <code>first_banch</code>.</p>
 </div>
 <div id="hw1-2-autocheck" class="autocheck">
 <div id="hw1-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите сумму по получившемуся вектору.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-2')"></p>
@@ -374,29 +431,33 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Используя функцию <code>sample()</code> нужно сгенерировать вектор. Для этого её нужно передать два обязательных аргумента: вектор, из которого она будет выбирать числа, и количество значений, которые нужно сгенерировать.</li>
+<li>Обратите внимание на порядок аргументов: следовать они должны именно так, как перечислены в предыдущем пункте.</li>
+<li>Сохраните результат генерации в переменной <code>first_bach</code> с помощью оператора присваивания <code>&lt;-</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Округлять значения не нужно.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="hw1-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-3-title">#3</h3>
 <p><img id="hw1-3-level" class="level"></p>
 <div id="hw1-3-task" class="task">
-<p>Текст задания.</p>
+<p>Удалите из полученный выборки 5 наибольших и 5 наименьших значений — посчитаем их нехарактерными значениями (выбросами). Перезапишите вектор <code>first_banch</code>.</p>
 </div>
 <div id="hw1-3-autocheck" class="autocheck">
 <div id="hw1-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите сумму по получившемуся после удаления значений вектору.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-3')"></p>
@@ -411,31 +472,55 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как осмыслить задание?
 </summary>
+<ul>
+<li>Нужно удалить 5 наибольших и 5 наименьших значений. Что нужно сделать с вектором, чтобы было проще его индексировать по индексам для решения задачи?</li>
+<li>Как должен выглядет вектор индексов?
+<ul>
+<li>Можете создать вспомогательный вектор <code>indices</code> и использовать его для индексации вектора выборки.</li>
+</ul></li>
+<li>Как обозначить при индексации удаление выбраных элементов?</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Полезная функция
 </summary>
+<p><code>sort()</code></p>
+</details>
+<details class="hint">
+<summary>
+Удаляются почти все значения ((
+</summary>
+<p>Оператор <code>:</code> имеет более высокий приоритет по сравнению с арифметическими операторами. Соответственно, сначала выпоняется он, а затем арифметические операции.</p>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, сколько значений осталось в векторе после удаления выбросов.</li>
+<li>Округлять значения не нужно.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="hw1-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-4-title">#4</h3>
 <p><img id="hw1-4-level" class="level"></p>
 <div id="hw1-4-task" class="task">
-<p>Текст задания.</p>
+<p>Ваш коллега прислал вам вторую часть собранных данных. Выполните команду ниже, чтобы загрузить её в переменную <code>second_banch</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>second_banch <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw1-second_banch.csv"</span>)<span class="sc">$</span>x</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Объедините векторы <code>first_banch</code> и <code>second_banch</code> в один для дальнейшей работы. Назовите получившийся вектор <code>obs</code>.</p>
 </div>
 <div id="hw1-4-autocheck" class="autocheck">
 <div id="hw1-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите длину получившегося вектора.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-4')"></p>
@@ -443,38 +528,21 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="hw1-4-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="hw1-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-5-title">#5</h3>
 <p><img id="hw1-5-level" class="level"></p>
 <div id="hw1-5-task" class="task">
-<p>Текст задания.</p>
+<p>Исследуйте получившийся вектор:</p>
+<ul>
+<li>какой тип его данных?</li>
+<li>если ли в нем пропущенные значения?</li>
+<li>если есть, сколько их?</li>
+</ul>
 </div>
 <div id="hw1-5-autocheck" class="autocheck">
 <div id="hw1-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите через запятую обнаруженный тип данных и количество пропущенных значений. Название типа данных введите без кавычек. Если пропущенных значений нет, укажите 0. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-5')"></p>
@@ -489,31 +557,42 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как проверить тип данных?
 </summary>
+Можно использовать функции семейста <code>is.*()</code> или функции <code>class()</code> и <code>typeof()</code>.
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как посчитать количество пропусков?
 </summary>
+<p>Для этого нужно сначала проверить, является ли каждое значение вектора пропуском (<code>NA</code>), а затем посчитать сумму от результатов проверки.</p>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, не опечатались ли вы в названии типа данных.</li>
+<li>Проверьте, разделили ли вы тип данных и количество пропусков запятой.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="hw1-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-6-title">#6</h3>
 <p><img id="hw1-6-level" class="level"></p>
 <div id="hw1-6-task" class="task">
-<p>Текст задания.</p>
+<p>Приведите вектор <code>obs</code> в порядок, если необходимо:</p>
+<ul>
+<li>удалите пропущенные значения</li>
+<li>скорректируйте тип данных</li>
+</ul>
+<p>Перезапишите объект <code>obs</code>.</p>
 </div>
 <div id="hw1-6-autocheck" class="autocheck">
 <div id="hw1-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите количество элементов, оставшихся в векторе после того, как вы привели его в порядок.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-6')"></p>
@@ -530,29 +609,51 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Предположите, откуда могла возникнуть сложившаяся проблема.</li>
+<li>Выполните приведение типа данных к нужному.</li>
+<li>Проверьте, решила ли проблема.</li>
+<li>Удалите пропущенные значения через индексацию вектора</li>
+<li>Сохраните полученный результат в переменную <code>obs</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как удалить пропуски?
 </summary>
+<ul>
+<li>Проверьте, является ли каждое значение вектора пропуском.</li>
+<li>Помните, что <code>x == NA</code> ведет себя не так, как мы бы хотели.</li>
+<li>Используйте вектор, полученный при проверке, для индексации.</li>
+<li>Обратите внимание, что проверка на пропуск возвращает <code>TRUE</code>, если значение является пропуском. Нам же нужно отобрать те, которые не являются ими.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что в векторе действительно не осталось пропущенных значений.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="hw1-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-7-title">#7</h3>
 <p><img id="hw1-7-level" class="level"></p>
 <div id="hw1-7-task" class="task">
-<p>Текст задания.</p>
+<p>На полученном векторе <code>obs</code> рассчитайте:</p>
+<ul>
+<li>минимум</li>
+<li>максимум</li>
+<li>среднее</li>
+<li>медиану</li>
+</ul>
 </div>
 <div id="hw1-7-autocheck" class="autocheck">
 <div id="hw1-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите через запятую полученные значения в порядке, указанном в задании. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-7')"></p>
@@ -567,31 +668,27 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
 Ответ неверный
 </summary>
+<p>Проверьте последовательность вводимых значений.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="hw1-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-8-title">#8</h3>
 <p><img id="hw1-8-level" class="level"></p>
 <div id="hw1-8-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Отсортируйте значения вектора по возрастанию</li>
+<li>Найдите медиану первой (меньшей) половины значений</li>
+<li>Найдите медиану второй (большей) половины значений</li>
+</ol>
+<p>Так как количество элементов нечетное, считайте, что срединное значение входит в обе половины.</p>
 </div>
 <div id="hw1-8-autocheck" class="autocheck">
 <div id="hw1-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите в поле ниже через запятую значения, полученные в пунктах (b) и (c).</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-8')"></p>
@@ -608,29 +705,44 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Отсортируйте вектор с помощью функции <code>sort()</code></li>
+<li>С помощью индексов отберите первую (меньшую) половину значений</li>
+<li>Передайте получившийся вектор в качестве аргумента функции <code>median()</code></li>
+<li>Аналогично поступите со второй (большей) половиной</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как отобрать половину значений?
 </summary>
+<ul>
+<li>Можно задать индексы руками, вычислив, какое количество элементов составляет половину вектора.</li>
+<li>Можно использовать идею, что индекс середины вектора — это округленная половина его длины (<code>round</code>()`)</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
 </details>
+<ul>
+<li>Проверьте, правильно ли вы определили индекс срединного элемента</li>
+<li>Проверьте, что при расчете медиан вы включили срединный элемент в обе половины вектора</li>
+<li>Проверьте, что вы разделили значения запятой</li>
+</ul>
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="hw1-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-9-title">#9</h3>
 <p><img id="hw1-9-level" class="level"></p>
 <div id="hw1-9-task" class="task">
-<p>Текст задания.</p>
+<p>Выборка нашего исследования включала в себя респондентов из пяти групп. Сгенерируйте группирующий вектор такой же длины, как и наша переменная, случайным образом из значений <code>gr1</code>, <code>gr2</code>, <code>gr3</code>, <code>gr4</code> и <code>gr5</code>. Сохраните результат генерации в переменную <code>condition</code>.</p>
 </div>
 <div id="hw1-9-autocheck" class="autocheck">
 <div id="hw1-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-9')"></p>
@@ -647,29 +759,29 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>С помощью функции <code>sample()</code> сгенерируйте вектор необходимой длины из обозначенных в задании текстовых значений</li>
+<li>Сохраните его в переменную <code>condition</code> с помощью оператора присваивания <code>&lt;-</code></li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Функция падает с ошибкой
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Количество допустимых значений (групп) меньше, чем неободимое количество элементов генерируемого вектора. Изучите аргумент <code>replace</code> функции <code>sample()</code>.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="hw1-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-10-title">#10</h3>
 <p><img id="hw1-10-level" class="level"></p>
 <div id="hw1-10-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте, насколько группы в исследовании получились сбалансированы.</p>
 </div>
 <div id="hw1-10-autocheck" class="autocheck">
 <div id="hw1-10-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-10" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-10')"></p>
@@ -684,18 +796,18 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как проверить сбалансированность групп?
 </summary>
+<ul>
+<li>Чтобы проверить сбалансированность групп, надо посчитать, сколько вошло наблюдений в каждую группу.</li>
+<li>Это можно сделать, построив таблицу частот.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как построить таблицу частот?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>С помощью функции <code>table()</code></p>
 </details>
 </details>
 </div>
@@ -703,15 +815,16 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw1_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw1_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="hw1-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-11-title">#1</h3>
 <p><img id="hw1-11-level" class="level"></p>
 <div id="hw1-11-task" class="task">
-<p>Текст задания.</p>
+<p>Сейчас у нас лежат отдельно наблюдения (<code>obs</code>) и отдельно группы респондентов (<code>condition</code>). Хотелось бы как-то их связать друг с другом. Хоть мы и владеем из всех структур данных пока только вектором, у нас есть способ осуществить желаемое. Это <strong>именованный вектор</strong>.</p>
+<p>Задайте элементам вектора <code>obs</code> имена, которыми будут элементы вектора <code>condition</code>. Таким образом, мы будем знать, к какой группе относиться каждое наблюдение.</p>
 </div>
 <div id="hw1-11-autocheck" class="autocheck">
 <div id="hw1-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-11" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-11')"></p>
@@ -728,68 +841,38 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>В векторе <code>condition</code> содержать группы респондентов, а в векторе <code>obs</code> — наблюдения.</li>
+<li>Каждое наблюдение относится к какой-либо группе.</li>
+<li>Если мы используем значения вектора <code>condition</code> как имена для вектора <code>obs</code> мы объединим данные из обоих векторов в одной структуре.</li>
+<li>Необходимо присвоить элементам <code>obs</code> имена из значений вектора <code>condition</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как задать имена элементам вектора?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>И для вывода, и для задания имён используется функция <code>names()</code>.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw1-12-level" class="level"></p>
-<div id="hw1-12-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw1-12-autocheck" class="autocheck">
-<div id="hw1-12-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')"></p>
-<div id="hw1-12-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw1-12-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="hw1-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-12-title">#2</h3>
 <p><img id="hw1-13-level" class="level"></p>
 <div id="hw1-13-task" class="task">
-<p>Текст задания.</p>
+<p>В <a href="#hw1-7-title">задании 7</a> мы рассчитали несколько значений, описывающих изучаемый нами вектор. Теперь, когда мы познакомились с именованным вектором, мы можем объединить все рассчитанные значения в один вектор и подписать их, чтобы не забыть, что есть что.</p>
+<p>Возьмите код из <a href="#hw1-7-title">задания 7</a> и дополните его так, чтобы результаты вычислений собирались в один именованный вектор. Необходимый результат представлен ниже.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      min       max      mean    median 
+ 42.42735 124.26487  79.84587  79.95837 </code></pre>
+</div>
+</div>
 </div>
 <div id="hw1-13-autocheck" class="autocheck">
 <div id="hw1-13-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-13" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-13')"></p>
@@ -806,29 +889,46 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<p>Необходимо объединить четыре «функции» (их результаты) в вектор и при создании вектора задать имена его элементам.</p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как задать имена элементам вектора?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Создавая вектор с помощью функции <code>c()</code> мы можем указать имя для каждого элемента:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">name1 =</span> <span class="st">"x1"</span>, <span class="at">name2 =</span> <span class="st">"x2"</span>, ...)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </details>
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="hw1-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-13-title">#3</h3>
+<p><img id="hw1-12-level" class="level"></p>
+<div id="hw1-12-task" class="task">
+<p>Возьмите получившийся вектор <code>obs</code> с наблюдениями и группами и разделите выборку на две равные подвыборки случайным образом. Сохраните результаты в переменные <code>sam1</code> и <code>sam2</code>.</p>
+</div>
+<div id="hw1-12-autocheck" class="autocheck">
+<div id="hw1-12-ir" class="input-requirements">
+
+</div>
+<p><input class="autocheck-input" type="text" id="hw1-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-12')"></p>
+<div id="hw1-12-fb" class="autocheck-feedback">
+
+</div>
+</div>
+</section>
+<section id="hw1-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-14-title">#4</h3>
 <p><img id="hw1-14-level" class="level"></p>
 <div id="hw1-14-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте сбалансированность групп по количеству наблюдений в получившихся подвыборках.</p>
 </div>
 <div id="hw1-14-autocheck" class="autocheck">
 <div id="hw1-14-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-14" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-14')"></p>
@@ -836,66 +936,25 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
-<details class="hints" id="hw1-14-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="hw1-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw1-15-title">#5</h3>
 <p><img id="hw1-15-level" class="level"></p>
 <div id="hw1-15-task" class="task">
-<p>Текст задания.</p>
+<p>Создайте вектор из первых десяти элементов последовательности</p>
+<p><span class="math display">\[
+x(n) = \frac{n^n}{\sqrt[n]{n}}
+\]</span></p>
 </div>
 <div id="hw1-15-autocheck" class="autocheck">
 <div id="hw1-15-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите последний элемент получившегося вектора. Используйте научную нотацию числа (формата <code>1.23e+04</code>).</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw1-15" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw1-15')"></p>
 <div id="hw1-15-fb" class="autocheck-feedback">
 
 </div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw1-15-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
 </div>
 <!--- CHANGE hw1 TO hw<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="./js/hw1.json"></script>
@@ -1262,7 +1321,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./hw2.html" class="pagination-link">
-        <span class="nav-page-text">HW2. Матрицы и списки. Функции и строки</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">HW2 // Матрицы и списки. Функции и строки</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

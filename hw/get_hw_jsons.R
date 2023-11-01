@@ -9,7 +9,8 @@ FIELDS = c("id",
            "n")
 
 #Read google sheets data into R
-hws_table <- read_sheet('https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit#gid=1353840808') %>% 
+hws_table <- read_sheet('https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing',
+                        sheet = "HW") %>% 
   select(all_of(FIELDS))
 print(hws_table)
 
