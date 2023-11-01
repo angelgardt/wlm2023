@@ -7,7 +7,7 @@
 ## b
 sin(64)^2
 ## c
-exp()
+exp(8+pi)
 ## d
 log(34, 12)
 ## e
@@ -22,8 +22,9 @@ log(17^sin(4.8*pi), base = 24^(1/x))
 ## b
 (exp(x + y^2)) / (1 + exp(x + y^2))
 ## c
-sqrt(log(cos(2/3*x^2) / abs(y) + x))
+sqrt(log(cos(2/(3*x^2)) / (abs(y) + x)))
 ## d
+(log(sin(3 * cos(y / 2))^2, base = exp(x)))^abs(y-x)
 ## e
 sin(pi / 4 * x) + cos(2*pi / sqrt(y) - 1)
 sin(pi / 4 * x) + cos(2*pi / sqrt(y+0i) - 1) ## fix y as complex to calculate
