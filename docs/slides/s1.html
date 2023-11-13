@@ -671,7 +671,7 @@ link.href = 'pics/favicon.png';
 </section>
 <section id="complex" class="slide level2">
 <h2><code>complex</code></h2>
-<p>Комплексные числа тоже существуют, но я даже не знаю, когда вам придется их использовать.</p>
+<p>Комплексные числа тоже существуют, и мы с ними немного поработаем, чтобы перестать их бояться.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="fu">class</span>(<span class="dv">2</span><span class="sc">+</span>3i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -740,7 +740,7 @@ link.href = 'pics/favicon.png';
 <li>и др.</li>
 </ul>
 <h3 id="nan"><code>NaN</code></h3>
-<p>Это не число (<strong>N</strong>ot a <strong>N</strong>umber).</p>
+<p>Это не число (<strong>N</strong>ot <strong>a</strong> <strong>N</strong>umber).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a><span class="dv">0</span> <span class="sc">/</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1247,86 +1247,28 @@ $m
 <span id="cb166-4"><a href="#cb166-4"></a>  </span>
 <span id="cb166-5"><a href="#cb166-5"></a>  d <span class="sc">|&gt;</span> <span class="fu">select</span>(</span>
 <span id="cb166-6"><a href="#cb166-6"></a>    <span class="co"># select columns we need</span></span>
-<span id="cb166-7"><a href="#cb166-7"></a>    <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-8"><a href="#cb166-8"></a>    correctAns,</span>
-<span id="cb166-9"><a href="#cb166-9"></a>    base_pic,</span>
-<span id="cb166-10"><a href="#cb166-10"></a>    rotated_pic,</span>
-<span id="cb166-11"><a href="#cb166-11"></a>    resp_MR_easy.keys,</span>
-<span id="cb166-12"><a href="#cb166-12"></a>    resp_MR_easy.corr,</span>
-<span id="cb166-13"><a href="#cb166-13"></a>    resp_MR_easy.rt</span>
-<span id="cb166-14"><a href="#cb166-14"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb166-15"><a href="#cb166-15"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="co"># remove technical NAs (recording artefacts, not missing data)</span></span>
-<span id="cb166-16"><a href="#cb166-16"></a>    <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MR"</span>,</span>
-<span id="cb166-17"><a href="#cb166-17"></a>           <span class="co"># add task name (mental rotation)</span></span>
-<span id="cb166-18"><a href="#cb166-18"></a>           <span class="at">level =</span> <span class="st">"easy"</span>,</span>
-<span id="cb166-19"><a href="#cb166-19"></a>           <span class="co"># add difficulty level</span></span>
-<span id="cb166-20"><a href="#cb166-20"></a>           <span class="at">trial =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">|&gt;</span> <span class="co"># number trials</span></span>
-<span id="cb166-21"><a href="#cb166-21"></a>    <span class="fu">rename</span>(</span>
-<span id="cb166-22"><a href="#cb166-22"></a>      <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-23"><a href="#cb166-23"></a>      <span class="co"># rename columns for handy usage</span></span>
-<span id="cb166-24"><a href="#cb166-24"></a>      <span class="st">"key"</span> <span class="ot">=</span> resp_MR_easy.keys,</span>
-<span id="cb166-25"><a href="#cb166-25"></a>      <span class="st">"is_correct"</span> <span class="ot">=</span> resp_MR_easy.corr,</span>
-<span id="cb166-26"><a href="#cb166-26"></a>      <span class="st">"rt"</span> <span class="ot">=</span> resp_MR_easy.rt</span>
-<span id="cb166-27"><a href="#cb166-27"></a>    ) <span class="ot">-&gt;</span> MR_easy <span class="co"># ready to use</span></span>
-<span id="cb166-28"><a href="#cb166-28"></a>  </span>
-<span id="cb166-29"><a href="#cb166-29"></a>  </span>
-<span id="cb166-30"><a href="#cb166-30"></a>  d <span class="sc">|&gt;</span> <span class="fu">select</span>(</span>
-<span id="cb166-31"><a href="#cb166-31"></a>    <span class="co"># select columns we need</span></span>
-<span id="cb166-32"><a href="#cb166-32"></a>    <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-33"><a href="#cb166-33"></a>    correctAns,</span>
-<span id="cb166-34"><a href="#cb166-34"></a>    base_pic,</span>
-<span id="cb166-35"><a href="#cb166-35"></a>    rotated_pic,</span>
-<span id="cb166-36"><a href="#cb166-36"></a>    resp_MR_medium.keys,</span>
-<span id="cb166-37"><a href="#cb166-37"></a>    resp_MR_medium.corr,</span>
-<span id="cb166-38"><a href="#cb166-38"></a>    resp_MR_medium.rt</span>
-<span id="cb166-39"><a href="#cb166-39"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb166-40"><a href="#cb166-40"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="co"># remove technical NAs (recording artefacts, not missing data)</span></span>
-<span id="cb166-41"><a href="#cb166-41"></a>    <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MR"</span>,</span>
-<span id="cb166-42"><a href="#cb166-42"></a>           <span class="co"># add task name (mental rotation)</span></span>
-<span id="cb166-43"><a href="#cb166-43"></a>           <span class="at">level =</span> <span class="st">"medium"</span>,</span>
-<span id="cb166-44"><a href="#cb166-44"></a>           <span class="co"># add difficulty level</span></span>
-<span id="cb166-45"><a href="#cb166-45"></a>           <span class="at">trial =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">|&gt;</span>  <span class="co"># number trials</span></span>
-<span id="cb166-46"><a href="#cb166-46"></a>    <span class="fu">rename</span>(</span>
-<span id="cb166-47"><a href="#cb166-47"></a>      <span class="co"># rename columns for handy usage</span></span>
-<span id="cb166-48"><a href="#cb166-48"></a>      <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-49"><a href="#cb166-49"></a>      <span class="st">"key"</span> <span class="ot">=</span> resp_MR_medium.keys,</span>
-<span id="cb166-50"><a href="#cb166-50"></a>      <span class="st">"is_correct"</span> <span class="ot">=</span> resp_MR_medium.corr,</span>
-<span id="cb166-51"><a href="#cb166-51"></a>      <span class="st">"rt"</span> <span class="ot">=</span> resp_MR_medium.rt</span>
-<span id="cb166-52"><a href="#cb166-52"></a>    ) <span class="ot">-&gt;</span> MR_medium <span class="co"># ready to use</span></span>
-<span id="cb166-53"><a href="#cb166-53"></a>  </span>
-<span id="cb166-54"><a href="#cb166-54"></a>  </span>
-<span id="cb166-55"><a href="#cb166-55"></a>  </span>
-<span id="cb166-56"><a href="#cb166-56"></a>  d <span class="sc">|&gt;</span> <span class="fu">select</span>(</span>
-<span id="cb166-57"><a href="#cb166-57"></a>    <span class="co"># select columns we need</span></span>
-<span id="cb166-58"><a href="#cb166-58"></a>    <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-59"><a href="#cb166-59"></a>    correctAns,</span>
-<span id="cb166-60"><a href="#cb166-60"></a>    base_pic,</span>
-<span id="cb166-61"><a href="#cb166-61"></a>    rotated_pic,</span>
-<span id="cb166-62"><a href="#cb166-62"></a>    resp_MR_hard.keys,</span>
-<span id="cb166-63"><a href="#cb166-63"></a>    resp_MR_hard.corr,</span>
-<span id="cb166-64"><a href="#cb166-64"></a>    resp_MR_hard.rt</span>
-<span id="cb166-65"><a href="#cb166-65"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb166-66"><a href="#cb166-66"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="co"># remove technical NAs (recording artefacts, not missing data)</span></span>
-<span id="cb166-67"><a href="#cb166-67"></a>    <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MR"</span>,</span>
-<span id="cb166-68"><a href="#cb166-68"></a>           <span class="co"># add task name (mental rotation)</span></span>
-<span id="cb166-69"><a href="#cb166-69"></a>           <span class="at">level =</span> <span class="st">"hard"</span>,</span>
-<span id="cb166-70"><a href="#cb166-70"></a>           <span class="co"># add difficulty level</span></span>
-<span id="cb166-71"><a href="#cb166-71"></a>           <span class="at">trial =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">|&gt;</span> <span class="co"># number trials</span></span>
-<span id="cb166-72"><a href="#cb166-72"></a>    <span class="fu">rename</span>(</span>
-<span id="cb166-73"><a href="#cb166-73"></a>      <span class="co"># rename columns for handy usage</span></span>
-<span id="cb166-74"><a href="#cb166-74"></a>      <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb166-75"><a href="#cb166-75"></a>      <span class="st">"key"</span> <span class="ot">=</span> resp_MR_hard.keys,</span>
-<span id="cb166-76"><a href="#cb166-76"></a>      <span class="st">"is_correct"</span> <span class="ot">=</span> resp_MR_hard.corr,</span>
-<span id="cb166-77"><a href="#cb166-77"></a>      <span class="st">"rt"</span> <span class="ot">=</span> resp_MR_hard.rt</span>
-<span id="cb166-78"><a href="#cb166-78"></a>    ) <span class="ot">-&gt;</span> MR_hard <span class="co"># ready to use</span></span>
-<span id="cb166-79"><a href="#cb166-79"></a>  </span>
-<span id="cb166-80"><a href="#cb166-80"></a>  <span class="co"># bind all conditions of mental rotation task to one tibble</span></span>
-<span id="cb166-81"><a href="#cb166-81"></a>  </span>
-<span id="cb166-82"><a href="#cb166-82"></a>  <span class="fu">bind_rows</span>(MR_easy, MR_medium, MR_hard) <span class="ot">-&gt;</span> MR</span>
-<span id="cb166-83"><a href="#cb166-83"></a>  </span>
-<span id="cb166-84"><a href="#cb166-84"></a>  <span class="fu">return</span>(MR)</span>
-<span id="cb166-85"><a href="#cb166-85"></a> </span>
-<span id="cb166-86"><a href="#cb166-86"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb166-7"><a href="#cb166-7"></a>    correctAns,</span>
+<span id="cb166-8"><a href="#cb166-8"></a>    resp_MR_easy.keys,</span>
+<span id="cb166-9"><a href="#cb166-9"></a>    resp_MR_easy.corr,</span>
+<span id="cb166-10"><a href="#cb166-10"></a>    resp_MR_easy.rt</span>
+<span id="cb166-11"><a href="#cb166-11"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb166-12"><a href="#cb166-12"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="co"># remove technical NAs (recording artefacts, not missing data)</span></span>
+<span id="cb166-13"><a href="#cb166-13"></a>    <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MR"</span>,</span>
+<span id="cb166-14"><a href="#cb166-14"></a>           <span class="co"># add task name (mental rotation)</span></span>
+<span id="cb166-15"><a href="#cb166-15"></a>           <span class="at">level =</span> <span class="st">"easy"</span>,</span>
+<span id="cb166-16"><a href="#cb166-16"></a>           <span class="co"># add difficulty level</span></span>
+<span id="cb166-17"><a href="#cb166-17"></a>           <span class="at">trial =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">|&gt;</span> <span class="co"># number trials</span></span>
+<span id="cb166-18"><a href="#cb166-18"></a>    <span class="fu">rename</span>(</span>
+<span id="cb166-19"><a href="#cb166-19"></a>      <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
+<span id="cb166-20"><a href="#cb166-20"></a>      <span class="co"># rename columns for handy usage</span></span>
+<span id="cb166-21"><a href="#cb166-21"></a>      <span class="st">"key"</span> <span class="ot">=</span> resp_MR_easy.keys,</span>
+<span id="cb166-22"><a href="#cb166-22"></a>      <span class="st">"is_correct"</span> <span class="ot">=</span> resp_MR_easy.corr,</span>
+<span id="cb166-23"><a href="#cb166-23"></a>      <span class="st">"rt"</span> <span class="ot">=</span> resp_MR_easy.rt</span>
+<span id="cb166-24"><a href="#cb166-24"></a>    ) <span class="ot">-&gt;</span> MR</span>
+<span id="cb166-25"><a href="#cb166-25"></a>  </span>
+<span id="cb166-26"><a href="#cb166-26"></a>  <span class="fu">return</span>(MR)</span>
+<span id="cb166-27"><a href="#cb166-27"></a>  </span>
+<span id="cb166-28"><a href="#cb166-28"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="условный-оператор" class="slide level2">
@@ -1417,109 +1359,30 @@ $m
 <span id="cb177-25"><a href="#cb177-25"></a>        <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
 <span id="cb177-26"><a href="#cb177-26"></a>        <span class="st">"rt"</span> <span class="ot">=</span> <span class="st">"mouse_MSe.time"</span></span>
 <span id="cb177-27"><a href="#cb177-27"></a>      ) <span class="sc">|&gt;</span></span>
-<span id="cb177-28"><a href="#cb177-28"></a>      <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>))) <span class="ot">-&gt;</span> MS_easy</span>
+<span id="cb177-28"><a href="#cb177-28"></a>      <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>))) <span class="ot">-&gt;</span> MS</span>
 <span id="cb177-29"><a href="#cb177-29"></a>    </span>
-<span id="cb177-30"><a href="#cb177-30"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(</span>
-<span id="cb177-31"><a href="#cb177-31"></a>      <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-32"><a href="#cb177-32"></a>      <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
-<span id="cb177-33"><a href="#cb177-33"></a>      <span class="fu">matches</span>(<span class="st">"MSm.text$"</span>),</span>
-<span id="cb177-34"><a href="#cb177-34"></a>      <span class="st">"mouse_MSm.time"</span></span>
-<span id="cb177-35"><a href="#cb177-35"></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb177-36"><a href="#cb177-36"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-37"><a href="#cb177-37"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-38"><a href="#cb177-38"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
-<span id="cb177-39"><a href="#cb177-39"></a>             <span class="at">level =</span> <span class="st">"medium"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb177-40"><a href="#cb177-40"></a>      <span class="fu">rename</span>(<span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-41"><a href="#cb177-41"></a>             <span class="st">"rt"</span> <span class="ot">=</span> <span class="st">"mouse_MSm.time"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-42"><a href="#cb177-42"></a>      <span class="fu">rename_with</span>(<span class="at">.fn =</span> str_replace_all, </span>
-<span id="cb177-43"><a href="#cb177-43"></a>                  <span class="at">pattern =</span> <span class="st">"_MSm</span><span class="sc">\\</span><span class="st">.text"</span>, </span>
-<span id="cb177-44"><a href="#cb177-44"></a>                  <span class="at">replacement =</span> <span class="st">""</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb177-45"><a href="#cb177-45"></a>      <span class="fu">select</span>(<span class="sc">-</span>noun6, <span class="sc">-</span>noun7) <span class="ot">-&gt;</span> MS_medium</span>
-<span id="cb177-46"><a href="#cb177-46"></a>    </span>
-<span id="cb177-47"><a href="#cb177-47"></a>    </span>
-<span id="cb177-48"><a href="#cb177-48"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(</span>
-<span id="cb177-49"><a href="#cb177-49"></a>      <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-50"><a href="#cb177-50"></a>      <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
-<span id="cb177-51"><a href="#cb177-51"></a>      <span class="fu">matches</span>(<span class="st">"MSh.text$"</span>),</span>
-<span id="cb177-52"><a href="#cb177-52"></a>      <span class="st">"mouse_MSh.time"</span></span>
-<span id="cb177-53"><a href="#cb177-53"></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb177-54"><a href="#cb177-54"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-55"><a href="#cb177-55"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
-<span id="cb177-56"><a href="#cb177-56"></a>             <span class="at">level =</span> <span class="st">"hard"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-57"><a href="#cb177-57"></a>      <span class="fu">rename</span>(<span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-58"><a href="#cb177-58"></a>             <span class="st">"rt"</span> <span class="ot">=</span> <span class="st">"mouse_MSh.time"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb177-59"><a href="#cb177-59"></a>      <span class="fu">rename_with</span>(<span class="at">.fn =</span> str_replace_all,</span>
-<span id="cb177-60"><a href="#cb177-60"></a>                  <span class="at">pattern =</span> <span class="st">"_MSh</span><span class="sc">\\</span><span class="st">.text"</span>,</span>
-<span id="cb177-61"><a href="#cb177-61"></a>                  <span class="at">replacement =</span> <span class="st">""</span>) <span class="ot">-&gt;</span> MS_hard</span>
-<span id="cb177-62"><a href="#cb177-62"></a>    </span>
-<span id="cb177-63"><a href="#cb177-63"></a>  } <span class="cf">else</span> {</span>
-<span id="cb177-64"><a href="#cb177-64"></a>    </span>
-<span id="cb177-65"><a href="#cb177-65"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-66"><a href="#cb177-66"></a>                <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
-<span id="cb177-67"><a href="#cb177-67"></a>                <span class="fu">matches</span>(<span class="st">"resp</span><span class="sc">\\</span><span class="st">d</span><span class="sc">\\</span><span class="st">.text$"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb177-68"><a href="#cb177-68"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-69"><a href="#cb177-69"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-70"><a href="#cb177-70"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
-<span id="cb177-71"><a href="#cb177-71"></a>             <span class="at">level =</span> <span class="st">"easy"</span>,</span>
-<span id="cb177-72"><a href="#cb177-72"></a>             <span class="at">rt =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-73"><a href="#cb177-73"></a>      <span class="fu">rename</span>(</span>
-<span id="cb177-74"><a href="#cb177-74"></a>        <span class="st">"resp1"</span> <span class="ot">=</span> resp1.text,</span>
-<span id="cb177-75"><a href="#cb177-75"></a>        <span class="st">"resp2"</span> <span class="ot">=</span> resp2.text,</span>
-<span id="cb177-76"><a href="#cb177-76"></a>        <span class="st">"resp3"</span> <span class="ot">=</span> resp3.text,</span>
-<span id="cb177-77"><a href="#cb177-77"></a>        <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span></span>
-<span id="cb177-78"><a href="#cb177-78"></a>      ) <span class="sc">|&gt;</span></span>
-<span id="cb177-79"><a href="#cb177-79"></a>      <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>))) <span class="ot">-&gt;</span> MS_easy</span>
-<span id="cb177-80"><a href="#cb177-80"></a>    </span>
-<span id="cb177-81"><a href="#cb177-81"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-82"><a href="#cb177-82"></a>                <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
-<span id="cb177-83"><a href="#cb177-83"></a>                <span class="fu">matches</span>(<span class="st">"MSm.text$"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb177-84"><a href="#cb177-84"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-85"><a href="#cb177-85"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-86"><a href="#cb177-86"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
-<span id="cb177-87"><a href="#cb177-87"></a>             <span class="at">level =</span> <span class="st">"medium"</span>,</span>
-<span id="cb177-88"><a href="#cb177-88"></a>             <span class="at">rt =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-89"><a href="#cb177-89"></a>      <span class="fu">rename</span>(<span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-90"><a href="#cb177-90"></a>      <span class="fu">rename_with</span>(<span class="at">.fn =</span> str_replace_all,</span>
-<span id="cb177-91"><a href="#cb177-91"></a>                  <span class="at">pattern =</span> <span class="st">"_MSm</span><span class="sc">\\</span><span class="st">.text"</span>,</span>
-<span id="cb177-92"><a href="#cb177-92"></a>                  <span class="at">replacement =</span> <span class="st">""</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb177-93"><a href="#cb177-93"></a>      <span class="fu">select</span>(<span class="sc">-</span>noun6, <span class="sc">-</span>noun7) <span class="ot">-&gt;</span> MS_medium</span>
-<span id="cb177-94"><a href="#cb177-94"></a>    </span>
-<span id="cb177-95"><a href="#cb177-95"></a>    </span>
-<span id="cb177-96"><a href="#cb177-96"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="st">"Индивидуальный_код"</span>,</span>
-<span id="cb177-97"><a href="#cb177-97"></a>                <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
-<span id="cb177-98"><a href="#cb177-98"></a>                <span class="fu">matches</span>(<span class="st">"MSh.text$"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb177-99"><a href="#cb177-99"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
-<span id="cb177-100"><a href="#cb177-100"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
-<span id="cb177-101"><a href="#cb177-101"></a>             <span class="at">level =</span> <span class="st">"hard"</span>,</span>
-<span id="cb177-102"><a href="#cb177-102"></a>             <span class="at">rt =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-103"><a href="#cb177-103"></a>      <span class="fu">rename</span>(<span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb177-104"><a href="#cb177-104"></a>      <span class="fu">rename_with</span>(<span class="at">.fn =</span> str_replace_all,</span>
-<span id="cb177-105"><a href="#cb177-105"></a>                  <span class="at">pattern =</span> <span class="st">"_MSh</span><span class="sc">\\</span><span class="st">.text"</span>, </span>
-<span id="cb177-106"><a href="#cb177-106"></a>                  <span class="at">replacement =</span> <span class="st">""</span>) <span class="ot">-&gt;</span> MS_hard</span>
-<span id="cb177-107"><a href="#cb177-107"></a>  }</span>
-<span id="cb177-108"><a href="#cb177-108"></a>  </span>
-<span id="cb177-109"><a href="#cb177-109"></a>  <span class="fu">tibble</span>(</span>
-<span id="cb177-110"><a href="#cb177-110"></a>    <span class="at">id =</span> MS_easy<span class="sc">$</span>id[<span class="dv">1</span>],</span>
-<span id="cb177-111"><a href="#cb177-111"></a>    <span class="at">trials =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>,</span>
-<span id="cb177-112"><a href="#cb177-112"></a>    <span class="at">MS_easy_n =</span> <span class="fu">n_count</span>(MS_easy),</span>
-<span id="cb177-113"><a href="#cb177-113"></a>    <span class="at">MS_easy_rt =</span> MS_easy<span class="sc">$</span>rt,</span>
-<span id="cb177-114"><a href="#cb177-114"></a>    <span class="at">MS_medium_n =</span> <span class="fu">n_count</span>(MS_medium),</span>
-<span id="cb177-115"><a href="#cb177-115"></a>    <span class="at">MS_medium_rt =</span> MS_medium<span class="sc">$</span>rt,</span>
-<span id="cb177-116"><a href="#cb177-116"></a>    <span class="at">MS_hard_n =</span> <span class="fu">n_count</span>(MS_hard),</span>
-<span id="cb177-117"><a href="#cb177-117"></a>    <span class="at">MS_hard_rt =</span> MS_hard<span class="sc">$</span>rt</span>
-<span id="cb177-118"><a href="#cb177-118"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb177-119"><a href="#cb177-119"></a>    <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"trials"</span>), <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb177-120"><a href="#cb177-120"></a>    <span class="fu">separate</span>(name, <span class="fu">c</span>(<span class="st">"task"</span>, <span class="st">"level"</span>, <span class="st">"name"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb177-121"><a href="#cb177-121"></a>    <span class="fu">pivot_wider</span>(<span class="at">values_from =</span> value, <span class="at">names_from =</span> name) <span class="sc">|&gt;</span></span>
-<span id="cb177-122"><a href="#cb177-122"></a>    <span class="fu">mutate</span>(<span class="at">acc =</span> <span class="fu">ifelse</span>(level <span class="sc">==</span> <span class="st">"easy"</span>, n <span class="sc">/</span> <span class="dv">3</span>,</span>
-<span id="cb177-123"><a href="#cb177-123"></a>                        <span class="fu">ifelse</span>(</span>
-<span id="cb177-124"><a href="#cb177-124"></a>                          level <span class="sc">==</span> <span class="st">"medium"</span>, n <span class="sc">/</span> <span class="dv">5</span>,</span>
-<span id="cb177-125"><a href="#cb177-125"></a>                          <span class="fu">ifelse</span>(level <span class="sc">==</span> <span class="st">"hard"</span>, n <span class="sc">/</span> <span class="dv">7</span>, <span class="cn">NA</span>)</span>
-<span id="cb177-126"><a href="#cb177-126"></a>                        ))) <span class="ot">-&gt;</span> MS</span>
-<span id="cb177-127"><a href="#cb177-127"></a>  </span>
-<span id="cb177-128"><a href="#cb177-128"></a>  <span class="fu">return</span>(MS)</span>
-<span id="cb177-129"><a href="#cb177-129"></a>  </span>
-<span id="cb177-130"><a href="#cb177-130"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb177-30"><a href="#cb177-30"></a>  } <span class="cf">else</span> {</span>
+<span id="cb177-31"><a href="#cb177-31"></a>    </span>
+<span id="cb177-32"><a href="#cb177-32"></a>    d <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="st">"Индивидуальный_код"</span>,</span>
+<span id="cb177-33"><a href="#cb177-33"></a>                <span class="fu">matches</span>(<span class="st">"^noun"</span>),</span>
+<span id="cb177-34"><a href="#cb177-34"></a>                <span class="fu">matches</span>(<span class="st">"resp</span><span class="sc">\\</span><span class="st">d</span><span class="sc">\\</span><span class="st">.text$"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb177-35"><a href="#cb177-35"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)), <span class="fu">all_vars</span>(<span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
+<span id="cb177-36"><a href="#cb177-36"></a>      <span class="fu">filter_at</span>(<span class="fu">vars</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>)), <span class="fu">all_vars</span>(<span class="fu">is.na</span>(.))) <span class="sc">|&gt;</span></span>
+<span id="cb177-37"><a href="#cb177-37"></a>      <span class="fu">mutate</span>(<span class="at">task =</span> <span class="st">"MS"</span>,</span>
+<span id="cb177-38"><a href="#cb177-38"></a>             <span class="at">level =</span> <span class="st">"easy"</span>,</span>
+<span id="cb177-39"><a href="#cb177-39"></a>             <span class="at">rt =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
+<span id="cb177-40"><a href="#cb177-40"></a>      <span class="fu">rename</span>(</span>
+<span id="cb177-41"><a href="#cb177-41"></a>        <span class="st">"resp1"</span> <span class="ot">=</span> resp1.text,</span>
+<span id="cb177-42"><a href="#cb177-42"></a>        <span class="st">"resp2"</span> <span class="ot">=</span> resp2.text,</span>
+<span id="cb177-43"><a href="#cb177-43"></a>        <span class="st">"resp3"</span> <span class="ot">=</span> resp3.text,</span>
+<span id="cb177-44"><a href="#cb177-44"></a>        <span class="st">"id"</span> <span class="ot">=</span> <span class="st">"Индивидуальный_код"</span></span>
+<span id="cb177-45"><a href="#cb177-45"></a>      ) <span class="sc">|&gt;</span></span>
+<span id="cb177-46"><a href="#cb177-46"></a>      <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"noun"</span>, <span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>))) <span class="ot">-&gt;</span> MS</span>
+<span id="cb177-47"><a href="#cb177-47"></a>  }</span>
+<span id="cb177-48"><a href="#cb177-48"></a>  </span>
+<span id="cb177-49"><a href="#cb177-49"></a>  <span class="fu">return</span>(MS)</span>
+<span id="cb177-50"><a href="#cb177-50"></a>  </span>
+<span id="cb177-51"><a href="#cb177-51"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="вне-функций" class="slide level2">
@@ -1587,10 +1450,8 @@ $m
 <span id="cb183-7"><a href="#cb183-7"></a>  MR_data <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(<span class="fu">mr_preproc</span>(d) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">file =</span> files[i])) <span class="ot">-&gt;</span> MR_data</span>
 <span id="cb183-8"><a href="#cb183-8"></a>  ST_data <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(<span class="fu">st_preproc</span>(d) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">file =</span> files[i])) <span class="ot">-&gt;</span> ST_data</span>
 <span id="cb183-9"><a href="#cb183-9"></a>  MS_data <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(<span class="fu">ms_preproc</span>(d) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">file =</span> files[i])) <span class="ot">-&gt;</span> MS_data</span>
-<span id="cb183-10"><a href="#cb183-10"></a>  NASATLX_data <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(<span class="fu">nasatlx_preproc</span>(d) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">file =</span> files[i])) <span class="ot">-&gt;</span> NASATLX_data</span>
-<span id="cb183-11"><a href="#cb183-11"></a>  SEQUENCE_data <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(<span class="fu">sequence_preproc</span>(d) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">file =</span> files[i])) <span class="ot">-&gt;</span> SEQUENCE_data</span>
-<span id="cb183-12"><a href="#cb183-12"></a></span>
-<span id="cb183-13"><a href="#cb183-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb183-10"><a href="#cb183-10"></a></span>
+<span id="cb183-11"><a href="#cb183-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="циклы-в-r-это-зло-они-долго-работают" class="slide level2">
