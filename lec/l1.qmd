@@ -162,7 +162,7 @@ typeof(3L)
 
 ### `complex`
 
-Комплексные числа тоже существуют, но я даже не знаю, когда вам придется их использовать.
+Комплексные числа тоже существуют, и мы с ними немного познакомимся, чтобы перестать их бояться.
 
 ```{r}
 class(2+3i)
@@ -223,7 +223,7 @@ s
 
 #### `NaN`
 
-Это не число (**N**ot a **N**umber).
+Это не число (**N**ot **a** **N**umber).
 
 ```{r}
 0 / 0
@@ -233,6 +233,10 @@ s
 #### `NULL`
 
 Это ничто. Пустота. Используется для задания аргументов функций.
+
+```{r, eval=FALSE}
+ggplot(data = NULL)
+```
 
 
 ## Структуры данных
@@ -597,6 +601,14 @@ cot(3)
 
 Это функция, которая занималась предобработкой данных в реальном проекте. Прикиньте, если бы мы такой кусок кода повторяли для каждого датасета... --- жуть!
 
+::: {.callout-important}
+
+#### Важно!
+
+Вам не нужно сейчас подробно понимать, что написано ниже --- мы все разберем по ходу курса и научимся писать такое же! Сейчас главное ухватить структуру функции --- где аргументы, где тело, где возвращаемое значение. Всё! Остальное освоим по ходу дела.
+
+:::
+
 ```{r, eval=FALSE}
 mr_preproc <- function(d) {
 
@@ -624,62 +636,7 @@ mr_preproc <- function(d) {
       "key" = resp_MR_easy.keys,
       "is_correct" = resp_MR_easy.corr,
       "rt" = resp_MR_easy.rt
-    ) -> MR_easy # ready to use
-  
-  
-  d |> select(
-    # select columns we need
-    "Индивидуальный_код",
-    correctAns,
-    base_pic,
-    rotated_pic,
-    resp_MR_medium.keys,
-    resp_MR_medium.corr,
-    resp_MR_medium.rt
-  ) |>
-    drop_na() |> # remove technical NAs (recording artefacts, not missing data)
-    mutate(task = "MR",
-           # add task name (mental rotation)
-           level = "medium",
-           # add difficulty level
-           trial = 1:16) |>  # number trials
-    rename(
-      # rename columns for handy usage
-      "id" = "Индивидуальный_код",
-      "key" = resp_MR_medium.keys,
-      "is_correct" = resp_MR_medium.corr,
-      "rt" = resp_MR_medium.rt
-    ) -> MR_medium # ready to use
-  
-  
-  
-  d |> select(
-    # select columns we need
-    "Индивидуальный_код",
-    correctAns,
-    base_pic,
-    rotated_pic,
-    resp_MR_hard.keys,
-    resp_MR_hard.corr,
-    resp_MR_hard.rt
-  ) |>
-    drop_na() |> # remove technical NAs (recording artefacts, not missing data)
-    mutate(task = "MR",
-           # add task name (mental rotation)
-           level = "hard",
-           # add difficulty level
-           trial = 1:16) |> # number trials
-    rename(
-      # rename columns for handy usage
-      "id" = "Индивидуальный_код",
-      "key" = resp_MR_hard.keys,
-      "is_correct" = resp_MR_hard.corr,
-      "rt" = resp_MR_hard.rt
-    ) -> MR_hard # ready to use
-  
-  # bind all conditions of mental rotation task to one tibble
-  
-  bind_rows(MR_easy, MR_medium, MR_hard) -> MR
+    ) -> MR # ready to use
   
   return(MR)
  
@@ -745,6 +702,14 @@ odd_even(135)
 
 ## Пример функции из реального проекта с условным оператором
 
+::: {.callout-important}
+
+#### Важно!
+
+Вам не нужно сейчас подробно понимать, что написано ниже --- мы все разберем по ходу курса и научимся писать такое же! Сейчас главное ухватить структуру условного оператора --- где условие, что выполняется, если условие верно, что выполняется, если условие ложно. Всё! Остальное освоим по ходу дела.
+
+:::
+
 ```{r}
 ms_preproc <- function(d) {
   
@@ -775,40 +740,7 @@ ms_preproc <- function(d) {
         "id" = "Индивидуальный_код",
         "rt" = "mouse_MSe.time"
       ) |>
-      select(-c(paste0("noun", 4:7))) -> MS_easy
-    
-    d |> select(
-      "Индивидуальный_код",
-      matches("^noun"),
-      matches("MSm.text$"),
-      "mouse_MSm.time"
-    ) |>
-      filter_at(vars(paste0("noun", 4:5)), all_vars(!is.na(.))) |>
-      filter_at(vars(paste0("noun", 6:7)), all_vars(is.na(.))) |>
-      mutate(task = "MS",
-             level = "medium") |> 
-      rename("id" = "Индивидуальный_код",
-             "rt" = "mouse_MSm.time") |>
-      rename_with(.fn = str_replace_all, 
-                  pattern = "_MSm\\.text", 
-                  replacement = "") |> 
-      select(-noun6, -noun7) -> MS_medium
-    
-    
-    d |> select(
-      "Индивидуальный_код",
-      matches("^noun"),
-      matches("MSh.text$"),
-      "mouse_MSh.time"
-    ) |>
-      filter_at(vars(paste0("noun", 1:7)), all_vars(!is.na(.))) |>
-      mutate(task = "MS",
-             level = "hard") |>
-      rename("id" = "Индивидуальный_код",
-             "rt" = "mouse_MSh.time") |> 
-      rename_with(.fn = str_replace_all,
-                  pattern = "_MSh\\.text",
-                  replacement = "") -> MS_hard
+      select(-c(paste0("noun", 4:7))) -> MS
     
   } else {
     ### а если колонки нет, то запускается этот код
@@ -827,54 +759,9 @@ ms_preproc <- function(d) {
         "resp3" = resp3.text,
         "id" = "Индивидуальный_код"
       ) |>
-      select(-c(paste0("noun", 4:7))) -> MS_easy
-    
-    d |> select("Индивидуальный_код",
-                matches("^noun"),
-                matches("MSm.text$")) |>
-      filter_at(vars(paste0("noun", 4:5)), all_vars(!is.na(.))) |>
-      filter_at(vars(paste0("noun", 6:7)), all_vars(is.na(.))) |>
-      mutate(task = "MS",
-             level = "medium",
-             rt = NA) |>
-      rename("id" = "Индивидуальный_код") |>
-      rename_with(.fn = str_replace_all,
-                  pattern = "_MSm\\.text",
-                  replacement = "") |> 
-      select(-noun6, -noun7) -> MS_medium
-    
-    
-    d |> select("Индивидуальный_код",
-                matches("^noun"),
-                matches("MSh.text$")) |>
-      filter_at(vars(paste0("noun", 1:7)), all_vars(!is.na(.))) |>
-      mutate(task = "MS",
-             level = "hard",
-             rt = NA) |>
-      rename("id" = "Индивидуальный_код") |> 
-      rename_with(.fn = str_replace_all,
-                  pattern = "_MSh\\.text", 
-                  replacement = "") -> MS_hard
+      select(-c(paste0("noun", 4:7))) -> MS
+
   }
-  
-  tibble(
-    id = MS_easy$id[1],
-    trials = 1:16,
-    MS_easy_n = n_count(MS_easy),
-    MS_easy_rt = MS_easy$rt,
-    MS_medium_n = n_count(MS_medium),
-    MS_medium_rt = MS_medium$rt,
-    MS_hard_n = n_count(MS_hard),
-    MS_hard_rt = MS_hard$rt
-  ) |>
-    pivot_longer(cols = -c("id", "trials"), values_to = "value") |>
-    separate(name, c("task", "level", "name")) |>
-    pivot_wider(values_from = value, names_from = name) |>
-    mutate(acc = ifelse(level == "easy", n / 3,
-                        ifelse(
-                          level == "medium", n / 5,
-                          ifelse(level == "hard", n / 7, NA)
-                        ))) -> MS
   
   return(MS)
   
@@ -922,6 +809,14 @@ for (j in 1:10) {
 
 
 ## Пример цикла для чтения и предоработки данных
+
+::: {.callout-important}
+
+#### Важно!
+
+Вам не нужно сейчас подробно понимать, что написано ниже --- мы все разберем по ходу курса и научимся писать такое же! Сейчас главное ухватить структуру цикла --- где итератор и где тело, которое будет выполняться несколько раз. Всё! Остальное освоим по ходу дела.
+
+:::
 
 ```{r, eval=FALSE}
 for (i in 1:length(files)) { ## будем двигаться от 1 до количества файлов в папке с данными
