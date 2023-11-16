@@ -24,16 +24,9 @@ log(17^sin(4.8*pi), base = 24^(1/x))
 ## b
 (exp(x + y^2)) / (1 + exp(x + y^2))
 ## c
-<<<<<<< HEAD
 sqrt(log(cos(2/(3*x^2)) / (abs(y) + x)))
+sqrt(as.complex(log(cos(2/(3*x^2)) / (abs(y) + x)))) ## fix complex to calculate
 ## d
-(log(sin(3 * cos(y / 2))^2, base = exp(x)))^abs(y-x)
-## e
-=======
-sqrt(log(cos(2/3*x^2) / (abs(y) + x)))
-sqrt(as.complex(log(cos(2/3*x^2) / (abs(y) + x)))) ## fix to calculate
-## d
->>>>>>> 61eae5c90d28fc68cdf3dd50938146c7a507dc9e
 sin(pi / 4 * x) + cos(2*pi / sqrt(y) - 1)
 sin(pi / 4 * x) + cos(2*pi / sqrt(y+0i) - 1) ## fix y as complex to calculate
 
