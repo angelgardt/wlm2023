@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WLM 2023 - P1 // Введение в R. Типы данных. Векторы</title>
+<title>P // WLM 2023 - P1 // Введение в R. Типы данных. Векторы</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,9 +17,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -46,44 +47,33 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -123,10 +113,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -145,44 +137,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
+    <a class="nav-link" href="./../book/index.html" rel="" target="">
  <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
+    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
  <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
+    <a class="nav-link" href="./../practice/index.html" rel="" target="">
  <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
+    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
  <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
+    <a class="nav-link" href="./../projects/index.html" rel="" target="">
  <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">P1 // Введение в R. Типы данных. Векторы</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr1.html">P1 // Введение в R. Типы данных. Векторы</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -190,112 +187,132 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr1.html" class="sidebar-item-text sidebar-link active">P1 // Введение в R. Типы данных. Векторы</a>
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr2.html" class="sidebar-item-text sidebar-link">P2 // Матрицы и списки. Функции и строки</a>
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P2 // Матрицы и списки. Функции</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr3.html" class="sidebar-item-text sidebar-link">P3 // Датафреймы. Исследование данных</a>
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr4.html" class="sidebar-item-text sidebar-link">P4 // Предобработка данных</a>
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P4 // Предобработка данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr5.html" class="sidebar-item-text sidebar-link">P5 // Визуализация данных</a>
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P5 // Визуализация данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr6.html" class="sidebar-item-text sidebar-link">P6 // Математика и теория измерений</a>
+  <a href="./pr6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P6 // Математика и теория измерений</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr7.html" class="sidebar-item-text sidebar-link">P7 // Случайный эксперимент. Случайные величины</a>
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr8.html" class="sidebar-item-text sidebar-link">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr9.html" class="sidebar-item-text sidebar-link">P9 // Описательные статистики. Корреляционный анализ</a>
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr10.html" class="sidebar-item-text sidebar-link">P10 // Простая линейная регрессия. Множественная линейная регрессия</a>
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr11.html" class="sidebar-item-text sidebar-link">P11 // Дисперсионный анализ. Ковариационный анализ</a>
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr12.html" class="sidebar-item-text sidebar-link">P12 // Логистическая регрессия. Пуассоновская регрессия</a>
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr13.html" class="sidebar-item-text sidebar-link">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr14.html" class="sidebar-item-text sidebar-link">P14 // Смешанные линейные модели</a>
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P14 // Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr15.html" class="sidebar-item-text sidebar-link">P15 // Кластерный анализ</a>
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P15 // Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr16.html" class="sidebar-item-text sidebar-link">P16 // Анализ главных компонент. Эксплораторный факторный анализ</a>
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr17.html" class="sidebar-item-text sidebar-link">P17 // Конфирматорный факторный анализ</a>
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -313,6 +330,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#pr1-7" id="toc-pr1-7" class="nav-link" data-scroll-target="#pr1-7">#7</a></li>
   <li><a href="#pr1-8" id="toc-pr1-8" class="nav-link" data-scroll-target="#pr1-8">#8</a></li>
   <li><a href="#pr1-9" id="toc-pr1-9" class="nav-link" data-scroll-target="#pr1-9">#9</a></li>
+  <li><a href="#pr1-10" id="toc-pr1-10" class="nav-link" data-scroll-target="#pr1-10">#10</a></li>
+  <li><a href="#pr1-11" id="toc-pr1-11" class="nav-link" data-scroll-target="#pr1-11">#11</a></li>
+  <li><a href="#pr1-12" id="toc-pr1-12" class="nav-link" data-scroll-target="#pr1-12">#12</a></li>
+  <li><a href="#pr1-13" id="toc-pr1-13" class="nav-link" data-scroll-target="#pr1-13">#13</a></li>
+  <li><a href="#pr1-14" id="toc-pr1-14" class="nav-link" data-scroll-target="#pr1-14">#14</a></li>
+  <li><a href="#pr1-15" id="toc-pr1-15" class="nav-link" data-scroll-target="#pr1-15">#15</a></li>
+  <li><a href="#pr1-16" id="toc-pr1-16" class="nav-link" data-scroll-target="#pr1-16">#16</a></li>
   <li><a href="#pr1-17" id="toc-pr1-17" class="nav-link" data-scroll-target="#pr1-17">#17</a></li>
   <li><a href="#pr1-18" id="toc-pr1-18" class="nav-link" data-scroll-target="#pr1-18">#18</a></li>
   <li><a href="#pr1-19" id="toc-pr1-19" class="nav-link" data-scroll-target="#pr1-19">#19</a></li>
@@ -339,7 +363,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="pr1" class="quarto-section-identifier d-none d-lg-block">P1 // Введение в R. Типы данных. Векторы</span></h1>
+<h1 class="title"><span id="pr1" class="quarto-section-identifier">P1 // Введение в R. Типы данных. Векторы</span></h1>
 </div>
 
 
@@ -362,9 +386,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
-<div class="cell">
-
-</div>
 <!--
 REPLACE ALL pr1 TO pr<n> WITH MATCH CASE
 -->
@@ -641,12 +662,12 @@ REPLACE ALL pr1 TO pr<n> WITH MATCH CASE
 <div id="pr1-8-task" class="task">
 <p>С помощью функции <code>rnorm()</code> сгенерируйте генеральную совокупность из 100&nbsp;000 объектов с параметрами <code>mean = 4</code> и <code>sd = 5</code>. Сохраните результат генерации в переменную <code>pop</code>.</p>
 </div>
-<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Управляем случайностью
 </div>
 </div>
@@ -671,261 +692,251 @@ REPLACE ALL pr1 TO pr<n> WITH MATCH CASE
 <div id="pr1-9-task" class="task">
 <p>Извлеките из полученной генеральной совокупности 5 случайных выборок по 100 наблюдений. Сохраните результаты в переменные <code>sam1</code>, <code>sam2</code>, <code>sam3</code>, <code>sam4</code>, <code>sam5</code>.</p>
 </div>
-<div class="cell">
-
-</div>
-::: hints-wrapper
+<div class="hints-wrapper">
 <details class="hints" id="pr1-9-hints">
 <summary>
 Подсказки
 </summary>
-<pre class="sample()```"><code>
-&lt;/details&gt;
-:::
-
-### #10 {#pr1-10}
-
-&lt;img id="pr1-10-level" class="level"/&gt;
-
-::: {#pr1-10-task .task}
-
-a. Вычислите сумму по вектору `sam1`.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 413.7175</p>
-<pre><code>:::
-:::
-
-b. Вычислите среднее по вектору `sam2`.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 3.923302</p>
-<pre><code>:::
-:::
-
-c. Вычислите медиану по вектору `sam3`.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 4.678189</p>
-<pre><code>:::
-:::
-
-:::
-
-::: hints-wrapper
-&lt;details class="hints" id="pr1-9-hints"&gt;
-
-&lt;summary&gt;Подсказки&lt;/summary&gt;
-
-`sum()`, `mean()`, `median()`
-
-&lt;/details&gt;
-:::
-
-
-### #11 {#pr1-11}
-
-&lt;img id="pr1-11-level" class="level"/&gt;
-
-::: {#pr1-11-task .task}
-Вытащите из вектора `sam4`
-
-a. первое значение
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 4.322255</p>
-<pre><code>:::
-:::
-
-b. последнее значение
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 6.59581</p>
-<pre><code>:::
-:::
-
-c. значения с 20 по 45
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 6.7102016 9.8120964 5.0107901 -0.8795999 -3.1547040 2.0596966 [7] 8.9368571 15.0198156 -3.2504005 1.8713970 0.1659881 1.2036028 [13] 6.3932684 -5.4840376 6.4268378 2.5689008 6.8815972 5.2472839 [19] 2.0564044 -0.3368694 6.1285080 11.8324004 5.1569496 5.3038879 [25] 2.0595734 8.0743347</p>
-<pre><code>:::
-:::
-
-d. все значения на каждой третьей позиции
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 1.8656729 -1.0380688 0.0487652 9.2603455 3.6907364 -1.3720069 [7] 9.8120964 -3.1547040 15.0198156 0.1659881 -5.4840376 6.8815972 [13] -0.3368694 5.1569496 8.0743347 0.6967350 4.6007992 0.5244773 [19] 4.2208443 4.5443673 -5.2433008 9.2374712 6.0199053 2.3896147 [25] -1.0019473 5.9791716 -4.2677144 8.3736194 -4.0924207 4.7387274 [31] 8.3348366 5.8763253 -1.4135126</p>
-<pre><code>:::
-:::
-
-:::
-
-
-
-### #12 {#pr1-12}
-
-&lt;img id="pr1-12-level" class="level"/&gt;
-
-::: {#pr1-12-task .task}
-a. Отберите из вектора `sam1` отрицательные значения.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] -0.86462592 -0.94484180 -2.07880143 -0.13098197 -1.91565289 -5.28290929 [7] -3.22637337 -1.86029800 -2.68294512 -0.54210834 -0.04343552 -6.94815335 [13] -4.79582813 -0.87889020 -4.35187278</p>
-<pre><code>:::
-:::
-
-b. Сколько отрицательных значений получилось?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 15</p>
-<pre><code>:::
-:::
-
-c. Сколько в векторе `sam2` значений, которые больше среднего по этому вектору?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 49</p>
-<pre><code>:::
-:::
-
-:::
-
-::: hints-wrapper
-&lt;details class="hints" id="pr1-12-hints"&gt;
-
-&lt;summary&gt;Подсказки&lt;/summary&gt;
-
-* Как проверить, является ли значение отрицательным?
-* Что будет, если применить функцию `sum()` к логическому вектору?
-
-&lt;/details&gt;
-:::
-
-### #13 {#pr1-13}
-
-&lt;img id="pr1-13-level" class="level"/&gt;
-
-::: {#pr1-13-task .task}
-a. Отберите из вектора `sam3` значения, которые больше $3$ и меньше $8$.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 6.564571 4.868531 7.624946 4.184650 3.803741 3.650760 5.632981 3.547872 [9] 6.514473 5.783445 7.793938 4.764839 6.809496 6.944641 4.840430 6.646447 [17] 4.788420 5.043548 6.770495 4.597178 7.110550 6.923069 5.467794 6.545195 [25] 6.638711 4.931173 4.629073 7.933149 3.258597 3.413523 3.819202 5.066510 [33] 4.727306 7.922155 5.507252 6.904482 3.419338 3.057315 6.551481 5.385412</p>
-<pre><code>:::
-:::
-
-b. Отберите из вектора `sam3` значения, которые меньше $0.5$ и больше $9.3$.
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] -2.2792758 -7.1110108 -4.2702642 9.4171388 0.3560784 0.3372579 [7] -4.5375200 -3.1423729 11.6559768 -3.7400258 -0.1699422 11.9204627 [13] -0.4551254 12.1089750 -2.3898453 -8.9188372 12.7047663 12.8860380 [19] 0.2379474 17.5865182 18.5374980 9.6972577 15.7993312 -1.8163944 [25] 12.0756909 -1.6153330 -1.1040935 -0.9575991 0.2666245 -6.1548194 [31] 16.4877822 -4.0335469</p>
-<pre><code>:::
-:::
-
-:::
-
-::: hints-wrapper
-&lt;details class="hints" id="pr1-13-hints"&gt;
-
-&lt;summary&gt;Подсказки&lt;/summary&gt;
-
-Choose your fighter: `&amp;` or `|`!
-
-&lt;/details&gt;
-:::
-
-### #14 {#pr1-14}
-
-&lt;img id="pr1-14-level" class="level"/&gt;
-
-::: {#pr1-14-task .task}
-
-a. Какое максимальное значение по вектору `sam1`?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 17.29578</p>
-<pre><code>:::
-:::
-
-b. Какое минимальное значение по вектору `sam1`?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] -6.948153</p>
-<pre><code>:::
-:::
-
-:::
-
-::: hints-wrapper
-&lt;details class="hints" id="pr1-14-hints"&gt;
-
-&lt;summary&gt;Подсказки&lt;/summary&gt;
-
-`max()`
-`min()`
-
-&lt;/details&gt;
-:::
-
-### #15 {#pr1-15}
-
-&lt;img id="pr1-15-level" class="level"/&gt;
-
-::: {#pr1-15-task .task}
-
-a. На каком месте в векторе `sam1` стоит его максимальное значение?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 46</p>
-<pre><code>:::
-:::
-
-b. На каком месте в векторе `sam1` стоит его минимальное значение?
-
-::: {.cell}
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>[1] 76</p>
-<pre><code>:::
-:::
-
-:::
-
-::: hints-wrapper
-&lt;details class="hints" id="pr1-15-hints"&gt;
-
-&lt;summary&gt;Подсказки&lt;/summary&gt;
-
-`?which`
-
-&lt;/details&gt;
-:::
-
-### #16 {#pr1-16}
-
-&lt;img id="pr1-16-level" class="level"/&gt;
-
-::: {#pr1-16-task .task}
-
-Выполните следующую команду:
-
-::: {.cell}
-
-```{.r .cell-code}
-set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
-<p>:::</p>
+<p><code>sample()</code></p>
+</details>
+</div>
+</section>
+<section id="pr1-10" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-10">#10</h3>
+<p><img id="pr1-10-level" class="level"></p>
+<div id="pr1-10-task" class="task">
+<ol type="a">
+<li>Вычислите сумму по вектору <code>sam1</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 413.7175</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Вычислите среднее по вектору <code>sam2</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.923302</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Вычислите медиану по вектору <code>sam3</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.678189</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-9-hints">
+<summary>
+Подсказки
+</summary>
+<p><code>sum()</code>, <code>mean()</code>, <code>median()</code></p>
+</details>
+</div>
+</section>
+<section id="pr1-11" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-11">#11</h3>
+<p><img id="pr1-11-level" class="level"></p>
+<div id="pr1-11-task" class="task">
+<p>Вытащите из вектора <code>sam4</code></p>
+<ol type="a">
+<li>первое значение</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.322255</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>последнее значение</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.59581</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>значения с 20 по 45</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  6.7102016  9.8120964  5.0107901 -0.8795999 -3.1547040  2.0596966
+ [7]  8.9368571 15.0198156 -3.2504005  1.8713970  0.1659881  1.2036028
+[13]  6.3932684 -5.4840376  6.4268378  2.5689008  6.8815972  5.2472839
+[19]  2.0564044 -0.3368694  6.1285080 11.8324004  5.1569496  5.3038879
+[25]  2.0595734  8.0743347</code></pre>
+</div>
+</div>
+<ol start="4" type="a">
+<li>все значения на каждой третьей позиции</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1.8656729 -1.0380688  0.0487652  9.2603455  3.6907364 -1.3720069
+ [7]  9.8120964 -3.1547040 15.0198156  0.1659881 -5.4840376  6.8815972
+[13] -0.3368694  5.1569496  8.0743347  0.6967350  4.6007992  0.5244773
+[19]  4.2208443  4.5443673 -5.2433008  9.2374712  6.0199053  2.3896147
+[25] -1.0019473  5.9791716 -4.2677144  8.3736194 -4.0924207  4.7387274
+[31]  8.3348366  5.8763253 -1.4135126</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="pr1-12" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-12">#12</h3>
+<p><img id="pr1-12-level" class="level"></p>
+<div id="pr1-12-task" class="task">
+<ol type="a">
+<li>Отберите из вектора <code>sam1</code> отрицательные значения.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -0.86462592 -0.94484180 -2.07880143 -0.13098197 -1.91565289 -5.28290929
+ [7] -3.22637337 -1.86029800 -2.68294512 -0.54210834 -0.04343552 -6.94815335
+[13] -4.79582813 -0.87889020 -4.35187278</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Сколько отрицательных значений получилось?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Сколько в векторе <code>sam2</code> значений, которые больше среднего по этому вектору?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 49</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-12-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Как проверить, является ли значение отрицательным?</li>
+<li>Что будет, если применить функцию <code>sum()</code> к логическому вектору?</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="pr1-13" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-13">#13</h3>
+<p><img id="pr1-13-level" class="level"></p>
+<div id="pr1-13-task" class="task">
+<ol type="a">
+<li>Отберите из вектора <code>sam3</code> значения, которые больше <span class="math inline">\(3\)</span> и меньше <span class="math inline">\(8\)</span>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 6.564571 4.868531 7.624946 4.184650 3.803741 3.650760 5.632981 3.547872
+ [9] 6.514473 5.783445 7.793938 4.764839 6.809496 6.944641 4.840430 6.646447
+[17] 4.788420 5.043548 6.770495 4.597178 7.110550 6.923069 5.467794 6.545195
+[25] 6.638711 4.931173 4.629073 7.933149 3.258597 3.413523 3.819202 5.066510
+[33] 4.727306 7.922155 5.507252 6.904482 3.419338 3.057315 6.551481 5.385412</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Отберите из вектора <code>sam3</code> значения, которые меньше <span class="math inline">\(0.5\)</span> и больше <span class="math inline">\(9.3\)</span>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -2.2792758 -7.1110108 -4.2702642  9.4171388  0.3560784  0.3372579
+ [7] -4.5375200 -3.1423729 11.6559768 -3.7400258 -0.1699422 11.9204627
+[13] -0.4551254 12.1089750 -2.3898453 -8.9188372 12.7047663 12.8860380
+[19]  0.2379474 17.5865182 18.5374980  9.6972577 15.7993312 -1.8163944
+[25] 12.0756909 -1.6153330 -1.1040935 -0.9575991  0.2666245 -6.1548194
+[31] 16.4877822 -4.0335469</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-13-hints">
+<summary>
+Подсказки
+</summary>
+<p>Choose your fighter: <code>&amp;</code> or <code>|</code>!</p>
+</details>
+</div>
+</section>
+<section id="pr1-14" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-14">#14</h3>
+<p><img id="pr1-14-level" class="level"></p>
+<div id="pr1-14-task" class="task">
+<ol type="a">
+<li>Какое максимальное значение по вектору <code>sam1</code>?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 17.29578</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Какое минимальное значение по вектору <code>sam1</code>?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -6.948153</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-14-hints">
+<summary>
+Подсказки
+</summary>
+<p><code>max()</code> <code>min()</code></p>
+</details>
+</div>
+</section>
+<section id="pr1-15" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-15">#15</h3>
+<p><img id="pr1-15-level" class="level"></p>
+<div id="pr1-15-task" class="task">
+<ol type="a">
+<li>На каком месте в векторе <code>sam1</code> стоит его максимальное значение?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 46</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>На каком месте в векторе <code>sam1</code> стоит его минимальное значение?</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 76</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr1-15-hints">
+<summary>
+Подсказки
+</summary>
+<p><code>?which</code></p>
+</details>
+</div>
+</section>
+<section id="pr1-16" class="level3">
+<h3 class="anchored" data-anchor-id="pr1-16">#16</h3>
+<p><img id="pr1-16-level" class="level"></p>
+<div id="pr1-16-task" class="task">
+<p>Выполните следующую команду:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>); sam5[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="fu">sample</span>(<span class="dv">100</span>, <span class="dv">1</span>))] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Она добавит несколько пропущенных значений в вектор <code>sam5</code>, чтобы бы познакомились с ними поближе.</p>
 <ol type="a">
 <li>Сколько пропущенных значений получилос в векторе <code>sam5</code>?</li>
@@ -945,7 +956,7 @@ set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
 [51] 75 76 79 80 81 82 83 84 85 86 87 89 91 92 94 96</code></pre>
 </div>
 </div>
-<p>:::</p>
+</div>
 <div class="hints-wrapper">
 <details class="hints" id="pr1-16-hints">
 <summary>
@@ -954,13 +965,13 @@ set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
 <p><code>is.na()</code>, <code>sum()</code>, <code>which()</code></p>
 </details>
 </div>
-</details></section>
+</section>
 <section id="pr1-17" class="level3">
 <h3 class="anchored" data-anchor-id="pr1-17">#17</h3>
 <p><img id="pr1-17-level" class="level"></p>
 <div id="pr1-17-task" class="task">
 <p>Нам надо разделить выборку на две части. Отберите каждое второе значение из вектора <code>sam2</code>.</p>
-<div class="callout-warning callout callout-style-simple">
+<div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1001,21 +1012,12 @@ set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
 <ol type="a">
 <li>умножьте каждое значение вектора <code>sam1</code> на <span class="math inline">\(20\)</span></li>
 </ol>
-<div class="cell">
-
-</div>
 <ol start="2" type="a">
 <li>вычтите из каждого значения вектора <code>sam2</code> среднее по этому вектору</li>
 </ol>
-<div class="cell">
-
-</div>
 <ol start="3" type="a">
 <li>прологорифмируйте все значения вектора <code>sam3</code> (используйте десятичный логарифм)</li>
 </ol>
-<div class="cell">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr1-18-hints">
@@ -1031,9 +1033,6 @@ set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
 <p><img id="pr1-19-level" class="level"></p>
 <div id="pr1-19-task" class="task">
 <p>Выполните преобразования из предыдущего задания на векторе <code>sam5</code>.</p>
-<div class="cell">
-
-</div>
 <p>Возникли ли проблемы? Можно ли их поправить?</p>
 </div>
 <div class="hints-wrapper">
@@ -1055,9 +1054,6 @@ set.seed(5); sam5[sample(1:100, sample(100, 1))] &lt;- NA</code></pre>
 <li><code>1:3 + 1:10</code></li>
 </ol>
 <p>Что получается? Почему так?</p>
-<div class="cell">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr1-20-hints">
@@ -1307,9 +1303,6 @@ negative  control positive
 <div id="pr1-27-task" class="task">
 <p>Выполните следующие команды для создания двух векторов <code>x1</code> и <code>x2</code>.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr1-27.csv"</span>)<span class="sc">$</span>x1</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr1-27.csv"</span>)<span class="sc">$</span>x2</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1390,28 +1383,31 @@ x_5 &amp; \rightarrow &amp; \sqrt{x_5} \\
 </div>
 </div>
 </div>
-::: hints-wrapper
+<div class="hints-wrapper">
 <details class="hints" id="pr1-30-hints">
 <summary>
 Подсказка
 </summary>
-<pre class="%*%```"><code>
-&lt;/details&gt;
-:::
-
-***
-
-Некоторые задания, а также форматы заданий, подсмотрены у @moroz-dh4dl и @grinberg-rexercises.
-
-***
-
-```{=html}
-&lt;!--- CHANGE pr1 TO pr&lt;n&gt; IN THE LINES BELOW---&gt;
-&lt;script type="text/javascript" src="./js/pr1.json"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="./js/pr.js"&gt;&lt;/script&gt;</code></pre>
+<p><code>%*%</code></p>
+</details>
+</div>
+<hr>
+<p>Некоторые задания, а также форматы заданий, подсмотрены у <span class="citation" data-cites="moroz-dh4dl">Мороз (<a href="references.html#ref-moroz-dh4dl" role="doc-biblioref">2022</a>)</span> и <span class="citation" data-cites="grinberg-rexercises">Grinberg and Reed (<a href="references.html#ref-grinberg-rexercises" role="doc-biblioref">2016</a>)</span>.</p>
+<hr>
+<!--- CHANGE pr1 TO pr<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/pr1.json"></script>
+<script type="text/javascript" src="./js/pr.js"></script>
 
 
-</details></section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-grinberg-rexercises" class="csl-entry" role="listitem">
+Grinberg, Nastasiya, and Robin Reed. 2016. <em>Programming Exercises for r</em>. <a href="https://doi.org/10.13140/RG.2.1.1530.7281">https://doi.org/10.13140/RG.2.1.1530.7281</a>.
+</div>
+<div id="ref-moroz-dh4dl" class="csl-entry" role="listitem">
+Мороз, Г. 2022. <em>Наука о Данных в r Для Программы Цифровых Гуманитарных Исследований</em>. <a href="https://agricolamz.github.io/DS_for_DH/">https://agricolamz.github.io/DS_for_DH/</a>.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1557,9 +1553,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1624,6 +1634,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1671,7 +1767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./pr2.html" class="pagination-link">
-        <span class="nav-page-text">P2 // Матрицы и списки. Функции и строки</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">P2 // Матрицы и списки. Функции</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
