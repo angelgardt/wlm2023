@@ -84,7 +84,7 @@ mr_preproc <- function(d) {
   
 }
 
-files <- paste0("../data/pool34/", dir("../data/pool34/"))
+files <- paste0("data/j-form1/", dir("data/j-form1/"))
 
 MR_data <- tibble()
 
@@ -94,7 +94,22 @@ for (i in 1:length(files)) {
   
   d <- read_csv(files[i], show_col_types = FALSE)
   
-  MR_data |> bind_rows(mr_preproc(d) |> mutate(file = files[i])) -> MR_data
+  MR_data |> bind_rows(mr_preproc(d) |> mutate(id = i)) -> MR_data
   
 }
 
+MR_data %>% str()
+
+is_outlier <- function(x) {!(x < mean(x) + 2.5 * sd(x) & x > mean(x) - 2.5 * sd(x))}
+
+MR_data %>% 
+  group_by(level, id) %>% 
+  mutate(is_outlier = is_outlier(rt)) %>% 
+  filter(!is_outlier) -> MR
+
+MR %>% 
+  ggplot(aes(rt)) +
+  geom_density() +
+  facet_grid(level ~ .)
+
+sum(sapply(MR, is.na))

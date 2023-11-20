@@ -193,8 +193,15 @@ div.csl-indent {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#j_1" id="toc-j_1" class="nav-link active" data-scroll-target="#j_1">Вариант 1</a></li>
-  <li><a href="#j_2" id="toc-j_2" class="nav-link" data-scroll-target="#j_2">Вариант 2</a></li>
+  <li><a href="#важные-моменты" id="toc-важные-моменты" class="nav-link active" data-scroll-target="#важные-моменты">Важные моменты</a></li>
+  <li><a href="#j_1" id="toc-j_1" class="nav-link" data-scroll-target="#j_1">Вариант 1</a>
+  <ul class="collapse">
+  <li><a href="#задание" id="toc-задание" class="nav-link" data-scroll-target="#задание">Задание</a></li>
+  </ul></li>
+  <li><a href="#j_2" id="toc-j_2" class="nav-link" data-scroll-target="#j_2">Вариант 2</a>
+  <ul class="collapse">
+  <li><a href="#задание-1" id="toc-задание-1" class="nav-link" data-scroll-target="#задание-1">Задание</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -221,10 +228,18 @@ div.csl-indent {
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
-<p>В этом проекте вам предстоит предобработать сырые данные и построить несколько визуализаций.</p>
+<p>В этом проекте вам предстоит предобработать данные и построить несколько визуализаций.</p>
+<section id="важные-моменты" class="level2">
+<h2 class="anchored" data-anchor-id="важные-моменты">Важные моменты</h2>
+<ul>
+<li>код должен воспроизводиться на любой операционной системе</li>
+<li>код должен хорошо читаться</li>
+</ul>
+</section>
 <section id="j_1" class="level2">
 <h2 class="anchored" data-anchor-id="j_1">Вариант 1</h2>
 <p>Для работы вам предлагаются данные, полученные в ходе адаптации опросника на измерение когнитивной нагрузки NASA-TLX, выполненной командой HSE UX LAB<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p><strong>Архив с данными <a href="https://drive.google.com/uc?export=download&amp;id=1dr2RvXTUdyhP_1YGoiQ-VR4FaU5tZ1x7">тут</a>.</strong></p>
 <p>Это было большое исследование, поэтому нас будет интересовать только часть данных. В ходе адаптации, работоспособность опросника проверялась на нескольких задачах, одной из которых было <strong>мысленное вращение (mental rotation)</strong>. Этими данными мы и займемся.</p>
 <details>
 <summary>
@@ -241,21 +256,121 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </center>
 <p>Подробно можно почитать в <span class="citation" data-cites="Shepard1971">Shepard and Metzler (<a href="references.html#ref-Shepard1971" role="doc-biblioref">1971</a>)</span>.</p>
 </details>
+<p><strong>Из дизайна исследования для предобработки данных важно знать, что</strong></p>
+<ul>
+<li>задача мысленного вращения была реализована в трех уровнях сложности — легком (<code>easy</code>), среднем (<code>medium</code>) и сложном (<code>hard</code>)</li>
+<li>в каждом из уровней сложности было 16 проб</li>
+<li>ответ давался нажатием на клавишу со стрелкой — вправо (<code>right</code>), если фигуры одинаковые, и влево (<code>left</code>), если фигуры различны</li>
+</ul>
+<p><strong>Из организации файла сырых данных для предобработки данных важно знать, что</strong></p>
+<ul>
+<li>в каждом файле лежат данные одного респондента</li>
+<li>в каждой строке находятся данные одной пробы</li>
+<li>все файлы имеют одинаковую структуру</li>
+</ul>
+<p><strong>Интересующие нас переменные датасета:</strong></p>
+<ul>
+<li>для всех условий:
+<ul>
+<li><code>correctAns</code> — верный ответ (<code>left</code> / <code>right</code>)</li>
+<li><code>base_pic</code> — исходная картинка (название файла)</li>
+<li><code>rotated_pic</code> — повернутая картинка (название файла)</li>
+</ul></li>
+<li>для условия <code>easy</code>:
+<ul>
+<li><code>resp_MR_easy.keys</code> — ответ респондента в пробе (<code>left</code> / <code>right</code>)</li>
+<li><code>resp_MR_easy.corr</code> — является ли ответ респондента корректным (<code>0</code> / <code>1</code>)</li>
+<li><code>resp_MR_easy.rt</code> — время реакции (от начала предъявления стимула до момента нажатия на клавишу, с)</li>
+</ul></li>
+<li>для условия <code>medium</code>:
+<ul>
+<li><code>resp_MR_medium.keys</code> — ответ респондента в пробе (<code>left</code> / <code>right</code>)</li>
+<li><code>resp_MR_medium.corr</code> — является ли ответ респонтента корректным (<code>0</code> / <code>1</code>)</li>
+<li><code>resp_MR_medium.rt</code> — является ли ответ респондента корректным (<code>0</code> / <code>1</code>)</li>
+</ul></li>
+<li>в условии <code>hard</code>:
+<ul>
+<li><code>resp_MR_hard.keys</code> — ответ респондента в пробе (<code>left</code> / <code>right</code>)</li>
+<li><code>resp_MR_hard.corr</code> — является ли ответ респонтента корректным (<code>0</code> / <code>1</code>)</li>
+<li><code>resp_MR_hard.rt</code>— время реакции (от начала предъявления стимула до момента нажатия на клавишу, с)</li>
+</ul></li>
+</ul>
+<section id="задание" class="level3">
+<h3 class="anchored" data-anchor-id="задание">Задание</h3>
+<ol type="1">
+<li>Загрузите данные. Изучите их структуру, особенности записи.</li>
+<li>Приведите данные к виду tidy data, используя пакет <code>tidyverse</code>. Предобработанные данные не должны содержать пропущенных значений. Финальный датасет должен содержать следующие колонки:
+<ul>
+<li><code>id</code> — идентификатор респондента (число или строка)</li>
+<li><code>level</code> — уровень сложности задачи (строка, <code>easy</code> / <code>medium</code> / <code>hard</code>)</li>
+<li><code>trial</code> — номер пробы в данном уровне сложности задачи (число)</li>
+<li><code>correct_ans</code> — корректный ответ (строка)</li>
+<li><code>base_pic</code> — исходная картинка (строка, название файла)</li>
+<li><code>rotated_pic</code> — повернутая картинка (строка, название файла)</li>
+<li><code>key</code>— ответ респондента в пробе (строка)</li>
+<li><code>is_correct</code>— является ли ответ респондента корректным (число, <code>0</code> / <code>1</code>, из «сырых» данных)</li>
+<li><code>rt</code> — время реакции (число)</li>
+</ul></li>
+<li>Колонка <code>is_correct</code> создавалась встроенным в эксперимент скриптом. Проверьте, правильно ли он отработал.</li>
+<li>Удалите из данных выбросы по времени реакции. Выбросами считайте наблюдения, которые отклоняются от среднего значения более чем на 2.5 стандартных отклонения.</li>
+<li>Выгрузите предобработанные данные в формате CSV (кодировка UTF-8).</li>
+<li>Постройте график, отображающий распределение времени реакции в трех условиях сложности задачи мысленного вращения. Все подписи, присутствующие на графике, должны быть выполнены на русском языке. График должен быть оформлен так, чтобы его можно было напечатать на черно-белом принтере.</li>
+<li>Экспортируйте визуализацию в формате JPEG. Разрешение должно быть достаточным для печати.</li>
+<li>Аггрегируйте данные: рассчитайте среднее время реакции и точность (accuracy) для каждого респондента в каждом уровне сложности задачи. Точность вычисляйте как долю корректных ответов респондента в данном уровне сложности.</li>
+<li>Выгрузите аггрегированные данные в формате CSV (кодировка UTF-8).</li>
+<li>Постройте график, отображающий зависимость точности (accuracy) от уровня сложности сложности задачи. Все подписи, присутствующие на графике, должны быть выполнены на английском языке. <em>Технических</em> ограничений на цветовую палитру нет.</li>
+<li>Экспортируйте визуализацию в формате JPEG. Разрешение должно быть достаточным для печати.</li>
+</ol>
+</section>
 </section>
 <section id="j_2" class="level2">
 <h2 class="anchored" data-anchor-id="j_2">Вариант 2</h2>
+<p>Для работы вам предлагаются данные World Happiness Report 2019<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p><strong>Архив с данными <a href="https://drive.google.com/uc?export=download&amp;id=1kb30E6iFKnejP-UQS4yGpn2Yo1K6y6Eq">тут</a>.</strong></p>
+<p>Исходный датасет (<code>countries.csv</code>) содержит информацию о 152 странах мира. Данные включают в себя следующие переменные:</p>
+<ul>
+<li><code>Overall rank</code> — обобщенный ранг страны по всем показателям</li>
+<li><code>Country or region</code> — название страны (или территории)</li>
+<li><code>Score</code> — показатель уровня счастью в стране</li>
+<li><code>GDP per capita</code> — ВВП (внутренний валовой продукт, gross domestic product) на душу населения</li>
+</ul>
+<p>и другие показатели (<code>Social support</code>, <code>Healthy life expectancy</code>, <code>Freedom to make life choices</code>, <code>Generosity</code>, <code>Perceptions of corruption</code>), фиксировавшиеся в данном исследовании.</p>
+<p>Дополнительно представлен датасет <code>regions.csv</code>.</p>
+<section id="задание-1" class="level3">
+<h3 class="anchored" data-anchor-id="задание-1">Задание</h3>
+<ol type="1">
+<li>Загрузите данные. Изучите их структуру, особенности записи.</li>
+<li>Приведите данные к виду tidy data, используя пакет <code>tidyverse</code>. К предобработанным данным предъявлены следующие требования:
+<ul>
+<li>предобработанные данные не должны содержать пропущенных значений</li>
+<li>финальный датасет должен содержать всю информацию исходного датасета, а также регион, в котором находится страна</li>
+<li>названия столбцов датасета не должны содержать пробелов и заглавных букв</li>
+</ul></li>
+<li>Выгрузите предобработанные данные в формате CSV (кодировка UTF-8).</li>
+<li>Аггрегируйте данные по регионам. В аггрегированных данных по каждому из показателей отчета должны быть посчитаны среднее и стандартное отклонение.</li>
+<li>Выгрузите аггрегированные данные в формате CSV (кодировка UTF-8).</li>
+<li>Постройте график, отражающий уровень счастья в каждой стране для европейских стран. Страны на графике должны быть сгруппированы по регионам. График должен быть оформлен так, чтобы его можно было напечатать на черно-белом принтере.</li>
+<li>Экспортируйте визуализацию в формате JPEG. Разрешение должно быть достаточным для печати.</li>
+<li>Постройте график, отображающий связь между ВВП на душу населения и уровнем счастья для стран Африки. Отобразите общий тренд. Страны должны быть сгруппированы по региону, однако при отображении тренда группировка учитываться не должна. Оптимизируйте визуализацию визуализацию так, чтобы пространство графика использовалось наиболее эффективно. <em>Технических</em> ограничений на цветовую палитру нет.</li>
+<li>Экспортируйте визуализацию в формате JPEG. Разрешение должно быть достаточным для печати.</li>
+</ol>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-whr2019" class="csl-entry" role="listitem">
+Helliwell, Layard, J. 2019. <em>World Happiness Report 2019</em>. New York: Sustainable Development Solutions Network.
+</div>
 <div id="ref-Shepard1971" class="csl-entry" role="listitem">
 Shepard, Roger N., and Jacqueline Metzler. 1971. <span>“Mental Rotation of Three-Dimensional Objects.”</span> <em>Science</em> 171 (3972): 701–3. <a href="https://doi.org/10.1126/science.171.3972.701">https://doi.org/10.1126/science.171.3972.701</a>.
 </div>
 </div>
 </section>
+</section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>Когда будет опубликована статья, мы повесим сюда ссылку.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><span class="citation" data-cites="whr2019">Helliwell (<a href="references.html#ref-whr2019" role="doc-biblioref">2019</a>)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
