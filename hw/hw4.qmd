@@ -5,19 +5,60 @@
 REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE)
+```
+
+::: {.callout-note}
+
+## Пакет с пакетами
+
+Для выполнения заданий этой домашки используйте `tidyverse`.
+
+:::
+
 ## Основные задания {#hw4_main}
 
-### #1
+::: {.callout-note}
+
+### Описание данных
+
+Сегодня мы работаем с данными одного экспериментального исследования.
+
+Эксперимент был направлен на изучение гибридного зрительного поиска. Испытуемому было необходимо искать объекты из определенной категории. В качестве независимых переменных варьировались так называемые *visual setsize* и *memory setsize*, то есть количество стимулов, предъявляемых на экране монитора, и количество категорий, которые нужно было запомнить. Кроме того, использовались категории двух уровней --- базовые (яблоки, кружки) и суперординатные (фрукты, посуда).
+
+Данные располагаются в двух файлах. В файле `base.xlsx` содержаться данные из группы испутыемых, которым предлагались базовые категории, в файле `super.xlsx` --- данные из группы испутыемых, которым предлагались суперординатные категории.
+
+На листе `cor_answ` в каждом файле есть данные по точности для каждого сочетания условий. Сочетания условий кодируются следующим образом: например, `1_stim_8` обозначает, что *memory setsize* был равен 1, а *visual setsize* был равен 8. То есть первое число задаёт *memory setsize*, второе --- *visual setsize*. На этом же листе с правого края есть соцдем респондентов --- пол и возраст. На листе `Time` располагаются аналогичным образом организованные данные по времени реакции (от момента начала предъявления стимулов до нажатия на клавишу).
+
+:::
+
+
+### #1 {#hw4-1-title}
 
 <img id="hw4-1-level" class="level"/>
 
 ::: {#hw4-1-task .task}
-Текст задания `переменная`.
+
+Скачайте [архив с данными](https://drive.google.com/uc?export=download&id=1KH8bI3CHaZbRf3VfUMPJ4-81qeZewR92). Разархивируйте файлы в проект курса. Импортируйте данные в R. У вас должно получиться 4 датасета с данными с 4-х листов Excel-файлов. Назовите их `base_time`, `base_acc`, `super_time` и `suoer_acc` для времени реакции и точности и условиях с базовыми и суперординатными категориями соответственно.
+
+Возникли ли какие-то странности?
+
 :::
+
+```{r hw4-1}
+library(tidyverse)
+
+base_time <- readxl::read_xlsx("../data/hw4/base.xlsx", "Time", skip = 1)
+base_acc <- readxl::read_xlsx("../data/hw4/base.xlsx", "cor_answ", skip = 1)
+super_time <- readxl::read_xlsx("../data/hw4/super.xlsx", "Time", skip = 1)
+super_acc <- readxl::read_xlsx("../data/hw4/super.xlsx", "cor_answ", skip = 1)
+```
 
 ::: {#hw4-1-autocheck .autocheck}
 ::: {#hw4-1-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа введите число строк, которые необходимо пропустить при импорте данных, чтобы они прочитались корректно.
 :::
 
 <input class="autocheck-input" type="text" id="hw4-1" placeholder="Введите ответ…">
@@ -54,19 +95,23 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 </details>
 :::
 
-### #2
+### #2 {#hw4-2-title}
 
 <img id="hw4-2-level" class="level"/>
 
 ::: {#hw4-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Проверьте, совпадает ли количество строк в получившихся датасетах.
+
 :::
+
+```{r hw4-2}
+nrow(base_acc); nrow(base_time); nrow(super_acc); nrow(super_time)
+```
 
 ::: {#hw4-2-autocheck .autocheck}
 ::: {#hw4-2-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите число строк, если оно совпадает во всех датасетах, и `нет`, если оно отличается хотя бы в одном.
 :::
 
 <input class="autocheck-input" type="text" id="hw4-2" placeholder="Введите ответ…">
@@ -103,17 +148,29 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw4-3-title}
 
 <img id="hw4-3-level" class="level"/>
 
 ::: {#hw4-3-task .task}
-Текст задания.
+
+Выгрузите соцдем, содержащийся в данных, в отдельный датасет. Соедините обе его части в один объект.
+
 :::
+
+```{r hw4-3}
+base_acc %>% 
+  select(...20, ...21) %>% 
+  bind_rows(
+    super_acc %>% 
+      select(...20, ...21)
+  ) -> socdem
+sapply(socdem, function(x) sum(is.na(x)))
+```
 
 ::: {#hw4-3-autocheck .autocheck}
 ::: {#hw4-3-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа введите число пропущенных значений в получившемся датасете. Если их нет, введите 0.
 :::
 
 <input class="autocheck-input" type="text" id="hw4-3" placeholder="Введите ответ…">
@@ -150,17 +207,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw4-4-title}
 
 <img id="hw4-4-level" class="level"/>
 
 ::: {#hw4-4-task .task}
-Текст задания.
+Удалите пропущенные значения, если они есть, и задайте имена колонок --- `sex` и `age` соответственно.
 :::
+
+```{r hw4-4}
+socdem %>% 
+  drop_na() %>% 
+  set_names("sex", "age") -> socdem
+nrow(socdem)
+```
 
 ::: {#hw4-4-autocheck .autocheck}
 ::: {#hw4-4-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите общее количество испытуемых в выборке эксперимента.
 :::
 
 <input class="autocheck-input" type="text" id="hw4-4" placeholder="Введите ответ…">
@@ -197,17 +261,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw4-5-title}
 
 <img id="hw4-5-level" class="level"/>
 
 ::: {#hw4-5-task .task}
-Текст задания.
+Удалите из данных лишние строки и столбцы. В объектах должно остаться только то, что относится к экспериментальным данным. Лишними считайте те столбцы, которые не имеют названия, и те строки, в которых не указан идентификатор респондента. Перезапишите имеющиеся объекты.
 :::
+
+```{r hw4-5}
+slice_select <- function(x) x %>% select(1:17) %>% slice(1:24)
+
+base_acc %>% slice_select() -> base_acc
+base_time %>% slice_select() -> base_time
+super_acc %>% slice_select() -> super_acc
+super_time %>% slice_select() -> super_time
+```
 
 ::: {#hw4-5-autocheck .autocheck}
 ::: {#hw4-5-ir .input-requirements}
-Описание формата инпута.
+
 :::
 
 <input class="autocheck-input" type="text" id="hw4-5" placeholder="Введите ответ…">
@@ -244,13 +317,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#hw4-6-title}
 
 <img id="hw4-6-level" class="level"/>
 
 ::: {#hw4-6-task .task}
-Текст задания.
+
+Создайте в датасетах новую переменную `group`, содержащую информацию об уровне категории — базовая (`base`) или суперординатная (`super`).
+
 :::
+
+```{r hw4-6}
+base_acc %>% mutate(group = "base") -> base_acc
+base_time %>% mutate(group = "base") -> base_time
+super_acc %>% mutate(group = "super") -> super_acc
+super_time %>% mutate(group = "super") -> super_time
+```
 
 ::: {#hw4-6-autocheck .autocheck}
 ::: {#hw4-6-ir .input-requirements}
@@ -291,13 +373,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #7
+### #7 {#hw4-7-title}
 
 <img id="hw4-7-level" class="level"/>
 
 ::: {#hw4-7-task .task}
-Текст задания.
+
+Соедините датасеты с данными о точности и времени реакции друг с другом --- `base_acc` с `super_acc` и `base_time` с `super_time`. Назовите новые датасеты `acc` и `time` соответственно.
+
 :::
+
+```{r hw4-7}
+base_acc %>% 
+  bind_rows(super_acc) -> acc
+base_time %>% 
+  bind_rows(super_time) -> time
+```
 
 ::: {#hw4-7-autocheck .autocheck}
 ::: {#hw4-7-ir .input-requirements}
@@ -338,13 +429,37 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#hw4-8-title}
 
 <img id="hw4-8-level" class="level"/>
 
 ::: {#hw4-8-task .task}
-Текст задания.
+
+Сецчас получившиеся датасеты пребывают в широком формате. Переведите их в длинный формат и разделите колонку с сочетанием экспериментальных условий на две.
+
+В датасете должны содержаться следующие колонки:
+
+* `id` --- идентификатор испытуемого
+* `visual_setsize` --- количество стимулов в пробе 
+* `memory_setsize` --- количество категорий для запоминания
+* `reaction_time/accuracy` --- время реакции / точность (в зависимости от датасета)
+
+При необходимости переименуйте столбцы.
+
 :::
+
+```{r hw4-8}
+acc %>% 
+  pivot_longer(-c("№_resp", "group"),
+               values_to = "accuracy") %>% 
+  separate(name, into = c("memory_setsize", "visual_setsize"), sep = "_stim_") %>% 
+  rename(id = `№_resp`) -> acc
+time %>% 
+  pivot_longer(-c("№_resp", "group"),
+               values_to = "reaction_time") %>% 
+  separate(name, into = c("memory_setsize", "visual_setsize"), sep = "_stim_") %>% 
+  rename(id = `№_resp`) -> time
+```
 
 ::: {#hw4-8-autocheck .autocheck}
 ::: {#hw4-8-ir .input-requirements}
@@ -385,13 +500,28 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#hw4-9-title}
 
 <img id="hw4-9-level" class="level"/>
 
 ::: {#hw4-9-task .task}
-Текст задания.
+Объедините все данные в один датасет, который будет содержать следующие колонки:
+
+* `id` --- идентификатор испытуемого
+* `group` --- уровень категории
+* `visual_setsize` --- количество стимулов в пробе 
+* `memory_setsize` --- количество категорий для запоминания
+* `reaction_time` --- время реакции
+* `accuracy` --- точность
+
+Сохраните результат в переменную `hybrid`.
+
 :::
+
+```{r hw4-9}
+acc %>% 
+  full_join(time, join_by(id, memory_setsize, visual_setsize, group)) -> hybrid
+```
 
 ::: {#hw4-9-autocheck .autocheck}
 ::: {#hw4-9-ir .input-requirements}
@@ -432,17 +562,29 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#hw4-10-title}
 
 <img id="hw4-10-level" class="level"/>
 
 ::: {#hw4-10-task .task}
-Текст задания.
+
+На получившемся датасете рассчитайте среднее, минимальное и максимальное время реакции, а также его стандартное отклонение, по всем сочетаниях независимых переменных.
+
 :::
+
+```{r hw4-10}
+hybrid %>% 
+  group_by(group, visual_setsize, memory_setsize) %>% 
+  summarise(rt_mean = mean(reaction_time),
+            rt_min = min(reaction_time),
+            rt_max = max(reaction_time),
+            rt_sd = sd(reaction_time)) %>% 
+  filter(group == "base" & visual_setsize == "12" & memory_setsize == 4)
+```
 
 ::: {#hw4-10-autocheck .autocheck}
 ::: {#hw4-10-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите среднее время реакции в группе `base` при `visual_setsize` 12 и `memory_sesize` 4, округленное до третьего знака после запятой.
 :::
 
 <input class="autocheck-input" type="text" id="hw4-10" placeholder="Введите ответ…">
@@ -481,7 +623,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ## Дополнительные задания {#hw4_add}
 
-### #1
+### #1 {#hw4-11-title}
 
 <img id="hw4-11-level" class="level"/>
 
@@ -528,7 +670,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+### #2 {#hw4-12-title}
 
 <img id="hw4-12-level" class="level"/>
 
@@ -575,7 +717,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw4-13-title}
 
 <img id="hw4-13-level" class="level"/>
 
@@ -622,7 +764,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw4-14-title}
 
 <img id="hw4-14-level" class="level"/>
 
@@ -669,7 +811,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw4-15-title}
 
 <img id="hw4-15-level" class="level"/>
 
