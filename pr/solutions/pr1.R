@@ -5,7 +5,7 @@
 
 # 1 
 ## a
-(-14)^7 - 6 * 2^11
+-14^7 - 6 * 2^11
 ## b
 sin(64)^2
 ## c
@@ -20,15 +20,16 @@ sqrt(5+2i)
 x <- 3
 y <- -1.44
 ## a
-log(17^sin(4.8*pi), base = 24^(1/x))
+log(17^sin(4.8*pi), 
+    base = 24^(1/x))
 ## b
 (exp(x + y^2)) / (1 + exp(x + y^2))
 ## c
 sqrt(log(cos(2/(3*x^2)) / (abs(y) + x)))
 sqrt(as.complex(log(cos(2/(3*x^2)) / (abs(y) + x)))) ## fix complex to calculate
 ## d
-sin(pi / 4 * x) + cos(2*pi / sqrt(y) - 1)
-sin(pi / 4 * x) + cos(2*pi / sqrt(y+0i) - 1) ## fix y as complex to calculate
+sin(pi / (4 * x)) + cos(2*pi / (sqrt(y) - 1))
+sin(pi / (4 * x)) + cos(2*pi / (sqrt(y+0i) - 1)) ## fix y as complex to calculate
 
 
 # 3
@@ -44,7 +45,7 @@ c(1:10, 9:1)
 
 # 4
 ## a
-seq(2, 30, by = 2)
+seq(from = 2, to = 30, by = 2)
 ## b
 seq(0, 10, by = .5)
 ## c
@@ -60,8 +61,8 @@ c(rep(c(4, 8, 12), times = 8), 8, 12)
 rep(c(4, 8, 12), times = c(10, 20, 30))
 
 # 6
-vec6 <- rep(c(4, 8, 12), times = 8)
-as.character(vec6)
+setsize <- rep(c(4, 8, 12), times = 8)
+as.character(setsize)
 
 # 7
 ## a
@@ -172,17 +173,14 @@ log10(sam3)
 # 19
 sam5 * 20
 sam5 - mean(sam5)
-log10(sam5)
 ## fix NA to calculate
-sam5.1 <- sam5[!is.na(sam5)]
-sam5 * 20
-sam5 - mean(sam5)
+sam5 - mean(sam5, na.rm = TRUE)
 log10(sam5)
 
 
 # 20
 1:2 + 1:10 # ok, just recycling
-1:3 + 1:10 # error, impossible recycling
+1:3 + 1:10 # warning, problem with recycling
 
 
 ### ADDITIONAL
