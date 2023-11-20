@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./f.html" rel="next">
 <link href="./index.html" rel="prev">
 <link href="./pics/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./test.html">J // Промежуточный проект</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./j.html">J // Промежуточный проект</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -148,8 +167,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active">
+  <a href="./j.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">J // Промежуточный проект</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./f.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">F // Итоговый проект</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -199,11 +224,39 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <p>В этом проекте вам предстоит предобработать сырые данные и построить несколько визуализаций.</p>
 <section id="j_1" class="level2">
 <h2 class="anchored" data-anchor-id="j_1">Вариант 1</h2>
+<p>Для работы вам предлагаются данные, полученные в ходе адаптации опросника на измерение когнитивной нагрузки NASA-TLX, выполненной командой HSE UX LAB<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Это было большое исследование, поэтому нас будет интересовать только часть данных. В ходе адаптации, работоспособность опросника проверялась на нескольких задачах, одной из которых было <strong>мысленное вращение (mental rotation)</strong>. Этими данными мы и займемся.</p>
+<details>
+<summary>
+Что такое мысленно вращение (mental rotation)?
+</summary>
+<p>Человеку предъявляются две фигуры. Задача испытуемого заключается в том, чтобы определить, являются ли фигуры одинаковыми с точностью до поворота или две фигуры различны. Иллюстрация представлена ниже.</p>
+<center>
+<figure class="figure">
+<img src="pics/mr-shepard.png" class="figure-img">
+<figcaption class="figure-caption">
+Иллюстрация из <span class="citation" data-cites="Shepard1971">Shepard and Metzler (<a href="references.html#ref-Shepard1971" role="doc-biblioref">1971</a>)</span>. A и B — одинаковые фигуры, C — разные фигуры.
+</figcaption>
+</figure>
+</center>
+<p>Подробно можно почитать в <span class="citation" data-cites="Shepard1971">Shepard and Metzler (<a href="references.html#ref-Shepard1971" role="doc-biblioref">1971</a>)</span>.</p>
+</details>
 </section>
 <section id="j_2" class="level2">
 <h2 class="anchored" data-anchor-id="j_2">Вариант 2</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Shepard1971" class="csl-entry" role="listitem">
+Shepard, Roger N., and Jacqueline Metzler. 1971. <span>“Mental Rotation of Three-Dimensional Objects.”</span> <em>Science</em> 171 (3972): 701–3. <a href="https://doi.org/10.1126/science.171.3972.701">https://doi.org/10.1126/science.171.3972.701</a>.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Когда будет опубликована статья, мы повесим сюда ссылку.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -562,8 +615,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">Источники</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./f.html" class="pagination-link">
+        <span class="nav-page-text">F // Итоговый проект</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
