@@ -1,0 +1,99 @@
+---
+title: "WLM 2023 // Analytics"
+---
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, eval=TRUE)
+```
+
+```{r pkgs}
+library(rytstat)
+library(googlesheets4)
+library(tidyverse)
+theme_set(theme_bw())
+```
+
+```{r auth}
+ryt_auth('course.wlm@gmail.com')
+# ryt_deauth()
+# ryt_has_token()
+# ryt_user()
+```
+
+## L // Лекции
+
+
+
+## Q // Квизы
+
+```{r q-get-table}
+q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = "Journal") %>% 
+  select(ID, Stream, starts_with("Q"))
+```
+
+```{r q-preproc-table}
+q_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "quiz",
+               values_to = "score")
+  # separate(practice, into = c("practice", "half"), sep = "-") %>% 
+  # group_by(practice, half) %>% 
+  # mutate(present = as.numeric(present),
+  #        practice = factor(practice,
+  #                          ordered = TRUE,
+  #                          levels = paste0("P", 1:17))) %>%
+  # replace_na(list(present = 0)) %>% 
+  # summarise(count = sum(present),
+  #           percentage = mean(present))
+```
+
+
+## P // Практики
+
+```{r pr-get-table}
+pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = "Journal") %>% 
+  select(ID, Stream, starts_with("P"))
+```
+
+```{r pr-preproc-table}
+pr_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "practice",
+               values_to = "present") %>% 
+  separate(practice, into = c("practice", "half"), sep = "-") %>% 
+  group_by(practice, half) %>% 
+  mutate(present = as.numeric(present),
+         practice = factor(practice,
+                           ordered = TRUE,
+                           levels = paste0("P", 1:17))) %>%
+  replace_na(list(present = 0)) %>% 
+  summarise(count = sum(present),
+            percentage = mean(present)) -> pr_preproc
+```
+
+```{r pr-plot-present}
+pr_preproc %>% 
+  ggplot(aes(practice, percentage, color = half, group = half)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 1)) +
+  scale_color_discrete(labels = c(`1` = "первая", `2` = "вторая")) +
+  labs(x = "Практика",
+       y = "Доля присутствовавших",
+       color = "Часть практики",
+       title = "Динамика посещения практик") +
+  theme(legend.position = "bottom")
+```
+
+## C // Консультации
+
+## HW // Домашки
+
+## A // Разборы
+
