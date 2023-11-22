@@ -6,37 +6,68 @@ title: "WLM 2023 // Analytics"
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, eval=TRUE)
 ```
 
+```{r install-pkgs, eval=FALSE}
+# install.packages(c("rystats", "googlesheets4"))
+# if (!("remotes" %in% installed.packages())) {
+#   install.packages("remotes")
+# }
+# remotes::install_github("datatrail-jhu/rgoogleclassroom")
+```
+
 ```{r pkgs}
-library(rytstat)
+# library(rytstat)
 library(googlesheets4)
+# library(rgoogleclassroom)
 library(tidyverse)
 theme_set(theme_bw())
 ```
 
 ```{r auth}
+## youtube
 ryt_auth('course.wlm@gmail.com')
 # ryt_deauth()
 # ryt_has_token()
 # ryt_user()
+
+## classroom
+# authorize()
 ```
 
 ```{r l-get-table}
-videos <- ryt_get_videos() %>% 
-  select(id_video_id, title) %>% 
-  filter(!str_detect(title, "внутряк"))
-video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
-basis_by_videos <- ryt_get_analytics(
-  start_date = '2023-11-06', end_date = '2023-11-21',
-  dimensions = c('day', 'video'),
-  metrics    = c('views', 'likes', 'dislikes'), 
-  filters    = paste0('video==', video_id_list)
-)
+# videos <- ryt_get_videos() %>% 
+#   select(id_video_id, title) %>% 
+#   filter(!str_detect(title, "внутряк"))
+# video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
+# basis_by_videos <- ryt_get_analytics(
+#   start_date = '2023-11-06', end_date = '2023-11-21',
+#   dimensions = c('day', 'video'),
+#   metrics    = c('views', 'likes', 'dislikes'), 
+#   filters    = paste0('video==', video_id_list)
+# )
 ```
 
 ```{r q-get-table}
 q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("Q"))
+
+q_scores <- tibble()
+for(i in paste0("Q", 1:2)) {
+  if(i == "Q1") {
+    read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = i) %>% 
+    select(ID, matches("q\\d+-\\d+"), TOTAL) -> q_scores
+  } else {
+    read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = i) %>% 
+      select(ID, matches("q\\d+-\\d+"), TOTAL) %>% 
+      full_join(q_scores, join_by(ID)) -> q_scores
+  }
+}
+
+q_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+                     sheet = "Q") %>% 
+  select(task, level, max_score)
 ```
 
 ```{r pr-get-table}
@@ -62,7 +93,13 @@ q_journal %>%
   select(-Stream) %>% 
   pivot_longer(-ID, 
                names_to = "quiz",
-               values_to = "score")
+               values_to = "total_score") %>% 
+  group_by(quiz) %>% 
+  mutate(total_score = as.numeric(total_score),
+         quiz = factor(quiz, 
+                       ordered = TRUE, 
+                       levels = paste0("Q", 1:15))) %>% 
+  summarise(mean_score = mean(total_score))
   # separate(practice, into = c("practice", "half"), sep = "-") %>% 
   # group_by(practice, half) %>% 
   # mutate(present = as.numeric(present),
