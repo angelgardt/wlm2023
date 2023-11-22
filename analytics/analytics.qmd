@@ -20,17 +20,41 @@ ryt_auth('course.wlm@gmail.com')
 # ryt_user()
 ```
 
-## L // Лекции
-
-
-
-## Q // Квизы
+```{r l-get-table}
+videos <- ryt_get_videos() %>% 
+  select(id_video_id, title) %>% 
+  filter(!str_detect(title, "внутряк"))
+video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
+basis_by_videos <- ryt_get_analytics(
+  start_date = '2023-11-06', end_date = '2023-11-21',
+  dimensions = c('day', 'video'),
+  metrics    = c('views', 'likes', 'dislikes'), 
+  filters    = paste0('video==', video_id_list)
+)
+```
 
 ```{r q-get-table}
 q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("Q"))
 ```
+
+```{r pr-get-table}
+pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = "Journal") %>% 
+  select(ID, Stream, starts_with("P"))
+```
+
+
+
+
+
+
+## L // Лекции
+
+
+
+## Q // Квизы
 
 ```{r q-preproc-table}
 q_journal %>% 
@@ -52,12 +76,6 @@ q_journal %>%
 
 
 ## P // Практики
-
-```{r pr-get-table}
-pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("P"))
-```
 
 ```{r pr-preproc-table}
 pr_journal %>% 
