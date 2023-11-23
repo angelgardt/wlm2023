@@ -1,4 +1,4 @@
-# HW1 || Solutions
+# HW1 // Solutions
 # A. Angelgardt
 
 # MAIN
