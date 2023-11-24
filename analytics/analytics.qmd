@@ -164,7 +164,7 @@ basics_by_videos %>%
     geom_vline(data = calendar_pr,
                aes(xintercept = as.numeric(date)),
                linetype = "dashed",
-               color = "gray50") +
+               color = "gray70") +
     geom_text(data = calendar_pr,
               aes(x = date,
                   y = 0,
