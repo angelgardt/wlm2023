@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="A. Angelgardt">
 
-<title>WLM 2023 // Analytics</title>
+<title>Analytics // WLM 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="analytics_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="analytics_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="analytics_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="analytics_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="analytics_files/libs/quarto-dashboard/stickythead.js"></script>
+<script src="analytics_files/libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="analytics_files/libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="analytics_files/libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="analytics_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="analytics_files/libs/quarto-dashboard/components.js"></script>
+<link href="analytics_files/libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script src="analytics_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <script src="analytics_files/libs/plotly-binding-4.10.3/plotly.js"></script>
 <script src="analytics_files/libs/typedarray-0.1/typedarray.min.js"></script>
@@ -45,84 +54,103 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="fullcontent">
+<body class="quarto-dashboard dashboard-fill fullcontent">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <div class="navbar-brand-container">       
+<a href="#"><img src="pics/logo.png" alt="" class="navbar-logo d-inline-block"></a>
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Analytics // WLM 2023</a></div>
+        
+        <div class="navbar-author">A. Angelgardt</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-l-лекции" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#l-лекции" href="#l-лекции" aria-controls="l-лекции" aria-selected="true"><span class="nav-link-text">L // Лекции</span></a></li><li class="nav-item" role="presentation"><a id="tab-p-практики" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#p-практики" href="#p-практики" aria-controls="p-практики" aria-selected="false"><span class="nav-link-text">P // Практики</span></a></li><li class="nav-item" role="presentation"><a id="tab-q-квизы" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#q-квизы" href="#q-квизы" aria-controls="q-квизы" aria-selected="false"><span class="nav-link-text">Q // Квизы</span></a></li><li class="nav-item" role="presentation"><a id="tab-hw-домашки" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#hw-домашки" href="#hw-домашки" aria-controls="hw-домашки" aria-selected="false"><span class="nav-link-text">HW // Домашки</span></a></li><li class="nav-item" role="presentation"><a id="tab-с-консультации" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#с-консультации" href="#с-консультации" aria-controls="с-консультации" aria-selected="false"><span class="nav-link-text">С // Консультации</span></a></li><li class="nav-item" role="presentation"><a id="tab-a-разборы" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#a-разборы" href="#a-разборы" aria-controls="a-разборы" aria-selected="false"><span class="nav-link-text">A // Разборы</span></a></li></ul></div></div>
 
-<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">WLM 2023 // Analytics</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
+</nav>
 </header>
 
-<section id="l-лекции" class="level2">
-<h2 class="anchored" data-anchor-id="l-лекции">L // Лекции</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2b6cb0332831b280c0e3" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-2b6cb0332831b280c0e3">{"x":{"data":[{"x":[19667,19668,19669,19670,19671,19673,19674,19675,19676,19677,19678,19679,19681,19682],"y":[9,11,11,3,5,7,7,2,3,4,1,2,1,4],"text":["day: 2023-11-06<br />views:  9<br />code: L0","day: 2023-11-07<br />views: 11<br />code: L0","day: 2023-11-08<br />views: 11<br />code: L0","day: 2023-11-09<br />views:  3<br />code: L0","day: 2023-11-10<br />views:  5<br />code: L0","day: 2023-11-12<br />views:  7<br />code: L0","day: 2023-11-13<br />views:  7<br />code: L0","day: 2023-11-14<br />views:  2<br />code: L0","day: 2023-11-15<br />views:  3<br />code: L0","day: 2023-11-16<br />views:  4<br />code: L0","day: 2023-11-17<br />views:  1<br />code: L0","day: 2023-11-18<br />views:  2<br />code: L0","day: 2023-11-20<br />views:  1<br />code: L0","day: 2023-11-21<br />views:  4<br />code: L0"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"L0","legendgroup":"L0","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[8,30,30,18,2,6,2,8,4],"text":["day: 2023-11-13<br />views:  8<br />code: L1.1","day: 2023-11-14<br />views: 30<br />code: L1.1","day: 2023-11-15<br />views: 30<br />code: L1.1","day: 2023-11-16<br />views: 18<br />code: L1.1","day: 2023-11-17<br />views:  2<br />code: L1.1","day: 2023-11-18<br />views:  6<br />code: L1.1","day: 2023-11-19<br />views:  2<br />code: L1.1","day: 2023-11-20<br />views:  8<br />code: L1.1","day: 2023-11-21<br />views:  4<br />code: L1.1"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"L1.1","legendgroup":"L1.1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[3,18,17,14,7,5,3,7,4],"text":["day: 2023-11-13<br />views:  3<br />code: L1.2","day: 2023-11-14<br />views: 18<br />code: L1.2","day: 2023-11-15<br />views: 17<br />code: L1.2","day: 2023-11-16<br />views: 14<br />code: L1.2","day: 2023-11-17<br />views:  7<br />code: L1.2","day: 2023-11-18<br />views:  5<br />code: L1.2","day: 2023-11-19<br />views:  3<br />code: L1.2","day: 2023-11-20<br />views:  7<br />code: L1.2","day: 2023-11-21<br />views:  4<br />code: L1.2"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"L1.2","legendgroup":"L1.2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19677,null,19684,19684,null,19691,19691,null,19698,19698,null,19705,19705,null,19719,19719,null,19733,19733,null,19740,19740,null,19747,19747,null,19754,19754,null,19761,19761,null,19768,19768,null,19775,19775,null,19782,19782,null,19789,19789,null,19796,19796,null,19803,19803],"y":[-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5],"text":["as.numeric(date): 19677","as.numeric(date): 19677",null,"as.numeric(date): 19684","as.numeric(date): 19684",null,"as.numeric(date): 19691","as.numeric(date): 19691",null,"as.numeric(date): 19698","as.numeric(date): 19698",null,"as.numeric(date): 19705","as.numeric(date): 19705",null,"as.numeric(date): 19719","as.numeric(date): 19719",null,"as.numeric(date): 19733","as.numeric(date): 19733",null,"as.numeric(date): 19740","as.numeric(date): 19740",null,"as.numeric(date): 19747","as.numeric(date): 19747",null,"as.numeric(date): 19754","as.numeric(date): 19754",null,"as.numeric(date): 19761","as.numeric(date): 19761",null,"as.numeric(date): 19768","as.numeric(date): 19768",null,"as.numeric(date): 19775","as.numeric(date): 19775",null,"as.numeric(date): 19782","as.numeric(date): 19782",null,"as.numeric(date): 19789","as.numeric(date): 19789",null,"as.numeric(date): 19796","as.numeric(date): 19796",null,"as.numeric(date): 19803","as.numeric(date): 19803"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(179,179,179,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19684,19691,19698,19705,19719,19733,19740,19747,19754,19761,19768,19775,19782,19789,19796,19803],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"hovertext":["date: 2023-11-16<br />y: 0<br />code: P1","date: 2023-11-23<br />y: 0<br />code: P2","date: 2023-11-30<br />y: 0<br />code: P3","date: 2023-12-07<br />y: 0<br />code: P4","date: 2023-12-14<br />y: 0<br />code: P5","date: 2023-12-28<br />y: 0<br />code: P6","date: 2024-01-11<br />y: 0<br />code: P7","date: 2024-01-18<br />y: 0<br />code: P8","date: 2024-01-25<br />y: 0<br />code: P9","date: 2024-02-01<br />y: 0<br />code: P10","date: 2024-02-08<br />y: 0<br />code: P11","date: 2024-02-15<br />y: 0<br />code: P12","date: 2024-02-22<br />y: 0<br />code: P13","date: 2024-02-29<br />y: 0<br />code: P14","date: 2024-03-07<br />y: 0<br />code: P15","date: 2024-03-14<br />y: 0<br />code: P16","date: 2024-03-21<br />y: 0<br />code: P17"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.762557077625573,"r":7.3059360730593621,"b":40.182648401826498,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Динамика просмотров лекций","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19660.200000000001,19809.799999999999],"tickmode":"array","ticktext":["Nov","Dec","Jan","Feb","Mar"],"tickvals":[19662,19692,19723,19754,19783],"categoryorder":"array","categoryarray":["Nov","Dec","Jan","Feb","Mar"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Дата","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.5,31.5],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Количество просмотров","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Лекция","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"orientation":"h","x":0.29999999999999999,"y":-0.29999999999999999},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"145e9681e4b6b":{"x":{},"y":{},"colour":{},"type":"scatter"},"145e91ce99334":{"xintercept":{}},"145e92abf49c0":{"x":{},"y":{},"label":{}}},"cur_data":"145e9681e4b6b","visdat":{"145e9681e4b6b":["function (y) ","x"],"145e91ce99334":["function (y) ","x"],"145e92abf49c0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
-<section id="q-квизы" class="level2">
-<h2 class="anchored" data-anchor-id="q-квизы">Q // Квизы</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 15 × 2
-   quiz  mean_score
-   &lt;ord&gt;      &lt;dbl&gt;
- 1 Q1             0
- 2 Q2             0
- 3 Q3             0
- 4 Q4             0
- 5 Q5             0
- 6 Q6             0
- 7 Q7             0
- 8 Q8             0
- 9 Q9             0
-10 Q10            0
-11 Q11            0
-12 Q12            0
-13 Q13            0
-14 Q14            0
-15 Q15            0</code></pre>
-</div>
-</div>
-</section>
-<section id="p-практики" class="level2">
-<h2 class="anchored" data-anchor-id="p-практики">P // Практики</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-351bd3ea3df8f3077502" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-351bd3ea3df8f3077502">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"y":[0.59459459459459463,0.3783783783783784,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["practice: P1<br />percentage: 0.5945946<br />half: 1<br />half: 1","practice: P2<br />percentage: 0.3783784<br />half: 1<br />half: 1","practice: P3<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P4<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P5<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P6<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P7<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P8<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P9<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P10<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P11<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P12<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P13<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P14<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P15<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P16<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P17<br />percentage: 0.0000000<br />half: 1<br />half: 1"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"y":[0.56756756756756754,0.35135135135135137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["practice: P1<br />percentage: 0.5675676<br />half: 2<br />half: 2","practice: P2<br />percentage: 0.3513514<br />half: 2<br />half: 2","practice: P3<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P4<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P5<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P6<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P7<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P8<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P9<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P10<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P11<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P12<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P13<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P14<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P15<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P16<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P17<br />percentage: 0.0000000<br />half: 2<br />half: 2"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":43.762557077625573,"r":7.3059360730593621,"b":40.182648401826498,"l":48.949771689497723},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Динамика посещения практик","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,17.600000000000001],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Практика","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Доля присутствовавших","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Часть практики","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"orientation":"h","x":0.29999999999999999,"y":-0.29999999999999999},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"145e91f118ca2":{"x":{},"y":{},"colour":{},"type":"scatter"},"145e93927ef9d":{"x":{},"y":{},"colour":{}}},"cur_data":"145e91f118ca2","visdat":{"145e91f118ca2":["function (y) ","x"],"145e93927ef9d":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
-<section id="c-консультации" class="level2">
-<h2 class="anchored" data-anchor-id="c-консультации">C // Консультации</h2>
-</section>
-<section id="hw-домашки" class="level2">
-<h2 class="anchored" data-anchor-id="hw-домашки">HW // Домашки</h2>
-</section>
-<section id="a-разборы" class="level2">
-<h2 class="anchored" data-anchor-id="a-разборы">A // Разборы</h2>
-</section>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
 
-</main>
-<!-- /main column -->
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="l-лекции" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-title="L // Лекции" data-orientation="rows" aria-labelledby="tab-l-лекции">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 50fr) minmax(3em, 50fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item html-fill-container" id="htmlwidget-0697ec50737c6ec23b69" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-0697ec50737c6ec23b69">{"x":{"data":[{"x":[19667,19668,19669,19670,19671,19673,19674,19675,19676,19677,19678,19679,19681,19682],"y":[9,11,11,3,5,7,7,2,3,4,1,2,1,4],"text":["day: 2023-11-06<br />views:  9<br />code: L0","day: 2023-11-07<br />views: 11<br />code: L0","day: 2023-11-08<br />views: 11<br />code: L0","day: 2023-11-09<br />views:  3<br />code: L0","day: 2023-11-10<br />views:  5<br />code: L0","day: 2023-11-12<br />views:  7<br />code: L0","day: 2023-11-13<br />views:  7<br />code: L0","day: 2023-11-14<br />views:  2<br />code: L0","day: 2023-11-15<br />views:  3<br />code: L0","day: 2023-11-16<br />views:  4<br />code: L0","day: 2023-11-17<br />views:  1<br />code: L0","day: 2023-11-18<br />views:  2<br />code: L0","day: 2023-11-20<br />views:  1<br />code: L0","day: 2023-11-21<br />views:  4<br />code: L0"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"L0","legendgroup":"L0","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[8,30,30,18,2,6,2,8,4],"text":["day: 2023-11-13<br />views:  8<br />code: L1.1","day: 2023-11-14<br />views: 30<br />code: L1.1","day: 2023-11-15<br />views: 30<br />code: L1.1","day: 2023-11-16<br />views: 18<br />code: L1.1","day: 2023-11-17<br />views:  2<br />code: L1.1","day: 2023-11-18<br />views:  6<br />code: L1.1","day: 2023-11-19<br />views:  2<br />code: L1.1","day: 2023-11-20<br />views:  8<br />code: L1.1","day: 2023-11-21<br />views:  4<br />code: L1.1"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"L1.1","legendgroup":"L1.1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[3,18,17,14,7,5,3,7,4],"text":["day: 2023-11-13<br />views:  3<br />code: L1.2","day: 2023-11-14<br />views: 18<br />code: L1.2","day: 2023-11-15<br />views: 17<br />code: L1.2","day: 2023-11-16<br />views: 14<br />code: L1.2","day: 2023-11-17<br />views:  7<br />code: L1.2","day: 2023-11-18<br />views:  5<br />code: L1.2","day: 2023-11-19<br />views:  3<br />code: L1.2","day: 2023-11-20<br />views:  7<br />code: L1.2","day: 2023-11-21<br />views:  4<br />code: L1.2"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"L1.2","legendgroup":"L1.2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19677,null,19684,19684,null,19691,19691,null,19698,19698,null,19705,19705,null,19719,19719,null,19733,19733,null,19740,19740,null,19747,19747,null,19754,19754,null,19761,19761,null,19768,19768,null,19775,19775,null,19782,19782,null,19789,19789,null,19796,19796,null,19803,19803],"y":[-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5,null,-1.5,31.5],"text":["as.numeric(date): 19677","as.numeric(date): 19677",null,"as.numeric(date): 19684","as.numeric(date): 19684",null,"as.numeric(date): 19691","as.numeric(date): 19691",null,"as.numeric(date): 19698","as.numeric(date): 19698",null,"as.numeric(date): 19705","as.numeric(date): 19705",null,"as.numeric(date): 19719","as.numeric(date): 19719",null,"as.numeric(date): 19733","as.numeric(date): 19733",null,"as.numeric(date): 19740","as.numeric(date): 19740",null,"as.numeric(date): 19747","as.numeric(date): 19747",null,"as.numeric(date): 19754","as.numeric(date): 19754",null,"as.numeric(date): 19761","as.numeric(date): 19761",null,"as.numeric(date): 19768","as.numeric(date): 19768",null,"as.numeric(date): 19775","as.numeric(date): 19775",null,"as.numeric(date): 19782","as.numeric(date): 19782",null,"as.numeric(date): 19789","as.numeric(date): 19789",null,"as.numeric(date): 19796","as.numeric(date): 19796",null,"as.numeric(date): 19803","as.numeric(date): 19803"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(179,179,179,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19684,19691,19698,19705,19719,19733,19740,19747,19754,19761,19768,19775,19782,19789,19796,19803],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"hovertext":["date: 2023-11-16<br />y: 0<br />code: P1","date: 2023-11-23<br />y: 0<br />code: P2","date: 2023-11-30<br />y: 0<br />code: P3","date: 2023-12-07<br />y: 0<br />code: P4","date: 2023-12-14<br />y: 0<br />code: P5","date: 2023-12-28<br />y: 0<br />code: P6","date: 2024-01-11<br />y: 0<br />code: P7","date: 2024-01-18<br />y: 0<br />code: P8","date: 2024-01-25<br />y: 0<br />code: P9","date: 2024-02-01<br />y: 0<br />code: P10","date: 2024-02-08<br />y: 0<br />code: P11","date: 2024-02-15<br />y: 0<br />code: P12","date: 2024-02-22<br />y: 0<br />code: P13","date: 2024-02-29<br />y: 0<br />code: P14","date: 2024-03-07<br />y: 0<br />code: P15","date: 2024-03-14<br />y: 0<br />code: P16","date: 2024-03-21<br />y: 0<br />code: P17"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.223744292237441,"r":7.3059360730593621,"b":88.401826484018287,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Динамика просмотров лекций","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19660.200000000001,19809.799999999999],"tickmode":"array","ticktext":["2023-11-06","2023-11-13","2023-11-20","2023-11-27","2023-12-04","2023-12-11","2023-12-18","2023-12-25","2024-01-01","2024-01-08","2024-01-15","2024-01-22","2024-01-29","2024-02-05","2024-02-12","2024-02-19","2024-02-26","2024-03-04","2024-03-11","2024-03-18","2024-03-25"],"tickvals":[19667,19674,19681,19688,19695,19702,19709,19716,19723,19730,19737,19744,19751,19758,19765,19772,19779,19786,19793,19800,19807],"categoryorder":"array","categoryarray":["2023-11-06","2023-11-13","2023-11-20","2023-11-27","2023-12-04","2023-12-11","2023-12-18","2023-12-25","2024-01-01","2024-01-08","2024-01-15","2024-01-22","2024-01-29","2024-02-05","2024-02-12","2024-02-19","2024-02-26","2024-03-04","2024-03-11","2024-03-18","2024-03-25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-90,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Дата","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.5,31.5],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Количество просмотров","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Лекция","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"orientation":"h","x":0.29999999999999999,"y":-0.29999999999999999},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4c07a7f0090":{"x":{},"y":{},"colour":{},"type":"scatter"},"4c076c08a1e4":{"xintercept":{}},"4c071b6a1c21":{"x":{},"y":{},"label":{}}},"cur_data":"4c07a7f0090","visdat":{"4c07a7f0090":["function (y) ","x"],"4c076c08a1e4":["function (y) ","x"],"4c071b6a1c21":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item html-fill-container" id="htmlwidget-a914e63ba6b11e9c9c66" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-a914e63ba6b11e9c9c66">{"x":{"data":[{"x":[19667,19668,19669,19670,19671,19673,19674,19675,19676,19677,19678,19679,19681,19682],"y":[9,20,31,34,39,46,53,55,58,62,63,65,66,70],"text":["day: 2023-11-06<br />cum_views:   9<br />code: L0","day: 2023-11-07<br />cum_views:  20<br />code: L0","day: 2023-11-08<br />cum_views:  31<br />code: L0","day: 2023-11-09<br />cum_views:  34<br />code: L0","day: 2023-11-10<br />cum_views:  39<br />code: L0","day: 2023-11-12<br />cum_views:  46<br />code: L0","day: 2023-11-13<br />cum_views:  53<br />code: L0","day: 2023-11-14<br />cum_views:  55<br />code: L0","day: 2023-11-15<br />cum_views:  58<br />code: L0","day: 2023-11-16<br />cum_views:  62<br />code: L0","day: 2023-11-17<br />cum_views:  63<br />code: L0","day: 2023-11-18<br />cum_views:  65<br />code: L0","day: 2023-11-20<br />cum_views:  66<br />code: L0","day: 2023-11-21<br />cum_views:  70<br />code: L0"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"L0","legendgroup":"L0","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[8,38,68,86,88,94,96,104,108],"text":["day: 2023-11-13<br />cum_views:   8<br />code: L1.1","day: 2023-11-14<br />cum_views:  38<br />code: L1.1","day: 2023-11-15<br />cum_views:  68<br />code: L1.1","day: 2023-11-16<br />cum_views:  86<br />code: L1.1","day: 2023-11-17<br />cum_views:  88<br />code: L1.1","day: 2023-11-18<br />cum_views:  94<br />code: L1.1","day: 2023-11-19<br />cum_views:  96<br />code: L1.1","day: 2023-11-20<br />cum_views: 104<br />code: L1.1","day: 2023-11-21<br />cum_views: 108<br />code: L1.1"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"L1.1","legendgroup":"L1.1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19674,19675,19676,19677,19678,19679,19680,19681,19682],"y":[3,21,38,52,59,64,67,74,78],"text":["day: 2023-11-13<br />cum_views:   3<br />code: L1.2","day: 2023-11-14<br />cum_views:  21<br />code: L1.2","day: 2023-11-15<br />cum_views:  38<br />code: L1.2","day: 2023-11-16<br />cum_views:  52<br />code: L1.2","day: 2023-11-17<br />cum_views:  59<br />code: L1.2","day: 2023-11-18<br />cum_views:  64<br />code: L1.2","day: 2023-11-19<br />cum_views:  67<br />code: L1.2","day: 2023-11-20<br />cum_views:  74<br />code: L1.2","day: 2023-11-21<br />cum_views:  78<br />code: L1.2"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"L1.2","legendgroup":"L1.2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19677,null,19684,19684,null,19691,19691,null,19698,19698,null,19705,19705,null,19719,19719,null,19733,19733,null,19740,19740,null,19747,19747,null,19754,19754,null,19761,19761,null,19768,19768,null,19775,19775,null,19782,19782,null,19789,19789,null,19796,19796,null,19803,19803],"y":[-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001,null,-5.4000000000000004,113.40000000000001],"text":["as.numeric(date): 19677","as.numeric(date): 19677",null,"as.numeric(date): 19684","as.numeric(date): 19684",null,"as.numeric(date): 19691","as.numeric(date): 19691",null,"as.numeric(date): 19698","as.numeric(date): 19698",null,"as.numeric(date): 19705","as.numeric(date): 19705",null,"as.numeric(date): 19719","as.numeric(date): 19719",null,"as.numeric(date): 19733","as.numeric(date): 19733",null,"as.numeric(date): 19740","as.numeric(date): 19740",null,"as.numeric(date): 19747","as.numeric(date): 19747",null,"as.numeric(date): 19754","as.numeric(date): 19754",null,"as.numeric(date): 19761","as.numeric(date): 19761",null,"as.numeric(date): 19768","as.numeric(date): 19768",null,"as.numeric(date): 19775","as.numeric(date): 19775",null,"as.numeric(date): 19782","as.numeric(date): 19782",null,"as.numeric(date): 19789","as.numeric(date): 19789",null,"as.numeric(date): 19796","as.numeric(date): 19796",null,"as.numeric(date): 19803","as.numeric(date): 19803"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(179,179,179,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19677,19684,19691,19698,19705,19719,19733,19740,19747,19754,19761,19768,19775,19782,19789,19796,19803],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"hovertext":["date: 2023-11-16<br />y: 0<br />code: P1","date: 2023-11-23<br />y: 0<br />code: P2","date: 2023-11-30<br />y: 0<br />code: P3","date: 2023-12-07<br />y: 0<br />code: P4","date: 2023-12-14<br />y: 0<br />code: P5","date: 2023-12-28<br />y: 0<br />code: P6","date: 2024-01-11<br />y: 0<br />code: P7","date: 2024-01-18<br />y: 0<br />code: P8","date: 2024-01-25<br />y: 0<br />code: P9","date: 2024-02-01<br />y: 0<br />code: P10","date: 2024-02-08<br />y: 0<br />code: P11","date: 2024-02-15<br />y: 0<br />code: P12","date: 2024-02-22<br />y: 0<br />code: P13","date: 2024-02-29<br />y: 0<br />code: P14","date: 2024-03-07<br />y: 0<br />code: P15","date: 2024-03-14<br />y: 0<br />code: P16","date: 2024-03-21<br />y: 0<br />code: P17"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.223744292237441,"r":7.3059360730593621,"b":88.401826484018287,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Кумулятивная сумма просмотров лекций","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19660.200000000001,19809.799999999999],"tickmode":"array","ticktext":["2023-11-06","2023-11-13","2023-11-20","2023-11-27","2023-12-04","2023-12-11","2023-12-18","2023-12-25","2024-01-01","2024-01-08","2024-01-15","2024-01-22","2024-01-29","2024-02-05","2024-02-12","2024-02-19","2024-02-26","2024-03-04","2024-03-11","2024-03-18","2024-03-25"],"tickvals":[19667,19674,19681,19688,19695,19702,19709,19716,19723,19730,19737,19744,19751,19758,19765,19772,19779,19786,19793,19800,19807],"categoryorder":"array","categoryarray":["2023-11-06","2023-11-13","2023-11-20","2023-11-27","2023-12-04","2023-12-11","2023-12-18","2023-12-25","2024-01-01","2024-01-08","2024-01-15","2024-01-22","2024-01-29","2024-02-05","2024-02-12","2024-02-19","2024-02-26","2024-03-04","2024-03-11","2024-03-18","2024-03-25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-90,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Дата","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-5.4000000000000004,113.40000000000001],"tickmode":"array","ticktext":["0","30","60","90"],"tickvals":[0,30,60.000000000000007,90],"categoryorder":"array","categoryarray":["0","30","60","90"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Количество просмотров","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Лекция","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"orientation":"h","x":0.29999999999999999,"y":-0.29999999999999999},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4c076dd5901":{"x":{},"y":{},"colour":{},"type":"scatter"},"4c0769cf4567":{"xintercept":{}},"4c07303866d1":{"x":{},"y":{},"label":{}}},"cur_data":"4c076dd5901","visdat":{"4c076dd5901":["function (y) ","x"],"4c0769cf4567":["function (y) ","x"],"4c07303866d1":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="p-практики" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="P // Практики" data-orientation="rows" aria-labelledby="tab-p-практики">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item html-fill-container" id="htmlwidget-dad2716d7fa842ce8f3c" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-dad2716d7fa842ce8f3c">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"y":[0.59459459459459463,0.3783783783783784,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["practice: P1<br />percentage: 0.5945946<br />half: 1<br />half: 1","practice: P2<br />percentage: 0.3783784<br />half: 1<br />half: 1","practice: P3<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P4<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P5<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P6<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P7<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P8<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P9<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P10<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P11<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P12<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P13<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P14<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P15<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P16<br />percentage: 0.0000000<br />half: 1<br />half: 1","practice: P17<br />percentage: 0.0000000<br />half: 1<br />half: 1"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"y":[0.56756756756756754,0.35135135135135137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["practice: P1<br />percentage: 0.5675676<br />half: 2<br />half: 2","practice: P2<br />percentage: 0.3513514<br />half: 2<br />half: 2","practice: P3<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P4<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P5<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P6<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P7<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P8<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P9<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P10<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P11<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P12<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P13<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P14<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P15<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P16<br />percentage: 0.0000000<br />half: 2<br />half: 2","practice: P17<br />percentage: 0.0000000<br />half: 2<br />half: 2"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":45.223744292237441,"r":7.3059360730593621,"b":41.643835616438366,"l":48.949771689497737},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Динамика посещения практик","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,17.600000000000001],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Практика","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Доля присутствовавших","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Часть практики","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"orientation":"h","x":0.29999999999999999,"y":-0.29999999999999999},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4c075082aef7":{"x":{},"y":{},"colour":{},"type":"scatter"},"4c07347676f1":{"x":{},"y":{},"colour":{}}},"cur_data":"4c075082aef7","visdat":{"4c075082aef7":["function (y) ","x"],"4c07347676f1":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="q-квизы" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="Q // Квизы" data-orientation="rows" aria-labelledby="tab-q-квизы">
+
+</div>
+<div id="hw-домашки" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="HW // Домашки" data-orientation="rows" aria-labelledby="tab-hw-домашки">
+
+</div>
+<div id="с-консультации" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="С // Консультации" data-orientation="rows" aria-labelledby="tab-с-консультации">
+
+</div>
+<div id="a-разборы" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="A // Разборы" data-orientation="rows" aria-labelledby="tab-a-разборы">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -202,10 +230,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -215,8 +242,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -229,6 +265,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -272,6 +437,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -297,6 +463,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -356,7 +548,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 

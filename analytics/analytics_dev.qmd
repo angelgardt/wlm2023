@@ -1,23 +1,14 @@
---- 
-title: "Analytics // WLM 2023"
-author: "A. Angelgardt"
-format: 
-  dashboard:
-    logo: pics/logo.png
+---
+title: "WLM 2023 // Analytics"
 ---
 
-::: {hidden=true}
-## Chunk opts
 ```{r opts, echo=FALSE, eval=TRUE, message=FALSE}
 knitr::opts_chunk$set(echo=FALSE, 
                       message=FALSE, 
                       eval=TRUE,
                       warning=FALSE)
 ```
-:::
 
-::: {hidden=true}
-## Install pkfs
 ```{r install-pkgs, eval=FALSE}
 # install.packages(c("rystats", "googlesheets4"))
 # if (!("remotes" %in% installed.packages())) {
@@ -25,11 +16,7 @@ knitr::opts_chunk$set(echo=FALSE,
 # }
 # remotes::install_github("datatrail-jhu/rgoogleclassroom")
 ```
-:::
 
-
-::: {hidden=true}
-## Libraries
 ```{r pkgs}
 library(rytstat)
 library(googlesheets4)
@@ -38,10 +25,7 @@ library(tidyverse)
 theme_set(theme_bw())
 library(plotly)
 ```
-:::
 
-::: {hidden=true}
-## Auth
 ```{r auth}
 ## youtube
 ryt_auth('course.wlm@gmail.com')
@@ -52,28 +36,18 @@ ryt_auth('course.wlm@gmail.com')
 ## classroom
 # authorize()
 ```
-:::
 
-::: {hidden=true}
-## Load data
-```{r calendar-data}
+```{r calendar-ger-table}
 read_sheet("https://docs.google.com/spreadsheets/d/1k9QtNjZLzTrbYlkXrWFWxglXTG5kol1DHSPIN9stLiE/edit?usp=sharing",
            sheet = "План", skip = 2) -> calendar
 calendar %>% 
   select(date, code_1) %>% 
-  filter(str_detect(code_1, "^L|^P|^C|^A")) %>% 
+  filter(str_detect(code_1, "^P")) %>% 
   mutate(date = as_date(date, format = "%d/%m/%y")) %>% 
-  rename("code" = "code_1") -> calendar_activities
-
-calendar %>%
-  select(code_2, deadline_soft, deadline_hard) %>%
-  filter(str_detect(code_2, "^Q|^HW")) %>%
-  mutate(deadline_soft = as_datetime(deadline_soft, format = "%d/%m/%y %H:%M") %>% date(),
-         deadline_hard = as_datetime(deadline_hard, format = "%d/%m/%y %H:%M") %>% date()) %>%
-  rename("code" = "code_2") -> calendar_assessment
+  rename("code" = "code_1") -> calendar_pr
 ```
 
-```{r lectures-get-data-funcs}
+```{r l-get-table-funcs}
 ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14, 
                                       end_date = Sys.Date(), 
                                       metrics = c(
@@ -120,24 +94,24 @@ ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14,
 }
 ```
 
-```{r lectures-data}
-ryt_get_videos() %>% 
+```{r l-get-table}
+videos <- ryt_get_videos() %>% 
   select(id_video_id, title) %>%
-  filter(!str_detect(title, "внутряк")) -> videos
+  filter(!str_detect(title, "внутряк"))
 # video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
 dimensions <- c('day', 'video')
 metrics <- c("views", "likes", "dislikes", "estimatedMinutesWatched", "averageViewDuration", "averageViewPercentage")
-ryt_get_analytics_custom(
+basics_by_videos <- ryt_get_analytics_custom(
   start_date = '2023-11-06', end_date = Sys.Date(),
   dimensions = dimensions,
   metrics    = metrics,
   filters = str_glue('video=={str_c(head(videos$id_video_id, 500), collapse=",")}'), names_sep = ""
 ) %>% 
   set_names(c(dimensions, metrics)) %>% 
-  left_join(videos, join_by("video" == "id_video_id")) -> basics_by_videos
+  left_join(videos, join_by("video" == "id_video_id"))
 ```
 
-```{r quiz-data}
+```{r q-get-table}
 q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("Q"))
@@ -161,17 +135,20 @@ q_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-
   select(task, level, max_score)
 ```
 
-```{r pr-data}
+```{r pr-get-table}
 pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("P"))
 ```
 
-:::
 
-# L // Лекции
 
-```{r lectures-preproc}
+
+
+
+## L // Лекции
+
+```{r l-preproc-table}
 basics_by_videos %>% 
   mutate(day = as_date(day)) %>% 
   filter(str_detect(title, "^L")) %>% 
@@ -179,65 +156,60 @@ basics_by_videos %>%
   select(-course, - lab) -> lec
 ```
 
-## Row {height=50%}
-```{r lectures-graph-by-day}
+```{r l-graph}
 (
-  calendar_activities %>% 
-    filter(str_detect(code, "^P")) %>% 
+  lec %>% 
     ggplot() +
-    geom_line(data = lec,
-              aes(day, views, color = code)) +
-    geom_vline(aes(xintercept = as.numeric(date)),
+    geom_line(aes(day, views, color = code)) +
+    geom_vline(data = calendar_pr,
+               aes(xintercept = as.numeric(date)),
                linetype = "dashed",
                color = "gray70") +
-    geom_text(aes(x = date,
+    geom_text(data = calendar_pr,
+              aes(x = date,
                   y = 0,
                   label = code)) +
     labs(x = "Дата",
          y = "Количество просмотров",
          color = "Лекция",
          title = "Динамика просмотров лекций") +
-    scale_x_date(date_breaks = "week",
-                 date_minor_breaks = "day") +
-    theme(legend.position = "bottom",
-          axis.text.x = element_text(angle = 90))
-  ) %>% ggplotly() %>% 
-  layout(legend = list(orientation = "h", x = .3, y = -.3))
-```
-
-## Row {height=50%}
-
-```{r lectures-graph-cumsum}
-(
-  calendar_activities %>% 
-    filter(str_detect(code, "^P")) %>% 
-    ggplot() +
-    geom_line(data = lec %>% 
-                group_by(video) %>% 
-                mutate(cum_views = cumsum(views)),
-              aes(day, cum_views, color = code)) +
-    geom_vline(aes(xintercept = as.numeric(date)),
-               linetype = "dashed",
-               color = "gray70") +
-    geom_text(aes(x = date,
-                  y = 0,
-                  label = code)) +
-    labs(x = "Дата",
-         y = "Количество просмотров",
-         color = "Лекция",
-         title = "Кумулятивная сумма просмотров лекций") +
-    scale_x_date(date_breaks = "week",
-                 date_minor_breaks = "day") +
-    theme(legend.position = "bottom",
-          axis.text.x = element_text(angle = 90))
+    theme(legend.position = "bottom")
   ) %>% ggplotly() %>% 
   layout(legend = list(orientation = "h", x = .3, y = -.3))
 ```
 
 
-# P // Практики
 
-```{r pr-preproc}
+## Q // Квизы
+
+```{r q-preproc-table}
+q_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "quiz",
+               values_to = "total_score") %>% 
+  group_by(quiz) %>% 
+  mutate(total_score = as.numeric(total_score),
+         quiz = factor(quiz, 
+                       ordered = TRUE, 
+                       levels = paste0("Q", 1:15))) %>% 
+  summarise(mean_score = mean(total_score))
+  # separate(practice, into = c("practice", "half"), sep = "-") %>% 
+  # group_by(practice, half) %>% 
+  # mutate(present = as.numeric(present),
+  #        practice = factor(practice,
+  #                          ordered = TRUE,
+  #                          levels = paste0("P", 1:17))) %>%
+  # replace_na(list(present = 0)) %>% 
+  # summarise(count = sum(present),
+  #           percentage = mean(present))
+```
+
+
+## P // Практики
+
+```{r pr-preproc-table}
 pr_journal %>% 
   filter(Stream == "main") %>% 
   select(-Stream) %>% 
@@ -252,12 +224,12 @@ pr_journal %>%
                            levels = paste0("P", 1:17))) %>%
   replace_na(list(present = 0)) %>% 
   summarise(count = sum(present),
-            percentage = mean(present)) -> pr
+            percentage = mean(present)) -> pr_preproc
 ```
 
-```{r pr-graph-presence}
+```{r pr-plot-present}
 (
-  pr %>% 
+  pr_preproc %>% 
     ggplot(aes(practice, percentage, color = half, group = half)) +
     geom_line() +
     geom_point() +
@@ -272,10 +244,9 @@ pr_journal %>%
   layout(legend = list(orientation = "h", x = 0.3, y = -.3))
 ```
 
-# Q // Квизы
+## C // Консультации
 
-# HW // Домашки
+## HW // Домашки
 
-# С // Консультации
+## A // Разборы
 
-# A // Разборы
