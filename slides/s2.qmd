@@ -1,5 +1,5 @@
 ---
-title: " L2 // Предобработка данных. Дата и время Визуализация данных"
+title: " L2 // Предобработка данных. Дата и время. Визуализация данных"
 author: "Антон Ангельгардт"
 format: 
   revealjs:
@@ -23,15 +23,51 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
-- Пункт плана
-- Пункт плана
-- Пункт плана
+```{r opts, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+- Форматы файлов данных и загрузка данных
+- Организация рабочего пространства
+- Первичное исследование данных
+- Предобработка данных: основные операции
+- Дата и время
+- Строки
+- Регулярные выражения
+- Основные типы графиков
+- Важные моменты в визуализации
+- A Layered Grammar of Graphics
+
+
+# L2.1 // Работа с данными
+
+## Форматы файлов данных. CSV
+
+## Форматы файлов данных. TSV
+
+## Форматы файлов данных. TXT
+
+## Форматы файлов данных. Табличные форматы
+
+xls
+xlsx
+
+## Форматы файлов данных. Особая разметка
+
+JSON
+
+XML
+
+
 
 ## Организация рабочего пространства
 
+Рабочая директория
+
+
+
 ## Projects
 
-## Форматы данных
 
 ## Кодировка
 
@@ -39,17 +75,75 @@ link.href = 'pics/favicon.png';
 
 ## Первичное исследование данных
 
+head()
+tail()
+str()
+summary()
+table()
+unique()
+sort()
+apply()
+sapply()
 
 
-## Предобработка данных
+
+
+
+# L2.2 // Предобработка данных
+
+## Зачем нам предобрабатывать данные?
+
+
 
 ## Концепция Tidy Data
 
+
+
 ## Семейство пакетов `tidyverse`
+
+```{r, echo=TRUE, eval=FALSE}
+install.packages("tidyverse")
+```
+
+```{r, echo=TRUE}
+library(tidyverse)
+```
 
 ## Импорт данных
 
+
+```{r, echo=FALSE}
+tibble(id = 1:7,
+       var1 = c("Abc", "Def", "Ghi", "Jkl", "Mno", "Pqr", "Stu"),
+       var2 = c(5, 16, 94, 28, 11, 100, 96),
+       var3 = c(TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE),
+       var4 = c("cond1", "cond1", "cond2", "cond2", "cond3", "cond3", "cond1"),
+       var5 = c(12.8, 14.2, 32.5, 9.4, 6.3, 11.7, 95.5)) -> ds
+```
+
 ## Переименование переменных
+
+```{r}
+ds
+```
+
+```{r}
+ds %>% 
+  rename(city = var1,
+         age = var2)
+```
+
+```{r}
+ds %>% 
+  set_names(vars(id, city, age, student, condition, score))
+```
+
+```{r}
+ds %>% 
+  set_names(vars(id, city, age, student, condition, score)) %>% 
+  rename_all(str_remove, "~")
+```
+
 
 ## Фильтрация данных. Строки
 
@@ -68,7 +162,6 @@ link.href = 'pics/favicon.png';
 ## Широкий и длинный форматы данных
 
 
-
 ## Строки
 
 ## Операции над строками
@@ -83,7 +176,10 @@ link.href = 'pics/favicon.png';
 
 
 
-## Визуализация данных
+
+
+
+# L2.3 // Визуализация данных
 
 ## Зачем нужна визуализация?
 

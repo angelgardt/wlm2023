@@ -8,10 +8,10 @@
 <link href="s2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+  <meta name="generator" content="quarto-1.4.510">
 
   <meta name="author" content="Антон Ангельгардт">
-  <title>L2. Предобработка данных. Дата и время. Визуализация данных</title>
+  <title>L2 // Предобработка данных. Дата и время. Визуализация данных</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -95,7 +95,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="s2_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="s2_files/libs/revealjs/dist/theme/quarto.css">
   <link href="s2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="s2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="s2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -391,7 +392,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">L2. Предобработка данных. Дата и время. Визуализация данных</h1>
+  <h1 class="title">L2 // Предобработка данных. Дата и время. Визуализация данных</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -402,10 +403,10 @@
 </div>
 
 </section>
-<section id="зачем" class="slide level2">
-<h2>Зачем?</h2>
+<section id="что-будет" class="slide level2">
+<h2>Что будет?</h2>
 <div class="cell">
-<script type="text/javascript">
+<script>
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
 var link = document.createElement('link');
@@ -416,15 +417,245 @@ link.href = 'pics/favicon.png';
 </script>
 </div>
 <ul>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
+<li>Форматы файлов данных и загрузка данных</li>
+<li>Организация рабочего пространства</li>
+<li>Первичное исследование данных</li>
+<li>Предобработка данных: основные операции</li>
+<li>Дата и время</li>
+<li>Строки</li>
+<li>Регулярные выражения</li>
+<li>Основные типы графиков</li>
+<li>Важные моменты в визуализации</li>
+<li>A Layered Grammar of Graphics</li>
 </ul>
+</section>
+<section>
+<section id="l2.1-работа-с-данными" class="title-slide slide level1 center">
+<h1>L2.1 // Работа с данными</h1>
+
+</section>
+<section id="форматы-файлов-данных.-csv" class="slide level2">
+<h2>Форматы файлов данных. CSV</h2>
+</section>
+<section id="форматы-файлов-данных.-tsv" class="slide level2">
+<h2>Форматы файлов данных. TSV</h2>
+</section>
+<section id="форматы-файлов-данных.-txt" class="slide level2">
+<h2>Форматы файлов данных. TXT</h2>
+</section>
+<section id="форматы-файлов-данных.-табличные-форматы" class="slide level2">
+<h2>Форматы файлов данных. Табличные форматы</h2>
+<p>xls xlsx</p>
+</section>
+<section id="форматы-файлов-данных.-особая-разметка" class="slide level2">
+<h2>Форматы файлов данных. Особая разметка</h2>
+<p>JSON</p>
+<p>XML</p>
+</section>
+<section id="организация-рабочего-пространства" class="slide level2">
+<h2>Организация рабочего пространства</h2>
+<p>Рабочая директория</p>
+</section>
+<section id="projects" class="slide level2">
+<h2>Projects</h2>
+</section>
+<section id="кодировка" class="slide level2">
+<h2>Кодировка</h2>
+</section>
+<section id="локаль" class="slide level2">
+<h2>Локаль</h2>
+</section>
+<section id="первичное-исследование-данных" class="slide level2">
+<h2>Первичное исследование данных</h2>
+<p>head() tail() str() summary() table() unique() sort() apply() sapply()</p>
+</section></section>
+<section>
+<section id="l2.2-предобработка-данных" class="title-slide slide level1 center">
+<h1>L2.2 // Предобработка данных</h1>
+
+</section>
+<section id="зачем-нам-предобрабатывать-данные" class="slide level2">
+<h2>Зачем нам предобрабатывать данные?</h2>
+</section>
+<section id="концепция-tidy-data" class="slide level2">
+<h2>Концепция Tidy Data</h2>
+</section>
+<section id="семейство-пакетов-tidyverse" class="slide level2">
+<h2>Семейство пакетов <code>tidyverse</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="импорт-данных" class="slide level2">
+<h2>Импорт данных</h2>
+</section>
+<section id="переименование-переменных" class="slide level2">
+<h2>Переименование переменных</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 6
+     id var1   var2 var3  var4   var5
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;
+1     1 Abc       5 TRUE  cond1  12.8
+2     2 Def      16 FALSE cond1  14.2
+3     3 Ghi      94 FALSE cond2  32.5
+4     4 Jkl      28 FALSE cond2   9.4
+5     5 Mno      11 TRUE  cond3   6.3
+6     6 Pqr     100 TRUE  cond3  11.7
+7     7 Stu      96 FALSE cond1  95.5</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">rename</span>(<span class="at">city =</span> var1,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>         <span class="at">age =</span> var2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 6
+     id city    age var3  var4   var5
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;
+1     1 Abc       5 TRUE  cond1  12.8
+2     2 Def      16 FALSE cond1  14.2
+3     3 Ghi      94 FALSE cond2  32.5
+4     4 Jkl      28 FALSE cond2   9.4
+5     5 Mno      11 TRUE  cond3   6.3
+6     6 Pqr     100 TRUE  cond3  11.7
+7     7 Stu      96 FALSE cond1  95.5</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 6
+  `~id` `~city` `~age` `~student` `~condition` `~score`
+  &lt;int&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;lgl&gt;      &lt;chr&gt;           &lt;dbl&gt;
+1     1 Abc          5 TRUE       cond1            12.8
+2     2 Def         16 FALSE      cond1            14.2
+3     3 Ghi         94 FALSE      cond2            32.5
+4     4 Jkl         28 FALSE      cond2             9.4
+5     5 Mno         11 TRUE       cond3             6.3
+6     6 Pqr        100 TRUE       cond3            11.7
+7     7 Stu         96 FALSE      cond1            95.5</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">rename_all</span>(str_remove, <span class="st">"~"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 6
+     id city    age student condition score
+  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt;   &lt;chr&gt;     &lt;dbl&gt;
+1     1 Abc       5 TRUE    cond1      12.8
+2     2 Def      16 FALSE   cond1      14.2
+3     3 Ghi      94 FALSE   cond2      32.5
+4     4 Jkl      28 FALSE   cond2       9.4
+5     5 Mno      11 TRUE    cond3       6.3
+6     6 Pqr     100 TRUE    cond3      11.7
+7     7 Stu      96 FALSE   cond1      95.5</code></pre>
+</div>
+</div>
+</section>
+<section id="фильтрация-данных.-строки" class="slide level2">
+<h2>Фильтрация данных. Строки</h2>
+</section>
+<section id="фильтрация-данных.-столбцы" class="slide level2">
+<h2>Фильтрация данных. Столбцы</h2>
+</section>
+<section id="сортировка-данных" class="slide level2">
+<h2>Сортировка данных</h2>
+</section>
+<section id="создание-и-изменение-переменных" class="slide level2">
+<h2>Создание и изменение переменных</h2>
+</section>
+<section id="группировка-и-аггрегация-данных" class="slide level2">
+<h2>Группировка и аггрегация данных</h2>
+</section>
+<section id="объединение-датасетов.-строки-и-столбцы" class="slide level2">
+<h2>Объединение датасетов. Строки и столбцы</h2>
+</section>
+<section id="объединение-датасетов.-ключ" class="slide level2">
+<h2>Объединение датасетов. Ключ</h2>
+</section>
+<section id="широкий-и-длинный-форматы-данных" class="slide level2">
+<h2>Широкий и длинный форматы данных</h2>
+</section>
+<section id="строки" class="slide level2">
+<h2>Строки</h2>
+</section>
+<section id="операции-над-строками" class="slide level2">
+<h2>Операции над строками</h2>
+</section>
+<section id="регулярные-выражения" class="slide level2">
+<h2>Регулярные выражения</h2>
+</section>
+<section id="дата-и-время" class="slide level2">
+<h2>Дата и время</h2>
+</section>
+<section id="форматы-даты-и-времени" class="slide level2">
+<h2>Форматы даты и времени</h2>
+</section>
+<section id="операции-над-датами" class="slide level2">
+<h2>Операции над датами</h2>
+</section></section>
+<section>
+<section id="l2.3-визуализация-данных" class="title-slide slide level1 center">
+<h1>L2.3 // Визуализация данных</h1>
+
+</section>
+<section id="зачем-нужна-визуализация" class="slide level2">
+<h2>Зачем нужна визуализация?</h2>
+</section>
+<section id="виды-графиков.-bar-plot" class="slide level2">
+<h2>Виды графиков. Bar plot</h2>
+</section>
+<section id="виды-графиков.-histogram" class="slide level2">
+<h2>Виды графиков. Histogram</h2>
+</section>
+<section id="виды-графиков.-density-plot" class="slide level2">
+<h2>Виды графиков. Density plot</h2>
+</section>
+<section id="виды-графиков.-dot-plot" class="slide level2">
+<h2>Виды графиков. Dot plot</h2>
+</section>
+<section id="виды-графиков.-boxplot" class="slide level2">
+<h2>Виды графиков. Boxplot</h2>
+</section>
+<section id="виды-графиков.-violin-plot" class="slide level2">
+<h2>Виды графиков. Violin plot</h2>
+</section>
+<section id="виды-графиков.-error-bar" class="slide level2">
+<h2>Виды графиков. Error bar</h2>
+</section>
+<section id="виды-графиков.-line-plot" class="slide level2">
+<h2>Виды графиков. Line plot</h2>
+</section>
+<section id="виды-графиков.-scatter-plot" class="slide level2">
+<h2>Виды графиков. Scatter plot</h2>
+</section>
+<section id="виды-графиков.-corrplot" class="slide level2">
+<h2>Виды графиков. Corrplot</h2>
+</section>
+<section id="good-bad-practices-в-визуализации" class="slide level2">
+<h2>Good &amp; Bad practices в визуализации</h2>
+</section>
+<section id="основные-ошибки-в-визуализации" class="slide level2">
+<h2>Основные ошибки в визуализации</h2>
+</section>
+<section id="философия-a-layered-grammar-of-graphics" class="slide level2">
+<h2>Философия A Layered Grammar of Graphics</h2>
+</section>
+<section id="ggplot2" class="slide level2">
+<h2><code>ggplot2</code></h2>
 </section>
 <section id="текст" class="slide level2">
 <h2>Текст</h2>
 <p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
+</section></section>
 <section>
 <section id="раздел" class="title-slide slide level1 center">
 <h1>Раздел</h1>
@@ -442,7 +673,7 @@ link.href = 'pics/favicon.png';
 <h2>Код</h2>
 <p>When you click the <code>Render</code> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -490,7 +721,10 @@ x \thicksim \mathcal{N}(0, 1)
 </section>
 <section id="график" class="slide level2">
 <h2>График</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">plot</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
+</div>
 <img data-src="s2_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>
 <section id="итоги" class="slide level2">
 <h2>Итоги</h2>
@@ -538,7 +772,6 @@ x \thicksim \mathcal{N}(0, 1)
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -837,10 +1070,9 @@ x \thicksim \mathcal{N}(0, 1)
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -850,8 +1082,17 @@ x \thicksim \mathcal{N}(0, 1)
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
