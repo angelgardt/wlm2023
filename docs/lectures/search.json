@@ -325,7 +325,7 @@
     "href": "l2.html#операции-над-строками",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.33 Операции над строками",
-    "text": "2.33 Операции над строками\n\n2.33.1 Конкатенация строк\n\npaste('first', 'second', 'third')\n\n[1] \"first second third\"\n\n\n\npaste('first', 'second', 'third', sep = \"_\")\n\n[1] \"first_second_third\"\n\n\n\npaste0('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third', sep = \"|\")\n\n[1] \"first|second|third\"\n\n\n\nstri_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstri_c('first', 'second', 'third', sep = \" & \")\n\n[1] \"first & second & third\"\n\n\n\nds_1\n\n# A tibble: 150 × 4\n      id scale  item score\n   &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;\n 1     1 A         1     2\n 2     1 A         2     1\n 3     1 A         3     2\n 4     1 A         4     3\n 5     1 A         5     1\n 6     1 B         1     4\n 7     1 B         2     5\n 8     1 B         3     1\n 9     1 B         4     3\n10     1 B         5     4\n# ℹ 140 more rows\n\nds_1 %&gt;% \n  unite(scale_item, scale, item, sep = \"_\") -&gt; ds_2\nds_2\n\n# A tibble: 150 × 3\n      id scale_item score\n   &lt;int&gt; &lt;chr&gt;      &lt;int&gt;\n 1     1 A_1            2\n 2     1 A_2            1\n 3     1 A_3            2\n 4     1 A_4            3\n 5     1 A_5            1\n 6     1 B_1            4\n 7     1 B_2            5\n 8     1 B_3            1\n 9     1 B_4            3\n10     1 B_5            4\n# ℹ 140 more rows",
+    "text": "2.33 Операции над строками\n\n2.33.1 Конкатенация строк\n\npaste('first', 'second', 'third')\n\n[1] \"first second third\"\n\n\n\npaste('first', 'second', 'third', sep = \"_\")\n\n[1] \"first_second_third\"\n\n\n\npaste0('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third', sep = \"|\")\n\n[1] \"first|second|third\"\n\n\n\nstri_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstri_c('first', 'second', 'third', sep = \" & \")\n\n[1] \"first & second & third\"\n\n\n\nds_1\n\n# A tibble: 150 × 4\n      id scale  item score\n   &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;\n 1     1 A         1     4\n 2     1 A         2     1\n 3     1 A         3     1\n 4     1 A         4     5\n 5     1 A         5     3\n 6     1 B         1     2\n 7     1 B         2     5\n 8     1 B         3     5\n 9     1 B         4     2\n10     1 B         5     3\n# ℹ 140 more rows\n\nds_1 %&gt;% \n  unite(scale_item, scale, item, sep = \"_\") -&gt; ds_2\nds_2\n\n# A tibble: 150 × 3\n      id scale_item score\n   &lt;int&gt; &lt;chr&gt;      &lt;int&gt;\n 1     1 A_1            4\n 2     1 A_2            1\n 3     1 A_3            1\n 4     1 A_4            5\n 5     1 A_5            3\n 6     1 B_1            2\n 7     1 B_2            5\n 8     1 B_3            5\n 9     1 B_4            2\n10     1 B_5            3\n# ℹ 140 more rows",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
     ]
@@ -345,7 +345,7 @@
     "href": "l2.html#дата-и-время",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.40 Дата и время",
-    "text": "2.40 Дата и время\n\n2.40.1 Почему это особый тип данных?\n\nГод ≠ 365 дней: високосные года\nСутки ≠ 24 часа: переход на зимнее и летнее время\nМинута ≠ 60 секунд: компенсация замедления вращения земли (30 июня 23:59:60 или 31 декабря 23:59:60)\n\nВсе это автоматически обрабатывает lubridate.\n\ntoday()\n\n[1] \"2023-11-28\"\n\n\n\nnow()\n\n[1] \"2023-11-28 05:31:57 MSK\"",
+    "text": "2.40 Дата и время\n\n2.40.1 Почему это особый тип данных?\n\nГод ≠ 365 дней: високосные года\nСутки ≠ 24 часа: переход на зимнее и летнее время\nМинута ≠ 60 секунд: компенсация замедления вращения земли (30 июня 23:59:60 или 31 декабря 23:59:60)\n\nВсе это автоматически обрабатывает lubridate.\n\ntoday()\n\n[1] \"2023-11-29\"\n\n\n\nnow()\n\n[1] \"2023-11-29 02:49:50 MSK\"",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
     ]
@@ -653,7 +653,7 @@
     "href": "l2.html#генерация-случайных-строк",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.32 Генерация случайных строк",
-    "text": "2.32 Генерация случайных строк\n\nstri_rand_strings(n = 10, length = 5)\n\n [1] \"HraM2\" \"8hYLP\" \"dVYkO\" \"2ORnh\" \"XlKvq\" \"o6VFG\" \"oWi5v\" \"gYstf\" \"e0TZ3\"\n[10] \"YSpjL\"",
+    "text": "2.32 Генерация случайных строк\n\nstri_rand_strings(n = 10, length = 5)\n\n [1] \"W0iY9\" \"YYCp3\" \"LNwmj\" \"gGhsl\" \"TLRA6\" \"xLrjN\" \"pJDCL\" \"jTFng\" \"EelD6\"\n[10] \"F5cRs\"",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
     ]
@@ -663,7 +663,7 @@
     "href": "l2.html#операции-над-строками-1",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.34 Операции над строками",
-    "text": "2.34 Операции над строками\n\n2.34.1 Разделение строк\n\nstr_split(\"first second third\", pattern = \" \")\n\n[[1]]\n[1] \"first\"  \"second\" \"third\" \n\n\n\nds_2 %&gt;% \n  separate(scale_item, into = c(\"scale\", \"item\"))\n\n# A tibble: 150 × 4\n      id scale item  score\n   &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;\n 1     1 A     1         2\n 2     1 A     2         1\n 3     1 A     3         2\n 4     1 A     4         3\n 5     1 A     5         1\n 6     1 B     1         4\n 7     1 B     2         5\n 8     1 B     3         1\n 9     1 B     4         3\n10     1 B     5         4\n# ℹ 140 more rows",
+    "text": "2.34 Операции над строками\n\n2.34.1 Разделение строк\n\nstr_split(\"first second third\", pattern = \" \")\n\n[[1]]\n[1] \"first\"  \"second\" \"third\" \n\n\n\nds_2 %&gt;% \n  separate(scale_item, into = c(\"scale\", \"item\"))\n\n# A tibble: 150 × 4\n      id scale item  score\n   &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;\n 1     1 A     1         4\n 2     1 A     2         1\n 3     1 A     3         1\n 4     1 A     4         5\n 5     1 A     5         3\n 6     1 B     1         2\n 7     1 B     2         5\n 8     1 B     3         5\n 9     1 B     4         2\n10     1 B     5         3\n# ℹ 140 more rows",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
     ]
@@ -713,7 +713,7 @@
     "href": "l2.html#извлечение-компонентов-даты",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.42 Извлечение компонентов даты",
-    "text": "2.42 Извлечение компонентов даты\n\n## текущий timestamp\nas.numeric(now())\n\n[1] 1701138718\n\n\n\nyear(now())\n\n[1] 2023\n\nmonth(now())\n\n[1] 11\n\nday(now())\n\n[1] 28\n\nhour(now())\n\n[1] 5\n\nminute(now())\n\n[1] 31\n\nsecond(now())\n\n[1] 57.77971",
+    "text": "2.42 Извлечение компонентов даты\n\n## текущий timestamp\nas.numeric(now())\n\n[1] 1701215390\n\n\n\nyear(now())\n\n[1] 2023\n\nmonth(now())\n\n[1] 11\n\nday(now())\n\n[1] 29\n\nhour(now())\n\n[1] 2\n\nminute(now())\n\n[1] 49\n\nsecond(now())\n\n[1] 50.44431",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
     ]
