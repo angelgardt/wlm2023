@@ -136,15 +136,21 @@
     "objectID": "l2.html#организация-рабочего-пространства",
     "href": "l2.html#организация-рабочего-пространства",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.2 Организация рабочего пространства",
-    "text": "2.2 Организация рабочего пространства"
+    "section": "2.4 Организация рабочего пространства",
+    "text": "2.4 Организация рабочего пространства\nРабочая директория — папка, в которую по умолчанию смотрит R, когда начинает искать файлы.\nЧтобы узнать рабочую директорию, воспользуйтесь функцией\n\ngetwd()\n\nЧтобы установить какую-либо папку в каечстве рабочей директории, используйте\n\nsetwd(\"/home/nglgrdt/R\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#projects",
     "href": "l2.html#projects",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.3 Projects",
-    "text": "2.3 Projects"
+    "section": "2.6 Projects",
+    "text": "2.6 Projects\n\nRStudio предоставляет возможность работать в проектах\nЭто существено упрощает организацию файлов, относящихся к одному исследованию\nВнутри проекта можно создавать необходимые папки (для данных, скриптов, результатов анализа, визуализаций и др.)\nПри запуске проекта автоматически устанавливается рабочая директория\nУдобно использовать относительные пути к файлам\nЧтобы код воспроизводился на другом коспьютере, достаточно заархивировать весь проект и отправить коллеге\n\n\n2.6.1 Как создать проект?\n\nВ правом верхнем углу нажмите на Project: (None) и выберите New Project....\n\n\n\n\n\nСоздание проекта. Шаг 1\n\n\n\n\nВ открывшемся окне выберите New Directory. Это опция создаст новую папку для проекта.\n\n\n\n\n\nСоздание проекта. Шаг 2\n\n\n\n\nДалее выберите New Project.\n\n\n\n\n\nСоздание проекта. Шаг 3\n\n\n\n\nВ поле Directory name укажите, как будет называться папка проекта. В поле Create project as subdirectory of: можно выбрать, внутри какой папки создастся папка проекта. Нажмите Create Project.\n\n\n\n\n\nСоздание проекта. Шаг 4\n\n\n\n\nПроект создан и открыт. Теперь в нем можно работать. Чтобы узнать, в каком проекте вы сейчас находитесь, посмотрите в правый верхний угол.\n\n\n\n\n\nСоздание проекта. Шаг 5",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#форматы-данных",
@@ -157,8 +163,11 @@
     "objectID": "l2.html#кодировка",
     "href": "l2.html#кодировка",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.5 Кодировка",
-    "text": "2.5 Кодировка"
+    "section": "2.7 Кодировка",
+    "text": "2.7 Кодировка\n\nКомпьютер умеет хранить только числа, а скрипт — это текст\nДанные также часто содержат текст\nДоговорились, что буквеные символы будут храниться на железе компьютера в виде чисел и составили таблицы соответствий между числами и буквами\nТакие таблицы были названы кодировками\nКодировок много, так как они создавались для разных алфавитов и задач\nСтандартной считается UTF-8\nПри работе с нестандартными символами (например, диакритические знаки или фонетические символы) пригодится UTF-16",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#локаль",
@@ -171,8 +180,11 @@
     "objectID": "l2.html#первичное-исследование-данных",
     "href": "l2.html#первичное-исследование-данных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.7 Первичное исследование данных",
-    "text": "2.7 Первичное исследование данных"
+    "section": "2.8 Первичное исследование данных",
+    "text": "2.8 Первичное исследование данных\nПрочитаем данные. В данном случае использован относительный путь.\n\nlec2 &lt;- read.csv(\"data/lecture2.csv\", encoding = \"UTF-8\")\n\nВыведем первый 6 строк датасета:\n\nhead(lec2)\n\n  id var1 var2  var3  var4 var5\n1  1  Abc    5  TRUE cond1 12.8\n2  2  Def   16 FALSE cond1 14.2\n3  3  Ghi   94 FALSE cond2 32.5\n4  4  Jkl   28 FALSE cond2  9.4\n5  5  Mno   11  TRUE cond3  6.3\n6  6  Pqr  100  TRUE cond3 11.7\n\n\nВыведем последние 3 строки датасета:\n\ntail(lec2, n = 3)\n\n  id var1 var2  var3  var4 var5\n5  5  Mno   11  TRUE cond3  6.3\n6  6  Pqr  100  TRUE cond3 11.7\n7  7  Stu   96 FALSE cond1 95.5\n\n\nПосмотрим на структуру датасета:\n\nstr(lec2)\n\n'data.frame':   7 obs. of  6 variables:\n $ id  : int  1 2 3 4 5 6 7\n $ var1: chr  \"Abc\" \"Def\" \"Ghi\" \"Jkl\" ...\n $ var2: int  5 16 94 28 11 100 96\n $ var3: logi  TRUE FALSE FALSE FALSE TRUE TRUE ...\n $ var4: chr  \"cond1\" \"cond1\" \"cond2\" \"cond2\" ...\n $ var5: num  12.8 14.2 32.5 9.4 6.3 11.7 95.5\n\n\nПосмотрим описательные статистики по переменным:\n\nsummary(lec2)\n\n       id          var1                var2          var3        \n Min.   :1.0   Length:7           Min.   :  5.0   Mode :logical  \n 1st Qu.:2.5   Class :character   1st Qu.: 13.5   FALSE:4        \n Median :4.0   Mode  :character   Median : 28.0   TRUE :3        \n Mean   :4.0                      Mean   : 50.0                  \n 3rd Qu.:5.5                      3rd Qu.: 95.0                  \n Max.   :7.0                      Max.   :100.0                  \n     var4                var5      \n Length:7           Min.   : 6.30  \n Class :character   1st Qu.:10.55  \n Mode  :character   Median :12.80  \n                    Mean   :26.06  \n                    3rd Qu.:23.35  \n                    Max.   :95.50  \n\n\nСделаем частотную таблицу по категориальной переменной:\n\ntable(lec2$var4)\n\n\ncond1 cond2 cond3 \n    3     2     2 \n\n\nПосмотрим уникальные значений по переменной-индетификатору:\n\nunique(lec2$id)\n\n[1] 1 2 3 4 5 6 7\n\n\nОтсортируем количественную переменную по возрастанию:\n\nsort(lec2$var5)\n\n[1]  6.3  9.4 11.7 12.8 14.2 32.5 95.5\n\n\nПроверим, есть ли пропущенные значения — выполним функцию is.na() на каждом столце датасета:\n\napply(lec2, 2, is.na)\n\n        id  var1  var2  var3  var4  var5\n[1,] FALSE FALSE FALSE FALSE FALSE FALSE\n[2,] FALSE FALSE FALSE FALSE FALSE FALSE\n[3,] FALSE FALSE FALSE FALSE FALSE FALSE\n[4,] FALSE FALSE FALSE FALSE FALSE FALSE\n[5,] FALSE FALSE FALSE FALSE FALSE FALSE\n[6,] FALSE FALSE FALSE FALSE FALSE FALSE\n[7,] FALSE FALSE FALSE FALSE FALSE FALSE\n\n\nУпрощенным вариантом функции apply() является sapply() — она сразу запускает какую-либо функцию по столбцам датасета. В данному случае использована анонимная функция, которая посчитает количество пропущенных значений в каждом столбце.\n\nsapply(lec2, function(x) sum(is.na(x)))\n\n  id var1 var2 var3 var4 var5 \n   0    0    0    0    0    0",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#предобработка-данных",
@@ -185,15 +197,21 @@
     "objectID": "l2.html#концепция-tidy-data",
     "href": "l2.html#концепция-tidy-data",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.9 Концепция Tidy Data",
-    "text": "2.9 Концепция Tidy Data"
+    "section": "2.10 Концепция Tidy Data",
+    "text": "2.10 Концепция Tidy Data\n\nВ каждом столбце содержится одна переменная\nВ каждой строке содержится одно наблюдение\nВ каждой ячейке содержится одно значение\n\n\n\n\n\nПринципы концепции Tidy Data",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#семейство-пакетов-tidyverse",
     "href": "l2.html#семейство-пакетов-tidyverse",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.10 Семейство пакетов tidyverse",
-    "text": "2.10 Семейство пакетов tidyverse"
+    "section": "2.11 Семейство пакетов tidyverse",
+    "text": "2.11 Семейство пакетов tidyverse\nУстановить пакет:\n\ninstall.packages(\"tidyverse\")\n\nПодключить пакет к текущей сессии R:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#импорт-данных",
@@ -206,99 +224,141 @@
     "objectID": "l2.html#переименование-переменных",
     "href": "l2.html#переименование-переменных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.12 Переименование переменных",
-    "text": "2.12 Переименование переменных"
+    "section": "2.14 Переименование переменных",
+    "text": "2.14 Переименование переменных\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\n\n\nds %&gt;% \n  rename(city = var1,\n         age = var2)\n\n# A tibble: 7 × 6\n     id city    age var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\n\n\nds %&gt;% \n  set_names(vars(id, city, age, student, condition, score))\n\n# A tibble: 7 × 6\n  `~id` `~city` `~age` `~student` `~condition` `~score`\n  &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;lgl&gt;      &lt;chr&gt;           &lt;dbl&gt;\n1     1 Abc          5 TRUE       cond1            12.8\n2     2 Def         16 FALSE      cond1            14.2\n3     3 Ghi         94 FALSE      cond2            32.5\n4     4 Jkl         28 FALSE      cond2             9.4\n5     5 Mno         11 TRUE       cond3             6.3\n6     6 Pqr        100 TRUE       cond3            11.7\n7     7 Stu         96 FALSE      cond1            95.5\n\n\n\nds %&gt;% \n  set_names(vars(id, city, age, student, condition, score)) %&gt;% \n  rename_all(str_remove, \"~\")\n\n# A tibble: 7 × 6\n     id city    age student condition score\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt;   &lt;chr&gt;     &lt;dbl&gt;\n1     1 Abc       5 TRUE    cond1      12.8\n2     2 Def      16 FALSE   cond1      14.2\n3     3 Ghi      94 FALSE   cond2      32.5\n4     4 Jkl      28 FALSE   cond2       9.4\n5     5 Mno      11 TRUE    cond3       6.3\n6     6 Pqr     100 TRUE    cond3      11.7\n7     7 Stu      96 FALSE   cond1      95.5",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#фильтрация-данных.-строки",
     "href": "l2.html#фильтрация-данных.-строки",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.13 Фильтрация данных. Строки",
-    "text": "2.13 Фильтрация данных. Строки"
+    "section": "2.15 Фильтрация данных. Строки",
+    "text": "2.15 Фильтрация данных. Строки\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  filter(var5 &gt; 10)\n\n# A tibble: 5 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     6 Pqr     100 TRUE  cond3  11.7\n5     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  filter(var3)\n\n# A tibble: 3 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     5 Mno      11 TRUE  cond3   6.3\n3     6 Pqr     100 TRUE  cond3  11.7\n\nds %&gt;% slice(3:5)\n\n# A tibble: 3 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     3 Ghi      94 FALSE cond2  32.5\n2     4 Jkl      28 FALSE cond2   9.4\n3     5 Mno      11 TRUE  cond3   6.3",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#фильтрация-данных.-столбцы",
     "href": "l2.html#фильтрация-данных.-столбцы",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.14 Фильтрация данных. Столбцы",
-    "text": "2.14 Фильтрация данных. Столбцы"
+    "section": "2.16 Фильтрация данных. Столбцы",
+    "text": "2.16 Фильтрация данных. Столбцы\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  select(id, var1, var3, var4)\n\n# A tibble: 7 × 4\n     id var1  var3  var4 \n  &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt; &lt;chr&gt;\n1     1 Abc   TRUE  cond1\n2     2 Def   FALSE cond1\n3     3 Ghi   FALSE cond2\n4     4 Jkl   FALSE cond2\n5     5 Mno   TRUE  cond3\n6     6 Pqr   TRUE  cond3\n7     7 Stu   FALSE cond1\n\nds %&gt;% \n  select(starts_with(\"var\"))\n\n# A tibble: 7 × 5\n  var1   var2 var3  var4   var5\n  &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1 Abc       5 TRUE  cond1  12.8\n2 Def      16 FALSE cond1  14.2\n3 Ghi      94 FALSE cond2  32.5\n4 Jkl      28 FALSE cond2   9.4\n5 Mno      11 TRUE  cond3   6.3\n6 Pqr     100 TRUE  cond3  11.7\n7 Stu      96 FALSE cond1  95.5",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#сортировка-данных",
     "href": "l2.html#сортировка-данных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.15 Сортировка данных",
-    "text": "2.15 Сортировка данных"
+    "section": "2.17 Сортировка данных",
+    "text": "2.17 Сортировка данных\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  arrange(var5)\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     5 Mno      11 TRUE  cond3   6.3\n2     4 Jkl      28 FALSE cond2   9.4\n3     6 Pqr     100 TRUE  cond3  11.7\n4     1 Abc       5 TRUE  cond1  12.8\n5     2 Def      16 FALSE cond1  14.2\n6     3 Ghi      94 FALSE cond2  32.5\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  arrange(desc(var5))\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     7 Stu      96 FALSE cond1  95.5\n2     3 Ghi      94 FALSE cond2  32.5\n3     2 Def      16 FALSE cond1  14.2\n4     1 Abc       5 TRUE  cond1  12.8\n5     6 Pqr     100 TRUE  cond3  11.7\n6     4 Jkl      28 FALSE cond2   9.4\n7     5 Mno      11 TRUE  cond3   6.3\n\nds %&gt;% \n  distinct(var4, var3)\n\n# A tibble: 4 × 2\n  var4  var3 \n  &lt;chr&gt; &lt;lgl&gt;\n1 cond1 TRUE \n2 cond1 FALSE\n3 cond2 FALSE\n4 cond3 TRUE",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#создание-и-изменение-переменных",
     "href": "l2.html#создание-и-изменение-переменных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.16 Создание и изменение переменных",
-    "text": "2.16 Создание и изменение переменных"
+    "section": "2.18 Создание и изменение переменных",
+    "text": "2.18 Создание и изменение переменных\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  mutate(banch = 1)\n\n# A tibble: 7 × 7\n     id var1   var2 var3  var4   var5 banch\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8     1\n2     2 Def      16 FALSE cond1  14.2     1\n3     3 Ghi      94 FALSE cond2  32.5     1\n4     4 Jkl      28 FALSE cond2   9.4     1\n5     5 Mno      11 TRUE  cond3   6.3     1\n6     6 Pqr     100 TRUE  cond3  11.7     1\n7     7 Stu      96 FALSE cond1  95.5     1\n\nds %&gt;% \n  mutate(banch = 1,\n         var5_cat = ifelse(var5 &gt; mean(var5), \"high\", \"low\"),\n         var4 = recode(var4,\n                       \"cond1\" = \"easy\",\n                       \"cond2\" = \"medium\",\n                       \"cond3\" = \"hard\"))\n\n# A tibble: 7 × 8\n     id var1   var2 var3  var4    var5 banch var5_cat\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   \n1     1 Abc       5 TRUE  easy    12.8     1 low     \n2     2 Def      16 FALSE easy    14.2     1 low     \n3     3 Ghi      94 FALSE medium  32.5     1 high    \n4     4 Jkl      28 FALSE medium   9.4     1 low     \n5     5 Mno      11 TRUE  hard     6.3     1 low     \n6     6 Pqr     100 TRUE  hard    11.7     1 low     \n7     7 Stu      96 FALSE easy    95.5     1 high",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#группировка-и-аггрегация-данных",
     "href": "l2.html#группировка-и-аггрегация-данных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.17 Группировка и аггрегация данных",
-    "text": "2.17 Группировка и аггрегация данных"
+    "section": "2.19 Группировка и аггрегация данных",
+    "text": "2.19 Группировка и аггрегация данных\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5\n\nds %&gt;% \n  summarise(v5_mean = mean(var5),\n            v2_median = median(var2))\n\n# A tibble: 1 × 2\n  v5_mean v2_median\n    &lt;dbl&gt;     &lt;dbl&gt;\n1    26.1        28\n\nds %&gt;% \n  group_by(var4) %&gt;% \n  summarise(n = n(),\n            v5_mean = mean(var5),\n            v2_median = median(var2))\n\n# A tibble: 3 × 4\n  var4      n v5_mean v2_median\n  &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n1 cond1     3    40.8      16  \n2 cond2     2    21.0      61  \n3 cond3     2     9        55.5\n\nds %&gt;% \n  summarise(n = n(),\n            v5_mean = mean(var5),\n            v2_median = median(var2),\n            .by = var4)\n\n# A tibble: 3 × 4\n  var4      n v5_mean v2_median\n  &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n1 cond1     3    40.8      16  \n2 cond2     2    21.0      61  \n3 cond3     2     9        55.5\n\n\n\nungroup()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#объединение-датасетов.-строки-и-столбцы",
     "href": "l2.html#объединение-датасетов.-строки-и-столбцы",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.18 Объединение датасетов. Строки и столбцы",
-    "text": "2.18 Объединение датасетов. Строки и столбцы"
+    "section": "2.20 Объединение датасетов. Строки и столбцы",
+    "text": "2.20 Объединение датасетов. Строки и столбцы\n\na\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     3 Ghi      94\n4     4 Jkl      28\n\nb\n\n# A tibble: 4 × 3\n     id var3  var4 \n  &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt;\n1     1 TRUE  cond1\n2     2 FALSE cond1\n3     3 FALSE cond2\n4     4 FALSE cond2\n\nc\n\n# A tibble: 3 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     5 Mno      11\n2     6 Pqr     100\n3     7 Stu      96\n\na %&gt;% \n  bind_cols(b)\n\nNew names:\n• `id` -&gt; `id...1`\n• `id` -&gt; `id...4`\n\n\n# A tibble: 4 × 6\n  id...1 var1   var2 id...4 var3  var4 \n   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt;\n1      1 Abc       5      1 TRUE  cond1\n2      2 Def      16      2 FALSE cond1\n3      3 Ghi      94      3 FALSE cond2\n4      4 Jkl      28      4 FALSE cond2\n\na %&gt;% \n  bind_rows(c)\n\n# A tibble: 7 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     3 Ghi      94\n4     4 Jkl      28\n5     5 Mno      11\n6     6 Pqr     100\n7     7 Stu      96",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#объединение-датасетов.-ключ",
     "href": "l2.html#объединение-датасетов.-ключ",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.19 Объединение датасетов. Ключ",
-    "text": "2.19 Объединение датасетов. Ключ"
+    "section": "2.21 Объединение датасетов. Ключ",
+    "text": "2.21 Объединение датасетов. Ключ\n\n\n\n\nСхема датасетов\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#широкий-и-длинный-форматы-данных",
     "href": "l2.html#широкий-и-длинный-форматы-данных",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.20 Широкий и длинный форматы данных",
-    "text": "2.20 Широкий и длинный форматы данных"
+    "section": "2.30 Широкий и длинный форматы данных",
+    "text": "2.30 Широкий и длинный форматы данных\n\n\n\n\nПредставление одних и тех же данных в длинном и широком форматах\n\n\n\n\nlong\n\n# A tibble: 6 × 3\n     id var1   var2\n  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     1 cond2  32.5\n4     2 cond2   9.4\n5     1 cond3   6.3\n6     2 cond3  11.7\n\nlong %&gt;% \n  pivot_wider(names_from = var1,\n              values_from = var2) -&gt; wide\nwide\n\n# A tibble: 2 × 4\n     id cond1 cond2 cond3\n  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1  12.8  32.5   6.3\n2     2  14.2   9.4  11.7\n\nwide %&gt;% \n  pivot_longer(cols = -id) # names_to, values_to\n\n# A tibble: 6 × 3\n     id name  value\n  &lt;int&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     1 cond2  32.5\n3     1 cond3   6.3\n4     2 cond1  14.2\n5     2 cond2   9.4\n6     2 cond3  11.7",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#строки",
     "href": "l2.html#строки",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.21 Строки",
-    "text": "2.21 Строки"
+    "section": "2.31 Строки",
+    "text": "2.31 Строки\nДва специализированных пакета:\n\nstringr (является частью tidyverse)\nstringi (устанавливается отдельно)\n\n\n# install.packages(\"stringi\")\nlibrary(stringi)\n\n\n2.31.1 Как создать строку?\n\ns1 &lt;- \"сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений\"\ns1\n\n[1] \"сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений\"\n\n\n\ns2 &lt;- 'С другой стороны постоянный количественный \"рост\" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации'\ns2\n\n[1] \"С другой стороны постоянный количественный \\\"рост\\\" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"\n\n\n\ns3 &lt;- \"С другой стороны постоянный количественный \"рост\" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"\ns3\n\nError: &lt;text&gt;:1:52: unexpected symbol\n1: s3 &lt;- \"С другой стороны постоянный количественный \"рост\n                                                       ^\n\n\n\ns4 &lt;- \"С другой стороны постоянный количественный 'рост' и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"\ns4\n\n[1] \"С другой стороны постоянный количественный 'рост' и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"\n\n\n\ns5 &lt;- \"С другой стороны постоянный количественный «рост» и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"\ns5\n\n[1] \"С другой стороны постоянный количественный «рост» и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#операции-над-строками",
     "href": "l2.html#операции-над-строками",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.22 Операции над строками",
-    "text": "2.22 Операции над строками"
+    "section": "2.33 Операции над строками",
+    "text": "2.33 Операции над строками\n\n2.33.1 Конкатенация строк\n\npaste('first', 'second', 'third')\n\n[1] \"first second third\"\n\n\n\npaste('first', 'second', 'third', sep = \"_\")\n\n[1] \"first_second_third\"\n\n\n\npaste0('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstr_c('first', 'second', 'third', sep = \"|\")\n\n[1] \"first|second|third\"\n\n\n\nstri_c('first', 'second', 'third')\n\n[1] \"firstsecondthird\"\n\n\n\nstri_c('first', 'second', 'third', sep = \" & \")\n\n[1] \"first & second & third\"\n\n\n\nds_1\n\n# A tibble: 150 × 4\n      id scale  item score\n   &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;\n 1     1 A         1     2\n 2     1 A         2     1\n 3     1 A         3     2\n 4     1 A         4     3\n 5     1 A         5     1\n 6     1 B         1     4\n 7     1 B         2     5\n 8     1 B         3     1\n 9     1 B         4     3\n10     1 B         5     4\n# ℹ 140 more rows\n\nds_1 %&gt;% \n  unite(scale_item, scale, item, sep = \"_\") -&gt; ds_2\nds_2\n\n# A tibble: 150 × 3\n      id scale_item score\n   &lt;int&gt; &lt;chr&gt;      &lt;int&gt;\n 1     1 A_1            2\n 2     1 A_2            1\n 3     1 A_3            2\n 4     1 A_4            3\n 5     1 A_5            1\n 6     1 B_1            4\n 7     1 B_2            5\n 8     1 B_3            1\n 9     1 B_4            3\n10     1 B_5            4\n# ℹ 140 more rows",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#регулярные-выражения",
     "href": "l2.html#регулярные-выражения",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.23 Регулярные выражения",
-    "text": "2.23 Регулярные выражения"
+    "section": "2.37 Регулярные выражения",
+    "text": "2.37 Регулярные выражения\n\ndates &lt;- c('21.92.2001', '01.04.1994', '5-3-2011', '6/04/1999')\ndates\n\n[1] \"21.92.2001\" \"01.04.1994\" \"5-3-2011\"   \"6/04/1999\" \n\n\n\n2.37.1 Метасимволы\n\nstr_view_all(dates, pattern = \".\")\n\nWarning: `str_view()` was deprecated in stringr 1.5.0.\nℹ Please use `str_view_all()` instead.\n\n\n[1] │ &lt;2&gt;&lt;1&gt;&lt;.&gt;&lt;9&gt;&lt;2&gt;&lt;.&gt;&lt;2&gt;&lt;0&gt;&lt;0&gt;&lt;1&gt;\n[2] │ &lt;0&gt;&lt;1&gt;&lt;.&gt;&lt;0&gt;&lt;4&gt;&lt;.&gt;&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;4&gt;\n[3] │ &lt;5&gt;&lt;-&gt;&lt;3&gt;&lt;-&gt;&lt;2&gt;&lt;0&gt;&lt;1&gt;&lt;1&gt;\n[4] │ &lt;6&gt;&lt;/&gt;&lt;0&gt;&lt;4&gt;&lt;/&gt;&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;9&gt;\n\n\n\nstr_view_all(dates, pattern = \"\\\\.\") # экранирование метасимволов\n\n[1] │ 21&lt;.&gt;92&lt;.&gt;2001\n[2] │ 01&lt;.&gt;04&lt;.&gt;1994\n[3] │ 5-3-2011\n[4] │ 6/04/1999\n\n\n\nstr_view_all(dates, pattern = \"^0\")\n\n[1] │ 21.92.2001\n[2] │ &lt;0&gt;1.04.1994\n[3] │ 5-3-2011\n[4] │ 6/04/1999\n\n\n\nstr_view_all(dates, pattern = \"9$\")\n\n[1] │ 21.92.2001\n[2] │ 01.04.1994\n[3] │ 5-3-2011\n[4] │ 6/04/199&lt;9&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#дата-и-время",
     "href": "l2.html#дата-и-время",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.24 Дата и время",
-    "text": "2.24 Дата и время"
+    "section": "2.40 Дата и время",
+    "text": "2.40 Дата и время\n\n2.40.1 Почему это особый тип данных?\n\nГод ≠ 365 дней: високосные года\nСутки ≠ 24 часа: переход на зимнее и летнее время\nМинута ≠ 60 секунд: компенсация замедления вращения земли (30 июня 23:59:60 или 31 декабря 23:59:60)\n\nВсе это автоматически обрабатывает lubridate.\n\ntoday()\n\n[1] \"2023-11-28\"\n\n\n\nnow()\n\n[1] \"2023-11-28 05:31:57 MSK\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#форматы-даты-и-времени",
     "href": "l2.html#форматы-даты-и-времени",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.25 Форматы даты и времени",
-    "text": "2.25 Форматы даты и времени"
+    "section": "2.41 Форматы даты и времени",
+    "text": "2.41 Форматы даты и времени\n\nyyyy-mm-dd — является международным стандартом\n\nв таком формате с датой можно работать как со строкой, что оказывается удобно для баз данных\n\ndd/mm/yy, dd/mm/yyyy, dd.mm.yyyy — используется в Европе\nmm/dd/yy, mm/dd/yyyy — используется в США\nUnix-timestamp (число) — количество секунд с 01.01.1970, используется в базах данных",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#операции-над-датами",
@@ -318,8 +378,11 @@
     "objectID": "l2.html#зачем-нужна-визуализация",
     "href": "l2.html#зачем-нужна-визуализация",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.28 Зачем нужна визуализация?",
-    "text": "2.28 Зачем нужна визуализация?"
+    "section": "2.43 Зачем нужна визуализация?",
+    "text": "2.43 Зачем нужна визуализация?\n\n2.43.1 Квартет Анскомба\n\n\nRows: 44 Columns: 4\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (4): id, dataset, x, y\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\nspc_tbl_ [44 × 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ id     : num [1:44] 1 1 1 1 2 2 2 2 3 3 ...\n $ dataset: num [1:44] 1 2 3 4 1 2 3 4 1 2 ...\n $ x      : num [1:44] 10 10 10 8 8 8 8 8 13 13 ...\n $ y      : num [1:44] 8.04 9.14 7.46 6.58 6.95 8.14 6.77 5.76 7.58 8.74 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   id = col_double(),\n  ..   dataset = col_double(),\n  ..   x = col_double(),\n  ..   y = col_double()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\n\n\n\n# A tibble: 4 × 7\n  dataset     n mean_x mean_y  sd_x  sd_y   cor\n    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1       1    11      9    7.5  3.32  2.03  0.82\n2       2    11      9    7.5  3.32  2.03  0.82\n3       3    11      9    7.5  3.32  2.03  0.82\n4       4    11      9    7.5  3.32  2.03  0.82\n\n\nНо если это нарисовать, получим такое:\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\n2.43.2 Datasaurus\n\n\nRows: 1846 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): dataset\ndbl (2): x, y\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\nspc_tbl_ [1,846 × 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ dataset: chr [1:1846] \"dino\" \"dino\" \"dino\" \"dino\" ...\n $ x      : num [1:1846] 55.4 51.5 46.2 42.8 40.8 ...\n $ y      : num [1:1846] 97.2 96 94.5 91.4 88.3 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   dataset = col_character(),\n  ..   x = col_double(),\n  ..   y = col_double()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\n\n\n\n# A tibble: 13 × 7\n   dataset        n mean_x mean_y  sd_x  sd_y   cor\n   &lt;chr&gt;      &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 away         142   54.3   47.8  16.8  26.9  -0.1\n 2 bullseye     142   54.3   47.8  16.8  26.9  -0.1\n 3 circle       142   54.3   47.8  16.8  26.9  -0.1\n 4 dino         142   54.3   47.8  16.8  26.9  -0.1\n 5 dots         142   54.3   47.8  16.8  26.9  -0.1\n 6 h_lines      142   54.3   47.8  16.8  26.9  -0.1\n 7 high_lines   142   54.3   47.8  16.8  26.9  -0.1\n 8 slant_down   142   54.3   47.8  16.8  26.9  -0.1\n 9 slant_up     142   54.3   47.8  16.8  26.9  -0.1\n10 star         142   54.3   47.8  16.8  26.9  -0.1\n11 v_lines      142   54.3   47.8  16.8  26.9  -0.1\n12 wide_lines   142   54.3   47.8  16.8  26.9  -0.1\n13 x_shape      142   54.3   47.8  16.8  26.9  -0.1\n\n\nОднако если это визуализировать, то будет вот что:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#виды-графиков.-bar-plot",
@@ -395,8 +458,11 @@
     "objectID": "l2.html#good-bad-practices-в-визуализации",
     "href": "l2.html#good-bad-practices-в-визуализации",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.39 Good & Bad practices в визуализации",
-    "text": "2.39 Good & Bad practices в визуализации"
+    "section": "2.45 Good & Bad practices в визуализации",
+    "text": "2.45 Good & Bad practices в визуализации\n\n2.45.1 Хорошо\n\nПодписать оси так, чтобы было понятно, что они обозначают\nИспользовать контрастную палитру цветов (или обойтись черно-белой)\nПроверить, как видят график люди с цветовыми аномалиями зрения\nВыстроить из визуализаций историю\n\n\n\n2.45.2 Плохо\n\nИспользовать разные диапазоны шкал или разный масштаб на графиках, которые необходимо сравнивать\nСтроить столбчатую диаграмму не от нуля\nСтроить визуализацию в 3D на бумаге\nСтроить круговую диаграму\nСтроить круговую диаграмму в 3D\n\nБольше примеров странных визуализаций тут.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#основные-ошибки-в-визуализации",
@@ -409,8 +475,11 @@
     "objectID": "l2.html#философия-a-layered-grammar-of-graphics",
     "href": "l2.html#философия-a-layered-grammar-of-graphics",
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
-    "section": "2.41 Философия A Layered Grammar of Graphics",
-    "text": "2.41 Философия A Layered Grammar of Graphics"
+    "section": "2.46 Философия A Layered Grammar of Graphics",
+    "text": "2.46 Философия A Layered Grammar of Graphics\n\nГрафик состоит из нескольких независимых друг от друга элементов\n\nосновы графика (фон и оси)\nсистемы координат\nспособов отображения данных (геометрических объектов)\nшкал\nфасетов\n\nОднотипные элементы графика располагаются на отдельных слоях\nВычисления отделены от визуализации\nДизайн отделен от содержания\n\nЭти принципы легли в основу пакета ggplot2.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   },
   {
     "objectID": "l2.html#ggplot2",
@@ -418,5 +487,415 @@
     "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
     "section": "2.42 ggplot2",
     "text": "2.42 ggplot2"
+  },
+  {
+    "objectID": "l2.html",
+    "href": "l2.html",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "",
+    "text": "3 Виды графиков",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#форматы-файлов-данных",
+    "href": "l2.html#форматы-файлов-данных",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.1 Форматы файлов данных",
+    "text": "2.1 Форматы файлов данных\n\n2.1.1 CSV\n\nТекстовый формат\nЗначения разделены запятыми (Comma-Separated Values)\n\nНо это не точно\n\n\nПрочитать данные этого формата можно функцией\n\nread.csv()\n\n\n\n2.1.2 TSV\n\nТекстовый формат\nЗначения разделены знаком табуляции (\\t, Tab-Separated Values)\n\nПрочитать данные этого формата можно функцией\n\nread.table()\n\n\n\n2.1.3 TXT\n\nТекстовый формат\nРазделитель может быть любой\n\nПрочитать данные этого формата можно функцией\n\nread.table()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#табличные-форматы",
+    "href": "l2.html#табличные-форматы",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.2 Табличные форматы",
+    "text": "2.2 Табличные форматы\n\nФайлы Excel — .xls, .xlsx\n\nДля их чтения понадобится пакет readxl, в котором есть функции\n\nreadxl::read_xls()\nreadxl::read_xlsx()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#форматы-файлов-данных-c-особой-разметкой",
+    "href": "l2.html#форматы-файлов-данных-c-особой-разметкой",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.3 Форматы файлов данных c особой разметкой",
+    "text": "2.3 Форматы файлов данных c особой разметкой\nВстречаются редко и обычно связаны с данными, которые достаются из интернета (парсинг страниц или выгрзуки JavaScript).\n\n2.3.1 JSON\nВыглядят так:\n\n{\n  \"first_name\": \"John\",\n  \"last_name\": \"Smith\",\n  \"is_alive\": true,\n  \"age\": 27,\n  \"address\": {\n    \"street_address\": \"21 2nd Street\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"postal_code\": \"10021-3100\"\n  },\n  \"phone_numbers\": [\n    {\n      \"type\": \"home\",\n      \"number\": \"212 555-1234\"\n    },\n    {\n      \"type\": \"office\",\n      \"number\": \"646 555-4567\"\n    }\n  ],\n  \"children\": [\n    \"Catherine\",\n    \"Thomas\",\n    \"Trevor\"\n  ],\n  \"spouse\": null\n}\n\nДля работы с ними пригодится пакет jsonlite.\n\n\n2.3.2 XML\nВыглядят так:\n\n&lt;?xml version=\"1.0\"?&gt;\n&lt;catalog&gt;\n   &lt;book id=\"bk101\"&gt;\n      &lt;author&gt;Gambardella, Matthew&lt;/author&gt;\n      &lt;title&gt;XML Developer's Guide&lt;/title&gt;\n      &lt;genre&gt;Computer&lt;/genre&gt;\n      &lt;price&gt;44.95&lt;/price&gt;\n      &lt;publish_date&gt;2000-10-01&lt;/publish_date&gt;\n      &lt;description&gt;An in-depth look at creating applications \n      with XML.&lt;/description&gt;\n   &lt;/book&gt;\n   &lt;book id=\"bk102\"&gt;\n      &lt;author&gt;Ralls, Kim&lt;/author&gt;\n      &lt;title&gt;Midnight Rain&lt;/title&gt;\n      &lt;genre&gt;Fantasy&lt;/genre&gt;\n      &lt;price&gt;5.95&lt;/price&gt;\n      &lt;publish_date&gt;2000-12-16&lt;/publish_date&gt;\n      &lt;description&gt;A former architect battles corporate zombies, \n      an evil sorceress, and her own childhood to become queen \n      of the world.&lt;/description&gt;\n   &lt;/book&gt;\n   &lt;book id=\"bk103\"&gt;\n      &lt;author&gt;Corets, Eva&lt;/author&gt;\n      &lt;title&gt;Maeve Ascendant&lt;/title&gt;\n      &lt;genre&gt;Fantasy&lt;/genre&gt;\n      &lt;price&gt;5.95&lt;/price&gt;\n      &lt;publish_date&gt;2000-11-17&lt;/publish_date&gt;\n      &lt;description&gt;After the collapse of a nanotechnology \n      society in England, the young survivors lay the \n      foundation for a new society.&lt;/description&gt;\n   &lt;/book&gt;\n&lt;/catalog&gt;\n\nДля работы с ними пригодится пакет XML.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#путь-к-файлу",
+    "href": "l2.html#путь-к-файлу",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.5 Путь к файлу",
+    "text": "2.5 Путь к файлу\nБываеты двух видов:\n\nабсолютный — /home/nglgrdt/R/wlm2023/pr1-course.R\nотносительный — wlm2023/pr1-course.R\n\nОтносительный путь вычисляется относительно текущей рабочей директории.\nПолезная вещь: .. — подняться на один уровень в иерархии папок.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#зачем-нам-предобрабатывать-данные",
+    "href": "l2.html#зачем-нам-предобрабатывать-данные",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.9 Зачем нам предобрабатывать данные?",
+    "text": "2.9 Зачем нам предобрабатывать данные?\n\nДанные разнообразны в зависимости от того\n\nкакая у нас исследовательская область\nкакая у нас исследуемый феномен\nс каким оборудованием мы работаем\n…\n\nДля того, чтобы мы могли работать с данными независимо от того, откуда они к нам пришли, нам нужно привести их к некому стандартному виду",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#импорт-данных.-tibble",
+    "href": "l2.html#импорт-данных.-tibble",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.12 Импорт данных. tibble",
+    "text": "2.12 Импорт данных. tibble\nФункции импорта данных из tidyverse атоматически читают данные в tibble. С точки зрения пользователя tibble — это тот же самый датафрейм. Есть некоторые отличия в выводе в консоль, с которыми мы ближе познакомимся на практике.\nДля чтения CSV-файлов есть следующие функции:\n\nread_csv()\nread_csv2()\n\nДля чтения данных с другими разделителями есть функция\n\nread_delim()\n\nЗагрузим данные:\n\nds &lt;- read_csv(\"data/lecture2.csv\")\n\nRows: 7 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): var1, var4\ndbl (3): id, var2, var5\nlgl (1): var3\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nds\n\n# A tibble: 7 × 6\n     id var1   var2 var3  var4   var5\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 TRUE  cond1  12.8\n2     2 Def      16 FALSE cond1  14.2\n3     3 Ghi      94 FALSE cond2  32.5\n4     4 Jkl      28 FALSE cond2   9.4\n5     5 Mno      11 TRUE  cond3   6.3\n6     6 Pqr     100 TRUE  cond3  11.7\n7     7 Stu      96 FALSE cond1  95.5",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#pipe",
+    "href": "l2.html#pipe",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.13 Pipe",
+    "text": "2.13 Pipe\nПрежде чем начать разговор о предобработке, познакомимся с одним очень порезным оператором из tidyverse — это пайп.\nСуществует два вида пайпа:\n\nмаггритеровский %&gt;%\n\nтребуется подключение пакета tidyverse\n\nнативный |&gt;\n\nнаходится в базовом R, включается через настройки\n\nTools &gt; Global Options &gt; Code &gt; Use native pipe operator\n\n\n\nС точки зрения пользователя практически не отличаются друг от друга. И тот, и другой вводится комбинацией Ctrl + Shift + M. Выбрать, какой именно будет использоваться, можно в настройках (Tools &gt; Global Options &gt; Code &gt; Use native pipe operator.)\n\n\n\n\nВыбор используемого пайпа в настройках\n\n\n\nПайп передает то, что слева от него, в функцию, которая справа от него, в качестве первого аргумента.\n\nsum(1:3)\n\n[1] 6\n\n1:3 %&gt;% sum()\n\n[1] 6\n\n\n\nround(pi, 2)\n\n[1] 3.14\n\npi %&gt;% round(2)\n\n[1] 3.14\n\n\nПозволяет выстраивать цепочки последовательных преобразований:\n\nsqrt(abs(log(abs(round(sin(1 / cos(3)), 2)), 3)))\n\n[1] 0.3846181\n\n3 %&gt;% cos() %&gt;% \n  `/`(1, .) %&gt;% \n  sin() %&gt;% \n  round(2) %&gt;% \n  abs() %&gt;% \n  log(3) %&gt;% \n  abs() %&gt;% \n  sqrt()\n\n[1] 0.3846181",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#inner_join",
+    "href": "l2.html#inner_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.22 inner_join()",
+    "text": "2.22 inner_join()\n\n\n\n\nСхема inner_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% inner_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     2 Def      16 cond1  14.2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#left_join",
+    "href": "l2.html#left_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.23 left_join()",
+    "text": "2.23 left_join()\n\n\n\n\nСхема left_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% left_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 4 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     2 Def      16 cond1  14.2\n3     5 Mno      11 &lt;NA&gt;   NA  \n4     7 Stu      96 &lt;NA&gt;   NA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#right_join",
+    "href": "l2.html#right_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.24 right_join()",
+    "text": "2.24 right_join()\n\n\n\n\nСхема right_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% right_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 4 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     2 Def      16 cond1  14.2\n3     3 &lt;NA&gt;     NA cond2  32.5\n4     4 &lt;NA&gt;     NA cond2   9.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#full_join",
+    "href": "l2.html#full_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.25 full_join()",
+    "text": "2.25 full_join()\n\n\n\n\nСхема full_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% full_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 6 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     2 Def      16 cond1  14.2\n3     5 Mno      11 &lt;NA&gt;   NA  \n4     7 Stu      96 &lt;NA&gt;   NA  \n5     3 &lt;NA&gt;     NA cond2  32.5\n6     4 &lt;NA&gt;     NA cond2   9.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#semi_join",
+    "href": "l2.html#semi_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.26 semi_join()",
+    "text": "2.26 semi_join()\n\n\n\n\nСхема semi_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% semi_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n\ny %&gt;% semi_join(x)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#anti_join",
+    "href": "l2.html#anti_join",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.27 anti_join()",
+    "text": "2.27 anti_join()\n\n\n\n\nСхема anti_join()\n\n\n\n\n\nx\n\n# A tibble: 4 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     2 Def      16\n3     5 Mno      11\n4     7 Stu      96\n\ny\n\n# A tibble: 4 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     3 cond2  32.5\n4     4 cond2   9.4\n\nx %&gt;% anti_join(y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     5 Mno      11\n2     7 Stu      96\n\ny %&gt;% anti_join(x)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     3 cond2  32.5\n2     4 cond2   9.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#дублирование-ключа",
+    "href": "l2.html#дублирование-ключа",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.28 Дублирование ключа",
+    "text": "2.28 Дублирование ключа\n\n\n\n\nСхема работы .._join() при наличии дублей в колонке ключа\n\n\n\n\n\nx\n\n# A tibble: 5 × 3\n     id var1   var2\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5\n2     1 Abc       7\n3     2 Def      16\n4     5 Mno      11\n5     7 Stu      96\n\ny\n\n# A tibble: 5 × 3\n     id var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 cond1  12.8\n2     2 cond1  14.2\n3     2 cond2   2  \n4     3 cond2  32.5\n5     4 cond2   9.4\n\nx %&gt;% inner_join(y)\n\nJoining with `by = join_by(id)`\n\n\nWarning in inner_join(., y): Detected an unexpected many-to-many relationship between `x` and `y`.\nℹ Row 3 of `x` matches multiple rows in `y`.\nℹ Row 1 of `y` matches multiple rows in `x`.\nℹ If a many-to-many relationship is expected, set `relationship =\n  \"many-to-many\"` to silence this warning.\n\n\n# A tibble: 4 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     1 Abc       7 cond1  12.8\n3     2 Def      16 cond1  14.2\n4     2 Def      16 cond2   2  \n\nx %&gt;% left_join(y)\n\nJoining with `by = join_by(id)`\n\n\nWarning in left_join(., y): Detected an unexpected many-to-many relationship between `x` and `y`.\nℹ Row 3 of `x` matches multiple rows in `y`.\nℹ Row 1 of `y` matches multiple rows in `x`.\nℹ If a many-to-many relationship is expected, set `relationship =\n  \"many-to-many\"` to silence this warning.\n\n\n# A tibble: 6 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     1 Abc       7 cond1  12.8\n3     2 Def      16 cond1  14.2\n4     2 Def      16 cond2   2  \n5     5 Mno      11 &lt;NA&gt;   NA  \n6     7 Stu      96 &lt;NA&gt;   NA  \n\nx %&gt;% right_join(y)\n\nJoining with `by = join_by(id)`\n\n\nWarning in right_join(., y): Detected an unexpected many-to-many relationship between `x` and `y`.\nℹ Row 3 of `x` matches multiple rows in `y`.\nℹ Row 1 of `y` matches multiple rows in `x`.\nℹ If a many-to-many relationship is expected, set `relationship =\n  \"many-to-many\"` to silence this warning.\n\n\n# A tibble: 6 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     1 Abc       7 cond1  12.8\n3     2 Def      16 cond1  14.2\n4     2 Def      16 cond2   2  \n5     3 &lt;NA&gt;     NA cond2  32.5\n6     4 &lt;NA&gt;     NA cond2   9.4\n\nx %&gt;% full_join(y)\n\nJoining with `by = join_by(id)`\n\n\nWarning in full_join(., y): Detected an unexpected many-to-many relationship between `x` and `y`.\nℹ Row 3 of `x` matches multiple rows in `y`.\nℹ Row 1 of `y` matches multiple rows in `x`.\nℹ If a many-to-many relationship is expected, set `relationship =\n  \"many-to-many\"` to silence this warning.\n\n\n# A tibble: 8 × 5\n     id var1   var2 var3   var4\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 Abc       5 cond1  12.8\n2     1 Abc       7 cond1  12.8\n3     2 Def      16 cond1  14.2\n4     2 Def      16 cond2   2  \n5     5 Mno      11 &lt;NA&gt;   NA  \n6     7 Stu      96 &lt;NA&gt;   NA  \n7     3 &lt;NA&gt;     NA cond2  32.5\n8     4 &lt;NA&gt;     NA cond2   9.4",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#способы-объединения-по-ключу-на-диаграммах-венна",
+    "href": "l2.html#способы-объединения-по-ключу-на-диаграммах-венна",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.29 Способы объединения по ключу на диаграммах Венна",
+    "text": "2.29 Способы объединения по ключу на диаграммах Венна\n\n\n\n\nСхема работы .._join() на диаграммах Венна",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#генерация-случайных-строк",
+    "href": "l2.html#генерация-случайных-строк",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.32 Генерация случайных строк",
+    "text": "2.32 Генерация случайных строк\n\nstri_rand_strings(n = 10, length = 5)\n\n [1] \"HraM2\" \"8hYLP\" \"dVYkO\" \"2ORnh\" \"XlKvq\" \"o6VFG\" \"oWi5v\" \"gYstf\" \"e0TZ3\"\n[10] \"YSpjL\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#операции-над-строками-1",
+    "href": "l2.html#операции-над-строками-1",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.34 Операции над строками",
+    "text": "2.34 Операции над строками\n\n2.34.1 Разделение строк\n\nstr_split(\"first second third\", pattern = \" \")\n\n[[1]]\n[1] \"first\"  \"second\" \"third\" \n\n\n\nds_2 %&gt;% \n  separate(scale_item, into = c(\"scale\", \"item\"))\n\n# A tibble: 150 × 4\n      id scale item  score\n   &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;\n 1     1 A     1         2\n 2     1 A     2         1\n 3     1 A     3         2\n 4     1 A     4         3\n 5     1 A     5         1\n 6     1 B     1         4\n 7     1 B     2         5\n 8     1 B     3         1\n 9     1 B     4         3\n10     1 B     5         4\n# ℹ 140 more rows",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#сортировка-строк",
+    "href": "l2.html#сортировка-строк",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.35 Сортировка строк",
+    "text": "2.35 Сортировка строк\n\nunsorted_s\n\n [1] \"Odl\" \"Snm\" \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"Swx\" \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"Szq\"\n\n\n\nsort(unsorted_s)\n\n [1] \"Ccw\" \"Cka\" \"Ejt\" \"Eph\" \"Gbz\" \"Hfj\" \"Ixs\" \"Iyc\" \"Jgf\" \"Jhe\" \"Koi\" \"Nqr\"\n[13] \"Nvd\" \"Odl\" \"Ruu\" \"Snm\" \"Swx\" \"Szq\" \"Tmp\" \"Vin\" \"Vlo\" \"Yey\" \"Ysv\" \"Ytg\"\n[25] \"Zab\" \"Zrk\"\n\n\n\nstr_sort(unsorted_s)\n\n [1] \"Ccw\" \"Cka\" \"Ejt\" \"Eph\" \"Gbz\" \"Hfj\" \"Ixs\" \"Iyc\" \"Jgf\" \"Jhe\" \"Koi\" \"Nqr\"\n[13] \"Nvd\" \"Odl\" \"Ruu\" \"Snm\" \"Swx\" \"Szq\" \"Tmp\" \"Vin\" \"Vlo\" \"Yey\" \"Ysv\" \"Ytg\"\n[25] \"Zab\" \"Zrk\"\n\n\n\n# по умолчанию\nstr_sort(c(\"э\", \"а\", \"у\", \"i\"), locale = 'en')\n\n[1] \"i\" \"а\" \"у\" \"э\"\n\n\n\n# для русского языка\nstr_sort(c(\"э\", \"а\", \"у\", \"i\"), locale = 'ru')\n\n[1] \"а\" \"у\" \"э\" \"i\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#изменение-строк",
+    "href": "l2.html#изменение-строк",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.36 Изменение строк",
+    "text": "2.36 Изменение строк\n\n2.36.1 Выделение подстроки\n\nunsorted_s\n\n [1] \"Odl\" \"Snm\" \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"Swx\" \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"Szq\"\n\nstr_sub(unsorted_s, start = 1, end = 2)\n\n [1] \"Od\" \"Sn\" \"Nq\" \"Ck\" \"Jg\" \"Ru\" \"Vl\" \"Ko\" \"Ej\" \"Tm\" \"Nv\" \"Vi\" \"Ys\" \"Zr\" \"Ep\"\n[16] \"Sw\" \"Ye\" \"Yt\" \"Ix\" \"Cc\" \"Hf\" \"Za\" \"Gb\" \"Jh\" \"Iy\" \"Sz\"\n\n\n\n\n2.36.2 Замена подстроки\n\nunsorted_s\n\n [1] \"Odl\" \"Snm\" \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"Swx\" \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"Szq\"\n\nstr_replace(unsorted_s, pattern = \"O\", replacement = \"Ь\")\n\n [1] \"Ьdl\" \"Snm\" \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"Swx\" \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"Szq\"\n\n\n\n\n2.36.3 Удаление подстроки\n\nunsorted_s\n\n [1] \"Odl\" \"Snm\" \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"Swx\" \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"Szq\"\n\nstr_remove(unsorted_s, \"S\")\n\n [1] \"Odl\" \"nm\"  \"Nqr\" \"Cka\" \"Jgf\" \"Ruu\" \"Vlo\" \"Koi\" \"Ejt\" \"Tmp\" \"Nvd\" \"Vin\"\n[13] \"Ysv\" \"Zrk\" \"Eph\" \"wx\"  \"Yey\" \"Ytg\" \"Ixs\" \"Ccw\" \"Hfj\" \"Zab\" \"Gbz\" \"Jhe\"\n[25] \"Iyc\" \"zq\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#регулярные-выражения-1",
+    "href": "l2.html#регулярные-выражения-1",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.38 Регулярные выражения",
+    "text": "2.38 Регулярные выражения\n\n2.38.1 Классы знаков\n\nstr_view_all(dates, pattern = '\\\\d') # ищем цифры\n\n[1] │ &lt;2&gt;&lt;1&gt;.&lt;9&gt;&lt;2&gt;.&lt;2&gt;&lt;0&gt;&lt;0&gt;&lt;1&gt;\n[2] │ &lt;0&gt;&lt;1&gt;.&lt;0&gt;&lt;4&gt;.&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;4&gt;\n[3] │ &lt;5&gt;-&lt;3&gt;-&lt;2&gt;&lt;0&gt;&lt;1&gt;&lt;1&gt;\n[4] │ &lt;6&gt;/&lt;0&gt;&lt;4&gt;/&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;9&gt;\n\n\n\nstr_view_all(dates, pattern = '\\\\D') # ищем не-цифры\n\n[1] │ 21&lt;.&gt;92&lt;.&gt;2001\n[2] │ 01&lt;.&gt;04&lt;.&gt;1994\n[3] │ 5&lt;-&gt;3&lt;-&gt;2011\n[4] │ 6&lt;/&gt;04&lt;/&gt;1999\n\n\n\nstr_view_all('успешный успех', '\\\\s') # пробелы\n\n[1] │ успешный&lt; &gt;успех\n\n\n\nstr_view_all('успешный успех', '\\\\S') # не-пробелы\n\n[1] │ &lt;у&gt;&lt;с&gt;&lt;п&gt;&lt;е&gt;&lt;ш&gt;&lt;н&gt;&lt;ы&gt;&lt;й&gt; &lt;у&gt;&lt;с&gt;&lt;п&gt;&lt;е&gt;&lt;х&gt;\n\n\n\nstr_view_all('верно ведь, что здесь что-то есть', '\\\\w') # не пробелы и не знаки препинания\n\n[1] │ &lt;в&gt;&lt;е&gt;&lt;р&gt;&lt;н&gt;&lt;о&gt; &lt;в&gt;&lt;е&gt;&lt;д&gt;&lt;ь&gt;, &lt;ч&gt;&lt;т&gt;&lt;о&gt; &lt;з&gt;&lt;д&gt;&lt;е&gt;&lt;с&gt;&lt;ь&gt; &lt;ч&gt;&lt;т&gt;&lt;о&gt;-&lt;т&gt;&lt;о&gt; &lt;е&gt;&lt;с&gt;&lt;т&gt;&lt;ь&gt;\n\n\n\nstr_view_all('верно ведь, что здесь что-то есть', '\\\\W') # пробелы и знаки препинания\n\n[1] │ верно&lt; &gt;ведь&lt;,&gt;&lt; &gt;что&lt; &gt;здесь&lt; &gt;что&lt;-&gt;то&lt; &gt;есть",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#регулярные-выражения-2",
+    "href": "l2.html#регулярные-выражения-2",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.39 Регулярные выражения",
+    "text": "2.39 Регулярные выражения\n\n2.39.1 Квантификация\n\n? — ноль или один раз\n* — ноль или более раз\n+ — один или более раз\n{n} — n раз\n\n\nstr_view_all(dates, '\\\\d{2}')\n\n[1] │ &lt;21&gt;.&lt;92&gt;.&lt;20&gt;&lt;01&gt;\n[2] │ &lt;01&gt;.&lt;04&gt;.&lt;19&gt;&lt;94&gt;\n[3] │ 5-3-&lt;20&gt;&lt;11&gt;\n[4] │ 6/&lt;04&gt;/&lt;19&gt;&lt;99&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#извлечение-компонентов-даты",
+    "href": "l2.html#извлечение-компонентов-даты",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.42 Извлечение компонентов даты",
+    "text": "2.42 Извлечение компонентов даты\n\n## текущий timestamp\nas.numeric(now())\n\n[1] 1701138718\n\n\n\nyear(now())\n\n[1] 2023\n\nmonth(now())\n\n[1] 11\n\nday(now())\n\n[1] 28\n\nhour(now())\n\n[1] 5\n\nminute(now())\n\n[1] 31\n\nsecond(now())\n\n[1] 57.77971",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#визуализация-квартета-анскомба",
+    "href": "l2.html#визуализация-квартета-анскомба",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.44 Визуализация Квартета Анскомба",
+    "text": "2.44 Визуализация Квартета Анскомба\n\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#зачем-нужна-визуализация-1",
+    "href": "l2.html#зачем-нужна-визуализация-1",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.45 Зачем нужна визуализация?",
+    "text": "2.45 Зачем нужна визуализация?\n\n2.45.1 Datasaurus\n\n\nRows: 1846 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): dataset\ndbl (2): x, y\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\nspc_tbl_ [1,846 × 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ dataset: chr [1:1846] \"dino\" \"dino\" \"dino\" \"dino\" ...\n $ x      : num [1:1846] 55.4 51.5 46.2 42.8 40.8 ...\n $ y      : num [1:1846] 97.2 96 94.5 91.4 88.3 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   dataset = col_character(),\n  ..   x = col_double(),\n  ..   y = col_double()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\n\n\n\n# A tibble: 13 × 7\n   dataset        n mean_x mean_y  sd_x  sd_y   cor\n   &lt;chr&gt;      &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 away         142   54.3   47.8  16.8  26.9  -0.1\n 2 bullseye     142   54.3   47.8  16.8  26.9  -0.1\n 3 circle       142   54.3   47.8  16.8  26.9  -0.1\n 4 dino         142   54.3   47.8  16.8  26.9  -0.1\n 5 dots         142   54.3   47.8  16.8  26.9  -0.1\n 6 h_lines      142   54.3   47.8  16.8  26.9  -0.1\n 7 high_lines   142   54.3   47.8  16.8  26.9  -0.1\n 8 slant_down   142   54.3   47.8  16.8  26.9  -0.1\n 9 slant_up     142   54.3   47.8  16.8  26.9  -0.1\n10 star         142   54.3   47.8  16.8  26.9  -0.1\n11 v_lines      142   54.3   47.8  16.8  26.9  -0.1\n12 wide_lines   142   54.3   47.8  16.8  26.9  -0.1\n13 x_shape      142   54.3   47.8  16.8  26.9  -0.1",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#визуализация-datasaurus",
+    "href": "l2.html#визуализация-datasaurus",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.46 Визуализация Datasaurus",
+    "text": "2.46 Визуализация Datasaurus",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#столбчатая-диаграмма-bar-plot-bar-graph",
+    "href": "l2.html#столбчатая-диаграмма-bar-plot-bar-graph",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.1 Столбчатая диаграмма (Bar plot, Bar graph)",
+    "text": "3.1 Столбчатая диаграмма (Bar plot, Bar graph)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#лучевая-диаграмма-subburts",
+    "href": "l2.html#лучевая-диаграмма-subburts",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.2 Лучевая диаграмма (Subburts)",
+    "text": "3.2 Лучевая диаграмма (Subburts)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#круговая-диаграмма-pie-chart",
+    "href": "l2.html#круговая-диаграмма-pie-chart",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.3 Круговая диаграмма (Pie chart)",
+    "text": "3.3 Круговая диаграмма (Pie chart)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#линейная-диаграмма-line-graph-line-plot",
+    "href": "l2.html#линейная-диаграмма-line-graph-line-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.4 Линейная диаграмма (Line graph, Line plot)",
+    "text": "3.4 Линейная диаграмма (Line graph, Line plot)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#гистограмма-histogram",
+    "href": "l2.html#гистограмма-histogram",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.5 Гистограмма (Histogram)",
+    "text": "3.5 Гистограмма (Histogram)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#график-плотности-распределения-density-plot",
+    "href": "l2.html#график-плотности-распределения-density-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.6 График плотности распределения (Density plot)",
+    "text": "3.6 График плотности распределения (Density plot)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#dot-plot",
+    "href": "l2.html#dot-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.7 Dot plot",
+    "text": "3.7 Dot plot",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#ящик-с-усами-boxplot",
+    "href": "l2.html#ящик-с-усами-boxplot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.8 Ящик с усами (Boxplot)",
+    "text": "3.8 Ящик с усами (Boxplot)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#violin-plot",
+    "href": "l2.html#violin-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.9 Violin plot",
+    "text": "3.9 Violin plot",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#график-интервальных-оценок-error-bar",
+    "href": "l2.html#график-интервальных-оценок-error-bar",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.10 График интервальных оценок (Error bar)",
+    "text": "3.10 График интервальных оценок (Error bar)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#диаграмма-рассенияния-scatter-plot",
+    "href": "l2.html#диаграмма-рассенияния-scatter-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.11 Диаграмма рассенияния (Scatter plot)",
+    "text": "3.11 Диаграмма рассенияния (Scatter plot)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#пузырьковая-диаграмма-bubble-plot",
+    "href": "l2.html#пузырьковая-диаграмма-bubble-plot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.12 Пузырьковая диаграмма (Bubble plot)",
+    "text": "3.12 Пузырьковая диаграмма (Bubble plot)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#корреляционная-матрица-corrplot",
+    "href": "l2.html#корреляционная-матрица-corrplot",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "3.13 Корреляционная матрица (Corrplot)",
+    "text": "3.13 Корреляционная матрица (Corrplot)\n\n\nRows: 495 Columns: 133\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (11): id, oth_text, expoth_text, sex, edulvl1, spec1, edulvl2, spec2, j...\ndbl (122): e_dighelp, n_dighelp, e_socnet, f_socnet, n_socnet, gt_score, pr0...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#итоги",
+    "href": "l2.html#итоги",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.47 Итоги",
+    "text": "2.47 Итоги\n\nФорматы файлов данных бывают разные и их нужно по-разному загружать в R\nRStudio Projects — это хорошо и помогает воспроизводимости\nПредобработка данных — это определенный набор операций, которые в tidyverse достаточно интуитивно реализованы\nСтроки и даты требуют к себе особого внимания\nВизуализаций много, они разнообразны и каждая по-своему хороша",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
+  },
+  {
+    "objectID": "l2.html#виды-графиков",
+    "href": "l2.html#виды-графиков",
+    "title": "2  L2 // Предобработка данных. Дата и время Визуализация данных",
+    "section": "2.44 Виды графиков",
+    "text": "2.44 Виды графиков\n\n2.44.1 Столбчатая диаграмма (Bar plot, Bar graph)\n\n\n\n\n\n\n\n\n\n\n\n2.44.2 Лучевая диаграмма (Subburts)\n\n\n\n\n\n\n\n\n\n\n\n2.44.3 Круговая диаграмма (Pie chart)\n\n\n\n\n\n\n\n\n\n\n\n2.44.4 Линейная диаграмма (Line graph, Line plot)\n\n\n\n\n\n\n\n\n\n\n\n2.44.5 Гистограмма (Histogram)\n\n\n\n\n\n\n\n\n\n\n\n2.44.6 График плотности распределения (Density plot)\n\n\n\n\n\n\n\n\n\n\n\n2.44.7 Dot plot\n\n\n\n\n\n\n\n\n\n\n\n2.44.8 Ящик с усами (Boxplot)\n\n\n\n\n\n\n\n\n\n\n\n2.44.9 Violin plot\n\n\n\n\n\n\n\n\n\n\n\n2.44.10 График интервальных оценок (Error bar)\n\n\n\n\n\n\n\n\n\n\n\n2.44.11 Диаграмма рассенияния (Scatter plot)\n\n\n\n\n\n\n\n\n\n\n\n2.44.12 Пузырьковая диаграмма (Bubble plot)\n\n\n\n\n\n\n\n\n\n\n\n2.44.13 Корреляционная матрица (Corrplot)\n\n\nRows: 495 Columns: 133\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (11): id, oth_text, expoth_text, sex, edulvl1, spec1, edulvl2, spec2, j...\ndbl (122): e_dighelp, n_dighelp, e_socnet, f_socnet, n_socnet, gt_score, pr0...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>"
+    ]
   }
 ]
