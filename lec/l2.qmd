@@ -1123,12 +1123,14 @@ diamonds %>%
 ```{r, echo=FALSE, message=FALSE}
 diamonds %>% 
   group_by(cut) %>% 
-  summarise(n = n()) %>% 
+  summarise(n = n(),
+            prop = (n / nrow(diamonds) * 100) %>% round(1) %>% paste0("%")) %>% 
   ggplot(aes("", n, fill = cut)) +
   geom_bar(stat = 'identity', width = 1) +
+  geom_text(aes(label = prop), position = position_stack(vjust = 0.5)) +
   coord_polar('y', start = 0) + 
   xlab(NULL) + ylab(NULL) +
-  labs(fill = 'Color')
+  labs(fill = 'Cut')
 ```
 
 
@@ -1137,7 +1139,9 @@ diamonds %>%
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 matrix(AirPassengers, ncol = 12) %>% as.tibble() %>% mutate(year = 1949:1960) -> for_line_graph
 colnames(for_line_graph) <- c(month.abb, 'year')
-for_line_graph %>% pivot_longer(-year) %>% 
+for_line_graph %>% 
+  pivot_longer(-year) %>% 
+  mutate(name = factor(name, ordered = TRUE, levels = month.abb)) %>% 
   filter(year < 1952) %>% 
   ggplot(aes(name, value, group = year, color = factor(year))) +
   geom_line(linetype = 'solid') +
