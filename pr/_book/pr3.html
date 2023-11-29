@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -74,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -91,55 +97,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr3.html">P3 // Датафреймы. Исследование данных</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr3.html">P3 // Датафреймы. Исследование данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -259,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -268,39 +266,39 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#pr3_main" id="toc-pr3_main" class="nav-link active" data-scroll-target="#pr3_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#11</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#12</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#13</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#14</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#15</a></li>
-  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">#16</a></li>
-  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#17</a></li>
-  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#18</a></li>
-  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
-  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
+  <li><a href="#pr3-1-title" id="toc-pr3-1-title" class="nav-link" data-scroll-target="#pr3-1-title">#1</a></li>
+  <li><a href="#pr3-2-title" id="toc-pr3-2-title" class="nav-link" data-scroll-target="#pr3-2-title">#2</a></li>
+  <li><a href="#pr3-3-title" id="toc-pr3-3-title" class="nav-link" data-scroll-target="#pr3-3-title">#3</a></li>
+  <li><a href="#pr3-4-title" id="toc-pr3-4-title" class="nav-link" data-scroll-target="#pr3-4-title">#4</a></li>
+  <li><a href="#pr3-5-title" id="toc-pr3-5-title" class="nav-link" data-scroll-target="#pr3-5-title">#5</a></li>
+  <li><a href="#pr3-6-title" id="toc-pr3-6-title" class="nav-link" data-scroll-target="#pr3-6-title">#6</a></li>
+  <li><a href="#pr3-7-title" id="toc-pr3-7-title" class="nav-link" data-scroll-target="#pr3-7-title">#7</a></li>
+  <li><a href="#pr3-8-title" id="toc-pr3-8-title" class="nav-link" data-scroll-target="#pr3-8-title">#8</a></li>
+  <li><a href="#pr3-9-title" id="toc-pr3-9-title" class="nav-link" data-scroll-target="#pr3-9-title">#9</a></li>
+  <li><a href="#pr3-10-title" id="toc-pr3-10-title" class="nav-link" data-scroll-target="#pr3-10-title">#10</a></li>
+  <li><a href="#pr3-11-title" id="toc-pr3-11-title" class="nav-link" data-scroll-target="#pr3-11-title">#11</a></li>
+  <li><a href="#pr3-12-title" id="toc-pr3-12-title" class="nav-link" data-scroll-target="#pr3-12-title">#12</a></li>
+  <li><a href="#pr3-13-title" id="toc-pr3-13-title" class="nav-link" data-scroll-target="#pr3-13-title">#13</a></li>
+  <li><a href="#pr3-14-title" id="toc-pr3-14-title" class="nav-link" data-scroll-target="#pr3-14-title">#14</a></li>
+  <li><a href="#pr3-15-title" id="toc-pr3-15-title" class="nav-link" data-scroll-target="#pr3-15-title">#15</a></li>
+  <li><a href="#pr3-16-title" id="toc-pr3-16-title" class="nav-link" data-scroll-target="#pr3-16-title">#16</a></li>
+  <li><a href="#pr3-17-title" id="toc-pr3-17-title" class="nav-link" data-scroll-target="#pr3-17-title">#17</a></li>
+  <li><a href="#pr3-18-title" id="toc-pr3-18-title" class="nav-link" data-scroll-target="#pr3-18-title">#18</a></li>
+  <li><a href="#pr3-19-title" id="toc-pr3-19-title" class="nav-link" data-scroll-target="#pr3-19-title">#19</a></li>
+  <li><a href="#pr3-20-title" id="toc-pr3-20-title" class="nav-link" data-scroll-target="#pr3-20-title">#20</a></li>
   </ul></li>
   <li><a href="#pr3_add" id="toc-pr3_add" class="nav-link" data-scroll-target="#pr3_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
-  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
-  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
-  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
-  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
-  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
+  <li><a href="#pr3-21-title" id="toc-pr3-21-title" class="nav-link" data-scroll-target="#pr3-21-title">#1</a></li>
+  <li><a href="#pr3-22-title" id="toc-pr3-22-title" class="nav-link" data-scroll-target="#pr3-22-title">#2</a></li>
+  <li><a href="#pr3-23-title" id="toc-pr3-23-title" class="nav-link" data-scroll-target="#pr3-23-title">#3</a></li>
+  <li><a href="#pr3-24-title" id="toc-pr3-24-title" class="nav-link" data-scroll-target="#pr3-24-title">#4</a></li>
+  <li><a href="#pr3-25-title" id="toc-pr3-25-title" class="nav-link" data-scroll-target="#pr3-25-title">#5</a></li>
+  <li><a href="#pr3-26-title" id="toc-pr3-26-title" class="nav-link" data-scroll-target="#pr3-26-title">#6</a></li>
+  <li><a href="#pr3-27-title" id="toc-pr3-27-title" class="nav-link" data-scroll-target="#pr3-27-title">#7</a></li>
+  <li><a href="#pr3-28-title" id="toc-pr3-28-title" class="nav-link" data-scroll-target="#pr3-28-title">#8</a></li>
+  <li><a href="#pr3-29-title" id="toc-pr3-29-title" class="nav-link" data-scroll-target="#pr3-29-title">#9</a></li>
+  <li><a href="#pr3-30-title" id="toc-pr3-30-title" class="nav-link" data-scroll-target="#pr3-30-title">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -323,68 +321,36 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!--
 REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 -->
 <section id="pr3_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr3_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<section id="pr3-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-1-title">#1</h3>
 <p><img id="pr3-1-level" class="level"></p>
 <div id="pr3-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
-</div>
-<div id="pr3-1-autocheck" class="autocheck">
-<div id="pr3-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-1" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-1')"></p>
-<div id="pr3-1-fb" class="autocheck-feedback">
-
-</div>
+<p>Создайте проект (RStudio Project), в котором будете складывать материалы курса.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-1-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Как создать проект, описано <a href="https://angelgardt.github.io/wlm2023/lectures/l2.html#l2-create-project">тут</a></p>
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="pr3-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-2-title">#2</h3>
 <p><img id="pr3-2-level" class="level"></p>
 <div id="pr3-2-task" class="task">
-<p>Текст задания.</p>
+<p>Загрузите <a href="">данные</a> в R.</p>
 <p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
-</div>
-<div id="pr3-2-autocheck" class="autocheck">
-<div id="pr3-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-2" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-2')"></p>
-<div id="pr3-2-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-2-hints">
@@ -409,21 +375,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="pr3-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-3-title">#3</h3>
 <p><img id="pr3-3-level" class="level"></p>
 <div id="pr3-3-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-3-autocheck" class="autocheck">
-<div id="pr3-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-3" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-3')"></p>
-<div id="pr3-3-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-3-hints">
@@ -448,21 +404,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="pr3-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-4-title">#4</h3>
 <p><img id="pr3-4-level" class="level"></p>
 <div id="pr3-4-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-4-autocheck" class="autocheck">
-<div id="pr3-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-4" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-4')"></p>
-<div id="pr3-4-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-4-hints">
@@ -487,21 +433,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="pr3-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-5-title">#5</h3>
 <p><img id="pr3-5-level" class="level"></p>
 <div id="pr3-5-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-5-autocheck" class="autocheck">
-<div id="pr3-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-5" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-5')"></p>
-<div id="pr3-5-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-5-hints">
@@ -526,21 +462,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="pr3-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-6-title">#6</h3>
 <p><img id="pr3-6-level" class="level"></p>
 <div id="pr3-6-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-6-autocheck" class="autocheck">
-<div id="pr3-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-6" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-6')"></p>
-<div id="pr3-6-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-6-hints">
@@ -565,21 +491,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="pr3-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-7-title">#7</h3>
 <p><img id="pr3-7-level" class="level"></p>
 <div id="pr3-7-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-7-autocheck" class="autocheck">
-<div id="pr3-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-7" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-7')"></p>
-<div id="pr3-7-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-7-hints">
@@ -604,21 +520,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="pr3-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-8-title">#8</h3>
 <p><img id="pr3-8-level" class="level"></p>
 <div id="pr3-8-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-8-autocheck" class="autocheck">
-<div id="pr3-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-8" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-8')"></p>
-<div id="pr3-8-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-8-hints">
@@ -643,21 +549,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="pr3-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-9-title">#9</h3>
 <p><img id="pr3-9-level" class="level"></p>
 <div id="pr3-9-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-9-autocheck" class="autocheck">
-<div id="pr3-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-9" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-9')"></p>
-<div id="pr3-9-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-9-hints">
@@ -682,21 +578,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="pr3-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-10-title">#10</h3>
 <p><img id="pr3-10-level" class="level"></p>
 <div id="pr3-10-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-10-autocheck" class="autocheck">
-<div id="pr3-10-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-10" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-10')"></p>
-<div id="pr3-10-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-10-hints">
@@ -721,21 +607,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#11</h3>
+<section id="pr3-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-11-title">#11</h3>
 <p><img id="pr3-11-level" class="level"></p>
 <div id="pr3-11-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-11-autocheck" class="autocheck">
-<div id="pr3-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-11')"></p>
-<div id="pr3-11-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-11-hints">
@@ -760,21 +636,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#12</h3>
+<section id="pr3-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-12-title">#12</h3>
 <p><img class="level"></p>
 <div id="pr3-12-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-12-autocheck" class="autocheck">
-<div id="pr3-12-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-12')"></p>
-<div id="pr3-12-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-12-hints">
@@ -799,21 +665,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#13</h3>
+<section id="pr3-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-13-title">#13</h3>
 <p><img id="pr3-13-level" class="level"></p>
 <div class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-13-autocheck" class="autocheck">
-<div id="pr3-13-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-13')"></p>
-<div id="pr3-13-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-13-hints">
@@ -838,21 +694,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#14</h3>
+<section id="pr3-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-14-title">#14</h3>
 <p><img id="pr3-14-level" class="level"></p>
 <div id="pr3-14-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-14-autocheck" class="autocheck">
-<div id="pr3-14-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-14')"></p>
-<div id="pr3-14-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-14-hints">
@@ -877,21 +723,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#15</h3>
+<section id="pr3-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-15-title">#15</h3>
 <p><img id="pr3-15-level" class="level"></p>
 <div id="pr3-15-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-15-autocheck" class="autocheck">
-<div id="pr3-15-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-15')"></p>
-<div id="pr3-15-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-15-hints">
@@ -916,21 +752,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-15" class="level3">
-<h3 class="anchored" data-anchor-id="section-15">#16</h3>
+<section id="pr3-16-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-16-title">#16</h3>
 <p><img id="pr3-16-level" class="level"></p>
 <div id="pr3-16-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-16-autocheck" class="autocheck">
-<div id="pr3-16-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-16" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-16')"></p>
-<div id="pr3-16-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-16-hints">
@@ -955,21 +781,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-16" class="level3">
-<h3 class="anchored" data-anchor-id="section-16">#17</h3>
+<section id="pr3-17-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-17-title">#17</h3>
 <p><img id="pr3-17-level" class="level"></p>
 <div id="pr3-17-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-17-autocheck" class="autocheck">
-<div id="pr3-17-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-17" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-17')"></p>
-<div id="pr3-17-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-17-hints">
@@ -994,21 +810,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-17" class="level3">
-<h3 class="anchored" data-anchor-id="section-17">#18</h3>
+<section id="pr3-18-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-18-title">#18</h3>
 <p><img id="pr3-18-level" class="level"></p>
 <div id="pr3-18-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-18-autocheck" class="autocheck">
-<div id="pr3-18-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-18" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-18')"></p>
-<div id="pr3-18-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-18-hints">
@@ -1033,21 +839,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-18" class="level3">
-<h3 class="anchored" data-anchor-id="section-18">#19</h3>
+<section id="pr3-19-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-19-title">#19</h3>
 <p><img id="pr3-19-level" class="level"></p>
 <div id="pr3-19-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-19-autocheck" class="autocheck">
-<div id="pr3-19-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-19" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-19')"></p>
-<div id="pr3-19-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-19-hints">
@@ -1072,21 +868,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-19" class="level3">
-<h3 class="anchored" data-anchor-id="section-19">#20</h3>
+<section id="pr3-20-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-20-title">#20</h3>
 <p><img id="pr3-20-level" class="level"></p>
 <div id="pr3-20-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-20-autocheck" class="autocheck">
-<div id="pr3-20-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-20" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-20')"></p>
-<div id="pr3-20-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-20-hints">
@@ -1114,21 +900,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </section>
 <section id="pr3_add" class="level2">
 <h2 class="anchored" data-anchor-id="pr3_add">Дополнительные задания</h2>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">#1</h3>
+<section id="pr3-21-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-21-title">#1</h3>
 <p><img id="pr3-21-level" class="level"></p>
 <div id="pr3-21-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-21-autocheck" class="autocheck">
-<div id="pr3-21-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-21" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-21')"></p>
-<div id="pr3-21-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-21-hints">
@@ -1153,21 +929,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">#2</h3>
+<section id="pr3-22-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-22-title">#2</h3>
 <p><img id="pr3-22-level" class="level"></p>
 <div id="pr3-22-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-22-autocheck" class="autocheck">
-<div id="pr3-22-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-22" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-22')"></p>
-<div id="pr3-22-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-22-hints">
@@ -1192,21 +958,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">#3</h3>
+<section id="pr3-23-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-23-title">#3</h3>
 <p><img id="pr3-23-level" class="level"></p>
 <div id="pr3-23-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-23-autocheck" class="autocheck">
-<div id="pr3-23-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-23" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-23')"></p>
-<div id="pr3-23-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-23-hints">
@@ -1231,21 +987,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">#4</h3>
+<section id="pr3-24-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-24-title">#4</h3>
 <p><img id="pr3-24-level" class="level"></p>
 <div id="pr3-24-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-24-autocheck" class="autocheck">
-<div id="pr3-24-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-24" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-24')"></p>
-<div id="pr3-24-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-24-hints">
@@ -1270,21 +1016,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">#5</h3>
+<section id="pr3-25-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-25-title">#5</h3>
 <p><img id="pr3-25-level" class="level"></p>
 <div id="pr3-25-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-25-autocheck" class="autocheck">
-<div id="pr3-25-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-25" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-25')"></p>
-<div id="pr3-25-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-25-hints">
@@ -1309,21 +1045,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-25" class="level3">
-<h3 class="anchored" data-anchor-id="section-25">#6</h3>
+<section id="pr3-26-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-26-title">#6</h3>
 <p><img id="pr3-26-level" class="level"></p>
 <div id="pr3-26-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-26-autocheck" class="autocheck">
-<div id="pr3-26-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-26" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-26')"></p>
-<div id="pr3-26-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-26-hints">
@@ -1348,21 +1074,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-26" class="level3">
-<h3 class="anchored" data-anchor-id="section-26">#7</h3>
+<section id="pr3-27-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-27-title">#7</h3>
 <p><img id="pr3-27-level" class="level"></p>
 <div id="pr3-27-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-27-autocheck" class="autocheck">
-<div id="pr3-27-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-27" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-27')"></p>
-<div id="pr3-27-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-27-hints">
@@ -1387,21 +1103,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-27" class="level3">
-<h3 class="anchored" data-anchor-id="section-27">#8</h3>
+<section id="pr3-28-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-28-title">#8</h3>
 <p><img id="pr3-28-level" class="level"></p>
 <div id="pr3-28-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-28-autocheck" class="autocheck">
-<div id="pr3-28-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-28" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-28')"></p>
-<div id="pr3-28-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-28-hints">
@@ -1426,21 +1132,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-28" class="level3">
-<h3 class="anchored" data-anchor-id="section-28">#9</h3>
+<section id="pr3-29-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-29-title">#9</h3>
 <p><img id="pr3-29-level" class="level"></p>
 <div id="pr3-29-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-29-autocheck" class="autocheck">
-<div id="pr3-29-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-29" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-29')"></p>
-<div id="pr3-29-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-29-hints">
@@ -1465,21 +1161,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-29" class="level3">
-<h3 class="anchored" data-anchor-id="section-29">#10</h3>
+<section id="pr3-30-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr3-30-title">#10</h3>
 <p><img id="pr3-30-level" class="level"></p>
 <div id="pr3-30-task" class="task">
 <p>Текст задания.</p>
-</div>
-<div id="pr3-30-autocheck" class="autocheck">
-<div id="pr3-30-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr3-30" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr3-30')"></p>
-<div id="pr3-30-fb" class="autocheck-feedback">
-
-</div>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-30-hints">
@@ -1555,6 +1241,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1621,13 +1334,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1706,10 +1421,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1719,8 +1433,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1733,6 +1456,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1776,6 +1628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1801,6 +1654,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1862,17 +1741,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pr2.html" class="pagination-link">
+      <a href="./pr2.html" class="pagination-link  aria-label=" p2="" матрицы="" и="" списки.="" функции"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P2 // Матрицы и списки. Функции</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pr4.html" class="pagination-link">
+      <a href="./pr4.html" class="pagination-link" aria-label="P4 // Предобработка данных">
         <span class="nav-page-text">P4 // Предобработка данных</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
