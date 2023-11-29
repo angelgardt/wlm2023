@@ -7,20 +7,22 @@
 
 ## no code
 
+
 # 2
 
 ## read.csv() can read file from link
 ## fs cos fast search
-fs <- read.csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs_1.csv")
+fs <- read.csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.csv")
 ## Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
 ## duplicate 'row.names' are not allowed
 
 ## let's check some lines to understand the structure
-readLines("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs_1.csv")
+readLines("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.csv")
 ## ok, semicoolon
 
 ## load with read.csv2()
-fs <- read.csv2("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs_1.csv")
+fs <- read.csv2("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.csv")
+
 
 # 3
 ## a
@@ -28,14 +30,17 @@ head(fs, n = 10)
 ## b
 tail(fs, n = 5)
 
+
 # 4
 str(fs)
 ## also
 nrow(fs)
 ncol(fs)
 
+
 # 5
 summary(fs)
+
 
 # 6
 ## a
@@ -44,6 +49,7 @@ class(fs)
 colnames(fs)
 ## c
 rownames(fs) # wow that's just numbers
+
 
 # 7
 ## a
@@ -55,6 +61,7 @@ fs[1] # class(fs[1]), wow works like list
 ## d
 fs['cond'] # class(fs['cond']), wow works like list
 
+
 # 8
 ## a
 fs[, 1:3]
@@ -65,11 +72,18 @@ fs[1:10, 3:4]
 ## d
 fs[340, 2]
 
-# 9
 
+# 9
+## a
+sapply(fs, class)
+## b
+sum(is.na(fs))
+### or this one
+sapply(fs, function(x) sum(is.na(x)))
 
 
 # 10
+
 
 # 11
 
@@ -114,3 +128,12 @@ fs[340, 2]
 # 9
 
 # 10
+
+
+
+
+
+
+
+
+# https://drive.google.com/uc?export=download&id=1rylrELRONRxzB4mMJVX6YDz2d06ohAWa

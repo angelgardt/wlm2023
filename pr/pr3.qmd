@@ -44,13 +44,37 @@ fs <- read.csv("../data/pr3/design_fastsearch.csv")
 unique(fs$id)
 fs %>% 
   select(-X) %>% 
-  filter(id == 1 | id == 2) %>% 
-  write_csv2("../data/pr3/des_fs_1.csv")
-i=5
+  write_csv2("../data/pr3/des_fs.csv")
+
 fs %>% 
   select(-X) %>% 
-  filter(id == i) %>% 
-  write_csv2(paste0("../data/pr3/p3-data/des_fs_", i, ".csv"))
+  filter(id == 1) %>% 
+  mutate(date = "2019-02-12 11:56:31") %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", 1, ".csv"))
+
+fs %>% 
+  select(-X) %>% 
+  filter(id == 2) %>% 
+  mutate(date = "2019-02-12 11:05:22") %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", 2, ".csv"))
+
+fs %>% 
+  select(-X) %>% 
+  filter(id == 3) %>% 
+  mutate(date = "2019-02-12 12:31:14") %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", 3, ".csv"))
+
+fs %>% 
+  select(-X) %>% 
+  filter(id == 4) %>% 
+  mutate(date = "2019-02-12 13:45:21") %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", 4, ".csv"))
+
+fs %>% 
+  select(-X) %>% 
+  filter(id == 5) %>%
+  mutate(date = "2019-02-12 09:06:23") %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", 5, ".csv"))
 
 start <- as_datetime("2020-02-12 10:00:00", 
                      tz = "Europe/Moscow") %>% 
@@ -100,7 +124,7 @@ rbind(
 
 <summary>Подсказки</summary>
 
-`readLines()` поможет загрузить несколько строк, чтобы посмотреть, какова структура файла.
+`readLines()` поможет прочитать несколько строк, чтобы посмотреть, какова структура файла.
 
 </details>
 :::
@@ -184,7 +208,7 @@ b. Выведите посление 5 строк датасета в консо
 <img id="pr3-6-level" class="level"/>
 
 ::: {#pr3-6-task .task}
-a. Мы знаем, что файлы данных считываются функциями типа `read...()` в датафрейм. Но давайте в этом дополнительны убедимся. Проверьте, какой структурой данных является объект `fs`.
+a. Мы знаем, что файлы данных считываются функциями типа `read...()` в датафрейм. Но давайте в этом дополнительно убедимся. Проверьте, какой структурой данных является объект `fs`.
 b. Выведите названия столбцов датасета.
 с. Выведите названия строк датасета.
 :::
@@ -198,7 +222,7 @@ b. Выведите названия столбцов датасета.
 
 `class()`
 
-`colanmes()` и `rownames()`
+`colnames()` и `rownames()`
 
 </details>
 :::
