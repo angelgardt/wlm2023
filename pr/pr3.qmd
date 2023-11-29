@@ -1,5 +1,11 @@
 # P3 // Датафреймы. Исследование данных {#pr3 .unnumbered}
 
+{{< include ../book/_symbols.qmd >}}
+
+```{r opts, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ```{=html}
 <!--
 REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
@@ -32,8 +38,60 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <img id="pr3-2-level" class="level"/>
 
+```{r, eval=FALSE}
+library(tidyverse)
+fs <- read.csv("../data/pr3/design_fastsearch.csv")
+unique(fs$id)
+fs %>% 
+  select(-X) %>% 
+  filter(id == 1 | id == 2) %>% 
+  write_csv2("../data/pr3/des_fs_1.csv")
+i=5
+fs %>% 
+  select(-X) %>% 
+  filter(id == i) %>% 
+  write_csv2(paste0("../data/pr3/p3-data/des_fs_", i, ".csv"))
+
+start <- as_datetime("2020-02-12 10:00:00", 
+                     tz = "Europe/Moscow") %>% 
+  as.numeric()
+end <- as_datetime("2020-02-12 22:00:00", 
+                   tz = "Europe/Moscow") %>% 
+  as.numeric()
+
+set.seed(314)
+
+tibble(created_timestamp = sample(start:end, 5),
+       created_date = as_datetime(created_timestamp),
+       time_lag = c(12, 36, 43, 52, 41) * 60 + sample(1:60, 5),
+       modified_timestamp = created_timestamp + time_lag,
+       modified_date = as_datetime(modified_timestamp)) %>% View()
+```
+
+```{r, eval=FALSE}
+# touch -a -m -t 201902121208.44 des_fs_1.csv
+# touch -a -m -t 201902121141.28 des_fs_2.csv
+# touch -a -m -t 201902121314.26 des_fs_3.csv
+# touch -a -m -t 201902121438.01 des_fs_4.csv
+# touch -a -m -t 201902120947.49 des_fs_5.csv
+```
+
+```{r, eval=FALSE}
+rbind(
+  file.info("../data/pr3/p3-data/des_fs_1.csv"),
+  file.info("../data/pr3/p3-data/des_fs_2.csv"),
+  file.info("../data/pr3/p3-data/des_fs_3.csv"),
+  file.info("../data/pr3/p3-data/des_fs_4.csv"),
+  file.info("../data/pr3/p3-data/des_fs_5.csv")
+)
+```
+
 ::: {#pr3-2-task .task}
-Загрузите [данные](https://github.com/angelgardt/wlm2023/blob/master/data/pr3/design_fastsearch.csv) в R. По ссылке расположен CSV-файл.
+
+Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs_1.csv) в R. По ссылке расположен CSV-файл.
+
+Это данные эксперимента на зрительный поиск, в котором испытуемые должны были как можно быстрее найти целевой стимул. Сохраните данные в переменную `fs`.
+
 :::
 
 
@@ -42,23 +100,7 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`readLines()` поможет загрузить несколько строк, чтобы посмотреть, какова структура файла.
 
 </details>
 :::
@@ -68,7 +110,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-3-level" class="level"/>
 
 ::: {#pr3-3-task .task}
-Текст задания.
+Посмотрите, корректно ли загрузился файл.
+
+a. Выведите первые 10 строк датасета в консоль
+b. Выведите посление 5 строк датасета в консоль
+
 :::
 
 
@@ -77,23 +123,9 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+`head()`
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`tail()`
 
 </details>
 :::
@@ -103,7 +135,13 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-4-level" class="level"/>
 
 ::: {#pr3-4-task .task}
-Текст задания.
+
+Изучите структуру загруженного датасета.
+
+* Сколько в нем наблюдений?
+* Сколько в нем переменных?
+* Какого они типа?
+
 :::
 
 
@@ -112,23 +150,7 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`str()`
 
 </details>
 :::
@@ -138,7 +160,11 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-5-level" class="level"/>
 
 ::: {#pr3-5-task .task}
-Текст задания.
+
+Посмотрите базовые описательные статистики по всем переменным датасета. Используйте одну функцию.
+
+Почему для разных переменных формат аутпута различается?
+
 :::
 
 
@@ -148,23 +174,7 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`summary()`
 
 </details>
 :::
@@ -174,7 +184,9 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-6-level" class="level"/>
 
 ::: {#pr3-6-task .task}
-Текст задания.
+a. Мы знаем, что файлы данных считываются функциями типа `read...()` в датафрейм. Но давайте в этом дополнительны убедимся. Проверьте, какой структурой данных является объект `fs`.
+b. Выведите названия столбцов датасета.
+с. Выведите названия строк датасета.
 :::
 
 
@@ -184,23 +196,9 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+`class()`
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`colanmes()` и `rownames()`
 
 </details>
 :::
@@ -210,7 +208,12 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-7-level" class="level"/>
 
 ::: {#pr3-7-task .task}
-Текст задания.
+Продолжаем работать с датафреймом `fs`:
+
+a. Выведите содержимое столбца `time` --- должен вернуться вектор.
+b. Выведите содержимое первого столбца --- должен вернуться вектор.
+c. Выведите содержимое первого столбца --- должен вернуться датафрейм.
+d. Выведите содержимое столбца `cond` --- должен вернуться датафрейм.
 :::
 
 
@@ -219,23 +222,7 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Вспомните об особенностях индексации списков.
 
 </details>
 :::
@@ -245,7 +232,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <img id="pr3-8-level" class="level"/>
 
 ::: {#pr3-8-task .task}
-Текст задания.
+
+Всё ещё продолжаем работать с датафреймом `fs`:
+
+a. Выведите три первые столбца датафрейма
+b. Выведите первые 30 строк датафрейма
+с. Выведите содержимое третьей и четвертой колонок из первых десяти строк датафрейма 
+d. Выведите значение, которое лежит во втором столбце 340-ой строки
+
 :::
 
 
@@ -254,23 +248,7 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Вспомните об особенностях индексации матриц.
 
 </details>
 :::

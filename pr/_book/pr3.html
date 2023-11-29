@@ -323,6 +323,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!---  --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
 <!--
 REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 -->
@@ -347,28 +355,15 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-2-title">#2</h3>
 <p><img id="pr3-2-level" class="level"></p>
 <div id="pr3-2-task" class="task">
-<p>Загрузите <a href="https://github.com/angelgardt/wlm2023/blob/master/data/pr3/design_fastsearch.csv">данные</a> в R. По ссылке расположен CSV-файл.</p>
+<p>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs_1.csv">данные</a> в R. По ссылке расположен CSV-файл.</p>
+<p>Это данные эксперимента на зрительный поиск, в котором испытуемые должны были как можно быстрее найти целевой стимул. Сохраните данные в переменную <code>fs</code>.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-2-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>readLines()</code> поможет загрузить несколько строк, чтобы посмотреть, какова структура файла.</p>
 </details>
 </div>
 </section>
@@ -376,28 +371,19 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-3-title">#3</h3>
 <p><img id="pr3-3-level" class="level"></p>
 <div id="pr3-3-task" class="task">
-<p>Текст задания.</p>
+<p>Посмотрите, корректно ли загрузился файл.</p>
+<ol type="a">
+<li>Выведите первые 10 строк датасета в консоль</li>
+<li>Выведите посление 5 строк датасета в консоль</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-3-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>head()</code></p>
+<p><code>tail()</code></p>
 </details>
 </div>
 </section>
@@ -405,28 +391,19 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-4-title">#4</h3>
 <p><img id="pr3-4-level" class="level"></p>
 <div id="pr3-4-task" class="task">
-<p>Текст задания.</p>
+<p>Изучите структуру загруженного датасета.</p>
+<ul>
+<li>Сколько в нем наблюдений?</li>
+<li>Сколько в нем переменных?</li>
+<li>Какого они типа?</li>
+</ul>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-4-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>str()</code></p>
 </details>
 </div>
 </section>
@@ -434,28 +411,15 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-5-title">#5</h3>
 <p><img id="pr3-5-level" class="level"></p>
 <div id="pr3-5-task" class="task">
-<p>Текст задания.</p>
+<p>Посмотрите базовые описательные статистики по всем переменным датасета. Используйте одну функцию.</p>
+<p>Почему для разных переменных формат аутпута различается?</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-5-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>summary()</code></p>
 </details>
 </div>
 </section>
@@ -463,28 +427,18 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-6-title">#6</h3>
 <p><img id="pr3-6-level" class="level"></p>
 <div id="pr3-6-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Мы знаем, что файлы данных считываются функциями типа <code>read...()</code> в датафрейм. Но давайте в этом дополнительны убедимся. Проверьте, какой структурой данных является объект <code>fs</code>.</li>
+<li>Выведите названия столбцов датасета. с. Выведите названия строк датасета.</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-6-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>class()</code></p>
+<p><code>colanmes()</code> и <code>rownames()</code></p>
 </details>
 </div>
 </section>
@@ -492,28 +446,20 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-7-title">#7</h3>
 <p><img id="pr3-7-level" class="level"></p>
 <div id="pr3-7-task" class="task">
-<p>Текст задания.</p>
+<p>Продолжаем работать с датафреймом <code>fs</code>:</p>
+<ol type="a">
+<li>Выведите содержимое столбца <code>time</code> — должен вернуться вектор.</li>
+<li>Выведите содержимое первого столбца — должен вернуться вектор.</li>
+<li>Выведите содержимое первого столбца — должен вернуться датафрейм.</li>
+<li>Выведите содержимое столбца <code>cond</code> — должен вернуться датафрейм.</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-7-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Вспомните об особенностях индексации списков.</p>
 </details>
 </div>
 </section>
@@ -521,28 +467,19 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-8-title">#8</h3>
 <p><img id="pr3-8-level" class="level"></p>
 <div id="pr3-8-task" class="task">
-<p>Текст задания.</p>
+<p>Всё ещё продолжаем работать с датафреймом <code>fs</code>:</p>
+<ol type="a">
+<li>Выведите три первые столбца датафрейма</li>
+<li>Выведите первые 30 строк датафрейма с. Выведите содержимое третьей и четвертой колонок из первых десяти строк датафрейма</li>
+<li>Выведите значение, которое лежит во втором столбце 340-ой строки</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-8-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Вспомните об особенностях индексации матриц.</p>
 </details>
 </div>
 </section>
