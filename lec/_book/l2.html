@@ -375,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#почему-это-особый-тип-данных" id="toc-почему-это-особый-тип-данных" class="nav-link" data-scroll-target="#почему-это-особый-тип-данных"><span class="header-section-number">2.40.1</span> Почему это особый тип данных?</a></li>
   </ul></li>
   <li><a href="#форматы-даты-и-времени" id="toc-форматы-даты-и-времени" class="nav-link" data-scroll-target="#форматы-даты-и-времени"><span class="header-section-number">2.41</span> Форматы даты и времени</a></li>
-  <li><a href="#извлечение-компонентов-даты" id="toc-извлечение-компонентов-даты" class="nav-link" data-scroll-target="#извлечение-компонентов-даты"><span class="header-section-number">2.42</span> Извлечение компонентов даты</a></li>
+  <li><a href="#операции-над-датами" id="toc-операции-над-датами" class="nav-link" data-scroll-target="#операции-над-датами"><span class="header-section-number">2.42</span> Операции над датами</a></li>
   <li><a href="#зачем-нужна-визуализация" id="toc-зачем-нужна-визуализация" class="nav-link" data-scroll-target="#зачем-нужна-визуализация"><span class="header-section-number">2.43</span> Зачем нужна визуализация?</a>
   <ul class="collapse">
   <li><a href="#квартет-анскомба" id="toc-квартет-анскомба" class="nav-link" data-scroll-target="#квартет-анскомба"><span class="header-section-number">2.43.1</span> Квартет Анскомба</a></li>
@@ -1893,8 +1893,8 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb194"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "W0iY9" "YYCp3" "LNwmj" "gGhsl" "TLRA6" "xLrjN" "pJDCL" "jTFng" "EelD6"
-[10] "F5cRs"</code></pre>
+<pre><code> [1] "bQrLR" "ajw1B" "E8PLn" "rKyPI" "n92og" "d9E0g" "Xd9Rc" "2KNM6" "QI4O3"
+[10] "l2byG"</code></pre>
 </div>
 </div>
 </section>
@@ -1950,15 +1950,15 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 4
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
- 1     1 A         1     4
- 2     1 A         2     1
- 3     1 A         3     1
- 4     1 A         4     5
- 5     1 A         5     3
- 6     1 B         1     2
- 7     1 B         2     5
+ 1     1 A         1     2
+ 2     1 A         2     5
+ 3     1 A         3     5
+ 4     1 A         4     3
+ 5     1 A         5     4
+ 6     1 B         1     1
+ 7     1 B         2     2
  8     1 B         3     5
- 9     1 B         4     2
+ 9     1 B         4     4
 10     1 B         5     3
 # ℹ 140 more rows</code></pre>
 </div>
@@ -1969,15 +1969,15 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
- 1     1 A_1            4
- 2     1 A_2            1
- 3     1 A_3            1
- 4     1 A_4            5
- 5     1 A_5            3
- 6     1 B_1            2
- 7     1 B_2            5
+ 1     1 A_1            2
+ 2     1 A_2            5
+ 3     1 A_3            5
+ 4     1 A_4            3
+ 5     1 A_5            4
+ 6     1 B_1            1
+ 7     1 B_2            2
  8     1 B_3            5
- 9     1 B_4            2
+ 9     1 B_4            4
 10     1 B_5            3
 # ℹ 140 more rows</code></pre>
 </div>
@@ -2002,15 +2002,15 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 4
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1     1 A     1         4
- 2     1 A     2         1
- 3     1 A     3         1
- 4     1 A     4         5
- 5     1 A     5         3
- 6     1 B     1         2
- 7     1 B     2         5
+ 1     1 A     1         2
+ 2     1 A     2         5
+ 3     1 A     3         5
+ 4     1 A     4         3
+ 5     1 A     5         4
+ 6     1 B     1         1
+ 7     1 B     2         2
  8     1 B     3         5
- 9     1 B     4         2
+ 9     1 B     4         4
 10     1 B     5         3
 # ℹ 140 more rows</code></pre>
 </div>
@@ -2252,7 +2252,7 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb267"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb267-1"><a href="#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-11-29 02:49:50 MSK"</code></pre>
+<pre><code>[1] "2023-11-29 15:49:06 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2269,13 +2269,13 @@ lgl (1): var3
 <li>Unix-timestamp (число) — количество секунд с 01.01.1970, используется в базах данных</li>
 </ul>
 </section>
-<section id="извлечение-компонентов-даты" class="level2" data-number="2.42">
-<h2 data-number="2.42" class="anchored" data-anchor-id="извлечение-компонентов-даты"><span class="header-section-number">2.42</span> Извлечение компонентов даты</h2>
+<section id="операции-над-датами" class="level2" data-number="2.42">
+<h2 data-number="2.42" class="anchored" data-anchor-id="операции-над-датами"><span class="header-section-number">2.42</span> Операции над датами</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb269"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb269-1"><a href="#cb269-1" aria-hidden="true" tabindex="-1"></a><span class="do">## текущий timestamp</span></span>
 <span id="cb269-2"><a href="#cb269-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1701215390</code></pre>
+<pre><code>[1] 1701262146</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -2293,7 +2293,7 @@ lgl (1): var3
 </div>
 <div class="sourceCode cell-code" id="cb277"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb277-1"><a href="#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>[1] 15</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb279"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb279-1"><a href="#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2301,7 +2301,11 @@ lgl (1): var3
 </div>
 <div class="sourceCode cell-code" id="cb281"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb281-1"><a href="#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 50.44431</code></pre>
+<pre><code>[1] 6.398233</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb283"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb283-1"><a href="#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 170 mins</code></pre>
 </div>
 </div>
 </section>

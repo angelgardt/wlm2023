@@ -1725,8 +1725,8 @@ cond1 cond2 cond3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href="#cb175-1"></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "EuB72" "PYTit" "nxB2q" "JzDbG" "eyM5A" "RD5aP" "WzM0X" "IGyLz" "pfVim"
-[10] "NwudP"</code></pre>
+<pre><code> [1] "HFmLx" "p8JBd" "OAXqS" "VKpTF" "0MhuH" "qy0hy" "Zw2Oh" "eleMz" "fbNPl"
+[10] "cZLnb"</code></pre>
 </div>
 </div>
 </section>
@@ -1783,14 +1783,14 @@ cond1 cond2 cond3
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
  1     1 A         1     5
- 2     1 A         2     3
- 3     1 A         3     1
+ 2     1 A         2     5
+ 3     1 A         3     2
  4     1 A         4     5
- 5     1 A         5     1
+ 5     1 A         5     2
  6     1 B         1     5
- 7     1 B         2     2
+ 7     1 B         2     3
  8     1 B         3     4
- 9     1 B         4     4
+ 9     1 B         4     2
 10     1 B         5     4
 # ℹ 140 more rows</code></pre>
 </div>
@@ -1802,14 +1802,14 @@ cond1 cond2 cond3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
  1     1 A_1            5
- 2     1 A_2            3
- 3     1 A_3            1
+ 2     1 A_2            5
+ 3     1 A_3            2
  4     1 A_4            5
- 5     1 A_5            1
+ 5     1 A_5            2
  6     1 B_1            5
- 7     1 B_2            2
+ 7     1 B_2            3
  8     1 B_3            4
- 9     1 B_4            4
+ 9     1 B_4            2
 10     1 B_5            4
 # ℹ 140 more rows</code></pre>
 </div>
@@ -1834,14 +1834,14 @@ cond1 cond2 cond3
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
  1     1 A     1         5
- 2     1 A     2         3
- 3     1 A     3         1
+ 2     1 A     2         5
+ 3     1 A     3         2
  4     1 A     4         5
- 5     1 A     5         1
+ 5     1 A     5         2
  6     1 B     1         5
- 7     1 B     2         2
+ 7     1 B     2         3
  8     1 B     3         4
- 9     1 B     4         4
+ 9     1 B     4         2
 10     1 B     5         4
 # ℹ 140 more rows</code></pre>
 </div>
@@ -2069,7 +2069,7 @@ cond1 cond2 cond3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb247"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb247-1"><a href="#cb247-1"></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-11-29 02:47:53 MSK"</code></pre>
+<pre><code>[1] "2023-11-29 14:15:17 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2085,13 +2085,13 @@ cond1 cond2 cond3
 <li>Unix-timestamp (число) — количество секунд с 01.01.1970, используется в базах данных</li>
 </ul>
 </section>
-<section id="извлечение-компонентов-даты" class="slide level2">
-<h2>Извлечение компонентов даты</h2>
+<section id="операция-над-датами" class="slide level2">
+<h2>Операция над датами</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb249"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb249-1"><a href="#cb249-1"></a><span class="do">## текущий timestamp</span></span>
 <span id="cb249-2"><a href="#cb249-2"></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1701215274</code></pre>
+<pre><code>[1] 1701256517</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -2109,15 +2109,19 @@ cond1 cond2 cond3
 </div>
 <div class="sourceCode cell-code" id="cb257"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb257-1"><a href="#cb257-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>[1] 14</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb259"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb259-1"><a href="#cb259-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 47</code></pre>
+<pre><code>[1] 15</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb261"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb261-1"><a href="#cb261-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 53.56029</code></pre>
+<pre><code>[1] 17.07679</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb263"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb263-1"><a href="#cb263-1"></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 170 mins</code></pre>
 </div>
 </div>
 </section></section>

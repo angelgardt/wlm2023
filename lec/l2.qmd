@@ -1001,7 +1001,7 @@ now()
 * `mm/dd/yy`, `mm/dd/yyyy` --- используется в США
 * Unix-timestamp (число) --- количество секунд с 01.01.1970, используется в базах данных
 
-## Извлечение компонентов даты
+## Операции над датами
 
 ```{r}
 ## текущий timestamp
@@ -1015,6 +1015,7 @@ day(now())
 hour(now())
 minute(now())
 second(now())
+difftime(ymd_hm("2023-01-21, 21:00"), ymd_hm("2023-01-21, 18:10"), units = "mins")
 ```
 
 
@@ -1130,7 +1131,8 @@ diamonds %>%
   geom_text(aes(label = prop), position = position_stack(vjust = 0.5)) +
   coord_polar('y', start = 0) + 
   xlab(NULL) + ylab(NULL) +
-  labs(fill = 'Cut')
+  labs(fill = 'Cut') +
+  theme(axis.text.x = element_text(size = 0))
 ```
 
 
