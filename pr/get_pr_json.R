@@ -1,7 +1,7 @@
 library(googlesheets4)
 library(tidyverse)
 
-FIELDS = c("id",
+FIELDS = c("task",
            "level", 
            "has_autocheck",
            "autocheck_answer", 
@@ -21,8 +21,8 @@ get_json <- function(prn, prs_table) {
       across(everything(), ~replace_na(.x, ""))
     ) %>% 
     select(-pr, -n) %>%
-    pivot_longer(cols = -id) %>% 
-    pivot_wider(names_from = id,
+    pivot_longer(cols = -task) %>% 
+    pivot_wider(names_from = task,
                 values_from = value) %>% 
     jsonlite::toJSON(dataframe = "rows") %>%
     paste0("pr_json='", ., "'", 

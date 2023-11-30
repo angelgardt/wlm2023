@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -340,14 +374,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-1-title">#1</h3>
 <p><img id="pr3-1-level" class="level"></p>
 <div id="pr3-1-task" class="task">
-<p>Создайте проект (RStudio Project), в котором будете складывать материалы курса.</p>
+<p>Создайте проект (RStudio Project), в котором будете складывать материалы курса. Откройте его и создайте первый скрипт в этом проекте.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-1-hints">
 <summary>
 Подсказки
 </summary>
-<p>Как создать проект, описано <a href="https://angelgardt.github.io/wlm2023/lectures/l2.html#l2-create-project">тут</a></p>
+<p>Как создать проект, описано <a href="../lectures/l2.html#l2-create-project">тут</a></p>
 </details>
 </div>
 </section>
@@ -487,28 +521,20 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-9-title">#9</h3>
 <p><img id="pr3-9-level" class="level"></p>
 <div id="pr3-9-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Выведите типы данных столбцов датафрейма с помощью одной команды.</li>
+<li>Выясните, есть ли пропущенные значения в данных.</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-9-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ol type="a">
+<li><code>sapply()</code> + <code>class()</code></li>
+<li><code>sum()</code> + <code>is.na()</code></li>
+</ol>
 </details>
 </div>
 </section>
@@ -516,28 +542,16 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-10-title">#10</h3>
 <p><img id="pr3-10-level" class="level"></p>
 <div id="pr3-10-task" class="task">
-<p>Текст задания.</p>
+<p>До этого момента мы жили в прекрасном мире, когда у нас был целый датасет. Однако часто данные разбросаны по нескольким файлам.</p>
+<p>Скачайте <a href="https://drive.google.com/uc?export=download&amp;id=1rylrELRONRxzB4mMJVX6YDz2d06ohAWa">архив</a>, в котором лежит несколько файлов данных от разных испытуемых, которые прошли один и тот же эксперимент. Разархивируйте его в папку проекта, которую мы создали в <a href="#pr3-1-title">задании 1</a>.</p>
+<ol type="a">
+<li>Выведите названия файлов, которые лежат в разархивированной папке.</li>
+<li>Сколько файлов содержится в скачаной папке?</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-10-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>dir()</code></p>
 </details>
 </div>
 </section>
@@ -545,28 +559,12 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-11-title">#11</h3>
 <p><img id="pr3-11-level" class="level"></p>
 <div id="pr3-11-task" class="task">
-<p>Текст задания.</p>
+<p>Имеющиеся в нашем распоряжении файлы данных имеют одинаковую структуру, так как собирались с помощью одного и того же ПО.</p>
+<p>Загрузите все данные из скачанных файлов, объединив их в один датафрейм. Сохраните результат в переменную <code>fs5</code>.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>for (...) {...}</code> + <code>rbind()</code></p>
 </details>
 </div>
 </section>
@@ -574,57 +572,46 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-12-title">#12</h3>
 <p><img class="level"></p>
 <div id="pr3-12-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>В столбце <code>cond</code> содержатся закодированные сочетания экспериментальных условий. Сколько таких сочетаний было в эксперименте?</li>
+<li>Сколько в данных наблюдений, относящихся к каждому из сочетаний экспериментальных условий?</li>
+<li>Отберите из данных наблюдения, которые относятся к сочетанию условий <code>f3_p</code>.</li>
+<li>Отберите из данных числовые переменные.</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-12-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Вспомните, как мы индексировали массивы по условию.</p>
 </details>
 </div>
 </section>
 <section id="pr3-13-title" class="level3">
 <h3 class="anchored" data-anchor-id="pr3-13-title">#13</h3>
 <p><img id="pr3-13-level" class="level"></p>
-<div class="task">
-<p>Текст задания.</p>
+<div id="pr3-13-task" class="task">
+<p>В данных <code>fs5</code> содержится колонка <code>date</code> — это дата и время начала прохождения эксперимента.</p>
+<ol type="a">
+<li>Эта переменная выглядит как текстовая. Проверьте, так ли это.</li>
+<li>При необходимости приведите её к типу <code>datetime</code>.</li>
+</ol>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-13-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Понадобится пакет <code>lubridate</code>. Установить его можно командой</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lubridate"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Однако данный пакет являются частью <code>tidyverse</code>, который нам понадобится уже на следующей практике, поэтому лучше сделать</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Чтобы привести текст к дате пригодится <code>as_datetime()</code>.</p>
 </details>
 </div>
 </section>
@@ -632,28 +619,16 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-14-title">#14</h3>
 <p><img id="pr3-14-level" class="level"></p>
 <div id="pr3-14-task" class="task">
-<p>Текст задания.</p>
+<p>а. В каком году собраны данные? b. В каком месяце собраны данные? с. Сколько дней собирались данные?</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-14-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>year()</code></p>
+<p><code>month()</code></p>
+<p><code>day()</code></p>
 </details>
 </div>
 </section>
@@ -661,28 +636,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-15-title">#15</h3>
 <p><img id="pr3-15-level" class="level"></p>
 <div id="pr3-15-task" class="task">
-<p>Текст задания.</p>
+<p>На основе имеющихся данных составьте датасет, в котором будут содержаться идентификаторы испытуемых и даты, когда они проходили эксперимент. Количество строк в итоговом датасете должно совпадать с количеством испытуемых. Сохраните его в переменную <code>fs_dates</code>.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-15-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>duplicated()</code></p>
 </details>
 </div>
 </section>
@@ -690,28 +651,17 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-16-title">#16</h3>
 <p><img id="pr3-16-level" class="level"></p>
 <div id="pr3-16-task" class="task">
-<p>Текст задания.</p>
+<p>Нам надо проверить испытуемых на честность. Известно, что эксперимент занимает 30–40 минут — если человек проходит его быстрее, вероятно, он был недостаточно внимаетелн или вовсе просто прокликал все пробы. Справедливо не учитывать такого испытуемого в анализе.</p>
+<p>Данные о начале эксперимента у нас есть — это дата и время создания файла (<code>date</code>). Однако информации о том, когда эксперимент закончился у нас нет. Или?</p>
+<p>Эксперимент завершился тогда, когда все данные были записаны в файл — то есть в тот момент, когда произошло последнее изменение файла.</p>
+<p>Возмите для примера файл <code>des_fs_1.csv</code> и вытащите его метаданные, в которых содержится информацию о дате его создания, изменения и последнего доступа.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-16-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>file.info()</code></p>
 </details>
 </div>
 </section>
@@ -719,57 +669,29 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-17-title">#17</h3>
 <p><img id="pr3-17-level" class="level"></p>
 <div id="pr3-17-task" class="task">
-<p>Текст задания.</p>
+<p>Взяв за основу цикл из <a href="#pr3-11-title">задания 11</a>, соберите метаданные из всех файлов в единый датафрейм. Назовите его <code>fs_meta</code>.</p>
 </div>
-<div class="hints-wrapper">
+::: {.hints-wrapper hidden=true}
 <details class="hints" id="pr3-17-hints">
 <summary>
 Подсказки
 </summary>
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
 </details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
+<p>:::</p>
+</details></section>
 <section id="pr3-18-title" class="level3">
 <h3 class="anchored" data-anchor-id="pr3-18-title">#18</h3>
 <p><img id="pr3-18-level" class="level"></p>
 <div id="pr3-18-task" class="task">
-<p>Текст задания.</p>
+<p>Объедините данные из датафреймов <code>fs_dates</code> и <code>fs_meta</code>. Итоговый датасет должен содержать следующие колонки: <code>id</code>, <code>date</code>, <code>mtime</code>. Перезапишите объект <code>fs_dates</code>.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-18-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>cbind()</code></p>
 </details>
 </div>
 </section>
@@ -777,28 +699,15 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-19-title">#19</h3>
 <p><img id="pr3-19-level" class="level"></p>
 <div id="pr3-19-task" class="task">
-<p>Текст задания.</p>
+<p>Вычислите, сколько времени затратил каждый испытуемый на прохождение эксперимента. Сохраните результаты вычислений в новую колонку <code>duration</code> датафрейма <code>fs_dates</code>.</p>
+<p>Есть ли испытуемые, которых необходимо исключить из анализа?</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-19-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>difftime()</code></p>
 </details>
 </div>
 </section>
@@ -806,28 +715,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-20-title">#20</h3>
 <p><img id="pr3-20-level" class="level"></p>
 <div id="pr3-20-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте получившийся датасет в формате CSV.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-20-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>write.csv()</code></p>
 </details>
 </div>
 </section>
@@ -838,28 +733,13 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-21-title">#1</h3>
 <p><img id="pr3-21-level" class="level"></p>
 <div id="pr3-21-task" class="task">
-<p>Текст задания.</p>
+<p>Познакомьтесь с работой функции <code>View()</code>. Попробуйте вызвать её на объекте <code>fs</code>. При необходимости ознакомьтесь с документацией по этой функции</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-21-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -867,28 +747,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-22-title">#2</h3>
 <p><img id="pr3-22-level" class="level"></p>
 <div id="pr3-22-task" class="task">
-<p>Текст задания.</p>
+<p>Иногда — хотя последнее время всё реже — встречаются файлы данных, которые пришли нам из других статистических программ. Например, файлы SPSS имеют собственное расширение <code>.sav</code>. Они загружаются в R с помощью функции <code>read.spss</code> из пакета <code>foreign</code> или <code>read_sav</code> из пакета <code>haven</code>.</p>
+<p><a href="https://github.com/angelgardt/wlm2023/raw/master/data/pr3/depress.sav">По ссылке</a> есть данные в формате <code>.sav</code>. Скачайт их и загрузите в R с помощью какой-либо из указанных выше функций. Обратите внимание на особенности загрузки данных. При необходимости изучите документацию к функциям.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-22-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -896,28 +762,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-23-title">#3</h3>
 <p><img id="pr3-23-level" class="level"></p>
 <div id="pr3-23-task" class="task">
-<p>Текст задания.</p>
+<p>На предыдущих практиках мы рассматривали функцию <code>Map()</code>, которая может заменять цикл. Реализуйте с её помощью загрузку нескольких файлов из <a href="#pr3-11-title">задания 11</a>.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-23-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>&lt;&lt;-</code></p>
 </details>
 </div>
 </section>
@@ -925,28 +777,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-24-title">#4</h3>
 <p><img id="pr3-24-level" class="level"></p>
 <div id="pr3-24-task" class="task">
-<p>Текст задания.</p>
+<p>Возьмите датасет <code>fs_dates</code> из <a href="#pr3-19-title">задания 19</a> и создайте в нем переменные <code>start</code> и <code>end</code>, которые будут содержать в себе временную метку (timestamp) из колонок <code>date</code> и <code>mtime</code> соответственно. Посчитайте продолжительность прохождения эксперимента в минутах на основе переменных <code>start</code> и <code>end</code>. Сравните с содержимым переменной <code>duration</code>.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-24-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>as.numeric()</code></p>
 </details>
 </div>
 </section>
@@ -954,28 +792,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-25-title">#5</h3>
 <p><img id="pr3-25-level" class="level"></p>
 <div id="pr3-25-task" class="task">
-<p>Текст задания.</p>
+<p>В <a href="../lectures/l2.html#json">лекции</a> упоминался формат файлов JSON. Попробуем загрузить датасет <code>fs</code>, с которым мы работали на этой практике, но теперь из <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.json">JSON-файла</a>. Для этого нужна будет функция <code>read_json</code> из пакета <code>jsonlite</code>.</p>
+<p>Загрузка JSON-файла имеет свои особенности. Обратитесь к документации функции, чтобы их изучить.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-25-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -983,28 +807,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-26-title">#6</h3>
 <p><img id="pr3-26-level" class="level"></p>
 <div id="pr3-26-task" class="task">
-<p>Текст задания.</p>
+<p>В <a href="../lectures/l2.html#xml">лекции</a> упоминался формат файлов данных с особой разметкой XML. Попробуем загрузить датасет <code>fs</code>, с которым мы работали на этой практике, но теперь из <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.xml">XML-файла</a>. Для этого нужна будет функция <code>xmlToDataFrame</code> из пакета <code>XML</code>.</p>
+<p>Загрузка XML-файла имеет свои особенности. Обратитесь к документации функции, чтобы их изучить.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-26-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -1012,28 +822,13 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-27-title">#7</h3>
 <p><img id="pr3-27-level" class="level"></p>
 <div id="pr3-27-task" class="task">
-<p>Текст задания.</p>
+<p>R позволяет управлять структурой проекта, не выходят из скрипта. Найдите функцию, которая создает папку внутри рабочей директории. Создайте с её помощью папку <code>scripts</code> и сложите в неё скрипты, который успели накопиться за время курса.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-27-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -1041,28 +836,13 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-28-title">#8</h3>
 <p><img id="pr3-28-level" class="level"></p>
 <div id="pr3-28-task" class="task">
-<p>Текст задания.</p>
+<p>Иногда бывает так, что мы обнаруживаем битый файл среди файлов данных. Нам ничего не остается, как удалить его. Можно сделать это вручную, однако потом мы вполне можем забыть, что у нас был такой файл и мы его удаляли — и количество респондентов и файлов не сойдется. Отыщите функцию, которая позвляет удалить файл прямо из скрипта. Она позволит оставить в скрипте след о том, что файл был удален, что позволит нам не забыть о произошедшем проишествии.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-28-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -1070,28 +850,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-29-title">#9</h3>
 <p><img id="pr3-29-level" class="level"></p>
 <div id="pr3-29-task" class="task">
-<p>Текст задания.</p>
+<p>Выйдите из проекта курса и проверьте, какую папку R считает рабочей директорией по умолчанию.</p>
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="pr3-29-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>getwd()</code></p>
 </details>
 </div>
 </section>
@@ -1099,28 +865,14 @@ REPLACE ALL pr3 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr3-30-title">#10</h3>
 <p><img id="pr3-30-level" class="level"></p>
 <div id="pr3-30-task" class="task">
-<p>Текст задания.</p>
+<p>Скорее всего, он считает рабочей директорией по умолчанию папку пользователя операционной системы. Чтобы файлы, которые вы будете создавать по той или иной причине вне проектов не болтались просто в папке пользователя и не путались с другими файлами, создайте папку <code>R</code>, которая будет дефолтной рабочей директорией. Задайте её в качестве таковой через настройки: <code>Tools &gt; Global Options... &gt; General &gt; R Session &gt; Default working directory</code>.</p>
+<p>Можете выбрать другое название папки, которое считаете удобным для работы.</p>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr3-30-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 <!--- CHANGE pr3 TO pr<n> IN THE LINES BELOW--->
