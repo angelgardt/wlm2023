@@ -312,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#путь-к-файлу" id="toc-путь-к-файлу" class="nav-link" data-scroll-target="#путь-к-файлу"><span class="header-section-number">2.5</span> Путь к файлу</a></li>
   <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects"><span class="header-section-number">2.6</span> Projects</a>
   <ul class="collapse">
-  <li><a href="#как-создать-проект" id="toc-как-создать-проект" class="nav-link" data-scroll-target="#как-создать-проект"><span class="header-section-number">2.6.1</span> Как создать проект?</a></li>
+  <li><a href="#l2-create-project" id="toc-l2-create-project" class="nav-link" data-scroll-target="#l2-create-project"><span class="header-section-number">2.6.1</span> Как создать проект?</a></li>
   </ul></li>
   <li><a href="#кодировка" id="toc-кодировка" class="nav-link" data-scroll-target="#кодировка"><span class="header-section-number">2.7</span> Кодировка</a></li>
   <li><a href="#первичное-исследование-данных" id="toc-первичное-исследование-данных" class="nav-link" data-scroll-target="#первичное-исследование-данных"><span class="header-section-number">2.8</span> Первичное исследование данных</a></li>
@@ -589,8 +589,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Удобно использовать относительные пути к файлам</li>
 <li>Чтобы код воспроизводился на другом коспьютере, достаточно заархивировать весь проект и отправить коллеге</li>
 </ul>
-<section id="как-создать-проект" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="как-создать-проект"><span class="header-section-number">2.6.1</span> Как создать проект?</h3>
+<section id="l2-create-project" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="l2-create-project"><span class="header-section-number">2.6.1</span> Как создать проект?</h3>
 <ol type="1">
 <li>В правом верхнем углу нажмите на <code>Project: (None)</code> и выберите <code>New Project...</code>.</li>
 </ol>
@@ -1893,8 +1893,8 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb194"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "bQrLR" "ajw1B" "E8PLn" "rKyPI" "n92og" "d9E0g" "Xd9Rc" "2KNM6" "QI4O3"
-[10] "l2byG"</code></pre>
+<pre><code> [1] "gjvut" "OPk3y" "jWJDr" "ZEujw" "shWtp" "64anv" "mpjR1" "Yy1NU" "CIAun"
+[10] "VcikS"</code></pre>
 </div>
 </div>
 </section>
@@ -1951,13 +1951,13 @@ lgl (1): var3
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
  1     1 A         1     2
- 2     1 A         2     5
- 3     1 A         3     5
- 4     1 A         4     3
- 5     1 A         5     4
+ 2     1 A         2     1
+ 3     1 A         3     4
+ 4     1 A         4     5
+ 5     1 A         5     5
  6     1 B         1     1
- 7     1 B         2     2
- 8     1 B         3     5
+ 7     1 B         2     3
+ 8     1 B         3     1
  9     1 B         4     4
 10     1 B         5     3
 # ℹ 140 more rows</code></pre>
@@ -1970,13 +1970,13 @@ lgl (1): var3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
  1     1 A_1            2
- 2     1 A_2            5
- 3     1 A_3            5
- 4     1 A_4            3
- 5     1 A_5            4
+ 2     1 A_2            1
+ 3     1 A_3            4
+ 4     1 A_4            5
+ 5     1 A_5            5
  6     1 B_1            1
- 7     1 B_2            2
- 8     1 B_3            5
+ 7     1 B_2            3
+ 8     1 B_3            1
  9     1 B_4            4
 10     1 B_5            3
 # ℹ 140 more rows</code></pre>
@@ -2003,13 +2003,13 @@ lgl (1): var3
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
  1     1 A     1         2
- 2     1 A     2         5
- 3     1 A     3         5
- 4     1 A     4         3
- 5     1 A     5         4
+ 2     1 A     2         1
+ 3     1 A     3         4
+ 4     1 A     4         5
+ 5     1 A     5         5
  6     1 B     1         1
- 7     1 B     2         2
- 8     1 B     3         5
+ 7     1 B     2         3
+ 8     1 B     3         1
  9     1 B     4         4
 10     1 B     5         3
 # ℹ 140 more rows</code></pre>
@@ -2252,7 +2252,7 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb267"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb267-1"><a href="#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-11-29 15:49:06 MSK"</code></pre>
+<pre><code>[1] "2023-11-29 17:18:34 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2275,7 +2275,7 @@ lgl (1): var3
 <div class="sourceCode cell-code" id="cb269"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb269-1"><a href="#cb269-1" aria-hidden="true" tabindex="-1"></a><span class="do">## текущий timestamp</span></span>
 <span id="cb269-2"><a href="#cb269-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1701262146</code></pre>
+<pre><code>[1] 1701267515</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -2293,15 +2293,15 @@ lgl (1): var3
 </div>
 <div class="sourceCode cell-code" id="cb277"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb277-1"><a href="#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 15</code></pre>
+<pre><code>[1] 17</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb279"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb279-1"><a href="#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 49</code></pre>
+<pre><code>[1] 18</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb281"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb281-1"><a href="#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6.398233</code></pre>
+<pre><code>[1] 34.92684</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb283"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb283-1"><a href="#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
