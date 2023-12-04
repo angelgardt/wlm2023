@@ -18,7 +18,7 @@ fs <- read.csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data
 
 ## let's check some lines to understand the structure
 readLines("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.csv")
-## ok, semicoolon
+## ok, semicolon
 
 ## load with read.csv2()
 fs <- read.csv2("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr3/des_fs.csv")
