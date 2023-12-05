@@ -121,9 +121,55 @@ preproc("super.xlsx", "Time", path) %>%
 
 # 3
 
+## координаты центров стимулов
+
+res_x = 1920 # screen resolution x
+res_y = 1080 # screen resolution y
+gap = 10 # gap between stimuli
+n_x = 7 # number of stimuli on x
+n_y = 3 # number of stimuli on y
+margin_x = 100 # margin on x
+margin_y = 100 # margin on y
+stim_size_x = 100 # stimulus size on x
+stim_size_y = 100 # stimulus size on y
+n_trials = 30 # number of trials
+
+step_x = (res_x - 2*margin_x) / (n_x + 1)
+step_y = (res_y - 2*margin_y) / (n_y + 1)
+
+centers_x <- seq(margin_x + step_x, res_x - margin_x - step_x, step_x) - res_x / 2
+centers_y <- seq(margin_y + step_y, res_y - margin_y - step_y, step_y) - res_y / 2
+
 
 # 4
 
+## джиттер
+
+jitter_x = floor((step_x - gap - stim_size_x) / 2)
+jitter_y = floor((step_y - gap - stim_size_y) / 2)
+
 
 # 5
+
+## координаты стимулов
+tibble(
+  coords = outer(centers_x, 
+                 centers_y, 
+                 "paste") %>% 
+    as.vector() %>% 
+    rep(times = n_trials)) %>% 
+  separate(coords, 
+           into = c("x", "y"), 
+           sep = " ") %>% 
+  mutate_all(as.numeric) %>% 
+  mutate(
+    position = paste0("pos", 1:(n_x*n_y)) %>% 
+      rep(times = n_trials),
+    trial = rep(1:n_trials, each = n_x * n_y),
+    x = x + sample(-jitter_x:jitter_x, n_trials * n_x * n_y, replace = TRUE),
+    y = y + sample(-jitter_y:jitter_y, n_trials * n_x * n_y, replace = TRUE)) %>% 
+  unite(coords, x, y, sep = ",") %>% 
+  mutate(coords = str_c("[", coords, "]")) %>% 
+  pivot_wider(names_from = position,
+              values_from = coords)
 
