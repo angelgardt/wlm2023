@@ -998,7 +998,12 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-21-title">#1</h3>
 <p><img id="pr4-21-level" class="level"></p>
 <div id="pr4-21-task" class="task">
-<p>Текст задания.</p>
+<p>Поработаем с регулярным выражениями. У нас есть вектор с датами, которые указаны в совершенно разных форматах. Кроме того, некоторые из них явно содержать ошибки. Напишем регулярку, которая позволить отобрать корректные даты.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'19.11.12'</span> <span class="st">'16.o1.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>В заданиях 1–5 будем работать с форматом даты <code>dd.mm.yyyy</code>. Проверять работу регулярный выражений будем с помощью функции <code>str_detect()</code>.</p>
+<p>Создайте вектор <code>dates</code> с помощью кода выше.</p>
 </div>
 <div id="pr4-21-autocheck" class="autocheck">
 <div id="pr4-21-ir" class="input-requirements">
@@ -1010,7 +1015,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-21-hints">
 <summary>
 Подсказки
@@ -1037,7 +1042,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-22-title">#2</h3>
 <p><img id="pr4-22-level" class="level"></p>
 <div id="pr4-22-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите регулярное выражение, которое будет отбирать даты с точками. Проверьте корректность её работы.</p>
 </div>
 <div id="pr4-22-autocheck" class="autocheck">
 <div id="pr4-22-ir" class="input-requirements">
@@ -1049,7 +1054,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-22-hints">
 <summary>
 Подсказки
@@ -1076,7 +1081,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-23-title">#3</h3>
 <p><img id="pr4-23-level" class="level"></p>
 <div id="pr4-23-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками содержатся только цифры. Проверьте корректность её работы.</p>
 </div>
 <div id="pr4-23-autocheck" class="autocheck">
 <div id="pr4-23-ir" class="input-requirements">
@@ -1088,7 +1093,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-23-hints">
 <summary>
 Подсказки
@@ -1115,7 +1120,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-24-title">#4</h3>
 <p><img id="pr4-24-level" class="level"></p>
 <div id="pr4-24-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками будет содержатся только определенное количество цифр — две в дне, две в месяце и четыре в году. Проверьте корректность её работы.</p>
 </div>
 <div id="pr4-24-autocheck" class="autocheck">
 <div id="pr4-24-ir" class="input-requirements">
@@ -1127,7 +1132,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-24-hints">
 <summary>
 Подсказки
@@ -1154,7 +1159,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-25-title">#5</h3>
 <p><img id="pr4-25-level" class="level"></p>
 <div id="pr4-25-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками будет содержатся только определенное количество цифр — две в дне, две в месяце и четыре в году — при этом в первой цифре дня и месяца могуть встречаться только допустимые цифры. Проверьте корректность её работы.</p>
 </div>
 <div id="pr4-25-autocheck" class="autocheck">
 <div id="pr4-25-ir" class="input-requirements">
@@ -1166,7 +1171,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-25-hints">
 <summary>
 Подсказки
@@ -1193,7 +1198,21 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-26-title">#6</h3>
 <p><img id="pr4-26-level" class="level"></p>
 <div id="pr4-26-task" class="task">
-<p>Текст задания.</p>
+<p>Отлично! С регулярками понакомились. Теперь задачка посерьезнее.</p>
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/p4-files.csv">По ссылке</a> лежит файл CSV, в котором перечислены названия файлов данных некоторого эксперимента. Названия имеют следующую структуру:</p>
+<pre><code>000AAAA_entire_exp_2022-06-01_15h12.27.341.csv</code></pre>
+<ul>
+<li><code>000AAAA</code> — идентификатор респондента</li>
+<li><code>entire_exp</code> — название файла эксперимента</li>
+<li><code>2022-06-01</code> — дата прохождения эксперимента</li>
+<li><code>15h12.27.341</code> — время начала эксперимента (с точностью до миллисекунд).</li>
+</ul>
+<p>Загрузите данные в объект <code>fls</code>. Добавьте к имеющейся колонке <code>file</code>:</p>
+<ul>
+<li>колонку <code>id</code>, в которой будет содержаться идентификатор респондента, извлеченный из названия файла</li>
+<li>колонку <code>datetime</code>, в которой будут содержаться дата и время прохождения эксперимента (без миллисекунд), извлеченные из названия файла (формат оставьте без изменения).</li>
+</ul>
+<p>Перезапишите объект <code>fls</code>.</p>
 </div>
 <div id="pr4-26-autocheck" class="autocheck">
 <div id="pr4-26-ir" class="input-requirements">
@@ -1205,7 +1224,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-26-hints">
 <summary>
 Подсказки
@@ -1232,7 +1251,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-27-title">#7</h3>
 <p><img id="pr4-27-level" class="level"></p>
 <div id="pr4-27-task" class="task">
-<p>Текст задания.</p>
+<p>Приведите содержимое колонки <code>datetime</code> к формату <code>yyyy-mm-dd hh:mm:ss</code>. Перезапишите объект <code>fls</code>.</p>
 </div>
 <div id="pr4-27-autocheck" class="autocheck">
 <div id="pr4-27-ir" class="input-requirements">
@@ -1244,7 +1263,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-27-hints">
 <summary>
 Подсказки
@@ -1271,7 +1290,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-28-title">#8</h3>
 <p><img id="pr4-28-level" class="level"></p>
 <div id="pr4-28-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте получившийся датасет <code>fls</code> в формате CSV.</p>
 </div>
 <div id="pr4-28-autocheck" class="autocheck">
 <div id="pr4-28-ir" class="input-requirements">
@@ -1283,7 +1302,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-28-hints">
 <summary>
 Подсказки
@@ -1310,7 +1329,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-29-title">#9</h3>
 <p><img id="pr4-29-level" class="level"></p>
 <div id="pr4-29-task" class="task">
-<p>Текст задания.</p>
+<p>Возьмите датасет <code>share</code> из <a href="#pr4-16-title">задания 16</a> и объедините его с данными из файла <code>targetpositions.xlsx</code>, с которым мы сталкивались, когда запускали цикл.</p>
+<p>Перезапишите объект <code>share</code>.</p>
 </div>
 <div id="pr4-29-autocheck" class="autocheck">
 <div id="pr4-29-ir" class="input-requirements">
@@ -1322,7 +1342,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-29-hints">
 <summary>
 Подсказки
@@ -1349,7 +1369,12 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr4-30-title">#10</h3>
 <p><img id="pr4-30-level" class="level"></p>
 <div id="pr4-30-task" class="task">
-<p>Текст задания.</p>
+<p>В этом файле <code>targetpositions.xlsx</code> содержатся координаты, в которые должен был попасть испытуемый при клике на целевой стимул. Нам интересуют столбцы <code>posxmin1</code>, <code>posixmax1</code>, <code>posymin1</code> и <code>posymax1</code>.</p>
+<p>Первые два задают границы клика по горизонтали, а вторые два — по вертикали. Если координаты клика испытуемого попадают вэти диапазоны, то клик считается верным. Если не попадают, то клик ошибочен.</p>
+<ol type="a">
+<li>Добавьте в датасет <code>share</code> колонку <code>correct</code>, в которой будет обозначено с помощью логического значения, является ли клик в данной пробе верным.</li>
+<li>Рассчитайте точность кликов каждого респондента в каждом из сочетаний экспериментальных условий.</li>
+</ol>
 </div>
 <div id="pr4-30-autocheck" class="autocheck">
 <div id="pr4-30-ir" class="input-requirements">
@@ -1361,7 +1386,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-30-hints">
 <summary>
 Подсказки
