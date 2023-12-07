@@ -153,11 +153,10 @@ str_detect(dates, "\\d{2}\\.\\d{2}\\.\\d{4}")
 
 
 # 5
-str_detect(dates, "[0-3]\\d{1}\\.[01]\\d{1}\\.\\d{4}")
+str_detect(dates, "[0-3]\\d\\.[01]\\d\\.\\d{4}")
 
 
 # 6
-
 fls <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/p4-files.csv")
 fls %>% 
   mutate(id = str_sub(file, start = 1, end = 7),
@@ -177,7 +176,6 @@ fls %>% write_csv("../data/pr4/fls.csv")
 
 
 # 9
-
 target <- readxl::read_xlsx("../data/pr4/data_sharexp/targetpositions.xlsx")
 
 share %>% 
