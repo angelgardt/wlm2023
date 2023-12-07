@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -50,7 +84,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -65,8 +105,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -74,9 +112,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -91,55 +129,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr4.html">P4 // Предобработка данных</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr4.html">P4 // Предобработка данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -259,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -268,39 +298,39 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#pr4_main" id="toc-pr4_main" class="nav-link active" data-scroll-target="#pr4_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#11</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#12</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#13</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#14</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#15</a></li>
-  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">#16</a></li>
-  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#17</a></li>
-  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#18</a></li>
-  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
-  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
+  <li><a href="#pr4-1-title" id="toc-pr4-1-title" class="nav-link" data-scroll-target="#pr4-1-title">#1</a></li>
+  <li><a href="#pr4-2-title" id="toc-pr4-2-title" class="nav-link" data-scroll-target="#pr4-2-title">#2</a></li>
+  <li><a href="#pr4-3-title" id="toc-pr4-3-title" class="nav-link" data-scroll-target="#pr4-3-title">#3</a></li>
+  <li><a href="#pr4-4-title" id="toc-pr4-4-title" class="nav-link" data-scroll-target="#pr4-4-title">#4</a></li>
+  <li><a href="#pr4-5-title" id="toc-pr4-5-title" class="nav-link" data-scroll-target="#pr4-5-title">#5</a></li>
+  <li><a href="#pr4-6-title" id="toc-pr4-6-title" class="nav-link" data-scroll-target="#pr4-6-title">#6</a></li>
+  <li><a href="#pr4-7-title" id="toc-pr4-7-title" class="nav-link" data-scroll-target="#pr4-7-title">#7</a></li>
+  <li><a href="#pr4-8-title" id="toc-pr4-8-title" class="nav-link" data-scroll-target="#pr4-8-title">#8</a></li>
+  <li><a href="#pr4-9-title" id="toc-pr4-9-title" class="nav-link" data-scroll-target="#pr4-9-title">#9</a></li>
+  <li><a href="#pr4-10-title" id="toc-pr4-10-title" class="nav-link" data-scroll-target="#pr4-10-title">#10</a></li>
+  <li><a href="#pr4-11-title" id="toc-pr4-11-title" class="nav-link" data-scroll-target="#pr4-11-title">#11</a></li>
+  <li><a href="#pr4-12-title" id="toc-pr4-12-title" class="nav-link" data-scroll-target="#pr4-12-title">#12</a></li>
+  <li><a href="#pr4-13-title" id="toc-pr4-13-title" class="nav-link" data-scroll-target="#pr4-13-title">#13</a></li>
+  <li><a href="#pr4-14-title" id="toc-pr4-14-title" class="nav-link" data-scroll-target="#pr4-14-title">#14</a></li>
+  <li><a href="#pr4-15-title" id="toc-pr4-15-title" class="nav-link" data-scroll-target="#pr4-15-title">#15</a></li>
+  <li><a href="#pr4-16-title" id="toc-pr4-16-title" class="nav-link" data-scroll-target="#pr4-16-title">#16</a></li>
+  <li><a href="#pr4-17-title" id="toc-pr4-17-title" class="nav-link" data-scroll-target="#pr4-17-title">#17</a></li>
+  <li><a href="#pr4-18-title" id="toc-pr4-18-title" class="nav-link" data-scroll-target="#pr4-18-title">#18</a></li>
+  <li><a href="#pr4-19-title" id="toc-pr4-19-title" class="nav-link" data-scroll-target="#pr4-19-title">#19</a></li>
+  <li><a href="#pr4-20-title" id="toc-pr4-20-title" class="nav-link" data-scroll-target="#pr4-20-title">#20</a></li>
   </ul></li>
   <li><a href="#pr4_add" id="toc-pr4_add" class="nav-link" data-scroll-target="#pr4_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
-  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
-  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
-  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
-  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
-  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
+  <li><a href="#pr4-21-title" id="toc-pr4-21-title" class="nav-link" data-scroll-target="#pr4-21-title">#1</a></li>
+  <li><a href="#pr4-22-title" id="toc-pr4-22-title" class="nav-link" data-scroll-target="#pr4-22-title">#2</a></li>
+  <li><a href="#pr4-23-title" id="toc-pr4-23-title" class="nav-link" data-scroll-target="#pr4-23-title">#3</a></li>
+  <li><a href="#pr4-24-title" id="toc-pr4-24-title" class="nav-link" data-scroll-target="#pr4-24-title">#4</a></li>
+  <li><a href="#pr4-25-title" id="toc-pr4-25-title" class="nav-link" data-scroll-target="#pr4-25-title">#5</a></li>
+  <li><a href="#pr4-26-title" id="toc-pr4-26-title" class="nav-link" data-scroll-target="#pr4-26-title">#6</a></li>
+  <li><a href="#pr4-27-title" id="toc-pr4-27-title" class="nav-link" data-scroll-target="#pr4-27-title">#7</a></li>
+  <li><a href="#pr4-28-title" id="toc-pr4-28-title" class="nav-link" data-scroll-target="#pr4-28-title">#8</a></li>
+  <li><a href="#pr4-29-title" id="toc-pr4-29-title" class="nav-link" data-scroll-target="#pr4-29-title">#9</a></li>
+  <li><a href="#pr4-30-title" id="toc-pr4-30-title" class="nav-link" data-scroll-target="#pr4-30-title">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -323,18 +353,51 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!--
 REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Пакет с пакетами
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Для выполнения заданий этой практики потребуется <code>tidyverse</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Сегодня на ужин экспериментальные данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов — других иконок, которые для обих платформ отрисованы одинаково. Целевой стимул мог быть один — два условия: иконка iOS (Outgoing Tray) и иконка Android (Three Dots) — или их могло быть два — и тот, и другой. Дополнительно варьировалось количество стимулов в пробе — 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) — от начала пробы до клика испытуемого — а также координаты клика. Дополнительно были записаны данные об используемой платформе смартфона — iOS или Android.</p>
+</div>
+</div>
 <section id="pr4_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr4_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<section id="pr4-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-1-title">#1</h3>
 <p><img id="pr4-1-level" class="level"></p>
 <div id="pr4-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Скачайте <a href="https://drive.google.com/uc?export=download&amp;id=1QylwW2EtwpEr_dJSOKYJIRoKm1epkQbJ">архив с данными</a> и разархивируйте его в проект курса.</p>
+<p>Сколько файлов данных есть в нашем распоряжении?</p>
 </div>
 <div id="pr4-1-autocheck" class="autocheck">
 <div id="pr4-1-ir" class="input-requirements">
@@ -349,32 +412,18 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-1-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>dir()</code> + <code>length()</code></p>
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="pr4-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-2-title">#2</h3>
 <p><img id="pr4-2-level" class="level"></p>
 <div id="pr4-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Поскольку все данные собирались на одном и том же ПО, справедливо предположить, что структура всех файлов одинакова. Поработаем сначала с одним из них. Например, с первым.</p>
+<p>Загрузите данные из файла <code>01.xlsx</code> в R. Изучите их структуру.</p>
 </div>
 <div id="pr4-2-autocheck" class="autocheck">
 <div id="pr4-2-ir" class="input-requirements">
@@ -391,29 +440,36 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Формат файла данных — таблица Excel. Для её чтения есть специальные функции. Например, <code>read_xlsx()</code> из пакета <code>readxl</code>.</li>
+<li>У файлов Excel есть одна особенность организации — в них может быть несколько датасетов одновременно. Изучите документацию функции <code>read_xlsx</code>, чтобы выяснить, как справиться с этой ситуацией.</li>
+</ul>
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="pr4-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-3-title">#3</h3>
 <p><img id="pr4-3-level" class="level"></p>
 <div id="pr4-3-task" class="task">
-<p>Текст задания.</p>
+<p>Для анализа данных нам нужны не все колонки, которые записал PsychoPy, а только следующие:</p>
+<ul>
+<li>независимые переменные:
+<ul>
+<li><code>trialtype</code> — тип пробы (какой был целевой стимул) (<code>tray</code> — Outgoing Tray, <code>dots</code> — Three Dots, <code>both</code> — оба)</li>
+<li><code>setsize</code> — количество стимулов в пробе (<code>8</code>, <code>12</code>, <code>16</code>)</li>
+</ul></li>
+<li>зависимые переменные (или те переменные, на основе которых мы их посчитаем):
+<ul>
+<li><code>mouse_main1.time_raw</code> — время до первого клика (s)</li>
+<li><code>mouse_main1.x_raw</code> — координата <code>x</code> первого клика (px)</li>
+<li><code>mouse_main1.y_raw</code> — координата <code>y</code> первого клика (px)</li>
+<li><code>mouse_main2.time_raw</code> — время до второго клика (s)</li>
+<li><code>mouse_main2.x_raw</code> — координата <code>x</code> второго клика (px)</li>
+<li><code>mouse_main2.y_raw</code> — координата <code>y</code> второго клика (px)</li>
+</ul></li>
+<li><code>numtrial</code> —- номер пробы в исходном файле с координатами</li>
+</ul>
+<p>Отфильтруйте из данных необходимые переменные.</p>
 </div>
 <div id="pr4-3-autocheck" class="autocheck">
 <div id="pr4-3-ir" class="input-requirements">
@@ -428,31 +484,26 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-3-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>select()</code></p>
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="pr4-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-4-title">#4</h3>
 <p><img id="pr4-4-level" class="level"></p>
 <div id="pr4-4-task" class="task">
-<p>Текст задания.</p>
+<p>Поскольку работая с тибблом удобно обращаться к переменным по имени, полезно будет их переименовать, ибо обращаться по дефолтным именам совершенно неудобно.</p>
+<p>Переименуйте отобранный колонки так, чтобы они назывались:</p>
+<ul>
+<li><code>time1</code> — время до первого клика (s)</li>
+<li><code>click1x</code> — координата <code>x</code> первого клика (px)</li>
+<li><code>click1y</code> — координата <code>y</code> первого клика (px)</li>
+<li><code>time2</code> — время до второго клика (s)</li>
+<li><code>click2x</code> — координата <code>x</code> второго клика (px)</li>
+<li><code>click2y</code> — координата <code>y</code> второго клика (px)</li>
+</ul>
 </div>
 <div id="pr4-4-autocheck" class="autocheck">
 <div id="pr4-4-ir" class="input-requirements">
@@ -467,31 +518,17 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-4-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>rename()</code></p>
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="pr4-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-5-title">#5</h3>
 <p><img id="pr4-5-level" class="level"></p>
 <div id="pr4-5-task" class="task">
-<p>Текст задания.</p>
+<p>Выясните, есть ли в данных строки с пропущенными значениями. Посчитайте количество пропущенных значений в каждом столбце.</p>
 </div>
 <div id="pr4-5-autocheck" class="autocheck">
 <div id="pr4-5-ir" class="input-requirements">
@@ -506,31 +543,19 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-5-hints">
 <summary>
-Подсказки
+Подсказкa
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>sapply(is.na) %&gt;% apply(2, sum)</code></p>
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="pr4-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-6-title">#6</h3>
 <p><img id="pr4-6-level" class="level"></p>
 <div id="pr4-6-task" class="task">
-<p>Текст задания.</p>
+<p>Так как в эксперименте не было ограничения времени на ответ, обнаруженные пропуски имеют исключительно техническое происхождение и связаны с тем, как PsychoPy записывает данные в Excel-формат. После основного датасета он пропускает строчку и дописывает 8 строк служебной информации.</p>
+<p>Так как в отобранных колонках этой информации нет, мы можем смело отрезать последние 9 строк датасета. Известно, что в эксперименте было всего 450 проб, а в аутпуте PsychoPy пишет в каждой строке одну пробу. Таким образом из данных нам нужны первы 450 строк.</p>
+<p>Отберите необходимые строки из данных.</p>
 </div>
 <div id="pr4-6-autocheck" class="autocheck">
 <div id="pr4-6-ir" class="input-requirements">
@@ -545,31 +570,18 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-6-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>slice()</code></p>
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="pr4-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-7-title">#7</h3>
 <p><img id="pr4-7-level" class="level"></p>
 <div id="pr4-7-task" class="task">
-<p>Текст задания.</p>
+<p>Для анализа нам будут нужны не все пробы, а только те, в которых экспериментальное условие было <code>tray</code> или <code>dots</code>. Это связано с тем, что пробы <code>both</code> содержали два целевых стимула, и их анализ будет отличаться от остальных.</p>
+<p>Отберите необходимые строки из данных.</p>
 </div>
 <div id="pr4-7-autocheck" class="autocheck">
 <div id="pr4-7-ir" class="input-requirements">
@@ -584,31 +596,18 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-7-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>filter()</code></p>
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="pr4-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-8-title">#8</h3>
 <p><img id="pr4-8-level" class="level"></p>
 <div id="pr4-8-task" class="task">
-<p>Текст задания.</p>
+<p>Мы почти привели наши данные к опрятному виду — осталось добавить индентификатор, чтобы мы могли различить данные разных испытуемых.</p>
+<p>Добавьте в датасет столбец <code>id</code>, в котором будет содержаться значение <code>1</code> во всех строках, так как это данные первого испытуемого.</p>
 </div>
 <div id="pr4-8-autocheck" class="autocheck">
 <div id="pr4-8-ir" class="input-requirements">
@@ -623,31 +622,25 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-8-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>mutate()</code></p>
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="pr4-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-9-title">#9</h3>
 <p><img id="pr4-9-level" class="level"></p>
 <div id="pr4-9-task" class="task">
-<p>Текст задания.</p>
+<p>Отлично! Мы причесали наши данные. Теперь нам надо провернуть всё то же самые с остальными файлами. Чтобы оптимизировать этот процесс, давайте обрнем написанный нами код в функцию.</p>
+<p>Напишите функцию, которая будет осуществлять предобработку данных. Функция должна принимать на вход два аргумента:</p>
+<ul>
+<li>путь к файлу данных</li>
+<li><code>id</code> испытуемого</li>
+</ul>
+<p>Функция должна загружать данные и производить их предобработку аналогично тому, что мы делали в заданиях выше.</p>
+<p>Функция должна возвращать предобработанный датасет, соответствующий виду, который мы получили в <a href="#pr4-8-title">предыдущем задании</a>.</p>
+<p>Проверьте, как отбработает функция на файле <code>02.xlsx</code>.</p>
 </div>
 <div id="pr4-9-autocheck" class="autocheck">
 <div id="pr4-9-ir" class="input-requirements">
@@ -659,7 +652,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-9-hints">
 <summary>
 Подсказки
@@ -682,11 +675,12 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="pr4-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-10-title">#10</h3>
 <p><img id="pr4-10-level" class="level"></p>
 <div id="pr4-10-task" class="task">
-<p>Текст задания.</p>
+<p>Наша конечная цель — получить единый датасет из всех данных, которые у нас в наличии. Мы уже добились того, что наша функция возвращает нам ровный и красивый tibble. Осталось лишь поставить их тибблы друг на друга, чтобы получить то, что нам нужно.</p>
+<p>Объедините резльтаты предобработки данных <code>01.xlsx</code> и <code>02.xlsx</code> в один объект.</p>
 </div>
 <div id="pr4-10-autocheck" class="autocheck">
 <div id="pr4-10-ir" class="input-requirements">
@@ -701,31 +695,18 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-10-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>bind_rows()</code></p>
 </details>
 </div>
 </section>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#11</h3>
+<section id="pr4-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-11-title">#11</h3>
 <p><img id="pr4-11-level" class="level"></p>
 <div id="pr4-11-task" class="task">
-<p>Текст задания.</p>
+<p>Всё готово для того, чтобы собрать итоговый датасет.</p>
+<p>Напишите цикл, в котором данные будут загружаться, предобрабатываться и объединяться в объект <code>share</code>.</p>
 </div>
 <div id="pr4-11-autocheck" class="autocheck">
 <div id="pr4-11-ir" class="input-requirements">
@@ -740,31 +721,17 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-11-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Ошибка? Посмотрите, что за файлы лежат в папке с данными.</p>
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#12</h3>
+<section id="pr4-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-12-title">#12</h3>
 <p><img class="level"></p>
 <div id="pr4-12-task" class="task">
-<p>Текст задания.</p>
+<p>Изучите структуру получившихся данных. Проверьте, совпадает ли число индентификаторов с количеством данных.</p>
 </div>
 <div id="pr4-12-autocheck" class="autocheck">
 <div id="pr4-12-ir" class="input-requirements">
@@ -776,7 +743,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-12-hints">
 <summary>
 Подсказки
@@ -799,11 +766,14 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#13</h3>
+<section id="pr4-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-13-title">#13</h3>
 <p><img id="pr4-13-level" class="level"></p>
 <div class="task">
-<p>Текст задания.</p>
+<ul>
+<li>Отсортируйте датасет по номеру пробы (<code>numtrial</code>) от первого до последнего.</li>
+<li>Отсортируйте датасет по номеру пробы (<code>numtrial</code>) и идентификатору испытуемого (<code>id</code>).</li>
+</ul>
 </div>
 <div id="pr4-13-autocheck" class="autocheck">
 <div id="pr4-13-ir" class="input-requirements">
@@ -818,31 +788,17 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-13-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>arrange()</code></p>
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#14</h3>
+<section id="pr4-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-14-title">#14</h3>
 <p><img id="pr4-14-level" class="level"></p>
 <div id="pr4-14-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте, все ли сочетания экспериментальных условий — <code>trialtype</code> и <code>setsize</code> — представлены в датасете.</p>
 </div>
 <div id="pr4-14-autocheck" class="autocheck">
 <div id="pr4-14-ir" class="input-requirements">
@@ -857,31 +813,18 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-14-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>distinct()</code></p>
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#15</h3>
+<section id="pr4-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-15-title">#15</h3>
 <p><img id="pr4-15-level" class="level"></p>
 <div id="pr4-15-task" class="task">
-<p>Текст задания.</p>
+<p>В описании данных в начале страницы упоминалось, что в ходе исследования собирались данные об используемой платформе. Их можно найти по <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/share_platform.csv">ссылке</a>.</p>
+<p>Загрузите данные о платформе в объект <code>platform</code>.</p>
 </div>
 <div id="pr4-15-autocheck" class="autocheck">
 <div id="pr4-15-ir" class="input-requirements">
@@ -893,7 +836,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr4-15-hints">
 <summary>
 Подсказки
@@ -916,11 +859,12 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-15" class="level3">
-<h3 class="anchored" data-anchor-id="section-15">#16</h3>
+<section id="pr4-16-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-16-title">#16</h3>
 <p><img id="pr4-16-level" class="level"></p>
 <div id="pr4-16-task" class="task">
-<p>Текст задания.</p>
+<p>Чтобы наши данные содержали все переменные, которые фиксировались в эксперименте, нам необходимо объединить датасеты <code>share</code> и <code>platfrom</code>. При этом объединение необходимо произвести так, чтобы совпали <code>id</code> между датасетами, так как строки с одним и тем же индентификатором относятся к одному и тому же испытуемому.</p>
+<p>Объедините датасеты <code>share</code> и <code>platform</code> по переменной <code>id</code>. Перезапишите объект <code>share</code>.</p>
 </div>
 <div id="pr4-16-autocheck" class="autocheck">
 <div id="pr4-16-ir" class="input-requirements">
@@ -935,31 +879,20 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-16-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>..._join()</code></p>
 </details>
 </div>
 </section>
-<section id="section-16" class="level3">
-<h3 class="anchored" data-anchor-id="section-16">#17</h3>
+<section id="pr4-17-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-17-title">#17</h3>
 <p><img id="pr4-17-level" class="level"></p>
 <div id="pr4-17-task" class="task">
-<p>Текст задания.</p>
+<p>Супер! Наши данные готовы к тому, чтобы мы что-нибудь на них посчитали.</p>
+<p>Для анализа нам необходимо аггрегироваь данные — посчитать среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента. Для этого нам понадобится группировка. Разберемся сначала с ней отдельно.</p>
+<p>Сгруппируйте датасет <code>share</code> по идентификатору испытуемого.</p>
+<p>Что изменилось в датасете?</p>
 </div>
 <div id="pr4-17-autocheck" class="autocheck">
 <div id="pr4-17-ir" class="input-requirements">
@@ -974,31 +907,17 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-17-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>group_by()</code></p>
 </details>
 </div>
 </section>
-<section id="section-17" class="level3">
-<h3 class="anchored" data-anchor-id="section-17">#18</h3>
+<section id="pr4-18-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-18-title">#18</h3>
 <p><img id="pr4-18-level" class="level"></p>
 <div id="pr4-18-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента на данных <code>share</code>. Результат сохраните в объект <code>share_agg</code>.</p>
 </div>
 <div id="pr4-18-autocheck" class="autocheck">
 <div id="pr4-18-ir" class="input-requirements">
@@ -1013,31 +932,20 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-18-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>group_by() %&gt;% summarise()</code>, <code>summarise(..., .by = ...)</code></p>
 </details>
 </div>
 </section>
-<section id="section-18" class="level3">
-<h3 class="anchored" data-anchor-id="section-18">#19</h3>
+<section id="pr4-19-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-19-title">#19</h3>
 <p><img id="pr4-19-level" class="level"></p>
 <div id="pr4-19-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Переведите данные <code>share_agg</code> в длинный формат.</li>
+<li>Переведите данные <code>share_agg</code> в широкий формат так, чтобы в каждой колонке было среднее время реакции для одного из условий переменной <code>setsize</code>.</li>
+</ol>
 </div>
 <div id="pr4-19-autocheck" class="autocheck">
 <div id="pr4-19-ir" class="input-requirements">
@@ -1054,29 +962,15 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>pivot_longer()</code>, <code>pivot_wider()</code></p>
 </details>
 </div>
 </section>
-<section id="section-19" class="level3">
-<h3 class="anchored" data-anchor-id="section-19">#20</h3>
+<section id="pr4-20-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-20-title">#20</h3>
 <p><img id="pr4-20-level" class="level"></p>
 <div id="pr4-20-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте результат аггрегации данных в <a href="#pr4-18-title">задания 18</a> в формате CSV.</p>
 </div>
 <div id="pr4-20-autocheck" class="autocheck">
 <div id="pr4-20-ir" class="input-requirements">
@@ -1091,31 +985,17 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr4-20-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>write_csv()</code></p>
 </details>
 </div>
 </section>
 </section>
 <section id="pr4_add" class="level2">
 <h2 class="anchored" data-anchor-id="pr4_add">Дополнительные задания</h2>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">#1</h3>
+<section id="pr4-21-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-21-title">#1</h3>
 <p><img id="pr4-21-level" class="level"></p>
 <div id="pr4-21-task" class="task">
 <p>Текст задания.</p>
@@ -1153,8 +1033,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">#2</h3>
+<section id="pr4-22-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-22-title">#2</h3>
 <p><img id="pr4-22-level" class="level"></p>
 <div id="pr4-22-task" class="task">
 <p>Текст задания.</p>
@@ -1192,8 +1072,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">#3</h3>
+<section id="pr4-23-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-23-title">#3</h3>
 <p><img id="pr4-23-level" class="level"></p>
 <div id="pr4-23-task" class="task">
 <p>Текст задания.</p>
@@ -1231,8 +1111,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">#4</h3>
+<section id="pr4-24-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-24-title">#4</h3>
 <p><img id="pr4-24-level" class="level"></p>
 <div id="pr4-24-task" class="task">
 <p>Текст задания.</p>
@@ -1270,8 +1150,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">#5</h3>
+<section id="pr4-25-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-25-title">#5</h3>
 <p><img id="pr4-25-level" class="level"></p>
 <div id="pr4-25-task" class="task">
 <p>Текст задания.</p>
@@ -1309,8 +1189,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-25" class="level3">
-<h3 class="anchored" data-anchor-id="section-25">#6</h3>
+<section id="pr4-26-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-26-title">#6</h3>
 <p><img id="pr4-26-level" class="level"></p>
 <div id="pr4-26-task" class="task">
 <p>Текст задания.</p>
@@ -1348,8 +1228,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-26" class="level3">
-<h3 class="anchored" data-anchor-id="section-26">#7</h3>
+<section id="pr4-27-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-27-title">#7</h3>
 <p><img id="pr4-27-level" class="level"></p>
 <div id="pr4-27-task" class="task">
 <p>Текст задания.</p>
@@ -1387,8 +1267,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-27" class="level3">
-<h3 class="anchored" data-anchor-id="section-27">#8</h3>
+<section id="pr4-28-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-28-title">#8</h3>
 <p><img id="pr4-28-level" class="level"></p>
 <div id="pr4-28-task" class="task">
 <p>Текст задания.</p>
@@ -1426,8 +1306,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-28" class="level3">
-<h3 class="anchored" data-anchor-id="section-28">#9</h3>
+<section id="pr4-29-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-29-title">#9</h3>
 <p><img id="pr4-29-level" class="level"></p>
 <div id="pr4-29-task" class="task">
 <p>Текст задания.</p>
@@ -1465,8 +1345,8 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-29" class="level3">
-<h3 class="anchored" data-anchor-id="section-29">#10</h3>
+<section id="pr4-30-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-30-title">#10</h3>
 <p><img id="pr4-30-level" class="level"></p>
 <div id="pr4-30-task" class="task">
 <p>Текст задания.</p>
@@ -1555,6 +1435,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1621,13 +1528,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1706,10 +1615,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1719,8 +1627,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1733,6 +1650,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1776,6 +1822,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1801,6 +1848,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1862,17 +1935,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pr3.html" class="pagination-link">
+      <a href="./pr3.html" class="pagination-link  aria-label=" p3="" датафреймы.="" исследование="" данных"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P3 // Датафреймы. Исследование данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pr5.html" class="pagination-link">
+      <a href="./pr5.html" class="pagination-link" aria-label="P5 // Визуализация данных">
         <span class="nav-page-text">P5 // Визуализация данных</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

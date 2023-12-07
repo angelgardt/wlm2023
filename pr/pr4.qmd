@@ -5,14 +5,42 @@
 REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+::: {.callout-note}
+
+## Пакет с пакетами
+
+Для выполнения заданий этой практики потребуется `tidyverse`.
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+:::
+
+::: {.callout-note}
+
+## Сегодня на ужин экспериментальные данные
+
+В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов --- других иконок, которые для обих платформ отрисованы одинаково. Целевой стимул мог быть один --- два условия: иконка iOS (Outgoing Tray) и иконка Android (Three Dots) --- или их могло быть два --- и тот, и другой. Дополнительно варьировалось количество стимулов в пробе --- 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) --- от начала пробы до клика испытуемого --- а также координаты клика. Дополнительно были записаны данные об используемой платформе смартфона --- iOS или Android.
+
+:::
+
+
+
 ## Основные задания {#pr4_main}
 
-### #1
+### #1 {#pr4-1-title}
 
 <img id="pr4-1-level" class="level"/>
 
 ::: {#pr4-1-task .task}
-Текст задания `переменная`.
+
+Скачайте [архив с данными](https://drive.google.com/uc?export=download&id=1QylwW2EtwpEr_dJSOKYJIRoKm1epkQbJ) и разархивируйте его в проект курса.
+
+Сколько файлов данных есть в нашем распоряжении?
+
 :::
 
 ::: {#pr4-1-autocheck .autocheck}
@@ -31,37 +59,23 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 ::: hints-wrapper
 <details class="hints" id="pr4-1-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`dir()` + `length()`
 
 </details>
 :::
 
-### #2
+### #2 {#pr4-2-title}
 
 <img id="pr4-2-level" class="level"/>
 
 ::: {#pr4-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Поскольку все данные собирались на одном и том же ПО, справедливо предположить, что структура всех файлов одинакова. Поработаем сначала с одним из них. Например, с первым.
+
+Загрузите данные из файла `01.xlsx` в R. Изучите их структуру.
+
 :::
 
 ::: {#pr4-2-autocheck .autocheck}
@@ -82,33 +96,33 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Формат файла данных --- таблица Excel. Для её чтения есть специальные функции. Например, `read_xlsx()` из пакета `readxl`.
+* У файлов Excel есть одна особенность организации --- в них может быть несколько датасетов одновременно. Изучите документацию функции `read_xlsx`, чтобы выяснить, как справиться с этой ситуацией.
 
 </details>
 :::
 
-### #3
+### #3 {#pr4-3-title}
 
 <img id="pr4-3-level" class="level"/>
 
 ::: {#pr4-3-task .task}
-Текст задания.
+Для анализа данных нам нужны не все колонки, которые записал PsychoPy, а только следующие:
+
+* независимые переменные:
+    * `trialtype` --- тип пробы (какой был целевой стимул) (`tray` --- Outgoing Tray, `dots` --- Three Dots, `both` --- оба)
+    * `setsize` --- количество стимулов в пробе (`8`, `12`, `16`)
+* зависимые переменные (или те переменные, на основе которых мы их посчитаем):
+    * `mouse_main1.time_raw` --- время до первого клика (s)
+    * `mouse_main1.x_raw` --- координата `x` первого клика (px)
+    * `mouse_main1.y_raw` --- координата `y` первого клика (px)
+    * `mouse_main2.time_raw` --- время до второго клика (s)
+    * `mouse_main2.x_raw` --- координата `x` второго клика (px)
+    * `mouse_main2.y_raw` --- координата `y` второго клика (px)
+* `numtrial` ---- номер пробы в исходном файле с координатами
+
+Отфильтруйте из данных необходимые переменные.
+
 :::
 
 ::: {#pr4-3-autocheck .autocheck}
@@ -127,35 +141,29 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-3-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`select()`
 
 </details>
 :::
 
-### #4
+### #4 {#pr4-4-title}
 
 <img id="pr4-4-level" class="level"/>
 
 ::: {#pr4-4-task .task}
-Текст задания.
+Поскольку работая с тибблом удобно обращаться к переменным по имени, полезно будет их переименовать, ибо обращаться по дефолтным именам совершенно неудобно.
+
+Переименуйте отобранный колонки так, чтобы они назывались:
+
+* `time1` --- время до первого клика (s)
+* `click1x` --- координата `x` первого клика (px)
+* `click1y` --- координата `y` первого клика (px)
+* `time2` --- время до второго клика (s)
+* `click2x` --- координата `x` второго клика (px)
+* `click2y` --- координата `y` второго клика (px)
+
 :::
 
 ::: {#pr4-4-autocheck .autocheck}
@@ -174,35 +182,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-4-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`rename()`
 
 </details>
 :::
 
-### #5
+### #5 {#pr4-5-title}
 
 <img id="pr4-5-level" class="level"/>
 
 ::: {#pr4-5-task .task}
-Текст задания.
+
+Выясните, есть ли в данных строки с пропущенными значениями. Посчитайте количество пропущенных значений в каждом столбце.
+
 :::
 
 ::: {#pr4-5-autocheck .autocheck}
@@ -221,35 +215,25 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-5-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказкa</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`sapply(is.na) %>% apply(2, sum)`
 
 </details>
 :::
 
-### #6
+### #6 {#pr4-6-title}
 
 <img id="pr4-6-level" class="level"/>
 
 ::: {#pr4-6-task .task}
-Текст задания.
+
+Так как в эксперименте не было ограничения времени на ответ, обнаруженные пропуски имеют исключительно техническое происхождение и связаны с тем, как PsychoPy записывает данные в Excel-формат. После основного датасета он пропускает строчку и дописывает 8 строк служебной информации.
+
+Так как в отобранных колонках этой информации нет, мы можем смело отрезать последние 9 строк датасета. Известно, что в эксперименте было всего 450 проб, а в аутпуте PsychoPy пишет в каждой строке одну пробу. Таким образом из данных нам нужны первы 450 строк.
+
+Отберите необходимые строки из данных.
+
 :::
 
 ::: {#pr4-6-autocheck .autocheck}
@@ -268,35 +252,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-6-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`slice()`
 
 </details>
 :::
 
-### #7
+### #7 {#pr4-7-title}
 
 <img id="pr4-7-level" class="level"/>
 
 ::: {#pr4-7-task .task}
-Текст задания.
+Для анализа нам будут нужны не все пробы, а только те, в которых экспериментальное условие было `tray` или `dots`. Это связано с тем, что пробы `both` содержали два целевых стимула, и их анализ будет отличаться от остальных.
+
+Отберите необходимые строки из данных.
+
 :::
 
 ::: {#pr4-7-autocheck .autocheck}
@@ -315,35 +286,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-7-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`filter()`
 
 </details>
 :::
 
-### #8
+### #8 {#pr4-8-title}
 
 <img id="pr4-8-level" class="level"/>
 
 ::: {#pr4-8-task .task}
-Текст задания.
+Мы почти привели наши данные к опрятному виду --- осталось добавить индентификатор, чтобы мы могли различить данные разных испытуемых.
+
+Добавьте в датасет столбец `id`, в котором будет содержаться значение `1` во всех строках, так как это данные первого испытуемого.
+
 :::
 
 ::: {#pr4-8-autocheck .autocheck}
@@ -362,35 +320,31 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-8-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`mutate()`
 
 </details>
 :::
 
-### #9
+### #9 {#pr4-9-title}
 
 <img id="pr4-9-level" class="level"/>
 
 ::: {#pr4-9-task .task}
-Текст задания.
+
+Отлично! Мы причесали наши данные. Теперь нам надо провернуть всё то же самые с остальными файлами. Чтобы оптимизировать этот процесс, давайте обрнем написанный нами код в функцию.
+
+Напишите функцию, которая будет осуществлять предобработку данных. Функция должна принимать на вход два аргумента:
+
+* путь к файлу данных
+* `id` испытуемого
+
+Функция должна загружать данные и производить их предобработку аналогично тому, что мы делали в заданиях выше.
+
+Функция должна возвращать предобработанный датасет, соответствующий виду, который мы получили в [предыдущем задании](#pr4-8-title).
+
+Проверьте, как отбработает функция на файле `02.xlsx`.
 :::
 
 ::: {#pr4-9-autocheck .autocheck}
@@ -406,7 +360,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr4-9-hints">
 
 <summary>Подсказки</summary>
@@ -432,12 +386,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#pr4-10-title}
 
 <img id="pr4-10-level" class="level"/>
 
 ::: {#pr4-10-task .task}
-Текст задания.
+
+Наша конечная цель --- получить единый датасет из всех данных, которые у нас в наличии. Мы уже добились того, что наша функция возвращает нам ровный и красивый tibble. Осталось лишь поставить их тибблы друг на друга, чтобы получить то, что нам нужно.
+
+Объедините резльтаты предобработки данных `01.xlsx` и `02.xlsx` в один объект.
+
 :::
 
 ::: {#pr4-10-autocheck .autocheck}
@@ -456,35 +414,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-10-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`bind_rows()`
 
 </details>
 :::
 
-### #11
+### #11 {#pr4-11-title}
 
 <img id="pr4-11-level" class="level"/>
 
 ::: {#pr4-11-task .task}
-Текст задания.
+Всё готово для того, чтобы собрать итоговый датасет.
+
+Напишите цикл, в котором данные будут загружаться, предобрабатываться и объединяться в объект `share`. 
+
 :::
 
 ::: {#pr4-11-autocheck .autocheck}
@@ -503,35 +448,19 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-11-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Ошибка? Посмотрите, что за файлы лежат в папке с данными.
 
 </details>
 :::
 
-### #12
+### #12 {#pr4-12-title}
 
 <img class="level"/>
 
 ::: {#pr4-12-task .task}
-Текст задания.
+Изучите структуру получившихся данных. Проверьте, совпадает ли число индентификаторов с количеством данных.
 :::
 
 ::: {#pr4-12-autocheck .autocheck}
@@ -547,7 +476,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr4-12-hints">
 
 <summary>Подсказки</summary>
@@ -573,12 +502,15 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #13
+### #13 {#pr4-13-title}
 
 <img id="pr4-13-level" class="level"/>
 
 ::: task
-Текст задания.
+
+* Отсортируйте датасет по номеру пробы (`numtrial`) от первого до последнего.
+* Отсортируйте датасет по номеру пробы (`numtrial`) и идентификатору испытуемого (`id`).
+
 :::
 
 ::: {#pr4-13-autocheck .autocheck}
@@ -597,35 +529,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-13-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`arrange()`
 
 </details>
 :::
 
-### #14
+### #14 {#pr4-14-title}
 
 <img id="pr4-14-level" class="level"/>
 
 ::: {#pr4-14-task .task}
-Текст задания.
+
+Проверьте, все ли сочетания экспериментальных условий --- `trialtype` и `setsize` --- представлены в датасете.
+
 :::
 
 ::: {#pr4-14-autocheck .autocheck}
@@ -644,35 +562,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-14-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`distinct()`
 
 </details>
 :::
 
-### #15
+### #15 {#pr4-15-title}
 
 <img id="pr4-15-level" class="level"/>
 
 ::: {#pr4-15-task .task}
-Текст задания.
+
+В описании данных в начале страницы упоминалось, что в ходе исследования собирались данные об используемой платформе. Их можно найти по [ссылке](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/share_platform.csv).
+
+Загрузите данные о платформе в объект `platform`.
+
 :::
 
 ::: {#pr4-15-autocheck .autocheck}
@@ -688,7 +594,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr4-15-hints">
 
 <summary>Подсказки</summary>
@@ -714,12 +620,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #16
+### #16 {#pr4-16-title}
 
 <img id="pr4-16-level" class="level"/>
 
 ::: {#pr4-16-task .task}
-Текст задания.
+
+Чтобы наши данные содержали все переменные, которые фиксировались в эксперименте, нам необходимо объединить датасеты `share` и `platfrom`. При этом объединение необходимо произвести так, чтобы совпали `id` между датасетами, так как строки с одним и тем же индентификатором относятся к одному и тому же испытуемому.
+
+Объедините датасеты `share` и `platform` по переменной `id`. Перезапишите объект `share`.
+
 :::
 
 ::: {#pr4-16-autocheck .autocheck}
@@ -738,35 +648,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-16-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`..._join()`
 
 </details>
 :::
 
-### #17
+### #17 {#pr4-17-title}
 
 <img id="pr4-17-level" class="level"/>
 
 ::: {#pr4-17-task .task}
-Текст задания.
+Супер! Наши данные готовы к тому, чтобы мы что-нибудь на них посчитали.
+
+Для анализа нам необходимо аггрегироваь данные --- посчитать среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента. Для этого нам понадобится группировка. Разберемся сначала с ней отдельно.
+
+Сгруппируйте датасет `share` по идентификатору испытуемого.
+
+Что изменилось в датасете?
+
 :::
 
 ::: {#pr4-17-autocheck .autocheck}
@@ -785,35 +686,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-17-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`group_by()`
 
 </details>
 :::
 
-### #18
+### #18 {#pr4-18-title}
 
 <img id="pr4-18-level" class="level"/>
 
 ::: {#pr4-18-task .task}
-Текст задания.
+
+Рассчитайте среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента на данных `share`. Результат сохраните в объект `share_agg`.
+
 :::
 
 ::: {#pr4-18-autocheck .autocheck}
@@ -832,35 +719,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-18-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`group_by() %>% summarise()`, `summarise(..., .by = ...)`
 
 </details>
 :::
 
-### #19
+### #19 {#pr4-19-title}
 
 <img id="pr4-19-level" class="level"/>
 
 ::: {#pr4-19-task .task}
-Текст задания.
+
+a. Переведите данные `share_agg` в длинный формат.
+b. Переведите данные `share_agg` в широкий формат так, чтобы в каждой колонке было среднее время реакции для одного из условий переменной `setsize`.
+
 :::
 
 ::: {#pr4-19-autocheck .autocheck}
@@ -881,33 +755,19 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`pivot_longer()`, `pivot_wider()`
 
 </details>
 :::
 
-### #20
+### #20 {#pr4-20-title}
 
 <img id="pr4-20-level" class="level"/>
 
 ::: {#pr4-20-task .task}
-Текст задания.
+
+Экспортируйте результат аггрегации данных в [задания 18](#pr4-18-title) в формате CSV.
+
 :::
 
 ::: {#pr4-20-autocheck .autocheck}
@@ -926,32 +786,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr4-20-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`write_csv()`
 
 </details>
 :::
 
 ## Дополнительные задания {#pr4_add}
 
-### #1
+### #1 {#pr4-21-title}
 
 <img id="pr4-21-level" class="level"/>
 
@@ -998,7 +842,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+### #2 {#pr4-22-title}
 
 <img id="pr4-22-level" class="level"/>
 
@@ -1045,7 +889,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#pr4-23-title}
 
 <img id="pr4-23-level" class="level"/>
 
@@ -1092,7 +936,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#pr4-24-title}
 
 <img id="pr4-24-level" class="level"/>
 
@@ -1139,7 +983,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#pr4-25-title}
 
 <img id="pr4-25-level" class="level"/>
 
@@ -1186,7 +1030,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#pr4-26-title}
 
 <img id="pr4-26-level" class="level"/>
 
@@ -1233,7 +1077,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #7
+### #7 {#pr4-27-title}
 
 <img id="pr4-27-level" class="level"/>
 
@@ -1280,7 +1124,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#pr4-28-title}
 
 <img id="pr4-28-level" class="level"/>
 
@@ -1327,7 +1171,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#pr4-29-title}
 
 <img id="pr4-29-level" class="level"/>
 
@@ -1374,7 +1218,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#pr4-30-title}
 
 <img id="pr4-30-level" class="level"/>
 
