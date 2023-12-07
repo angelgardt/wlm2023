@@ -1000,7 +1000,7 @@ REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
 <div id="pr4-21-task" class="task">
 <p>Поработаем с регулярным выражениями. У нас есть вектор с датами, которые указаны в совершенно разных форматах. Кроме того, некоторые из них явно содержать ошибки. Напишем регулярку, которая позволить отобрать корректные даты.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'19.11.12'</span> <span class="st">'16.o1.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'19.11.12'</span>, <span class="st">'16.o1.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>В заданиях 1–5 будем работать с форматом даты <code>dd.mm.yyyy</code>. Проверять работу регулярный выражений будем с помощью функции <code>str_detect()</code>.</p>
 <p>Создайте вектор <code>dates</code> с помощью кода выше.</p>
