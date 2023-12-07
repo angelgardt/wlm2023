@@ -121,7 +121,7 @@ preproc("super.xlsx", "Time", path) %>%
 
 # 3
 
-## координаты центров стимулов
+## center coordinates
 
 res_x = 1920 # screen resolution x
 res_y = 1080 # screen resolution y
@@ -143,7 +143,7 @@ centers_y <- seq(margin_y + step_y, res_y - margin_y - step_y, step_y) - res_y /
 
 # 4
 
-## джиттер
+## jitter
 
 jitter_x = floor((step_x - gap - stim_size_x) / 2)
 jitter_y = floor((step_y - gap - stim_size_y) / 2)
@@ -151,7 +151,8 @@ jitter_y = floor((step_y - gap - stim_size_y) / 2)
 
 # 5
 
-## координаты стимулов
+## coordinates
+
 tibble(
   coords = outer(centers_x, 
                  centers_y, 
