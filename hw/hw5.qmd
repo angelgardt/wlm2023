@@ -5,15 +5,95 @@
 REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 ## Основные задания {#hw5_main}
 
-### #1
+::: {.callout-note}
+
+### Общее задание на домашку
+
+В данной домашке вам предлагается повторить представленную ниже визуализацию. Данные расположены [здесь](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/share.csv) --- это тот самый поведенческий эксперимент, с которым мы знакомились на четвертой практике.
+
+> В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов --- других иконок, которые для обеих платформ отрисованы одинаково. Целевой стимул мог быть один --- два условия: иконка iOS (Outgoing Tray, `tray`) и иконка Android (Three Dots, `dots`) --- или их могло быть два --- и тот, и другой. Дополнительно варьировалось количество стимулов в пробе --- 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) --- от начала пробы до клика испытуемого --- а также координаты клика для вычисления точности поиска. Дополнительно были записаны данные об используемой платформе смартфона --- iOS или Android.
+
+**Переменные в датасете:**
+
+* `id` --- идентификатор испытуемого
+* `trialtype` --- тип пробы (`dots` / `tray` / `both`)
+* `setsize` --- количество стимулов в пробе (`8` / `12` / `16`)
+* `platform` --- платформа, которой пользуется испытуемый (`ios` / `android`)
+* `time1` --- время первого клика, с
+* `time2` --- время второго клика, с
+* `correct1` --- является ли первый клик верным
+* `correct2` --- является ли второй клик верным
+
+**Есть два варианта выполнения данной домашки:**
+
+* Если вы хорошо разобрались в `ggplot2`, то можете просто повторить визуализацию без опоры на задания.
+    * Только посмотрите в конце [задание 10](#hw5-10-title) --- надо экспортировать получившийся график.
+* Если вы чувствуете, что ещё не очень уверенный пользователь `ggplot2`, то в заданиях поэтапно идёт движение с самого начала до итоговой визуализации.
+
+**Вид графика, который должен получиться в итоге вот:**
+
+```{r pkgs, echo=FALSE, eval=TRUE, message=FALSE}
+library(tidyverse)
+```
+
+```{r final-graph, echo=FALSE, eval=TRUE, message=FALSE}
+
+share <- read_delim("../data/hw5/share.csv", delim = " ", locale = locale(decimal_mark = ","))
+
+pd <- position_dodge(.3)
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c(dots = "gray50", tray = "black"),
+                     labels = c(dots = "Three Dots", tray = "Outgoing Tray")) +
+  scale_shape_discrete(labels = c(android = "Android", ios = "iOS")) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+
+:::
+
+### #1 {#hw5-1-title}
 
 <img id="hw5-1-level" class="level"/>
 
 ::: {#hw5-1-task .task}
-Текст задания `переменная`.
+
+a. Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/share.csv).
+b. Постройте базовую визуализацию, на которой будет отображено среднее время первого клика в условиях с разным количеством стимулов. Количество стимулов считайте категориальной переменной.
+
 :::
+
+```{r 1}
+share %>% 
+  ggplot(aes(as_factor(setsize), time1)) +
+  stat_summary(fun = mean, geom = "point")
+```
+
 
 ::: {#hw5-1-autocheck .autocheck}
 ::: {#hw5-1-ir .input-requirements}
@@ -35,34 +115,46 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Ошибка при чтении файла</summary>
+
+Файл с данными содержит нетипичные разделители --- как между колонками данных, так и десятичный разделитель. Чтобы корректно прочитать файл, используйте `read_delim()`.
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Категориальный `setsize`</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+Обратите внимание на то, как распознается переменная `setsize` функцией чтения данных. Возможно, нужно что-то типа `as_factor()`.
 
 </details>
 
 </details>
 :::
 
-### #2
+### #2 {#hw5-2-title}
 
 <img id="hw5-2-level" class="level"/>
 
 ::: {#hw5-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+a. Добавьте на визуализацию группировку наблюдений по типу пробы с помощью цвета и группировку по платформа с помощью формы точек. Из типа пробы в визуализации должны присутствовать только `tray` и `dots`.
+
+b. Добавьте на визуализацию доверительные интервалы для каждого из рассчитанных средних. Средните с доверительными интервалами не должны располагаться на одной вертикальной линии --- немного разнесите их вправо-влево.
+
 :::
+
+```{r 2}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform)) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd)
+```
 
 ::: {#hw5-2-autocheck .autocheck}
 ::: {#hw5-2-ir .input-requirements}
@@ -84,32 +176,56 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как убрать одно экспериментальное условие?</summary>
+
+Отфильтруйте из датасета лишние пробы.
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как отодвинуть друг от друга средние с доверительными интервалами?</summary>
+
+`position_dodge()`
 
 </details>
 
 <details class="hint">
 
-<summary>Ответ неверный</summary>
+<summary>Ошибка `undefined column selected`</summary>
+
+Проверьте, когда вы используете `fun`, а когда `fun.data` внтури `stat_summary()`.
 
 </details>
 
 </details>
 :::
 
-### #3
+
+### #3 {#hw5-3-title}
 
 <img id="hw5-3-level" class="level"/>
 
 ::: {#hw5-3-task .task}
-Текст задания.
+
+Соедините точки, соответствующие одной группе в сочетании переменных `trialtype` и `platform` линиями.
+
 :::
+
+```{r 3}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd)
+```
 
 ::: {#hw5-3-autocheck .autocheck}
 ::: {#hw5-3-ir .input-requirements}
@@ -131,33 +247,51 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Линий нет ((</summary>
+
+Проверье, указали на вы `ggplot`у, какие именно точки надо соединить --- что считать одной группой точек, которые должны быть соединены линией.
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Линии существуют отдельно от точек ((</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+Проверьте, указали ли вы, что линии надо раздвинуть так же, как и средние с доверительными инетрвалами.
 
 </details>
 
 </details>
 :::
 
-### #4
+### #4 {#hw5-4-title}
 
 <img id="hw5-4-level" class="level"/>
 
 ::: {#hw5-4-task .task}
-Текст задания.
+
+Немного настройте график:
+
+* увеличьте размер точек до 3, чтобы они были лучше видны
+* сделайте линии прерывистыми, чтобы они меньше отвлекали внимание от точек
+* задайте линиям прозрачность в 30%, чтобы они еще меньше отвлекали внимание от точек
+
 :::
 
+```{r}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3)
+```
 ::: {#hw5-4-autocheck .autocheck}
 ::: {#hw5-4-ir .input-requirements}
 Описание формата инпута.
@@ -178,32 +312,47 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Прерывистая линия это какая?</summary>
+
+`dashed`
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Слишком прозравные линии получаются</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+Аргумент `alpha` задает непрозрачность. В задании же указано, насколько должна быть прозрачной линия.
 
 </details>
 
 </details>
 :::
 
-### #5
+### #5 {#hw5-5-title}
 
 <img id="hw5-5-level" class="level"/>
 
 ::: {#hw5-5-task .task}
-Текст задания.
+
+Ещё немного настройте график: задайте ширину усов доверительных интервалов в 30%.
+
 :::
+
+```{r 5}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3)
+```
 
 ::: {#hw5-5-autocheck .autocheck}
 ::: {#hw5-5-ir .input-requirements}
@@ -218,7 +367,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-5-hints">
 
 <summary>Подсказки</summary>
@@ -244,13 +393,39 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#hw5-6-title}
 
 <img id="hw5-6-level" class="level"/>
 
 ::: {#hw5-6-task .task}
-Текст задания.
+
+Задайте соответствующие подписи осей и легенды графика:
+
+* ось $x$ --- Количество стимулов в пробе
+* ось $y$ --- Время реакции (первый клик), с
+* цвет --- Тип пробы
+* форма точек --- Платформа
+
 :::
+
+```{r 6}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа")
+```
 
 ::: {#hw5-6-autocheck .autocheck}
 ::: {#hw5-6-ir .input-requirements}
@@ -265,7 +440,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-6-hints">
 
 <summary>Подсказки</summary>
@@ -291,13 +466,41 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #7
+### #7 {#hw5-7-title}
 
 <img id="hw5-7-level" class="level"/>
 
 ::: {#hw5-7-task .task}
-Текст задания.
+
+Добавьте на график заголовок, подзаголовок и подпись.
+
+* заголовок --- Время реакции при взаимодействии факторов
+* подзаголовок --- Тип пробы × Платформа × Количество стимулов в пробе
+* подпись --- отображен 95% доверительный интервал
+
 :::
+
+```{r 7}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал")
+```
 
 ::: {#hw5-7-autocheck .autocheck}
 ::: {#hw5-7-ir .input-requirements}
@@ -312,7 +515,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-7-hints">
 
 <summary>Подсказки</summary>
@@ -338,13 +541,43 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#hw5-8-title}
 
 <img id="hw5-8-level" class="level"/>
 
 ::: {#hw5-8-task .task}
-Текст задания.
+
+a. Измените палитру используемых цветов на черно-белую --- `black` и `gray50`.
+b. Задайте значения подписей легенды:
+    * платформы должны быть подписаны `iOS` и `Android` соответственно
+    * тип пробы `Tree Dots` и `Outgoing Tray` соответственно
+
 :::
+
+```{r 8}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c(dots = "gray50", tray = "black"),
+                     labels = c(dots = "Three Dots", tray = "Outgoing Tray")) +
+  scale_shape_discrete(labels = c(android = "Android", ios = "iOS"))
+```
 
 ::: {#hw5-8-autocheck .autocheck}
 ::: {#hw5-8-ir .input-requirements}
@@ -366,26 +599,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как кастомизировать шкалы?</summary>
+
+`scale_color_..()` или `scale_shape_..()`
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как задать соответствие между новыми подписями и исходными значениями?</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+С помощью именованного вектора
 
 </details>
 
 </details>
 :::
 
-### #9
+### #9 {#hw5-9-title}
 
 <img id="hw5-9-level" class="level"/>
 
@@ -395,7 +626,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ::: {#hw5-9-autocheck .autocheck}
 ::: {#hw5-9-ir .input-requirements}
-Описание формата инпута.
+
+Последние штрихи:
+
+a. Расположите легенду под визуалиацией.
+b. Задайте черно-белую тему графику, чтобы убрать серый фон.
+
 :::
 
 <input class="autocheck-input" type="text" id="hw5-9" placeholder="Введите ответ…">
@@ -406,7 +642,34 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+```{r 9}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c(dots = "gray50", tray = "black"),
+                     labels = c(dots = "Three Dots", tray = "Outgoing Tray")) +
+  scale_shape_discrete(labels = c(android = "Android", ios = "iOS")) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-9-hints">
 
 <summary>Подсказки</summary>
@@ -432,13 +695,43 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#hw5-10-title}
 
 <img id="hw5-10-level" class="level"/>
 
 ::: {#hw5-10-task .task}
-Текст задания.
+
+Экспортируйте график в формате JPEG (размер --- 20×18 см) в разрешении, подходящем для печати.
+
 :::
+
+```{r 10}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c(dots = "gray50", tray = "black"),
+                     labels = c(dots = "Three Dots", tray = "Outgoing Tray")) +
+  scale_shape_discrete(labels = c(android = "Android", ios = "iOS")) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+# ggsave("test.jpg", width = 20, height = 18, units = "cm", dpi = 600)
+```
 
 ::: {#hw5-10-autocheck .autocheck}
 ::: {#hw5-10-ir .input-requirements}
@@ -453,7 +746,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-10-hints">
 
 <summary>Подсказки</summary>
@@ -481,13 +774,49 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ## Дополнительные задания {#hw5_add}
 
-### #1
+### #1 {#hw5-11-title}
 
 <img id="hw5-11-level" class="level"/>
 
 ::: {#hw5-11-task .task}
-Текст задания.
+
+Пришла рецензия на статью, где был опубликован график, который вы сделали в основной части домашки. У рецензента нет никаких замечаний, кроме одного --- он желает, что шрифт на графике был с засечками (Times New Roman), а название графика было выделено жирным начертанием.
+
+Что ж... Сделаем.
+
+a. Задайте Times New Roman в качестве шрифта для текста на графике.
+b. Задайте полужирное начертание для заголовка графика.
+
 :::
+
+```{r 11}
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform))) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c("gray50", "black"),
+                     labels = c("Three Dots", "Outgoing Tray")) +
+  scale_shape_discrete(labels = c("Android", "iOS")) +
+  theme_bw() +
+  theme(legend.position = "bottom",
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face = "bold"))
+```
 
 ::: {#hw5-11-autocheck .autocheck}
 ::: {#hw5-11-ir .input-requirements}
@@ -502,7 +831,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-11-hints">
 
 <summary>Подсказки</summary>
@@ -528,13 +857,56 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+### #2 {#hw5-12-title}
 
 <img id="hw5-12-level" class="level"/>
 
+```{r 12-prep, echo=FALSE, eval=FALSE}
+taia <- read_csv("https://raw.githubusercontent.com/angelgardt/angelgardt.github.io/master/appcogsci2022/taia_sample.csv")
+taia %>% 
+  pivot_longer(1:60, names_to = "item", values_to = "score") %>% 
+  mutate(subscale = str_remove_all(item, "[:digit:]{2}") %>% toupper()) %>%
+  group_by(id, subscale) %>% 
+  summarise(subscale_score = sum(score)) %>% 
+  write_csv("../data/hw5/taia_short.csv")
+```
+
 ::: {#hw5-12-task .task}
-Текст задания.
+
+Пошалим!
+
+По [ссылке](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/taia_short.csv) вы найдете часть данных апробации опросника на доверие к искусственному интеллекту (Trust in Artшficial Intelligent Agents Scale). Это уже агрегированные данные --- в них три столбца:
+
+* `id` --- идентификатор респондента
+* `subscale` --- субшкала опросника
+* `subscale_score` --- балл по данной субшкале
+
+Построим профили для первых пяти респондентов.
+
+* Профиль должен быть отображен в виде столбчатой диаграммы
+* Над каждым столбиком должен быть подписан балл респондента по шкале
+* Столбики должны различаться по цветам, однако легенда должна быть скрыта, чтобы не дублировать отображение переменной на оси
+* Каждый профиль должен быть отображен на отдельном подграфике
+
+Пример визуализации представлен ниже.
+
 :::
+
+```{r 12, eval=TRUE}
+taia <- read_csv("../data/hw5/taia_short.csv")
+
+theme_set(theme_bw())
+
+taia %>% 
+  filter(id %in% 1:5) %>% 
+  ggplot(aes(subscale, subscale_score, fill = subscale)) +
+  geom_col() +
+  geom_label(aes(label = subscale_score)) +
+  facet_wrap(~ id) +
+  labs(x = "Шкала опросника",
+       y = "Балл по шкале") +
+  guides(fill = "none")
+```
 
 ::: {#hw5-12-autocheck .autocheck}
 ::: {#hw5-12-ir .input-requirements}
@@ -552,36 +924,43 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="hw5-12-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
+`geom_label()`
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`guides()`
 
 </details>
 :::
 
-### #3
+
+### #3 {#hw5-13-title}
 
 <img id="hw5-13-level" class="level"/>
 
 ::: {#hw5-13-task .task}
-Текст задания.
+
+На основе графика из предыдущего задания постройте визуализацию профилей респондентов 22, 23 и 24 и форме лучевой диаграммы.
+
+Пример графика представлен ниже.
+
 :::
+
+```{r 13, eval=TRUE}
+taia %>% 
+  filter(id %in% 22:24) %>% 
+  ggplot(aes(subscale, subscale_score, fill = subscale)) +
+  geom_col() +
+  geom_label(aes(label = subscale_score)) +
+  coord_polar() +
+  facet_wrap(~ id) +
+  labs(fill = "Шкала") +
+  theme(legend.position = "bottom",
+        axis.title.x = element_text(size = 0),
+        axis.text.x = element_text(size = 0),
+        axis.title.y = element_text(size = 0),
+        axis.text.y = element_text(size = 0))
+```
 
 ::: {#hw5-13-autocheck .autocheck}
 ::: {#hw5-13-ir .input-requirements}
@@ -599,36 +978,35 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="hw5-13-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
+`coord_polar()`
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+```
+theme(axis.title.x = element_text(...),
+        axis.text.x = element_text(...))
+```
 
 </details>
 :::
 
-### #4
+### #4 {#hw5-14-title}
 
 <img id="hw5-14-level" class="level"/>
 
 ::: {#hw5-14-task .task}
-Текст задания.
+
+Помимо знакомых нам форматов JPEG и PNG, которые являются растровыми, есть еще векторные форматы, которые позволяют масштабировать. Один из них SVG. Ему не важно, какого размера и какого разрешения вы хотите экспортировать картинку --- её можно будет растянуть до любого размера.
+
+Экспортируйте получившийся в предыдущем задании график с формате SVG. 
+
+Скорее всего, понадобится установить пакет `svglite`.
+
 :::
+
+```{r 14, eval=TRUE}
+ggsave("test.svg")
+```
 
 ::: {#hw5-14-autocheck .autocheck}
 ::: {#hw5-14-ir .input-requirements}
@@ -643,7 +1021,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw5-14-hints">
 
 <summary>Подсказки</summary>
@@ -669,13 +1047,58 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw5-15-title}
 
 <img id="hw5-15-level" class="level"/>
 
 ::: {#hw5-15-task .task}
-Текст задания.
+
+Напоследок нарисуем что-то невероятное --- а именно, вокалическое пространство русского языка!
+
+В двух словах: гласные звуки характеризуются двумя частотными характеристиками, которые называются форманты. Они задают координаты вокалического пространства. Расположение конкретных звуков на этих координатах и будет являться визуализацией вокалического пространства.
+
+В [датасете](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/vowels.csv) собраны различные харакретистики гласных звуков русского языка из произнесений разных слов. Нас будут интересовать прежде всего две характеристики:
+
+* `f1` --- первая форманта, которая будет задавать вертикальную ось вокалического пространства
+* `f2` --- вторая форманта, которая будет задавать горизонтальную ось вокалического пространства
+
+Кроме этих двух переменных нам также понадобятся:
+
+* `phoneme` --- обозначение фонемы
+* `reduction` --- степень редукции
+
+Визуализируйте вокалическое пространство русского языка как показано на рисунке ниже. Обратите внимание на направление осей. Эллипсы отображают 80% доверительную зону для пары срених значений первой и второй формант.
+
+
 :::
+
+```{r 15-prep, eval=FALSE}
+read_csv("../data/hw5/features.csv") %>% 
+  mutate(position = ifelse(reduction == 1, "S", position),
+         phoneme = ifelse(phoneme == "ə̝ᶷ", "əᶷ", phoneme)) %>%
+  filter(reduction %in% 1:3) |>
+  filter(f1 < 1000) |>
+  write_csv("../data/hw5/vowels.csv")
+```
+
+```{r 15, eval=TRUE}
+vowels <- read_csv("../data/hw5/vowels.csv")
+
+vowels %>% 
+  ggplot(aes(f2, f1,
+             label = phoneme, color = phoneme)) +
+  geom_text(alpha = .5) +
+  stat_ellipse(level = .8) +
+  scale_x_reverse(position = "top") +
+  scale_y_reverse(position="right") +
+  facet_grid(reduction ~ .,
+             labeller = labeller(reduction = c("1" = "Редукция\n отсутствует",
+                                               "2" = "Первая\n степень редукции",
+                                               "3" = "Вторая\n степень редукции"))) +
+  guides(color = "none") +
+  labs(x = "F2",
+       y = "F1")
+```
 
 ::: {#hw5-15-autocheck .autocheck}
 ::: {#hw5-15-ir .input-requirements}
@@ -695,26 +1118,13 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Чтобы задать новые подписи для фасетов, воспользуйтесь аргументом `labeller` функции `facet_..()`, в который необходимо передать результат работы функции `labeller()`.
+* Чтобы обозначить перенос строки, используйте символ `\n`.
+* Чтобы отобразить доверительные зоны для пар средних значений, есть функция `stat_ellipse()` с аргументом `level`.
 
 </details>
 :::
+
 
 ```{=html}
 <!--- CHANGE hw5 TO hw<n> IN THE LINES BELOW--->

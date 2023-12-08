@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -74,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -91,55 +97,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw5.html">HW5 // Визуализация данных</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw5.html">HW5 // Визуализация данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -157,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW2 // Матрицы и списки. Функции и строки</span></a>
+ <span class="menu-text">HW2 // Матрицы и списки. Функции</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -262,24 +260,24 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#hw5_main" id="toc-hw5_main" class="nav-link active" data-scroll-target="#hw5_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw5-1-title" id="toc-hw5-1-title" class="nav-link" data-scroll-target="#hw5-1-title">#1</a></li>
+  <li><a href="#hw5-2-title" id="toc-hw5-2-title" class="nav-link" data-scroll-target="#hw5-2-title">#2</a></li>
+  <li><a href="#hw5-3-title" id="toc-hw5-3-title" class="nav-link" data-scroll-target="#hw5-3-title">#3</a></li>
+  <li><a href="#hw5-4-title" id="toc-hw5-4-title" class="nav-link" data-scroll-target="#hw5-4-title">#4</a></li>
+  <li><a href="#hw5-5-title" id="toc-hw5-5-title" class="nav-link" data-scroll-target="#hw5-5-title">#5</a></li>
+  <li><a href="#hw5-6-title" id="toc-hw5-6-title" class="nav-link" data-scroll-target="#hw5-6-title">#6</a></li>
+  <li><a href="#hw5-7-title" id="toc-hw5-7-title" class="nav-link" data-scroll-target="#hw5-7-title">#7</a></li>
+  <li><a href="#hw5-8-title" id="toc-hw5-8-title" class="nav-link" data-scroll-target="#hw5-8-title">#8</a></li>
+  <li><a href="#hw5-9-title" id="toc-hw5-9-title" class="nav-link" data-scroll-target="#hw5-9-title">#9</a></li>
+  <li><a href="#hw5-10-title" id="toc-hw5-10-title" class="nav-link" data-scroll-target="#hw5-10-title">#10</a></li>
   </ul></li>
   <li><a href="#hw5_add" id="toc-hw5_add" class="nav-link" data-scroll-target="#hw5_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw5-11-title" id="toc-hw5-11-title" class="nav-link" data-scroll-target="#hw5-11-title">#1</a></li>
+  <li><a href="#hw5-12-title" id="toc-hw5-12-title" class="nav-link" data-scroll-target="#hw5-12-title">#2</a></li>
+  <li><a href="#hw5-13-title" id="toc-hw5-13-title" class="nav-link" data-scroll-target="#hw5-13-title">#3</a></li>
+  <li><a href="#hw5-14-title" id="toc-hw5-14-title" class="nav-link" data-scroll-target="#hw5-14-title">#4</a></li>
+  <li><a href="#hw5-15-title" id="toc-hw5-15-title" class="nav-link" data-scroll-target="#hw5-15-title">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,18 +300,68 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!--
 REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 -->
 <section id="hw5_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw5_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Общее задание на домашку
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>В данной домашке вам предлагается повторить представленную ниже визуализацию. Данные расположены <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/share.csv">здесь</a> — это тот самый поведенческий эксперимент, с которым мы знакомились на четвертой практике.</p>
+<blockquote class="blockquote">
+<p>В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов — других иконок, которые для обеих платформ отрисованы одинаково. Целевой стимул мог быть один — два условия: иконка iOS (Outgoing Tray, <code>tray</code>) и иконка Android (Three Dots, <code>dots</code>) — или их могло быть два — и тот, и другой. Дополнительно варьировалось количество стимулов в пробе — 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) — от начала пробы до клика испытуемого — а также координаты клика для вычисления точности поиска. Дополнительно были записаны данные об используемой платформе смартфона — iOS или Android.</p>
+</blockquote>
+<p><strong>Переменные в датасете:</strong></p>
+<ul>
+<li><code>id</code> — идентификатор испытуемого</li>
+<li><code>trialtype</code> — тип пробы (<code>dots</code> / <code>tray</code> / <code>both</code>)</li>
+<li><code>setsize</code> — количество стимулов в пробе (<code>8</code> / <code>12</code> / <code>16</code>)</li>
+<li><code>platform</code> — платформа, которой пользуется испытуемый (<code>ios</code> / <code>android</code>)</li>
+<li><code>time1</code> — время первого клика, с</li>
+<li><code>time2</code> — время второго клика, с</li>
+<li><code>correct1</code> — является ли первый клик верным</li>
+<li><code>correct2</code> — является ли второй клик верным</li>
+</ul>
+<p><strong>Есть два варианта выполнения данной домашки:</strong></p>
+<ul>
+<li>Если вы хорошо разобрались в <code>ggplot2</code>, то можете просто повторить визуализацию без опоры на задания.
+<ul>
+<li>Только посмотрите в конце <a href="#hw5-10-title">задание 10</a> — надо экспортировать получившийся график.</li>
+</ul></li>
+<li>Если вы чувствуете, что ещё не очень уверенный пользователь <code>ggplot2</code>, то в заданиях поэтапно идёт движение с самого начала до итоговой визуализации.</li>
+</ul>
+<p><strong>Вид графика, который должен получиться в итоге вот:</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw5_files/figure-html/final-graph-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="hw5-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-1-title">#1</h3>
 <p><img id="hw5-1-level" class="level"></p>
 <div id="hw5-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/share.csv">данные</a>.</li>
+<li>Постройте базовую визуализацию, на которой будет отображено среднее время первого клика в условиях с разным количеством стимулов. Количество стимулов считайте категориальной переменной.</li>
+</ol>
 </div>
 <div id="hw5-1-autocheck" class="autocheck">
 <div id="hw5-1-ir" class="input-requirements">
@@ -332,28 +380,27 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Ошибка при чтении файла
 </summary>
+<p>Файл с данными содержит нетипичные разделители — как между колонками данных, так и десятичный разделитель. Чтобы корректно прочитать файл, используйте <code>read_delim()</code>.</p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Категориальный <code>setsize</code>
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Обратите внимание на то, как распознается переменная <code>setsize</code> функцией чтения данных. Возможно, нужно что-то типа <code>as_factor()</code>.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="hw5-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-2-title">#2</h3>
 <p><img id="hw5-2-level" class="level"></p>
 <div id="hw5-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<ol type="a">
+<li><p>Добавьте на визуализацию группировку наблюдений по типу пробы с помощью цвета и группировку по платформа с помощью формы точек. Из типа пробы в визуализации должны присутствовать только <code>tray</code> и <code>dots</code>.</p></li>
+<li><p>Добавьте на визуализацию доверительные интервалы для каждого из рассчитанных средних. Средните с доверительными интервалами не должны располагаться на одной вертикальной линии — немного разнесите их вправо-влево.</p></li>
+</ol>
 </div>
 <div id="hw5-2-autocheck" class="autocheck">
 <div id="hw5-2-ir" class="input-requirements">
@@ -372,27 +419,30 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как убрать одно экспериментальное условие?
 </summary>
+<p>Отфильтруйте из датасета лишние пробы.</p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как отодвинуть друг от друга средние с доверительными интервалами?
 </summary>
+<p><code>position_dodge()</code></p>
 </details>
 <details class="hint">
 <summary>
-Ответ неверный
+Ошибка <code>undefined column selected</code>
 </summary>
+<p>Проверьте, когда вы используете <code>fun</code>, а когда <code>fun.data</code> внтури <code>stat_summary()</code>.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="hw5-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-3-title">#3</h3>
 <p><img id="hw5-3-level" class="level"></p>
 <div id="hw5-3-task" class="task">
-<p>Текст задания.</p>
+<p>Соедините точки, соответствующие одной группе в сочетании переменных <code>trialtype</code> и <code>platform</code> линиями.</p>
 </div>
 <div id="hw5-3-autocheck" class="autocheck">
 <div id="hw5-3-ir" class="input-requirements">
@@ -411,27 +461,29 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Линий нет ((
 </summary>
+<p>Проверье, указали на вы <code>ggplot</code>у, какие именно точки надо соединить — что считать одной группой точек, которые должны быть соединены линией.</p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Линии существуют отдельно от точек ((
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Проверьте, указали ли вы, что линии надо раздвинуть так же, как и средние с доверительными инетрвалами.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="hw5-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-4-title">#4</h3>
 <p><img id="hw5-4-level" class="level"></p>
 <div id="hw5-4-task" class="task">
-<p>Текст задания.</p>
+<p>Немного настройте график:</p>
+<ul>
+<li>увеличьте размер точек до 3, чтобы они были лучше видны</li>
+<li>сделайте линии прерывистыми, чтобы они меньше отвлекали внимание от точек</li>
+<li>задайте линиям прозрачность в 30%, чтобы они еще меньше отвлекали внимание от точек</li>
+</ul>
 </div>
 <div id="hw5-4-autocheck" class="autocheck">
 <div id="hw5-4-ir" class="input-requirements">
@@ -450,27 +502,24 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Прерывистая линия это какая?
 </summary>
+<p><code>dashed</code></p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Слишком прозравные линии получаются
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Аргумент <code>alpha</code> задает непрозрачность. В задании же указано, насколько должна быть прозрачной линия.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="hw5-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-5-title">#5</h3>
 <p><img id="hw5-5-level" class="level"></p>
 <div id="hw5-5-task" class="task">
-<p>Текст задания.</p>
+<p>Ещё немного настройте график: задайте ширину усов доверительных интервалов в 30%.</p>
 </div>
 <div id="hw5-5-autocheck" class="autocheck">
 <div id="hw5-5-ir" class="input-requirements">
@@ -482,7 +531,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-5-hints">
 <summary>
 Подсказки
@@ -505,11 +554,17 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="hw5-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-6-title">#6</h3>
 <p><img id="hw5-6-level" class="level"></p>
 <div id="hw5-6-task" class="task">
-<p>Текст задания.</p>
+<p>Задайте соответствующие подписи осей и легенды графика:</p>
+<ul>
+<li>ось <span class="math inline">\(x\)</span> — Количество стимулов в пробе</li>
+<li>ось <span class="math inline">\(y\)</span> — Время реакции (первый клик), с</li>
+<li>цвет — Тип пробы</li>
+<li>форма точек — Платформа</li>
+</ul>
 </div>
 <div id="hw5-6-autocheck" class="autocheck">
 <div id="hw5-6-ir" class="input-requirements">
@@ -521,7 +576,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-6-hints">
 <summary>
 Подсказки
@@ -544,11 +599,16 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="hw5-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-7-title">#7</h3>
 <p><img id="hw5-7-level" class="level"></p>
 <div id="hw5-7-task" class="task">
-<p>Текст задания.</p>
+<p>Добавьте на график заголовок, подзаголовок и подпись.</p>
+<ul>
+<li>заголовок — Время реакции при взаимодействии факторов</li>
+<li>подзаголовок — Тип пробы × Платформа × Количество стимулов в пробе</li>
+<li>подпись — отображен 95% доверительный интервал</li>
+</ul>
 </div>
 <div id="hw5-7-autocheck" class="autocheck">
 <div id="hw5-7-ir" class="input-requirements">
@@ -560,7 +620,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-7-hints">
 <summary>
 Подсказки
@@ -583,11 +643,18 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="hw5-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-8-title">#8</h3>
 <p><img id="hw5-8-level" class="level"></p>
 <div id="hw5-8-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Измените палитру используемых цветов на черно-белую — <code>black</code> и <code>gray50</code>.</li>
+<li>Задайте значения подписей легенды:
+<ul>
+<li>платформы должны быть подписаны <code>iOS</code> и <code>Android</code> соответственно</li>
+<li>тип пробы <code>Tree Dots</code> и <code>Outgoing Tray</code> соответственно</li>
+</ul></li>
+</ol>
 </div>
 <div id="hw5-8-autocheck" class="autocheck">
 <div id="hw5-8-ir" class="input-requirements">
@@ -606,31 +673,32 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как кастомизировать шкалы?
 </summary>
+<p><code>scale_color_..()</code> или <code>scale_shape_..()</code></p>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как задать соответствие между новыми подписями и исходными значениями?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>С помощью именованного вектора</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="hw5-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-9-title">#9</h3>
 <p><img id="hw5-9-level" class="level"></p>
 <div id="hw5-9-task" class="task">
 <p>Текст задания.</p>
 </div>
 <div id="hw5-9-autocheck" class="autocheck">
 <div id="hw5-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Последние штрихи:</p>
+<ol type="a">
+<li>Расположите легенду под визуалиацией.</li>
+<li>Задайте черно-белую тему графику, чтобы убрать серый фон.</li>
+</ol>
 </div>
 <p><input class="autocheck-input" type="text" id="hw5-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw5-9')"></p>
@@ -638,7 +706,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-9-hints">
 <summary>
 Подсказки
@@ -661,11 +729,11 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="hw5-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-10-title">#10</h3>
 <p><img id="hw5-10-level" class="level"></p>
 <div id="hw5-10-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте график в формате JPEG (размер — 20×18 см) в разрешении, подходящем для печати.</p>
 </div>
 <div id="hw5-10-autocheck" class="autocheck">
 <div id="hw5-10-ir" class="input-requirements">
@@ -677,7 +745,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-10-hints">
 <summary>
 Подсказки
@@ -703,11 +771,16 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw5_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw5_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="hw5-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-11-title">#1</h3>
 <p><img id="hw5-11-level" class="level"></p>
 <div id="hw5-11-task" class="task">
-<p>Текст задания.</p>
+<p>Пришла рецензия на статью, где был опубликован график, который вы сделали в основной части домашки. У рецензента нет никаких замечаний, кроме одного — он желает, что шрифт на графике был с засечками (Times New Roman), а название графика было выделено жирным начертанием.</p>
+<p>Что ж… Сделаем.</p>
+<ol type="a">
+<li>Задайте Times New Roman в качестве шрифта для текста на графике.</li>
+<li>Задайте полужирное начертание для заголовка графика.</li>
+</ol>
 </div>
 <div id="hw5-11-autocheck" class="autocheck">
 <div id="hw5-11-ir" class="input-requirements">
@@ -719,7 +792,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-11-hints">
 <summary>
 Подсказки
@@ -742,11 +815,34 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
+<section id="hw5-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-12-title">#2</h3>
 <p><img id="hw5-12-level" class="level"></p>
 <div id="hw5-12-task" class="task">
-<p>Текст задания.</p>
+<p>Пошалим!</p>
+<p>По <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/taia_short.csv">ссылке</a> вы найдете часть данных апробации опросника на доверие к искусственному интеллекту (Trust in Artшficial Intelligent Agents Scale). Это уже агрегированные данные — в них три столбца:</p>
+<ul>
+<li><code>id</code> — идентификатор респондента</li>
+<li><code>subscale</code> — субшкала опросника</li>
+<li><code>subscale_score</code> — балл по данной субшкале</li>
+</ul>
+<p>Построим профили для первых пяти респондентов.</p>
+<ul>
+<li>Профиль должен быть отображен в виде столбчатой диаграммы</li>
+<li>Над каждым столбиком должен быть подписан балл респондента по шкале</li>
+<li>Столбики должны различаться по цветам, однако легенда должна быть скрыта, чтобы не дублировать отображение переменной на оси</li>
+<li>Каждый профиль должен быть отображен на отдельном подграфике</li>
+</ul>
+<p>Пример визуализации представлен ниже.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw5_files/figure-html/12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="hw5-12-autocheck" class="autocheck">
 <div id="hw5-12-ir" class="input-requirements">
@@ -761,31 +857,28 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw5-12-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>geom_label()</code></p>
+<p><code>guides()</code></p>
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="hw5-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-13-title">#3</h3>
 <p><img id="hw5-13-level" class="level"></p>
 <div id="hw5-13-task" class="task">
-<p>Текст задания.</p>
+<p>На основе графика из предыдущего задания постройте визуализацию профилей респондентов 22, 23 и 24 и форме лучевой диаграммы.</p>
+<p>Пример графика представлен ниже.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw5_files/figure-html/13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="hw5-13-autocheck" class="autocheck">
 <div id="hw5-13-ir" class="input-requirements">
@@ -800,31 +893,21 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw5-13-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>coord_polar()</code></p>
+<pre><code>theme(axis.title.x = element_text(...),
+        axis.text.x = element_text(...))</code></pre>
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="hw5-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-14-title">#4</h3>
 <p><img id="hw5-14-level" class="level"></p>
 <div id="hw5-14-task" class="task">
-<p>Текст задания.</p>
+<p>Помимо знакомых нам форматов JPEG и PNG, которые являются растровыми, есть еще векторные форматы, которые позволяют масштабировать. Один из них SVG. Ему не важно, какого размера и какого разрешения вы хотите экспортировать картинку — её можно будет растянуть до любого размера.</p>
+<p>Экспортируйте получившийся в предыдущем задании график с формате SVG.</p>
+<p>Скорее всего, понадобится установить пакет <code>svglite</code>.</p>
 </div>
 <div id="hw5-14-autocheck" class="autocheck">
 <div id="hw5-14-ir" class="input-requirements">
@@ -836,7 +919,7 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw5-14-hints">
 <summary>
 Подсказки
@@ -859,11 +942,32 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="hw5-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw5-15-title">#5</h3>
 <p><img id="hw5-15-level" class="level"></p>
 <div id="hw5-15-task" class="task">
-<p>Текст задания.</p>
+<p>Напоследок нарисуем что-то невероятное — а именно, вокалическое пространство русского языка!</p>
+<p>В двух словах: гласные звуки характеризуются двумя частотными характеристиками, которые называются форманты. Они задают координаты вокалического пространства. Расположение конкретных звуков на этих координатах и будет являться визуализацией вокалического пространства.</p>
+<p>В <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/vowels.csv">датасете</a> собраны различные харакретистики гласных звуков русского языка из произнесений разных слов. Нас будут интересовать прежде всего две характеристики:</p>
+<ul>
+<li><code>f1</code> — первая форманта, которая будет задавать вертикальную ось вокалического пространства</li>
+<li><code>f2</code> — вторая форманта, которая будет задавать горизонтальную ось вокалического пространства</li>
+</ul>
+<p>Кроме этих двух переменных нам также понадобятся:</p>
+<ul>
+<li><code>phoneme</code> — обозначение фонемы</li>
+<li><code>reduction</code> — степень редукции</li>
+</ul>
+<p>Визуализируйте вокалическое пространство русского языка как показано на рисунке ниже. Обратите внимание на направление осей. Эллипсы отображают 80% доверительную зону для пары срених значений первой и второй формант.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw5_files/figure-html/15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="hw5-15-autocheck" class="autocheck">
 <div id="hw5-15-ir" class="input-requirements">
@@ -880,21 +984,11 @@ REPLACE ALL hw5 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы задать новые подписи для фасетов, воспользуйтесь аргументом <code>labeller</code> функции <code>facet_..()</code>, в который необходимо передать результат работы функции <code>labeller()</code>.</li>
+<li>Чтобы обозначить перенос строки, используйте символ <code>\n</code>.</li>
+<li>Чтобы отобразить доверительные зоны для пар средних значений, есть функция <code>stat_ellipse()</code> с аргументом <code>level</code>.</li>
+</ul>
 </details>
 </div>
 <!--- CHANGE hw5 TO hw<n> IN THE LINES BELOW--->
@@ -947,6 +1041,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1015,13 +1136,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1100,10 +1223,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1113,8 +1235,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1127,6 +1258,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1170,6 +1430,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1195,6 +1456,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1256,17 +1543,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./hw4.html" class="pagination-link">
+      <a href="./hw4.html" class="pagination-link  aria-label=" hw4="" предобработка="" данных"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW4 // Предобработка данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./hw6.html" class="pagination-link">
+      <a href="./hw6.html" class="pagination-link" aria-label="HW6 // Случайный эксперимент. Случайные величины">
         <span class="nav-page-text">HW6 // Случайный эксперимент. Случайные величины</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
