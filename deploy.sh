@@ -131,8 +131,8 @@ function deployer {
 			} || {
 				#catch
 				echo -e "-----"
-				echo -e ${RED}Deploy not completed${NC}
-				echo -e ${RED}redirecting index.html copying error${NC}
+				echo -e "${RED}Deploy not completed${NC}"
+				echo -e "${RED}redirecting index.html copying error${NC}"
 				echo -e "-----"
 				exit
 			}
@@ -197,7 +197,7 @@ function deployer {
 			echo -e "-----"
 			
 			# print list of docs files
-			ls -Ral docs
+			ls -Rl docs
 			
 			# print deploy success
 			echo -e "${GREEN}=====${NC}"
