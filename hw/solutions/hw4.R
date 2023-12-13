@@ -6,10 +6,10 @@
 # 1
 library(tidyverse)
 
-base_time <- readxl::read_xlsx("../data/hw4/base.xlsx", "Time", skip = 1)
-base_acc <- readxl::read_xlsx("../data/hw4/base.xlsx", "cor_answ", skip = 1)
-super_time <- readxl::read_xlsx("../data/hw4/super.xlsx", "Time", skip = 1)
-super_acc <- readxl::read_xlsx("../data/hw4/super.xlsx", "cor_answ", skip = 1)
+base_time <- readxl::read_xlsx("data/hw4/base.xlsx", "Time", skip = 1)
+base_acc <- readxl::read_xlsx("data/hw4/base.xlsx", "cor_answ", skip = 1)
+super_time <- readxl::read_xlsx("data/hw4/super.xlsx", "Time", skip = 1)
+super_acc <- readxl::read_xlsx("data/hw4/super.xlsx", "cor_answ", skip = 1)
 
 # 2
 nrow(base_acc); nrow(base_time); nrow(super_acc); nrow(super_time)
