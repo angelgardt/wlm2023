@@ -243,7 +243,10 @@ sim %>%
 
 
 
-
+taia <- read_csv("https://raw.githubusercontent.com/angelgardt/taia/master/data/taia.csv")
+taia %>% 
+    select(id, starts_with(c("pr", "co", "ut", "fa", "de", "un"))) %>% 
+    write_csv("taia_items.csv")
 
 
 
