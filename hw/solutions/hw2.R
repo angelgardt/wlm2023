@@ -1,4 +1,4 @@
-# HW1 // Solutions
+# HW2 // Solutions
 # A. Angelgardt
 
 # MAIN
@@ -28,18 +28,19 @@ mean_sd(sim1)
 round(mean_sd(sim1)[, 1:3], 2)
 
 # 4
-ttest <- t.test(sim1[, 1], sim2[, 1])
-round(ttest$statistic, 2)
+ttest_res <- t.test(sim1[, 1], sim2[, 1])
+# class(ttest_res)
+round(ttest_res$statistic, 2)
 
 # 5
-ttest$estimate
-ttest$statistic
-ttest$p.value
+ttest_res$estimate
+ttest_res$statistic
+ttest_res$p.value
 
 # 6
-list(estimate = ttest$estimate,
-     statistic = ttest$statistic,
-     p.value = ttest$p.value)
+list(estimate = ttest_res$estimate,
+     statistic = ttest_res$statistic,
+     p.value = ttest_res$p.value)
 
 # 7
 stat_testing <- function(m1, m2) {
@@ -61,11 +62,13 @@ stat_testing_res <- stat_testing(sim1, sim2)
 stat_testing_res[[30]]$estimate[2]
 
 # 9
+unlist(Map(function(x) x$p.value, stat_testing_res))
+pvals <- unlist(Map(function(x) x$p.value, stat_testing_res))
 unlist(Map(function(x) x$p.value, stat_testing_res))[10]
 
 # 10
 sum(unlist(Map(function(x) x$p.value, stat_testing_res)) < 0.05)
-
+sum(pvals < .05)
 
 
 # ADDITIONAL
@@ -83,7 +86,7 @@ mean_sd_1 <- function(m) {
   rownames(result) <- c("mean", "sd")
   return(result)
 }
-mean_sd_1(m)
+mean_sd_1(A)
 
 # 2
 mean_sd_2 <- function(m) {
@@ -99,8 +102,8 @@ mean_sd_2 <- function(m) {
   colnames(result) <- colnames(m)
   return(result)
 }
-# colnames(m) <- paste0("col", 1:3)
-# mean_sd_2(m)
+colnames(A) <- paste0("col", 1:3)
+mean_sd_2(A)
 
 # 3
 stat_testing_1 <- function(m1, m2, paired = FALSE) {
@@ -164,7 +167,7 @@ quadeqsolve <- function(a, b = 0, c = 0,
   if (D == 0) {
     return(c(x = -b / (2*a)))
   } else if (D < 0) {
-    if(complex) {
+    if (complex) {
       D <- as.complex(D)
       x1 <- (-b - sqrt(D)) / (2*a)
       x2 <- (-b + sqrt(D)) / (2*a)
