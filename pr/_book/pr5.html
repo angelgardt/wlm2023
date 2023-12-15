@@ -363,7 +363,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <ul>
 <li><code>carat</code> — вес бриллианта (в каратах)</li>
 <li><code>cut</code> — качество огранки</li>
-<li><code>color</code> — цвет бриллианта (от <code>D</code> — лучший — до <code>J</code> — худший)</li>
+<li><code>color</code> — цвет бриллианта (от <code>D</code> — худший — до <code>J</code> — лучший)</li>
 <li><code>clarity</code> — чистота бриллианта (от <code>I1</code> — худшее — до <code>IF</code> — лучшее)</li>
 <li><code>x</code>, <code>y</code>, <code>z</code> — длина, ширина и высота бриллианта (в миллиметрах)</li>
 <li><code>depth</code> — глубина бриллианта, рассчитываемая как <span class="math inline">\(\frac{2z}{xy}\)</span></li>
@@ -590,21 +590,12 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы агрегировать данные внутри <code>ggplot2</code>, есть функция <code>stat_summary()</code></li>
+<li>Если в результате агрегации получается одно значение, его необходимо передавать в аргумент <code>fun</code>. Если несколько, то <code>fun.data</code>.</li>
+<li>Среднее рассчитывается классически. Доверительный интервал можно получить через <code>mean_cl_boot</code>.</li>
+<li>Иногда функция падает и просит установить пакет <code>Hmisc</code>. Он устанавливается как и любой другой пакет через <code>install.packages()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -612,7 +603,43 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr5-6-level" class="level"></p>
 <div id="pr5-6-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализация какая-то слишком простенькая. Давайте добавим еще переменных.</p>
+<ol type="a">
+<li>Сгруппируйте бриллианты по цвету (<code>color</code>), отобразив эту переменную с помощью цвета на графике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Мда… Получилось какое-то дикое месиво. Давайте немного причешем визуализацию. Например, подправим расположение точек, чтобы они лежали не на одной прямой, а рядом друг с другом — ведь небольшие отклонения вправо-влево по оси <code>x</code> для нас не имеют значения, так как по горизонтальной оси расположена категориальная переменная.</p>
+<ol start="2" type="a">
+<li>Расположите средние и доверительные интервалы рядом друг с другом, не потеряв при этом уже заданные группировки.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Стало гораздо приятнее. Однако вы видим, что горизонтальные линии, обозначающие границы доверительных интервалов, слишком длинные и касаются друг друга. Надо обеспечить их личным пространством.</p>
+<p>с. Уменьшите ширину горизонтальный линий на границах доверительных интервалов, чтобы они не касались друг друга.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-6-autocheck" class="autocheck">
 <div id="pr5-6-ir" class="input-requirements">
@@ -629,21 +656,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>За положение элементов относительно друг друга отвечает аргумент <code>position</code>.</li>
+<li>Чтобы поставить элементы рядом, пригодится функция <code>position_dodge()</code>.</li>
+<li>У каждого геома есть много настроек, которые называются весьма интуитивно. Например, ширину горизонтальный линий errorbar’ов задает аргумент <code>width</code>.</li>
+</ul>
 </details>
 </div>
 </section>
