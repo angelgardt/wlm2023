@@ -668,7 +668,31 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr5-7-level" class="level"></p>
 <div id="pr5-7-task" class="task">
-<p>Текст задания.</p>
+<p>Супер! Мы критически близки к успеху! Осталось поработать над оформлением графика.</p>
+<ol type="a">
+<li>Измените тему визуализации на черно-белую, чтобы картинка стала более контрастной.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/7a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>У нас на графике есть легенда, которая занимает прилично так места справа. Сместите её вниз, чтобы пространство графика использовалось более оптимально.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/7b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-7-autocheck" class="autocheck">
 <div id="pr5-7-ir" class="input-requirements">
@@ -685,21 +709,10 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Сменить тему всего графика можно используя предустановленные темы <code>ggplot2</code>, которые задаются через ноывй слой. Есть много тем, однако наиболее важные для нас и часто используемые это <code>theme_bw()</code> и <code>theme_minimal()</code>.</li>
+<li>Тему можно кастомизировать практически как угодно. Для этого есть масса аргументов функции <code>theme()</code>. Так, позицию легенды можно задать через аргумент <code>legend.position</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -707,7 +720,18 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr5-8-level" class="level"></p>
 <div id="pr5-8-task" class="task">
-<p>Текст задания.</p>
+<p>Поработаем над цветовой палитрой. Она неплоха, но некоторые цвета можно спутать, а желтый на белом фоне выглядит крайне неконтрастно.</p>
+<p>Задайте собственную цветовую палитру для графика.</p>
+<p>В примере ниже использован пакет <code>colorspace</code>, в котором есть уже предустановленные цветовые палитры.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-8-autocheck" class="autocheck">
 <div id="pr5-8-ir" class="input-requirements">
@@ -724,21 +748,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Кастомизировать экстетики можно с помощью фукнций <code>scale_.._..()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -746,7 +758,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="pr5-9-level" class="level"></p>
 <div id="pr5-9-task" class="task">
-<p>Текст задания.</p>
+<p>Почти готово! Осталось только подписать оси так, чтобы было понятно, что это такое.</p>
+<p>Задайте русские названия осей и легенды, а также добавьте заголовок, подзаголовок и подпись на график.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-9-autocheck" class="autocheck">
 <div id="pr5-9-ir" class="input-requirements">
@@ -763,21 +785,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы задать различные подписи для графика, пригодится функция <code>labs()</code> (от labels).</p>
 </details>
 </div>
 </section>
@@ -785,7 +793,8 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="pr5-10-level" class="level"></p>
 <div id="pr5-10-task" class="task">
-<p>Текст задания.</p>
+<p>Ну, вот мы и построили публикабельную визуализацию. Чтобы её можно было отправить куда-либо — в журнал, на постер, в презентацию — её необходимо экспортировать.</p>
+<p>Экспортируйте построенный график в формате JPEG, размером 20×20 см в таком разрешении, чтобы он качественно смотрелся в печатном виде.</p>
 </div>
 <div id="pr5-10-autocheck" class="autocheck">
 <div id="pr5-10-ir" class="input-requirements">
@@ -802,21 +811,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Сохранить построенную визуализацию поможет функция <code>ggsave()</code>.</li>
+<li>В ней можно задать все необходимые параметры — размер, разрешение, формат файла.</li>
+<li>Подходящим для печати разрешением считается 600 dpi (dots per inch, точки на дюйм).</li>
+</ul>
 </details>
 </div>
 </section>
@@ -824,7 +823,8 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-10">#11</h3>
 <p><img id="pr5-11-level" class="level"></p>
 <div id="pr5-11-task" class="task">
-<p>Текст задания.</p>
+<p>Мы задали тему графика внутри кода его построения. В таком случае, когда мы начнем строить другой график, будет импользована дефолтная серая тема.</p>
+<p>Установите черно-белую тему на всю сессию работы R.</p>
 </div>
 <div id="pr5-11-autocheck" class="autocheck">
 <div id="pr5-11-ir" class="input-requirements">
@@ -841,21 +841,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Есть крайне полезная функция <code>theme_set()</code>, которая позволяет установить какую-либо тему для всей текущей сессии R — тогда нам не придется задавать тему для каждого графика отдельно.</p>
 </details>
 </div>
 </section>

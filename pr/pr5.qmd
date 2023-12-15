@@ -350,7 +350,43 @@ diamonds %>%
 <img id="pr5-7-level" class="level"/>
 
 ::: {#pr5-7-task .task}
-Текст задания.
+Супер! Мы критически близки к успеху! Осталось поработать над оформлением графика.
+
+a. Измените тему визуализации на черно-белую, чтобы картинка стала более контрастной.
+
+```{r 7a}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw()
+```
+
+b. У нас на графике есть легенда, которая занимает прилично так места справа. Сместите её вниз, чтобы пространство графика использовалось более оптимально.
+
+```{r 7b}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
 :::
 
 ::: {#pr5-7-autocheck .autocheck}
@@ -371,23 +407,8 @@ diamonds %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Сменить тему всего графика можно используя предустановленные темы `ggplot2`, которые задаются через ноывй слой. Есть много тем, однако наиболее важные для нас и часто используемые это `theme_bw()` и `theme_minimal()`.
+* Тему можно кастомизировать практически как угодно. Для этого есть масса аргументов функции `theme()`. Так, позицию легенды можно задать через аргумент `legend.position`.
 
 </details>
 :::
@@ -397,8 +418,31 @@ diamonds %>%
 <img id="pr5-8-level" class="level"/>
 
 ::: {#pr5-8-task .task}
-Текст задания.
+Поработаем над цветовой палитрой. Она неплоха, но некоторые цвета можно спутать, а желтый на белом фоне выглядит крайне неконтрастно.
+
+Задайте собственную цветовую палитру для графика.
+
+В примере ниже использован пакет `colorspace`, в котором есть уже предустановленные цветовые палитры.
+
 :::
+
+```{r 8}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
+                                                        unique() %>% length()))
+```
 
 ::: {#pr5-8-autocheck .autocheck}
 ::: {#pr5-8-ir .input-requirements}
@@ -418,23 +462,7 @@ diamonds %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Кастомизировать экстетики можно с помощью фукнций `scale_.._..()`.
 
 </details>
 :::
@@ -444,7 +472,38 @@ diamonds %>%
 <img id="pr5-9-level" class="level"/>
 
 ::: {#pr5-9-task .task}
-Текст задания.
+
+Почти готово! Осталось только подписать оси так, чтобы было понятно, что это такое.
+
+Задайте русские названия осей и легенды, а также добавьте заголовок, подзаголовок и подпись на график.
+
+```{r 9}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
+                                                        unique() %>%
+                                                        length())) +
+  labs(
+    x = "Качество огранки",
+    y = "Цена",
+    color = "Цвет",
+    title = "Зависимость цены бриллианта от его характеристик",
+    subtitle = "Качество огранки и цвет",
+    caption = "отображен 95% доверительный интервал"
+  )
+```
+
 :::
 
 ::: {#pr5-9-autocheck .autocheck}
@@ -465,23 +524,7 @@ diamonds %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Чтобы задать различные подписи для графика, пригодится функция `labs()` (от labels).
 
 </details>
 :::
@@ -491,8 +534,14 @@ diamonds %>%
 <img id="pr5-10-level" class="level"/>
 
 ::: {#pr5-10-task .task}
-Текст задания.
+Ну, вот мы и построили публикабельную визуализацию. Чтобы её можно было отправить куда-либо --- в журнал, на постер, в презентацию --- её необходимо экспортировать.
+
+Экспортируйте построенный график в формате JPEG, размером 20×20 см в таком разрешении, чтобы он качественно смотрелся в печатном виде.
 :::
+
+```{r 10, eval=FALSE}
+ggsave('graph1.png', width = 20, height = 20, units = 'cm', dpi = 600)
+```
 
 ::: {#pr5-10-autocheck .autocheck}
 ::: {#pr5-10-ir .input-requirements}
@@ -512,23 +561,9 @@ diamonds %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Сохранить построенную визуализацию поможет функция `ggsave()`.
+* В ней можно задать все необходимые параметры --- размер, разрешение, формат файла.
+* Подходящим для печати разрешением считается 600 dpi (dots per inch, точки на дюйм).
 
 </details>
 :::
@@ -538,8 +573,16 @@ diamonds %>%
 <img id="pr5-11-level" class="level"/>
 
 ::: {#pr5-11-task .task}
-Текст задания.
+
+Мы задали тему графика внутри кода его построения. В таком случае, когда мы начнем строить другой график, будет импользована дефолтная серая тема.
+
+Установите черно-белую тему на всю сессию работы R.
+
 :::
+
+```{r 11}
+theme_set(theme_bw())
+```
 
 ::: {#pr5-11-autocheck .autocheck}
 ::: {#pr5-11-ir .input-requirements}
@@ -559,25 +602,10 @@ diamonds %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
+Есть крайне полезная функция `theme_set()`, которая позволяет установить какую-либо тему для всей текущей сессии R --- тогда нам не придется задавать тему для каждого графика отдельно.
 
 </details>
 
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #12
