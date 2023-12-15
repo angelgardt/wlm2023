@@ -1,5 +1,6 @@
 # P5 // Визуализация данных {#pr5 .unnumbered}
 
+
 ```{=html}
 <!--
 REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
@@ -10,6 +11,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 knitr::opts_chunk$set(echo = FALSE, eval = TRUE, message = FALSE, error = FALSE)
 ```
 
+
 ## Основные задания {#pr5_main}
 
 ::: {.callout-note}
@@ -17,9 +19,11 @@ knitr::opts_chunk$set(echo = FALSE, eval = TRUE, message = FALSE, error = FALSE)
 
 Сегодня мы будем работать с данными о бриллиантах. Это датасет `diamonds`, который входит в пакет `ggplot2`.
 
+
 ```{r data-desc}
 ggplot2::diamonds
 ```
+
 
 В нем есть следующие переменные:
 
@@ -46,6 +50,7 @@ ggplot2::diamonds
 
 :::
 
+
 ```{r 1}
 library(tidyverse)
 # str(diamonds)
@@ -54,6 +59,7 @@ set.seed(123)
 diamonds %>% 
     slice(sample(1:nrow(diamonds), 1000)) -> diam1000
 ```
+
 
 ::: {#pr5-1-autocheck .autocheck}
 ::: {#pr5-1-ir .input-requirements}
@@ -90,17 +96,21 @@ diamonds %>%
 
 a. Создайте базовый слой для визуализации.
 
+
 ```{r 2a}
 diam1000 %>% 
   ggplot()
 ```
 
+
 b. Расчертите оси на базовом слое. По оси `x` пойдёт длина бриллианта, а по оси `y` его ширина.
+
 
 ```{r 2b}
 diam1000 %>% 
   ggplot(aes(x, y))
 ```
+
 :::
 
 ::: {#pr5-2-autocheck .autocheck}
@@ -136,13 +146,16 @@ diam1000 %>%
 
 a. Перейдите на новый слой и задайте отображение наблюдений с помощью точек.
 
+
 ```{r 3a}
 diam1000 %>% 
     ggplot(aes(x, y)) +
     geom_point()
 ```
 
+
 b. Добавьте ещё один слой с линией тренда.
+
 
 ```{r 3b}
 diam1000 %>% 
@@ -150,6 +163,7 @@ diam1000 %>%
     geom_point() +
     geom_smooth()
 ```
+
 
 :::
 
@@ -186,12 +200,14 @@ diam1000 %>%
 
 Сгруппируйте бриллианты по уровню чистоты (`clarity`), отобразив эту переменную с помощью цвета.
 
+
 ```{r 4}
 diam1000 %>% 
     ggplot(aes(x, y, color = clarity)) +
     geom_point() +
     geom_smooth()
 ```
+
 
 :::
 
@@ -229,13 +245,16 @@ diam1000 %>%
 
 a. Визуализируйте зависимость средней цены бриллиантов (`price`) от качества огранки (`cut`).
 
+
 ```{r 5a}
 diamonds %>% 
     ggplot(aes(cut, price)) +
     stat_summary(fun = mean, geom = "point")
 ```
 
+
 b. Добавьте к средним доверительные интервалы --- так визуализация будет более корректно отображать закономерность.
+
 
 ```{r 5b}
 diamonds %>% 
@@ -243,6 +262,7 @@ diamonds %>%
     stat_summary(fun.data = mean_cl_boot, geom = "errorbar") +
     stat_summary(fun = mean, geom = "point")
 ```
+
 
 :::
 
@@ -282,6 +302,7 @@ diamonds %>%
 
 a. Сгруппируйте бриллианты по цвету (`color`), отобразив эту переменную с помощью цвета на графике.
 
+
 ```{r 6a}
 diamonds %>% 
     ggplot(aes(cut, price, color = color)) +
@@ -289,9 +310,11 @@ diamonds %>%
     stat_summary(fun = mean, geom = "point")
 ```
 
+
 Мда... Получилось какое-то дикое месиво. Давайте немного причешем визуализацию. Например, подправим расположение точек, чтобы они лежали не на одной прямой, а рядом друг с другом --- ведь небольшие отклонения вправо-влево по оси `x` для нас не имеют значения, так как по горизонтальной оси расположена категориальная переменная.
 
 b. Расположите средние и доверительные интервалы рядом друг с другом, не потеряв при этом уже заданные группировки.
+
 
 ```{r 6b}
 pd <- position_dodge(0.5)
@@ -303,9 +326,11 @@ diamonds %>%
                  position = pd)
 ```
 
+
 Стало гораздо приятнее. Однако вы видим, что горизонтальные линии, обозначающие границы доверительных интервалов, слишком длинные и касаются друг друга. Надо обеспечить их личным пространством.
 
 с. Уменьшите ширину горизонтальный линий на границах доверительных интервалов, чтобы они не касались друг друга.
+
 
 ```{r 6c}
 pd <- position_dodge(0.5)
@@ -316,6 +341,7 @@ diamonds %>%
     stat_summary(fun = mean, geom = "point",
                  position = pd)
 ```
+
 
 
 :::
@@ -354,6 +380,7 @@ diamonds %>%
 
 a. Измените тему визуализации на черно-белую, чтобы картинка стала более контрастной.
 
+
 ```{r 7a}
 diamonds %>%
   ggplot(aes(cut, price, color = color)) +
@@ -369,7 +396,9 @@ diamonds %>%
   theme_bw()
 ```
 
+
 b. У нас на графике есть легенда, которая занимает прилично так места справа. Сместите её вниз, чтобы пространство графика использовалось более оптимально.
+
 
 ```{r 7b}
 diamonds %>%
@@ -386,6 +415,7 @@ diamonds %>%
   theme_bw() +
   theme(legend.position = "bottom")
 ```
+
 
 :::
 
@@ -426,6 +456,7 @@ diamonds %>%
 
 :::
 
+
 ```{r 8}
 diamonds %>%
   ggplot(aes(cut, price, color = color)) +
@@ -443,6 +474,7 @@ diamonds %>%
   scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
                                                         unique() %>% length()))
 ```
+
 
 ::: {#pr5-8-autocheck .autocheck}
 ::: {#pr5-8-ir .input-requirements}
@@ -477,6 +509,7 @@ diamonds %>%
 
 Задайте русские названия осей и легенды, а также добавьте заголовок, подзаголовок и подпись на график.
 
+
 ```{r 9}
 diamonds %>%
   ggplot(aes(cut, price, color = color)) +
@@ -503,6 +536,7 @@ diamonds %>%
     caption = "отображен 95% доверительный интервал"
   )
 ```
+
 
 :::
 
@@ -539,9 +573,11 @@ diamonds %>%
 Экспортируйте построенный график в формате JPEG, размером 20×20 см в таком разрешении, чтобы он качественно смотрелся в печатном виде.
 :::
 
+
 ```{r 10, eval=FALSE}
 ggsave('graph1.png', width = 20, height = 20, units = 'cm', dpi = 600)
 ```
+
 
 ::: {#pr5-10-autocheck .autocheck}
 ::: {#pr5-10-ir .input-requirements}
@@ -580,9 +616,11 @@ ggsave('graph1.png', width = 20, height = 20, units = 'cm', dpi = 600)
 
 :::
 
+
 ```{r 11}
 theme_set(theme_bw())
 ```
+
 
 ::: {#pr5-11-autocheck .autocheck}
 ::: {#pr5-11-ir .input-requirements}
@@ -617,15 +655,18 @@ theme_set(theme_bw())
 
 a. Визуализируйте распределение цены бриллиантов с помощью гистограммы.
 
+
 ```{r 12a}
 diamonds %>% 
     ggplot(aes(price)) +
     geom_histogram()
 ```
 
+
 На такой визуализации мы видим распределение цены в целом. Однаконам может быть интересно распределение цены в зависимости от каких-либо других характеристик.
 
 b. Визуализируйте распределение цены бриллиантов в зависимости от их цвета (`color`). Отобразите группирующую переменную с помощью цвета заливки столбиков гистограммы.
+
 
 ```{r 12b}
 diamonds %>% 
@@ -633,9 +674,11 @@ diamonds %>%
     geom_histogram()
 ```
 
+
 Симпатишно, но не то чтобы очень интерпретабельно. Надо найти другой способ отображения группировки.
 
 c. Визуализируйте распределение цены бриллиантов в зависимости от их цвета. Отобразите группирующую переменную так, чтобы каждая группа была расположена на отдельном подграфике.
+
 
 ```{r 12c}
 diamonds %>% 
@@ -643,6 +686,7 @@ diamonds %>%
     geom_histogram() + 
   facet_wrap(~ color)
 ```
+
 :::
 
 ::: {#pr5-12-autocheck .autocheck}
@@ -677,13 +721,16 @@ diamonds %>%
 ::: task
 a. Визуализируйте распределение цены (без разбиений по каким-либо переменным) с помощью графика плотности распределения.
 
+
 ```{r 13a}
 diamonds %>% 
     ggplot(aes(price)) +
     geom_density()
 ```
 
+
 b. Разбейте график плоности распределения на подграфики так, чтобы они выстроились в сетку, в которой по строкам будут идти категории качества огранки, а по столбцам --- цвета бриллиантов.
+
 
 ```{r 13b}
 diamonds %>% 
@@ -691,6 +738,7 @@ diamonds %>%
     geom_density() +
   facet_grid(cut ~ color)
 ```
+
 :::
 
 ::: {#pr5-13-autocheck .autocheck}
@@ -724,6 +772,7 @@ diamonds %>%
 
 :::
 
+
 ```{r}
 diamonds %>% 
   ggplot(aes(color)) +
@@ -735,6 +784,7 @@ diamonds %>%
 #   ggplot(aes(color, n)) +
 #   geom_col()
 ```
+
 
 ::: {#pr5-14-autocheck .autocheck}
 ::: {#pr5-14-ir .input-requirements}
@@ -769,11 +819,13 @@ diamonds %>%
 
 Визуализируйте распределение цены бриллиантов в зависимости от категории чистоты с помощью ящиков с усами.
 
+
 ```{r 15}
 diamonds %>% 
   ggplot(aes(clarity, carat)) +
   geom_boxplot() 
 ```
+
 
 :::
 
@@ -824,13 +876,16 @@ diamonds %>%
 
 a. Замените ящики с усами на violin plot'ы.
 
+
 ```{r 16a}
 diamonds %>% 
   ggplot(aes(clarity, carat)) +
   geom_violin()
 ```
 
+
 b. Замените данные с `diamonds` на `diam1000` и добавьте на график средние с доверительными интервалами. Используйте `geom_pointrange()`.
+
 
 ```{r 16b}
 diam1000 %>% 
@@ -840,7 +895,9 @@ diam1000 %>%
                geom = "pointrange")
 ```
 
+
 c. Добавьте на график точки самих наблюдений. Чтобы можно было увидеть, какие точки накладываются друг на друга, задайте им непрозрачность 20%, а чтобы средние с доверительными интервалами выделялись, покрасьте их в синий.
+
 
 ```{r 16c}
 diam1000 %>% 
@@ -852,6 +909,7 @@ diam1000 %>%
                geom = "pointrange",
                color = "blue")
 ```
+
 :::
 
 ::: {#pr5-16-autocheck .autocheck}
@@ -891,6 +949,7 @@ diam1000 %>%
 
 Функция `ggcorrplot()` обязательным аргументов требует корреляционную матрицу. Построим её с помощью следующего кода:
 
+
 ```{r 17 data, echo=TRUE}
 # загрузим данные
 taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/taia_items.csv", show_col_types = FALSE)
@@ -898,13 +957,16 @@ taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/da
 taia %>% select(starts_with("pr")) %>% cor() -> cormat
 ```
 
+
 Полученная матрица `cormat` и есть необходимая нам корреляционная матрица.
 
 Визуализируйте взаимосвязи между пунктами шкалы predictability с помощью корреляционный матрицы.
 
+
 ```{r 17}
 ggcorrplot::ggcorrplot(cormat)
 ```
+
 
 :::
 
@@ -960,6 +1022,7 @@ ggcorrplot::ggcorrplot(cormat)
 
 :::
 
+
 ```{r 18}
 ggcorrplot::ggcorrplot(cormat,
                        type = "lower", lab = TRUE,
@@ -967,6 +1030,7 @@ ggcorrplot::ggcorrplot(cormat,
                        show.legend = FALSE,
                        title = "Predictability. Interitem correlations")
 ```
+
 
 ::: {#pr5-18-autocheck .autocheck}
 ::: {#pr5-18-ir .input-requirements}
@@ -1008,12 +1072,15 @@ ggcorrplot::ggcorrplot(cormat,
 
 a. Сгенерируйте 20 выборок по 30 наблюдений из нормального распределения (`rnorm()`) с параметрами `mean = 5` и `sd = 2`. Сохраните результат в матрицу `sim` размером 30×20. Используйте `set.seed(999)`.
 
+
 ```{r 19a}
 set.seed(999)
 sim <- matrix(rnorm(30*20, mean = 5, sd = 2), ncol = 20)
 ```
 
+
 b. Визуализируйтер распределение сгенерированной случайной величины в каждой из выборок на одном графике.
+
 
 ```{r 19b}
 sim %>% 
@@ -1023,6 +1090,7 @@ sim %>%
   geom_histogram() +
   facet_wrap(~ name)
 ```
+
 
 :::
 
@@ -1061,6 +1129,7 @@ sim %>%
 
 :::
 
+
 ```{r 20}
 sim %>% 
   as_tibble() %>% 
@@ -1070,6 +1139,7 @@ sim %>%
   facet_wrap(~ name) +
   geom_vline(xintercept = 5)
 ```
+
 
 ::: {#pr5-20-autocheck .autocheck}
 ::: {#pr5-20-ir .input-requirements}
@@ -1582,8 +1652,10 @@ sim %>%
 </details>
 :::
 
+
 ```{=html}
 <!--- CHANGE pr5 TO pr<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="./js/pr5.json"></script>
 <script type="text/javascript" src="./js/pr.js"></script>
 ```
+

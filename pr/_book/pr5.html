@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -849,7 +883,45 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-11">#12</h3>
 <p><img class="level"></p>
 <div id="pr5-12-task" class="task">
-<p>Текст задания.</p>
+<p>Посмотрим на другие способы визуализации разных переменных.</p>
+<ol type="a">
+<li>Визуализируйте распределение цены бриллиантов с помощью гистограммы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>На такой визуализации мы видим распределение цены в целом. Однаконам может быть интересно распределение цены в зависимости от каких-либо других характеристик.</p>
+<ol start="2" type="a">
+<li>Визуализируйте распределение цены бриллиантов в зависимости от их цвета (<code>color</code>). Отобразите группирующую переменную с помощью цвета заливки столбиков гистограммы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Симпатишно, но не то чтобы очень интерпретабельно. Надо найти другой способ отображения группировки.</p>
+<ol start="3" type="a">
+<li>Визуализируйте распределение цены бриллиантов в зависимости от их цвета. Отобразите группирующую переменную так, чтобы каждая группа была расположена на отдельном подграфике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-12-autocheck" class="autocheck">
 <div id="pr5-12-ir" class="input-requirements">
@@ -866,21 +938,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для отображения гистограммы есть специально обученный геом.</li>
+<li>Значения оси <code>y</code> при построении гистограммы рассчитываются автоматически.</li>
+<li>Разбиение графика на несколько подграфиков называется фасетированием. Для этого придуманы функции <code>facet_..()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -888,7 +950,30 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-12">#13</h3>
 <p><img id="pr5-13-level" class="level"></p>
 <div class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Визуализируйте распределение цены (без разбиений по каким-либо переменным) с помощью графика плотности распределения.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/13a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Разбейте график плоности распределения на подграфики так, чтобы они выстроились в сетку, в которой по строкам будут идти категории качества огранки, а по столбцам — цвета бриллиантов.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/13b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-13-autocheck" class="autocheck">
 <div id="pr5-13-ir" class="input-requirements">
@@ -900,26 +985,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-13-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -927,7 +997,16 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-13">#14</h3>
 <p><img id="pr5-14-level" class="level"></p>
 <div id="pr5-14-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте столбчатую диаграмму, которая будет отображать частоты по переменной <code>color</code> (цвет бриллианта).</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-14-autocheck" class="autocheck">
 <div id="pr5-14-ir" class="input-requirements">
@@ -944,21 +1023,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Здесь может быть два варианта — первый через <code>geom_bar()</code>, второй через <code>geom_col()</code>.</p>
 </details>
 </div>
 </section>
@@ -966,7 +1031,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-14">#15</h3>
 <p><img id="pr5-15-level" class="level"></p>
 <div id="pr5-15-task" class="task">
-<p>Текст задания.</p>
+<p>Если для распределения дискретной переменной у нас не так много возможностей визуализации, то для распределения непрерывной их гораздо больше.</p>
+<p>Визуализируйте распределение цены бриллиантов в зависимости от категории чистоты с помощью ящиков с усами.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-15-autocheck" class="autocheck">
 <div id="pr5-15-ir" class="input-requirements">
@@ -978,7 +1053,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-15-hints">
 <summary>
 Подсказки
@@ -1005,7 +1080,42 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr5-16-level" class="level"></p>
 <div id="pr5-16-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Замените ящики с усами на violin plot’ы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Замените данные с <code>diamonds</code> на <code>diam1000</code> и добавьте на график средние с доверительными интервалами. Используйте <code>geom_pointrange()</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Добавьте на график точки самих наблюдений. Чтобы можно было увидеть, какие точки накладываются друг на друга, задайте им непрозрачность 20%, а чтобы средние с доверительными интервалами выделялись, покрасьте их в синий.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-16-autocheck" class="autocheck">
 <div id="pr5-16-ir" class="input-requirements">
@@ -1022,21 +1132,10 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Форматирование графика, которое не связано с данными, задается вне функции <code>aes()</code> с помощью тех же аргументов.</li>
+<li>[Не]прозрачность — это альфа-канал изображения.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -1044,7 +1143,27 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr5-17-level" class="level"></p>
 <div id="pr5-17-task" class="task">
-<p>Текст задания.</p>
+<p>Теперь построим визуализацию корреляционной матрицы. Для этого есть удобная функция <code>ggcorrplot()</code> из пакета <code>ggcorrplot</code>.</p>
+<p>Нам будут нужны новые данные. Будем использовать <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/taia_items.csv">результаты апробации опросника на доверие к искусственному интелекту</a>. В этих данных есть колонка <code>id</code>, которая задает идентификатор респондента, а все оставшиеся — это пункты опросника, относящиеся к разным шкалам.</p>
+<p>Визуализируем корреляции между баллами пунктов по шкале predictability (<code>pr</code>).</p>
+<p>Функция <code>ggcorrplot()</code> обязательным аргументов требует корреляционную матрицу. Построим её с помощью следующего кода:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># загрузим данные</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>taia <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/taia_items.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>taia <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"pr"</span>)) <span class="sc">%&gt;%</span> <span class="fu">cor</span>() <span class="ot">-&gt;</span> cormat</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Полученная матрица <code>cormat</code> и есть необходимая нам корреляционная матрица.</p>
+<p>Визуализируйте взаимосвязи между пунктами шкалы predictability с помощью корреляционный матрицы.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-17-autocheck" class="autocheck">
 <div id="pr5-17-ir" class="input-requirements">
@@ -1056,7 +1175,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-17-hints">
 <summary>
 Подсказки
@@ -1083,7 +1202,18 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr5-18-level" class="level"></p>
 <div id="pr5-18-task" class="task">
-<p>Текст задания.</p>
+<p>В прицнипе, визуализация построена, однако она весьма нехороша. Логичнее было бы отобразить положительные корреляции холодными оттенками, а отрицательные теплыми, так как мы ожидаем положительные корреляции, а красный сигнализирует нам о том, что что-то идет не так.</p>
+<p>Кроме того, корреляционная матрица симметрична, поэтому можно отобразить только её нижний угол. И хорошо бы добавить сами значения корреляций на график — тогда легенда будет не нужна. Название графика также облегчит понимание, что это такое.</p>
+<p>Настройте отображение матрицы в соответствии с описанием выше.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-18-autocheck" class="autocheck">
 <div id="pr5-18-ir" class="input-requirements">
@@ -1100,21 +1230,14 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Аргументы функции <code>ggcorrplot()</code>, которые пригодятся:</p>
+<ul>
+<li><code>type</code></li>
+<li><code>lab</code></li>
+<li><code>colors</code></li>
+<li><code>show.legend</code></li>
+<li><code>title</code></li>
+</ul>
 </details>
 </div>
 </section>
@@ -1122,7 +1245,28 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr5-19-level" class="level"></p>
 <div id="pr5-19-task" class="task">
-<p>Текст задания.</p>
+<p>На первых двух практиках мы генерировали случайные числа и укладывали их в векторы и матрицы. Это все было не просто так. Мы можем использовать их для визуализации статистических закономерностей.</p>
+<p>С содержательной стороной вопроса познакомимся совсем скоро — пока же изучим техническую.</p>
+<ol type="a">
+<li>Сгенерируйте 20 выборок по 30 наблюдений из нормального распределения (<code>rnorm()</code>) с параметрами <code>mean = 5</code> и <code>sd = 2</code>. Сохраните результат в матрицу <code>sim</code> размером 30×20. Используйте <code>set.seed(999)</code>.</li>
+</ol>
+<ol start="2" type="a">
+<li>Визуализируйтер распределение сгенерированной случайной величины в каждой из выборок на одном графике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if
+`.name_repair` is omitted as of tibble 2.0.0.
+ℹ Using compatibility `.name_repair`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/19b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-19-autocheck" class="autocheck">
 <div id="pr5-19-ir" class="input-requirements">
@@ -1139,21 +1283,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Понадобится перевести данные из широкого формата в длинный.</p>
 </details>
 </div>
 </section>
@@ -1161,7 +1291,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-19">#20</h3>
 <p><img id="pr5-20-level" class="level"></p>
 <div id="pr5-20-task" class="task">
-<p>Текст задания.</p>
+<p>Чтобы изучать, как работает статистика, нам понадобиться добавлять на графики некоторые дополнительные элементы. В данном случае, было бы интересно увидеть, как соотносятся получившиеся распределения со средним значением <code>mean</code>, которое мы задавали при генерации нашей переменной.</p>
+<p>Добавьте на визуализацию отображение параметра <code>mean</code>, который мы использовали внутри функции <code>rnorm()</code>, с помощью вертикальной линии.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-20-autocheck" class="autocheck">
 <div id="pr5-20-ir" class="input-requirements">
