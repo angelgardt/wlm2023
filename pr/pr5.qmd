@@ -5,15 +5,55 @@
 REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, error=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, message = FALSE, error = FALSE)
+```
+
 ## Основные задания {#pr5_main}
+
+::: {.callout-note}
+### Описание данных
+
+Сегодня мы будем работать с данными о бриллиантах. Это датасет `diamonds`, который входит в пакет `ggplot2`.
+
+```{r data-desc}
+ggplot2::diamonds
+```
+
+В нем есть следующие переменные:
+
+* `carat` --- вес бриллианта (в каратах)
+* `cut` --- качество огранки
+* `color` --- цвет бриллианта (от `D` --- лучший --- до `J` --- худший)
+* `clarity` --- чистота бриллианта (от `I1` --- худшее --- до `IF` --- лучшее)
+* `x`, `y`, `z` --- длина, ширина и высота бриллианта (в миллиметрах)
+* `depth` --- глубина бриллианта, рассчитываемая как $\frac{2z}{xy}$
+* `table` --- отношение ширины верхней площадки блиррианта к его наибольшей ширине
+* `price` --- цена бриллианта (в долларах США)
+
+:::
 
 ### #1
 
 <img id="pr5-1-level" class="level"/>
 
 ::: {#pr5-1-task .task}
-Текст задания `переменная`.
+
+* Подгрузите пакет `tidyverse` к текущей сессии R.
+* Проверье доступен ли вам датасет `diamonds` из пакета `ggplot2`. Выведите структуру датасета, посмотрите, какие переменные и какого типа в нём содержатся.
+* Отберите 1000 случайных строк из данных и сохраните их в переменную `diam1000`. Используйте `set.seed(123)`.
+
 :::
+
+```{r 1}
+library(tidyverse)
+# str(diamonds)
+
+set.seed(123)
+diamonds %>% 
+    slice(sample(1:nrow(diamonds), 1000)) -> diam1000
+```
 
 ::: {#pr5-1-autocheck .autocheck}
 ::: {#pr5-1-ir .input-requirements}
@@ -33,23 +73,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Чтобы получить доступ к датасету `diamonds`, достаточно подключть пакет `tidyverse`. Отдельно подгружать `ggplot2` не нужно, так как он подгружается в месте с другими пакетами `tidyverse`.
+* Отобрать строки можно с помощью функции `slice()`.
+* Сгенерировать 1000 случайных значений поможет функция `sample()`.
 
 </details>
 :::
@@ -59,9 +85,22 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <img id="pr5-2-level" class="level"/>
 
 ::: {#pr5-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Давайте визуализирует связаимосвязь между длиной (`x`) и шириной (`y`) бриллиантов. Возьмем для этого маленький датасет из 100 наблюдений (`diam1000`).
+
+a. Создайте базовый слой для визуализации.
+
+```{r 2a}
+diam1000 %>% 
+  ggplot()
+```
+
+b. Расчертите оси на базовом слое. По оси `x` пойдёт длина бриллианта, а по оси `y` его ширина.
+
+```{r 2b}
+diam1000 %>% 
+  ggplot(aes(x, y))
+```
 :::
 
 ::: {#pr5-2-autocheck .autocheck}
@@ -82,23 +121,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Построение графика начинается с функции `ggplot()`
+* Для задания осей используется функция `aes()` внутри функции `ggplot()`
 
 </details>
 :::
@@ -108,7 +132,25 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr5-3-level" class="level"/>
 
 ::: {#pr5-3-task .task}
-Текст задания.
+Отлично! Мольберт мы достали. Теперь надо сказать `ggplot`у, как мы будем отображать наши наблюдения.
+
+a. Перейдите на новый слой и задайте отображение наблюдений с помощью точек.
+
+```{r 3a}
+diam1000 %>% 
+    ggplot(aes(x, y)) +
+    geom_point()
+```
+
+b. Добавьте ещё один слой с линией тренда.
+
+```{r 3b}
+diam1000 %>% 
+    ggplot(aes(x, y)) +
+    geom_point() +
+    geom_smooth()
+```
+
 :::
 
 ::: {#pr5-3-autocheck .autocheck}
@@ -129,23 +171,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Чтобы перейти на новый слой, понадобится оператор `+`
+* За то, как будут отображаться наблюдения, отвечают функции `geom_..()`
+* Линия тренда --- это сглаживание (smoothing) отображаемой зкономерности.
 
 </details>
 :::
@@ -155,7 +183,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr5-4-level" class="level"/>
 
 ::: {#pr5-4-task .task}
-Текст задания.
+
+Сгруппируйте бриллианты по уровню чистоты (`clarity`), отобразив эту переменную с помощью цвета.
+
+```{r 4}
+diam1000 %>% 
+    ggplot(aes(x, y, color = clarity)) +
+    geom_point() +
+    geom_smooth()
+```
+
 :::
 
 ::: {#pr5-4-autocheck .autocheck}
@@ -174,25 +211,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr5-4-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Функция `aes()` задает в общем случае вообще любые эстетики --- форматирование графика, связанное с данными. Оси --- это лишь частный случай эстетик.
 
 </details>
 :::
@@ -202,7 +223,27 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr5-5-level" class="level"/>
 
 ::: {#pr5-5-task .task}
-Текст задания.
+Супер! Мы разобрались с базовыми принципами работы в `ggplot()` --- эстетики, слои, геомы. Теперь нарисует что-то более серьезное. Будем теперь работать с полным датасетом `diamonds`.
+
+В `ggplot2` есть функции, которые позволяют прямо при построении графика агрегировать наши данные. Воспользуемся их возможностями.
+
+a. Визуализируйте зависимость средней цены бриллиантов (`price`) от качества огранки (`cut`).
+
+```{r 5a}
+diamonds %>% 
+    ggplot(aes(cut, price)) +
+    stat_summary(fun = mean, geom = "point")
+```
+
+b. Добавьте к средним доверительные интервалы --- так визуализация будет более корректно отображать закономерность.
+
+```{r 5b}
+diamonds %>% 
+    ggplot(aes(cut, price)) +
+    stat_summary(fun.data = mean_cl_boot, geom = "errorbar") +
+    stat_summary(fun = mean, geom = "point")
+```
+
 :::
 
 ::: {#pr5-5-autocheck .autocheck}
