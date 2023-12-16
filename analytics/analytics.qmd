@@ -3,6 +3,7 @@ title: "Analytics // WLM 2023"
 author: "A. Angelgardt"
 format: 
   dashboard:
+    scrolling: true
     logo: pics/logo.png
 ---
 
@@ -17,7 +18,7 @@ knitr::opts_chunk$set(echo=FALSE,
 :::
 
 ::: {hidden=true}
-## Install pkfs
+## Install pkgs
 ```{r install-pkgs, eval=FALSE}
 # install.packages(c("rystats", "googlesheets4"))
 # if (!("remotes" %in% installed.packages())) {
@@ -33,7 +34,7 @@ knitr::opts_chunk$set(echo=FALSE,
 ```{r pkgs}
 library(rytstat)
 library(googlesheets4)
-# library(rgoogleclassroom)
+library(rgoogleclassroom)
 library(tidyverse)
 theme_set(theme_bw())
 library(plotly)
@@ -50,27 +51,16 @@ ryt_auth('course.wlm@gmail.com')
 # ryt_user()
 
 ## classroom
-# authorize()
+load("/home/nglgrdt/tokens/classroom_roken.Rdata")
+auth_from_secret(access_token = token$credentials$access_token,
+                 refresh_token = token$credentials$refresh_token)
 ```
 :::
 
 ::: {hidden=true}
 ## Load data
 ```{r calendar-data}
-read_sheet("https://docs.google.com/spreadsheets/d/1k9QtNjZLzTrbYlkXrWFWxglXTG5kol1DHSPIN9stLiE/edit?usp=sharing",
-           sheet = "План", skip = 2) -> calendar
-calendar %>% 
-  select(date, code_1) %>% 
-  filter(str_detect(code_1, "^L|^P|^C|^A")) %>% 
-  mutate(date = as_date(date, format = "%d/%m/%y")) %>% 
-  rename("code" = "code_1") -> calendar_activities
-
-calendar %>%
-  select(code_2, deadline_soft, deadline_hard) %>%
-  filter(str_detect(code_2, "^Q|^HW")) %>%
-  mutate(deadline_soft = as_datetime(deadline_soft, format = "%d/%m/%y %H:%M") %>% date(),
-         deadline_hard = as_datetime(deadline_hard, format = "%d/%m/%y %H:%M") %>% date()) %>%
-  rename("code" = "code_2") -> calendar_assessment
+source("get_calendar_data.R")
 ```
 
 ```{r lectures-get-data-funcs}
@@ -167,9 +157,16 @@ pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EX
   select(ID, Stream, starts_with("P"))
 ```
 
+
+```{r c-data}
+c_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                        sheet = "Journal") %>% 
+  select(ID, Stream, starts_with("C"))
+```
+
 :::
 
-# L // Лекции
+# L // Лекции {#lec}
 
 ```{r lectures-preproc}
 basics_by_videos %>% 
@@ -235,8 +232,9 @@ basics_by_videos %>%
 ```
 
 
-# P // Практики
+# P // Практики {#pr}
 
+## Row
 ```{r pr-preproc}
 pr_journal %>% 
   filter(Stream == "main") %>% 
@@ -252,7 +250,13 @@ pr_journal %>%
                            levels = paste0("P", 1:17))) %>%
   replace_na(list(present = 0)) %>% 
   summarise(count = sum(present),
-            percentage = mean(present)) -> pr
+            percentage = mean(present) %>% round(2)) -> pr
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^P")) %>% 
+  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> pr_videos
 ```
 
 ```{r pr-graph-presence}
@@ -272,10 +276,250 @@ pr_journal %>%
   layout(legend = list(orientation = "h", x = 0.3, y = -.3))
 ```
 
-# Q // Квизы
+## Row
 
-# HW // Домашки
+```{r practice-graph-by-day}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = pr_videos,
+              aes(day, views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         linetype = "Дедлайн",
+         title = "Динамика просмотров записей практик") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```
 
-# С // Консультации
+## Row
 
-# A // Разборы
+```{r pr-graph-cumsum}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = pr_videos %>% 
+                group_by(video) %>% 
+                mutate(cum_views = cumsum(views)),
+              aes(day, cum_views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         title = "Кумулятивная сумма просмотров записей практик") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```
+
+
+# Q // Квизы {#q}
+
+```{r get-course-id}
+get_course_list() %>% 
+  filter(name == "WLM 2023 // HSE UX LAB") %>% 
+  .$id -> course_id
+```
+
+
+
+
+# HW // Домашки {#hw}
+
+# С // Консультации {#c}
+
+## Row
+```{r c-preproc}
+c_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "consultation",
+               values_to = "present") %>% 
+  group_by(consultation) %>% 
+  mutate(present = as.numeric(present),
+         consultation = factor(consultation,
+                           ordered = TRUE,
+                           levels = paste0("C", 1:17))) %>%
+  replace_na(list(present = 0)) %>% 
+  summarise(count = sum(present),
+            percentage = mean(present) %>% round(2)) -> c
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^С|^C")) %>% 
+  separate(title, into = c("code", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> c_videos
+```
+
+```{r c-graph-presence}
+(
+  c %>% 
+    ggplot(aes(consultation, percentage, group = 1)) +
+    geom_line() +
+    geom_point() +
+    scale_y_continuous(limits = c(0, 1)) +
+    labs(x = "Консультация",
+         y = "Доля присутствовавших",
+         title = "Динамика посещения консультаций")
+) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = 0.3, y = -.3))
+```
+
+## Row
+
+```{r c-graph-by-day}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = c_videos,
+              aes(day, views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         linetype = "Дедлайн",
+         title = "Динамика просмотров записей консультаций") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```
+
+## Row
+
+```{r c-graph-cumsum}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = c_videos %>% 
+                group_by(video) %>% 
+                mutate(cum_views = cumsum(views)),
+              aes(day, cum_views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         title = "Кумулятивная сумма просмотров записей консультаций") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```
+
+
+
+# A // Разборы {#a}
+
+## Row
+```{r a-preproc}
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^A|^А")) %>% 
+  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> a_videos
+```
+
+```{r a-graph-by-day}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = a_videos,
+              aes(day, views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         linetype = "Дедлайн",
+         title = "Динамика просмотров разборов") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```
+
+## Row
+
+```{r a-graph-cumsum}
+(
+  calendar_assessment %>% 
+    filter(str_detect(code, "^HW")) %>% 
+    ggplot() +
+    geom_line(data = a_videos %>% 
+                group_by(video) %>% 
+                mutate(cum_views = cumsum(views)),
+              aes(day, cum_views, color = code)) +
+    geom_vline(aes(xintercept = as.numeric(date),
+                   linetype = deadline),
+               color = "gray70") +
+    geom_text(aes(x = date,
+                  y = 0,
+                  label = code)) +
+    labs(x = "Дата",
+         y = "Количество просмотров",
+         color = "Лекция",
+         title = "Кумулятивная сумма просмотров разборов") +
+    scale_x_date(date_breaks = "week",
+                 date_minor_breaks = "day") +
+    scale_linetype_manual(values = c(hard = "dashed", soft = "dotted"),
+                          labels = c(hard = "жёсткий", soft = "мягкий")) +
+    theme(legend.position = "bottom",
+          axis.text.x = element_text(angle = 90))
+  ) %>% ggplotly() %>% 
+  layout(legend = list(orientation = "h", x = .3, y = -.5))
+```

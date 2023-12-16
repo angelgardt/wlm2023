@@ -1,32 +1,18 @@
----
-title: "WLM 2023 // Analytics"
----
-
-```{r opts, echo=FALSE, eval=TRUE, message=FALSE}
-knitr::opts_chunk$set(echo=FALSE, 
-                      message=FALSE, 
-                      eval=TRUE,
-                      warning=FALSE)
-```
-
-```{r install-pkgs, eval=FALSE}
 # install.packages(c("rystats", "googlesheets4"))
 # if (!("remotes" %in% installed.packages())) {
 #   install.packages("remotes")
 # }
 # remotes::install_github("datatrail-jhu/rgoogleclassroom")
-```
+install.packages("googleformr")
 
-```{r pkgs}
 library(rytstat)
 library(googlesheets4)
-# library(rgoogleclassroom)
+library(rgoogleclassroom)
 library(tidyverse)
 theme_set(theme_bw())
 library(plotly)
-```
 
-```{r auth}
+
 ## youtube
 ryt_auth('course.wlm@gmail.com')
 # ryt_deauth()
@@ -34,10 +20,10 @@ ryt_auth('course.wlm@gmail.com')
 # ryt_user()
 
 ## classroom
-# authorize()
-```
+authorize()
 
-```{r calendar-ger-table}
+
+
 read_sheet("https://docs.google.com/spreadsheets/d/1k9QtNjZLzTrbYlkXrWFWxglXTG5kol1DHSPIN9stLiE/edit?usp=sharing",
            sheet = "План", skip = 2) -> calendar
 calendar %>% 
@@ -45,9 +31,9 @@ calendar %>%
   filter(str_detect(code_1, "^P")) %>% 
   mutate(date = as_date(date, format = "%d/%m/%y")) %>% 
   rename("code" = "code_1") -> calendar_pr
-```
 
-```{r l-get-table-funcs}
+
+
 ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14, 
                                       end_date = Sys.Date(), 
                                       metrics = c(
@@ -92,9 +78,9 @@ ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14,
     cli_alert_success(str_glue("Success, loading {nrow(data)} rows."))
     return(data)
 }
-```
 
-```{r l-get-table}
+
+
 videos <- ryt_get_videos() %>% 
   select(id_video_id, title) %>%
   filter(!str_detect(title, "внутряк"))
@@ -109,9 +95,9 @@ basics_by_videos <- ryt_get_analytics_custom(
 ) %>% 
   set_names(c(dimensions, metrics)) %>% 
   left_join(videos, join_by("video" == "id_video_id"))
-```
 
-```{r q-get-table}
+
+
 q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("Q"))
@@ -133,30 +119,26 @@ for(i in paste0("Q", 1:2)) {
 q_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
                      sheet = "Q") %>% 
   select(task, level, max_score)
-```
 
-```{r pr-get-table}
+
+
 pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
                         sheet = "Journal") %>% 
   select(ID, Stream, starts_with("P"))
-```
-
-
-
 
 
 
 ## L // Лекции
 
-```{r l-preproc-table}
+
 basics_by_videos %>% 
   mutate(day = as_date(day)) %>% 
   filter(str_detect(title, "^L")) %>% 
   separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
   select(-course, - lab) -> lec
-```
 
-```{r l-graph}
+
+
 (
   lec %>% 
     ggplot() +
@@ -176,13 +158,13 @@ basics_by_videos %>%
     theme(legend.position = "bottom")
   ) %>% ggplotly() %>% 
   layout(legend = list(orientation = "h", x = .3, y = -.3))
-```
+
 
 
 
 ## Q // Квизы
 
-```{r q-preproc-table}
+
 q_journal %>% 
   filter(Stream == "main") %>% 
   select(-Stream) %>% 
@@ -204,12 +186,12 @@ q_journal %>%
   # replace_na(list(present = 0)) %>% 
   # summarise(count = sum(present),
   #           percentage = mean(present))
-```
+
 
 
 ## P // Практики
 
-```{r pr-preproc-table}
+
 pr_journal %>% 
   filter(Stream == "main") %>% 
   select(-Stream) %>% 
@@ -225,9 +207,9 @@ pr_journal %>%
   replace_na(list(present = 0)) %>% 
   summarise(count = sum(present),
             percentage = mean(present)) -> pr_preproc
-```
 
-```{r pr-plot-present}
+
+
 (
   pr_preproc %>% 
     ggplot(aes(practice, percentage, color = half, group = half)) +
@@ -242,7 +224,7 @@ pr_journal %>%
     theme(legend.position = "bottom")
 ) %>% ggplotly() %>% 
   layout(legend = list(orientation = "h", x = 0.3, y = -.3))
-```
+
 
 ## C // Консультации
 
