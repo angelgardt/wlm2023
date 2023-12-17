@@ -227,8 +227,31 @@ calendar_assessment %>%
 
 # Q // Квизы {#q}
 
+## Row {.tabset}
 
+```{r q1-ts, eval=FALSE}
+#| title: Q1
 
+q_total_scores %>% 
+  filter(code == "Q1") %>% 
+  ggplot(aes(totalScore100)) +
+  geom_histogram() +
+  scale_x_continuous(breaks = seq(0, 100, by = 5))
+
+q_item_scores %>%
+  filter(str_detect(task_code, "^q1")) %>% 
+  summarise(score = sum(score),
+            .by = c(itemId, task_code, responseId)) %>% 
+  left_join(q_total_scores %>% 
+              filter(code == "Q1"),
+            join_by(responseId))
+  group_by(task_code) %>% 
+  
+  summarise(mean = mean(score)) %>% 
+  
+  left_join(q_spec, join_by())
+
+```
 
 
 # HW // Домашки {#hw}
@@ -263,6 +286,8 @@ hws_scores %>%
   ggplot(aes(hw, value, color = stat, group = stat)) +
   geom_line() +
   geom_point(shape = 21, size = 2) +
+  geom_hline(yintercept = 20, linetype = "dashed", color = "gray50") + 
+  geom_hline(yintercept = 30, linetype = "dotted", color = "gray50") + 
   scale_color_discrete(labels = c(mean = "Среднее",
                                   sd = "Стандартное отклонение")) +
   labs(
@@ -271,6 +296,21 @@ hws_scores %>%
     color = "Метрика",
     title = "Средний балл по сданным домашкам"
   )
+```
+
+
+
+
+## Row {height=100%}
+
+```{r hws-scores}
+hws_scores %>%
+  ggplot(aes(score)) +
+  geom_histogram(binwidth = 1) +
+  facet_wrap(~ hw) +
+  labs(x = "Балл",
+       y = "Количество",
+       title = "Распределение баллов домашек")
 ```
 
 
@@ -1349,17 +1389,6 @@ hw_tasks %>%
 ```
 
 
-## Row {height=100%}
-
-```{r hws-scores}
-hws_scores %>%
-  ggplot(aes(score)) +
-  geom_histogram(binwidth = 1) +
-  facet_wrap(~ hw) +
-  labs(x = "Балл",
-       y = "Количество",
-       title = "Распределение баллов домашек")
-```
 
 
 

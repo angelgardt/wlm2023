@@ -48,12 +48,20 @@ q_spec %>%
   summarise(max_total_score = sum(max_score)) -> q_max_total_scores
 
 ### quizes preproc
-source("q-preproc/q1_preproc.R")
-source("q-preproc/q2_preproc.R")
+source("scripts/q-preproc/q1_preproc.R")
+source("scripts/q-preproc/q2_preproc.R")
 
 
+q1_total_scores %>% 
+  bind_rows(q2_total_scores) %>% 
+  left_join(q_max_total_scores,
+            join_by(code)) %>% 
+  mutate(lastSubmittedTime = as_datetime(lastSubmittedTime),
+         totalScore100 = (totalScore / max_total_score * 100) %>% round()) %>% 
+  filter(month(lastSubmittedTime) > 10) -> q_total_scores
 
-
+q1_item_score %>% 
+  bind_rows(q2_item_score) -> q_item_scores
 
 
 
