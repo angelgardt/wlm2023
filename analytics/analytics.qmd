@@ -58,11 +58,11 @@ auth_from_secret(access_token = token$credentials$access_token,
 
 ## Load data
 ```{r load-data, cache=FALSE}
-source("get_spec_data.R")
-source("get_calendar_data.R")
-source("get_journal_data.R")
-source("get_yt_data.R")
-source("get_classroom_data.R")
+source("scripts/get_spec_data.R")
+source("scripts/get_calendar_data.R")
+source("scripts/get_journal_data.R")
+source("scripts/get_yt_data.R")
+source("scripts/get_classroom_data.R")
 aesth <- yaml::read_yaml("aesthetics.yml")
 ```
 

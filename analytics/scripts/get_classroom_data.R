@@ -47,8 +47,9 @@ q_spec %>%
   group_by(code) %>% 
   summarise(max_total_score = sum(max_score)) -> q_max_total_scores
 
-### q1 preproc
-source("q1_preproc.R")
+### quizes preproc
+source("q-preproc/q1_preproc.R")
+source("q-preproc/q2_preproc.R")
 
 
 
