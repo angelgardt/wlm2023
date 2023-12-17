@@ -46,6 +46,9 @@ ryt_auth('course.wlm@gmail.com')
 # ryt_has_token()
 # ryt_user()
 
+## gs4 auth
+gs4_auth("a.n.angelgardt@gmail.com")
+
 ## classroom
 load("/home/nglgrdt/tokens/classroom_token.Rdata")
 auth_from_secret(access_token = token$credentials$access_token,
@@ -55,10 +58,11 @@ auth_from_secret(access_token = token$credentials$access_token,
 
 ## Load data
 ```{r load-data, cache=FALSE}
-source("get_calendar_data.R")
 source("get_spec_data.R")
-source("get_yt_data.R")
+source("get_calendar_data.R")
 source("get_journal_data.R")
+source("get_yt_data.R")
+source("get_classroom_data.R")
 aesth <- yaml::read_yaml("aesthetics.yml")
 ```
 
@@ -243,9 +247,9 @@ hws_ns %>%
   color = "white") +
   labs(
     x = "Домашка",
-    y = "Доля не сдавших",
+    y = "Количество не сдавших",
     title = "Динамика сдачи домашек",
-    caption = "лейблы отображают абсолютные значения"
+    caption = "лейблы отображают процент не сдавших"
   )
 ```
 
@@ -265,7 +269,7 @@ hws_scores %>%
     x = "Домашка",
     y = "Значение",
     color = "Метрика",
-    title = "Средний балл по домашкам"
+    title = "Средний балл по сданным домашкам"
   )
 ```
 

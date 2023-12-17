@@ -27,24 +27,33 @@ tibble(
                    names_to = "code",
                    values_to = "link") -> q_links
 
-q_links
-
-
-
-
-
-
 # get_coursework_properties(course_id, coursework_id)
 # get_form_properties(form_id = NULL, form_url = NULL)
 
+## quiz specification preprocess
+q_sp %>% 
+  mutate(code = task_code %>% 
+           str_extract("^q\\d+") %>% 
+           toupper(),
+         task = task_code %>% 
+           str_extract("\\d+$") %>% 
+           factor(ordered = TRUE,
+                  levels = as.character(1:20)),
+         level = level %>% 
+           factor(ordered = TRUE,
+                  levels = c("easy", "medium", "hard", "extreme"))) -> q_spec
 
-get_form_responses(form_url = q_links$link[1]) -> q1
+q_spec %>% 
+  group_by(code) %>% 
+  summarise(max_total_score = sum(max_score)) -> q_max_total_scores
 
-q1$responses$answers$`430dd10a`$grade$score
+### q1 preproc
+source("q1_preproc.R")
 
 
 
 
 
 
-get_form_responses(form_url = q_links$link[15]) -> q15
+
+# get_form_responses(form_url = q_links$link[15]) -> q15
