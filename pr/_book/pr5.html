@@ -881,7 +881,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </section>
 <section id="pr5-12" class="level3">
 <h3 class="anchored" data-anchor-id="pr5-12">#12</h3>
-<p><img class="level"></p>
+<p><img id="pr5-12-level" class="level"></p>
 <div id="pr5-12-task" class="task">
 <p>Посмотрим на другие способы визуализации разных переменных.</p>
 <ol type="a">
@@ -1640,7 +1640,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr5-28">#8</h3>
 <p><img id="pr5-28-level" class="level"></p>
 <div id="pr5-28-task" class="task">
-<p>Еще один тип графика, который может встретиться в работе исследователя — это Line Plot. Есть <a href="">данные</a> о среднем продолжительности просмотра лекций</p>
+<p>Еще один тип графика, который может встретиться в работе исследователя — это Line Plot. Есть <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/pr5-28.csv">данные</a> о средней продолжительности просмотра лекций данного курса на 14/12/2023.</p>
+<p>Визуализируйте динамику изменения средней продолжительности просмотра по дням с начала курса до 13/12/2023.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-28-autocheck" class="autocheck">
 <div id="pr5-28-ir" class="input-requirements">
@@ -1652,7 +1662,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-28-hints">
 <summary>
 Подсказки
@@ -1679,7 +1689,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr5-29">#9</h3>
 <p><img id="pr5-29-level" class="level"></p>
 <div id="pr5-29-task" class="task">
-<p>Текст задания.</p>
+<p>Если на графике случает что-то интересное, будет полезно подсветить это событие. Так, на графике выше мы видим яркий пик роста средней продолжительности просмотра лекции L2.2 7/12/2023. Давайте это обозначим.</p>
+<p>Подпишите пик датой, когда он произошел.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/29-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-29-autocheck" class="autocheck">
 <div id="pr5-29-ir" class="input-requirements">
@@ -1694,23 +1714,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr5-29-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>annotate()</code></p>
 </details>
 </div>
 </section>
@@ -1718,7 +1724,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr5-30">#10</h3>
 <p><img id="pr5-30-level" class="level"></p>
 <div id="pr5-30-task" class="task">
-<p>Текст задания.</p>
+<p>Подсветить интересные события на графике можно не только с помощью подписей, но и выделив область, на которую попало интересное событие. Мы видим, что для L1.1 27/11/2023 случился резкий рост глубины просмотра — давайте это выделим красным прямоугольником.</p>
+<p>Добавьте слой, на котором будет отображен полупрозрачный прямоугольник, который будет выделять пик роста средней продолжительности просмотра 27/11/2023.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/30-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-30-autocheck" class="autocheck">
 <div id="pr5-30-ir" class="input-requirements">
@@ -1730,7 +1746,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-30-hints">
 <summary>
 Подсказки

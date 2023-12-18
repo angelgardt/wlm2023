@@ -610,7 +610,7 @@ theme_set(theme_bw())
 
 ### #12 {#pr5-12}
 
-<img class="level"/>
+<img id="pr5-12-level" class="level"/>
 
 ::: {#pr5-12-task .task}
 Посмотрим на другие способы визуализации разных переменных.
@@ -1544,9 +1544,20 @@ diamonds %>%
 
 ::: {#pr5-28-task .task}
 
-Еще один тип графика, который может встретиться в работе исследователя --- это Line Plot. Есть [данные]() о среднем продолжительности просмотра лекций 
+Еще один тип графика, который может встретиться в работе исследователя --- это Line Plot. Есть [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/pr5-28.csv) о средней продолжительности просмотра лекций данного курса на 14/12/2023.
+
+Визуализируйте динамику изменения средней продолжительности просмотра по дням с начала курса до 13/12/2023.
 
 :::
+
+```{r 28}
+lecs <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/pr5-28.csv")
+
+lecs %>% 
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-28-autocheck .autocheck}
 ::: {#pr5-28-ir .input-requirements}
@@ -1561,7 +1572,7 @@ diamonds %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-28-hints">
 
 <summary>Подсказки</summary>
@@ -1592,8 +1603,25 @@ diamonds %>%
 <img id="pr5-29-level" class="level"/>
 
 ::: {#pr5-29-task .task}
-Текст задания.
+
+Если на графике случает что-то интересное, будет полезно подсветить это событие. Так, на графике выше мы видим яркий пик роста средней продолжительности просмотра лекции L2.2 7/12/2023. Давайте это обозначим.
+
+Подпишите пик датой, когда он произошел.
+
 :::
+
+```{r 29}
+lecs %>%
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  annotate(
+    x = as_date("2023-12-07"),
+    y = 4511,
+    geom = "text",
+    label = "7/12/2023"
+  ) +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-29-autocheck .autocheck}
 ::: {#pr5-29-ir .input-requirements}
@@ -1611,25 +1639,9 @@ diamonds %>%
 ::: hints-wrapper
 <details class="hints" id="pr5-29-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`annotate()`
 
 </details>
 :::
@@ -1639,8 +1651,33 @@ diamonds %>%
 <img id="pr5-30-level" class="level"/>
 
 ::: {#pr5-30-task .task}
-Текст задания.
+
+Подсветить интересные события на графике можно не только с помощью подписей, но и выделив область, на которую попало интересное событие. Мы видим, что для L1.1 27/11/2023 случился резкий рост глубины просмотра --- давайте это выделим красным прямоугольником.
+
+Добавьте слой, на котором будет отображен полупрозрачный прямоугольник, который будет выделять пик роста средней продолжительности просмотра 27/11/2023.
+
 :::
+
+```{r 30}
+lecs %>%
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  annotate(
+    xmin = as_date("2023-11-26"),
+    xmax = as_date("2023-11-28"),
+    ymin = 3100,
+    ymax = 3700,
+    geom = "rect",
+    fill = "red",
+    alpha = 0.3
+  ) +
+  annotate(
+    x = as_date("2023-12-07"),
+    y = 4511,
+    geom = "text",
+    label = "7/12/2023") +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-30-autocheck .autocheck}
 ::: {#pr5-30-ir .input-requirements}
@@ -1655,7 +1692,7 @@ diamonds %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-30-hints">
 
 <summary>Подсказки</summary>

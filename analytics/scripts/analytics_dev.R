@@ -96,6 +96,14 @@ basics_by_videos <- ryt_get_analytics_custom(
   set_names(c(dimensions, metrics)) %>% 
   left_join(videos, join_by("video" == "id_video_id"))
 
+basics_by_videos %>% 
+  select(day, averageViewDuration, title) %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(day < as_date("2023-12-14") & 
+           str_detect(title, "^L")) %>% 
+  mutate(code = str_extract(title, "^L\\d\\.\\d|^L\\d")) %>% 
+  select(-title) %>% 
+  write_csv("../data/pr5/pr5-28.csv")
 
 
 q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
