@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -103,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -127,9 +134,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -144,38 +151,39 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./WLM-2023.pdf">
+            <a class="dropdown-item quarto-navbar-tools-item" href="./WLM-2023.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./WLM-2023.epub">
+            <a class="dropdown-item quarto-navbar-tools-item" href="./WLM-2023.epub">
               <i class="bi bi-bi-journal pe-1"></i>
             Download ePub
             </a>
@@ -184,32 +192,23 @@ div.csl-indent {
     </div>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./andan-descriptives.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./andan-descriptives.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Описательные статистики</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -857,7 +856,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -917,12 +916,14 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <div class="lab-chapter lab-junior">
 
 </div>
-<!--- {{< include _symbols.qmd >}} --->
+<!---  --->
 <!--- Number sets--->
 <!--- Linear Algebra --->
 <!--- vectors and matrices --->
@@ -974,10 +975,14 @@ div.csl-indent {
 
 </div>
 <p>Итак, мы хотим описать наши данные. Точнее, распределения переменных, которые у нас в данных есть. Хотим сделать это просто и ёмко. Насколько просто и ёмко? Ну, допустим максимально — одним числом. Для этого неплохо подойдет значение переменной, которое лежит <em>в центре</em> распределения.</p>
-<p>Как мы будем искать, что там в центре распределения? Зависит от <a href="">шкалы</a> <span class="citation" data-cites="stevens46">(<a href="references.html#ref-stevens46" role="doc-biblioref">Stevens 1946</a>)</span>, в которой измерена конкретная переменная (<a href="#tbl-scales-cental-tendencies">Таблица&nbsp;<span>24.1</span></a>).</p>
+<p>Как мы будем искать, что там в центре распределения? Зависит от <a href="">шкалы</a> <span class="citation" data-cites="stevens46">(<a href="references.html#ref-stevens46" role="doc-biblioref">Stevens 1946</a>)</span>, в которой измерена конкретная переменная (<a href="#tbl-scales-cental-tendencies" class="quarto-xref">Таблица&nbsp;<span>24.1</span></a>).</p>
 <div id="tbl-scales-cental-tendencies" class="anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-scales-cental-tendencies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Таблица&nbsp;24.1: Шкалы и меры центральной тенденции
+</figcaption>
+<div aria-describedby="tbl-scales-cental-tendencies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Таблица&nbsp;24.1: Шкалы и меры центральной тенденции</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 75%">
@@ -1007,6 +1012,8 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <p>Однако есть некоторые нюансы.</p>
 <section id="andan-descriptives-mode" class="level3" data-number="24.2.1">
@@ -1055,10 +1062,14 @@ div.csl-indent {
 <p>где <span class="math inline">\(X\)</span> — дискретная случайная величина, <span class="math inline">\(x_i\)</span> — значение этой случайной величины.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-mode-pmf" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-mode-pmf-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.1: Определение моды с помощью функции вероятности</figcaption>
+<div id="fig-mode-pmf" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-pmf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-mode-pmf-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-pmf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.1: Определение моды с помощью функции вероятности
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1075,10 +1086,14 @@ div.csl-indent {
 <p>Если мы посмотрим на <a href="">график плотности вероятности</a> (probability density function, PDF), который является аналогом PMF для дискретных переменных, мы увидим, что какие-то значения встречаются чаще, а какие-то реже. Что в общем-то логично. Напомним себе, <a href="">как это выглядит</a>, например, для любимого [стандартного] <a href="">нормального распределения</a>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-continuous-freqs" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-continuous-freqs-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения</figcaption>
+<div id="fig-continuous-freqs" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-freqs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-continuous-freqs-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-continuous-freqs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1094,10 +1109,14 @@ div.csl-indent {
 <p>гдe <span class="math inline">\(X\)</span> — непрерывная случайная величина, <span class="math inline">\(x\)</span> — значение этой случайной величины, <span class="math inline">\(S\)</span> — имеющаяся выборка значений переменной.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-continuous-mode" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-continuous-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.3: Положение моды на функции плотности [стандартного] нормального распределения</figcaption>
+<div id="fig-continuous-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-continuous-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-continuous-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.3: Положение моды на функции плотности [стандартного] нормального распределения
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1129,89 +1148,121 @@ Take-home: мода
 <div class="lab-chapter lab-junior">
 
 </div>
-<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em> (см. <a href="#fig-norm-mode">Рисунок&nbsp;<span>24.4</span></a>, <a href="#fig-binom-mode">Рисунок&nbsp;<span>24.5</span></a>, <a href="#fig-poiss-mode">Рисунок&nbsp;<span>24.6</span></a>).</p>
+<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em> (см. <a href="#fig-norm-mode" class="quarto-xref">Рисунок&nbsp;<span>24.4</span></a>, <a href="#fig-binom-mode" class="quarto-xref">Рисунок&nbsp;<span>24.5</span></a>, <a href="#fig-poiss-mode" class="quarto-xref">Рисунок&nbsp;<span>24.6</span></a>).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-norm-mode" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-norm-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.</figcaption>
+<div id="fig-norm-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-norm-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-norm-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-norm-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-binom-mode" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-binom-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.</figcaption>
+<div id="fig-binom-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-binom-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-binom-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-poiss-mode" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-poiss-mode-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.</figcaption>
+<div id="fig-poiss-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poiss-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-poiss-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-poiss-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Это теоретические распределения. С эмпирическими распределениями дело обстоит так же, хотя они обычно менее гладенькие и красивые (см. <a href="#fig-mode-norm-sample">Рисунок&nbsp;<span>24.7</span></a> и <a href="#fig-mode-nbinom-sample">Рисунок&nbsp;<span>24.8</span></a>).</p>
+<p>Это теоретические распределения. С эмпирическими распределениями дело обстоит так же, хотя они обычно менее гладенькие и красивые (см. <a href="#fig-mode-norm-sample" class="quarto-xref">Рисунок&nbsp;<span>24.7</span></a> и <a href="#fig-mode-nbinom-sample" class="quarto-xref">Рисунок&nbsp;<span>24.8</span></a>).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-mode-norm-sample" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-mode-norm-sample-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
-</figure>
+<div id="fig-mode-norm-sample" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-norm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-mode-norm-sample-1.png" class="img-fluid figure-img" width="672">
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-mode-nbinom-sample" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-mode-nbinom-sample-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Однако на практике возможны и другие ситуации. Например, такие (<a href="#fig-bimodal">Рисунок&nbsp;<span>24.9</span></a>, <a href="#fig-polymodal">Рисунок&nbsp;<span>24.10</span></a>):</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-bimodal" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-norm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-polymodal" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-polymodal-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.</figcaption>
+<div id="fig-mode-nbinom-sample" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-nbinom-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-mode-nbinom-sample-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-nbinom-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>В первом случае (<a href="#fig-bimodal">Рисунок&nbsp;<span>24.9</span></a>) мы видим <em>два локальных максимума</em> функции плотности вероятности — такое распределение называется <strong>бимодальным</strong>. Во втором случае (<a href="#fig-polymodal">Рисунок&nbsp;<span>24.10</span></a>) функция плотности вероятности имеет <em>три локальных максимума</em> — такое распределение называется <strong>полимодальным</strong>. Бимональное распределение является частным случаем полимодального распределения.</p>
+<p>Однако на практике возможны и другие ситуации. Например, такие (<a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>24.9</span></a>, <a href="#fig-polymodal" class="quarto-xref">Рисунок&nbsp;<span>24.10</span></a>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-bimodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-polymodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-polymodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-polymodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-polymodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>В первом случае (<a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>24.9</span></a>) мы видим <em>два локальных максимума</em> функции плотности вероятности — такое распределение называется <strong>бимодальным</strong>. Во втором случае (<a href="#fig-polymodal" class="quarto-xref">Рисунок&nbsp;<span>24.10</span></a>) функция плотности вероятности имеет <em>три локальных максимума</em> — такое распределение называется <strong>полимодальным</strong>. Бимональное распределение является частным случаем полимодального распределения.</p>
 <p>В прицнипе, пиков может быть и больше, однако при работе с реальными данными чаще всего мы сталкиваемся с бимодальными распределениями.</p>
 <p><strong>Что это значит и что с этим делать?</strong></p>
-<p>Бимодальное распределение сигнализирует нам о <strong>гетерогенности выборки</strong>. Если мы видим два выделяющихся пика, стоит подумать о том, что наша выборка неоднородна и в ней выделяются две подвыборки. Посмотрим на структуру выборки из примера выше (<a href="#fig-bimodal-struct">Рисунок&nbsp;<span>24.11</span></a>):</p>
+<p>Бимодальное распределение сигнализирует нам о <strong>гетерогенности выборки</strong>. Если мы видим два выделяющихся пика, стоит подумать о том, что наша выборка неоднородна и в ней выделяются две подвыборки. Посмотрим на структуру выборки из примера выше (<a href="#fig-bimodal-struct" class="quarto-xref">Рисунок&nbsp;<span>24.11</span></a>):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-bimodal-struct" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-bimodal-struct-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.11: Структура бимодального распределения из <a href="#fig-bimodal">Рисунок&nbsp;<span>24.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.</figcaption>
+<div id="fig-bimodal-struct" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bimodal-struct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-bimodal-struct-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bimodal-struct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.11: Структура бимодального распределения из <a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>24.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1322,10 +1373,14 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <p>Если мы будем смотреть на медиану с позиции описания распределения, то она будет той самой линией, которая разделит площадь под графиком функции плотности вероятности пополам:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-median-norm" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-median-norm-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.12: Медиана нормального распределения</figcaption>
+<div id="fig-median-norm" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-median-norm-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.12: Медиана нормального распределения
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1333,30 +1388,42 @@ X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
 <p>При этом форма распределения не имеет значения — площадь под графиком всегда будет делиться пополам:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-median-left-skew" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-median-left-skew-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.13: Медиана распределения с отрицательной асимметрией.</figcaption>
+<div id="fig-median-left-skew" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-left-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-median-left-skew-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-left-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.13: Медиана распределения с отрицательной асимметрией.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-median-right-skew" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-median-right-skew-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.14: Медиана распределения с положительной асимметрией.</figcaption>
+<div id="fig-median-right-skew" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-right-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-median-right-skew-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-right-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.14: Медиана распределения с положительной асимметрией.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-median-bimodal" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="andan-descriptives_files/figure-html/fig-median-bimodal-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Рисунок&nbsp;24.15: Медиана бимодального распределения.</figcaption>
+<div id="fig-median-bimodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="andan-descriptives_files/figure-html/fig-median-bimodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;24.15: Медиана бимодального распределения.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1412,7 +1479,11 @@ M_{X+c} = \frac{\sum_{i=1}^n (x_i + c)}{n} = \frac{\sum_{i=1}^n x_i + nc}{n} = \
 <p>Иначе говоря, распределение просто сдвинется. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/mean_feature_1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/mean_feature_1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <ul>
@@ -1428,7 +1499,11 @@ M_{X \times c} = \frac{\sum_{i=1}^n (x_i \times c)}{n} = \frac{c \times \sum_{i=
 <p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/mean_feature_2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/mean_feature_2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Тут, правда, явно <a href="#var_features">что-то ещё</a> произошло, но мы пока этого не знаем. Однако, отметит этот факт.</p>
@@ -1447,7 +1522,11 @@ M_{X \times c} = \frac{\sum_{i=1}^n (x_i \times c)}{n} = \frac{c \times \sum_{i=
 <p><strong>Отклонение</strong> — это разность между средним и конкретным значением переменной. И, действительно, так как среднее находится в центре распределения, то часть значений лежит справа, а часть слева. Значит, будут как положительные, так и отрицательные отклонения — и их сумма в итоге будет равна нулю.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/zero_deviation_sum-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/zero_deviation_sum-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1593,7 +1672,11 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 ℹ Please use `after_stat(density)` instead.</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/central_tendency_symm-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_symm-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>На асимметричном распределении мода [практически] в пике.</strong> Практически, потому что функция плотности вероятности [черная линия на графике] на всегда точно аппроксимирует (в данном случае то же, что и сглаживает) эмпирическое распределение. На картинке ниже мы видим, что на гистограмме мода — самый высокий столбик, что и показывает нам зелёная линия, которой обозначена мода. Однако при сглаживании гистограммы пик немного съехал, и мода оказалась не совсем в вершине графика функции плотности вероятности.</p>
@@ -1601,13 +1684,21 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 <p><strong>На асимметричном распределении медиана и среднее смещены в сторону хвоста. Среднее смещено сильнее медианы.</strong> Это связано с тем, что медиана зависит только от количества наблюдений, а среднее ещё и от самих значений. На картинке ниже пример для распределения с <em>правосторонней</em> асимметрии (потому что хвост справа) — среднее (красная линия) <em>правее</em> медианы (синяя линия).</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_right-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_right-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>А это пример для распределения с <em>левосторонней</em> асимметрией (так как хвост слева) — среднее (красная линия) <em>левее</em> медианы (синяя линия).</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_left-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_asymm_left-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Для того, чтобы лучше разобраться с тем, как большие и малые значения влияют на моду и медиану посмотрим такой пример. Пусть у нас есть оценки за выпускную квалификационную работу. Например, такие:</p>
@@ -1652,7 +1743,11 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 <p>Есть ещё один интересный вариант распределений — <strong>бимодальные</strong>. Значит ли, что у этого распределения две моды? Не всегда. Посмотрим пример ниже:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/central_tendency_bimodal-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/central_tendency_bimodal-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Мы видим, что на графике есть два пика, однако строго математически мода одна (зеленая линия) — и она в более высоком пике. Это логично, ибо там самые часто встречающиеся значения.</p>
@@ -1682,7 +1777,11 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Методом пристального взгляда можно установить, что у всех распределений одинаковые средние:</p>
@@ -1692,7 +1791,11 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 ℹ Please use `linewidth` instead.</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_mean-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/distributions_with_the_same_means_mean-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Однако мы видим, что значения по-разному группируются вокруг среднего. Как они группируются — плотно, как на третьем рисунке, или не особо, как на втором — можно описать с помощью <strong>мер разброса</strong>, или <strong>мер вариативности</strong>.</p>
@@ -1760,7 +1863,11 @@ w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
 <p>Нарисуем.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/range_problem-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/range_problem-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Кажется, что вариативность различна. Распределение оценок по «Анатомии и физиологии ЦНС» более равномерное, в то время как оценки по «Введению в психологию» активнее группируются где-то в середине.</p>
@@ -1899,7 +2006,11 @@ s_{x+c} = \sqrt{D_{x+c}} = \sqrt{D_x} = s_x
 <p>Как мы уже видели, распределение просто сдвигается на константу. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное — разброс у обоих распределений одинаковый:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/sd_feature_1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/sd_feature_1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <ul>
@@ -1915,7 +2026,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное — разброс также увеличился в три раза, поэтому распределение более плоское:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/sd_feature_2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/sd_feature_2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1931,7 +2046,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Возьмем распределение суммарного балла по шкале «Доверие к техническим интеллектуальным системам». Выглядит оно как-то так:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/taia_score_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/taia_score_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Теперь нам понадобится определение квантиля распределения.</p>
@@ -1940,19 +2059,31 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p><em>Слева</em> относительно квантиля-0.05 (<span class="math inline">\(x_{0.05}\)</span>) лежит 5% наблюдений:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/fifth_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/fifth_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><em>Слева</em> относительно квантиля-0.68 (<span class="math inline">\(x_{0.68}\)</span>) лежит 68% наблюдений:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/68_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/68_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><em>Слева</em> относительно квантиля-0.99 (<span class="math inline">\(x_{0.99}\)</span>) лежит 99% наблюдений:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/99_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/99_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Итак, мы поняли, а также приняли и осознали, что такое квантиль. Неясно только, как он нам поможет описать вариативность данных.</p>
@@ -1961,7 +2092,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Для этого нам пригодятся специально обученные квантили. Оказалось достаточно удобно поделить все наблюдение на <em>четыре</em> равные части — вот так:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/quartiles_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/quartiles_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Значения переменной, которые делят выборку на <em>четыре</em> равные части называются <strong>квартили</strong>. Получается, что</p>
@@ -1995,7 +2130,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Интерквартильный размах — это разница между третьим и первым квартилем распределения. Эта величина описывает интервал значений признака, в котором лежит 50% наблюдений.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/iqr_vis-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/iqr_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>В данном случае он равен 40:</p>
@@ -2012,7 +2151,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Отображать квартили на гистограмме, во-первых, совершенно неудобно, а во-вторых, не то чтобы график получается информативный. Для визуализации квартилей придумали специальный тип графика — <strong>ящик с усами, или боксплот (boxplot)</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/boxplot-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/boxplot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Прикольная ерунда. Научимся его читать.</p>
@@ -2020,7 +2163,11 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <p>Нижний ус — первый квартиль минус полтора межквартильных размаха. Верхний ус — третий квартиль плюс полтора мехквартильных размаха.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="andan-descriptives_files/figure-html/boxplot_annotated-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="andan-descriptives_files/figure-html/boxplot_annotated-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="advanced">
@@ -2063,7 +2210,7 @@ s_{x \times c} = \sqrt{D_{x \times c}} = \sqrt{D_x \times c^2} = s_x \times c
 <h2 data-number="24.9" class="anchored" data-anchor-id="andan-descriptives-final"><span class="header-section-number">24.9</span> Итоги</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-shepard71" class="csl-entry" role="listitem">
 Shepard, Roger N., and Jacqueline Metzler. 1971. <span>“Mental Rotation of Three-Dimensional Objects.”</span> <em>Science</em> 171 (3972): 701–3. <a href="https://doi.org/10.1126/science.171.3972.701">https://doi.org/10.1126/science.171.3972.701</a>.
 </div>
@@ -2072,7 +2219,7 @@ Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> 
 </div>
 </div>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>Mass (uncountable) noun<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -2081,7 +2228,7 @@ Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> 
 <li id="fn4"><p>Per se (лат.) — «само по себе», «как таковое», «в чистом виде».<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>Но если мы рисуем несколько боксплотов рядом, то на оси <code>x</code> будет категориальная переменная.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section>
+</aside>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2125,6 +2272,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -2193,13 +2367,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2278,10 +2454,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2291,8 +2466,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2305,6 +2489,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2348,6 +2661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2373,6 +2687,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2434,17 +2774,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./part-andan.html" class="pagination-link">
+      <a href="./part-andan.html" class="pagination-link  aria-label=" методы="" анализа="" данных"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Методы анализа данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./andan-ttest.html" class="pagination-link">
+      <a href="./andan-ttest.html" class="pagination-link" aria-label="<span class='chapter-number'>25</span>&nbsp; <span class='chapter-title'>Сравнение средних</span>">
         <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Сравнение средних</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

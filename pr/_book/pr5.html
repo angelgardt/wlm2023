@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -50,7 +84,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -74,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -91,55 +131,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html" rel="" target="">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html" rel="" target="">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html" rel="" target="">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html" rel="" target="">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html" rel="" target="">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr5.html">P5 // Визуализация данных</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr5.html">P5 // Визуализация данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -259,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -323,18 +355,66 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!--
 REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 -->
 <section id="pr5_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr5_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание данных
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы будем работать с данными о бриллиантах. Это датасет <code>diamonds</code>, который входит в пакет <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 53,940 × 10
+   carat cut       color clarity depth table price     x     y     z
+   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+ 2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+ 3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+ 4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+ 5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+ 6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+ 7  0.24 Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+ 8  0.26 Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+ 9  0.22 Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+10  0.23 Very Good H     VS1      59.4    61   338  4     4.05  2.39
+# ℹ 53,930 more rows</code></pre>
+</div>
+</div>
+<p>В нем есть следующие переменные:</p>
+<ul>
+<li><code>carat</code> — вес бриллианта (в каратах)</li>
+<li><code>cut</code> — качество огранки</li>
+<li><code>color</code> — цвет бриллианта (от <code>D</code> — худший — до <code>J</code> — лучший)</li>
+<li><code>clarity</code> — чистота бриллианта (от <code>I1</code> — худшее — до <code>IF</code> — лучшее)</li>
+<li><code>x</code>, <code>y</code>, <code>z</code> — длина, ширина и высота бриллианта (в миллиметрах)</li>
+<li><code>depth</code> — глубина бриллианта, рассчитываемая как <span class="math inline">\(\frac{2z}{xy}\)</span></li>
+<li><code>table</code> — отношение ширины верхней площадки блиррианта к его наибольшей ширине</li>
+<li><code>price</code> — цена бриллианта (в долларах США)</li>
+</ul>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr5-1-level" class="level"></p>
 <div id="pr5-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ul>
+<li>Подгрузите пакет <code>tidyverse</code> к текущей сессии R.</li>
+<li>Проверье доступен ли вам датасет <code>diamonds</code> из пакета <code>ggplot2</code>. Выведите структуру датасета, посмотрите, какие переменные и какого типа в нём содержатся.</li>
+<li>Отберите 1000 случайных строк из данных и сохраните их в переменную <code>diam1000</code>. Используйте <code>set.seed(123)</code>.</li>
+</ul>
 </div>
 <div id="pr5-1-autocheck" class="autocheck">
 <div id="pr5-1-ir" class="input-requirements">
@@ -351,21 +431,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы получить доступ к датасету <code>diamonds</code>, достаточно подключть пакет <code>tidyverse</code>. Отдельно подгружать <code>ggplot2</code> не нужно, так как он подгружается в месте с другими пакетами <code>tidyverse</code>.</li>
+<li>Отобрать строки можно с помощью функции <code>slice()</code>.</li>
+<li>Сгенерировать 1000 случайных значений поможет функция <code>sample()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -373,8 +443,31 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr5-2-level" class="level"></p>
 <div id="pr5-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Давайте визуализирует связаимосвязь между длиной (<code>x</code>) и шириной (<code>y</code>) бриллиантов. Возьмем для этого маленький датасет из 100 наблюдений (<code>diam1000</code>).</p>
+<ol type="a">
+<li>Создайте базовый слой для визуализации.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/2a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Расчертите оси на базовом слое. По оси <code>x</code> пойдёт длина бриллианта, а по оси <code>y</code> его ширина.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/2b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-2-autocheck" class="autocheck">
 <div id="pr5-2-ir" class="input-requirements">
@@ -391,21 +484,10 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Построение графика начинается с функции <code>ggplot()</code></li>
+<li>Для задания осей используется функция <code>aes()</code> внутри функции <code>ggplot()</code></li>
+</ul>
 </details>
 </div>
 </section>
@@ -413,7 +495,31 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="pr5-3-level" class="level"></p>
 <div id="pr5-3-task" class="task">
-<p>Текст задания.</p>
+<p>Отлично! Мольберт мы достали. Теперь надо сказать <code>ggplot</code>у, как мы будем отображать наши наблюдения.</p>
+<ol type="a">
+<li>Перейдите на новый слой и задайте отображение наблюдений с помощью точек.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/3a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Добавьте ещё один слой с линией тренда.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/3b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-3-autocheck" class="autocheck">
 <div id="pr5-3-ir" class="input-requirements">
@@ -430,21 +536,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы перейти на новый слой, понадобится оператор <code>+</code></li>
+<li>За то, как будут отображаться наблюдения, отвечают функции <code>geom_..()</code></li>
+<li>Линия тренда — это сглаживание (smoothing) отображаемой зкономерности.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -452,7 +548,16 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="pr5-4-level" class="level"></p>
 <div id="pr5-4-task" class="task">
-<p>Текст задания.</p>
+<p>Сгруппируйте бриллианты по уровню чистоты (<code>clarity</code>), отобразив эту переменную с помощью цвета.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-4-autocheck" class="autocheck">
 <div id="pr5-4-ir" class="input-requirements">
@@ -467,23 +572,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr5-4-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Функция <code>aes()</code> задает в общем случае вообще любые эстетики — форматирование графика, связанное с данными. Оси — это лишь частный случай эстетик.</p>
 </details>
 </div>
 </section>
@@ -491,7 +582,32 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="pr5-5-level" class="level"></p>
 <div id="pr5-5-task" class="task">
-<p>Текст задания.</p>
+<p>Супер! Мы разобрались с базовыми принципами работы в <code>ggplot()</code> — эстетики, слои, геомы. Теперь нарисует что-то более серьезное. Будем теперь работать с полным датасетом <code>diamonds</code>.</p>
+<p>В <code>ggplot2</code> есть функции, которые позволяют прямо при построении графика агрегировать наши данные. Воспользуемся их возможностями.</p>
+<ol type="a">
+<li>Визуализируйте зависимость средней цены бриллиантов (<code>price</code>) от качества огранки (<code>cut</code>).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/5a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Добавьте к средним доверительные интервалы — так визуализация будет более корректно отображать закономерность.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/5b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-5-autocheck" class="autocheck">
 <div id="pr5-5-ir" class="input-requirements">
@@ -508,21 +624,12 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы агрегировать данные внутри <code>ggplot2</code>, есть функция <code>stat_summary()</code></li>
+<li>Если в результате агрегации получается одно значение, его необходимо передавать в аргумент <code>fun</code>. Если несколько, то <code>fun.data</code>.</li>
+<li>Среднее рассчитывается классически. Доверительный интервал можно получить через <code>mean_cl_boot</code>.</li>
+<li>Иногда функция падает и просит установить пакет <code>Hmisc</code>. Он устанавливается как и любой другой пакет через <code>install.packages()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -530,7 +637,43 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr5-6-level" class="level"></p>
 <div id="pr5-6-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализация какая-то слишком простенькая. Давайте добавим еще переменных.</p>
+<ol type="a">
+<li>Сгруппируйте бриллианты по цвету (<code>color</code>), отобразив эту переменную с помощью цвета на графике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Мда… Получилось какое-то дикое месиво. Давайте немного причешем визуализацию. Например, подправим расположение точек, чтобы они лежали не на одной прямой, а рядом друг с другом — ведь небольшие отклонения вправо-влево по оси <code>x</code> для нас не имеют значения, так как по горизонтальной оси расположена категориальная переменная.</p>
+<ol start="2" type="a">
+<li>Расположите средние и доверительные интервалы рядом друг с другом, не потеряв при этом уже заданные группировки.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Стало гораздо приятнее. Однако вы видим, что горизонтальные линии, обозначающие границы доверительных интервалов, слишком длинные и касаются друг друга. Надо обеспечить их личным пространством.</p>
+<p>с. Уменьшите ширину горизонтальный линий на границах доверительных интервалов, чтобы они не касались друг друга.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/6c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-6-autocheck" class="autocheck">
 <div id="pr5-6-ir" class="input-requirements">
@@ -547,21 +690,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>За положение элементов относительно друг друга отвечает аргумент <code>position</code>.</li>
+<li>Чтобы поставить элементы рядом, пригодится функция <code>position_dodge()</code>.</li>
+<li>У каждого геома есть много настроек, которые называются весьма интуитивно. Например, ширину горизонтальный линий errorbar’ов задает аргумент <code>width</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -569,7 +702,31 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr5-7-level" class="level"></p>
 <div id="pr5-7-task" class="task">
-<p>Текст задания.</p>
+<p>Супер! Мы критически близки к успеху! Осталось поработать над оформлением графика.</p>
+<ol type="a">
+<li>Измените тему визуализации на черно-белую, чтобы картинка стала более контрастной.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/7a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>У нас на графике есть легенда, которая занимает прилично так места справа. Сместите её вниз, чтобы пространство графика использовалось более оптимально.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/7b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-7-autocheck" class="autocheck">
 <div id="pr5-7-ir" class="input-requirements">
@@ -586,21 +743,10 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Сменить тему всего графика можно используя предустановленные темы <code>ggplot2</code>, которые задаются через ноывй слой. Есть много тем, однако наиболее важные для нас и часто используемые это <code>theme_bw()</code> и <code>theme_minimal()</code>.</li>
+<li>Тему можно кастомизировать практически как угодно. Для этого есть масса аргументов функции <code>theme()</code>. Так, позицию легенды можно задать через аргумент <code>legend.position</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -608,7 +754,18 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr5-8-level" class="level"></p>
 <div id="pr5-8-task" class="task">
-<p>Текст задания.</p>
+<p>Поработаем над цветовой палитрой. Она неплоха, но некоторые цвета можно спутать, а желтый на белом фоне выглядит крайне неконтрастно.</p>
+<p>Задайте собственную цветовую палитру для графика.</p>
+<p>В примере ниже использован пакет <code>colorspace</code>, в котором есть уже предустановленные цветовые палитры.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-8-autocheck" class="autocheck">
 <div id="pr5-8-ir" class="input-requirements">
@@ -625,21 +782,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Кастомизировать экстетики можно с помощью фукнций <code>scale_.._..()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -647,7 +792,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="pr5-9-level" class="level"></p>
 <div id="pr5-9-task" class="task">
-<p>Текст задания.</p>
+<p>Почти готово! Осталось только подписать оси так, чтобы было понятно, что это такое.</p>
+<p>Задайте русские названия осей и легенды, а также добавьте заголовок, подзаголовок и подпись на график.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-9-autocheck" class="autocheck">
 <div id="pr5-9-ir" class="input-requirements">
@@ -664,21 +819,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы задать различные подписи для графика, пригодится функция <code>labs()</code> (от labels).</p>
 </details>
 </div>
 </section>
@@ -686,7 +827,8 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="pr5-10-level" class="level"></p>
 <div id="pr5-10-task" class="task">
-<p>Текст задания.</p>
+<p>Ну, вот мы и построили публикабельную визуализацию. Чтобы её можно было отправить куда-либо — в журнал, на постер, в презентацию — её необходимо экспортировать.</p>
+<p>Экспортируйте построенный график в формате JPEG, размером 20×20 см в таком разрешении, чтобы он качественно смотрелся в печатном виде.</p>
 </div>
 <div id="pr5-10-autocheck" class="autocheck">
 <div id="pr5-10-ir" class="input-requirements">
@@ -703,21 +845,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Сохранить построенную визуализацию поможет функция <code>ggsave()</code>.</li>
+<li>В ней можно задать все необходимые параметры — размер, разрешение, формат файла.</li>
+<li>Подходящим для печати разрешением считается 600 dpi (dots per inch, точки на дюйм).</li>
+</ul>
 </details>
 </div>
 </section>
@@ -725,7 +857,8 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-10">#11</h3>
 <p><img id="pr5-11-level" class="level"></p>
 <div id="pr5-11-task" class="task">
-<p>Текст задания.</p>
+<p>Мы задали тему графика внутри кода его построения. В таком случае, когда мы начнем строить другой график, будет импользована дефолтная серая тема.</p>
+<p>Установите черно-белую тему на всю сессию работы R.</p>
 </div>
 <div id="pr5-11-autocheck" class="autocheck">
 <div id="pr5-11-ir" class="input-requirements">
@@ -742,21 +875,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Есть крайне полезная функция <code>theme_set()</code>, которая позволяет установить какую-либо тему для всей текущей сессии R — тогда нам не придется задавать тему для каждого графика отдельно.</p>
 </details>
 </div>
 </section>
@@ -764,7 +883,45 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-11">#12</h3>
 <p><img class="level"></p>
 <div id="pr5-12-task" class="task">
-<p>Текст задания.</p>
+<p>Посмотрим на другие способы визуализации разных переменных.</p>
+<ol type="a">
+<li>Визуализируйте распределение цены бриллиантов с помощью гистограммы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>На такой визуализации мы видим распределение цены в целом. Однаконам может быть интересно распределение цены в зависимости от каких-либо других характеристик.</p>
+<ol start="2" type="a">
+<li>Визуализируйте распределение цены бриллиантов в зависимости от их цвета (<code>color</code>). Отобразите группирующую переменную с помощью цвета заливки столбиков гистограммы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Симпатишно, но не то чтобы очень интерпретабельно. Надо найти другой способ отображения группировки.</p>
+<ol start="3" type="a">
+<li>Визуализируйте распределение цены бриллиантов в зависимости от их цвета. Отобразите группирующую переменную так, чтобы каждая группа была расположена на отдельном подграфике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/12c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-12-autocheck" class="autocheck">
 <div id="pr5-12-ir" class="input-requirements">
@@ -781,21 +938,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для отображения гистограммы есть специально обученный геом.</li>
+<li>Значения оси <code>y</code> при построении гистограммы рассчитываются автоматически.</li>
+<li>Разбиение графика на несколько подграфиков называется фасетированием. Для этого придуманы функции <code>facet_..()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -803,7 +950,30 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-12">#13</h3>
 <p><img id="pr5-13-level" class="level"></p>
 <div class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Визуализируйте распределение цены (без разбиений по каким-либо переменным) с помощью графика плотности распределения.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/13a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Разбейте график плоности распределения на подграфики так, чтобы они выстроились в сетку, в которой по строкам будут идти категории качества огранки, а по столбцам — цвета бриллиантов.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/13b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-13-autocheck" class="autocheck">
 <div id="pr5-13-ir" class="input-requirements">
@@ -815,26 +985,11 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-13-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
 </details>
 </div>
 </section>
@@ -842,7 +997,16 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-13">#14</h3>
 <p><img id="pr5-14-level" class="level"></p>
 <div id="pr5-14-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте столбчатую диаграмму, которая будет отображать частоты по переменной <code>color</code> (цвет бриллианта).</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-14-autocheck" class="autocheck">
 <div id="pr5-14-ir" class="input-requirements">
@@ -859,21 +1023,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Здесь может быть два варианта — первый через <code>geom_bar()</code>, второй через <code>geom_col()</code>.</p>
 </details>
 </div>
 </section>
@@ -881,7 +1031,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-14">#15</h3>
 <p><img id="pr5-15-level" class="level"></p>
 <div id="pr5-15-task" class="task">
-<p>Текст задания.</p>
+<p>Если для распределения дискретной переменной у нас не так много возможностей визуализации, то для распределения непрерывной их гораздо больше.</p>
+<p>Визуализируйте распределение цены бриллиантов в зависимости от категории чистоты с помощью ящиков с усами.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-15-autocheck" class="autocheck">
 <div id="pr5-15-ir" class="input-requirements">
@@ -893,7 +1053,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-15-hints">
 <summary>
 Подсказки
@@ -920,7 +1080,42 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr5-16-level" class="level"></p>
 <div id="pr5-16-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Замените ящики с усами на violin plot’ы.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Замените данные с <code>diamonds</code> на <code>diam1000</code> и добавьте на график средние с доверительными интервалами. Используйте <code>geom_pointrange()</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Добавьте на график точки самих наблюдений. Чтобы можно было увидеть, какие точки накладываются друг на друга, задайте им непрозрачность 20%, а чтобы средние с доверительными интервалами выделялись, покрасьте их в синий.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/16c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-16-autocheck" class="autocheck">
 <div id="pr5-16-ir" class="input-requirements">
@@ -937,21 +1132,10 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Форматирование графика, которое не связано с данными, задается вне функции <code>aes()</code> с помощью тех же аргументов.</li>
+<li>[Не]прозрачность — это альфа-канал изображения.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -959,7 +1143,27 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr5-17-level" class="level"></p>
 <div id="pr5-17-task" class="task">
-<p>Текст задания.</p>
+<p>Теперь построим визуализацию корреляционной матрицы. Для этого есть удобная функция <code>ggcorrplot()</code> из пакета <code>ggcorrplot</code>.</p>
+<p>Нам будут нужны новые данные. Будем использовать <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/taia_items.csv">результаты апробации опросника на доверие к искусственному интелекту</a>. В этих данных есть колонка <code>id</code>, которая задает идентификатор респондента, а все оставшиеся — это пункты опросника, относящиеся к разным шкалам.</p>
+<p>Визуализируем корреляции между баллами пунктов по шкале predictability (<code>pr</code>).</p>
+<p>Функция <code>ggcorrplot()</code> обязательным аргументов требует корреляционную матрицу. Построим её с помощью следующего кода:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># загрузим данные</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>taia <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/taia_items.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>taia <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"pr"</span>)) <span class="sc">%&gt;%</span> <span class="fu">cor</span>() <span class="ot">-&gt;</span> cormat</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Полученная матрица <code>cormat</code> и есть необходимая нам корреляционная матрица.</p>
+<p>Визуализируйте взаимосвязи между пунктами шкалы predictability с помощью корреляционный матрицы.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-17-autocheck" class="autocheck">
 <div id="pr5-17-ir" class="input-requirements">
@@ -971,7 +1175,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-17-hints">
 <summary>
 Подсказки
@@ -998,7 +1202,18 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr5-18-level" class="level"></p>
 <div id="pr5-18-task" class="task">
-<p>Текст задания.</p>
+<p>В прицнипе, визуализация построена, однако она весьма нехороша. Логичнее было бы отобразить положительные корреляции холодными оттенками, а отрицательные теплыми, так как мы ожидаем положительные корреляции, а красный сигнализирует нам о том, что что-то идет не так.</p>
+<p>Кроме того, корреляционная матрица симметрична, поэтому можно отобразить только её нижний угол. И хорошо бы добавить сами значения корреляций на график — тогда легенда будет не нужна. Название графика также облегчит понимание, что это такое.</p>
+<p>Настройте отображение матрицы в соответствии с описанием выше.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-18-autocheck" class="autocheck">
 <div id="pr5-18-ir" class="input-requirements">
@@ -1015,21 +1230,14 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Аргументы функции <code>ggcorrplot()</code>, которые пригодятся:</p>
+<ul>
+<li><code>type</code></li>
+<li><code>lab</code></li>
+<li><code>colors</code></li>
+<li><code>show.legend</code></li>
+<li><code>title</code></li>
+</ul>
 </details>
 </div>
 </section>
@@ -1037,7 +1245,28 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr5-19-level" class="level"></p>
 <div id="pr5-19-task" class="task">
-<p>Текст задания.</p>
+<p>На первых двух практиках мы генерировали случайные числа и укладывали их в векторы и матрицы. Это все было не просто так. Мы можем использовать их для визуализации статистических закономерностей.</p>
+<p>С содержательной стороной вопроса познакомимся совсем скоро — пока же изучим техническую.</p>
+<ol type="a">
+<li>Сгенерируйте 20 выборок по 30 наблюдений из нормального распределения (<code>rnorm()</code>) с параметрами <code>mean = 5</code> и <code>sd = 2</code>. Сохраните результат в матрицу <code>sim</code> размером 30×20. Используйте <code>set.seed(999)</code>.</li>
+</ol>
+<ol start="2" type="a">
+<li>Визуализируйтер распределение сгенерированной случайной величины в каждой из выборок на одном графике.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if
+`.name_repair` is omitted as of tibble 2.0.0.
+ℹ Using compatibility `.name_repair`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/19b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="pr5-19-autocheck" class="autocheck">
 <div id="pr5-19-ir" class="input-requirements">
@@ -1054,21 +1283,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Понадобится перевести данные из широкого формата в длинный.</p>
 </details>
 </div>
 </section>
@@ -1076,7 +1291,17 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-19">#20</h3>
 <p><img id="pr5-20-level" class="level"></p>
 <div id="pr5-20-task" class="task">
-<p>Текст задания.</p>
+<p>Чтобы изучать, как работает статистика, нам понадобиться добавлять на графики некоторые дополнительные элементы. В данном случае, было бы интересно увидеть, как соотносятся получившиеся распределения со средним значением <code>mean</code>, которое мы задавали при генерации нашей переменной.</p>
+<p>Добавьте на визуализацию отображение параметра <code>mean</code>, который мы использовали внутри функции <code>rnorm()</code>, с помощью вертикальной линии.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr5_files/figure-html/20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr5-20-autocheck" class="autocheck">
 <div id="pr5-20-ir" class="input-requirements">
@@ -1088,7 +1313,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr5-20-hints">
 <summary>
 Подсказки
@@ -1555,6 +1780,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1621,13 +1873,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1706,10 +1960,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1719,8 +1972,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1733,6 +1995,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1776,6 +2167,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1801,6 +2193,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1862,17 +2280,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pr4.html" class="pagination-link">
+      <a href="./pr4.html" class="pagination-link  aria-label=" p4="" предобработка="" данных"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P4 // Предобработка данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pr6.html" class="pagination-link">
+      <a href="./pr6.html" class="pagination-link" aria-label="P6 // Математика и теория измерений">
         <span class="nav-page-text">P6 // Математика и теория измерений</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

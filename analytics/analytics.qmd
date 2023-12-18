@@ -3,10 +3,12 @@ title: "Analytics // WLM 2023"
 author: "A. Angelgardt"
 format: 
   dashboard:
+    scrolling: false
     logo: pics/logo.png
 ---
 
 ::: {hidden=true}
+
 ## Chunk opts
 ```{r opts, echo=FALSE, eval=TRUE, message=FALSE}
 knitr::opts_chunk$set(echo=FALSE, 
@@ -14,10 +16,9 @@ knitr::opts_chunk$set(echo=FALSE,
                       eval=TRUE,
                       warning=FALSE)
 ```
-:::
 
-::: {hidden=true}
-## Install pkfs
+
+## Install pkgs
 ```{r install-pkgs, eval=FALSE}
 # install.packages(c("rystats", "googlesheets4"))
 # if (!("remotes" %in% installed.packages())) {
@@ -25,23 +26,19 @@ knitr::opts_chunk$set(echo=FALSE,
 # }
 # remotes::install_github("datatrail-jhu/rgoogleclassroom")
 ```
-:::
 
 
-::: {hidden=true}
 ## Libraries
 ```{r pkgs}
 library(rytstat)
 library(googlesheets4)
-# library(rgoogleclassroom)
+library(rgoogleclassroom)
 library(tidyverse)
 theme_set(theme_bw())
+theme_update(legend.position = "bottom")
 library(plotly)
 ```
-:::
 
-::: {hidden=true}
-## Auth
 ```{r auth}
 ## youtube
 ryt_auth('course.wlm@gmail.com')
@@ -49,233 +46,1500 @@ ryt_auth('course.wlm@gmail.com')
 # ryt_has_token()
 # ryt_user()
 
+## gs4 auth
+gs4_auth("a.n.angelgardt@gmail.com")
+
 ## classroom
-# authorize()
+load("/home/nglgrdt/tokens/classroom_token.Rdata")
+auth_from_secret(access_token = token$credentials$access_token,
+                 refresh_token = token$credentials$refresh_token)
 ```
-:::
 
-::: {hidden=true}
+
 ## Load data
-```{r calendar-data}
-read_sheet("https://docs.google.com/spreadsheets/d/1k9QtNjZLzTrbYlkXrWFWxglXTG5kol1DHSPIN9stLiE/edit?usp=sharing",
-           sheet = "План", skip = 2) -> calendar
-calendar %>% 
-  select(date, code_1) %>% 
-  filter(str_detect(code_1, "^L|^P|^C|^A")) %>% 
-  mutate(date = as_date(date, format = "%d/%m/%y")) %>% 
-  rename("code" = "code_1") -> calendar_activities
-
-calendar %>%
-  select(code_2, deadline_soft, deadline_hard) %>%
-  filter(str_detect(code_2, "^Q|^HW")) %>%
-  mutate(deadline_soft = as_datetime(deadline_soft, format = "%d/%m/%y %H:%M") %>% date(),
-         deadline_hard = as_datetime(deadline_hard, format = "%d/%m/%y %H:%M") %>% date()) %>%
-  rename("code" = "code_2") -> calendar_assessment
-```
-
-```{r lectures-get-data-funcs}
-ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14, 
-                                      end_date = Sys.Date(), 
-                                      metrics = c(
-                                        "views", 
-                                        "likes",
-                                        "dislikes",
-                                        "estimatedMinutesWatched",
-                                        "averageViewDuration", 
-                                        "averageViewPercentage"), 
-                                      dimensions = "day", 
-                                      filters = NULL, ...) 
-{
-    require(cli)
-    require(gargle)
-    cli_alert_info("Compose params")
-    metrics <- paste0(metrics, collapse = ",")
-    dimensions <- paste0(dimensions, collapse = ",")
-    out <- request_build(method = "GET", 
-                         params = list(startDate = start_date, 
-                                       endDate = end_date, ids = "channel==MINE",
-                                       dimensions = dimensions, 
-                                       filters = filters, 
-                                       metrics = metrics), 
-                         token = ryt_token(), 
-                         path = "v2/reports", 
-                         base_url = "https://youtubeanalytics.googleapis.com/")
-    cli_alert_info("Send query")
-    ans <- request_retry(out, encode = "json")
-    resp <- response_process(ans)
-    cli_alert_info("Parse result")
-    suppressMessages({
-        data <- tibble(response = resp$rows) %>% 
-          unnest_wider(.data$response, ...)
-    })
-    if (nrow(data) == 0) {
-        cli_alert_warning("Empty answer")
-        return(tibble())
-    }
-    headers <- tibble(response = resp$columnHeaders) %>%
-      unnest_wider(.data$response, ...)
-    data <- set_names(data, headers$name)
-    cli_alert_success(str_glue("Success, loading {nrow(data)} rows."))
-    return(data)
-}
-```
-
-```{r lectures-data}
-ryt_get_videos() %>% 
-  select(id_video_id, title) %>%
-  filter(!str_detect(title, "внутряк")) -> videos
-# video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
-dimensions <- c('day', 'video')
-metrics <- c("views", "likes", "dislikes", "estimatedMinutesWatched", "averageViewDuration", "averageViewPercentage")
-ryt_get_analytics_custom(
-  start_date = '2023-11-06', end_date = Sys.Date(),
-  dimensions = dimensions,
-  metrics    = metrics,
-  filters = str_glue('video=={str_c(head(videos$id_video_id, 500), collapse=",")}'), names_sep = ""
-) %>% 
-  set_names(c(dimensions, metrics)) %>% 
-  left_join(videos, join_by("video" == "id_video_id")) -> basics_by_videos
-```
-
-```{r quiz-data}
-q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("Q"))
-
-q_scores <- tibble()
-for(i in paste0("Q", 1:2)) {
-  if(i == "Q1") {
-    read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = i) %>% 
-    select(ID, matches("q\\d+-\\d+"), TOTAL) -> q_scores
-  } else {
-    read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = i) %>% 
-      select(ID, matches("q\\d+-\\d+"), TOTAL) %>% 
-      full_join(q_scores, join_by(ID)) -> q_scores
-  }
-}
-
-q_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
-                     sheet = "Q") %>% 
-  select(task, level, max_score)
-```
-
-```{r pr-data}
-pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("P"))
+```{r load-data, cache=FALSE}
+source("scripts/get_spec_data.R")
+source("scripts/get_calendar_data.R")
+source("scripts/get_journal_data.R")
+source("scripts/get_yt_data.R")
+source("scripts/get_classroom_data.R")
+aesth <- yaml::read_yaml("aesthetics.yml")
 ```
 
 :::
 
-# L // Лекции
 
-```{r lectures-preproc}
-basics_by_videos %>% 
-  mutate(day = as_date(day)) %>% 
-  filter(str_detect(title, "^L")) %>% 
-  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
-  select(-course, - lab) -> lec
-```
+
+
+
+# L // Лекции {#lec}
+
 
 ## Row {height=50%}
+
 ```{r lectures-graph-by-day}
-(
-  calendar_activities %>% 
-    filter(str_detect(code, "^P")) %>% 
-    ggplot() +
-    geom_line(data = lec,
-              aes(day, views, color = code)) +
-    geom_vline(aes(xintercept = as.numeric(date)),
-               linetype = "dashed",
-               color = "gray70") +
-    geom_text(aes(x = date,
-                  y = 0,
-                  label = code)) +
-    labs(x = "Дата",
-         y = "Количество просмотров",
-         color = "Лекция",
-         title = "Динамика просмотров лекций") +
-    scale_x_date(date_breaks = "week",
-                 date_minor_breaks = "day") +
-    theme(legend.position = "bottom",
-          axis.text.x = element_text(angle = 90))
-  ) %>% ggplotly() %>% 
-  layout(legend = list(orientation = "h", x = .3, y = -.3))
+calendar_activities %>%
+  filter(str_detect(code, "^P")) %>%
+  ggplot() +
+  geom_line(data = lec,
+            aes(day, views, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date)),
+             linetype = "dashed",
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    title = "Динамика просмотров лекций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90))
 ```
+
 
 ## Row {height=50%}
 
 ```{r lectures-graph-cumsum}
-(
-  calendar_activities %>% 
-    filter(str_detect(code, "^P")) %>% 
-    ggplot() +
-    geom_line(data = lec %>% 
-                group_by(video) %>% 
-                mutate(cum_views = cumsum(views)),
-              aes(day, cum_views, color = code)) +
-    geom_vline(aes(xintercept = as.numeric(date)),
-               linetype = "dashed",
-               color = "gray70") +
-    geom_text(aes(x = date,
-                  y = 0,
-                  label = code)) +
-    labs(x = "Дата",
-         y = "Количество просмотров",
-         color = "Лекция",
-         title = "Кумулятивная сумма просмотров лекций") +
-    scale_x_date(date_breaks = "week",
-                 date_minor_breaks = "day") +
-    theme(legend.position = "bottom",
-          axis.text.x = element_text(angle = 90))
-  ) %>% ggplotly() %>% 
-  layout(legend = list(orientation = "h", x = .3, y = -.3))
+calendar_activities %>%
+  filter(str_detect(code, "^P")) %>%
+  ggplot() +
+  geom_line(
+    data = lec %>%
+      group_by(video) %>%
+      mutate(cum_views = cumsum(views)),
+    aes(day, cum_views, color = code)
+  ) +
+  geom_vline(aes(xintercept = as.numeric(date)),
+             linetype = "dashed",
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    title = "Кумулятивная сумма просмотров лекций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90))
 ```
 
 
-# P // Практики
 
-```{r pr-preproc}
-pr_journal %>% 
-  filter(Stream == "main") %>% 
-  select(-Stream) %>% 
-  pivot_longer(-ID, 
-               names_to = "practice",
-               values_to = "present") %>% 
-  separate(practice, into = c("practice", "half"), sep = "-") %>% 
-  group_by(practice, half) %>% 
-  mutate(present = as.numeric(present),
-         practice = factor(practice,
-                           ordered = TRUE,
-                           levels = paste0("P", 1:17))) %>%
-  replace_na(list(present = 0)) %>% 
-  summarise(count = sum(present),
-            percentage = mean(present)) -> pr
-```
+
+
+# P // Практики {#pr}
+
+
+## Row
 
 ```{r pr-graph-presence}
-(
-  pr %>% 
-    ggplot(aes(practice, percentage, color = half, group = half)) +
-    geom_line() +
-    geom_point() +
-    scale_y_continuous(limits = c(0, 1)) +
-    scale_color_discrete(labels = c(`1` = "первая", `2` = "вторая")) +
-    labs(x = "Практика",
-         y = "Доля присутствовавших",
-         color = "Часть практики",
-         title = "Динамика посещения практик") +
-    theme(legend.position = "bottom")
-) %>% ggplotly() %>% 
-  layout(legend = list(orientation = "h", x = 0.3, y = -.3))
+pr %>%
+  ggplot(aes(practice, percentage, color = half, group = half)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 1)) +
+  scale_color_discrete(labels = c(`1` = "первая", `2` = "вторая")) +
+  labs(
+    x = "Практика",
+    y = "Доля присутствовавших",
+    color = "Часть практики",
+    title = "Динамика посещения практик"
+  )
 ```
 
-# Q // Квизы
 
-# HW // Домашки
+## Row
 
-# С // Консультации
+```{r practice-graph-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = pr_videos,
+            aes(day, views, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    linetype = "Дедлайн",
+    title = "Динамика просмотров записей практик"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
 
-# A // Разборы
+
+## Row
+
+```{r pr-graph-cumsum}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(
+    data = pr_videos %>%
+      group_by(video) %>%
+      mutate(cum_views = cumsum(views)),
+    aes(day, cum_views, color = code)
+  ) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    title = "Кумулятивная сумма просмотров записей практик"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+
+
+
+# Q // Квизы {#q}
+
+## Row {.tabset}
+
+```{r q1-ts, eval=FALSE}
+#| title: Q1
+
+q_total_scores %>% 
+  filter(code == "Q1") %>% 
+  ggplot(aes(totalScore100)) +
+  geom_histogram() +
+  scale_x_continuous(breaks = seq(0, 100, by = 5))
+
+q_item_scores %>%
+  filter(str_detect(task_code, "^q1")) %>% 
+  summarise(score = sum(score),
+            .by = c(itemId, task_code, responseId)) %>% 
+  left_join(q_total_scores %>% 
+              filter(code == "Q1"),
+            join_by(responseId))
+  group_by(task_code) %>% 
+  
+  summarise(mean = mean(score)) %>% 
+  
+  left_join(q_spec, join_by())
+
+```
+
+
+# HW // Домашки {#hw}
+
+
+## Row
+
+```{r hws-ns}
+hws_ns %>%
+  ggplot(aes(hw, n)) +
+  geom_col() +
+  geom_text(aes(
+    y = n - 1,
+    label = (n / n_partic * 100) %>% round() %>% paste0("%")
+  ),
+  color = "white") +
+  labs(
+    x = "Домашка",
+    y = "Количество не сдавших",
+    title = "Динамика сдачи домашек",
+    caption = "лейблы отображают процент не сдавших"
+  )
+```
+
+```{r hws-mean-scores}
+hws_scores %>%
+  group_by(hw) %>%
+  summarise(mean = mean(score) %>% round(2),
+            sd = sd(score) %>% round(2)) %>%
+  pivot_longer(-hw,
+               names_to = "stat") %>%
+  ggplot(aes(hw, value, color = stat, group = stat)) +
+  geom_line() +
+  geom_point(shape = 21, size = 2) +
+  geom_hline(yintercept = 20, linetype = "dashed", color = "gray50") + 
+  geom_hline(yintercept = 30, linetype = "dotted", color = "gray50") + 
+  scale_color_discrete(labels = c(mean = "Среднее",
+                                  sd = "Стандартное отклонение")) +
+  labs(
+    x = "Домашка",
+    y = "Значение",
+    color = "Метрика",
+    title = "Средний балл по сданным домашкам"
+  )
+```
+
+
+
+
+## Row {height=100%}
+
+```{r hws-scores}
+hws_scores %>%
+  ggplot(aes(score)) +
+  geom_histogram(binwidth = 1) +
+  facet_wrap(~ hw) +
+  labs(x = "Балл",
+       y = "Количество",
+       title = "Распределение баллов домашек")
+```
+
+
+## Row {.tabset}
+
+```{r hw1-tab}
+#| title: HW1
+
+hw_tasks %>%
+  filter(hw == "HW1") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw2-tab}
+#| title: HW2
+
+hw_tasks %>%
+  filter(hw == "HW2") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw3-tab}
+#| title: HW3
+
+hw_tasks %>%
+  filter(hw == "HW3") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw4-tab}
+#| title: HW4
+
+hw_tasks %>%
+  filter(hw == "HW2") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw5-tab}
+#| title: HW5
+
+hw_tasks %>%
+  filter(hw == "HW5") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw6-tab}
+#| title: HW6
+
+hw_tasks %>%
+  filter(hw == "HW6") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw7-tab}
+#| title: HW7
+
+hw_tasks %>%
+  filter(hw == "HW7") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw8-tab}
+#| title: HW8
+
+hw_tasks %>%
+  filter(hw == "HW8") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw9-tab}
+#| title: HW9
+
+hw_tasks %>%
+  filter(hw == "HW9") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw10-tab}
+#| title: HW10
+
+hw_tasks %>%
+  filter(hw == "HW10") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw11-tab}
+#| title: HW11
+
+hw_tasks %>%
+  filter(hw == "HW11") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw12-tab}
+#| title: HW12
+
+hw_tasks %>%
+  filter(hw == "HW12") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw13-tab}
+#| title: HW13
+
+hw_tasks %>%
+  filter(hw == "HW13") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw14-tab}
+#| title: HW14
+
+hw_tasks %>%
+  filter(hw == "HW14") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw15-tab}
+#| title: HW15
+
+hw_tasks %>%
+  filter(hw == "HW15") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+```{r hw16-tab}
+#| title: HW16
+
+hw_tasks %>%
+  filter(hw == "HW16") %>%
+  drop_na() %>%
+  mutate(score = as.numeric(score)) %>% 
+  left_join(hws_scores %>%
+              rename(total_score = score),
+            join_by(ID, hw)) %>%
+  group_by(task, level) %>%
+  summarise(
+    ns_prop = mean(is.na(score)) %>% round(2),
+    difficulty = (mean(score, na.rm = TRUE) / 2) %>% round(2),
+    discrimination = cor(score, total_score) %>% round(2)
+  ) %>%
+  replace_na(list(discrimination = 0)) %>%
+  pivot_longer(-c(task, level), names_to = "metrics") %>%
+  ggplot(aes(task,
+             value,
+             shape = metrics,
+             fill = level,
+             color = level)) +
+  geom_point(size = 2, alpha = .7) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  # scale_x_continuous(breaks = 1:15) +
+  scale_fill_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      easy = aesth$levels$easy,
+      medium = aesth$levels$medium,
+      hard = aesth$levels$hard,
+      extreme = aesth$levels$extreme
+    )
+  ) +
+  scale_shape_manual(
+    values = c(
+      difficulty = aesth$metrics$difficilty,
+      ns_prop = aesth$metrics$ns_prop,
+      discrimination = aesth$metrics$discrimination
+    )
+  ) +
+  labs(
+    x = "Задание",
+    y = "Значение",
+    shape = "Метрика",
+    fill = "Уровень сложности",
+    color = "Уровень сложности"
+  )
+```
+
+
+
+
+
+# С // Консультации {#c}
+
+
+## Row
+
+```{r c-graph-presence}
+cons %>%
+  ggplot(aes(consultation, percentage, group = 1)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(x = "Консультация",
+       y = "Доля присутствовавших",
+       title = "Динамика посещения консультаций")
+```
+
+
+## Row
+
+```{r c-graph-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = cons_videos,
+            aes(day, views, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    linetype = "Дедлайн",
+    title = "Динамика просмотров записей консультаций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+## Row
+
+```{r c-graph-cumsum}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(
+    data = cons_videos %>%
+      group_by(video) %>%
+      mutate(cum_views = cumsum(views)),
+    aes(day, cum_views, color = code)
+  ) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    title = "Кумулятивная сумма просмотров записей консультаций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+
+
+
+# A // Разборы {#a}
+
+
+## Row
+
+```{r a-graph-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = a_videos,
+            aes(day, views, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    linetype = "Дедлайн",
+    title = "Динамика просмотров разборов"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+## Row
+
+```{r a-graph-cumsum}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(
+    data = a_videos %>%
+      group_by(video) %>%
+      mutate(cum_views = cumsum(views)),
+    aes(day, cum_views, color = code)
+  ) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Количество просмотров",
+    color = "Лекция",
+    title = "Кумулятивная сумма просмотров разборов"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
