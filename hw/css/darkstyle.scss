@@ -218,6 +218,14 @@ code {
   background-color: $gray-05 !important;
 }
 
+code.sourceCode {
+  background-color: inherit !important;
+}
+
+.cell code {
+  background-color: inherit !important;
+}
+
 // Autochecks
 
 .autocheck input {

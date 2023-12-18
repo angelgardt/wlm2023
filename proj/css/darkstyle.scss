@@ -214,8 +214,16 @@ body {
 }
 
 code {
-  background-color: $gray-05 !important;
   color: $gray-e6;
+  background-color: $gray-05 !important;
+}
+
+code.sourceCode {
+  background-color: inherit !important;
+}
+
+.cell code {
+  background-color: inherit !important;
 }
 
 // Autochecks

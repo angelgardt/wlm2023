@@ -211,6 +211,19 @@ body {
   line-height: $body-line-height;
 }
 
+code {
+  color: $gray-200;
+  background-color: $gray-800 !important;
+}
+
+code.sourceCode {
+  background-color: inherit !important;
+}
+
+.cell code {
+  background-color: inherit !important;
+}
+
 img {
   width: 100%;
 }
