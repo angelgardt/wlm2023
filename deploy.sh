@@ -197,7 +197,7 @@ function deployer {
 			echo -e "-----"
 			
 			# print list of docs files
-			ls -Rl docs
+			# ls -Rl docs
 			
 			# print deploy success
 			echo -e "${GREEN}=====${NC}"
