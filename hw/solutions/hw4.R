@@ -1,4 +1,4 @@
-# HW1 // Solutions
+# HW4 // Solutions
 # A. Angelgardt
 
 # MAIN
@@ -13,6 +13,7 @@ super_acc <- readxl::read_xlsx("data/hw4/super.xlsx", "cor_answ", skip = 1)
 
 # 2
 nrow(base_acc); nrow(base_time); nrow(super_acc); nrow(super_time)
+base_acc %>% View()
 
 # 3
 base_acc %>% 
@@ -43,6 +44,8 @@ base_time %>% mutate(group = "base") -> base_time
 super_acc %>% mutate(group = "super") -> super_acc
 super_time %>% mutate(group = "super") -> super_time
 
+super_acc %>% View()
+
 # 7
 base_acc %>% 
   bind_rows(super_acc) -> acc
@@ -68,20 +71,21 @@ acc %>%
                     memory_setsize, 
                     visual_setsize, 
                     group)) -> hybrid
+
 # 10
 hybrid %>% 
   group_by(group, visual_setsize, memory_setsize) %>% 
   summarise(rt_mean = mean(reaction_time),
             rt_min = min(reaction_time),
             rt_max = max(reaction_time),
-            rt_sd = sd(reaction_time))
+            rt_sd = sd(reaction_time)) # %>% print(n = 32)
 
 
 # ADDITIONAL
 
 # 1
 dir("../data/hw4/") %>% 
-  str_remove_all(".xlsx")
+  str_remove_all("\\.xlsx")
 
 # 2
 path <- "../data/hw4/"
@@ -100,22 +104,20 @@ preproc <- function(file, sheet, path_to_folder) {
              into = c("memory_setsize", "visual_setsize"),
              sep = "_stim_") %>%
     mutate(group = file %>%
-             str_remove_all(".xlsx")) %>%
+             str_remove_all("\\.xlsx")) %>%
     return()
 }
 
-preproc("super.xlsx", "Time", path) %>% 
-  bind_rows(
-    preproc("base.xlsx", "Time", path)
-  ) %>% 
-  full_join(preproc("super.xlsx", "cor_answ", path) %>% 
-              bind_rows(
-                preproc("base.xlsx", "cor_answ", path)
-              ), 
-            join_by(id, 
-                    memory_setsize, 
-                    visual_setsize, 
-                    group)) %>% 
+preproc("super.xlsx", "Time", path) %>%
+  bind_rows(preproc("base.xlsx", "Time", path)) %>%
+  full_join(
+    preproc("super.xlsx", "cor_answ", path) %>%
+      bind_rows(preproc("base.xlsx", "cor_answ", path)),
+    join_by(id,
+            memory_setsize,
+            visual_setsize,
+            group)
+  ) %>%
   rename("reaction_time" = "Time",
          "accuracy" = "cor_answ")
 

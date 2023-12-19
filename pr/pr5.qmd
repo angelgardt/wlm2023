@@ -34,7 +34,7 @@ ggplot2::diamonds
 
 :::
 
-### #1
+### #1 {#pr5-1}
 
 <img id="pr5-1-level" class="level"/>
 
@@ -80,7 +80,7 @@ diamonds %>%
 </details>
 :::
 
-### #2
+### #2 {#pr5-2}
 
 <img id="pr5-2-level" class="level"/>
 
@@ -127,7 +127,7 @@ diam1000 %>%
 </details>
 :::
 
-### #3
+### #3 {#pr5-3}
 
 <img id="pr5-3-level" class="level"/>
 
@@ -178,7 +178,7 @@ diam1000 %>%
 </details>
 :::
 
-### #4
+### #4 {#pr5-4}
 
 <img id="pr5-4-level" class="level"/>
 
@@ -218,7 +218,7 @@ diam1000 %>%
 </details>
 :::
 
-### #5
+### #5 {#pr5-5}
 
 <img id="pr5-5-level" class="level"/>
 
@@ -272,7 +272,7 @@ diamonds %>%
 </details>
 :::
 
-### #6
+### #6 {#pr5-6}
 
 <img id="pr5-6-level" class="level"/>
 
@@ -345,7 +345,7 @@ diamonds %>%
 </details>
 :::
 
-### #7
+### #7 {#pr5-7}
 
 <img id="pr5-7-level" class="level"/>
 
@@ -413,7 +413,7 @@ diamonds %>%
 </details>
 :::
 
-### #8
+### #8 {#pr5-8}
 
 <img id="pr5-8-level" class="level"/>
 
@@ -467,7 +467,7 @@ diamonds %>%
 </details>
 :::
 
-### #9
+### #9 {#pr5-9}
 
 <img id="pr5-9-level" class="level"/>
 
@@ -529,7 +529,7 @@ diamonds %>%
 </details>
 :::
 
-### #10
+### #10  {#pr5-10}
 
 <img id="pr5-10-level" class="level"/>
 
@@ -568,7 +568,7 @@ ggsave('graph1.png', width = 20, height = 20, units = 'cm', dpi = 600)
 </details>
 :::
 
-### #11
+### #11 {#pr5-11}
 
 <img id="pr5-11-level" class="level"/>
 
@@ -608,9 +608,9 @@ theme_set(theme_bw())
 
 :::
 
-### #12
+### #12 {#pr5-12}
 
-<img class="level"/>
+<img id="pr5-12-level" class="level"/>
 
 ::: {#pr5-12-task .task}
 Посмотрим на другие способы визуализации разных переменных.
@@ -670,7 +670,7 @@ diamonds %>%
 </details>
 :::
 
-### #13
+### #13 {#pr5-13}
 
 <img id="pr5-13-level" class="level"/>
 
@@ -714,7 +714,7 @@ diamonds %>%
 </details>
 :::
 
-### #14
+### #14 {#pr5-14}
 
 <img id="pr5-14-level" class="level"/>
 
@@ -759,7 +759,7 @@ diamonds %>%
 </details>
 :::
 
-### #15
+### #15 {#pr5-15}
 
 <img id="pr5-15-level" class="level"/>
 
@@ -816,7 +816,7 @@ diamonds %>%
 </details>
 :::
 
-### #16
+### #16 {#pr5-16}
 
 <img id="pr5-16-level" class="level"/>
 
@@ -878,7 +878,7 @@ diam1000 %>%
 </details>
 :::
 
-### #17
+### #17 {#pr5-17}
 
 <img id="pr5-17-level" class="level"/>
 
@@ -947,7 +947,7 @@ ggcorrplot::ggcorrplot(cormat)
 </details>
 :::
 
-### #18
+### #18 {#pr5-18}
 
 <img id="pr5-18-level" class="level"/>
 
@@ -997,7 +997,7 @@ ggcorrplot::ggcorrplot(cormat,
 </details>
 :::
 
-### #19
+### #19 {#pr5-19}
 
 <img id="pr5-19-level" class="level"/>
 
@@ -1049,7 +1049,7 @@ sim %>%
 </details>
 :::
 
-### #20
+### #20 {#pr5-20}
 
 <img id="pr5-20-level" class="level"/>
 
@@ -1112,13 +1112,47 @@ sim %>%
 
 ## Дополнительные задания {#pr5_add}
 
-### #1
+### #1 {#pr5-21}
 
 <img id="pr5-21-level" class="level"/>
 
 ::: {#pr5-21-task .task}
-Текст задания.
+
+Иногда возникает задача изменить дефолтные шрифты на графике. По умолчанию для графиков берется шрифт без засечек --- какой именно, зависит от операционной системы.
+
+Возьмите график, получившийся в [задании 9](#pr5-9), и замените дефолтный шрифт на шрифт с засечками Times New Roman.
+
 :::
+
+```{r 21}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
+                                                        unique() %>%
+                                                        length())) +
+  labs(
+    x = "Качество огранки",
+    y = "Цена",
+    color = "Цвет",
+    title = "Зависимость цены бриллианта от его характеристик",
+    subtitle = "Качество огранки и цвет",
+    caption = "отображен 95% доверительный интервал"
+  ) +
+  theme(
+    text = element_text(family = "Times New Roman")
+  )
+```
 
 ::: {#pr5-21-autocheck .autocheck}
 ::: {#pr5-21-ir .input-requirements}
@@ -1138,34 +1172,57 @@ sim %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Шрифты являются частью темы, поэтому настраиваются через функцию `theme()`.
+* У функции `theme()` есть аргумент `text`, который принимает результат работы функции `element_text()`.
+* У функции `element_text()` есть аргумент `family`, через который можно указать семейство шрифтов, которое необходимо использовать при построении графика.
 
 </details>
 :::
 
-### #2
+
+
+### #2 {#pr5-22}
 
 <img id="pr5-22-level" class="level"/>
 
 ::: {#pr5-22-task .task}
-Текст задания.
+
+Настроить можно не только тип шрифта, но и кегль.
+
+Учеличьте кегль подписей оси `y` до 12.
+
 :::
+
+```{r 22}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
+                                                        unique() %>%
+                                                        length())) +
+  labs(
+    x = "Качество огранки",
+    y = "Цена",
+    color = "Цвет",
+    title = "Зависимость цены бриллианта от его характеристик",
+    subtitle = "Качество огранки и цвет",
+    caption = "отображен 95% доверительный интервал"
+  ) +
+  theme(
+    text = element_text(family = "Times New Roman"),
+    axis.text.y = element_text(size = 12)
+  )
+```
 
 ::: {#pr5-22-autocheck .autocheck}
 ::: {#pr5-22-ir .input-requirements}
@@ -1185,34 +1242,57 @@ sim %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* У функции `theme()` есть еще ряд аргументов. Например, можно задать отдельно параметры названия осей (`axis.title.x`, `axis.title.y`) и подписей значений осей (`axis.text.x`, `axis.text.y`)
+* Эти аргументы также принимают результат работы функции `element_text()`.
+* У функции `element_text()` есть аргумент `size`.
 
 </details>
 :::
 
-### #3
+### #3 {#pr5-23}
 
 <img id="pr5-23-level" class="level"/>
 
 ::: {#pr5-23-task .task}
-Текст задания.
+
+А ещё можно развернуть подписи осей на какой-то угол.
+
+Поверните подписи оси `x` на 90 градусов.
+
 :::
+
+
+```{r 23}
+diamonds %>%
+  ggplot(aes(cut, price, color = color)) +
+  stat_summary(
+    fun.data = mean_cl_boot,
+    geom = "errorbar",
+    position = pd,
+    width = .4
+  ) +
+  stat_summary(fun = mean,
+               geom = "point",
+               position = pd) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = colorspace::rainbow_hcl(diamonds$color %>%
+                                                        unique() %>%
+                                                        length())) +
+  labs(
+    x = "Качество огранки",
+    y = "Цена",
+    color = "Цвет",
+    title = "Зависимость цены бриллианта от его характеристик",
+    subtitle = "Качество огранки и цвет",
+    caption = "отображен 95% доверительный интервал"
+  ) +
+  theme(
+    text = element_text(family = "Times New Roman"),
+    axis.text.y = element_text(size = 12),
+    axis.text.x = element_text(angle = 90)
+  )
+```
 
 ::: {#pr5-23-autocheck .autocheck}
 ::: {#pr5-23-ir .input-requirements}
@@ -1227,7 +1307,7 @@ sim %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-23-hints">
 
 <summary>Подсказки</summary>
@@ -1253,13 +1333,28 @@ sim %>%
 </details>
 :::
 
-### #4
+### #4 {#pr5-24}
 
 <img id="pr5-24-level" class="level"/>
 
 ::: {#pr5-24-task .task}
-Текст задания.
+
+При отображении распределений бывает полезно визуализировать, какую часть из распределения все переменной составляет распределение в какой-то конкретной группе.
+
+* Возьмите график из [задания 12с](#pr5-12) и добавьте в фасеты распределение цены позади распределений в каждой группе по цвету.
+Используйте для общей гистограммы цвет `gray70`.
+* Чтобы гистограммы в каждой группе лучше отличались от общей гистограммы, раскрасьте их по переменной `color`.
+* Скройте легенду, так как цвет дублирует деление по фасетам и не несет дополнительной нагрузки.
+
 :::
+
+```{r 24}
+ggplot() +
+  geom_histogram(data = diamonds %>% select(-color), aes(price), fill = "gray70") +
+  geom_histogram(data = diamonds, aes(price, fill = color)) +
+  facet_wrap(~ color) +
+  guides(fill = "none")
+```
 
 ::: {#pr5-24-autocheck .autocheck}
 ::: {#pr5-24-ir .input-requirements}
@@ -1279,34 +1374,33 @@ sim %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Понадобится сделать два слоя с гистограммами, в каждом из которых необходимо отдельно задать датасет.
+* На слое с общей гистограммой необходимо удалить колонку `color`, чтобы невозможно было поделить наблюдения по группам.
+* Скрыть переменную из легенды можно с помощью функции `guides()`.
 
 </details>
 :::
 
-### #5
+### #5 {#pr5-25}
 
 <img id="pr5-25-level" class="level"/>
 
 ::: {#pr5-25-task .task}
-Текст задания.
+
+В [задании 14](#pr5-14) мы построили столбчатую диаграмму, в которой столбцы располагаются в порядке, заданном в переменной `color` --- это упорядоченный вектор. Однако в ряде случаев бывает разумно расположить столбцы в порядке частот.
+
+Задайте порядок отображения столбцов диаграммы по частоте от наибольшей до наименьшей.
+
 :::
+
+```{r 25}
+diamonds %>%
+  summarise(n = n(),
+            .by = color) %>%
+  ggplot(aes(fct_rev(fct_reorder(color, n)), n)) +
+  geom_col() +
+  labs(x = "color")
+```
 
 ::: {#pr5-25-autocheck .autocheck}
 ::: {#pr5-25-ir .input-requirements}
@@ -1326,34 +1420,33 @@ sim %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для работы с факторными переменными в пакете `forcats`, который является частью `tidyverse`, есть много функций. Две, которые пригодятся тут: `fct_reorder()` и `fct_rev()`.
+* Понадобиться вариант построения графика через `geom_col()`.
 
 </details>
 :::
 
-### #6
+### #6 {#pr5-26}
 
 <img id="pr5-26-level" class="level"/>
 
 ::: {#pr5-26-task .task}
-Текст задания.
+
+И добавим еще один слой на столбчатую диаграмму. По оси `y` отображена частота --- это да, однако не всегда можно достаточно точно определить, сколько именно бриллиантов того или итого цвета.
+
+Добавьте лейблы на столбцы диаграммы, на которых будет указанно количество бриллиантов в каждой группе по цвету.
+
 :::
+
+```{r 26}
+diamonds %>%
+  summarise(n = n(),
+            .by = color) %>%
+  ggplot(aes(fct_rev(fct_reorder(color, n)), n)) +
+  geom_col() +
+  geom_label(aes(label = n)) +
+  labs(x = "color")
+```
 
 ::: {#pr5-26-autocheck .autocheck}
 ::: {#pr5-26-ir .input-requirements}
@@ -1371,36 +1464,40 @@ sim %>%
 ::: hints-wrapper
 <details class="hints" id="pr5-26-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`geom_label()`
 
 </details>
 :::
 
-### #7
+### #7  {#pr5-27}
 
 <img id="pr5-27-level" class="level"/>
 
 ::: {#pr5-27-task .task}
-Текст задания.
+
+Совсем скоро мы начнем изучать статистические модели, и будем изучать, насколько они хорошо работают на тех или иных данных. Для этого будем рисовать графики, на которых отображены значения из данных и предсказанные значения модели. Очень много не вполне понятных слов --- пока познакомимся с технической стороной вопроса.
+
+Ниже код, который строит модель линейной регрессии, которая позволяет пресказывать значение цены бриллиант по его весу. Скопируйте код и выполните его. В окружении должен создаться объект `fit`.
+
+```{r, echo=TRUE}
+fit <- lm(price ~ carat, diamonds)
+```
+
+`fit` представляет собой список, в котором есть вектор `fitted.values`, который содержит значения, предсказанные моделью.
+
+Постройте диаграмму рассеяния по переменным `carat` и `price` и добавьте на неё с помощью линии предсказанные моделью значения.
+
 :::
+
+```{r 27}
+diamonds %>% 
+    ggplot(aes(carat, price)) +
+    geom_point() +
+    geom_line(aes(y = fit$fitted.values),
+              color = "red")
+```
 
 ::: {#pr5-27-autocheck .autocheck}
 ::: {#pr5-27-ir .input-requirements}
@@ -1415,7 +1512,7 @@ sim %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-27-hints">
 
 <summary>Подсказки</summary>
@@ -1441,13 +1538,26 @@ sim %>%
 </details>
 :::
 
-### #8
+### #8 {#pr5-28}
 
 <img id="pr5-28-level" class="level"/>
 
 ::: {#pr5-28-task .task}
-Текст задания.
+
+Еще один тип графика, который может встретиться в работе исследователя --- это Line Plot. Есть [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/pr5-28.csv) о средней продолжительности просмотра лекций данного курса на 14/12/2023.
+
+Визуализируйте динамику изменения средней продолжительности просмотра по дням с начала курса до 13/12/2023.
+
 :::
+
+```{r 28}
+lecs <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr5/pr5-28.csv")
+
+lecs %>% 
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-28-autocheck .autocheck}
 ::: {#pr5-28-ir .input-requirements}
@@ -1462,7 +1572,7 @@ sim %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-28-hints">
 
 <summary>Подсказки</summary>
@@ -1488,13 +1598,30 @@ sim %>%
 </details>
 :::
 
-### #9
+### #9 {#pr5-29}
 
 <img id="pr5-29-level" class="level"/>
 
 ::: {#pr5-29-task .task}
-Текст задания.
+
+Если на графике случает что-то интересное, будет полезно подсветить это событие. Так, на графике выше мы видим яркий пик роста средней продолжительности просмотра лекции L2.2 7/12/2023. Давайте это обозначим.
+
+Подпишите пик датой, когда он произошел.
+
 :::
+
+```{r 29}
+lecs %>%
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  annotate(
+    x = as_date("2023-12-07"),
+    y = 4511,
+    geom = "text",
+    label = "7/12/2023"
+  ) +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-29-autocheck .autocheck}
 ::: {#pr5-29-ir .input-requirements}
@@ -1512,36 +1639,45 @@ sim %>%
 ::: hints-wrapper
 <details class="hints" id="pr5-29-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`annotate()`
 
 </details>
 :::
 
-### #10
+### #10 {#pr5-30}
 
 <img id="pr5-30-level" class="level"/>
 
 ::: {#pr5-30-task .task}
-Текст задания.
+
+Подсветить интересные события на графике можно не только с помощью подписей, но и выделив область, на которую попало интересное событие. Мы видим, что для L1.1 27/11/2023 случился резкий рост глубины просмотра --- давайте это выделим красным прямоугольником.
+
+Добавьте слой, на котором будет отображен полупрозрачный прямоугольник, который будет выделять пик роста средней продолжительности просмотра 27/11/2023.
+
 :::
+
+```{r 30}
+lecs %>%
+  ggplot(aes(day, averageViewDuration, color = code)) +
+  geom_line() +
+  annotate(
+    xmin = as_date("2023-11-26"),
+    xmax = as_date("2023-11-28"),
+    ymin = 3100,
+    ymax = 3700,
+    geom = "rect",
+    fill = "red",
+    alpha = 0.3
+  ) +
+  annotate(
+    x = as_date("2023-12-07"),
+    y = 4511,
+    geom = "text",
+    label = "7/12/2023") +
+  theme(legend.position = "bottom")
+```
 
 ::: {#pr5-30-autocheck .autocheck}
 ::: {#pr5-30-ir .input-requirements}
@@ -1556,7 +1692,7 @@ sim %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr5-30-hints">
 
 <summary>Подсказки</summary>
