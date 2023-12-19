@@ -893,7 +893,7 @@ taia %>%
 :::
 
 ```{r 12, eval=TRUE}
-taia <- read_csv("../data/hw5/taia_short.csv")
+taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/taia_short.csv")
 
 theme_set(theme_bw())
 
@@ -1082,7 +1082,7 @@ read_csv("../data/hw5/features.csv") %>%
 ```
 
 ```{r 15, eval=TRUE}
-vowels <- read_csv("../data/hw5/vowels.csv")
+vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/vowels.csv")
 
 vowels %>% 
   ggplot(aes(f2, f1,
