@@ -5,13 +5,16 @@
 
 # 1
 library(tidyverse)
-share <- read_delim("../data/hw5/share.csv", delim = " ", locale = locale(decimal_mark = ","))
+share <- read_delim("data/hw5/share.csv", delim = " ", locale = locale(decimal_mark = ","))
 
 share %>% 
   ggplot(aes(as_factor(setsize), time1)) +
   stat_summary(fun = mean, geom = "point")
 
 # 2
+
+pd = position_dodge(.7)
+
 share %>% 
   filter(trialtype != "both") %>% 
   ggplot(aes(as_factor(setsize), time1,
