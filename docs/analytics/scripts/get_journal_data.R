@@ -70,7 +70,7 @@ hw_journal %>%
 hw_journal %>% 
   filter(Stream == "main") %>%
   select(-Stream) %>% 
-  pivot_longer(cols = -c(ID),
+  pivot_longer(cols = -ID,
                names_to = "hw",
                values_to = "score") %>% 
   filter(score != "NS") %>% 
@@ -79,7 +79,7 @@ hw_journal %>%
                      ordered = TRUE,
                      levels = paste0("HW", 1:16))) -> hws_scores
 
-## hw-omework sheets
+## homework sheets
 sheet_names("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing") %>% 
   str_extract("^HW\\d+") %>% 
   na.omit() -> hws_sheets

@@ -47,6 +47,7 @@ ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14,
 
 
 
+
 ryt_get_videos() %>% 
   select(id_video_id, title) %>%
   filter(!str_detect(title, "внутряк")) -> videos
