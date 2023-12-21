@@ -205,7 +205,7 @@ function deployer {
 				echo -e "-----"
 			fi
 			
-			
+			  
 			# copy analytics files
 			cp -R -v analytics/* docs/analytics
 			echo -e "-----"
@@ -217,6 +217,7 @@ function deployer {
 			echo -e "-----"
 			echo -e "${BLUE}Extras removed${NC}"
 			echo -e "-----"
+			  
 			
 			# print list of docs files
 			# ls -Rl docs
