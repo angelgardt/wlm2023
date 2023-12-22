@@ -3,7 +3,7 @@ title: "Analytics // WLM 2023"
 author: "A. Angelgardt"
 format: 
   dashboard:
-    scrolling: false
+    scrolling: true
     logo: pics/logo.png
 ---
 
@@ -57,7 +57,7 @@ auth_from_secret(access_token = token$credentials$access_token,
 
 
 ## Load data
-```{r load-data, cache=FALSE}
+```{r load-data, cache=TRUE}
 source("scripts/get_spec_data.R")
 source("scripts/get_calendar_data.R")
 source("scripts/get_journal_data.R")
@@ -75,9 +75,9 @@ aesth <- yaml::read_yaml("aesthetics.yml")
 # L // Лекции {#lec}
 
 
-## Row {height=50%}
+## Row
 
-```{r lectures-graph-by-day}
+```{r lectures-views-by-day}
 calendar_activities %>%
   filter(str_detect(code, "^P")) %>%
   ggplot() +
@@ -98,13 +98,18 @@ calendar_activities %>%
   scale_x_date(date_breaks = "week",
                date_minor_breaks = "day") +
   theme(legend.position = "bottom",
-        axis.text.x = element_text(angle = 90))
+        axis.text.x = element_text(angle = 90)) -> lec_views_dynamics
+
+lec_views_dynamics %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
-## Row {height=50%}
-
-```{r lectures-graph-cumsum}
+```{r lectures-graph-cumsum-views}
 calendar_activities %>%
   filter(str_detect(code, "^P")) %>%
   ggplot() +
@@ -129,9 +134,80 @@ calendar_activities %>%
   scale_x_date(date_breaks = "week",
                date_minor_breaks = "day") +
   theme(legend.position = "bottom",
-        axis.text.x = element_text(angle = 90))
+        axis.text.x = element_text(angle = 90)) -> lec_cumsum_views
+
+lec_cumsum_views %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
+## Row
+
+```{r lectures-ave-view-dur-by-day}
+calendar_activities %>%
+  filter(str_detect(code, "^P")) %>%
+  ggplot() +
+  geom_line(data = lec,
+            aes(day, averageViewDuration, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date)),
+             linetype = "dashed",
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя продолжительность\nвоспроизведения видео, с",
+    color = "Лекция",
+    title = "Абсолютная продолжительность просмотра лекций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> lec_ave_views_dur
+
+lec_ave_views_dur %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+```{r lectures-ave-view-perc-by-day}
+calendar_activities %>%
+  filter(str_detect(code, "^P")) %>%
+  ggplot() +
+  geom_line(data = lec,
+            aes(day, averageViewPercentage, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date)),
+             linetype = "dashed",
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя доля\nвоспроизведения видео, %",
+    color = "Лекция",
+    title = "Относительная продолжительность просмотра лекций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> lec_ave_views_perc
+
+lec_ave_views_perc %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
 
 
 
@@ -141,7 +217,7 @@ calendar_activities %>%
 
 ## Row
 
-```{r pr-graph-presence}
+```{r pr-graph-visits}
 pr %>%
   ggplot(aes(practice, percentage, color = half, group = half)) +
   geom_line() +
@@ -153,13 +229,20 @@ pr %>%
     y = "Доля присутствовавших",
     color = "Часть практики",
     title = "Динамика посещения практик"
-  )
+  ) -> pr_visits
+
+pr_visits %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
 ## Row
 
-```{r practice-graph-by-day}
+```{r practice-views-by-day}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -174,7 +257,7 @@ calendar_assessment %>%
   labs(
     x = "Дата",
     y = "Количество просмотров",
-    color = "Лекция",
+    color = "Практика",
     linetype = "Дедлайн",
     title = "Динамика просмотров записей практик"
   ) +
@@ -184,13 +267,19 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> pr_vids_views
+
+pr_vids_views %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
-## Row
 
-```{r pr-graph-cumsum}
+```{r practice-views-cumsum}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -209,7 +298,8 @@ calendar_assessment %>%
   labs(
     x = "Дата",
     y = "Количество просмотров",
-    color = "Лекция",
+    color = "Практика",
+    linetype = "Дедлайн",
     title = "Кумулятивная сумма просмотров записей практик"
   ) +
   scale_x_date(date_breaks = "week",
@@ -218,7 +308,90 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> pr_vids_cumsum_views
+
+pr_vids_cumsum_views %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+## Row
+
+```{r practice-ave-view-dur-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = pr_videos,
+            aes(day, averageViewDuration, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline,),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя продолжительность\nвоспроизведения видео, с",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Абсолютная продолжительность просмотра практик"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> pr_ave_views_dur
+
+pr_ave_views_dur %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+```{r practice-ave-view-perc-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = pr_videos,
+            aes(day, averageViewPercentage, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя доля\nвоспроизведения видео, %",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Относительная продолжительность просмотра практик"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> pr_ave_views_perc
+
+pr_ave_views_perc %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
@@ -273,7 +446,14 @@ hws_ns %>%
     y = "Количество не сдавших",
     title = "Динамика сдачи домашек",
     caption = "лейблы отображают процент не сдавших"
-  )
+  ) -> hw_ns_graph
+
+hw_ns_graph %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hws-mean-scores}
@@ -295,13 +475,20 @@ hws_scores %>%
     y = "Значение",
     color = "Метрика",
     title = "Средний балл по сданным домашкам"
-  )
+  ) -> hw_mean_score
+
+hw_mean_score %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
 
 
-## Row {height=100%}
+## Row
 
 ```{r hws-scores}
 hws_scores %>%
@@ -310,7 +497,14 @@ hws_scores %>%
   facet_wrap(~ hw) +
   labs(x = "Балл",
        y = "Количество",
-       title = "Распределение баллов домашек")
+       title = "Распределение баллов домашек") -> hw_score_dist
+
+hw_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
@@ -380,7 +574,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw1_stats
+
+hw1_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw2-tab}
@@ -447,7 +648,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw2_stats
+
+hw2_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw3-tab}
@@ -514,7 +722,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw3_stats
+
+hw3_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw4-tab}
@@ -581,7 +796,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw4_stats
+
+hw4_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw5-tab}
@@ -648,7 +870,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw5_stats
+
+hw5_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw6-tab}
@@ -715,7 +944,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw6_stats
+
+hw6_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw7-tab}
@@ -782,7 +1018,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw7_stats
+
+hw7_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw8-tab}
@@ -849,7 +1092,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw8_stats
+
+hw8_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw9-tab}
@@ -916,7 +1166,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw9_stats
+
+hw9_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw10-tab}
@@ -983,7 +1240,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw10_stats
+
+hw10_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw11-tab}
@@ -1050,7 +1314,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw11_stats
+
+hw11_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw12-tab}
@@ -1117,7 +1388,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw12_stats
+
+hw12_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw13-tab}
@@ -1184,7 +1462,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw13_stats
+
+hw13_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw14-tab}
@@ -1251,7 +1536,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw14_stats
+
+hw14_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw15-tab}
@@ -1318,7 +1610,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw15_stats
+
+hw15_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 ```{r hw16-tab}
@@ -1385,7 +1684,14 @@ hw_tasks %>%
     shape = "Метрика",
     fill = "Уровень сложности",
     color = "Уровень сложности"
-  )
+  ) -> hw16_stats
+
+hw16_stats %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
@@ -1405,13 +1711,20 @@ cons %>%
   scale_y_continuous(limits = c(0, 1)) +
   labs(x = "Консультация",
        y = "Доля присутствовавших",
-       title = "Динамика посещения консультаций")
+       title = "Динамика посещения консультаций") -> cons_visits
+
+cons_visits %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
 ## Row
 
-```{r c-graph-by-day}
+```{r cons-views-by-day}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -1436,13 +1749,18 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> cons_views
+
+cons_views %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
-## Row
-
-```{r c-graph-cumsum}
+```{r cons-views-cumsum}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -1470,9 +1788,91 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> cons_cumsum
+
+cons_cumsum %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
+
+## Row
+
+```{r cons-ave-view-dur-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = cons_videos,
+            aes(day, averageViewDuration, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline,),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя продолжительность\nвоспроизведения видео, с",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Абсолютная продолжительность просмотра конслультаций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> cons_ave_views_dur
+
+cons_ave_views_dur %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+```{r cons-ave-view-perc-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = cons_videos,
+            aes(day, averageViewPercentage, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя доля\nвоспроизведения видео, %",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Относительная продолжительность просмотра консультаций"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> cons_ave_views_perc
+
+cons_ave_views_perc %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
 
 
 
@@ -1482,7 +1882,7 @@ calendar_assessment %>%
 
 ## Row
 
-```{r a-graph-by-day}
+```{r a-views-by-day}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -1507,13 +1907,18 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> a_views
+
+a_views %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
-## Row
-
-```{r a-graph-cumsum}
+```{r a-views-cumsum}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -1541,5 +1946,88 @@ calendar_assessment %>%
     values = c(hard = "dashed", soft = "dotted"),
     labels = c(hard = "жёсткий", soft = "мягкий")
   ) +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 90)) -> a_views_cumsum
+
+a_views_cumsum %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+## Row
+
+```{r a-ave-view-dur-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = a_videos,
+            aes(day, averageViewDuration, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline,),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя продолжительность\nвоспроизведения видео, с",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Абсолютная продолжительность просмотра разборов"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> a_ave_views_dur
+
+a_ave_views_dur %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+```{r a-ave-view-perc-by-day}
+calendar_assessment %>%
+  filter(str_detect(code, "^HW")) %>%
+  ggplot() +
+  geom_line(data = a_videos,
+            aes(day, averageViewPercentage, color = code)) +
+  geom_vline(aes(xintercept = as.numeric(date),
+                 linetype = deadline),
+             color = "gray70") +
+  geom_text(aes(x = date,
+                y = 0,
+                label = code)) +
+  labs(
+    x = "Дата",
+    y = "Средняя доля\nвоспроизведения видео, %",
+    color = "Практика",
+    linetype = "Дедлайн",
+    title = "Относительная продолжительность просмотра разборов"
+  ) +
+  scale_x_date(date_breaks = "week",
+               date_minor_breaks = "day") +
+  scale_linetype_manual(
+    values = c(hard = "dashed", soft = "dotted"),
+    labels = c(hard = "жёсткий", soft = "мягкий")
+  ) +
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90)) -> a_ave_views_perc
+
+a_ave_views_perc %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```

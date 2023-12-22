@@ -196,8 +196,31 @@ function deployer {
 			echo -e "${BLUE}Extras removed${NC}"
 			echo -e "-----"
 			
+			# check if analytics dir exists
+			# create if not
+			if [ ! -d docs/analytics ]; then
+				mkdir docs/analytics
+				echo -e "-----"
+				echo -e "${GRAY}docs/analytics ${BLUE}created${NC}"
+				echo -e "-----"
+			fi
+			
+			  
+			# copy analytics files
+			cp -R -v analytics/* docs/analytics
+			echo -e "-----"
+			echo -e "${GRAY}analytics ${BLUE}copied${NC}"
+			echo -e "-----"
+			
+			# remove extras
+			find docs/analytics -name "*.qmd" -type f -delete
+			echo -e "-----"
+			echo -e "${BLUE}Extras removed${NC}"
+			echo -e "-----"
+			  
+			
 			# print list of docs files
-			ls -Rl docs
+			# ls -Rl docs
 			
 			# print deploy success
 			echo -e "${GREEN}=====${NC}"
