@@ -95,7 +95,61 @@ $$|x| \geq a \Rightarrow x \leq -a \wedge x \geq a \Leftrightarrow x \in (-\inft
 
 ### Свойства производной {#formulas_deriv_props}
 
+$$c' = 0, \, c = \const$$
+$$(Cu)' = Cu'$$
+$$(u + v)' = u' + v'$$
+$$(uv)' = u'v + uv'$$
+$$\Big( \frac{u}{v} \Big)' = \frac{u'v - uv'}{v^2}$$
+$$\Big(u\big(v(x)\big)\Big)' = u'(v) \cdot v'(x)$$
+
+
 ### Производные элементарных функций {#formulas_deriv_funcs}
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$(x^n)' = nx^{n-1}$$
+    $$(a^x)' = a^x \ln a$$
+    $$(e^x)' = e^x$$
+    </td>
+    <td valign="top">
+    $$(\log_a x)' = \frac{1}{x \ln a}$$
+    $$(\ln_a x)' = \frac{1}{x}$$
+    $$(\sqrt{x})' = \frac{1}{2\sqrt{x}}$$
+    </td>
+   </tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$(\sin x)' = \cos x$$
+    $$(\cos x)' = -\sin x$$
+    </td>
+    <td valign="top">
+    $$(\tan x)' = \frac{1}{\cos^2 x}$$
+    $$(\cot x)' = \frac{1}{\sin^2 x}$$
+    </td>
+   </tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="5">
+   <tr> 
+    <td width="50%" valign="top">
+    $$(\arcsin x)' = \frac{1}{\sqrt{1 - x^2}}$$
+    $$(\arccos x)' = -\frac{1}{\sqrt{1 - x^2}}$$
+    $$(\arctan x)' = \frac{1}{1 + x^2}$$
+    $$(\text{arccot}\, x)' = -\frac{1}{1 + x^2}$$
+    </td>
+    <td valign="top">
+    $$(\sinh x)' = \cosh x$$
+    $$(\cosh x)' = \sinh x$$
+    $$(\tanh x)' = \frac{1}{\cosh^2 x}$$
+    $$(\coth x)' = -\frac{1}{\sinh^2 x}$$
+    </td>
+   </tr>
+</table>
+
 
 ## Тригонометрия {#formulas_trig}
 
