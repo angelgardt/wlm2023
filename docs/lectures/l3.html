@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 3&nbsp; L3. Математика для анализа данных</title>
+<title>L // WLM 2023 - 3&nbsp; L3 // Математика для анализа данных</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,6 +91,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -126,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3. Математика для анализа данных</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -167,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3. Математика для анализа данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -258,14 +280,40 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#дискретная-математика" id="toc-дискретная-математика" class="nav-link active" data-scroll-target="#дискретная-математика"><span class="header-section-number">3.1</span> Дискретная математика</a>
+  <ul class="collapse">
+  <li><a href="#алгебра-логики" id="toc-алгебра-логики" class="nav-link" data-scroll-target="#алгебра-логики"><span class="header-section-number">3.1.1</span> Алгебра логики</a></li>
+  <li><a href="#элементы-теории-множеств" id="toc-элементы-теории-множеств" class="nav-link" data-scroll-target="#элементы-теории-множеств"><span class="header-section-number">3.1.2</span> Элементы теории множеств</a></li>
+  <li><a href="#элементы-комбинаторики" id="toc-элементы-комбинаторики" class="nav-link" data-scroll-target="#элементы-комбинаторики"><span class="header-section-number">3.1.3</span> Элементы комбинаторики</a></li>
+  </ul></li>
+  <li><a href="#элементы-математического-анализа" id="toc-элементы-математического-анализа" class="nav-link" data-scroll-target="#элементы-математического-анализа"><span class="header-section-number">3.2</span> Элементы математического анализа</a>
+  <ul class="collapse">
+  <li><a href="#последовательности" id="toc-последовательности" class="nav-link" data-scroll-target="#последовательности"><span class="header-section-number">3.2.1</span> Последовательности</a></li>
+  <li><a href="#предел-последовательности" id="toc-предел-последовательности" class="nav-link" data-scroll-target="#предел-последовательности"><span class="header-section-number">3.2.2</span> Предел последовательности</a></li>
+  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="header-section-number">3.2.3</span> Функции</a></li>
+  <li><a href="#производная" id="toc-производная" class="nav-link" data-scroll-target="#производная"><span class="header-section-number">3.2.4</span> Производная</a></li>
+  <li><a href="#частная-производная" id="toc-частная-производная" class="nav-link" data-scroll-target="#частная-производная"><span class="header-section-number">3.2.5</span> Частная производная</a></li>
+  <li><a href="#интеграл" id="toc-интеграл" class="nav-link" data-scroll-target="#интеграл"><span class="header-section-number">3.2.6</span> Интеграл</a></li>
+  </ul></li>
+  <li><a href="#элементы-линейной-алгебры" id="toc-элементы-линейной-алгебры" class="nav-link" data-scroll-target="#элементы-линейной-алгебры"><span class="header-section-number">3.3</span> Элементы линейной алгебры</a>
+  <ul class="collapse">
+  <li><a href="#системы-линейных-уравнений" id="toc-системы-линейных-уравнений" class="nav-link" data-scroll-target="#системы-линейных-уравнений"><span class="header-section-number">3.3.1</span> Системы линейных уравнений</a></li>
+  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="header-section-number">3.3.2</span> Векторы</a></li>
+  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="header-section-number">3.3.3</span> Матрицы</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3. Математика для анализа данных</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></h1>
 </div>
 
 
@@ -282,8 +330,805 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<section id="дискретная-математика" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="дискретная-математика"><span class="header-section-number">3.1</span> Дискретная математика</h2>
+<section id="алгебра-логики" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="алгебра-логики"><span class="header-section-number">3.1.1</span> Алгебра логики</h3>
+<p>Логика исследует закономерности мышления, но делает это отлично от того, как этим занимается, например, психология. Формальная логика абстрагируется от связей мышления с какими-либо сторонами сознания и сосредотачивается на логической непротиворечивости и последовательности мышления. Таким образом, <strong>формальная логика — это наука об общих структурах правильного мышления в его языковой форме</strong> (<span class="citation" data-cites="segeth85">Зегет (<a href="references.html#ref-segeth85" role="doc-biblioref">1985</a>)</span>).</p>
+<p>Логика — это нормативная наука, то есть она определяет, как оно должно быть, в то время как, например, психология исследуется как оно есть и как и почему логические законы нарушаются.</p>
+<section id="высказывания" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="высказывания"><span class="header-section-number">3.1.1.1</span> Высказывания</h4>
+<p>Логика как наука имеет дело, прежде всего, с высказываваниями. Высказывание отражает определённую объективную<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> связь между предметами. Высказывание <em>истинно</em>, если в нём содержится адеквантное отражение этой связи — в ином случае высказывание <em>ложно</em>. В общем случае высказывание существует с форме повествовательного предложения.</p>
+<p>Например, высказывание «Земля вращается вокруг Солнца» отражает объективное отношение, поэтому оно истинно, а высказывание «страницы этой книги зелёного цвета» не адекватно отражает существующее положение дел, поэтому оно ложно.</p>
+<p>Прежде всего, нас будут интересовать <strong>атомарные высказывания</strong>. Это элементарные высказывания, которые невозможно разделить на составляющие — более мелкие высказывания. Например, «четыре — это целое число» — это атомарное высказывание.</p>
+<p>Атомарные высказывания могут быть <strong>либо истинны, либо ложны</strong>. Почему? Потому что мы находимся в рамках двузначной логики<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Атомарные высказывания могут быть обозначены <em>пропозициональными переменными</em>. Так же как и числа в математике могут быть заменены буквеными обозначениями для <em>абстрагирования от значения числа</em>, так же и высказывания заменяются переменными для <em>абстрагирования от содержания высказывания</em>.</p>
+<p>Для обозначения пропозициональных переменных используются латинские буквы. А так как само высказывания имеет опредлённое значение истинности (<em>истина</em> и <em>ложь</em>), то и переменная, которой мы обозначаем это высказывание, также будет обладать этим же значением истинности. Всё аналогично математике.</p>
+</section>
+<section id="логические-операции" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="логические-операции"><span class="header-section-number">3.1.1.2</span> Логические операции</h4>
+<p>С атомарными высказываниями можно выполнять различные логические операции.</p>
+<section id="инверсия" class="level5" data-number="3.1.1.2.1">
+<h5 data-number="3.1.1.2.1" class="anchored" data-anchor-id="инверсия"><span class="header-section-number">3.1.1.2.1</span> Инверсия</h5>
+<p>Самая простая операция — <strong>инверсия, или отрицание</strong>. Оно обозначается с помощью оператора <span class="math inline">\(\neg\)</span>. Это унарная операция, то есть она применяется к одной переменной. При отрицании значение истинности высказывания изменяется на противоположное, поэтому мы можнм составить следующую таблицу истинности для отрицания:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+</tbody>
+</table>
+<p>В данном случае с помощью переменной <span class="math inline">\(p\)</span> обозначено некоторые атомарное высказывание.</p>
+<p>Особо стоит отметить, что при отрицании отрицается всё высказывание целиком, а не какой-то отдельный его элемент. То есть формально правильным вариантом отрицания высказывания «все лебеди белые» будет следующий — «неверно, что все лебеди белые».</p>
+<p>Графически инверсия отображается так:</p>
+<center>
+<figure class="figure">
+<img src="pics/negation.png" class="figure-img">
+<figcaption>
+Логическое отрицание
+</figcaption>
+</figure>
+</center>
+<hr>
+<p>Из атомарных высказываний можно составлять сложные высказывания при помощи логических операторов. Например, высказывание «если четыре делится на два, то четыре — чётное число» является сложным, посколько состоит из двух атомарных — «четыре делится на два» и «четыре — чётное число» — соединённых союзом «если…, то…».</p>
+<p>Далее мы пристумаем с знакомству с бинарными операторами, то есть такими, которые функционируют на двух аргументах.</p>
+</section>
+<section id="конъюнкция" class="level5" data-number="3.1.1.2.2">
+<h5 data-number="3.1.1.2.2" class="anchored" data-anchor-id="конъюнкция"><span class="header-section-number">3.1.1.2.2</span> Конъюнкция</h5>
+<p><strong>Конъюнкция (логическое умножение, логические И)</strong> представляет собой такое высказывание, которое наиболее точно передается следующей конструкцией естественного языка — «как <span class="math inline">\(p\)</span>, так и <span class="math inline">\(q\)</span>».</p>
+<p><span class="math inline">\(p\)</span> и <span class="math inline">\(q\)</span> в данном случае пропозициональные переменные, которые заменяют конкретные высказывания. Конъюнкция истинна тогда и только тогда, когда обе пропозициональные переменные, входящие в её состав, имеют значении истинности «истина». В любом ином случае конъюнкция ложна.</p>
+<p>Конъюнкция обозначается символом <span class="math inline">\(\wedge\)</span> и имеет следующую таблицу истинности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+</tbody>
+</table>
+<p>Графически конъюнкция отображается так:</p>
+<center>
+<figure class="figure">
+<img src="pics/and.png" class="figure-img">
+<figcaption>
+Конъюнкция (логическое И)
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="дизъюнкция" class="level5" data-number="3.1.1.2.3">
+<h5 data-number="3.1.1.2.3" class="anchored" data-anchor-id="дизъюнкция"><span class="header-section-number">3.1.1.2.3</span> Дизъюнкция</h5>
+<p><strong>Дизъюнкция (логическое сложение, логические ИЛИ)</strong> представляет собой такое высказывание, которое наиболее точно передается следующей конструкцией естественного языка — «или <span class="math inline">\(p\)</span>, или <span class="math inline">\(q\)</span>, или и то и другое», поэтому дизъюнкция истинна тогда, когда хотя бы одна пропозициональная переменная, входящая в её состав, имеет значении истинности «истина». В случае, если оба высказывания ложны, дизъюнкция будет ложна.</p>
+<p>Дизъюнкция обозначается символом <span class="math inline">\(\vee\)</span> и имеет следующую таблицу истинности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \vee q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+</tbody>
+</table>
+<p>Графически дизъюнкция отображается так:</p>
+<center>
+<figure class="figure">
+<img src="pics/or.png" class="figure-img">
+<figcaption>
+Дизъюнкция (логическое ИЛИ)
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="разделительная-дизъюнкция" class="level5" data-number="3.1.1.2.4">
+<h5 data-number="3.1.1.2.4" class="anchored" data-anchor-id="разделительная-дизъюнкция"><span class="header-section-number">3.1.1.2.4</span> Разделительная дизъюнкция</h5>
+<p><strong>Разделительная дизъюнкция (исключающее ИЛИ)</strong> — это такое высказывание, которое наиболее полно описывается следующим выражением естественного языка — «либо <span class="math inline">\(p\)</span>, либо <span class="math inline">\(q\)</span>». На её графическом представлении хорошо видно, чем она отличается от обычной дизъюнкции — она исключает ту часть пространства, где верны оба высказывания:</p>
+<center>
+<figure class="figure">
+<img src="pics/xor.png" class="figure-img">
+<figcaption>
+Разделительная дизъюнкция (исключающее ИЛИ)
+</figcaption>
+</figure>
+</center>
+<p>Для обозначения разделительно дизъюнкции есть много различных операторов, но мы будем записывать её так — <span class="math inline">\(p \,\text{XOR}\,q\)</span>. По иллюстрации можно восстановить таблицу истинности для этого оператора:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \,\text{XOR}\,q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+</tbody>
+</table>
+<p>Таким образом, видно, что исключающее ИЛИ истинно тогда, когда значения истинности пропозициональных переменных, входящих в сложное высказывание, различны.</p>
+</section>
+</section>
+<section id="условные-высказывания" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="условные-высказывания"><span class="header-section-number">3.1.1.3</span> Условные высказывания</h4>
+<section id="импликация" class="level5" data-number="3.1.1.3.1">
+<h5 data-number="3.1.1.3.1" class="anchored" data-anchor-id="импликация"><span class="header-section-number">3.1.1.3.1</span> Импликация</h5>
+<p>Сложное высказывание, описываемое конструкцией естественного языка «если <span class="math inline">\(p\)</span>, то <span class="math inline">\(q\)</span>» в формальной логике носит название импликации. Она отражает следование одного утверждения из другого и обозначается следующим образом — <span class="math inline">\(p \rightarrow q\)</span>. Высказывание <span class="math inline">\(p\)</span> называется <em>антецедентом</em> имликации, а <span class="math inline">\(q\)</span> — <em>консеквентом</em> импликации.</p>
+<p>Импликация имеет следующую таблицу истиности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \rightarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+</tbody>
+</table>
+<p>Как видно из таблицы, импликация ложна только тогда, когда её антецедент истинен, и консеквент — ложен. Но что более интересно, так это то, что, согласно таблице, из ложного утверждения может следовать любое. Это факт мы вспомним, когда будем обсуждать тестирование статистических гипотез.</p>
+<p>Импликацию утвержает то же самое, что и следующее сложное высказывание — <span class="math inline">\(\neg (p \wedge \neg q)\)</span>. Отсюда можно получить графическое изображение импликации:</p>
+<center>
+<figure class="figure">
+<img src="pics/implication.png" class="figure-img">
+<figcaption>
+Импликация <span class="math inline">\(p \rightarrow q\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="репликация" class="level5" data-number="3.1.1.3.2">
+<h5 data-number="3.1.1.3.2" class="anchored" data-anchor-id="репликация"><span class="header-section-number">3.1.1.3.2</span> Репликация</h5>
+<p>Репликация похожа на импликацию, но действует как бы в обратном направлении, что отражено в её обозначении — <span class="math inline">\(p \leftarrow q\)</span>. Эта конструкция читается как «<span class="math inline">\(p\)</span> реплицирует <span class="math inline">\(q\)</span>» и является эквивалентом естественноязыкового «только если <span class="math inline">\(p\)</span>, то <span class="math inline">\(q\)</span>». Соответствующим образом изменяется и таблица истиности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \leftarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+</tbody>
+</table>
+<p>Идея здесь в том, что если мы получили в результате истину, то лжи в начале быть не могло. Графическое изображение репликации выглядит так:</p>
+<center>
+<figure class="figure">
+<img src="pics/replication.png" class="figure-img">
+<figcaption>
+Репликация <span class="math inline">\(p \leftarrow q\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="эквиваленция" class="level5" data-number="3.1.1.3.3">
+<h5 data-number="3.1.1.3.3" class="anchored" data-anchor-id="эквиваленция"><span class="header-section-number">3.1.1.3.3</span> Эквиваленция</h5>
+<p>Если мы соединим с помощью конъюнкции импликацию и репликацию, то есть запишем вот такое высказывание — <span class="math inline">\((p \rightarrow q) \wedge (p \leftarrow q)\)</span> — то получим эквиваленцию. По своей сути она является логическим отражением языковой конструкции «только если <span class="math inline">\(p\)</span>, то <span class="math inline">\(q\)</span>», поэтому она обозначается вот так — <span class="math inline">\(p \leftrightarrow q\)</span> — и её таблица истинности выглядит соответствующим образом:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \leftrightarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">истина</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+<td style="text-align: center;">ложь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">ложь</td>
+<td style="text-align: center;">истина</td>
+</tr>
+</tbody>
+</table>
+<p>Из неё выводится графическое представление эквиваленции:</p>
+<center>
+<figure class="figure">
+<img src="pics/equivalence.png" class="figure-img">
+<figcaption>
+Эквиваленция <span class="math inline">\(p \leftrightarrow q\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+</section>
+</section>
+<section id="элементы-теории-множеств" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="элементы-теории-множеств"><span class="header-section-number">3.1.2</span> Элементы теории множеств</h3>
+<p>На базе теории множеств стоит вся современная математика. Мы ознакомимся только c некоторыми концепциями этого раздела математики, но вообще полезно с ним познакомиться гораздо глубже.</p>
+<section id="множество" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="множество"><span class="header-section-number">3.1.2.1</span> Множество</h4>
+<p>Понятие множества неопределимо. По крайней мере силами самой теории множеств. Но мы будем понимать под множеством <strong>совокупность, или набор, некоторых (в общем случае любых) объектов</strong>. Это могут быть числа, буквы, точки и любые другие объекты. Объекты, входящие в состав множества, называются элементами этого множества.</p>
+<p>Множества обозначают заглавными латинскими буквами (например, <span class="math inline">\(A\)</span>), а его элементs — прописными латинскими буквами (например, <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span> и т.д.).</p>
+<p>Множества удобно изображать кружочками. Примерно так:</p>
+<center>
+<figure class="figure">
+<img src="pics/set-a.png" class="figure-img">
+<figcaption>
+Множество <span class="math inline">\(А\)</span>, содержащее элементы <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, <span class="math inline">\(a_3\)</span>, <span class="math inline">\(a_4\)</span>, <span class="math inline">\(a_5\)</span>
+</figcaption>
+</figure>
+</center>
+<p>Если элемент входит в данное множество, то мы говорим, что этот <strong>элемент принадлежит данному множеству</strong>, и записываем это следующим образом:</p>
+<p><span class="math display">\[ a_i \in A \]</span></p>
+<p>Символ <span class="math inline">\(\in\)</span> читается как «принадлежит».</p>
+<p>Если мы хотим задать множество через перечисление элементов, то можно это сделать с помощью фигурных скобок вот так:</p>
+<p><span class="math display">\[ B = \{ 0,1,2,3,4,5 \} \]</span></p>
+<p>В данном случае множество <span class="math inline">\(B\)</span> содержит 6 элементов — числа от нуля до пяти.</p>
+<p>Приведём примеры множеств.</p>
+<ul>
+<li>Множество букв русского алфавита: <span class="math inline">\(L = \{ а, б, в, г, д, \dots, э, ю, я \}\)</span></li>
+<li>Множество всех натуральных чисел4: <span class="math inline">\(\mathbb{N}= \{ 0, 1, 2, 3, \dots \}\)</span></li>
+<li>Множество всех целых чисел: <span class="math inline">\(\mathbb{Z}= \{0, 1, -1, 2, -2, 3, -3, \dots \}\)</span></li>
+</ul>
+<p>Также из числовых множеств мы можем вспомнить рациональные числа <span class="math inline">\(\mathbb{Q}\)</span>, действительные (вещественные) числа <span class="math inline">\(\mathbb{R}\)</span> и комплексные числа <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p>Мы можем взять и рассмотреть не все элементы какого-то множества, а какую-то их часть. Например, взять элементы <span class="math inline">\(a_1\)</span> и <span class="math inline">\(a_2\)</span> и объединить их в множество поменьше.</p>
+<center>
+<figure class="figure">
+<img src="pics/set-a1.png" class="figure-img">
+<figcaption>
+Множество <span class="math inline">\(А_1\)</span>, состоящее из элементов <span class="math inline">\(a_1\)</span> и <span class="math inline">\(a_2\)</span>, является подмножеством множества <span class="math inline">\(A\)</span>
+</figcaption>
+</figure>
+</center>
+<p>Мы получим множество <span class="math inline">\(A_1 = \{a_1, a_2\}\)</span>, которое является <strong>подмножеством</strong> множества <span class="math inline">\(A\)</span>. Иначе говоря, множество <span class="math inline">\(A_1\)</span> включается во множество <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+A_1 \subset A
+\]</span></p>
+<p>В частности, множество натуральных чисел включается во множество целых <span class="math inline">\(\mathbb{N}\subset \mathbb{Z}\)</span>. А если продолжить эту цепочку, то можно получить следующую иерархию числовых множеств:</p>
+<p><span class="math display">\[
+\mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\subset \mathbb{R}\subset \mathbb{C}
+\]</span></p>
+<p>Тривиальными подмножествами любого множества является пустое множество <span class="math inline">\(\varnothing\)</span> и само это множество. Пусть <span class="math inline">\(M\)</span> — любое множество. Тогда можно записать два справедливых утверждения:</p>
+<p><span class="math display">\[
+\varnothing \subset M
+\]</span></p>
+<p><span class="math display">\[
+M \subset M
+\]</span></p>
+</section>
+<section id="операции-над-множествами" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="операции-над-множествами"><span class="header-section-number">3.1.2.2</span> Операции над множествами</h4>
+<section id="объединение" class="level5" data-number="3.1.2.2.1">
+<h5 data-number="3.1.2.2.1" class="anchored" data-anchor-id="объединение"><span class="header-section-number">3.1.2.2.1</span> Объединение</h5>
+<p>Над множествами можно производить определённые операции. Во-первых, множества можно <strong>складывать, или объединять</strong>:</p>
+<p><span class="math display">\[
+A + B = A \cup B = \{ x : x \in A \vee x \in B \}
+\]</span></p>
+<p>Тогда в новом множестве окажутся все элементы обоих исходных множеств.</p>
+<center>
+<figure class="figure">
+<img src="pics/union.png" class="figure-img">
+<figcaption>
+Объединение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="пересечение" class="level5" data-number="3.1.2.2.2">
+<h5 data-number="3.1.2.2.2" class="anchored" data-anchor-id="пересечение"><span class="header-section-number">3.1.2.2.2</span> Пересечение</h5>
+<p>Во-вторых, множества можно <strong>умножать, или находить их пересечение</strong>:</p>
+<p><span class="math display">\[
+A \cdot B = A \cap B = \{ x : x \in A \wedge x \in B \}
+\]</span></p>
+<p>Тогда в новом множестве окажутся те элементы, которые принадлежат обоим множествам сразу.</p>
+<center>
+<figure class="figure">
+<img src="pics/intersection.png" class="figure-img">
+<figcaption>
+Пересечение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="разность-множеств" class="level5" data-number="3.1.2.2.3">
+<h5 data-number="3.1.2.2.3" class="anchored" data-anchor-id="разность-множеств"><span class="header-section-number">3.1.2.2.3</span> Разность множеств</h5>
+<p>В-третьих, можно искать <strong>разность множеств</strong>:</p>
+<p><span class="math display">\[
+A ∖ B = \{ x : x \in A \wedge x \notin B \}
+\]</span></p>
+<center>
+<figure class="figure">
+<img src="pics/difference.png" class="figure-img">
+<figcaption>
+Разность множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
+</figcaption>
+</figure>
+</center>
+<p>В частности, если мы будем искать разность между универсумом <span class="math inline">\(U\)</span> — множеством, которое содержит вообще все возможные элементы — и множеством <span class="math inline">\(A\)</span>, мы получим <strong>дополнение</strong> множества <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+U ∖ A = A^c = \bar A = \{ x : x \notin A \}
+\]</span></p>
+<center>
+<figure class="figure">
+<img src="pics/complement.png" class="figure-img">
+<figcaption>
+Дополнение множества <span class="math inline">\(A\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="симметрическая-разность" class="level5" data-number="3.1.2.2.4">
+<h5 data-number="3.1.2.2.4" class="anchored" data-anchor-id="симметрическая-разность"><span class="header-section-number">3.1.2.2.4</span> Симметрическая разность</h5>
+<p>А ещё можно вычитать множества друг из друга, то есть искать их <strong>симметрическую разность</strong>:</p>
+<p><span class="math display">\[
+A \, \Delta \, B = ( A ∖ B ) \cup ( B ∖ A ) = \{ x : x \in A \text{XOR} \x \in B \}
+\]</span></p>
+<center>
+<figure class="figure">
+<img src="pics/symm-difference.png" class="figure-img">
+<figcaption>
+Симметрическая разность множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
+</figcaption>
+</figure>
+</center>
+<p>Эту операцию с применением <a href="">законов де Моргана</a> можно записать еще и так:</p>
+<p><span class="math display">\[
+A \, \Delta \, B = (A \cup B)^c = A^c \cap B^c
+\]</span></p>
+</section>
+<section id="декартово-произведение" class="level5" data-number="3.1.2.2.5">
+<h5 data-number="3.1.2.2.5" class="anchored" data-anchor-id="декартово-произведение"><span class="header-section-number">3.1.2.2.5</span> Декартово произведение</h5>
+<p>Ну, и самое красивое — <strong>декартово произведение</strong> двух множеств. Пусть у нас есть два множества <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>. Тогда их декартово произведение представляет собой множество всех возможных упорядоченных пар <span class="math inline">\((a,b), a \in A, b \in B\)</span>.</p>
+<p><span class="math display">\[
+A \times B = \{ (a,b) : a \in A, b \in B \}
+\]</span></p>
+<center>
+<figure class="figure">
+<img src="pics/decart-prod.png" class="figure-img">
+<figcaption>
+Декартово произведение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
+</figcaption>
+</figure>
+</center>
+<p>Упорядоченность подразумевает, что если мы будем перемножать <span class="math inline">\(A \times B\)</span>, то будут получаться пары <span class="math inline">\((a,b)\)</span>, а если <span class="math inline">\(B \times A\)</span>, то пары <span class="math inline">\((b,a)\)</span>.</p>
+<p>К слову, вспомните координатную плоскость — это ни что иное, как декартово произведение двух координатных прямых: <span class="math inline">\(\mathbb{R}\times \mathbb{R}= \mathbb{R}^2 = \{ (x, y) : x \in \mathbb{R}, y \in \mathbb{R}\}\)</span>.</p>
+</section>
+</section>
+<section id="отображения" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="отображения"><span class="header-section-number">3.1.2.3</span> Отображения</h4>
+<p>Мы можем сопоставлять элементы много множества элементам другого. Тогда мы получим <strong>отображение</strong>. Например, мы можем взять множество букв латинского алфавита и сопоставить каждому элменту этого множества число, которое будет отображать позицию буквы в алфавите. Пусть у нас есть множество букв латинского алфавита <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[
+L = \{ \text{a}, \text{b}, \text{c}, \text{d},\dots, \text{x}, \text{y}, \text{z} \}
+\]</span></p>
+<p>и множество натуральных чисел от 1 до 26 <span class="math inline">\(N\)</span>:</p>
+<p><span class="math display">\[
+N = \{ 1,2,3, \dots,24,25,26 \}
+\]</span></p>
+<p>Тогда мы можем задать такое отображение <span class="math inline">\(F\)</span></p>
+<p><span class="math display">\[
+F : L \rightarrow N,
+\]</span></p>
+<p>где каждой букве будет соответствовать её порядковый номер в алфавите.</p>
+<p>Мы обозначили отображение буквой <span class="math inline">\(F\)</span>, которой в математике часто обозначают функции — это не случайно. Не вдаваясь в детали, можно сказать, что термины «отображение» и «функция» — синонимы. Ведь по сути что делает [математическая] функция? Сопоставляет между собой значения числовых множеств. То есть отображает одно числовое множество в другое.</p>
+<p>Например, простая функция <span class="math inline">\(y = x\)</span>, <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(y \in \mathbb{R}\)</span> отображает множество вещественных чисел в само себя — <span class="math inline">\(F : \mathbb{R}\rightarrow \mathbb{R}\)</span>. Функция модуля <span class="math inline">\(y = |x|\)</span> отображает множество вещественных чисел во множество положительных вещественных чисел — <span class="math inline">\(F : \mathbb{R}\rightarrow \mathbb{R}_{+}\)</span>. И так далее.</p>
+<p>В случае с буквами мы могли бы задать функцию <span class="math inline">\(f(l) = n\)</span>, <span class="math inline">\(l \in L\)</span>, <span class="math inline">\(n \in N\)</span> которая возвращала бы следующие результаты:</p>
+<p><span class="math display">\[
+f(\text{a}) = 1, \quad f(\text{b}) = 2, \quad f(\text{z}) = 26
+\]</span></p>
+<center>
+<figure class="figure">
+<img src="pics/set-func.png" class="figure-img">
+<figcaption>
+Отображение <span class="math inline">\(F : L \rightarrow N\)</span>
+</figcaption>
+</figure>
+</center>
+</section>
+<section id="мощность-множества" class="level4" data-number="3.1.2.4">
+<h4 data-number="3.1.2.4" class="anchored" data-anchor-id="мощность-множества"><span class="header-section-number">3.1.2.4</span> Мощность множества</h4>
+<p>Множества могут содержать разное количество элементов. Характеристика, описывающая, сколько элементов содержит данное множество, называется <strong>мощностью множества</strong>.</p>
+<p>Во-первых, множества могут быть <strong>конечными</strong> и <strong>бесконечными</strong>.</p>
+<ul>
+<li>Если множество конечно, то его мощность равна количеству его элементов.
+<ul>
+<li>Например, множество очков, которое может выпать на стандартном игральном кубике — это <span class="math inline">\(S_1 = \{1,2,3,4,5,6\}\)</span>. Его мощность равна 6 — <span class="math inline">\(|M| = 6\)</span>.</li>
+<li>Множество значений пятибалльной шкалы Ликерта — это <span class="math inline">\(S_2 = \{1, 2, 3, 4, 5\}\)</span>. Его мощность равна 5 — <span class="math inline">\(|S_2| = 5\)</span>.</li>
+</ul></li>
+<li>Если множество бесконечно, то надо понять, <em>насколько оно бесконечно</em>.</li>
+</ul>
+<p>Бесконечности бывают разного размера. В детали мы погружать не будем, однако отметим, что есть два вида бесконечностей.</p>
+<ul>
+<li>Если можно построить отображение, в котором каждом элементу некоторого множества <span class="math inline">\(S\)</span> будет сопоставлено единственное натуральное число<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, то такое множество называется <strong>счётным</strong>.
+<ul>
+<li>Это значит, что элементов во множестве <span class="math inline">\(S\)</span> бесконечное количество — так как количество натуральных чисел бесконечно — однако при неограниченном количестве времени их все-таки можно пересчитать.</li>
+<li>Мощность такого множетсва обозначается <span class="math inline">\(\aleph_0\)</span>, то есть <span class="math inline">\(|\mathbb{N}| = \aleph_0\)</span>.</li>
+</ul></li>
+<li>Если количество элементов множества больше количества натуральных чисел, то такое множество обладает **мощностью континуума* <span class="math inline">\(\aleph_1\)</span>.
+<ul>
+<li>Это множество будет равномощно множеству вещественных чисел <span class="math inline">\(\mathbb{R}\)</span>.</li>
+</ul></li>
+</ul>
+<p>Возможно, это звучит весьма контринтуитивно — как одна бесконечность может быть больше другой? — однако это так: <a href="https://www.youtube.com/watch?v=SrU9YDoXE88">вещественных чисел больше, чем натуральных</a>.</p>
+</section>
+</section>
+<section id="элементы-комбинаторики" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="элементы-комбинаторики"><span class="header-section-number">3.1.3</span> Элементы комбинаторики</h3>
+<section id="перестановки" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="перестановки"><span class="header-section-number">3.1.3.1</span> Перестановки</h4>
+<p>Представим такую задачу: на черной пятнице мы накупили книг по анализу данных, и нам необходимо расставить их на полке. Всего у нас есть пять книг. Сколькими способами мы это сможем сделать?</p>
+<p>Подойдём к вопросу технически: возьмем и начнём расставлять. На первое место мы можем поставить любую из пяти книг, то есть вариантов заполнить первое место на полке — пять штук. Когда первое место заполнено, то вариантов заполнить второе место остаётся четыре. Всего возможных вариантов заполнения первых двух мест получается <span class="math inline">\(5 \times 4\)</span>.</p>
+<p>Заполняем далее: на третье место претендуют три оставшиеся книги, то есть вариантов, которыми мы можем расставить три книги — <span class="math inline">\(5 \times 4 \times 3\)</span>.</p>
+<p>Следуя далее этой логике мы получим, что всего возможных вариантов расставить все пять книг на полке будет</p>
+<p><span class="math display">\[
+5 \times 4 \times 3 \times 2 \times 1 = 5!
+\]</span></p>
+<p>Мы получили формулу <strong>числа перестановок</strong> из <span class="math inline">\(n\)</span> элементов:</p>
+<p><span class="math display">\[
+P_n = n!
+\]</span></p>
+<p>То есть любые <span class="math inline">\(n\)</span> объектов можно расставить на <span class="math inline">\(n\)</span> мест <span class="math inline">\(n!\)</span> способами.</p>
+</section>
+<section id="размещения" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="размещения"><span class="header-section-number">3.1.3.2</span> Размещения</h4>
+<section id="без-повторений" class="level5" data-number="3.1.3.2.1">
+<h5 data-number="3.1.3.2.1" class="anchored" data-anchor-id="без-повторений"><span class="header-section-number">3.1.3.2.1</span> Без повторений</h5>
+<p>Теперь представим, что у нас очень маленькая полка, и на ней умещается всего три книги. Сколькими способами мы можем заполнить такую полку, если всего в нашем распоряжении пять книг?</p>
+<p>Всего перестановок из пяти книг <span class="math inline">\(5!\)</span>, однако в силу того, что на полку умещаются только три первые книги из каждой перестановки, отличных друг от друга вариантов теперь будет меньше. Во сколько раз? В число раз, равно количеству перестановок из тех книг, которые на полку не помещаются. В нашем случае — <span class="math inline">\((5 - 3)!\)</span>.</p>
+<p>То есть мы можем заполнить нашу полку <span class="math inline">\(\dfrac{5!}{(5-3)!}\)</span> способами.</p>
+<p>Мы получили формулу для подсчета <strong>числа размещений (без повторений)</strong> из <span class="math inline">\(n\)</span> элементов по <span class="math inline">\(k\)</span> местам:</p>
+<p><span class="math display">\[
+A_n^k = \frac{n!}{(n-k)!}
+\]</span></p>
+</section>
+<section id="с-повторениями" class="level5" data-number="3.1.3.2.2">
+<h5 data-number="3.1.3.2.2" class="anchored" data-anchor-id="с-повторениями"><span class="header-section-number">3.1.3.2.2</span> С повторениями</h5>
+<p>Каждой книги у нас по одному экземпляру, поэтому выше мы говорили о размещениях без повторений. Для полноты картины посмотрим на размещения с повторениями, хотя они встречаются в практике реже.</p>
+<p>Теперь у нас неограниченное количество копий каждой из книг, поэтому при размещении трех из пяти книг на полке все три могут оказаться одной и той же, или две одинаковые, а одна отличается и т.д. Суть — книги могут повторяться.</p>
+<p>Поскольку теперь, независимо от того, сколько книг мы уже поставили, у нас все равно осталось столько же, то есть 5 — ведь есть копии, каждый раз мы будем выбирать из пяти книг. Таких выборов нам нужно будет сделать три, так как три места на полке. Итого, заполнить нашу полку мы сможем <span class="math inline">\(5^3\)</span> способами.</p>
+<p>Мы получили формулу для подсчета <strong>числа размещений с повторениями</strong> из <span class="math inline">\(n\)</span> элементов по <span class="math inline">\(k\)</span> местам:</p>
+<p><span class="math display">\[
+\overline{A_n^k} = n^k
+\]</span></p>
+</section>
+</section>
+<section id="сочетания" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="сочетания"><span class="header-section-number">3.1.3.3</span> Сочетания</h4>
+<section id="без-повторений-1" class="level5" data-number="3.1.3.3.1">
+<h5 data-number="3.1.3.3.1" class="anchored" data-anchor-id="без-повторений-1"><span class="header-section-number">3.1.3.3.1</span> Без повторений</h5>
+<p>А теперь задача такова: нам не важно в каком порядке будут стоять книги на полке — нам нужно просто поставить три какие-то книги. Сколько возможно вариантов выбрать три книги из пяти?</p>
+<p>Так как мы теперь не учитываем порядок книг, то возможных вариантов будет в <span class="math inline">\(3!\)</span> раз меньше, чем число размещений. Почему? Так как все перестановки этих трёх книг для нас теперь идентичны. Итого, всего вариантов выбрать три книги из пяти <span class="math inline">\(\dfrac{5!}{3!(5-3)!}\)</span>.</p>
+<p>Мы получили формулу для подсчета <strong>числа сочетаний</strong> из <span class="math inline">\(n\)</span> элементов по <span class="math inline">\(k\)</span>:</p>
+<p><span class="math display">\[
+С_n^k = \frac{n!}{k!(n-k)!}
+\]</span></p>
+<p>Последняя формула на пригодится далее при обсуждении схемы испытаний Бернулли.</p>
+</section>
+<section id="с-повторениями-1" class="level5" data-number="3.1.3.3.2">
+<h5 data-number="3.1.3.3.2" class="anchored" data-anchor-id="с-повторениями-1"><span class="header-section-number">3.1.3.3.2</span> С повторениями</h5>
+<p>Вновь для полноты картины посмотрим на случай с повторениями. У нас вновь есть неограниченное количество копий каждой книги, однако порядок выставления на полку нам не важен — как и было в сочетаниях. Количество сочетаний в этом случае будет равно</p>
+<p><span class="math display">\[
+\overline{С_n^k} = \frac{(n+k-1)!}{k!(n-1)!}
+\]</span></p>
+</section>
+</section>
+</section>
+</section>
+<section id="элементы-математического-анализа" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="элементы-математического-анализа"><span class="header-section-number">3.2</span> Элементы математического анализа</h2>
+<p>Из всего матана нам надо уловить два основных концепта — производную и интеграл. Эти и займёмся, захватив попутно немного пределов.</p>
+<section id="последовательности" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="последовательности"><span class="header-section-number">3.2.1</span> Последовательности</h3>
+<p><strong>Числовая последовательность</strong> — это последовательность чисел [внезапно]. В общем случае — любых. Она обозначается <span class="math inline">\((x_n)^\infty_{n=1}\)</span>, где <span class="math inline">\(x_n\)</span> — это некоторый элемент последовательности, а верхний и нижний индексы обозначают границы изменения индекса n.&nbsp;Например, <span class="math inline">\(\langle 1,-1,1,-1,\dots \rangle\)</span> — это числовая последовательность, которую можно обозначить <span class="math inline">\(\big( (-1)^n \big)^\infty_{n=1}\)</span>.</p>
+<p>Последовательность возникает на некотором множестве чисел. Если на таком множестве определено отношение порядка, то есть элементы этого множества можно сравнивать на «больше-меньше-равно», то можно сформировать монотонную последовательность. Это такая последовательность, которая <em>не возрастает</em> — то есть стоит на месте или убывает — или <em>не убывает</em> — то есть стоит на месте или возрастает. Более того, если существует такой объект (число), к которому элементы последовательности приближаются с ростом номер, то он является…</p>
+</section>
+<section id="предел-последовательности" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="предел-последовательности"><span class="header-section-number">3.2.2</span> Предел последовательности</h3>
+<p>…пределом этой последовательности.</p>
+<p>Разберемся на примере. Пусть у нас есть вот такая простенькая последовательность:</p>
+<p><span class="math display">\[
+\Big( \frac{1}{n} \Big)^{\infty}_{n=1} = \Big \langle 1, \frac{1}{2}, \frac{1}{3}, \dots \Big \rangle
+\]</span></p>
+<p>Достаточно очевидно, что каждый следующий её элемент, меньше предыдущего. Отрицательными элементы данной последовательности быть не могут, поэтому кажется, что всё идет к тому, что где-то там последовательность упрётся в ноль.</p>
+<p>Формально число <span class="math inline">\(a\)</span> называется <strong>пределом последовательности</strong> <span class="math inline">\(\{x_n\}\)</span>, если для любого положительного числа <span class="math inline">\(\varepsilon\)</span> существует номер <span class="math inline">\(N_\varepsilon\)</span>, такой что для любого <span class="math inline">\(n &gt; N_\varepsilon\)</span>, выполняется равенство <span class="math inline">\(|x_n - a| &lt; \varepsilon\)</span>, или на математическом:</p>
+<p><span class="math display">\[
+\lim_{n \rightarrow \infty} x_n = a \Leftrightarrow \forall \varepsilon &gt; 0 \exists N_\varepsilon \in \mathbb{N}: n \geq N_\varepsilon, |x_n - a| &lt; \varepsilon
+\]</span></p>
+<p>То есть, в случае нашей последовательности мы можем отсутупить на сколь угодно малое число <span class="math inline">\(\varepsilon\)</span> от нуля, и, начиная с какого-то номера, все элементы нашей последовательности окажутся в интервале <span class="math inline">\((\varepsilon, 0)\)</span>. Поэтому <span class="math inline">\(\lim_{n \rightarrow 0} \frac{1}{n} = 0\)</span>.</p>
+</section>
+<section id="функции" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="функции"><span class="header-section-number">3.2.3</span> Функции</h3>
+<p><strong>Функции</strong> (они же отображения, как мы выяснили выше) устанавливают соответствие между элементами двух множеств. Чаще всего мы имеет дело с числовыми функциями, то есть такими, которые ставят одни числа в соответствие другим. У любой функции есть <em>область определения</em> (множество <span class="math inline">\(X\)</span>) и <em>область значений</em> (множество <span class="math inline">\(Y\)</span>). Сама же функция представляет собой множество упорядоченных пар</p>
+<p><span class="math display">\[
+(x,y) \in X \times Y,
+\]</span> таких что</p>
+<ol type="1">
+<li>пары существуют для всех элементов <span class="math inline">\(X\)</span>, и</li>
+<li>если первые элементы пар равны, то равны и их вторые элементы.</li>
+</ol>
+<p>Примерами функций могут быть <span class="math inline">\(y = x^2\)</span>, <span class="math inline">\(y = kx + b\)</span>, <span class="math inline">\(y = |x|\)</span> и другие.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="l3_files/figure-html/func_graphs-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Примеры функций</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="дискретные-и-непрерывные-функции" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="дискретные-и-непрерывные-функции"><span class="header-section-number">3.2.3.1</span> Дискретные и непрерывные функции</h4>
+<p>В зависимости от того, какова область определение функции, то есть множество <span class="math inline">\(X\)</span>, функции могут быть <em>дискретными</em> и <em>непрерывными</em>. Например, если функция определена на множестве целых чисел <span class="math inline">\(\mathbb{Z}\)</span>, то она будет дискретная, так как между, например, <span class="math inline">\(1\)</span> и <span class="math inline">\(2\)</span> будет пусто.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="l3_files/figure-html/func-graphs-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Пример графика дискретной функции</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Если функция определена на множестве <span class="math inline">\(\mathbb{R}\)</span>, то она будет непрерывной. Например, функция <span class="math inline">\(f(x) = x^2\)</span> является непрерывной, как ифункции <span class="math inline">\(f(x) = \sqrt{x}\)</span> и <span class="math inline">\(f(x) = \ln(x)\)</span>. Если функция монотонная и непрерывная, то она дифференцируема<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+</section>
+</section>
+<section id="производная" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="производная"><span class="header-section-number">3.2.4</span> Производная</h3>
+<p>А раз они дифференцируемы, то мы можем взять производную!</p>
+<p>Производная — очень полезная вещь. Во-первых, она показывает <strong>тангенс угла наклона касательной в данной точке</strong>, а во-вторых <strong>скорость и направление изменения функции в данной точке</strong>. На самом деле, и первое, и второе рассказывает нам примерно об одном и том же.</p>
+<p>Давайте издалека. Как нам узнать, куда двигается функция в данной точке?</p>
+<p>Пусть дана функция <span class="math inline">\(f(x) = 2x^3 + 3x^2-4x+6\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Выберем точку <span class="math inline">\(x_0\)</span>, в которой мы хотим определить, куда и с какой скоростью движется наша функция. В этой точке функция имеет значение <span class="math inline">\(y_0\)</span>:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Шагнём на некоторую дистанцию <span class="math inline">\(\Delta x\)</span> вправо (по направлению оси <span class="math inline">\(x\)</span>). Назовём эту дистанцию <em>приращением аргумента</em>. В точке <span class="math inline">\(x_0 + \Delta x\)</span> фунция будет иметь какое-то значение <span class="math inline">\(y_0 + \Delta y\)</span>, где <span class="math inline">\(\Delta y\)</span> — <em>приращение функции</em>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Наша функция движется из точки <span class="math inline">\((x_0,y_0)\)</span> в точку <span class="math inline">\((x_0 + \Delta x, y_0 + \Delta y)\)</span>. Имеем следующий треугольник — приблизим картинку:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Нас интересует угол <span class="math inline">\(alpha\)</span> — именно он задает скорость и направление изменения функции. Если мы узнаем, каков угол <span class="math inline">\(\alpha\)</span> — а точнее <span class="math inline">\(\tan \alpha\)</span>, потому что так проще — то узнаем, куда движется функция.</p>
+<p><span class="math display">\[
+\tan \alpha = \frac{\Delta y}{\Delta x}
+\]</span></p>
+<p>Ну, хорошо. Но мы шагали достаточно далеко от точки, которая нас интесует. Если мы будем постепенно уменьшать шаг, то получим последовательность</p>
+<p><span class="math display">\[
+\langle \tan \alpha_1, \tan \alpha_2, \tan \alpha_3, ... \rangle
+\]</span></p>
+<p>У этой последовательности есть предел, и если мы его рассчитаем, то как раз и получим значение производной в данной точке.</p>
+<p><span class="math display">\[
+f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{\Delta f_(x)}{\Delta x} = \frac{df}{dx}(x_0)
+\]</span></p>
+<p>Очень маленькое приращение обозначается <span class="math inline">\(dx\)</span> (или <span class="math inline">\(df\)</span> , если это приращение функции). Вот мы и получили производную.</p>
+<p>Можно построить график производной. Это тоже будет функция. Важное свойство этой функции, которое нам понадобится в дальнейшем, заключается в том, что в там, где график производной пересекает ось <span class="math inline">\(x\)</span> — то есть там, где производная равна нулю — на исходной функции случаются точки смены монотонности (то есть <em>точки минимума</em> и <em>максимума</em>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv-graph-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Производные основных элементарных функций можно найти <a href="../book/appendix_formulas.html#formulas_deriv">тут</a>.</p>
+</section>
+<section id="частная-производная" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="частная-производная"><span class="header-section-number">3.2.5</span> Частная производная</h3>
+</section>
+<section id="интеграл" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="интеграл"><span class="header-section-number">3.2.6</span> Интеграл</h3>
+</section>
+</section>
+<section id="элементы-линейной-алгебры" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="элементы-линейной-алгебры"><span class="header-section-number">3.3</span> Элементы линейной алгебры</h2>
+<section id="системы-линейных-уравнений" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="системы-линейных-уравнений"><span class="header-section-number">3.3.1</span> Системы линейных уравнений</h3>
+</section>
+<section id="векторы" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="векторы"><span class="header-section-number">3.3.2</span> Векторы</h3>
+<section id="сложение-векторов" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="сложение-векторов"><span class="header-section-number">3.3.2.1</span> Сложение векторов</h4>
+</section>
+<section id="умножение-вектора-на-число" class="level4" data-number="3.3.2.2">
+<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="умножение-вектора-на-число"><span class="header-section-number">3.3.2.2</span> Умножение вектора на число</h4>
+</section>
+<section id="скалярное-произведение-векторов" class="level4" data-number="3.3.2.3">
+<h4 data-number="3.3.2.3" class="anchored" data-anchor-id="скалярное-произведение-векторов"><span class="header-section-number">3.3.2.3</span> Скалярное произведение векторов</h4>
+</section>
+</section>
+<section id="матрицы" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="матрицы"><span class="header-section-number">3.3.3</span> Матрицы</h3>
+<section id="сложение-матриц" class="level4" data-number="3.3.3.1">
+<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="сложение-матриц"><span class="header-section-number">3.3.3.1</span> Сложение матриц</h4>
+</section>
+<section id="умножение-матрицы-на-число" class="level4" data-number="3.3.3.2">
+<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="умножение-матрицы-на-число"><span class="header-section-number">3.3.3.2</span> Умножение матрицы на число</h4>
+</section>
+<section id="матричное-умножение" class="level4" data-number="3.3.3.3">
+<h4 data-number="3.3.3.3" class="anchored" data-anchor-id="матричное-умножение"><span class="header-section-number">3.3.3.3</span> Матричное умножение</h4>
+</section>
+<section id="транспонирование-матрицы" class="level4" data-number="3.3.3.4">
+<h4 data-number="3.3.3.4" class="anchored" data-anchor-id="транспонирование-матрицы"><span class="header-section-number">3.3.3.4</span> Транспонирование матрицы</h4>
+</section>
+<section id="детерминант-и-обратная-матрица" class="level4" data-number="3.3.3.5">
+<h4 data-number="3.3.3.5" class="anchored" data-anchor-id="детерминант-и-обратная-матрица"><span class="header-section-number">3.3.3.5</span> Детерминант и обратная матрица</h4>
+</section>
+<section id="след-матрицы" class="level4" data-number="3.3.3.6">
+<h4 data-number="3.3.3.6" class="anchored" data-anchor-id="след-матрицы"><span class="header-section-number">3.3.3.6</span> След матрицы</h4>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-segeth85" class="csl-entry" role="listitem">
+Зегет, В. 1985. <em>Элементарная Логика</em>. Москва: Высшая школа.
+</div>
+</div>
+</section>
+</section>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Обсуждение критериев объективности мы оставим за рамками этого курса и постулируем, что мы их как-то хотя бы интуитивно пониманием. Для некоторой концептуальной рамки обозначим следующее: мы говорим об объективной связи между предметами, если (1) определённым предметам (или индивидам) присущи определённые признаки и если (2) определённым признакам свойственны определённые признаки (<span class="citation" data-cites="segeth85">Зегет (<a href="references.html#ref-segeth85" role="doc-biblioref">1985</a>)</span>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Есть в другие подходы к определению истинности высказываний — таковы различные виды многозначной логики. Но они не-необходимы нам для целей курса, поэтому оставим их за бортом.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Такое отображение называется <em>биекцией</em>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Хотя и не все. Непрерывность является <em>необходимым</em>, но недостаточным условием для дифференцируемости.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
