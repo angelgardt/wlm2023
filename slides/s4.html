@@ -8,10 +8,10 @@
 <link href="s4_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s4_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s4_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+  <meta name="generator" content="quarto-1.4.510">
 
   <meta name="author" content="Антон Ангельгардт">
-  <title>L4. Теория измерений</title>
+  <title>L4 // Теория измерений</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,73 +29,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #e1e4e8; background-color: #24292e; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #e1e4e8; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #f97583; } /* Attribute */
-    code span.bn { color: #79b8ff; } /* BaseN */
-    code span.bu { color: #f97583; } /* BuiltIn */
-    code span.cf { color: #f97583; } /* ControlFlow */
-    code span.ch { color: #9ecbff; } /* Char */
-    code span.cn { color: #79b8ff; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #f97583; } /* DataType */
-    code span.dv { color: #79b8ff; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
-    code span.fl { color: #79b8ff; } /* Float */
-    code span.fu { color: #b392f0; } /* Function */
-    code span.im { color: #9ecbff; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #f97583; } /* Keyword */
-    code span.op { color: #e1e4e8; } /* Operator */
-    code span.ot { color: #b392f0; } /* Other */
-    code span.pp { color: #f97583; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #79b8ff; } /* SpecialChar */
-    code span.ss { color: #9ecbff; } /* SpecialString */
-    code span.st { color: #9ecbff; } /* String */
-    code span.va { color: #ffab70; } /* Variable */
-    code span.vs { color: #9ecbff; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="s4_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="s4_files/libs/revealjs/dist/theme/quarto.css">
   <link href="s4_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="s4_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="s4_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -221,7 +156,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -391,7 +327,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">L4. Теория измерений</h1>
+  <h1 class="title">L4 // Теория измерений</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -402,10 +338,9 @@
 </div>
 
 </section>
-<section id="зачем" class="slide level2">
-<h2>Зачем?</h2>
-<div class="cell">
-<script type="text/javascript">
+<section id="что-будет" class="slide level2">
+<h2>Что будет?</h2>
+<script>
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
 var link = document.createElement('link');
@@ -414,94 +349,582 @@ link.rel = 'icon';
 document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 </script>
-</div>
 <ul>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
+<li>Измерения в разных областях психологии</li>
+<li>Шкалы измерений и их свойства</li>
+<li>Особенности психометрических измерений</li>
+<li>Валидность и её виды</li>
 </ul>
-</section>
-<section id="текст" class="slide level2">
-<h2>Текст</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
 </section>
 <section>
-<section id="раздел" class="title-slide slide level1 center">
-<h1>Раздел</h1>
+<section id="l4.1-измерения-и-шкалы" class="title-slide slide level1 center">
+<h1>L4.1 // Измерения и шкалы</h1>
 
 </section>
-<section id="списки" class="slide level2">
-<h2>Списки</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="измерение" class="slide level2">
+<h2>Измерение</h2>
+<p><strong>Измерение</strong> — процедура приписывания определенным психологическим объектам определенных чисел на определенной шкале.</p>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>Технически звучит не сложно.</li>
+<li>Но часто приходится доказывать, что мы реально что-то померили и сделали это адекватно.</li>
 </ul>
 </section>
-<section id="код" class="slide level2">
-<h2>Код</h2>
-<p>When you click the <code>Render</code> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="что-можно-измерить" class="slide level2">
+<h2>Что можно измерить?</h2>
+<ul>
+<li>рост</li>
+<li>возраст</li>
+<li>пол</li>
+<li>национальность</li>
+<li>количество детей в семье</li>
+<li>рейтинг студентов</li>
+<li>курс / уровень обучения</li>
+<li>географические координаты (долгота и широта)</li>
+<li>температура</li>
+<li>дата</li>
+<li>IQ</li>
+<li>нарциссизм / макиавеллизм / психопатия</li>
+<li>время реакции</li>
+<li>точность ответов испытуемого в эксперименте</li>
+<li>и т.д.</li>
+</ul>
 </section>
-<section id="формулы" class="slide level2">
-<h2>Формулы</h2>
-<p><span class="math display">\[
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
-\]</span></p>
-<p><span class="math display">\[
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-\]</span></p>
+<section id="измерения-в-разных-областях-психологии" class="slide level2">
+<h2>Измерения в разных областях психологии</h2>
+<ul>
+<li><strong>Нейронаука и психофизиология</strong>
+<ul>
+<li><span class="math inline">\(\Phi \rightarrow \Phi (\sim \Psi)\)</span></li>
+</ul></li>
+<li><strong>Психофизика</strong>
+<ul>
+<li><span class="math inline">\(\Psi \rightarrow \Phi\)</span></li>
+</ul></li>
+<li><strong>Поведенческие исследования</strong>
+<ul>
+<li><span class="math inline">\(B \rightarrow \Psi\)</span></li>
+</ul></li>
+<li><strong>Психометрика</strong>
+<ul>
+<li><span class="math inline">\(\Psi \rightarrow \Psi\)</span></li>
+</ul></li>
+</ul>
 </section>
-<section id="колонки" class="slide level2">
-<h2>Колонки</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p>Текст правой колонки</p>
-</div>
-</div>
+<section id="две-важных-мысли" class="slide level2">
+<h2>Две важных мысли</h2>
+<ul>
+<li>В любой области психологической науки нам необходимо с теоретических позиций обосновать связь измеряемых в ходе исследования переменных с изучаемыми психическими феноменами.</li>
+<li>При любом измерении нам необходимо выбрать адекватный способ числового отражения изучаемых феноменов, чтобы мы могли использовать статистические методы анализа.</li>
+</ul>
 </section>
-<section id="колонки-с-картинкой-справа" class="slide level2">
-<h2>Колонки с картинкой справа</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div>
-</div>
+<section id="второе-определение-измерения" class="slide level2">
+<h2>Второе определение измерения</h2>
+<p><strong>Измерение</strong> — это процедура приписывания психологическим объектам чисел таким образом, чтобы отношения между числами соответствовали отношениям между психологическими объектами.</p>
 </section>
-<section id="колонки-с-картинкой-слева" class="slide level2">
-<h2>Колонки с картинкой слева</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div><div class="column" style="width:40%;">
-<p>Текст</p>
-</div>
-</div>
+<section id="шкалы" class="slide level2">
+<h2>Шкалы</h2>
+<p><strong>Шкала</strong> — это набор чисел с органичениями на допустимые по отношению к ним операции.</p>
+<ul>
+<li>Номинальная шкала (шкала наименований, nominal scale)</li>
+<li>Порядковая шкала (ранговая шкала, ordinal scale)</li>
+<li>Интервальная шкала (шкала разностей, interval scale)</li>
+<li>Абсолютная шкала (шкала отношений, ratio scale)</li>
+</ul>
 </section>
-<section id="график" class="slide level2">
-<h2>График</h2>
+<section id="признаки-и-переменные" class="slide level2">
+<h2>Признаки и переменные</h2>
+<ul>
+<li><strong>Количественные переменные</strong>
+<ul>
+<li><em>непрерывными</em></li>
+<li><em>дискретными</em></li>
+</ul></li>
+<li><strong>Номинальные (категориальные) переменные</strong></li>
+<li><strong>Ранговые переменные</strong></li>
+</ul>
+</section>
+<section id="виды-шкал" class="slide level2">
+<h2>Виды шкал</h2>
+<p>От шкалы зависит:</p>
+<ul>
+<li>какие графики мы сможем нарисовать</li>
+<li>какие статистики на ней имеют смысл</li>
+<li>какие статистические модели дадут адекватный результат</li>
+</ul>
+</section>
+<section id="номинальная-шкала" class="slide level2">
+<h2>Номинальная шкала</h2>
+<ul>
+<li>Наименее мощная шкала</li>
+<li>Неметрическая — расстояния между делениями не определены</li>
+<li>Тип данных — категориальные</li>
+<li>Допустимые операции
+<ul>
+<li>сравнение на (не)равенство</li>
+</ul></li>
+<li>Ноль — отсутствует</li>
+<li>Допустимые преобразования — любое, сохраняющее взаимно однозначное соответствие</li>
+</ul>
+</section>
+<section id="порядковая-шкала" class="slide level2">
+<h2>Порядковая шкала</h2>
+<ul>
+<li>Неметрическая — расстояния между делениями не равны между собой</li>
+<li>Тип данных — категориальные / ранговые</li>
+<li>Допустимые операции
+<ul>
+<li>сравнение на (не)равенство</li>
+<li>сравнение на больше-меньше</li>
+</ul></li>
+<li>Ноль — отсутствует</li>
+<li>Допустимые преобразования — любое монотонное</li>
+</ul>
+</section>
+<section id="интервальная-шкала" class="slide level2">
+<h2>Интервальная шкала</h2>
+<ul>
+<li>Метрическая — расстояния между делениями одинаковые</li>
+<li>Тип данных — количественные</li>
+<li>Допустимые операции
+<ul>
+<li>сравнение на (не)равенство</li>
+<li>сравнение на больше-меньше</li>
+<li>сложение и вычитание</li>
+</ul></li>
+<li>Ноль — относительный</li>
+<li>Допустимые преобразования — любое линейное</li>
+</ul>
+</section>
+<section id="абсолютная-шкала" class="slide level2">
+<h2>Абсолютная шкала</h2>
+<ul>
+<li>Самая мощная шкала</li>
+<li>Метрическая — расстояния между делениями одинаковые</li>
+<li>Тип данных — количественные</li>
+<li>Допустимые операции
+<ul>
+<li>сравнение на (не)равенство</li>
+<li>сравнение на больше-меньше</li>
+<li>сложение и вычитание</li>
+<li>умножение и деление</li>
+</ul></li>
+<li>Ноль — абсолютный</li>
+<li>Допустимые преобразования — любое преобразование подобия</li>
+</ul>
+</section></section>
+<section>
+<section id="l4.2-психометрические-измерения" class="title-slide slide level1 center">
+<h1>L4.2 // Психометрические измерения</h1>
 
-<img data-src="s4_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>
+</section>
+<section id="проблемы-психометрических-измерений" class="slide level2">
+<h2>Проблемы психометрических измерений</h2>
+<ul>
+<li>Измеряются ненаблюдаемые (латентные) конструкты с помощью субъективных шкал
+<ul>
+<li>не знаем достоверно, существуют ли наши конструкты</li>
+</ul></li>
+<li>Последствия
+<ul>
+<li>В измерениях всегда есть существенная доля ошибки → нужно знать надёжность (точность) измерения</li>
+<li>Мы не всегда уверены, действительно ли измерили то, что хотим → нужно обосновать валидность измерения
+<ul>
+<li>Одного вопроса обычно недостаточно, чтобы задать содержание конструкта или добиться нужной точности измерения</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="операциональная-классификация-методик" class="slide level2">
+<h2>Операциональная классификация методик</h2>
+<p>Операциональная классификация распределяет методики в зависимости от того, насколько результат их процедуры зависит от субъективного опыта респондента и самого диагноста.</p>
+<ul>
+<li>Приборные психофизиологические методики</li>
+<li>Аппаратурные поведенческие методики</li>
+<li>Объективные тесты с выбором ответа (тесты способностей или тесты знаний)</li>
+<li>Тесты-опросники (прямой субъективный самоотчет)</li>
+<li>Субъективное шкалирование</li>
+</ul>
+<p>———————————————————————————</p>
+<ul>
+<li>Проективные методики</li>
+<li>Наблюдение</li>
+<li>Контент-анализ</li>
+<li>Психологическая беседа</li>
+<li>Ролевая игра</li>
+<li>Обучающий эксперимент</li>
+</ul>
+</section>
+<section id="прямой-субъективный-самоотчет" class="slide level2">
+<h2>Прямой субъективный самоотчет</h2>
+<ul>
+<li>С. Стивенс: люди могут <em>прямо оценивать</em> интенсивность стимулов, приписывая им числа</li>
+<li>Психодиагностика в исследованиях предполагает свободное дальнейшее поведение — респонденты сами решают, как им обойтись с результатами тестирования — поэтому искажения предполагаются минимальными.</li>
+</ul>
+</section>
+<section id="психометрика-в-двух-словах" class="slide level2">
+<h2>Психометрика в двух словах</h2>
+<br>
+<center>
+<strong>измеряем непонятно что, <br>непонятно чем <br>и непонятно как</strong>
+</center>
+<p><br></p>
+</section>
+<section id="конструкт" class="slide level2">
+<h2>Конструкт</h2>
+<p><strong>Конструкт</strong> — это прямым образом ненаблюдаемая переменная, характеризующая различия в поведении людей в специфической группе ситуаций.</p>
+<ul>
+<li>характеристика, навык, способность человека, которую мы хотим оценить или измерить</li>
+<li>базируется на одной или нескольких теориях</li>
+<li>не может быть измерен непосредственно, но с помощью различных индикаторов или переменных</li>
+<li>может быть простым и сложным</li>
+</ul>
+</section>
+<section id="примеры-конструктов" class="slide level2">
+<h2>Примеры конструктов</h2>
+<ul>
+<li><strong>Простые:</strong>
+<ul>
+<li>Принадлежность к политической партии</li>
+<li>Стаж</li>
+<li>Умение умножать</li>
+<li>Детский эгоцентризм (по Пиаже)</li>
+<li>Знание букв</li>
+</ul></li>
+<li><strong>Сложные:</strong>
+<ul>
+<li>Удовлетворенность работой</li>
+<li>Математическая грамотность</li>
+<li>Учебная мотивация</li>
+<li>Коммуникация</li>
+<li>Навык достижения цели</li>
+</ul></li>
+</ul>
+</section>
+<section id="концепт" class="slide level2">
+<h2>Концепт</h2>
+<p><strong>Концепт</strong> — это обобщенная идея, разделяемая многими людьми (сообществом), которая может быть представлена в рамках той или иной теории или подхода.</p>
+</section>
+<section id="психологическое-vs-образовательное-тестирование" class="slide level2">
+<h2>Психологическое vs Образовательное тестирование</h2>
+<p>Существуют некоторые различия в том, как смотрят на измеряемые конструкты в образовательном и психологическом тестировании:</p>
+<ul>
+<li><strong>Психологическое тестирование</strong>
+<ul>
+<li>Измерение какого-либо латентного конструкта
+<ul>
+<li>определение конструкта, основанное на теориях и / или исследованиях</li>
+<li>операционализация конструкта</li>
+<li>области содержания</li>
+</ul></li>
+</ul></li>
+<li><strong>Образовательное тестирование</strong>
+<ul>
+<li>Образовательные результаты (освоение программы, курса, года, и т. д.)
+<ul>
+<li>соответствует ФГОС</li>
+<li>соответствует учебному плану / программе</li>
+<li>отражает цели обучения</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="операционализация" class="slide level2">
+<h2>Операционализация</h2>
+<ul>
+<li>определение конструкта в терминах операций, необходимых для его измерения (Machery (2007))</li>
+<li>процесс и документ, описывающий переход от теоретического, абстрактного понятия к наблюдаемому поведению, измеряемому в тесте</li>
+</ul>
+<p>Операционализация подразумевает разработку:</p>
+<ul>
+<li>субконструктов и их взаимосвязей,</li>
+<li>групп ситуаций, в которых они проявляются,</li>
+<li>способов сбора информации об их проявлении (Mislevy, Almond, Lukas (2003), Brennan (2006))</li>
+</ul>
+</section>
+<section id="тестовые-задания.-области-содержания-конструкта" class="slide level2">
+<h2>Тестовые задания. Области содержания конструкта</h2>
+<ul>
+<li>При разработке пунктов опросника должны быть учтены области содержания конструкта — ситуации и контексты, в которых он может проявляться
+<ul>
+<li>Чем шире конструкт, тем в большем количестве контекстов он может проявляться и тем больше областей содержания должен охватывать опросник</li>
+</ul></li>
+</ul>
+</section>
+<section id="структура-опросника" class="slide level2">
+<h2>Структура опросника</h2>
+<ul>
+<li>В структуру психометрического инструмента может входит несколько <strong>субшкал</strong> или несколько <strong>субтестов</strong>
+<ul>
+<li>Если опросник состоит из нескольких субшкал, то его можно использоваться только как единый психометрический инструмент — не допускается использование отдельных субшкал опросника при сборе данных.</li>
+<li>Если опросник состоит из нескольких субтестов, то возможно использование отдельных субтестов при сборе данных.</li>
+</ul></li>
+</ul>
+</section>
+<section id="виды-шкал-в-психометрических-инструментах" class="slide level2">
+<h2>Виды шкал в психометрических инструментах</h2>
+<ul>
+<li><strong>По характеру отношений</strong>
+<ul>
+<li>неметрические (номинальная и порядковая)</li>
+<li>метрические (разностей и отношений)</li>
+</ul></li>
+<li><strong>По числовому соответствию</strong>
+<ul>
+<li>дискретные</li>
+<li>непрерывные (континуальные)</li>
+</ul></li>
+<li><strong>По наличию и/или смыслу полюсов</strong>
+<ul>
+<li>биполярные</li>
+<li>униполярные</li>
+</ul></li>
+<li><strong>По материалу</strong>
+<ul>
+<li>графические</li>
+<li>текстовые</li>
+<li>числовые</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="шкала-ликерта" class="slide level2">
+<h2>Шкала Ликерта</h2>
+<p>Классическая психометрическая шкала — это шкала Ликерта. Она обладает следующими характеристиками:</p>
+<ul>
+<li>биполярная</li>
+<li>заданы текстом все альтернативы</li>
+<li>равные интервалы [визуально]</li>
+<li>горизонтальная</li>
+<li>даны целые числа [от 1 до 5]</li>
+</ul>
+</section>
+<section id="психометрические-характеристики-шкалы" class="slide level2">
+<h2>Психометрические характеристики шкалы</h2>
+<ul>
+<li><strong>Надежность</strong> — это мера свободы результатов от ошибки измерения (standard error of measurement, SEM).</li>
+<li>Надежность нельзя рассчитать напрямую — можно только аппроксимировать</li>
+<li>Разными методами — ни один из них не является полностью верным</li>
+<li>Но нам приходится с этим как-то жить</li>
+</ul>
+<p>Методы расчета надежности:</p>
+<ul>
+<li>Cronbach’s <span class="math inline">\(\alpha\)</span> — надежность-внутренняя согласованность</li>
+<li>Метод расщепленных половин</li>
+<li>Ретестовая надежность</li>
+</ul>
+</section>
+<section id="психометрические-характеристики-пунктов" class="slide level2">
+<h2>Психометрические характеристики пунктов</h2>
+<h3 id="трудность-задания">Трудность задания</h3>
+<ul>
+<li>Для дихотомического случая</li>
+</ul>
+<p><span class="math display">\[
+b_j = \frac{s_{1j} \cdot p_{1j} + s_{2j} \cdot p_{2j}}{N_j} = \frac{0 \cdot p_{1j} + 1 \cdot p_{2j}}{N_j} = \frac{p_{2j}}{N_j}
+\]</span></p>
+<ul>
+<li>Для политомического случая</li>
+</ul>
+<p><span class="math display">\[
+b_j = \frac{\sum_{k=1}^{K_j}(s_{kj} \cdot p_{kj})}{N_j \cdot s_{Kj}}
+\]</span></p>
+</section>
+<section id="психометрические-характеристики-пунктов-1" class="slide level2">
+<h2>Психометрические характеристики пунктов</h2>
+<h3 id="интерпретация-значений-трудности">Интерпретация значений трудности</h3>
+<ul>
+<li>Чем выше показатель трудности, тем легче справиться с заданием</li>
+<li>Слишком трудные — [0.00, 0.05] — и слишком легкие — [0.95, 1.00] — задания плохо дифференцируют выборку</li>
+<li>Начинать кодировку ответов лучше с 0 — так проще жить и интерпретировать результаты</li>
+</ul>
+</section>
+<section id="психометрические-характеристики-пунктов-2" class="slide level2">
+<h2>Психометрические характеристики пунктов</h2>
+<h3 id="дискриминативность-задания">Дискриминативность задания</h3>
+<ul>
+<li>Тест направлен на измерение некоторого конструкта</li>
+<li>Суммарный тестовый балл отражает выраженность конструкта</li>
+<li>Чем сильнее коррелирует балл по заданию с баллом по тесту, тем лучше задание различает респондентов</li>
+<li>Лучше использовать скорректированную меру — корреляцию балла по заданию с суммой баллов по всем другим заданиям</li>
+</ul>
+</section>
+<section id="валидность" class="slide level2">
+<h2>Валидность</h2>
+<p><strong>Валидность</strong> — это соответствие результатов тестирования заявленной цели тестирования, в частности, тому психическому свойству (или свойствам), которое измеряется.</p>
+<ul>
+<li>В широком смысле — сведения о поведении и психических явлениях, находящихся в причинной зависимости от диагностируемого свойства.</li>
+<li>Аналогично можно говорить о валидности тестового задания.</li>
+</ul>
+</section>
+<section id="валидность-1" class="slide level2">
+<h2>Валидность</h2>
+<br>
+<center>
+<strong>Главная цель разработки психометрического инструмента — сбор как можно большего количества разных свидетельств валидности.</strong>
+</center>
+<p><br></p>
+<center>
+<strong>Сбор разных свидетельств валидности обеспечивает обоснованный вывод о том, что по результатам теста можно выносить соответствующие суждения о тестируемых.</strong>
+</center>
+<p><br></p>
+</section></section>
+<section>
+<section id="виды-валидности" class="title-slide slide level1 center">
+<h1>Виды валидности</h1>
+
+</section>
+<section id="концептуальная-валидность" class="slide level2">
+<h2>Концептуальная валидность</h2>
+<ul>
+<li>обоснование тестовой методики с позиций соответствия авторским (теоретическим) представлениям об особенностях диагностируемых свойств</li>
+<li>мера соответствия содержания заданий теста авторской концепции этих свойств.</li>
+</ul>
+</section>
+<section id="конструктная-валидность" class="slide level2">
+<h2>Конструктная валидность</h2>
+<ul>
+<li>определяет область теоретической структуры психологических явлений, измеряемых тестом</li>
+<li>тест, базирующийся на развитой, логически-связной теории, обеспеченной высоко-операционализированными понятиями, обладает конструктной валидностью</li>
+</ul>
+<p><strong>Виды конструктной валидности</strong>:</p>
+<ul>
+<li>внутренняя валидность / надежность–внутренняя согласованность</li>
+<li>дифференциальная валидность</li>
+<li>конвергентная валидность</li>
+<li>дискриминантная валидность</li>
+</ul>
+</section>
+<section id="внутренняя-валидность" class="slide level2">
+<h2>Внутренняя валидность</h2>
+<ul>
+<li>подчиненность пунктов (заданий, вопросов) теста основному направлению теста как целого</li>
+<li>ориентированность пунктов на изучение одних и тех же конструктов</li>
+<li>анализ осуществляется путем коррелирования ответов на каждое задание с общим результатом теста</li>
+<li>динамика изучаемого конструкта</li>
+</ul>
+</section>
+<section id="дифференциальная-валидность" class="slide level2">
+<h2>Дифференциальная валидность</h2>
+<ul>
+<li>внутренние взаимоотношения между диагностируемыми факторами</li>
+<li>тесты интересов
+<ul>
+<li>обычно умеренного коррелируют с показателем общей академической успеваемости</li>
+<li>но связаны с успеваемостью по отдельным дисциплинам</li>
+<li>особенно важна как показатель диагностической ценности методик в профотборе</li>
+</ul></li>
+</ul>
+</section>
+<section id="эмпирическая-валидность" class="slide level2">
+<h2>Эмпирическая валидность</h2>
+<ul>
+<li>совокупность характеристик валидности теста, полученных экспериментально-статистическим способом
+<ul>
+<li>критериальная
+<ul>
+<li>текущая / диагностическая / конкурентная</li>
+<li>ретроспективная</li>
+<li>прогностическая</li>
+</ul></li>
+<li>конвергентная</li>
+<li>дискриминантная</li>
+<li>концессуальная</li>
+</ul></li>
+</ul>
+</section>
+<section id="конвергентная-валидность" class="slide level2">
+<h2>Конвергентная валидность</h2>
+<ul>
+<li>степень соответствия баллов двух тестовых методик, направленных на измерение одного и того же или концептуально-родственных конструктов</li>
+<li>значимая корреляция между тестами</li>
+</ul>
+</section>
+<section id="дискриминантная-валидность" class="slide level2">
+<h2>Дискриминантная валидность</h2>
+<ul>
+<li>степень, в которой тест не измеряет тот конструкт, для измерения которого он не предназначен</li>
+<li>отсутствие значимой корреляции между тестовыми показателями, отражающими концептуально независимые свойства</li>
+<li>частный случай — отсутствие корреляции с переменными приводящими к фальсификации или мотивационным искажениям результата
+<ul>
+<li>например, социальная желательность</li>
+</ul></li>
+</ul>
+</section>
+<section id="критериальная-валидность" class="slide level2">
+<h2>Критериальная валидность</h2>
+<ul>
+<li>отражает соответствие результатов тестирования определенным значениям критериальной переменной или вероятности критериального события</li>
+<li>независимые от результатов теста непосредственные меры исследуемого качества
+<ul>
+<li>уровень достижения в чем-либо</li>
+<li>степень развития способности</li>
+<li>выраженность определенного свойства личности</li>
+<li>показатели социально- или производственно-значимых результатов деятельности</li>
+</ul></li>
+</ul>
+<p><strong>Текущая (конкурентная)</strong></p>
+<ul>
+<li>критериальное событие происходит сейчас, в момент исследования</li>
+</ul>
+<p><strong>Ретроспективная</strong></p>
+<ul>
+<li>критериальное событие уже произошло</li>
+</ul>
+<p><strong>Прогностическая</strong></p>
+<ul>
+<li>критериальное событие будет потом</li>
+<li>нужен квазиэксперимент</li>
+</ul>
+</section>
+<section id="концессуальная-валидность" class="slide level2">
+<h2>Концессуальная валидность</h2>
+<ul>
+<li>установлении связи (корреляции) тестовых данных с данными, полученными от внешних экспертов</li>
+<li>эксперты хорошо знакомы с тестируемыми</li>
+</ul>
+</section>
+<section id="очевидная-валидность-face-validity" class="slide level2">
+<h2>Очевидная валидность (face validity)</h2>
+<ul>
+<li>насколько сам тест и его задания кажутся респондентам подходящими для цели тестирования</li>
+<li>высокая очевидная валидность присуща также кейс-тестам.</li>
+<li>очень часто не совпадает с научной концепцией валидности</li>
+<li>высокая очевидная валидность часто является весьма желательной</li>
+<li>фактор, побуждающий респондента к сотрудничеству, серьезному и ответственному отношению к выполнению заданий и к восприятию результатов оценки</li>
+</ul>
+</section>
+<section id="содержательная-валидность" class="slide level2">
+<h2>Содержательная валидность</h2>
+<ul>
+<li>степень соответствия содержания заданий теста той реальной деятельности, в которой проявляется измеряемое психическое свойство
+<ul>
+<li>учебные тесты, тесты профессиональных достижений</li>
+</ul></li>
+<li>много разнородных, факторов — личностные особенности, знания, умения и навыки, специальные способности — нужна адекватная модель тестируемой деятельности
+<ul>
+<li>подбор заданий, охватывающие главные аспекты изучаемого феномена в правильной пропорции к реальной деятельности в целом</li>
+</ul></li>
+<li>авторское обоснование пригодности теста в самом содержании тестовых заданий</li>
+</ul>
+</section>
+<section id="факторная-валидность" class="slide level2">
+<h2>Факторная валидность</h2>
+<ul>
+<li>подтверждения теоретической структуры конструкта, разработанной в ходе операционализации, эмпирическими данными, собранными в ходе количественной апробации методики</li>
+<li>проводится с помощью [конфирматорного] факторного анализа</li>
+</ul>
+</section>
 <section id="итоги" class="slide level2">
 <h2>Итоги</h2>
 <ul>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
+<li>Выяснили, что такое измерение и как оно устроено в психологии</li>
+<li>Разобрались со шкалами и их особенностями</li>
+<li>Обзорно взглянули на психометрические измерения</li>
+<li>Познакомились с различными видами валидности</li>
 </ul>
 </section></section>
 <section id="end" class="title-slide slide level1 center">
-<h1>L4. Теория измерений</h1>
+<h1>L4 // Теория измерений</h1>
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <p>Антон Ангельгардт</p>
@@ -538,7 +961,6 @@ x \thicksim \mathcal{N}(0, 1)
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -723,44 +1145,6 @@ x \thicksim \mathcal{N}(0, 1)
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -837,10 +1221,9 @@ x \thicksim \mathcal{N}(0, 1)
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -850,8 +1233,17 @@ x \thicksim \mathcal{N}(0, 1)
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
