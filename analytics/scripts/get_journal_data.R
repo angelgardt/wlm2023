@@ -1,7 +1,8 @@
 ## practice
-pr_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                         sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("P"))
+journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                         sheet = "Journal", col_types = "c")
+journal %>% 
+  select(ID, Stream, starts_with("P")) -> pr_journal
 
 ## calculate number of participants
 pr_journal %>% 
@@ -29,9 +30,8 @@ pr_journal %>%
 
 
 ## consulations
-c_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("C"))
+journal %>% 
+  select(ID, Stream, starts_with("C")) -> c_journal
 
 ## consulations presence
 c_journal %>% 
@@ -52,9 +52,8 @@ c_journal %>%
 
 
 ## homeworks
-hw_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
-                        sheet = "Journal") %>% 
-  select(ID, Stream, starts_with("HW"))
+journal %>% 
+  select(ID, Stream, starts_with("HW")) -> hw_journal
 
 ## homeworks not submitted
 hw_journal %>% 

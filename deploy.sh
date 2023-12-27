@@ -84,7 +84,7 @@ function deployer {
 				# if render
 				# print dirs to render
 				echo -e "-----"
-				echo -e "${BLUE}Directories to be rendered:${NC}"
+				echo -e "${BLUE}Directories to render:${NC}"
 				for item in ${deploy_dirs[*]}
 				do
 					printf "${GRAY}    %s\n${NC}" $item
