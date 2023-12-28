@@ -63,4 +63,4 @@ function deployer {
 }
 
 
-deployer $1
+deployer $@
