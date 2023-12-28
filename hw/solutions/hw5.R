@@ -3,6 +3,52 @@
 
 # MAIN
 
+### total graph code
+
+library(tidyverse)
+
+share <- read_delim("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/share.csv", 
+                    delim = " ", 
+                    locale = locale(decimal_mark = ","))
+str(share)
+
+pd <- position_dodge(.3)
+
+share %>% 
+  filter(trialtype != "both") %>% 
+  ggplot(aes(as_factor(setsize), time1,
+             color = trialtype,
+             shape = platform,
+             group = interaction(trialtype, platform)
+             )
+         ) +
+  stat_summary(fun = mean, geom = "line",
+               position = pd, linetype = "dashed", alpha = .7) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               position = pd, width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               position = pd, size = 3) +
+  labs(x = "Количество стимулов в пробе",
+       y = "Время реакции (первый клик), с",
+       color = "Тип пробы",
+       shape = "Платформа",
+       title = "Время реакции при взаимодействии факторов",
+       subtitle = "Тип пробы × Платформа × Количество стимулов в пробе",
+       caption = "отображен 95% доверительный интервал") +
+  scale_color_manual(values = c(dots = "gray50", tray = "black"),
+                     labels = c(dots = "Three Dots", tray = "Outgoing Tray")) +
+  scale_shape_discrete(labels = c(android = "Android", ios = "iOS")) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave("hw5_plot.jpg", 
+       width = 20, 
+       height = 18, 
+       units = "cm", 
+       dpi = 600)
+
+
+
 # 1
 library(tidyverse)
 share <- read_delim("../data/hw5/share.csv", delim = " ", locale = locale(decimal_mark = ","))
@@ -188,6 +234,7 @@ share %>%
 
 # 2
 taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/taia_short.csv")
+str(taia)
 
 theme_set(theme_bw())
 
@@ -212,18 +259,17 @@ taia %>%
   facet_wrap(~ id) +
   labs(fill = "Шкала") +
   theme(legend.position = "bottom",
-        axis.title.x = element_text(size = 0),
-        axis.text.x = element_text(size = 0),
-        axis.title.y = element_text(size = 0),
-        axis.text.y = element_text(size = 0))
+        axis.title = element_text(size = 0),
+        axis.text = element_text(size = 0))
 
 
 # 4
 ## install.packages("svglite")
-ggsave("test.svg")
+ggsave("taia_profiles.svg")
 
 # 5
 vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/vowels.csv")
+str(vowels)
 
 vowels %>% 
   ggplot(aes(f2, f1,
