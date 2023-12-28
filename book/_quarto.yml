@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "WLM 2023"
@@ -11,7 +12,7 @@ book:
         - name: "HSE UX LAB, HSE University"
   date: last-modified
   date-format: "MMM D, YYYY"
-  downloads: [pdf, epub]
+  # downloads: [pdf, epub]
   chapters:
     - index.qmd
     - signs.qmd
@@ -27,6 +28,8 @@ book:
     - r-vis.qmd
     - r-tidy.qmd
     - r-ggplot2.qmd
+    - r-rmd.qmd
+    - r-qmd.qmd
     # - part: part-py.qmd
     - part: part-math.qmd
     - math-logic.qmd
@@ -34,9 +37,9 @@ book:
     - math-combinatorics.qmd
     - math-analysis.qmd
     - math-linal.qmd
-    - part: part-measurements.qmd
-    - measurements-social-sci.qmd
-    - measurements-psychomentrics.qmd
+    - part: part-measure.qmd
+    - measure-social-sci.qmd
+    - measure-psychometrics.qmd
     - part: part-stats.qmd
     - stats-intro.qmd
     - stats-rand-exp.qmd
@@ -63,8 +66,8 @@ book:
     - andan-logreg.qmd
     - andan-multinomlogreg.qmd
     - andan-poissonreg.qmd
-    - andan-glmm.qmd
     - andan-gam.qmd
+    - andan-glmm.qmd
     - andan-svm.qmd
     - andan-treesclass.qmd
     - andan-randforestclass.qmd
@@ -98,8 +101,8 @@ book:
     - randan-logreg.qmd
     - randan-multinomlogreg.qmd
     - randan-poissonreg.qmd
-    - randan-glmm.qmd
     - randan-gam.qmd
+    - randan-glmm.qmd
     - andan-svm.qmd
     - randan-treesclass.qmd
     - randan-randforestclass.qmd
@@ -122,6 +125,7 @@ book:
     - appendix-proglang.qmd
     - appendix-git.qmd
     - appendix-formulas.qmd
+    - appendix-design.qmd
     - references.qmd
   favicon: pics/favicon.png
   navbar: 
@@ -144,6 +148,9 @@ book:
     background: gray-700
 
 bibliography: references.bib
+
+comments:
+  hypothesis: true
 
 format:
   html:
