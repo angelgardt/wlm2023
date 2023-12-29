@@ -72,7 +72,7 @@ function deployer {
 			ls -Ral docs
 			echo -e "${GREEN}=====${NC}"
 			echo -e "${GREEN}Reset completed${NC}"
-			echo -e "Now your docs directory contains only empty README.md file"
+			echo -e "Now your docs directory contains only README file"
 			echo -e "${GREEN}=====${NC}"
 				  
 		else

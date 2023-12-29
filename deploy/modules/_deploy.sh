@@ -5,7 +5,7 @@ function deploy() {
   ## exit with a non-sero status
   set -e
 	
-	echo -e "${GREEN}=====\nRUN DEPLOYER\n=====\n${NC}"
+	echo -e "${GREEN}\n=====\nRUN DEPLOYER\n=====\n${NC}"
 	
 	## import functions
 	source deploy/modules/_backup.sh
@@ -56,10 +56,10 @@ function deploy() {
 	then
 	  
 	  ## exit
-		echo -e "\n${GREEN}=====${NC}"
+		echo -e "${GREEN}\n=====${NC}"
 		echo -e "${GREEN}RESET COMPLETED${NC}"
 		echo -e "Now your docs directory contains only empty README.md file"
-		echo -e "${GREEN}=====${NC}\n"
+		echo -e "${GREEN}=====\n${NC}"
 		exit
 	
 	## if custom
@@ -75,7 +75,7 @@ function deploy() {
 	  {
 	    custom_deploy
 	  } || {
-	    echo -e "${RED}=====\n=====${NC}"
+	    echo -e "${RED}\n=====\n=====${NC}"
       echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
       echo -e "${RED}Custom deploy error${NC}"
       echo -e "${RED}=====\n=====\n${NC}"
@@ -90,7 +90,7 @@ function deploy() {
   	if [ ! -f deploy/dirs.txt ]
   	then
   		
-  		echo -e "${RED}=====\n=====${NC}"
+  		echo -e "${RED}\n=====\n=====${NC}"
   		echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
   		echo -e "${RED}File ${GRAY}dirs.txt${RED} does not exists${NC}"
   		echo -e "Create a ${GRAY}dirs.txt${NC} file in ${GRAY}deploy${NC} folder with a list of directories (each on a new line) that have to be deployed"
@@ -198,7 +198,7 @@ function deploy() {
 	printf "## \`docs\` structure: \n" >> docs/README.md
 	ls -Ral docs >> docs/README.md
 	
-	echo -e "${GREEN}==========\n==========${NC}"
+	echo -e "${GREEN}\n==========\n==========${NC}"
 	echo -e "${GREEN}DEPLOYMENT COMPLETED${NC}"
 	echo -e "${GREEN}==========\n==========${NC}"
 	echo -e "${GRAY}Commit and push changes to remote\n${NC}"
