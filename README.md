@@ -8,8 +8,12 @@
 
 ## Usage
 
+see [License](./LICENSE.md)
+
 ## Structure
 
 [deploy](./deploy)
 
 ## Support
+
+
