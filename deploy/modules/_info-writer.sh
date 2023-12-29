@@ -13,4 +13,11 @@ function info_writer() {
   ls -Ral docs >> docs/README.md
   printf "\`\`\`\n" >> docs/README.md
   
+  printf "## Log: \n\n" >> docs/README.md
+  printf "\`\`\`\n" >> docs/README.md
+  sed -e 's/\x1b\[[0-9;]*m//g' deploy/last.log >> docs/README.md
+  printf "\`\`\`\n" >> docs/README.md
+  
+  rm deploy/last.log
+  
 }

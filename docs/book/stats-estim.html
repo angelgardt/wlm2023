@@ -913,31 +913,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1     1    94
-2     2    98
-3     3    94
-4     4   101
-5     5    96
-6     6   121</code></pre>
+1     1    89
+2     2    60
+3     3   100
+4     4    82
+5     5    89
+6     6    90</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1  9995    93
-2  9996    97
-3  9997   117
-4  9998   109
-5  9999    98
-6 10000    86</code></pre>
+1  9995   102
+2  9996    86
+3  9997   110
+4  9998    95
+5  9999    93
+6 10000    84</code></pre>
 </div>
 </div>
 <p>Так как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра <span class="math inline">\(\mu\)</span>. <strong>В реальной жизни мы этого сделать не можем!</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 99.8877</code></pre>
+<pre><code>[1] 99.9175</code></pre>
 </div>
 </div>
 <p>Вполне ожидаемое значение<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Теперь попробуем наизвлекать выборок человек по 50 и посчитать <em>оценки среднего (выборочные средние)</em> <span class="math inline">\(\hat \mu\)</span> на них:</p>
@@ -1130,12 +1130,12 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_normal</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        y     ymin     ymax
-1 99.8877 99.59447 100.1809</code></pre>
+1 99.9175 99.62312 100.2119</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_boot</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        y     ymin     ymax
-1 99.8877 99.61306 100.1838</code></pre>
+<pre><code>        y    ymin     ymax
+1 99.9175 99.6221 100.2042</code></pre>
 </div>
 </div>
 

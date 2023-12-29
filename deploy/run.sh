@@ -4,6 +4,7 @@
 source deploy/modules/_set-colors.sh
 source deploy/modules/_deploy.sh
 source deploy/modules/_restore.sh
+source deploy/modules/_info-writer.sh
 
 ## make modes array
 modes=( "update" "render" "reset" "custom" "restore" )
@@ -28,13 +29,16 @@ then
 fi
 
 
-if [ "$1" = "restore" ]
+if [ "$mode" = "restore" ]
 then
   
-  restore
+  restore 2>&1 | tee deploy/last.log
   
 else
   
-  deploy "$mode"
+  deploy "$mode" 2>&1 | tee deploy/last.log
   
 fi
+
+## add deployment info to docs/README.md
+info_writer $mode

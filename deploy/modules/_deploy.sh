@@ -16,7 +16,6 @@ function deploy() {
 	source deploy/modules/_render-slides.sh
 	source deploy/modules/_render-analytics.sh
 	source deploy/modules/_custom.sh
-	source deploy/modules/_info-writer.sh
 	
   ## check docs dir exists
 	## create if not
@@ -185,10 +184,6 @@ function deploy() {
 	then
 	  rm deploy/current-dirs.txt
 	fi
-	
-	## add deployment info to docs/README.md
-	
-	info_writer $mode
 	
 	## message deploy success
 	printf "${GREEN}\n==========\n==========\n${NC}"
