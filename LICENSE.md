@@ -1,5 +1,7 @@
 Attribution-NonCommercial 4.0 International
 
+[Canonical URL](https://creativecommons.org/licenses/by-nc/4.0/)
+
 =======================================================================
 
 Creative Commons Corporation ("Creative Commons") is not a law firm and
