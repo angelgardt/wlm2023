@@ -16,11 +16,11 @@ mode="${1:-${modes[0]}}"
 if [[ ! ${modes[@]} =~ $mode ]]
 then
 	
-	echo -e "${RED}=====${NC}"
+	echo -e "${RED}\n=====\n=====${NC}"
 	echo -e "${RED}RUN FAILED${NC}"
 	echo -e "${RED}Unknown first inline argument${NC}"
 	echo -e "Valid options are ${GRAY}${modes[@]}${NC} (first is default)"
-	echo -e "${RED}=====${NC}"
+	echo -e "${RED}=====\n=====\n${NC}"
 	echo
 	exit
 	

@@ -5,10 +5,7 @@ function deploy() {
   ## exit with a non-sero status
   set -e
 	
-	echo -e "====="
-  echo -e "${GREEN}RUN DEPLOYER${NC}"
-  echo -e "====="
-  echo
+	echo -e "${GREEN}=====\nRUN DEPLOYER\n=====\n${NC}"
 	
 	## import functions
 	source deploy/modules/_backup.sh
@@ -29,27 +26,29 @@ function deploy() {
 		touch docs/README.md
 		echo date >> docs/README.md
 		
-		echo -e "-----"
-		echo -e "${BLUE}new docs directory created${NC}"
-		echo -e "-----"
+		echo -e "${BLUE}new ${GRAY}docs${BLUE} directory created${NC}"
 		
 	fi
 
 	## make docs backup
-	backup
+	{
+	  backup
+	} || {
+	  echo -e "${RED}\n=====\n=====${NC}"
+		echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
+		echo -e "${RED}Backup error${NC}"
+		echo -e "${RED}=====\n=====\n${NC}"
+		exit
+	}
 	
 	## remove old docs
 	rm -rf docs
-	echo -e "-----"
 	echo -e "${BLUE}old ${GRAY}docs${BLUE} directory removed${NC}"
-	echo -e "-----"
 	
 	mkdir docs
 	touch docs/README.md
 	
-	echo -e "-----"
 	echo -e "${BLUE}new ${GRAY}docs${BLUE} directory created${NC}"
-	echo -e "-----"
 	echo
 	
 	## if reset
@@ -57,11 +56,10 @@ function deploy() {
 	then
 	  
 	  ## exit
-		echo -e "${GREEN}=====${NC}"
+		echo -e "\n${GREEN}=====${NC}"
 		echo -e "${GREEN}RESET COMPLETED${NC}"
 		echo -e "Now your docs directory contains only empty README.md file"
-		echo -e "${GREEN}=====${NC}"
-		echo
+		echo -e "${GREEN}=====${NC}\n"
 		exit
 	
 	## if custom
@@ -73,8 +71,16 @@ function deploy() {
 	  ### read dirs and mode from line args
 	  ### create current-dirs.txt to pass to _custom.sh
 	  
-	  ## run custom script
-	  custom_deploy
+	  ## run custom script with try-catch logic
+	  {
+	    custom_deploy
+	  } || {
+	    echo -e "${RED}=====\n=====${NC}"
+      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
+      echo -e "${RED}Custom deploy error${NC}"
+      echo -e "${RED}=====\n=====\n${NC}"
+      exit
+	  }
   
   ## update or render all
   else
@@ -84,14 +90,12 @@ function deploy() {
   	if [ ! -f deploy/dirs.txt ]
   	then
   		
-  		echo -e "${RED}=====${NC}"
-  		echo -e "${RED}=====${NC}"
+  		echo -e "${RED}=====\n=====${NC}"
   		echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
   		echo -e "${RED}File ${GRAY}dirs.txt${RED} does not exists${NC}"
   		echo -e "Create a ${GRAY}dirs.txt${NC} file in ${GRAY}deploy${NC} folder with a list of directories (each on a new line) that have to be deployed"
   		echo -e "Format of each line: ${GRAY}<original_dir_name>:<deployed_dir_name>${NC}"
-  		echo -e "${RED}=====${NC}"
-  		echo -e "${RED}=====${NC}"
+  		echo -e "${RED}=====\n=====\n${NC}"
   		exit
   	
   	fi
@@ -104,41 +108,36 @@ function deploy() {
 	  then
 	    
 	    ## run render scripts with try-catch logic
+	    ### render books
 	    {
 	      render_books
 	    } || {
-	      echo -e "${RED}=====${NC}"
-	      echo -e "${RED}=====${NC}"
+	      echo -e "${RED}=====\n=====${NC}"
 	      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 	      echo -e "${RED}Books render error${NC}"
-	      echo -e "${RED}=====${NC}"
-	      echo -e "${RED}=====${NC}"
-	      echo
+	      echo -e "${RED}=====\n=====\n${NC}"
 	      exit
 	    }
 	    
+	    ### render slides
 	    {
 	      render_slides
 	    } || {
-	      echo -e "${RED}=====${NC}"
-	      echo -e "${RED}=====${NC}"
+	      echo -e "${RED}=====\n=====${NC}"
 	      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 	      echo -e "${RED}Slides render error${NC}"
-	      echo -e "${RED}=====${NC}"
-	      echo -e "${RED}=====${NC}"
-	      echo
+	      echo -e "${RED}=====\n=====\n${NC}"
 	      exit
 	    }
 	    
+	    ### render analytics
 	    {
 	      render_analytics
 	    } || {
-  	    echo -e "${RED}=====${NC}"
-  	    echo -e "${RED}=====${NC}"
+  	    echo -e "${RED}=====\n=====${NC}"
   	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
   	    echo -e "${RED}Analytics render error${NC}"
-  	    echo -e "${RED}=====${NC}"
-  	    echo -e "${RED}=====${NC}"
+  	    echo -e "${RED}=====\n=====\n${NC}"
   	    echo
   	    exit
 	    }
@@ -148,61 +147,61 @@ function deploy() {
 		## then update
 	  ## run update scripts with try-catch logic
 	  
+	  ### update books
 	  {
 	    update_books
 	  } || {
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
+	    echo -e "${RED}=====\n=====${NC}"
 	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 	    echo -e "${RED}Books update error${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo
+	    echo -e "${RED}=====\n=====\n${NC}"
 	    exit
 	  }
 	  
+	  ### update slides
 	  {
 	    update_slides
 	  } || {
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
+	    echo -e "${RED}=====\n=====${NC}"
 	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 	    echo -e "${RED}Slides update error${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo
+	    echo -e "${RED}=====\n=====\n${NC}"
 	    exit
 	  }
 	  
+	  ### update analytics
 	  {
 	    update_analytics
 	  } || {
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
+	    echo -e "${RED}=====\n=====${NC}"
 	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 	    echo -e "${RED}Analytics update error${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo -e "${RED}=====${NC}"
-	    echo
+	    echo -e "${RED}=====\n=====\n${NC}"
 	    exit
 	  }
-	    
-	  ## remove temporary current dirs file
-	  rm deploy/current-dirs.txt
 	  
 	fi
 	
-	now=$(date +"%Y-%m-%d %H:%M")
-	echo "Last deploy:" >> docs/README.md
-	echo $now >> docs/README.md
+	## remove temporary current dirs file
+	if [ -f deploy/current-dirs.txt ]
+	then
+	  rm deploy/current-dirs.txt
+	fi
 	
-	echo -e "${GREEN}==========${NC}"
-	echo -e "${GREEN}==========${NC}"
+	## add deployment info to docs/README.md
+	now=$(date +"%Y-%m-%d %H:%M")
+	printf "# Last deployment info\n\n" >> docs/README.md
+	printf "Date: %s\n" "$now" >> docs/README.md
+	printf "Mode: %s\n\n" "$mode" >> docs/README.md
+	###### TODO
+	###### add flag info for custom mode
+	printf "## \`docs\` structure: \n" >> docs/README.md
+	ls -Ral docs >> docs/README.md
+	
+	echo -e "${GREEN}==========\n==========${NC}"
 	echo -e "${GREEN}DEPLOYMENT COMPLETED${NC}"
-	echo -e "${GREEN}==========${NC}"
-	echo -e "${GREEN}==========${NC}"
-	echo -e "${GRAY}Commit and push changes to remote${NC}"
-	echo
+	echo -e "${GREEN}==========\n==========${NC}"
+	echo -e "${GRAY}Commit and push changes to remote\n${NC}"
   
   # reset text color
 	echo -e "${NC}"

@@ -5,9 +5,7 @@ function update_books() {
   ## exit with a non-sero status
   set -e
 	
-	echo -e "====="
-  echo -e "${GREEN}RUN BOOKS UPDATER${NC}"
-  echo -e "====="
+	echo -e "${GREEN}=====\nRUN BOOKS UPDATER\n=====${NC}"
   echo
   
 	## read dirs
@@ -22,26 +20,22 @@ function update_books() {
   } || {
     
     #catch
-    echo -e "-----"
-    echo -e "${RED}Deploy not completed${NC}"
+    echo -e "${RED}=====${NC}"
+    echo -e "${RED}DEPLOYMENT NOT COMPLETED{NC}"
     echo -e "${RED}redirecting index.html copying error${NC}"
-    echo -e "-----"
+    echo -e "${RED}=====\n${NC}"
     exit
     
   }
   
-  echo -e "-----"
-  echo -e ${GRAY}redirecting index.html${BLUE} copied${NC}
-	echo -e "-----"
-		
-	echo -e "-----"
+  echo -e "${GRAY}redirecting index.html${BLUE} copied${NC}\n"
+
 	echo -e "${BLUE}Directories to be deployed:${NC}"
 	
 	for item in ${deploy_dirs[*]}
 	do
 	  printf "${GRAY}    %s\n${NC}" $item
 	done
-	echo -e "-----"
     			
   for index in ${!deploy_dirs[*]}
   do
@@ -60,21 +54,17 @@ function update_books() {
     } || {
       
       # catch
-      echo -e "${RED}=====${NC}"
-      echo -e "${RED}Deploy not completed${NC}"
+      echo -e "${RED}\n=====${NC}"
+      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
 			echo -e "${RED}File copying error${NC}"
-			echo -e "${RED}=====${NC}"
+			echo -e "${RED}=====\n${NC}"
 			exit
       
     }
     
-    echo
 		echo -e ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
 	done
 			
-	echo -e "====="
-  echo -e "${GREEN}BOOKS UPDATER COMPLETED${NC}"
-  echo -e "====="
-  echo
+	echo -e "${GREEN}=====\nBOOKS UPDATE COMPLETED\n=====\n${NC}"
   
 }
