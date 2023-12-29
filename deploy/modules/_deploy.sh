@@ -11,14 +11,14 @@ function deploy() {
   echo
 	
 	## import functions
-	source deploy/_backup.sh
-	source deploy/_update-books.sh
-	source deploy/_update-slides.sh
-	source deploy/_update-analytics.sh
-	source deploy/_render-books.sh
-	source deploy/_render-slides.sh
-	source deploy/_render-analytics.sh
-	source deploy/_custom.sh
+	source deploy/modules/_backup.sh
+	source deploy/modules/_update-books.sh
+	source deploy/modules/_update-slides.sh
+	source deploy/modules/_update-analytics.sh
+	source deploy/modules/_render-books.sh
+	source deploy/modules/_render-slides.sh
+	source deploy/modules/_render-analytics.sh
+	source deploy/modules/_custom.sh
 	
   ## check docs dir exists
 	## create if not

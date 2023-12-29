@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ## import functions and colors
-source deploy/_set-colors.sh
-source deploy/_deploy.sh
-source deploy/_restore.sh
+source deploy/modules/_set-colors.sh
+source deploy/modules/_deploy.sh
+source deploy/modules/_restore.sh
 
 ## make modes array
 modes=( "update" "render" "reset" "custom" "restore" )
