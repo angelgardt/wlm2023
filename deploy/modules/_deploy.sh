@@ -57,7 +57,7 @@ function deploy() {
 	  ## exit
 		printf "${GREEN}\n=====\n${NC}"
 		printf "${GREEN}RESET COMPLETED\n${NC}"
-		printf "Now your docs directory contains only empty README.md file\n"
+		printf "Now your docs directory contains only ${GRAY}README.md${NC} file\n"
 		printf "${GREEN}=====\n\n${NC}"
 		exit
 	
@@ -111,7 +111,7 @@ function deploy() {
 	    {
 	      render_books
 	    } || {
-	      printf "${RED}=====\n=====\n${NC}"
+	      printf "${RED}\n=====\n=====\n${NC}"
 	      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
 	      printf "${RED}Books render error\n${NC}"
 	      printf "${RED}=====\n=====\n\n${NC}"
@@ -122,7 +122,7 @@ function deploy() {
 	    {
 	      render_slides
 	    } || {
-	      printf "${RED}=====\n=====\n${NC}"
+	      printf "${RED}\n=====\n=====\n${NC}"
 	      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
 	      printf "${RED}Slides render error\n${NC}"
 	      printf "${RED}=====\n=====\n\n${NC}"
@@ -133,7 +133,7 @@ function deploy() {
 	    {
 	      render_analytics
 	    } || {
-  	    printf "${RED}=====\n=====\n${NC}"
+  	    printf "${RED}\n=====\n=====\n${NC}"
   	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
   	    printf "${RED}Analytics render error\n${NC}"
   	    printf "${RED}=====\n=====\n\n${NC}"
@@ -149,7 +149,7 @@ function deploy() {
 	  {
 	    update_books
 	  } || {
-	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}\n=====\n=====\n${NC}"
 	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
 	    printf "${RED}Books update error\n${NC}"
 	    printf "${RED}=====\n=====\n\n${NC}"
@@ -160,7 +160,7 @@ function deploy() {
 	  {
 	    update_slides
 	  } || {
-	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}\n=====\n=====\n${NC}"
 	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
 	    printf "${RED}Slides update error\n${NC}"
 	    printf "${RED}=====\n=====\n\n${NC}"
@@ -171,7 +171,7 @@ function deploy() {
 	  {
 	    update_analytics
 	  } || {
-	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}\n=====\n=====\n${NC}"
 	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
 	    printf "${RED}Analytics update error\n${NC}"
 	    printf "${RED}=====\n=====\n\n${NC}"

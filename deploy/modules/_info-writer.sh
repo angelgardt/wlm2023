@@ -9,17 +9,8 @@ function info_writer() {
   
   printf "## \`docs\` structure: \n\n" >> docs/README.md
   
-  ls -Ral docs >> structure.txt
-  
-  input="structure.txt"
-  
   printf "\`\`\`\n" >> docs/README.md
-  
-  while IFS= read -r line
-  do
-    printf "%s<br>\n" "$line" >> docs/README.md
-  done < "$input"
-  
+  ls -Ral docs >> docs/README.md
   printf "\`\`\`\n" >> docs/README.md
   
 }

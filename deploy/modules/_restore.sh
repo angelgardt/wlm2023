@@ -5,33 +5,33 @@ function restore() {
 	## exit with a non-sero status
   set -e
 	
-  echo -e "${GREEN}\n=====\nRUN RESTORER\n=====\n${NC}"
+  printf "${GREEN}\n=====\nRUN RESTORER\n=====\n\n${NC}"
 	
 	if [ ! -d deploy/docs_backup ]; then
-			echo -e "${RED}=====${NC}"
-			echo -e "${RED}RESTORE FAILED${NC}"
-			echo -e "${RED}No ${GRAY}docs_backup ${RED}folder${NC}"
-			echo -e "${RED}=====\n${NC}"
+			printf "${RED}\n=====\n${NC}"
+			printf "${RED}RESTORE FAILED\n${NC}"
+			printf "${RED}No ${GRAY}docs_backup ${RED}folder\n${NC}"
+			printf "${RED}=====\n\n${NC}"
 			exit
 	fi
 	
 	
 	if [ -d docs ]; then
 			rm -rf docs
-			echo -e "${BLUE}old docs directory removed${NC}"
+			echo -e "${BLUE}old ${GRAY}docs${BLUE} directory removed\n${NC}"
 	fi
 	
 	mkdir docs
 	
-	echo -e "${BLUE}docs directory created${NC}"
+	echo -e "${GRAY}docs${BLUE} directory created\n${NC}"
 	
   cp -r deploy/docs_backup/* docs
   
-	echo -e "${BLUE}files copied${NC}"
+	echo -e "${BLUE}files copied\n${NC}"
 	
 	rm -rf deploy/docs_backup
 	
-	echo -e "${BLUE}backup folder removed${NC}"
+	echo -e "${GRAY}backup${BLUE} folder removed\n${NC}"
 	
 	echo -e "${GREEN}\n=====\nRESTORE COMPLETED\n=====\n${NC}"
 	
