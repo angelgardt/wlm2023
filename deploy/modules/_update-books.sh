@@ -5,8 +5,7 @@ function update_books() {
   ## exit with a non-sero status
   set -e
 	
-	echo -e "${GREEN}=====\nRUN BOOKS UPDATER\n=====${NC}"
-  echo
+	printf "${GREEN}\n=====\nRUN BOOKS UPDATER\n=====\n\n${NC}"
   
 	## read dirs
 	deploy_dirs=( $(cut -d ":" -f1 deploy/current-dirs.txt) )
@@ -20,30 +19,31 @@ function update_books() {
   } || {
     
     #catch
-    echo -e "${RED}=====${NC}"
-    echo -e "${RED}DEPLOYMENT NOT COMPLETED{NC}"
-    echo -e "${RED}redirecting index.html copying error${NC}"
-    echo -e "${RED}=====\n${NC}"
+    printf "${RED}\n=====\n${NC}"
+    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+    printf "${RED}redirecting index.html copying error\n${NC}"
+    printf "${RED}=====\n\n${NC}"
     exit
     
   }
   
-  echo -e "${GRAY}redirecting index.html${BLUE} copied${NC}\n"
+  printf "${GRAY}redirecting index.html${BLUE} copied\n\n${NC}"
 
-	echo -e "${BLUE}Directories to be deployed:${NC}"
+	printf "${BLUE}Directories to be deployed:\n${NC}"
 	
 	for item in ${deploy_dirs[*]}
 	do
 	  printf "${GRAY}    %s\n${NC}" $item
 	done
-    			
+	printf "\n"
+	
   for index in ${!deploy_dirs[*]}
   do
     
     if [ ! -d docs/"${deploy_names[$index]}" ]
     then
       mkdir docs/"${deploy_names[$index]}"
-      echo -e ${GRAY}docs/"${deploy_names[$index]}" ${BLUE}created${NC}
+      printf "${GRAY}docs/%s ${BLUE}created\n${NC}" "${deploy_names[$index]}"
     fi
     
     { 
@@ -54,17 +54,18 @@ function update_books() {
     } || {
       
       # catch
-      echo -e "${RED}\n=====${NC}"
-      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-			echo -e "${RED}File copying error${NC}"
-			echo -e "${RED}=====\n${NC}"
+      printf "${RED}\n=====\n${NC}"
+      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+			printf "${RED}File copying error\n${NC}"
+			printf "${RED}=====\n\n${NC}"
 			exit
       
     }
     
-		echo -e ${GRAY}"${deploy_dirs[$index]}" ${BLUE}copied${NC}
+		printf "${GRAY}%s ${BLUE}copied\n${NC}" "${deploy_dirs[$index]}"
+		
 	done
 			
-	echo -e "${GREEN}=====\nBOOKS UPDATE COMPLETED\n=====\n${NC}"
+	printf "${GREEN}\n=====\nBOOKS UPDATE COMPLETED\n=====\n\n${NC}"
   
 }

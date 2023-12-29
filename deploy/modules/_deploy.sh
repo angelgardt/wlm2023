@@ -5,7 +5,7 @@ function deploy() {
   ## exit with a non-sero status
   set -e
 	
-	echo -e "${GREEN}\n=====\nRUN DEPLOYER\n=====\n${NC}"
+	printf "${GREEN}\n=====\nRUN DEPLOYER\n=====\n\n${NC}"
 	
 	## import functions
 	source deploy/modules/_backup.sh
@@ -25,9 +25,8 @@ function deploy() {
 	
 		mkdir docs
 		touch docs/README.md
-		echo date >> docs/README.md
 		
-		echo -e "${BLUE}new ${GRAY}docs${BLUE} directory created${NC}"
+		printf "${BLUE}new ${GRAY}docs${BLUE} directory created\n${NC}"
 		
 	fi
 
@@ -35,32 +34,31 @@ function deploy() {
 	{
 	  backup
 	} || {
-	  echo -e "${RED}\n=====\n=====${NC}"
-		echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-		echo -e "${RED}Backup error${NC}"
-		echo -e "${RED}=====\n=====\n${NC}"
+	  printf "${RED}\n=====\n=====\n${NC}"
+		printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+		printf "${RED}Backup error\n${NC}"
+		printf "${RED}=====\n=====\n\n${NC}"
 		exit
 	}
 	
 	## remove old docs
 	rm -rf docs
-	echo -e "${BLUE}old ${GRAY}docs${BLUE} directory removed${NC}"
+	printf "${BLUE}old ${GRAY}docs${BLUE} directory removed\n${NC}"
 	
 	mkdir docs
 	touch docs/README.md
 	
-	echo -e "${BLUE}new ${GRAY}docs${BLUE} directory created${NC}"
-	echo
+	printf "${BLUE}new ${GRAY}docs${BLUE} directory created\n\n${NC}"
 	
 	## if reset
 	if [ "$mode" = "reset" ]
 	then
 	  
 	  ## exit
-		echo -e "${GREEN}\n=====${NC}"
-		echo -e "${GREEN}RESET COMPLETED${NC}"
-		echo -e "Now your docs directory contains only empty README.md file"
-		echo -e "${GREEN}=====\n${NC}"
+		printf "${GREEN}\n=====\n${NC}"
+		printf "${GREEN}RESET COMPLETED\n${NC}"
+		printf "Now your docs directory contains only empty README.md file\n"
+		printf "${GREEN}=====\n\n${NC}"
 		exit
 	
 	## if custom
@@ -76,10 +74,10 @@ function deploy() {
 	  {
 	    custom_deploy
 	  } || {
-	    echo -e "${RED}\n=====\n=====${NC}"
-      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-      echo -e "${RED}Custom deploy error${NC}"
-      echo -e "${RED}=====\n=====\n${NC}"
+	    printf "${RED}\n=====\n=====\n${NC}"
+      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+      printf "${RED}Custom deploy error\n${NC}"
+      printf "${RED}=====\n=====\n\n${NC}"
       exit
 	  }
   
@@ -91,12 +89,12 @@ function deploy() {
   	if [ ! -f deploy/dirs.txt ]
   	then
   		
-  		echo -e "${RED}\n=====\n=====${NC}"
-  		echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-  		echo -e "${RED}File ${GRAY}dirs.txt${RED} does not exists${NC}"
-  		echo -e "Create a ${GRAY}dirs.txt${NC} file in ${GRAY}deploy${NC} folder with a list of directories (each on a new line) that have to be deployed"
-  		echo -e "Format of each line: ${GRAY}<original_dir_name>:<deployed_dir_name>${NC}"
-  		echo -e "${RED}=====\n=====\n${NC}"
+  		printf "${RED}\n=====\n=====\n${NC}"
+  		printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+  		printf "${RED}File ${GRAY}dirs.txt${RED} does not exists\n${NC}"
+  		printf "Create a ${GRAY}dirs.txt${NC} file in ${GRAY}deploy${NC} folder with a list of directories (each on a new line) that have to be deployed\n"
+  		printf "Format of each line: ${GRAY}<original_dir_name>:<deployed_dir_name>\n${NC}"
+  		printf "${RED}=====\n=====\n\n${NC}"
   		exit
   	
   	fi
@@ -113,10 +111,10 @@ function deploy() {
 	    {
 	      render_books
 	    } || {
-	      echo -e "${RED}=====\n=====${NC}"
-	      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-	      echo -e "${RED}Books render error${NC}"
-	      echo -e "${RED}=====\n=====\n${NC}"
+	      printf "${RED}=====\n=====\n${NC}"
+	      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	      printf "${RED}Books render error\n${NC}"
+	      printf "${RED}=====\n=====\n\n${NC}"
 	      exit
 	    }
 	    
@@ -124,10 +122,10 @@ function deploy() {
 	    {
 	      render_slides
 	    } || {
-	      echo -e "${RED}=====\n=====${NC}"
-	      echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-	      echo -e "${RED}Slides render error${NC}"
-	      echo -e "${RED}=====\n=====\n${NC}"
+	      printf "${RED}=====\n=====\n${NC}"
+	      printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	      printf "${RED}Slides render error\n${NC}"
+	      printf "${RED}=====\n=====\n\n${NC}"
 	      exit
 	    }
 	    
@@ -135,11 +133,10 @@ function deploy() {
 	    {
 	      render_analytics
 	    } || {
-  	    echo -e "${RED}=====\n=====${NC}"
-  	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-  	    echo -e "${RED}Analytics render error${NC}"
-  	    echo -e "${RED}=====\n=====\n${NC}"
-  	    echo
+  	    printf "${RED}=====\n=====\n${NC}"
+  	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+  	    printf "${RED}Analytics render error\n${NC}"
+  	    printf "${RED}=====\n=====\n\n${NC}"
   	    exit
 	    }
 	
@@ -152,10 +149,10 @@ function deploy() {
 	  {
 	    update_books
 	  } || {
-	    echo -e "${RED}=====\n=====${NC}"
-	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-	    echo -e "${RED}Books update error${NC}"
-	    echo -e "${RED}=====\n=====\n${NC}"
+	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	    printf "${RED}Books update error\n${NC}"
+	    printf "${RED}=====\n=====\n\n${NC}"
 	    exit
 	  }
 	  
@@ -163,10 +160,10 @@ function deploy() {
 	  {
 	    update_slides
 	  } || {
-	    echo -e "${RED}=====\n=====${NC}"
-	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-	    echo -e "${RED}Slides update error${NC}"
-	    echo -e "${RED}=====\n=====\n${NC}"
+	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	    printf "${RED}Slides update error\n${NC}"
+	    printf "${RED}=====\n=====\n\n${NC}"
 	    exit
 	  }
 	  
@@ -174,10 +171,10 @@ function deploy() {
 	  {
 	    update_analytics
 	  } || {
-	    echo -e "${RED}=====\n=====${NC}"
-	    echo -e "${RED}DEPLOYMENT NOT COMPLETED${NC}"
-	    echo -e "${RED}Analytics update error${NC}"
-	    echo -e "${RED}=====\n=====\n${NC}"
+	    printf "${RED}=====\n=====\n${NC}"
+	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	    printf "${RED}Analytics update error\n${NC}"
+	    printf "${RED}=====\n=====\n\n${NC}"
 	    exit
 	  }
 	  
@@ -194,12 +191,9 @@ function deploy() {
 	info_writer $mode
 	
 	## message deploy success
-	echo -e "${GREEN}\n==========\n==========${NC}"
-	echo -e "${GREEN}DEPLOYMENT COMPLETED${NC}"
-	echo -e "${GREEN}==========\n==========${NC}"
-	echo -e "${GRAY}Commit and push changes to remote\n${NC}"
-  
-  # reset text color
-	echo -e "${NC}"
+	printf "${GREEN}\n==========\n==========\n${NC}"
+	printf "${GREEN}DEPLOYMENT COMPLETED\n${NC}"
+	printf "${GREEN}==========\n==========\n${NC}"
+	printf "${GRAY}Commit and push changes to remote\n\n\n${NC}"
 	
 }

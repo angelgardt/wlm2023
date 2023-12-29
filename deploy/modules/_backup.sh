@@ -5,7 +5,7 @@ function backup() {
   ## exit with a non-sero status
   set -e
 	
-  echo -e "${GREEN}\n=====\nRUN BACKUPER\n=====\n${NC}"
+  printf "${GREEN}\n=====\nRUN BACKUPER\n=====\n\n${NC}"
   
   ## make backup
   ### remove old backup
@@ -14,14 +14,14 @@ function backup() {
     rm -rf deploy/backup
   fi
   
-  echo -e "${BLUE}old backup removed${NC}"
+  printf "${BLUE}old ${GRAY}backup${BLUE} removed\n${NC}"
   
   ### make new backup
   mkdir deploy/backup
   cp -r docs/* deploy/backup 
   
-  echo -e "${BLUE}new backup done${NC}"
+  printf "${BLUE}new ${GRAY}backup${BLUE} done\n${NC}"
   
-  echo -e "${GREEN}\n=====\nBACKUP COMPLETED\n=====\n${NC}"
+  printf "${GREEN}\n=====\nBACKUP COMPLETED\n=====\n\n${NC}"
   
 }
