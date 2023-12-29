@@ -11,7 +11,7 @@ function info_writer() {
   printf "**Mode:** %s\n\n" "$mode" >> docs/README.md
   
   ## write structure of docs directory
-  printf "## \`docs\` structure: \n\n" >> docs/README.md
+  printf "## \`docs\` structure\n\n" >> docs/README.md
   
   ## add backticks for code formating
   printf "\`\`\`\n" >> docs/README.md
@@ -20,7 +20,7 @@ function info_writer() {
   printf "\`\`\`\n" >> docs/README.md
   
   ## write log
-  printf "## Log: \n\n" >> docs/README.md
+  printf "## Log\n\n" >> docs/README.md
   
   ## add backticks for code formating
   printf "\`\`\`\n" >> docs/README.md
