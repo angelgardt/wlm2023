@@ -1,3 +1,7 @@
 #!/bin/bash
 
-echo "render passed"
+function render_books() {
+  
+  echo render books pass
+  
+}

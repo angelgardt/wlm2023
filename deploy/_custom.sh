@@ -1,3 +1,7 @@
 #!/bin/bash
 
-echo "custom passed"
+function custom_deploy() {
+  
+  echo custom pass
+  
+}

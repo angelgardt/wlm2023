@@ -1,4 +1,8 @@
 #!/bin/bash
 
-echo "render slides pass"
+function render_slides() {
+  
+  echo render slides pass
+  
+}
 

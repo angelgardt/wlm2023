@@ -1,4 +1,8 @@
 #!/bin/bash
 
-echo "render analytics pass"
+function render_analytics() {
+  
+  echo render analytics pass
+  
+}
 

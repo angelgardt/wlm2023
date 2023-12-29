@@ -231,6 +231,7 @@ function deployer {
 
 	# reset text color
 	echo -e "${NC}"
+	
 }
 
 deployer $1

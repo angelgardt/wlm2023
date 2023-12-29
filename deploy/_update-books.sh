@@ -1,16 +1,9 @@
 #!/bin/bash
 
-function updater {
+function update_books() {
 
   ## exit with a non-sero status
   set -e
-	
-	## set colors
-	RED='\033[0;31m'
-	BLUE='\033[0;34m'
-	GREEN='\033[0;32m'
-	GRAY='\033[0;37m'
-	NC='\033[0m' # no color
 	
 	echo -e "====="
   echo -e "${GREEN}RUN BOOKS UPDATER${NC}"
@@ -38,7 +31,7 @@ function updater {
   }
   
   echo -e "-----"
-  echo -e ${GRAY}redirecting index.html${BLUE}copied${NC}
+  echo -e ${GRAY}redirecting index.html${BLUE} copied${NC}
 	echo -e "-----"
 		
 	echo -e "-----"
@@ -85,5 +78,3 @@ function updater {
   echo
   
 }
-
-updater

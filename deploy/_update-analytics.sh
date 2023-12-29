@@ -1,4 +1,9 @@
 #!/bin/bash
 
-echo "update analytics pass"
+function update_analytics() {
+  
+  echo update analytics pass
+  # cp deploy/a.txt deploy/b.txt
+  
+}
 
