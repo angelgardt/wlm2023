@@ -5,8 +5,7 @@ function update_analytics() {
   ## exit wuth a non-zero status
   set -e
   
-  printf "${GREEN}\n=====\nRUN ANALYTICS UPDATER\n=====\n\n"
-  
+  printf "${GREEN}\n=====\nRUN ANALYTICS UPDATER\n=====\n\n${NC}"
   ## check if folder in docs exists
   ## create if not
   if [ ! -d docs/analytics ]

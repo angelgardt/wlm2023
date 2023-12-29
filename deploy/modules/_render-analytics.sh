@@ -39,4 +39,3 @@ function render_analytics() {
   printf "${GREEN}\n=====\nANALYTICS RENDER COMPLETED\n=====\n\n${NC}"
   
 }
-
