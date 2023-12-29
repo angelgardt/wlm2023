@@ -12,7 +12,7 @@ function update_slides() {
   if [ ! -d docs/slides ]
   then 
     mkdir docs/slides
-    printf "${GRAY}docs/slides ${BLUE}created${NC}"
+    printf "${GRAY}docs/slides ${BLUE}created\n${NC}"
   fi
   
   ## copy all html files

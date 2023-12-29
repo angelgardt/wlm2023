@@ -12,10 +12,10 @@ function update_books() {
 	deploy_names=( $(cut -d ":" -f2 deploy/current-dirs.txt) )
 	
   {
-    #try
+    # try
     cp index.html docs/index.html
   } || {
-    #catch
+    # catch
     printf "${RED}\n=====\n${NC}"
     printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
     printf "${RED}redirecting index.html copying error\n${NC}"
@@ -23,9 +23,10 @@ function update_books() {
     exit
   }
   
-  printf "${GRAY}redirecting index.html${BLUE} copied\n\n${NC}"
-
-	printf "${BLUE}Directories to be deployed:\n${NC}"
+  printf "${GRAY}redirecting index.html${BLUE} copied\n${NC}"
+  
+  ## print dirs to deploy
+	printf "${BLUE}\nDirectories to be deployed:\n${NC}"
 	
 	for item in ${deploy_dirs[*]}
 	do

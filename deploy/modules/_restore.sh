@@ -7,7 +7,7 @@ function restore() {
 	
   printf "${GREEN}\n=====\nRUN RESTORER\n=====\n\n${NC}"
 	
-	if [ ! -d deploy/docs_backup ]; then
+	if [ ! -d deploy/backup ]; then
 			printf "${RED}\n=====\n${NC}"
 			printf "${RED}RESTORE FAILED\n${NC}"
 			printf "${RED}No ${GRAY}docs_backup ${RED}folder\n${NC}"
@@ -25,11 +25,11 @@ function restore() {
 	
 	echo -e "${GRAY}docs${BLUE} directory created\n${NC}"
 	
-  cp -r deploy/docs_backup/* docs
+  cp -r deploy/backup/* docs
   
 	echo -e "${BLUE}files copied\n${NC}"
 	
-	rm -rf deploy/docs_backup
+	rm -rf deploy/backup
 	
 	echo -e "${GRAY}backup${BLUE} folder removed\n${NC}"
 	

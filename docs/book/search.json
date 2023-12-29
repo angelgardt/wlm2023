@@ -1,52 +1,382 @@
 [
   {
-    "objectID": "appendix-formulas.html#formulas_power",
-    "href": "appendix-formulas.html#formulas_power",
-    "title": "100  Формулы",
-    "section": "100.1 Степени и корни",
-    "text": "100.1 Степени и корни\n\n100.1.1 Определения\n\\[\na^b \\overset{\\text{def}}{=}\\prod_{i=1}^b a_i\n\\]\n\\[\n\\sqrt[n]a \\overset{\\text{def}}{=}b \\Leftrightarrow b^n = a\n\\]\n\n\n100.1.2 Свойства\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "WLM 2023",
+    "section": "",
+    "text": "Вступление",
     "crumbs": [
-      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+      "Вступление"
     ]
   },
   {
-    "objectID": "appendix-formulas.html#formulas_log",
-    "href": "appendix-formulas.html#formulas_log",
-    "title": "100  Формулы",
-    "section": "100.2 Логарифмы",
-    "text": "100.2 Логарифмы\n\n100.2.1 Определение\n\\[\\log_b a \\overset{\\text{def}}{=}c \\Leftrightarrow a^c = b, a &gt; 0, b &gt; 0, b \\neq 1\\]\n\n\n100.2.2 Свойства\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]",
+    "objectID": "index.html#book_structure",
+    "href": "index.html#book_structure",
+    "title": "WLM 2023",
+    "section": "Структура книги",
+    "text": "Структура книги",
     "crumbs": [
-      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+      "Вступление"
     ]
   },
   {
-    "objectID": "appendix-formulas.html#formulas_abs",
-    "href": "appendix-formulas.html#formulas_abs",
-    "title": "100  Формулы",
-    "section": "100.3 Модуль",
-    "text": "100.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a &lt; 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]",
+    "objectID": "index.html#thanks",
+    "href": "index.html#thanks",
+    "title": "WLM 2023",
+    "section": "Благодарности",
+    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.1.2 (2021-11-01)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 22.04.2 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0\nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=ru_RU.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=ru_RU.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=ru_RU.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=ru_RU.UTF-8 LC_IDENTIFICATION=C       \n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.2 compiler_4.1.2    fastmap_1.1.1     cli_3.6.2        \n [5] tools_4.1.2       htmltools_0.5.6   rstudioapi_0.15.0 rmarkdown_2.25   \n [9] knitr_1.44        jsonlite_1.8.7    xfun_0.40         digest_0.6.33    \n[13] rlang_1.1.2       evaluate_0.22",
     "crumbs": [
-      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+      "Вступление"
     ]
   },
   {
-    "objectID": "appendix-formulas.html#formulas_deriv",
-    "href": "appendix-formulas.html#formulas_deriv",
-    "title": "100  Формулы",
-    "section": "100.4 Производная",
-    "text": "100.4 Производная\n\n100.4.1 Свойства производной\n\\[c' = 0, \\, c = \\text{const}\\] \\[(Cu)' = Cu'\\] \\[(u + v)' = u' + v'\\] \\[(uv)' = u'v + uv'\\] \\[\\Big( \\frac{u}{v} \\Big)' = \\frac{u'v - uv'}{v^2}\\] \\[\\Big(u\\big(v(x)\\big)\\Big)' = u'(v) \\cdot v'(x)\\]\n\n\n100.4.2 Производные элементарных функций\n\n\n\n\\[(x^n)' = nx^{n-1}\\] \\[(a^x)' = a^x \\ln a\\] \\[(e^x)' = e^x\\]\n\n\n\\[(\\log_a x)' = \\frac{1}{x \\ln a}\\] \\[(\\ln_a x)' = \\frac{1}{x}\\] \\[(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}\\]\n\n\n\n\n\n\n\\[(\\sin x)' = \\cos x\\] \\[(\\cos x)' = -\\sin x\\]\n\n\n\\[(\\tan x)' = \\frac{1}{\\cos^2 x}\\] \\[(\\cot x)' = \\frac{1}{\\sin^2 x}\\]\n\n\n\n\n\n\n\\[(\\arcsin x)' = \\frac{1}{\\sqrt{1 - x^2}}\\] \\[(\\arccos x)' = -\\frac{1}{\\sqrt{1 - x^2}}\\] \\[(\\arctan x)' = \\frac{1}{1 + x^2}\\] \\[(\\text{arccot}\\, x)' = -\\frac{1}{1 + x^2}\\]\n\n\n\\[(\\sinh x)' = \\cosh x\\] \\[(\\cosh x)' = \\sinh x\\] \\[(\\tanh x)' = \\frac{1}{\\cosh^2 x}\\] \\[(\\coth x)' = -\\frac{1}{\\sinh^2 x}\\]",
+    "objectID": "signs.html#book_labels",
+    "href": "signs.html#book_labels",
+    "title": "Обозначения",
+    "section": "Лейблы",
+    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\n\n\n\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\n\n\n\nДля тех, кто разобрался с основами и хочет пойти дальше.\n\n\n\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\n\n\n\nДля тех, кто преисполнился и хочет жести.",
     "crumbs": [
-      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+      "Обозначения"
     ]
   },
   {
-    "objectID": "appendix-formulas.html#formulas_trig",
-    "href": "appendix-formulas.html#formulas_trig",
-    "title": "100  Формулы",
-    "section": "100.5 Тригонометрия",
-    "text": "100.5 Тригонометрия\n\n\n\n\n\n\n\n\n\n\n100.5.1 Производные тригонометрические функции\n\\[\n\\sec \\alpha = \\frac{1}{\\cos \\alpha} \\qquad\n\\csc \\alpha = \\frac{1}{\\sin \\alpha} \\qquad\n\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} \\qquad\n\\cot \\alpha = \\frac{\\cos \\alpha}{\\sin \\alpha}\n\\]\n\n\n100.5.2 Основное тригонометрическое тождество\n\\[\n\\sin^2 \\alpha + \\cos^2 \\alpha = 1\n\\]\n\\[\n\\sin \\alpha = \\pm \\sqrt{1 - \\cos^2 \\alpha} \\qquad \\cos \\alpha = \\pm \\sqrt{1 - \\sin^2 \\alpha}\n\\]\n\\[\n1 + \\cot^2 \\alpha = \\csc^2 \\alpha \\qquad\n\\tan^2 \\alpha + 1 = \\sec ^2 \\alpha\n\\]\n\\[\n\\sec^2 \\alpha + \\csc^2 \\alpha = \\sec^2 \\alpha \\cdot \\csc^2 \\alpha\n\\]\n\n\n100.5.3 Отражения\n\n\n\n\n\n\n\n\n\n\n100.5.3.1 Относительно \\(\\varphi = 0\\)\nВыражает свойство чётности функции1.\n\n\n\n\\[\\sin (-\\alpha) = -\\sin \\alpha\\] \\[\\tan (-\\alpha) = -\\tan \\alpha\\] \\[\\sec (-\\alpha) = \\sec \\alpha\\]\n\n\n\\[\\cos (-\\alpha) = \\cos \\alpha\\] \\[\\cot (-\\alpha) = -\\cot \\alpha\\] \\[\\csc (-\\alpha) = -\\csc \\alpha\\]\n\n\n\n\n\n100.5.3.2 Относительно \\(\\varphi = \\frac{\\pi}{4}\\)\n\n\n\n\\[\\sin (\\frac{\\pi}{2}-\\alpha) = \\cos \\alpha\\] \\[\\tan \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\cot \\alpha\\] \\[\\sec \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\sin \\alpha\\] \\[\\cot \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\tan \\alpha\\] \\[\\csc \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\sec \\alpha\\]\n\n\n\n\n\n100.5.3.3 Относительно \\(\\varphi = \\frac{\\pi}{2}\\)\n\n\n\n\\[\\sin (\\pi-\\alpha) = \\sin \\alpha\\] \\[\\tan (\\pi-\\alpha) = -\\tan \\alpha\\] \\[\\sec (\\pi-\\alpha) = -\\sec \\alpha\\]\n\n\n\\[\\cos (\\pi-\\alpha) = -\\cos \\alpha\\] \\[\\cot (\\pi-\\alpha) = -\\cot \\alpha\\] \\[\\csc (\\pi-\\alpha) = \\csc \\alpha\\]\n\n\n\n\n\n100.5.3.4 Относительно \\(\\varphi = \\frac{3\\pi}{4}\\)\n\n\n\n\\[\\sin \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\cos \\alpha\\] \\[\\tan \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = \\cot \\alpha\\] \\[\\sec \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\sin \\alpha\\] \\[\\cot \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = \\tan \\alpha\\] \\[\\csc \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\sec \\alpha\\]\n\n\n\n\n\n100.5.3.5 Относительно \\(\\varphi = \\pi\\)\n\n\n\n\\[\\sin (2\\pi - \\alpha) = -\\sin \\alpha = \\sin (-\\alpha)\\] \\[\\tan (2\\pi - \\alpha) = -\\tan \\alpha = \\tan (-\\alpha)\\] \\[\\sec (2\\pi - \\alpha) = \\sec \\alpha = \\sec (-\\alpha)\\]\n\n\n\\[\\cos (2\\pi - \\alpha) = \\cos \\alpha = \\cos (-\\alpha)\\] \\[\\cot (2\\pi - \\alpha) = -\\cot \\alpha = \\cot (-\\alpha)\\] \\[\\csc (2\\pi - \\alpha) = -\\csc \\alpha = \\csc (-\\alpha)\\]\n\n\n\n\n\n\n100.5.4 Сдвиг\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nТак как все тригонометрические функции периодические, результат сдвига функции определяется её периодом. Для функций \\(\\sin, \\cos, \\sec\\) и \\(\\csc\\) период равен \\(2\\pi\\). Для \\(\\tan\\) и \\(\\cot\\) он составляет \\(\\pi\\).\n\n100.5.4.1 На четверть периода\n\n\n\n\\[\\sin \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\pm\\cos \\alpha\\] \\[\\tan \\Big(\\alpha \\pm \\frac{\\pi}{4}\\Big) = \\frac{\\tan \\alpha \\pm 1}{1 \\mp \\tan \\alpha}\\] \\[\\sec \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\mp \\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\mp \\sin \\alpha\\] \\[\\cot \\Big(\\alpha \\pm \\frac{\\pi}{4}\\Big) = \\frac{\\cot \\alpha \\mp 1}{1 \\pm \\cot \\alpha}\\] \\[\\csc \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\pm \\sec \\alpha\\]\n\n\n\n\n\n100.5.4.2 На половину периода\n\n\n\n\\[\\sin (\\alpha + \\pi) = -\\sin \\alpha\\] \\[\\tan \\Big(\\alpha + \\frac{\\pi}{2}\\Big) = -\\cot \\alpha\\] \\[\\sec (\\alpha + \\pi) = -\\sec \\alpha\\]\n\n\n\\[\\cos (\\alpha + \\pi) = -\\cos \\alpha\\] \\[\\cot \\Big(\\alpha + \\frac{\\pi}{2}\\Big) = -\\tan \\alpha\\] \\[\\csc (\\alpha + \\pi) = -\\csc \\alpha\\]\n\n\n\n\n\n100.5.4.3 На полный период\n\n\n\n\\[\\sin (\\alpha + 2\\pi) = \\sin \\alpha\\] \\[\\tan (\\alpha + \\pi) = \\tan \\alpha\\] \\[\\sec (\\alpha + 2\\pi) = \\sec \\alpha\\]\n\n\n\\[\\cos (\\alpha + 2\\pi) = \\cos \\alpha\\] \\[\\cot (\\alpha + \\pi) = \\cot \\alpha\\] \\[\\csc (\\alpha + 2\\pi) = \\csc \\alpha\\]\n\n\n\n\n\n\n100.5.5 Соотношение знаков\n\\[\n\\text{sgn}\\sin \\alpha = \\text{sgn}\\csc \\alpha \\qquad \\text{sgn}\\cos \\alpha = \\text{sgn}\\sec \\alpha\n\\] \\[\n\\text{sgn}\\tan \\alpha = \\text{sgn}\\cot \\alpha\n\\]\n\n\n100.5.6 Функции суммы с разности аргументов\n\\[\n\\sin (\\alpha \\pm \\beta) = \\sin \\alpha \\cos \\beta \\pm \\cos \\alpha \\sin \\beta\n\\]\n\\[\n\\cos (\\alpha \\pm \\beta) = \\cos \\alpha \\cos \\beta \\mp \\sin \\alpha \\sin \\beta\n\\]\n\\[\n\\tan (\\alpha \\pm \\beta) = \\frac{\\tan \\alpha \\pm \\tan \\beta}{1 \\mp \\tan \\alpha \\tan \\beta}\n\\]\n\\[\n\\cot (\\alpha \\pm \\beta) = \\frac{\\cot \\alpha \\cot \\beta \\mp 1}{\\cot \\beta \\pm \\cot \\alpha}\n\\] \\[\n\\sec (\\alpha \\pm \\beta) = \\frac{\\sec \\alpha \\sec \\beta \\csc \\alpha \\csc \\beta}{\\csc \\alpha \\csc \\beta \\mp \\sec \\alpha \\sec \\beta}\n\\]\n\\[\n\\csc (\\alpha \\pm \\beta) = \\frac{\\sec \\alpha \\sec \\beta \\csc \\alpha \\csc \\beta}{\\sec \\alpha \\csc \\beta \\pm \\sec \\alpha \\sec \\beta}\n\\]\n\n\n100.5.7 Формулы двойного аргумента\n\\[\n\\sin 2\\alpha = 2\\sin \\alpha \\cos \\alpha = (\\sin \\alpha + \\cos \\alpha)^2 -1 = \\frac{2\\tan \\alpha}{1 + \\tan^2 \\alpha}\n\\]\n\\[\n\\cos 2\\alpha = \\cos^2 \\alpha - \\sin^2 \\alpha = 2\\cos^2 \\alpha - 1 = 1 - 2\\sin^2 \\alpha = \\frac{1 - \\tan^2 \\alpha}{1 + \\tan^2 \\alpha}\n\\]\n\\[\n\\tan 2\\alpha = \\frac{2\\tan \\alpha}{1 - \\tan^2 \\alpha}\n\\]\n\\[\n\\cot 2\\alpha = \\frac{\\cot^2 \\alpha - 1}{2 \\cot \\alpha} = \\frac{1 - \\tan^2 \\alpha}{2 \\tan \\alpha}\n\\]\n\\[\n\\sec 2\\alpha = \\frac{\\sec^2 \\alpha}{2 - \\sec^2 \\alpha} = \\frac{1 + \\tan^2 \\alpha}{1 - \\tan^2 \\alpha}\n\\]\n\\[\n\\csc 2\\alpha = \\frac{\\sec \\alpha \\csc \\alpha}{2} = \\frac{1 + \\tan^2 \\alpha}{2 \\tan \\alpha}\n\\]\n\n\n100.5.8 Формулы тройного аргумента\n\\[\n\\sin 3\\alpha = 3\\sin \\alpha - 4 \\sin^3 \\alpha = 4\\sin \\alpha \\sin \\Big( \\frac{\\pi}{3} - \\alpha\\Big) \\sin \\Big( \\frac{\\pi}{3} + \\alpha \\Big)\n\\]\n\\[\n\\cos 3\\alpha = 4\\cos^3 \\alpha - 3 \\cos \\alpha = 4\\cos \\alpha \\cos \\Big(\\frac{\\pi}{3} - \\alpha\\Big) \\cos \\Big(\\frac{\\pi}{3} + \\alpha\\Big)\n\\]\n\\[\n\\tan 3\\alpha = \\frac{3\\tan \\alpha - \\tan^3 \\alpha}{1 - 3\\tan^2 \\alpha} = \\tan \\alpha \\tan \\Big( \\frac{\\pi}{3} - \\alpha \\Big) \\tan \\Big(\\frac{\\pi}{3} + \\alpha \\Big)\n\\]\n\\[\n\\cot 3\\alpha = \\frac{3 \\cot \\alpha - \\cot^3 \\alpha}{1 - 3\\cot^2 \\alpha}\n\\]\n\\[\n\\sec 3\\alpha = \\frac{\\sec^3 \\alpha}{4 - 3\\sec^2 \\alpha}\n\\]\n\\[\n\\csc 3\\alpha = \\frac{\\csc^3 \\alpha}{3\\csc^2 \\alpha -4}\n\\]\n\n\n100.5.9 Формулы половинного аргумента\n\\[\n\\sin \\frac{\\alpha}{2} = \\text{sgn}\\Big(\\sin \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{1 - \\cos \\alpha}{2}}\n\\]\n\\[\n\\cos \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\cos \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{1 + \\cos \\alpha}{2}}\n\\]\n\\[\n\\tan \\frac{\\alpha}{2} = \\frac{1 - \\cos\\alpha}{\\sin \\alpha} = \\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\csc \\alpha - \\cot \\alpha = \\frac{\\tan \\alpha}{1 + \\sec \\alpha} = \\text{sgn}(\\sin \\alpha) \\sqrt{\\frac{1 - \\cos \\alpha}{1 + \\cos \\alpha}}\n\\]\n\\[\n\\cot \\frac{\\alpha}{2} = \\frac{1 + \\cos \\alpha}{\\sin \\alpha} = \\frac{\\sin \\alpha}{1 - \\cos \\alpha} = \\csc \\alpha + \\cot \\alpha = \\text{sgn}(\\sin \\alpha) \\sqrt{\\frac{1 + \\cos \\alpha}{1 - \\cos{\\alpha}}}\n\\]\n\\[\n\\sec \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\cos \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{2}{1 + \\cos \\alpha}}\n\\]\n\\[\n\\csc \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\sin \\frac{\\alpha}{2}  \\Big) \\sqrt{\\frac{2}{1 - \\cos \\alpha}}\n\\]\n\n\n100.5.10 Формулы понижения степени\n\n\n\n\\[\n\\sin^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{2}\n\\]\n\n\n\\[\n\\cos^2 \\alpha = \\frac{1 + \\cos 2\\alpha}{2}\n\\]\n\n\n\n\n\\[\n\\tan^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{1 + \\cos 2\\alpha}\n\\]\n\n\n\\[\n\\cot^2 \\alpha = \\frac{1 + \\cos 2\\alpha}{1 - \\cos 2\\alpha}\n\\]\n\n\n\n\n\\[\n\\sec^2 \\alpha = \\frac{2}{1 + \\cos 2\\alpha}\n\\]\n\n\n\\[\n\\csc^2 \\alpha = \\frac{2}{1 - \\cos 2\\alpha}\n\\]\n\n\n\n\n\n\n100.5.11 Преобразование произведения в сумму\n\\[\n\\cos \\alpha \\cos \\beta = \\frac{\\cos (\\alpha - \\beta) + \\cos (\\alpha + \\beta)}{2}\n\\]\n\\[\n\\sin \\alpha \\sin \\beta = \\frac{\\cos (\\alpha - \\beta) - \\cos (\\alpha + \\beta)}{2}\n\\]\n\\[\n\\sin \\alpha \\cos \\beta = \\frac{\\sin (\\alpha + \\beta) + \\sin (\\alpha - \\beta)}{2}\n\\]\n\\[\n\\cos \\alpha \\sin \\beta = \\frac{\\sin (\\alpha + \\beta) - \\sin (\\alpha - \\beta)}{2}\n\\]\n\\[\n\\tan \\alpha \\tan \\beta = \\frac{\\cos (\\alpha - \\beta) - \\cos (\\alpha + \\beta)}{\\cos (\\alpha - \\beta) + \\cos (\\alpha + \\beta)}\n\\]\n\\[\n\\tan \\alpha \\cot \\beta = \\frac{\\sin (\\alpha + \\beta) + \\sin (\\alpha - \\beta)}{\\sin (\\alpha + \\beta) - \\sin (\\alpha - \\beta)}\n\\]\n\n\n100.5.12 Преобразование суммы в произведение\n\\[\n\\sin \\alpha \\pm \\sin \\beta = 2 \\sin \\Big(\\frac{\\alpha \\pm \\beta}{2}\\Big) \\cos \\Big(\\frac{\\alpha \\mp \\beta}{2}\\Big)\n\\]\n\\[\n\\cos \\alpha + \\cos \\beta = 2 \\cos \\Big(\\frac{\\alpha + \\beta}{2}\\Big) \\cos \\Big(\\frac{\\alpha - \\beta}{2}\\Big)\n\\]\n\\[\n\\cos \\alpha - \\cos \\beta = -2 \\sin \\Big(\\frac{\\alpha + \\beta}{2}\\Big) \\sin \\Big(\\frac{\\alpha - \\beta}{2}\\Big)\n\\]\n\\[\n\\tan \\alpha \\pm \\tan \\beta = \\frac{sin(\\alpha + \\beta)}{\\cos \\alpha \\cos \\beta}\n\\]",
+    "objectID": "signs.html#book_callouts",
+    "href": "signs.html#book_callouts",
+    "title": "Обозначения",
+    "section": "Блоки",
+    "text": "Блоки\n\n\n\n\n\n\nЗаметка\n\n\n\nЗдесь написано что-то интересное. Почитайте на досуге.\n\n\n\n\n\n\n\n\nВажно\n\n\n\nТут написано что-то важное. Обратите на этот блок внимание.\n\n\n\n\n\n\n\n\nCaution with Title\n\n\n\nТут описано что-то, что потенциально может сломать ваш код. Чтобы он не сломался, стоит это изучить.\n\n\n\n\n\n\n\n\nВажно!\n\n\n\nТут написано что-то очень важное! Обратите на этот блок пристальное внимание!\n\n\n\n\n\n\n\n\nСовет\n\n\n\nЗдесь советы из собственного опыта. Возможно, они вам пригодятся.",
     "crumbs": [
-      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+      "Обозначения"
+    ]
+  },
+  {
+    "objectID": "signs.html#book_tasks",
+    "href": "signs.html#book_tasks",
+    "title": "Обозначения",
+    "section": "Задания",
+    "text": "Задания\n\nЭто вопрос, который позволит вспомнить предыдущий материал или немного глубже копнуть в текущую тему. Как правило, имеющихся знаний будет достаточно для ответа на него, но иногда придётся и погуглить.\n\n\nЭто задание, где нужно что-то посчитать. Можно с помощью кода, а можно и руками.\n\n\nЭто задание, в котором надо написать код или посчитать что-то с помощью кода.",
+    "crumbs": [
+      "Обозначения"
+    ]
+  },
+  {
+    "objectID": "signs.html#book_symbols",
+    "href": "signs.html#book_symbols",
+    "title": "Обозначения",
+    "section": "Символы",
+    "text": "Символы\n\n\n\n\n\n\n\n\n\n\n\\(\\mathbb{N}\\) — множество натуральных чисел\n\\(\\mathbb{N}_{0}\\) — множество натуральных чисел, включая ноль\n\\(\\mathbb{Z}\\) — множество целых чисел\n\\(\\mathbb{Q}\\) — множество рациональных чисел\n\\(\\mathbb{R}\\) — множество вещественных (действительных) чисел\n\\(\\mathbb{C}\\) — множество комплексных чисел\n\\(\\alpha, \\beta, \\gamma, \\dots\\) — числа, коэффициенты\n\\(X, Y, Z\\) — случайные величины\n\\(x, y, z\\) — числа, значения случайной величины\n\\(\\mathbf{a}, \\mathbf{b}, \\mathbf{c}, \\dots, \\mathbf{x}, \\mathbf{y}, \\mathbf{z}\\) — векторы\n\\(\\mathbf{A}, \\mathbf{B}, \\mathbf{C}, \\dots, \\mathbf{X}, \\mathbf{Y}, \\mathbf{Z}\\) — матрицы\n\\(\\mathbb{P}\\) — вероятность\n\\(\\sum\\) — сумма\n\\(\\prod\\) — произведение\n\\(\\overset{\\text{def}}{=}\\) — равно по определению",
+    "crumbs": [
+      "Обозначения"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-rinstall",
+    "href": "r-basics.html#rbasics-rinstall",
+    "title": "1  Основы R",
+    "section": "1.1 Установка",
+    "text": "1.1 Установка\n\n\n\nЧтобы стать счастливым пользователем R, надо установить на свой комп две программы:\n\nсобственно R\n\nна Win\nна Mac\nна Linux\n\nIDE RStudio1\n\nПричем во избежание возможных проблем, надо поставить программы именно в этом порядке — сначала R, а потом RStudio, иначе IDE может на найти R и будет ругаться.\n\n1.1.1 Зачем ставить две проги?\nВопрос не безосновательный. В целом, можно обойти и только R — можно работать на нём хоть из командной строки — однако это всё же не совсем удобно. Интерфейс самого R довольно скудный и не слишком приветливый.\n\n\n\n\nИнтерфейс R\n\n\n\nRStudio же, являясь, как уже вскользь отмечалось выше, интегрированной средой разработки (IDE), расширяет возможности R, предоставляет более юзабельный интерфейс для взаимодействия с языком и в целом делает работу с R радостной и приятной. С её интерфейсом и возможностями мы познакомимся далее.\nRStudio это не единственная среда для работы с R, но определенно самая удобная и популярная, поэтому мы будем пользоваться именно ею. RStudio является IDE, разработанной специально для работы в R, однако это вовсе не значит, что в ней нельзя использовать другие языки программирования. Например, книжка, которуя вы сейчас читаете, написана с использованием R, Python, HTML, SASS, JavaScript, YAML и других языков — при этом вся работа велась в RStudio. Вот такая мощная вещь.\n\n\n1.1.2 Что такое IDE?\nИнтегрированная среда разработки (IDE, integrated development environment) — это специальная программа, которое предоставляет широкий спектр возможностей для разработки программного обеспечения. Возможно, вы слышали такие слова, как PyCharm или Visual Studio Code — это всё варианты IDE.\nОбычно IDE содержит несколько ключевых компонентов:\n\nтекстовый редактор для написания скриптов\nтранслятор языка\nотладчик (debugger)\nсредства автоматизации сборки (build automation tools)\n\nОбычно IDE позволяют работать с несколькими языками программирования (ЯП), но бывают и специализированные.\n\nИ хотя всё ещё присутствует холивар относительного того, является ли R языком программирования (ССЫЛКА), RStudio однозначно можно назвать полноценной IDE, так как разработка в ней вполне может вестить. Пример продукта разработки прямо перед вами — книжка и другие материалы курса.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-installation-problems",
+    "href": "r-basics.html#rbasics-installation-problems",
+    "title": "1  Основы R",
+    "section": "1.2 Подводные камни установки",
+    "text": "1.2 Подводные камни установки\n\n\n\nВ целом, установщики операционных систем обычно хорошо справляются со своей задачей, и в 90% случаев всё стаёт без багов. Однако ниже я оставлю некоторые комментарии о проблемах, с которыми сталкивался сам или о которых говорили знакомые и коллеги.\n\n1.2.1 Windows\nСамая частая проблема — имя пользователя на кириллице. Компьютер вообще достаточно плохо переваривает кириллические символы. Особенную же проблему составляют такие символы в путях к файлам. Поскольку на Винде папка пользователя называется именем пользователя, то в случае киррилического имени, естественно, её имя будет на кириллице. Это можно пережить, перезадав некоторое дефолтные пути в настройках, однако если есть возможность переименовать пользователя и папку, я бы рекомендовал это сделать. Ну, так, чтобы не было неожиданных внезапностей.\n\n\n1.2.2 MacOS\nТут в 99.9% случаев всё ровно. Бывает уже в процессе работы некоторые пакеты жалуются на недоустановленное что-то или на какие-либо несовместимости, но это случается невероятно редко и обычно достаточно легко лечится.\n\n\n1.2.3 Linux\nЕсли вы пользователь Linux, значит R с RStudio вы ставили через Terminal. Скорее всего, всё прошло хорошо, и всё работает. Проблемки могут случиться чуть дальше, когда мы будем ставить дополнительные аровские пакеты, в которых будет идти основная наша работа — R может не найти некоторые системные пакеты. Такая проблема у меня возникла на Ubuntu 22.04 — помогла команда ниже:\nsudo apt install r-base-dev\nsudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev linfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev\nСначала мы будем знакомиться с базовым R и работать только в нём, но имейте в виду, что тут есть некая команда, которая может пригодиться.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-r-about",
+    "href": "r-basics.html#rbasics-r-about",
+    "title": "1  Основы R",
+    "section": "1.3 Про R",
+    "text": "1.3 Про R\n\n\n\n\n1.3.1 Откуда оно взялось\nR — популярный язык программирования среди исследователей в социальных и гуманитарных науках. Если совсем коротко, то начиналось всё с языка S, который был языком программирования для статистического анализа. Потом его доработали и получился R.\nХотя сегодня всё ещё можно услышать, что «R — это язык программирования для статистической обработки данных», это ложь. Да, когда-то давно дела обстояли именно так, но сейчас R — это полноценный язык программирования, который позволяет решать широкий спект задач от статистического анализа и data wrangling до машинного обучения, моделирования и создания сайтов и приложений.\nКонечно, с точки зрения сурового программирования к R есть некоторые вопросики(ССЫЛКА).\n\n\n1.3.2 Почему R?\nВ сравнении с «классическим» ПО для анализа данных (типа SPSS) R круче, потому что это:\n\nсвободное ПО (часть GNU Project)\n\nбесплатно, без смс и регистрации\n\nдинамично развивающаяся среда\n\nобновляются функции, развивается IDE\n\nгромадные возможности расширения функционала\n\nболее 20 000 пакетов\n\nмногие написаны специально для какой-либо профессиональной области — например, есть пакеты для биологов, психологов, лингвистов…\n\n\nоткрытый исходный код\n\nможно посмотреть «мясо» функций и понять, как они работают изнутри — нет проблемы «черного ящика»\n\nвозможность написать свои пакеты\n\nи сделать аналитических мир лучше\n\nбольшое сообщество по всему миру, много ресурсов для задавания вопросов — даже просто загуглив какой-либо вопрос или ошибку, вы, скорее всего, попадете на один из перечисленных ниже ресурсов\n\nStack Overflow — крайне полезный ресурс с ответами на вопросы, и не только по R. Есть версия на русском.\nStack Exchange — подобен ресурсу выше, но спектр вопросов еще шире — тут можно найти и что-то про математику, и про методы анализа данных, и ещё мого чего\nPosit Community — форум с вопросами и ответами про R\nR-bloggers — про новинки в R и рядом с ним\nХабр про R\n…\n\nLinear Warriors vs Quadratic Wizards\n\nв SPSS (и другие GUI2 пакеты) ниже порог вхождения, но развитие навыков — линейное\n\nмы просто находим новые кнопки, на которые можно понажимать и что-то получить\n\nв R порог вхождения выше, но впоследствии случается резкий буст, и вы становитесь богами дата-аналитики\n\nчем больше методов анализа мы изучаем, тем глубже мы погружаемся в сам язык и его пакеты, а необходимость сделать так, чтобы все работало, стимулирует нам глубже разобраться в сами методах, чтобы код не падал там, где не надо\n\n\n\n\n\n\n\n\n\nИсточник\n\n\n\n\nвозможность рисовать красивые картинки\n\nа также создавать интерктивные отчеты, книжки, сайты, блоги, дашборды…\n\nрепродуцируемость результатов\n\nибо с кризисом воспроизводимости приходится всячески бороться\n\n\n\n\n1.3.3 R vs Python\n\n— Я вот не могу выбрать: делать на R или на Python? — Да какая разница! Главное — делай!\n\n\n\n\n\nИсточник",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-rstudio-interface",
+    "href": "r-basics.html#rbasics-rstudio-interface",
+    "title": "1  Основы R",
+    "section": "1.4 Интерфейс RStudio",
+    "text": "1.4 Интерфейс RStudio\n\n\n\n\n\n\n\nИнтерфейс RStudio",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-updates",
+    "href": "r-basics.html#rbasics-updates",
+    "title": "1  Основы R",
+    "section": "1.5 Обновления",
+    "text": "1.5 Обновления\n\n1.5.1 Обновление RStudio\n\n\n1.5.2 Обновление R\n\n\n1.5.3 Обновление пакетов\nОшибки has non-zero exit status\nПроблема обратной совместимости: функции иногда переезжают из пакета в пакет без предупреждения",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-r-calculator",
+    "href": "r-basics.html#rbasics-r-calculator",
+    "title": "1  Основы R",
+    "section": "1.6 R как калькулятор",
+    "text": "1.6 R как калькулятор",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#rbasics-vars-and-objects",
+    "href": "r-basics.html#rbasics-vars-and-objects",
+    "title": "1  Основы R",
+    "section": "1.7 Assignment. Переменные и объекты",
+    "text": "1.7 Assignment. Переменные и объекты",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html#rdtypes-numbers",
+    "href": "r-dtypes.html#rdtypes-numbers",
+    "title": "2  Типы данных",
+    "section": "2.1 Числовые данные",
+    "text": "2.1 Числовые данные\n\n\n\n\n2.1.1 Целые числа\n\n\n\n\n\n2.1.2 Числа с плавающей точкой\n\n\n\n\n\n2.1.3 Комплексные числа",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html#rdtypes-logic",
+    "href": "r-dtypes.html#rdtypes-logic",
+    "title": "2  Типы данных",
+    "section": "2.2 Логические данные",
+    "text": "2.2 Логические данные",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html#rdtypes-strings",
+    "href": "r-dtypes.html#rdtypes-strings",
+    "title": "2  Типы данных",
+    "section": "2.3 Строковые данные",
+    "text": "2.3 Строковые данные",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html#rdtypes-factors",
+    "href": "r-dtypes.html#rdtypes-factors",
+    "title": "2  Типы данных",
+    "section": "2.4 Факторы",
+    "text": "2.4 Факторы",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html#rdtypes-na",
+    "href": "r-dtypes.html#rdtypes-na",
+    "title": "2  Типы данных",
+    "section": "2.5 NA, NaN, NULL",
+    "text": "2.5 NA, NaN, NULL",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dstructs.html#rdstructs-vectors",
+    "href": "r-dstructs.html#rdstructs-vectors",
+    "title": "3  Структуры данных",
+    "section": "3.1 Векторы",
+    "text": "3.1 Векторы\n\n\n\n\n3.1.1 Создание векторов\n\n\n3.1.2 Генерация числовых последовательностей\n\n\n3.1.3 Индексация векторов\n\n\n3.1.4 Операции над векторами",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dstructs.html#rdstructs-matrices",
+    "href": "r-dstructs.html#rdstructs-matrices",
+    "title": "3  Структуры данных",
+    "section": "3.2 Матрицы",
+    "text": "3.2 Матрицы\n\n\n\n\n3.2.1 Создание матриц\n\n\n3.2.2 Индексация матриц\n\n\n3.2.3 Операции над матрицами",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dstructs.html#rdstructs-arrays",
+    "href": "r-dstructs.html#rdstructs-arrays",
+    "title": "3  Структуры данных",
+    "section": "3.3 Массивы",
+    "text": "3.3 Массивы",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dstructs.html#rdstructs-lists",
+    "href": "r-dstructs.html#rdstructs-lists",
+    "title": "3  Структуры данных",
+    "section": "3.4 Списки",
+    "text": "3.4 Списки\n\n\n\n\n3.4.1 Создание списков\n\n\n3.4.2 Индексация списков\n\n\n3.4.3 Операции над списками\nподумать, куда это деть, мб вынести в функции или куда-то еще, потому что тут просится map()",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-dstructs.html#rdstructs-dataframes",
+    "href": "r-dstructs.html#rdstructs-dataframes",
+    "title": "3  Структуры данных",
+    "section": "3.5 Датафреймы",
+    "text": "3.5 Датафреймы\n\n\n\n\n3.5.1 Датафрейм как производное матрицы и списка\n\n\n3.5.2 Создание датафреймов\n\n\n3.5.3 Индексация датафреймов",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
+    "objectID": "r-funcs.html#rfuncs-concept",
+    "href": "r-funcs.html#rfuncs-concept",
+    "title": "4  Функции",
+    "section": "4.1 Концепт функции",
+    "text": "4.1 Концепт функции\n\n4.1.1 Окружение и область видимости переменных",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Функции</span>"
+    ]
+  },
+  {
+    "objectID": "r-funcs.html#rfuncs-built",
+    "href": "r-funcs.html#rfuncs-built",
+    "title": "4  Функции",
+    "section": "4.2 Встроенные функции",
+    "text": "4.2 Встроенные функции",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Функции</span>"
+    ]
+  },
+  {
+    "objectID": "r-funcs.html#rfuncs-custom",
+    "href": "r-funcs.html#rfuncs-custom",
+    "title": "4  Функции",
+    "section": "4.3 Создание функций",
+    "text": "4.3 Создание функций\nКогда надо создавать функцию?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Функции</span>"
+    ]
+  },
+  {
+    "objectID": "r-controlflow.html#controlflow-forwhile",
+    "href": "r-controlflow.html#controlflow-forwhile",
+    "title": "5  Управляющие конструкции",
+    "section": "5.1 Циклы",
+    "text": "5.1 Циклы\n\n5.1.1 for\n\n\n5.1.2 while",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Управляющие конструкции</span>"
+    ]
+  },
+  {
+    "objectID": "r-controlflow.html#controlflow-if",
+    "href": "r-controlflow.html#controlflow-if",
+    "title": "5  Управляющие конструкции",
+    "section": "5.2 Условный оператор",
+    "text": "5.2 Условный оператор",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Управляющие конструкции</span>"
+    ]
+  },
+  {
+    "objectID": "r-strings.html#rstrings-packages",
+    "href": "r-strings.html#rstrings-packages",
+    "title": "7  Строки",
+    "section": "7.1 Установка дополнительных пакетов",
+    "text": "7.1 Установка дополнительных пакетов\n\n7.1.1 Установка с CRAN\n\n\n7.1.2 Установка с недефолтных зеркал\n\n\n7.1.3 Установка с GitHub",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Строки</span>"
+    ]
+  },
+  {
+    "objectID": "r-strings.html#rstrings-manipulations",
+    "href": "r-strings.html#rstrings-manipulations",
+    "title": "7  Строки",
+    "section": "7.2 Манипуляции со строками",
+    "text": "7.2 Манипуляции со строками\n\n7.2.1 Создание строк\n\n\n7.2.2 Конкатенация строк\n\n\n7.2.3 Разделение строк\n\n\n7.2.4 Сортировка строк\n\n\n7.2.5 Изменение регистра\n\n\n7.2.6 Поиск подстроки\n\n\n7.2.7 Извлечение подстроки\n\n\n7.2.8 Замена подстроки",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Строки</span>"
+    ]
+  },
+  {
+    "objectID": "r-strings.html#rstrings-regex",
+    "href": "r-strings.html#rstrings-regex",
+    "title": "7  Строки",
+    "section": "7.3 Регулярные выражения",
+    "text": "7.3 Регулярные выражения\nhttps://rpubs.com/iPhuoc/stringr_manipulation\n\n7.3.1 Начало и конце строки\n\n\n7.3.2 Классы символов\n\n\n7.3.3 Повторения",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Строки</span>"
+    ]
+  },
+  {
+    "objectID": "r-dates.html#rdates-storing",
+    "href": "r-dates.html#rdates-storing",
+    "title": "8  Дата и время",
+    "section": "8.1 Способы записи информации о дате и времени",
+    "text": "8.1 Способы записи информации о дате и времени\ntimestamp\n\n8.1.1 Форматы даты и времени\n\n\n8.1.2 Часовые пояса",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Дата и время</span>"
+    ]
+  },
+  {
+    "objectID": "r-dates.html#rdates-fileinfo",
+    "href": "r-dates.html#rdates-fileinfo",
+    "title": "8  Дата и время",
+    "section": "8.2 Информация о файле",
+    "text": "8.2 Информация о файле",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Дата и время</span>"
+    ]
+  },
+  {
+    "objectID": "r-dates.html#rdates-manipulations",
+    "href": "r-dates.html#rdates-manipulations",
+    "title": "8  Дата и время",
+    "section": "8.3 Манипуляции с датой и временем",
+    "text": "8.3 Манипуляции с датой и временем\n\n8.3.1 Извлечение части даты\n\n\n8.3.2 Округление дат\n???\n\n\n8.3.3 Разница между датами",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Дата и время</span>"
+    ]
+  },
+  {
+    "objectID": "math-logic.html#math-logic-utterance",
+    "href": "math-logic.html#math-logic-utterance",
+    "title": "14  Элементы алгебры логики",
+    "section": "14.1 Высказывания",
+    "text": "14.1 Высказывания\n\n14.1.1 Атомарные высказывания",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Элементы алгебры логики</span>"
+    ]
+  },
+  {
+    "objectID": "math-logic.html#math-logic-orepation",
+    "href": "math-logic.html#math-logic-orepation",
+    "title": "14  Элементы алгебры логики",
+    "section": "14.2 Сложные высказывания и логические операции",
+    "text": "14.2 Сложные высказывания и логические операции\n\n14.2.1 Конъюнкция\n\n\n14.2.2 Дизъюнкция\n\n\n14.2.3 XOR",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Элементы алгебры логики</span>"
+    ]
+  },
+  {
+    "objectID": "math-logic.html#math-logic-conditions",
+    "href": "math-logic.html#math-logic-conditions",
+    "title": "14  Элементы алгебры логики",
+    "section": "14.3 Условные высказывания",
+    "text": "14.3 Условные высказывания\n\n14.3.1 Импликация\n\n\n14.3.2 Репликация\n\n\n14.3.3 Эквиваленция",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Элементы алгебры логики</span>"
     ]
   },
   {
@@ -444,7 +774,7 @@
     "href": "stats-estim.html#точечные-оценки",
     "title": "24  Оценивание статистических параметров",
     "section": "24.1 Точечные оценки",
-    "text": "24.1 Точечные оценки\n\n\n\nПараметр обычно обозначается греческой буквой. Пусть у нас есть некоторый параметр генеральной совокупности \\(\\theta\\). Его аналогом на выборочной совокупности является его точечная оценка \\(\\hat \\theta\\). Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, она является функцией от результатов наблюдений:\n\\[\n\\hat \\theta = \\hat \\theta (x), \\; x = (x_1, x_2, \\dots, x_n)\n\\]\nЧто это значит? То, что на разных выборках эта оценка может различаться. Возьмем для примера такой параметр как среднее значение. Предположим, что мы исследуем интеллект, и наша генеральная совокупность представлена таким набором наблюдений:\n\nnrow(iq)\n\n[1] 10000\n\nhead(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1     1   101\n2     2    95\n3     3    88\n4     4   114\n5     5    83\n6     6   106\n\ntail(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1  9995    91\n2  9996   122\n3  9997    91\n4  9998   115\n5  9999   122\n6 10000    92\n\n\nТак как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра \\(\\mu\\). В реальной жизни мы этого сделать не можем!\n\nmean(iq$IQ)\n\n[1] 99.6473\n\n\nВполне ожидаемое значение1. Теперь попробуем наизвлекать выборок человек по 50 и посчитать оценки среднего (выборочные средние) \\(\\hat \\mu\\) на них:\n\nmeans &lt;- numeric()\nfor (i in 1:100) {\n  means[i] &lt;- mean(sample(iq$IQ, 50, replace = FALSE))\n}\nggplot(NULL, aes(means)) +\n  geom_histogram(binwidth = 1, fill = 'royalblue4', color = 'lightgray') +\n  geom_vline(xintercept = mean(iq$IQ)) +\n  labs(x = 'Выборочные средние IQ',\n       y = 'Количество')\n\n\n\n\n\n\n\n\nНаблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом неопределённость и вариация.\n\n24.1.1 Метод моментов\n\n\n\nЧтобы получить точечные оценки параметров, используются разные методы в зависимости от конкретной модели анализа. Сейчас мы познакомимся с самым простым — методом моментов.\nСамо название метода отсылает нас к обсуждению характеристик распределений случайных величин. Мы говорили о том, что распредления характеризуются их моментами. В методе моментов есть три этапа:\n\nустанавливается связь между оцениваемым параметром и моментом распределения\n\n\\[\n\\theta = \\xi(\\nu_k) \\quad \\text{или} \\quad \\theta = \\xi(\\mu_k)\n\\]\n\nнаходятся выборочные моменты\n\n\\[\n\\hat \\theta = \\xi(\\nu_k^*) \\quad \\text{или} \\quad \\hat \\theta = \\xi(\\mu_k^*)\n\\]\n\nистинный момент заменяется на выборочный — получается оценка.\n\nДля примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается нормальному закону. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:\n\\[\n\\mu = \\mathbb{E}X\n\\]\nВыборочным аналогом математического ожидания является выборочное среднее:\n\\[\n\\hat \\mu = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\nИ это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)\n\n\n24.1.2 Метод максимального правдоподобия\n\n\n\n\n\n24.1.3 Bootstrap\n\n\n\n\n\n24.1.4 Свойства точечных оценок\n\n\n\nТак как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: несмещённость, состоятельность и эффективность.\n\n24.1.4.1 Несмещенность\n\n\n\nНесмещённость выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.\n\\[\n\\forall n \\; \\mathbb{E} \\hat \\theta = \\theta, \\quad (\\mathbb{E}\\hat \\theta - \\theta) \\rightarrow 0,\n\\] где \\(n\\) — объём выборки, \\((\\mathbb{E}\\hat \\theta - \\theta)\\) — смещение.\nСлева представлено требование несмещённости при любом объёме выборки, а справа — ассимптотической несмещённости.\n\n\n24.1.4.2 Состоятельность\n\n\n\nМатематически состоятельность определяется следующим образом:\n\\[\n\\lim_{n \\rightarrow \\infty} \\mathrm{P}(|\\hat \\theta - \\theta| &lt; \\varepsilon) = 1, \\, \\varepsilon &gt; 0\n\\]\nСодержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.\n\n\n24.1.4.3 Эффективность\n\n\n\nЭффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть дисперсия. Чтобы оценка была эффективна, её дисперсия должна быть минимальной:\n\\[\n\\sigma^2_{\\hat \\theta} = \\min\n\\]\nПример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.",
+    "text": "24.1 Точечные оценки\n\n\n\nПараметр обычно обозначается греческой буквой. Пусть у нас есть некоторый параметр генеральной совокупности \\(\\theta\\). Его аналогом на выборочной совокупности является его точечная оценка \\(\\hat \\theta\\). Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, она является функцией от результатов наблюдений:\n\\[\n\\hat \\theta = \\hat \\theta (x), \\; x = (x_1, x_2, \\dots, x_n)\n\\]\nЧто это значит? То, что на разных выборках эта оценка может различаться. Возьмем для примера такой параметр как среднее значение. Предположим, что мы исследуем интеллект, и наша генеральная совокупность представлена таким набором наблюдений:\n\nnrow(iq)\n\n[1] 10000\n\nhead(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1     1    94\n2     2    98\n3     3    94\n4     4   101\n5     5    96\n6     6   121\n\ntail(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1  9995    93\n2  9996    97\n3  9997   117\n4  9998   109\n5  9999    98\n6 10000    86\n\n\nТак как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра \\(\\mu\\). В реальной жизни мы этого сделать не можем!\n\nmean(iq$IQ)\n\n[1] 99.8877\n\n\nВполне ожидаемое значение1. Теперь попробуем наизвлекать выборок человек по 50 и посчитать оценки среднего (выборочные средние) \\(\\hat \\mu\\) на них:\n\nmeans &lt;- numeric()\nfor (i in 1:100) {\n  means[i] &lt;- mean(sample(iq$IQ, 50, replace = FALSE))\n}\nggplot(NULL, aes(means)) +\n  geom_histogram(binwidth = 1, fill = 'royalblue4', color = 'lightgray') +\n  geom_vline(xintercept = mean(iq$IQ)) +\n  labs(x = 'Выборочные средние IQ',\n       y = 'Количество')\n\n\n\n\n\n\n\n\nНаблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом неопределённость и вариация.\n\n24.1.1 Метод моментов\n\n\n\nЧтобы получить точечные оценки параметров, используются разные методы в зависимости от конкретной модели анализа. Сейчас мы познакомимся с самым простым — методом моментов.\nСамо название метода отсылает нас к обсуждению характеристик распределений случайных величин. Мы говорили о том, что распредления характеризуются их моментами. В методе моментов есть три этапа:\n\nустанавливается связь между оцениваемым параметром и моментом распределения\n\n\\[\n\\theta = \\xi(\\nu_k) \\quad \\text{или} \\quad \\theta = \\xi(\\mu_k)\n\\]\n\nнаходятся выборочные моменты\n\n\\[\n\\hat \\theta = \\xi(\\nu_k^*) \\quad \\text{или} \\quad \\hat \\theta = \\xi(\\mu_k^*)\n\\]\n\nистинный момент заменяется на выборочный — получается оценка.\n\nДля примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается нормальному закону. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:\n\\[\n\\mu = \\mathbb{E}X\n\\]\nВыборочным аналогом математического ожидания является выборочное среднее:\n\\[\n\\hat \\mu = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\nИ это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)\n\n\n24.1.2 Метод максимального правдоподобия\n\n\n\n\n\n24.1.3 Bootstrap\n\n\n\n\n\n24.1.4 Свойства точечных оценок\n\n\n\nТак как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: несмещённость, состоятельность и эффективность.\n\n24.1.4.1 Несмещенность\n\n\n\nНесмещённость выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.\n\\[\n\\forall n \\; \\mathbb{E} \\hat \\theta = \\theta, \\quad (\\mathbb{E}\\hat \\theta - \\theta) \\rightarrow 0,\n\\] где \\(n\\) — объём выборки, \\((\\mathbb{E}\\hat \\theta - \\theta)\\) — смещение.\nСлева представлено требование несмещённости при любом объёме выборки, а справа — ассимптотической несмещённости.\n\n\n24.1.4.2 Состоятельность\n\n\n\nМатематически состоятельность определяется следующим образом:\n\\[\n\\lim_{n \\rightarrow \\infty} \\mathrm{P}(|\\hat \\theta - \\theta| &lt; \\varepsilon) = 1, \\, \\varepsilon &gt; 0\n\\]\nСодержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.\n\n\n24.1.4.3 Эффективность\n\n\n\nЭффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть дисперсия. Чтобы оценка была эффективна, её дисперсия должна быть минимальной:\n\\[\n\\sigma^2_{\\hat \\theta} = \\min\n\\]\nПример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.",
     "crumbs": [
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
     ]
@@ -454,7 +784,7 @@
     "href": "stats-estim.html#интервальные-оценки",
     "title": "24  Оценивание статистических параметров",
     "section": "24.2 Интервальные оценки",
-    "text": "24.2 Интервальные оценки\n\n\n\nКроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как надёжность:\n\\[\n\\gamma = \\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max)\n\\]\nТакая форма оценки называется интервальной оценкой параметра, так как мы указываем интервал, в котором находится истинное значение с определённой вероятностью.\nТакая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.\nЗначение надежности \\(\\gamma\\) может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.\n\n24.2.1 Стандартная ошибка\n\n\n\n\n24.2.1.1 Почему \\(\\text{se}(X) = \\frac{\\text{sd}(X)}{\\sqrt{n}}\\)\n\n\n\n\\[\n\\text{var}(X + Y) = \\text{var}(X) + \\text{var}(Y) + 2 \\text{cov}(X, Y)\n\\]\n\\[\n\\text{var}(aX) = a^2 \\text{var}(X)\n\\]\nТак как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то\n\\[\n\\text{cov}(X_i, X_j) = 0, \\sigma_{X_i} = \\sigma_{X_j} = \\sigma\n\\]\n\\[\n\\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big) = \\frac{1}{n^2} \\sum \\text{var}(X_i) = \\frac{1}{n^2} \\sum \\sigma^2 = \\frac{n}{n^2} \\sigma^2 = \\frac{\\sigma^2}{n}\n\\]\n\\[\n\\text{se}_X = \\sqrt{ \\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big)} = \\sqrt{\\frac{\\sigma^2}{n}} = \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n24.2.2 Доверительный интервал\n\n\n\nВариантом интервальной оценки является доверительный интервал (confidence interval). Итак, ещё раз:\n\\[\n\\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max) = \\gamma, \\; \\gamma \\rightarrow 1\n\\]\n\\(theta_\\min\\) и \\(\\theta_\\max\\) — границы доверительного интервала, \\(\\gamma\\) — доверительная вероятность. На практике её значение чаще всего принимается равным \\(0.95\\).\nАлгоритм определения интервальной оценки следующий:\n\nНайсти статистику \\(\\zeta(\\theta)\\), связанную с оцениваниемым параметром, закон распределения которой известен \\(f(\\zeta)\\).\nОпределить значения \\(\\zeta_\\min\\) и \\(\\zeta_\\max\\), в пределах которых статистика находится с вероятностью \\(\\gamma\\).\nЗная связь \\(\\zeta(\\theta)\\) перейти к границам \\(\\theta_\\min\\) и \\(\\theta_\\max\\).\n\nРазберемся с этим на примере построения доверительного интервала для генерального среднего.\nПервая задача — найти статистику. Мы воспользуемся тем, что за нас поработали учёные-статистики и сказали, что вот такая вполне подойдёт:\n\\[\nt = \\frac{\\bar x - \\mu}{s}\\sqrt{n-1},\n\\]\nгде \\(t\\) — значение статистики, \\(\\bar x\\) — выборочное среднее, \\(\\mu\\) — генеральное среднее, \\(s\\) — выборочное стандартное отклонение, \\(n\\) — объём выборки.\nИзвестен ли закон её распредления? Да. Эта статистика подчинается \\(t\\)-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:\n\n\n\nТеперь надо сформулировать вид интервальной оценки для генерального среднего. Путем арифметических преобразований формулы выше мы имеет следующее:\n\\[\n\\mu = \\bar x - t \\frac{s}{\\sqrt{n-1}}\n\\]\nЗначит вид интервальной оценки будет таков:\n\\[\n\\mathrm{P}\\Big( \\bar x - t_\\alpha \\frac{s}{\\sqrt{n-1}} &lt; \\mu &lt;\n\\bar x + t_\\alpha \\frac{s}{\\sqrt{n-1}}\\Big) = 1 - \\alpha = \\gamma\n\\]\nПосмотрим на картинку:\n\n\n\nВидим на ней наш доверительный интвервал и значения \\(t_\\alpha\\) и \\(-t_\\alpha\\). Сама \\(\\alpha\\) обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.\nХорошо, что весь этот ужас в R скрыт под капотом:\n\nmean_cl_normal(iq$IQ)\n\n        y     ymin     ymax\n1 99.6473 99.35878 99.93582\n\nmean_cl_boot(iq$IQ)\n\n        y    ymin     ymax\n1 99.6473 99.3618 99.90462",
+    "text": "24.2 Интервальные оценки\n\n\n\nКроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как надёжность:\n\\[\n\\gamma = \\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max)\n\\]\nТакая форма оценки называется интервальной оценкой параметра, так как мы указываем интервал, в котором находится истинное значение с определённой вероятностью.\nТакая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.\nЗначение надежности \\(\\gamma\\) может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.\n\n24.2.1 Стандартная ошибка\n\n\n\n\n24.2.1.1 Почему \\(\\text{se}(X) = \\frac{\\text{sd}(X)}{\\sqrt{n}}\\)\n\n\n\n\\[\n\\text{var}(X + Y) = \\text{var}(X) + \\text{var}(Y) + 2 \\text{cov}(X, Y)\n\\]\n\\[\n\\text{var}(aX) = a^2 \\text{var}(X)\n\\]\nТак как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то\n\\[\n\\text{cov}(X_i, X_j) = 0, \\sigma_{X_i} = \\sigma_{X_j} = \\sigma\n\\]\n\\[\n\\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big) = \\frac{1}{n^2} \\sum \\text{var}(X_i) = \\frac{1}{n^2} \\sum \\sigma^2 = \\frac{n}{n^2} \\sigma^2 = \\frac{\\sigma^2}{n}\n\\]\n\\[\n\\text{se}_X = \\sqrt{ \\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big)} = \\sqrt{\\frac{\\sigma^2}{n}} = \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n24.2.2 Доверительный интервал\n\n\n\nВариантом интервальной оценки является доверительный интервал (confidence interval). Итак, ещё раз:\n\\[\n\\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max) = \\gamma, \\; \\gamma \\rightarrow 1\n\\]\n\\(theta_\\min\\) и \\(\\theta_\\max\\) — границы доверительного интервала, \\(\\gamma\\) — доверительная вероятность. На практике её значение чаще всего принимается равным \\(0.95\\).\nАлгоритм определения интервальной оценки следующий:\n\nНайсти статистику \\(\\zeta(\\theta)\\), связанную с оцениваниемым параметром, закон распределения которой известен \\(f(\\zeta)\\).\nОпределить значения \\(\\zeta_\\min\\) и \\(\\zeta_\\max\\), в пределах которых статистика находится с вероятностью \\(\\gamma\\).\nЗная связь \\(\\zeta(\\theta)\\) перейти к границам \\(\\theta_\\min\\) и \\(\\theta_\\max\\).\n\nРазберемся с этим на примере построения доверительного интервала для генерального среднего.\nПервая задача — найти статистику. Мы воспользуемся тем, что за нас поработали учёные-статистики и сказали, что вот такая вполне подойдёт:\n\\[\nt = \\frac{\\bar x - \\mu}{s}\\sqrt{n-1},\n\\]\nгде \\(t\\) — значение статистики, \\(\\bar x\\) — выборочное среднее, \\(\\mu\\) — генеральное среднее, \\(s\\) — выборочное стандартное отклонение, \\(n\\) — объём выборки.\nИзвестен ли закон её распредления? Да. Эта статистика подчинается \\(t\\)-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:\n\n\n\nТеперь надо сформулировать вид интервальной оценки для генерального среднего. Путем арифметических преобразований формулы выше мы имеет следующее:\n\\[\n\\mu = \\bar x - t \\frac{s}{\\sqrt{n-1}}\n\\]\nЗначит вид интервальной оценки будет таков:\n\\[\n\\mathrm{P}\\Big( \\bar x - t_\\alpha \\frac{s}{\\sqrt{n-1}} &lt; \\mu &lt;\n\\bar x + t_\\alpha \\frac{s}{\\sqrt{n-1}}\\Big) = 1 - \\alpha = \\gamma\n\\]\nПосмотрим на картинку:\n\n\n\nВидим на ней наш доверительный интвервал и значения \\(t_\\alpha\\) и \\(-t_\\alpha\\). Сама \\(\\alpha\\) обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.\nХорошо, что весь этот ужас в R скрыт под капотом:\n\nmean_cl_normal(iq$IQ)\n\n        y     ymin     ymax\n1 99.8877 99.59447 100.1809\n\nmean_cl_boot(iq$IQ)\n\n        y     ymin     ymax\n1 99.8877 99.61306 100.1838",
     "crumbs": [
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
     ]
@@ -767,6 +1097,56 @@
     "text": "99.3 CLI\n\n99.3.1 git clone\n\n\n99.3.2 git status\n\n\n99.3.3 git diff\n\n\n99.3.4 git log\n\n\n99.3.5 git add\n\n\n99.3.6 git commit\n\n\n99.3.7 git push\n\n\n99.3.8 git pull\n\n\n99.3.9 git branch\n\n\n99.3.10 git checkout\n\n\n99.3.11 git config",
     "crumbs": [
       "<span class='chapter-number'>99</span>  <span class='chapter-title'>Git</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-formulas.html#formulas_power",
+    "href": "appendix-formulas.html#formulas_power",
+    "title": "100  Формулы",
+    "section": "100.1 Степени и корни",
+    "text": "100.1 Степени и корни\n\n100.1.1 Определения\n\\[\na^b \\overset{\\text{def}}{=}\\prod_{i=1}^b a_i\n\\]\n\\[\n\\sqrt[n]a \\overset{\\text{def}}{=}b \\Leftrightarrow b^n = a\n\\]\n\n\n100.1.2 Свойства\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-formulas.html#formulas_log",
+    "href": "appendix-formulas.html#formulas_log",
+    "title": "100  Формулы",
+    "section": "100.2 Логарифмы",
+    "text": "100.2 Логарифмы\n\n100.2.1 Определение\n\\[\\log_b a \\overset{\\text{def}}{=}c \\Leftrightarrow a^c = b, a &gt; 0, b &gt; 0, b \\neq 1\\]\n\n\n100.2.2 Свойства\n\n\n\n\\[\\log_a a = 1\\] \\[\\log_c(ab) = \\log_c a + \\log_c b\\] \\[\\log_c\\Big(\\frac{a}{b}\\Big) = \\log_c a - \\log_c b\\]\n\n\n\\[\\log_c 1 = 0\\] \\[\\log_c a^b = b \\log_c a\\] \\[\\log_{c^b} a = \\frac{1}{b} \\log_c a\\]",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-formulas.html#formulas_abs",
+    "href": "appendix-formulas.html#formulas_abs",
+    "title": "100  Формулы",
+    "section": "100.3 Модуль",
+    "text": "100.3 Модуль\n\\[\n|a| =\n\\begin{cases}\na, &a \\geq 0 \\\\\n-a, &a &lt; 0\n\\end{cases}\n\\]\n\\[|x| \\leq a \\Rightarrow -a \\leq x \\leq a \\Leftrightarrow x \\in [-a, a]\\]\n\\[|x| \\geq a \\Rightarrow x \\leq -a \\wedge x \\geq a \\Leftrightarrow x \\in (-\\infty, -a] \\cup [a, +\\infty)\\]",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-formulas.html#formulas_deriv",
+    "href": "appendix-formulas.html#formulas_deriv",
+    "title": "100  Формулы",
+    "section": "100.4 Производная",
+    "text": "100.4 Производная\n\n100.4.1 Свойства производной\n\\[c' = 0, \\, c = \\text{const}\\] \\[(Cu)' = Cu'\\] \\[(u + v)' = u' + v'\\] \\[(uv)' = u'v + uv'\\] \\[\\Big( \\frac{u}{v} \\Big)' = \\frac{u'v - uv'}{v^2}\\] \\[\\Big(u\\big(v(x)\\big)\\Big)' = u'(v) \\cdot v'(x)\\]\n\n\n100.4.2 Производные элементарных функций\n\n\n\n\\[(x^n)' = nx^{n-1}\\] \\[(a^x)' = a^x \\ln a\\] \\[(e^x)' = e^x\\]\n\n\n\\[(\\log_a x)' = \\frac{1}{x \\ln a}\\] \\[(\\ln_a x)' = \\frac{1}{x}\\] \\[(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}\\]\n\n\n\n\n\n\n\\[(\\sin x)' = \\cos x\\] \\[(\\cos x)' = -\\sin x\\]\n\n\n\\[(\\tan x)' = \\frac{1}{\\cos^2 x}\\] \\[(\\cot x)' = \\frac{1}{\\sin^2 x}\\]\n\n\n\n\n\n\n\\[(\\arcsin x)' = \\frac{1}{\\sqrt{1 - x^2}}\\] \\[(\\arccos x)' = -\\frac{1}{\\sqrt{1 - x^2}}\\] \\[(\\arctan x)' = \\frac{1}{1 + x^2}\\] \\[(\\text{arccot}\\, x)' = -\\frac{1}{1 + x^2}\\]\n\n\n\\[(\\sinh x)' = \\cosh x\\] \\[(\\cosh x)' = \\sinh x\\] \\[(\\tanh x)' = \\frac{1}{\\cosh^2 x}\\] \\[(\\coth x)' = -\\frac{1}{\\sinh^2 x}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-formulas.html#formulas_trig",
+    "href": "appendix-formulas.html#formulas_trig",
+    "title": "100  Формулы",
+    "section": "100.5 Тригонометрия",
+    "text": "100.5 Тригонометрия\n\n\n\n\n\n\n\n\n\n\n100.5.1 Производные тригонометрические функции\n\\[\n\\sec \\alpha = \\frac{1}{\\cos \\alpha} \\qquad\n\\csc \\alpha = \\frac{1}{\\sin \\alpha} \\qquad\n\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} \\qquad\n\\cot \\alpha = \\frac{\\cos \\alpha}{\\sin \\alpha}\n\\]\n\n\n100.5.2 Основное тригонометрическое тождество\n\\[\n\\sin^2 \\alpha + \\cos^2 \\alpha = 1\n\\]\n\\[\n\\sin \\alpha = \\pm \\sqrt{1 - \\cos^2 \\alpha} \\qquad \\cos \\alpha = \\pm \\sqrt{1 - \\sin^2 \\alpha}\n\\]\n\\[\n1 + \\cot^2 \\alpha = \\csc^2 \\alpha \\qquad\n\\tan^2 \\alpha + 1 = \\sec ^2 \\alpha\n\\]\n\\[\n\\sec^2 \\alpha + \\csc^2 \\alpha = \\sec^2 \\alpha \\cdot \\csc^2 \\alpha\n\\]\n\n\n100.5.3 Отражения\n\n\n\n\n\n\n\n\n\n\n100.5.3.1 Относительно \\(\\varphi = 0\\)\nВыражает свойство чётности функции1.\n\n\n\n\\[\\sin (-\\alpha) = -\\sin \\alpha\\] \\[\\tan (-\\alpha) = -\\tan \\alpha\\] \\[\\sec (-\\alpha) = \\sec \\alpha\\]\n\n\n\\[\\cos (-\\alpha) = \\cos \\alpha\\] \\[\\cot (-\\alpha) = -\\cot \\alpha\\] \\[\\csc (-\\alpha) = -\\csc \\alpha\\]\n\n\n\n\n\n100.5.3.2 Относительно \\(\\varphi = \\frac{\\pi}{4}\\)\n\n\n\n\\[\\sin (\\frac{\\pi}{2}-\\alpha) = \\cos \\alpha\\] \\[\\tan \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\cot \\alpha\\] \\[\\sec \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\sin \\alpha\\] \\[\\cot \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\tan \\alpha\\] \\[\\csc \\Big(\\frac{\\pi}{2}-\\alpha\\Big) = \\sec \\alpha\\]\n\n\n\n\n\n100.5.3.3 Относительно \\(\\varphi = \\frac{\\pi}{2}\\)\n\n\n\n\\[\\sin (\\pi-\\alpha) = \\sin \\alpha\\] \\[\\tan (\\pi-\\alpha) = -\\tan \\alpha\\] \\[\\sec (\\pi-\\alpha) = -\\sec \\alpha\\]\n\n\n\\[\\cos (\\pi-\\alpha) = -\\cos \\alpha\\] \\[\\cot (\\pi-\\alpha) = -\\cot \\alpha\\] \\[\\csc (\\pi-\\alpha) = \\csc \\alpha\\]\n\n\n\n\n\n100.5.3.4 Относительно \\(\\varphi = \\frac{3\\pi}{4}\\)\n\n\n\n\\[\\sin \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\cos \\alpha\\] \\[\\tan \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = \\cot \\alpha\\] \\[\\sec \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\sin \\alpha\\] \\[\\cot \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = \\tan \\alpha\\] \\[\\csc \\Big(\\frac{3\\pi}{2}-\\alpha\\Big) = -\\sec \\alpha\\]\n\n\n\n\n\n100.5.3.5 Относительно \\(\\varphi = \\pi\\)\n\n\n\n\\[\\sin (2\\pi - \\alpha) = -\\sin \\alpha = \\sin (-\\alpha)\\] \\[\\tan (2\\pi - \\alpha) = -\\tan \\alpha = \\tan (-\\alpha)\\] \\[\\sec (2\\pi - \\alpha) = \\sec \\alpha = \\sec (-\\alpha)\\]\n\n\n\\[\\cos (2\\pi - \\alpha) = \\cos \\alpha = \\cos (-\\alpha)\\] \\[\\cot (2\\pi - \\alpha) = -\\cot \\alpha = \\cot (-\\alpha)\\] \\[\\csc (2\\pi - \\alpha) = -\\csc \\alpha = \\csc (-\\alpha)\\]\n\n\n\n\n\n\n100.5.4 Сдвиг\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nТак как все тригонометрические функции периодические, результат сдвига функции определяется её периодом. Для функций \\(\\sin, \\cos, \\sec\\) и \\(\\csc\\) период равен \\(2\\pi\\). Для \\(\\tan\\) и \\(\\cot\\) он составляет \\(\\pi\\).\n\n100.5.4.1 На четверть периода\n\n\n\n\\[\\sin \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\pm\\cos \\alpha\\] \\[\\tan \\Big(\\alpha \\pm \\frac{\\pi}{4}\\Big) = \\frac{\\tan \\alpha \\pm 1}{1 \\mp \\tan \\alpha}\\] \\[\\sec \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\mp \\csc \\alpha\\]\n\n\n\\[\\cos \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\mp \\sin \\alpha\\] \\[\\cot \\Big(\\alpha \\pm \\frac{\\pi}{4}\\Big) = \\frac{\\cot \\alpha \\mp 1}{1 \\pm \\cot \\alpha}\\] \\[\\csc \\Big(\\alpha \\pm \\frac{\\pi}{2}\\Big) = \\pm \\sec \\alpha\\]\n\n\n\n\n\n100.5.4.2 На половину периода\n\n\n\n\\[\\sin (\\alpha + \\pi) = -\\sin \\alpha\\] \\[\\tan \\Big(\\alpha + \\frac{\\pi}{2}\\Big) = -\\cot \\alpha\\] \\[\\sec (\\alpha + \\pi) = -\\sec \\alpha\\]\n\n\n\\[\\cos (\\alpha + \\pi) = -\\cos \\alpha\\] \\[\\cot \\Big(\\alpha + \\frac{\\pi}{2}\\Big) = -\\tan \\alpha\\] \\[\\csc (\\alpha + \\pi) = -\\csc \\alpha\\]\n\n\n\n\n\n100.5.4.3 На полный период\n\n\n\n\\[\\sin (\\alpha + 2\\pi) = \\sin \\alpha\\] \\[\\tan (\\alpha + \\pi) = \\tan \\alpha\\] \\[\\sec (\\alpha + 2\\pi) = \\sec \\alpha\\]\n\n\n\\[\\cos (\\alpha + 2\\pi) = \\cos \\alpha\\] \\[\\cot (\\alpha + \\pi) = \\cot \\alpha\\] \\[\\csc (\\alpha + 2\\pi) = \\csc \\alpha\\]\n\n\n\n\n\n\n100.5.5 Соотношение знаков\n\\[\n\\text{sgn}\\sin \\alpha = \\text{sgn}\\csc \\alpha \\qquad \\text{sgn}\\cos \\alpha = \\text{sgn}\\sec \\alpha\n\\] \\[\n\\text{sgn}\\tan \\alpha = \\text{sgn}\\cot \\alpha\n\\]\n\n\n100.5.6 Функции суммы с разности аргументов\n\\[\n\\sin (\\alpha \\pm \\beta) = \\sin \\alpha \\cos \\beta \\pm \\cos \\alpha \\sin \\beta\n\\]\n\\[\n\\cos (\\alpha \\pm \\beta) = \\cos \\alpha \\cos \\beta \\mp \\sin \\alpha \\sin \\beta\n\\]\n\\[\n\\tan (\\alpha \\pm \\beta) = \\frac{\\tan \\alpha \\pm \\tan \\beta}{1 \\mp \\tan \\alpha \\tan \\beta}\n\\]\n\\[\n\\cot (\\alpha \\pm \\beta) = \\frac{\\cot \\alpha \\cot \\beta \\mp 1}{\\cot \\beta \\pm \\cot \\alpha}\n\\] \\[\n\\sec (\\alpha \\pm \\beta) = \\frac{\\sec \\alpha \\sec \\beta \\csc \\alpha \\csc \\beta}{\\csc \\alpha \\csc \\beta \\mp \\sec \\alpha \\sec \\beta}\n\\]\n\\[\n\\csc (\\alpha \\pm \\beta) = \\frac{\\sec \\alpha \\sec \\beta \\csc \\alpha \\csc \\beta}{\\sec \\alpha \\csc \\beta \\pm \\sec \\alpha \\sec \\beta}\n\\]\n\n\n100.5.7 Формулы двойного аргумента\n\\[\n\\sin 2\\alpha = 2\\sin \\alpha \\cos \\alpha = (\\sin \\alpha + \\cos \\alpha)^2 -1 = \\frac{2\\tan \\alpha}{1 + \\tan^2 \\alpha}\n\\]\n\\[\n\\cos 2\\alpha = \\cos^2 \\alpha - \\sin^2 \\alpha = 2\\cos^2 \\alpha - 1 = 1 - 2\\sin^2 \\alpha = \\frac{1 - \\tan^2 \\alpha}{1 + \\tan^2 \\alpha}\n\\]\n\\[\n\\tan 2\\alpha = \\frac{2\\tan \\alpha}{1 - \\tan^2 \\alpha}\n\\]\n\\[\n\\cot 2\\alpha = \\frac{\\cot^2 \\alpha - 1}{2 \\cot \\alpha} = \\frac{1 - \\tan^2 \\alpha}{2 \\tan \\alpha}\n\\]\n\\[\n\\sec 2\\alpha = \\frac{\\sec^2 \\alpha}{2 - \\sec^2 \\alpha} = \\frac{1 + \\tan^2 \\alpha}{1 - \\tan^2 \\alpha}\n\\]\n\\[\n\\csc 2\\alpha = \\frac{\\sec \\alpha \\csc \\alpha}{2} = \\frac{1 + \\tan^2 \\alpha}{2 \\tan \\alpha}\n\\]\n\n\n100.5.8 Формулы тройного аргумента\n\\[\n\\sin 3\\alpha = 3\\sin \\alpha - 4 \\sin^3 \\alpha = 4\\sin \\alpha \\sin \\Big( \\frac{\\pi}{3} - \\alpha\\Big) \\sin \\Big( \\frac{\\pi}{3} + \\alpha \\Big)\n\\]\n\\[\n\\cos 3\\alpha = 4\\cos^3 \\alpha - 3 \\cos \\alpha = 4\\cos \\alpha \\cos \\Big(\\frac{\\pi}{3} - \\alpha\\Big) \\cos \\Big(\\frac{\\pi}{3} + \\alpha\\Big)\n\\]\n\\[\n\\tan 3\\alpha = \\frac{3\\tan \\alpha - \\tan^3 \\alpha}{1 - 3\\tan^2 \\alpha} = \\tan \\alpha \\tan \\Big( \\frac{\\pi}{3} - \\alpha \\Big) \\tan \\Big(\\frac{\\pi}{3} + \\alpha \\Big)\n\\]\n\\[\n\\cot 3\\alpha = \\frac{3 \\cot \\alpha - \\cot^3 \\alpha}{1 - 3\\cot^2 \\alpha}\n\\]\n\\[\n\\sec 3\\alpha = \\frac{\\sec^3 \\alpha}{4 - 3\\sec^2 \\alpha}\n\\]\n\\[\n\\csc 3\\alpha = \\frac{\\csc^3 \\alpha}{3\\csc^2 \\alpha -4}\n\\]\n\n\n100.5.9 Формулы половинного аргумента\n\\[\n\\sin \\frac{\\alpha}{2} = \\text{sgn}\\Big(\\sin \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{1 - \\cos \\alpha}{2}}\n\\]\n\\[\n\\cos \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\cos \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{1 + \\cos \\alpha}{2}}\n\\]\n\\[\n\\tan \\frac{\\alpha}{2} = \\frac{1 - \\cos\\alpha}{\\sin \\alpha} = \\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\csc \\alpha - \\cot \\alpha = \\frac{\\tan \\alpha}{1 + \\sec \\alpha} = \\text{sgn}(\\sin \\alpha) \\sqrt{\\frac{1 - \\cos \\alpha}{1 + \\cos \\alpha}}\n\\]\n\\[\n\\cot \\frac{\\alpha}{2} = \\frac{1 + \\cos \\alpha}{\\sin \\alpha} = \\frac{\\sin \\alpha}{1 - \\cos \\alpha} = \\csc \\alpha + \\cot \\alpha = \\text{sgn}(\\sin \\alpha) \\sqrt{\\frac{1 + \\cos \\alpha}{1 - \\cos{\\alpha}}}\n\\]\n\\[\n\\sec \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\cos \\frac{\\alpha}{2} \\Big) \\sqrt{\\frac{2}{1 + \\cos \\alpha}}\n\\]\n\\[\n\\csc \\frac{\\alpha}{2} = \\text{sgn}\\Big( \\sin \\frac{\\alpha}{2}  \\Big) \\sqrt{\\frac{2}{1 - \\cos \\alpha}}\n\\]\n\n\n100.5.10 Формулы понижения степени\n\n\n\n\\[\n\\sin^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{2}\n\\]\n\n\n\\[\n\\cos^2 \\alpha = \\frac{1 + \\cos 2\\alpha}{2}\n\\]\n\n\n\n\n\\[\n\\tan^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{1 + \\cos 2\\alpha}\n\\]\n\n\n\\[\n\\cot^2 \\alpha = \\frac{1 + \\cos 2\\alpha}{1 - \\cos 2\\alpha}\n\\]\n\n\n\n\n\\[\n\\sec^2 \\alpha = \\frac{2}{1 + \\cos 2\\alpha}\n\\]\n\n\n\\[\n\\csc^2 \\alpha = \\frac{2}{1 - \\cos 2\\alpha}\n\\]\n\n\n\n\n\n\n100.5.11 Преобразование произведения в сумму\n\\[\n\\cos \\alpha \\cos \\beta = \\frac{\\cos (\\alpha - \\beta) + \\cos (\\alpha + \\beta)}{2}\n\\]\n\\[\n\\sin \\alpha \\sin \\beta = \\frac{\\cos (\\alpha - \\beta) - \\cos (\\alpha + \\beta)}{2}\n\\]\n\\[\n\\sin \\alpha \\cos \\beta = \\frac{\\sin (\\alpha + \\beta) + \\sin (\\alpha - \\beta)}{2}\n\\]\n\\[\n\\cos \\alpha \\sin \\beta = \\frac{\\sin (\\alpha + \\beta) - \\sin (\\alpha - \\beta)}{2}\n\\]\n\\[\n\\tan \\alpha \\tan \\beta = \\frac{\\cos (\\alpha - \\beta) - \\cos (\\alpha + \\beta)}{\\cos (\\alpha - \\beta) + \\cos (\\alpha + \\beta)}\n\\]\n\\[\n\\tan \\alpha \\cot \\beta = \\frac{\\sin (\\alpha + \\beta) + \\sin (\\alpha - \\beta)}{\\sin (\\alpha + \\beta) - \\sin (\\alpha - \\beta)}\n\\]\n\n\n100.5.12 Преобразование суммы в произведение\n\\[\n\\sin \\alpha \\pm \\sin \\beta = 2 \\sin \\Big(\\frac{\\alpha \\pm \\beta}{2}\\Big) \\cos \\Big(\\frac{\\alpha \\mp \\beta}{2}\\Big)\n\\]\n\\[\n\\cos \\alpha + \\cos \\beta = 2 \\cos \\Big(\\frac{\\alpha + \\beta}{2}\\Big) \\cos \\Big(\\frac{\\alpha - \\beta}{2}\\Big)\n\\]\n\\[\n\\cos \\alpha - \\cos \\beta = -2 \\sin \\Big(\\frac{\\alpha + \\beta}{2}\\Big) \\sin \\Big(\\frac{\\alpha - \\beta}{2}\\Big)\n\\]\n\\[\n\\tan \\alpha \\pm \\tan \\beta = \\frac{sin(\\alpha + \\beta)}{\\cos \\alpha \\cos \\beta}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
     ]
   },
   {

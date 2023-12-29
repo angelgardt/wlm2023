@@ -104,6 +104,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -472,14 +478,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></span></a>
+  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./andan-gam.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели</span></span></a>
+  <a href="./andan-glmm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Смешанные линейные модели</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -680,14 +686,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></span></a>
+  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./randan-gam.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Обобщенные аддитивные модели в R</span></span></a>
+  <a href="./randan-glmm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">Смешанные линейные модели в R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -907,31 +913,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1     1   101
-2     2    95
-3     3    88
-4     4   114
-5     5    83
-6     6   106</code></pre>
+1     1    94
+2     2    98
+3     3    94
+4     4   101
+5     5    96
+6     6   121</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1  9995    91
-2  9996   122
-3  9997    91
-4  9998   115
-5  9999   122
-6 10000    92</code></pre>
+1  9995    93
+2  9996    97
+3  9997   117
+4  9998   109
+5  9999    98
+6 10000    86</code></pre>
 </div>
 </div>
 <p>Так как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра <span class="math inline">\(\mu\)</span>. <strong>В реальной жизни мы этого сделать не можем!</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 99.6473</code></pre>
+<pre><code>[1] 99.8877</code></pre>
 </div>
 </div>
 <p>Вполне ожидаемое значение<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Теперь попробуем наизвлекать выборок человек по 50 и посчитать <em>оценки среднего (выборочные средние)</em> <span class="math inline">\(\hat \mu\)</span> на них:</p>
@@ -1124,12 +1130,12 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_normal</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        y     ymin     ymax
-1 99.6473 99.35878 99.93582</code></pre>
+1 99.8877 99.59447 100.1809</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_boot</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        y    ymin     ymax
-1 99.6473 99.3618 99.90462</code></pre>
+<pre><code>        y     ymin     ymax
+1 99.8877 99.61306 100.1838</code></pre>
 </div>
 </div>
 
