@@ -9,16 +9,16 @@ function backup() {
   
   ## make backup
   ### remove old backup
-  if [ -d deploy/docs_backup ]
+  if [ -d deploy/backup ]
   then
-    rm -rf deploy/docs_backup
+    rm -rf deploy/backup
   fi
   
   echo -e "${BLUE}old backup removed${NC}"
   
   ### make new backup
-  mkdir deploy/docs_backup
-  cp -r docs/* deploy/docs_backup 
+  mkdir deploy/backup
+  cp -r docs/* deploy/backup 
   
   echo -e "${BLUE}new backup done${NC}"
   

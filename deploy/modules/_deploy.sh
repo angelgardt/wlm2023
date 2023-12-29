@@ -16,6 +16,7 @@ function deploy() {
 	source deploy/modules/_render-slides.sh
 	source deploy/modules/_render-analytics.sh
 	source deploy/modules/_custom.sh
+	source deploy/modules/_info-writer.sh
 	
   ## check docs dir exists
 	## create if not
@@ -189,15 +190,10 @@ function deploy() {
 	fi
 	
 	## add deployment info to docs/README.md
-	now=$(date +"%Y-%m-%d %H:%M")
-	printf "# Last deployment info\n\n" >> docs/README.md
-	printf "Date: %s\n" "$now" >> docs/README.md
-	printf "Mode: %s\n\n" "$mode" >> docs/README.md
-	###### TODO
-	###### add flag info for custom mode
-	printf "## \`docs\` structure: \n" >> docs/README.md
-	ls -Ral docs >> docs/README.md
 	
+	info_writer $mode
+	
+	## message deploy success
 	echo -e "${GREEN}\n==========\n==========${NC}"
 	echo -e "${GREEN}DEPLOYMENT COMPLETED${NC}"
 	echo -e "${GREEN}==========\n==========${NC}"
