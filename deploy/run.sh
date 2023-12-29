@@ -64,8 +64,6 @@ function deployer {
 	
 	mkdir docs
 	touch docs/README.md
-	now=$(date)
-	echo $now >> docs/README.md
 	
 	echo -e "-----"
 	echo -e "${BLUE}new ${GRAY}docs${BLUE} directory created${NC}"
@@ -140,6 +138,10 @@ function deployer {
 	  rm deploy/current-dirs.txt
 	  
 	fi
+	
+	now=$(date +"%Y-%m-%d %H:%M")
+	echo "Last deploy:" >> docs/README.md
+	echo $now >> docs/README.md
   
 }
 
