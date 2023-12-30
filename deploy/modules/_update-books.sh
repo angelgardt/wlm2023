@@ -13,7 +13,7 @@ function update_books() {
 	
   {
     # try
-    cp index.html docs/index.html
+    cp other/redirect_index.html docs/index.html
   } || {
     # catch
     printf "${RED}\n=====\n${NC}"
