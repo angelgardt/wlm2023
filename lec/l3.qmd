@@ -592,11 +592,11 @@ ggplot() +
   geom_function(fun = function(x) x^2) +
   geom_function(fun = function(x) abs(x), color = "royalblue4") +
   geom_function(fun = function(x) 2 * x + 4, color = "indianred4") +
-  annotate(geom = "text", label = TeX("$y = x^2$"),
+  annotate(geom = "text", label = TeX("y = x²"),
            x = 4, y = 20) +
-  annotate(geom = "text", label = TeX("$y = |x|$"),
+  annotate(geom = "text", label = "y = |x|",
            x = 4, y = 6, color = "royalblue4") +
-  annotate(geom = "text", label = TeX("$y = 2x + 4$"),
+  annotate(geom = "text", label = TeX("y = 2x + 4"),
            x = 2.5, y = 11, color = "indianred4") +
   xlim(-5, 5) +
   labs(x = "x", y = "f(x)")
@@ -649,10 +649,10 @@ ggplot() +
 ggplot() +
   geom_function(fun = function(x) 2*x^3+3*x^2-4*x+6) +
   geom_vline(xintercept = 2, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$x_0$"),
+  annotate(geom = "text", label = TeX("$x₀$"),
            x = 2.2, y = 0) +
   geom_hline(yintercept = 26, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$y_0$"),
+  annotate(geom = "text", label = TeX("$y₀$"),
            x = 0, y = 35) +
   xlim(-3, 5) +
   labs(x = "x",
@@ -665,16 +665,16 @@ ggplot() +
 ggplot() +
   geom_function(fun = function(x) 2*x^3+3*x^2-4*x+6) +
   geom_vline(xintercept = 2, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$x_0$"),
+  annotate(geom = "text", label = "x₀",
            x = 2.2, y = 0) +
   geom_vline(xintercept = 3, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$x_0 + \\Delta x$"),
+  annotate(geom = "text", label = "x₀ + Δx",
            x = 3.5, y = 0) +
   geom_hline(yintercept = 26, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$y_0$"),
+  annotate(geom = "text", label = "y₀",
            x = 0, y = 35) +
   geom_hline(yintercept = 75, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$y_0 + \\Delta y$"),
+  annotate(geom = "text", label = "y₀ + Δy",
            x = 0, y = 90) +
   xlim(-3, 5) +
   labs(x = "x",
@@ -687,16 +687,16 @@ ggplot() +
 ggplot() +
   geom_function(fun = function(x) 2*x^3+3*x^2-4*x+6) +
   geom_vline(xintercept = 2, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$x_0$"),
+  annotate(geom = "text", label = "x₀",
            x = 2.2, y = 0) +
   geom_vline(xintercept = 3, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$x_0 + \\Delta x$"),
+  annotate(geom = "text", label = "x₀ + Δx",
            x = 3.5, y = 0) +
   geom_hline(yintercept = 26, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$y_0$"),
+  annotate(geom = "text", label = "y₀",
            x = 1, y = 35) +
   geom_hline(yintercept = 75, linetype = "dashed") +
-  annotate(geom = "text", label = TeX("$y_0 + \\Delta y$"),
+  annotate(geom = "text", label = "$y₀ + Δy",
            x = 1, y = 90) +
   geom_line(aes(x = c(2, 3, 3, 2),
                 y = c(26, 75, 26, 26)),
@@ -707,11 +707,11 @@ ggplot() +
   geom_line(aes(x = c(2, 3),
                 y = c(26, 26)),
             size = 1, color = "indianred4") +
-  annotate(geom = "text", label = TeX("\\Delta x"), 
+  annotate(geom = "text", label = "Δx", 
            x = 2.5, y = 18, color = "indianred4") +
-  annotate(geom = "text", label = TeX("\\Delta y"), 
+  annotate(geom = "text", label = "Δy", 
            x = 3.2, y = 50, color = "indianred4") +
-  annotate(geom = "text", label = TeX("\\alpha"), 
+  annotate(geom = "text", label = "α", 
            x = 2.2, y = 30, color = "indianred4", size = 5) +
   xlim(0, 4) +
   labs(x = "x",
