@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5. Введение в статистику. Случайный эксперимент и случайные величины</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5. Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -284,7 +284,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#непрерывные-случайные-величины" id="toc-непрерывные-случайные-величины" class="nav-link" data-scroll-target="#непрерывные-случайные-величины"><span class="header-section-number">5.3.2</span> Непрерывные случайные величины</a></li>
   <li><a href="#характеристики-распределения-случайной-величины" id="toc-характеристики-распределения-случайной-величины" class="nav-link" data-scroll-target="#характеристики-распределения-случайной-величины"><span class="header-section-number">5.3.3</span> Характеристики распределения случайной величины</a></li>
   <li><a href="#некоторые-распределения-случайных-величин" id="toc-некоторые-распределения-случайных-величин" class="nav-link" data-scroll-target="#некоторые-распределения-случайных-величин"><span class="header-section-number">5.3.4</span> Некоторые распределения случайных величин</a></li>
-  <li><a href="#стандартизация" id="toc-стандартизация" class="nav-link" data-scroll-target="#стандартизация"><span class="header-section-number">5.3.5</span> Стандартизация</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -654,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
 <li>случайное событие «выпала любая грань» соответствует множеству <span class="math inline">\(A_{\text{any}} = \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6\}\)</span> — такое событие называется <em>достоверным</em></li>
 </ul>
 <p>Обратите внимание, что <span class="math inline">\(A_{\text{even}} \subset \Omega\)</span>, <span class="math inline">\(A_{\text{odd}} \subset \Omega\)</span>, <span class="math inline">\(A_3 \subset \Omega\)</span>, <span class="math inline">\(A_0 \subset \Omega\)</span> и <span class="math inline">\(A_{\text{any}} \subset \Omega\)</span>, что как раз и утверждает определение случайного события.</p>
-<p>Всё множество случайных событий <span class="math inline">\(A_i\)</span> обозначается<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math inline">\(\mathcal F\)</span>.</p>
+<p>Всё множество случайных событий <span class="math inline">\(A_i\)</span> обозначается<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math inline">\(\mathcal A\)</span>.</p>
 <ul>
 <li>Если пространство элементарных событий <em>конечно</em> или <em>счетно</em>, то оно называется <strong>дискретным</strong>.</li>
 <li>Если пространство элементарных событий <strong>недискретно</strong> и элементарными исходами являются числа, то оно называется <strong>непрерывным</strong>.</li>
@@ -662,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="вероятность" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="вероятность"><span class="header-section-number">5.2.3</span> Вероятность</h3>
-<p>Окей, мы ввели пространство элементарных событий <span class="math inline">\(\Omega\)</span> и множество случайных событий <span class="math inline">\(\mathcal F\)</span>. Однако этого оказывается недостаточно, чтобы работать с результатами случайного эксперимента. Так как исход случайного эксперимента невозможно точно предсказать, необходимо ввести меру, которая будет описывать возможность наступления того или иного события. Такая мера называется <em>вероятностью</em>.</p>
+<p>Окей, мы ввели пространство элементарных событий <span class="math inline">\(\Omega\)</span> и множество случайных событий <span class="math inline">\(\mathcal A\)</span>. Однако этого оказывается недостаточно, чтобы работать с результатами случайного эксперимента. Так как исход случайного эксперимента невозможно точно предсказать, необходимо ввести меру, которая будет описывать возможность наступления того или иного события. Такая мера называется <em>вероятностью</em>.</p>
 <p><strong>Вероятность</strong> (<span class="math inline">\(\mathbb{P}\)</span>)— относительная мера возможности наступления некоторого события в результате случайного эксперимента.</p>
 <section id="классическая-вероятность" class="level4" data-number="5.2.3.1">
 <h4 data-number="5.2.3.1" class="anchored" data-anchor-id="классическая-вероятность"><span class="header-section-number">5.2.3.1</span> Классическая вероятность</h4>
@@ -685,8 +684,8 @@ ul.task-list li input[type="checkbox"] {
 \mathbb{P}(A_i) = \frac{n_i}{n},
 \]</span></p>
 <p>где <span class="math inline">\(n_i\)</span> — количество элементарных исходов, составляюших событие <span class="math inline">\(A_i\)</span>, а <span class="math inline">\(n\)</span> — количество всех возможных элементарных исходов случайного эксперимента. Получается, что вероятность выпадения четного числа очков <span class="math inline">\(\mathbb{P}(A_\text{even}) = \frac{3}{6} = \frac{1}{2}\)</span>, что достаточно логично.</p>
-<p>Такой подход к вероятности называется <strong>классической вероятностью</strong>. Возвращаясь к требованиям модели случайного эксперимента, можно заключить, что такая модель (1) адекватно описывает реальный эксперимент, так как предсказанные вероятности согласуются с наблюдениями, (2) определяет совокупность наблюдаемых результатов случайного эксперимента (<span class="math inline">\(\Omega\)</span> и <span class="math inline">\(\mathcal F\)</span>) и допускает принципиальную возможность осуществления случайного эксперимента сколь угодно большое количество раз.</p>
-<p>Тройку <span class="math inline">\((\Omega, \mathcal F, \mathbb{P})\)</span> называются <strong>вероятностным пространством</strong>.</p>
+<p>Такой подход к вероятности называется <strong>классической вероятностью</strong>. Возвращаясь к требованиям модели случайного эксперимента, можно заключить, что такая модель (1) адекватно описывает реальный эксперимент, так как предсказанные вероятности согласуются с наблюдениями, (2) определяет совокупность наблюдаемых результатов случайного эксперимента (<span class="math inline">\(\Omega\)</span> и <span class="math inline">\(\mathcal A\)</span>) и допускает принципиальную возможность осуществления случайного эксперимента сколь угодно большое количество раз.</p>
+<p>Тройку <span class="math inline">\((\Omega, \mathcal A, \mathbb{P})\)</span> называются <strong>вероятностным пространством</strong>.</p>
 </section>
 <section id="статистическая-вероятность" class="level4" data-number="5.2.3.2">
 <h4 data-number="5.2.3.2" class="anchored" data-anchor-id="статистическая-вероятность"><span class="header-section-number">5.2.3.2</span> Статистическая вероятность</h4>
@@ -774,24 +773,47 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="случайные-величины" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="случайные-величины"><span class="header-section-number">5.3</span> Случайные величины</h2>
-<p>Когда мы первый раз обратились к игральному кубику,мы сказали, что бросание игрального кубика — это <em>случайный эксперимент</em>, а выпавшее число — это <em>случайная величина</em>.</p>
-<p>Случайная величина — это некоторая переменная, значения которой представляют собой численные исходы некоторого случайного эксперимента. Исход бросания кубика — выпавшее число.</p>
+<p>Когда мы первый раз обратились к игральному кубику,мы сказали, что бросание игрального кубика — это <em>случайный эксперимент</em>, а выпавшее число — это <em>случайная величина</em>. Со случайным экспериментом разобрались, приступим к случайным величинам.</p>
+<p><strong>Случайная величина</strong> — это некоторая переменная, значения которой представляют собой численные исходы некоторого случайного эксперимента.</p>
+<p>В частности, исход бросания кубика — выпавшее число, исход фиксации времени реакции в эксперименте — количество миллисекунд (число), исход измерения псиометрического конструкта — суммарный балл по опроснику (число) и т.д.</p>
+<p>Сами исходы случайного эксперимента числами быть в общем случае не обязаны, поэтому формально случайную величину <span class="math inline">\(\xi\)</span> определяют как функцию <span class="math inline">\(y = \xi(\omega)\)</span>, или <span class="math inline">\(\xi: \Omega \rightarrow \mathbb{R}\)</span>, на вероятностном пространстве <span class="math inline">\((\Omega, \mathcal A, \mathbb{P})\)</span>, которая сопоставляет исходам случайного эксперимента некоторые числа.</p>
+<p>Поскольку случайная величина это численное выражения исходов случайного эксперимента, а сами исходы осуществляются с определенными вероятностями, чтобы мочь работать со случайной величиной, необходимо <em>задать</em> эту самую случайную величину, то есть <em>описать её вероятностные свойства</em>. Эти мы далее и займемся.</p>
+<p>В зависимости от того, какое пространство элементарных событий было в случайном эксперименте — дискретное или непрерывное — случайные величины также могут быть дискретными или непрерывными.</p>
 <section id="дискретные-случайные-величины" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="дискретные-случайные-величины"><span class="header-section-number">5.3.1</span> Дискретные случайные величины</h3>
+<p>Случайная величина является <strong>дискретной</strong>, если множество её значений конечно или счётно.</p>
+<p>Функция вероятности</p>
+<p>Функция распределения</p>
 </section>
 <section id="непрерывные-случайные-величины" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="непрерывные-случайные-величины"><span class="header-section-number">5.3.2</span> Непрерывные случайные величины</h3>
+<p>Случайная величина является <strong>непрерывной</strong>, если множество её значений обладает мощностью континуума.</p>
+<p>Функция плотности вероятности</p>
+<p>Функция распределения</p>
 </section>
 <section id="характеристики-распределения-случайной-величины" class="level3" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="характеристики-распределения-случайной-величины"><span class="header-section-number">5.3.3</span> Характеристики распределения случайной величины</h3>
+<p>Математические ожидание</p>
+<p>Дисперсия</p>
+<p>Коэффициент асимметрии</p>
+<p>Коэффициент эксцесса</p>
 </section>
 <section id="некоторые-распределения-случайных-величин" class="level3" data-number="5.3.4">
 <h3 data-number="5.3.4" class="anchored" data-anchor-id="некоторые-распределения-случайных-величин"><span class="header-section-number">5.3.4</span> Некоторые распределения случайных величин</h3>
+<section id="равномерное-распределение" class="level4" data-number="5.3.4.1">
+<h4 data-number="5.3.4.1" class="anchored" data-anchor-id="равномерное-распределение"><span class="header-section-number">5.3.4.1</span> Равномерное распределение</h4>
 </section>
-<section id="стандартизация" class="level3" data-number="5.3.5">
-<h3 data-number="5.3.5" class="anchored" data-anchor-id="стандартизация"><span class="header-section-number">5.3.5</span> Стандартизация</h3>
+<section id="биномиальное-распределение" class="level4" data-number="5.3.4.2">
+<h4 data-number="5.3.4.2" class="anchored" data-anchor-id="биномиальное-распределение"><span class="header-section-number">5.3.4.2</span> Биномиальное распределение</h4>
+</section>
+<section id="распределение-пуассона" class="level4" data-number="5.3.4.3">
+<h4 data-number="5.3.4.3" class="anchored" data-anchor-id="распределение-пуассона"><span class="header-section-number">5.3.4.3</span> Распределение Пуассона</h4>
+</section>
+<section id="нормальное-распределение" class="level4" data-number="5.3.4.4">
+<h4 data-number="5.3.4.4" class="anchored" data-anchor-id="нормальное-распределение"><span class="header-section-number">5.3.4.4</span> Нормальное распределение</h4>
 
 
+</section>
 </section>
 </section>
 <aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
