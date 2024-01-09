@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.510">
 
   <meta name="author" content="Антон Ангельгардт">
-  <title>L5. Введение в статистику. Случайный эксперимент и случайные величины</title>
+  <title>L5 // Введение в статистику. Случайный эксперимент и случайные величины</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #e1e4e8; background-color: #24292e; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #e1e4e8; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #f97583; } /* Attribute */
-    code span.bn { color: #79b8ff; } /* BaseN */
-    code span.bu { color: #f97583; } /* BuiltIn */
-    code span.cf { color: #f97583; } /* ControlFlow */
-    code span.ch { color: #9ecbff; } /* Char */
-    code span.cn { color: #79b8ff; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #f97583; } /* DataType */
-    code span.dv { color: #79b8ff; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
-    code span.fl { color: #79b8ff; } /* Float */
-    code span.fu { color: #b392f0; } /* Function */
-    code span.im { color: #9ecbff; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #f97583; } /* Keyword */
-    code span.op { color: #e1e4e8; } /* Operator */
-    code span.ot { color: #b392f0; } /* Other */
-    code span.pp { color: #f97583; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #79b8ff; } /* SpecialChar */
-    code span.ss { color: #9ecbff; } /* SpecialString */
-    code span.st { color: #9ecbff; } /* String */
-    code span.va { color: #ffab70; } /* Variable */
-    code span.vs { color: #9ecbff; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="s5_files/libs/revealjs/dist/theme/quarto.css">
   <link href="s5_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -392,7 +327,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">L5. Введение в статистику. Случайный эксперимент и случайные величины</h1>
+  <h1 class="title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -403,8 +338,8 @@
 </div>
 
 </section>
-<section id="зачем" class="slide level2">
-<h2>Зачем?</h2>
+<section id="что-будет" class="slide level2">
+<h2>Что будет?</h2>
 <div class="cell">
 <script>
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
@@ -417,92 +352,532 @@ link.href = 'pics/favicon.png';
 </script>
 </div>
 <ul>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
+<li>Генеральная совокупность и выборка</li>
+<li>Ключевые характеристики статистических данных</li>
+<li>Случайный эксперимент и вероятность</li>
+<li>Случайные величины и их распределение</li>
 </ul>
-</section>
-<section id="текст" class="slide level2">
-<h2>Текст</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
 </section>
 <section>
-<section id="раздел" class="title-slide slide level1 center">
-<h1>Раздел</h1>
+<section id="l5.1-введение-в-математическую-статистику" class="title-slide slide level1 center">
+<h1>L5.1 // Введение в математическую статистику</h1>
 
 </section>
-<section id="списки" class="slide level2">
-<h2>Списки</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="что-есть-статистика" class="slide level2">
+<h2>Что есть статистика?</h2>
+<p><strong>Статистика</strong> — это междисциплинарная область знаний, а также практической деятельности, изучающая массовые явления, а также прицнипи и методы работы с данными, характеризующими эти явления.</p>
+</section>
+<section id="генеральная-совокупность-и-выборка" class="slide level2">
+<h2>Генеральная совокупность и выборка</h2>
+<p><strong>Генеральная совокупность (population)</strong> — множество всех [существующих] исследуемых объектов и сведений о них.</p>
+<p><strong>Объем генеральной совокупности</strong> (<span class="math inline">\(N\)</span>) — число единиц, образующих генеральную совокупность.</p>
+<p><strong>Выборка, или выборочная совокупность (sample)</strong> — множество объектов генеральной совокупности, объемом <span class="math inline">\(n\)</span> (<span class="math inline">\(n \ll N\)</span>).</p>
+</section>
+<section id="репрезентативность-выборки" class="slide level2">
+<h2>Репрезентативность выборки</h2>
+<blockquote>
+<p>Garbage in, garbage out.</p>
+</blockquote>
+<p><strong>Репрезентативность</strong> — степень соответствия характеристик выборки характеристикам генеральной совокупности.</p>
+<p><strong>Почему выборка должна быть репрезентативной?</strong></p>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>хотим обобщать результаты нашего исследования, полученные на выборке, на генеральную совокупность</li>
+<li>если выборка нерепрезентативна, то этого сделать нельзя</li>
 </ul>
 </section>
-<section id="код" class="slide level2">
-<h2>Код</h2>
-<p>When you click the <code>Render</code> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-</section>
-<section id="формулы" class="slide level2">
-<h2>Формулы</h2>
-<p><span class="math display">\[
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
-\]</span></p>
-<p><span class="math display">\[
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-\]</span></p>
-</section>
-<section id="колонки" class="slide level2">
-<h2>Колонки</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p>Текст правой колонки</p>
-</div>
-</div>
-</section>
-<section id="колонки-с-картинкой-справа" class="slide level2">
-<h2>Колонки с картинкой справа</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div>
-</div>
-</section>
-<section id="колонки-с-картинкой-слева" class="slide level2">
-<h2>Колонки с картинкой слева</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div><div class="column" style="width:40%;">
-<p>Текст</p>
-</div>
-</div>
-</section>
-<section id="график" class="slide level2">
-<h2>График</h2>
+<section id="как-набрать-репрезентативную-выборку" class="slide level2">
+<h2>Как набрать репрезентативную выборку</h2>
+<ol start="0" type="1">
+<li>Осознать, <strong>кто наша генеральная совокупность</strong>, так как для каждой генеральной совокупности репрезентативная выборка будет своя.</li>
+<li>Понять, <strong>есть ли какая-то группировка, <em>важная для нашего исследования</em>, в нашей генеральной совокупности</strong> — социальная страта, специальность образования, сфера работы, пол / гендер, возрастные группы, регион проживания, семейное положение, что-либо ещё.</li>
+<li>Рассчитать <strong>достаточный объём выборки</strong>. Это не самая простая задача и о ней мы будем говорить отдельно. Пока отметим в назывном порядке, что на объем выборки будут влиять дизайн исследования, изменчивость признака, уровень значимости и размер эффекта [что бы это ни значило].</li>
+<li>Обеспечить <strong>случайное попадание респондентов в выборку</strong>.</li>
+</ol>
+</section></section>
+<section>
+<section id="способы-формирования-репрезентативной-выборки" class="title-slide slide level1 center">
+<h1>Способы формирования репрезентативной выборки</h1>
 
-<img data-src="s5_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>
+</section>
+<section id="простая-случайная-выборка-simple-random-sample" class="slide level2">
+<h2>Простая случайная выборка (simple random sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/simple-random-pop-1.png" width="960" class="r-stretch"></section>
+<section id="простая-случайная-выборка-simple-random-sample-1" class="slide level2">
+<h2>Простая случайная выборка (simple random sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/simple-random-sample-1.png" width="960" class="r-stretch"></section>
+<section id="стратифицированная-выборка-stratified-sample" class="slide level2">
+<h2>Стратифицированная выборка (stratified sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/strat-pop-1.png" width="960" class="r-stretch"></section>
+<section id="стратифицированная-выборка-stratified-sample-1" class="slide level2">
+<h2>Стратифицированная выборка (stratified sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/strat-sample-1.png" width="960" class="r-stretch"></section>
+<section id="стратифицированная-выборка-stratified-sample-2" class="slide level2">
+<h2>Стратифицированная выборка (stratified sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/strat-pop-strata-1.png" width="960" class="r-stretch"></section>
+<section id="групповая-выборка-cluster-sample" class="slide level2">
+<h2>Групповая выборка (cluster sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/cluster-pop-1.png" width="960" class="r-stretch"></section>
+<section id="групповая-выборка-cluster-sample-1" class="slide level2">
+<h2>Групповая выборка (cluster sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/cluster-clusters-1.png" width="960" class="r-stretch"></section>
+<section id="групповая-выборка-cluster-sample-2" class="slide level2">
+<h2>Групповая выборка (cluster sample)</h2>
+
+<img data-src="s5_files/figure-revealjs/cluster-sample-1.png" width="960" class="r-stretch"></section>
+<section id="характетистики-объектов-выборки-и-генеральной-совокупности" class="slide level2">
+<h2>Характетистики объектов выборки и генеральной совокупности</h2>
+<ul>
+<li>Объекты генеральной совокупности — <strong>признаки</strong></li>
+<li>Признаки <em>количественно выражены</em> в <strong>показателях</strong></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Признак</th>
+<th style="text-align: left;">Показатель</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Рабочая память</td>
+<td style="text-align: left;">Объем рабочей памяти</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Нейротизм</td>
+<td style="text-align: left;">Уровень нейротизма по BFI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Доход</td>
+<td style="text-align: left;">Совокупный годовой доход после уплаты налогов</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Когнитивная нагрузка</td>
+<td style="text-align: left;">Уровень когнитивной нагрузки по ЭЭГ-коррелятам</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Доверие к ИИ</td>
+<td style="text-align: left;">Уровень доверия к ИИ по опроснику TAIA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Индивидуализм/коллективизм</td>
+<td style="text-align: left;">Индекс индивидуализма/коллективизма по модели Хофстеде</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="характетистики-объектов-выборки-и-генеральной-совокупности-1" class="slide level2">
+<h2>Характетистики объектов выборки и генеральной совокупности</h2>
+<p><strong>Параметр</strong> (<span class="math inline">\(\theta\)</span>) — относительно постоянная [от одной совокупности к другой] величина, харакретизующая генеральную совокупность по некоторому показателю.</p>
+<p><strong>Величина параметра, который мы изучаем, неизвестна</strong>. И никогда не будет известна.</p>
+<p>Величину параметра мы можем только предсказать с определённой статистической точностью.</p>
+<p>Измеряя что-либо на выборке, мы получаем <strong>выборочную характеристику, или оценку</strong> (<span class="math inline">\(\hat \theta\)</span>) — эмпирический (измеримый) аналог параметра.</p>
+</section>
+<section id="характеристики-статистических-данных" class="slide level2">
+<h2>Характеристики статистических данных</h2>
+<ul>
+<li><p>Выборки между собой имеют право различаться</p></li>
+<li><p>Мы не знаем, что мы получим в результате конкретного измерения на конкретном изучаемом объекте</p></li>
+<li><p>Ни один измерительный инструмент не является совершенным</p></li>
+<li><p><strong>Неопределённость</strong> нам говорит о том, что мы не знаем, что именно мы получим в результате наших измерений для конкретной выборки.</p>
+<ul>
+<li>Отсюда возникнут <em>случайные величины</em>.</li>
+</ul></li>
+<li><p><strong>Вариативность</strong> означает, что наши данные будут различатся от выборки к выборке и от респондента к респонденту</p>
+<ul>
+<li>Отсюда возникнут <em>статистические критерии</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="зачем-нужна-статистика" class="slide level2">
+<h2>Зачем нужна статистика?</h2>
+<p>Статистика помогает нам делать выводы о нашей генеральной совокупности по выборке.</p>
+</section></section>
+<section>
+<section id="l5.2-случайный-эксперимент" class="title-slide slide level1 center">
+<h1>L5.2 // Случайный эксперимент</h1>
+
+</section>
+<section id="dice" class="slide level2">
+<h2>Dice</h2>
+<center>
+<figure>
+<img src="pics/kubik.jpg" style="width: 30%">
+</figure>
+</center>
+<ul>
+<li>Бросание игрального кубика — это <em>случайный эксперимент</em>.</li>
+<li>Выпавшее число — это <em>случайная величина</em>.</li>
+</ul>
+</section>
+<section id="случаный-эксперимент" class="slide level2">
+<h2>Случаный эксперимент</h2>
+<p><strong>Случайный эксперимент</strong> — это математическая модель некоторого реального эксперимента, результат которого <em>невозможно точно предсказать</em>.</p>
+<ul>
+<li>ответ респондента на пункт опросника</li>
+<li>клик на стимул на экране в эксперименте на зрительный поиск</li>
+<li>запись ЭЭГ-активности в конкретный момент времени</li>
+<li>и т.д.</li>
+</ul>
+<blockquote>
+<p><strong>любой акт измерения — это [с точки зрения статистики] случайный эксперимент</strong></p>
+</blockquote>
+</section>
+<section id="модель-случайного-эксперимента" class="slide level2">
+<h2>Модель случайного эксперимента</h2>
+<ul>
+<li>адекватность описания реального эксперимента</li>
+<li>определение совокупности наблюдаемых результатов случайного эксперимента</li>
+<li>принципиальная возможность осуществления эксперимента со случайным исходом сколько угодно большое количество раз</li>
+<li>стохастическая устойчивость относительной частоты для любого наблюдаемого результата</li>
+</ul>
+</section>
+<section id="элементарные-исходы-и-события" class="slide level2">
+<h2>Элементарные исходы и события</h2>
+<p>В случайном эксперименте возможны различные исходы, называемые <strong>элементарными событиями</strong> (<span class="math inline">\(\omega_i\)</span>). Например, в случае упомянутого выше игрального кубика при его бросании возможны шесть элементарных событий (исходов):</p>
+<ul>
+<li><span class="math inline">\(\omega_1\)</span> — выпала грань с одной точкой</li>
+<li><span class="math inline">\(\omega_2\)</span> — выпала грань с двумя точками</li>
+<li>…</li>
+<li><span class="math inline">\(\omega_6\)</span> — выпала грань с шестью точками</li>
+</ul>
+</section>
+<section id="пространство-элементарных-событий" class="slide level2">
+<h2>Пространство элементарных событий</h2>
+<p>Множество всех элементарных событий называется <strong>пространством элементарных событий</strong> (<span class="math inline">\(\Omega\)</span>) случайного эксперимента.</p>
+<p>Для кубика:</p>
+<p><span class="math display">\[
+\Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6\}
+\]</span></p>
+<p>Для <span class="math inline">\(n\)</span> случайных исходов:</p>
+<p><span class="math display">\[
+\Omega = \{\omega_1, \omega_2, \dots, \omega_{n-1}, \omega_n\}
+\]</span></p>
+<p>Для пятибалльной шкалы Ликерта:</p>
+<p><span class="math display">\[
+\Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5\},
+\]</span></p>
+<p>где</p>
+<ul>
+<li><span class="math inline">\(\omega_1\)</span> — дан ответ «1» / «не согласен»</li>
+<li><span class="math inline">\(\omega_2\)</span> — дан ответ «2» / «скорее, не согласен»</li>
+<li><span class="math inline">\(\omega_3\)</span> — дан ответ «3» / «ни то, ни другое»</li>
+<li><span class="math inline">\(\omega_4\)</span> — дан ответ «4» / «скорее, согласен»</li>
+<li><span class="math inline">\(\omega_5\)</span> — дан ответ «5» / «согласен»</li>
+</ul>
+</section>
+<section id="случайные-события" class="slide level2">
+<h2>Случайные события</h2>
+<p><strong>Случайное событие</strong> — любое подмножество множества элементарных событий.</p>
+<p>Для кубика</p>
+<ul>
+<li>«выпало четное число очков» — <span class="math inline">\(A_{\text{even}} = \{\omega_2, \omega_4, \omega_6\}\)</span></li>
+<li>«выпало нечетное число очков» — <span class="math inline">\(A_{\text{odd}} = \{\omega_1, \omega_3, \omega_5\}\)</span></li>
+<li>«выпала грань с тремя точками» — <span class="math inline">\(A_3 = \{\omega_3\}\)</span></li>
+<li>«не выпало ни одной грани» (<em>невозможное</em>) — <span class="math inline">\(A_0 = \varnothing\)</span></li>
+<li>«выпала любая грань» (<em>достоверное</em>) <span class="math inline">\(A_{\text{any}} = \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6\}\)</span></li>
+</ul>
+<p>Всё множество случайных событий <span class="math inline">\(A_i\)</span> обозначается <span class="math inline">\(\mathcal A\)</span>.</p>
+</section>
+<section id="дискретные-и-непрерывные-пространства-элементарных-событий" class="slide level2">
+<h2>Дискретные и непрерывные пространства элементарных событий</h2>
+<ul>
+<li>Если пространство элементарных событий <em>конечно</em> или <em>счетно</em>, то оно называется <strong>дискретным</strong>.</li>
+<li>Если пространство элементарных событий <strong>недискретно</strong> и элементарными исходами являются числа, то оно называется <strong>непрерывным</strong>.</li>
+</ul>
+</section>
+<section id="вероятность" class="slide level2">
+<h2>Вероятность</h2>
+<p><strong>Вероятность</strong> (<span class="math inline">\(\mathbb{P}\)</span>)— относительная мера возможности наступления некоторого события в результате случайного эксперимента.</p>
+</section>
+<section id="классическая-вероятность" class="slide level2">
+<h2>Классическая вероятность</h2>
+<p>Пространство элементарных событий для случайного эксперимента «бросание игрального кубика»:</p>
+<p><span class="math display">\[
+\Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6\}
+\]</span></p>
+<ul>
+<li>вероятность <em>достоверного события</em> должна равняться единице — <span class="math inline">\(\mathbb{P}(\Omega) = 1\)</span></li>
+<li>вероятность <em>невозможного события</em> должна равняться нулю — <span class="math inline">\(\mathbb{P}(A_0) = 0\)</span></li>
+</ul>
+<p>Выпадение каждой грани <em>равновозможно</em> — вероятность выпадения каждой грани:</p>
+<p><span class="math display">\[
+\mathbb{P}(\omega_i) = \frac{1}{n},
+\]</span></p>
+<p>Аналогично можно определить вероятность любого случаного события <span class="math inline">\(A_i\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{P}(A_i) = \frac{n_i}{n},
+\]</span></p>
+<p>Тройку <span class="math inline">\((\Omega, \mathcal A, \mathbb{P})\)</span> называются <strong>вероятностным пространством</strong>.</p>
+</section>
+<section id="статистическая-вероятность" class="slide level2">
+<h2>Статистическая вероятность</h2>
+<p>Какова вероятность встретить динозавра на улице?</p>
+<p>Пространство элементарных событий: <span class="math inline">\(\Omega = \{\omega_1, \omega_2\}\)</span></p>
+<p>Вероятность встретить динозавра на улице равняется</p>
+<p><span class="math display">\[
+\mathbb{P}(\omega_1) = \frac{1}{n} = \frac{1}{2}
+\]</span></p>
+<p>Но ведь это не так.</p>
+</section>
+<section id="статистическая-вероятность-1" class="slide level2">
+<h2>Статистическая вероятность</h2>
+<p><strong>Статистическая вероятность</strong> — предел частоты наблюдений некоторого события при стремлении количества наблюдений к бесконечности [при их независимости и однороности]:</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \lim_{N \rightarrow \infty} \frac{n}{N},
+\]</span></p>
+<p>Подход работает и с игральным кубиком: много бросков <span class="math inline">\(\rightarrow\)</span> вероятность выпадения каждой грани — <span class="math inline">\(\frac{1}{6}\)</span>, при условии, что кубик честный.</p>
+</section>
+<section id="геометрическая-вероятность" class="slide level2">
+<h2>Геометрическая вероятность</h2>
+<p>Возьмем квадрат, в который вписан круг:</p>
+
+<img data-src="s5_files/figure-revealjs/geomprob-square-1.png" width="960" class="r-stretch"></section>
+<section id="геометрическая-вероятность-1" class="slide level2">
+<h2>Геометрическая вероятность</h2>
+<p>Будем бросать в этот квадрат точки случайным образом:</p>
+
+<img data-src="s5_files/figure-revealjs/geomprob-dots-1.png" width="960" class="r-stretch"></section>
+<section id="геометрическая-вероятность-2" class="slide level2">
+<h2>Геометрическая вероятность</h2>
+<p>Вопрос: <strong>какова вероятность, что случайно брошенная точка попадет в круг (событие <span class="math inline">\(A\)</span>)?</strong></p>
+<p>Набросаем больше точек:</p>
+
+<img data-src="s5_files/figure-revealjs/geomprob-incircle-1.png" width="960" class="r-stretch"></section>
+<section id="геометрическая-вероятность-3" class="slide level2">
+<h2>Геометрическая вероятность</h2>
+<p>Вероятность попадания случайно прошенной точки в круг равняется отношению площади круга к площади квадрата, то есть:</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \lim_{N \rightarrow \infty} \frac{n}{N} = \frac{S_\text{circle}}{S_\text{square}}
+\]</span></p>
+<p>Можно расписать точнее, если вспомнить геометрические формулы:</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \frac{S_\text{circle}}{S_\text{square}} = \frac{\pi r^2}{a^2} = \frac{\pi \big(\frac{1}{2}a\big)^2}{a^2} = \frac{1}{4}\pi \approx 0.785
+\]</span></p>
+<p>Такое подход к определению вероятности называется <strong>геометрической вероятностью</strong>.</p>
+</section></section>
+<section>
+<section id="l5.3-случайные-величины" class="title-slide slide level1 center">
+<h1>L5.3 // Случайные величины</h1>
+
+</section>
+<section id="случайная-величина" class="slide level2">
+<h2>Случайная величина</h2>
+<p><strong>Случайная величина</strong> — это некоторая переменная, значения которой представляют собой численные исходы некоторого случайного эксперимента.</p>
+<p>Формально случайная величина <span class="math inline">\(\xi\)</span> — это функция <span class="math inline">\(y = \xi(\omega)\)</span>, или <span class="math inline">\(\xi: \Omega \rightarrow \mathbb{R}\)</span>, на вероятностном пространстве <span class="math inline">\((\Omega, \mathcal A, \mathbb{P})\)</span>, которая сопоставляет исходам случайного эксперимента некоторые числа.</p>
+</section>
+<section id="дискретные-случайные-величины" class="slide level2">
+<h2>Дискретные случайные величины</h2>
+<p>Случайная величина является <strong>дискретной</strong>, если множество её значений конечно или счётно.</p>
+<p>Это позволяет задать случайную величину с помощью <strong>функции вероятности (probability mass function, PMF)</strong>.</p>
+<ul>
+<li>Множеством определения (domain) — множество значений случайной величины</li>
+<li>Множеством значений (range) — <span class="math inline">\([0, 1]\)</span></li>
+<li>Сами значения будут определять вероятность, с которой происходит реализация определенного элементарного исхода соответствующего случайного эксперимента</li>
+</ul>
+</section>
+<section id="снова-кубик" class="slide level2">
+<h2>Снова кубик</h2>
+<ul>
+<li>Множество определения — <span class="math inline">\(\{1, 2, 3, 4, 5, 6\}\)</span></li>
+<li>Каждое значение выпадает с вероятностью <span class="math inline">\(\frac{1}{6}\)</span> — множество значений также известно</li>
+</ul>
+
+<img data-src="s5_files/figure-revealjs/pmf-dice-1.png" width="960" class="r-stretch"><p><span class="math display">\[
+f(x) = \mathbb{P}(X = x),
+\]</span></p>
+</section>
+<section id="свойства-функции-вероятности" class="slide level2">
+<h2>Свойства функции вероятности</h2>
+<ul>
+<li><span class="math inline">\(\forall i \in \mathbb{N}\, f(x_i) \geq 0\)</span></li>
+<li><span class="math inline">\(\sum_{i=1}^\infty f(x_i) = 1\)</span></li>
+</ul>
+</section>
+<section id="функция-распределения" class="slide level2">
+<h2>Функция распределения</h2>
+<p><strong>Функция распределения (cumulative distribution function, CFD)</strong> задается так:</p>
+<p><span class="math display">\[
+F(x) = \mathbb{P}(X &lt; x),
+\]</span></p>
+</section>
+<section id="функция-распределения-и-функция-вероятности" class="slide level2">
+<h2>Функция распределения и функция вероятности</h2>
+<p><span class="math display">\[
+F(x) = \sum_{x' \leq x} f(x')
+\]</span></p>
+
+<img data-src="s5_files/figure-revealjs/cfd-dice-1.png" width="960" class="r-stretch"></section>
+<section id="непрерывные-случайные-величины" class="slide level2">
+<h2>Непрерывные случайные величины</h2>
+<p>Случайная величина является <strong>непрерывной</strong>, если множество её значений обладает мощностью континуума.</p>
+</section>
+<section id="числа-из-отрезка" class="slide level2">
+<h2>Числа из отрезка</h2>
+<ul>
+<li>Набираем числа из отрезка от нуля до единицы <span class="math inline">\([0, 1]\)</span></li>
+<li>Вопрос: с какой вероятностью мы сможем вытащить, скажем, число 0.5? или 0.341? или любое другое?</li>
+</ul>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = \frac{1}{n} = \frac{1}{\infty} = 0
+\]</span></p>
+<p>Или более аккуратно:</p>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = \lim_{n \rightarrow \infty} \frac{1}{n} = 0
+\]</span></p>
+</section>
+<section id="section" class="slide level2">
+<h2>???</h2>
+<p>— Получается, что вероятность вытащить конкретное значение равна нулю? <br> — Да. <br> — Значит ли это, что мы не сможем извлечь из отрезка от 0 до 1 ни одного числа? <br> — Нет.</p>
+</section>
+<section id="особенность-непрерывных-случайных-величин" class="slide level2">
+<h2>Особенность непрерывных случайных величин</h2>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = 0,
+\]</span></p>
+<blockquote>
+<p><strong>вероятность того, что непрерывная случайная величина примет своё конкретное значение, равна нулю.</strong></p>
+</blockquote>
+</section>
+<section id="плотность-вероятности" class="slide level2">
+<h2>Плотность вероятности</h2>
+<p>Функция вероятности для игрального кубика:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s5_files/figure-revealjs/pmf-dice-repeat-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Для нашего отрезка:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s5_files/figure-revealjs/pdf-segment-nolabs-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="дискретные-vs-непрерывные" class="slide level2">
+<h2>Дискретные vs непрерывные</h2>
+<p>Чтобы это понять, дайате сравним два графика ниже:</p>
+
+<img data-src="s5_files/figure-revealjs/pmf-vs-pdf-1.png" width="960" class="r-stretch"></section>
+<section id="непрерывные-случайные-величины-и-интервалы" class="slide level2">
+<h2>Непрерывные случайные величины и интервалы</h2>
+<ul>
+<li>возьмем значения 15 и 20</li>
+<li>немного отступим от них вправо — <span class="math inline">\([15, 15 + \Delta x]\)</span> и <span class="math inline">\([20, 20 + \Delta x]\)</span></li>
+</ul>
+
+<img data-src="s5_files/figure-revealjs/pdf-inetrvals-1.png" width="960" class="r-stretch"></section>
+<section id="плотность-вероятности-1" class="slide level2">
+<h2>Плотность вероятности</h2>
+<p>Формально <strong>плотность вероятности</strong> случайной величины <span class="math inline">\(\xi\)</span> — это числовая фукнция <span class="math inline">\(f(x)\)</span>, отношение <span class="math inline">\(\dfrac{f(x_1)}{f(x_2)}\)</span> значений которой в точках <span class="math inline">\(x_1\)</span> и <span class="math inline">\(x_2\)</span> задаёт отношение вероятностей попадания случайной величины <span class="math inline">\(\xi\)</span> в интервалы <span class="math inline">\([x_1, x_1 + \Delta x]\)</span> и <span class="math inline">\([x_2, x_2 + \Delta x]\)</span> при <span class="math inline">\(\Delta x \rightarrow 0\)</span>.</p>
+<p>График, который мы рассматривали выше, называется графиком <strong>функции плотности вероятности (probability density function, PDF)</strong>.</p>
+</section>
+<section id="плотность-вероятности.-смысл" class="slide level2">
+<h2>Плотность вероятности. Смысл</h2>
+<ul>
+<li>позволяет визуально изучать непрервные случайные величины аналогично дискретным</li>
+<li>мы не можем работать с вероятностями отдельных значений, но можем работать с вероятностями интервалов</li>
+</ul>
+<p>Вероятность попадания значения случайной величины в интервал <span class="math inline">\([a, b]\)</span> определяется как интеграл функции плоности вероятности:</p>
+<p><span class="math display">\[
+\mathbb{P}(a \leq X \leq b) = \int_a^b f(x) dx
+\]</span></p>
+</section>
+<section id="нормирование-площади" class="slide level2">
+<h2>Нормирование площади</h2>
+<p>Необходимо потребовать, чтобы вся площадь под графиком была равна единице:</p>
+<p><span class="math display">\[
+\int_{-\infty}^{+\infty} f(x) dx = 1
+\]</span></p>
+</section>
+<section id="функция-распределения-непрерывной-случайной-величины" class="slide level2">
+<h2>Функция распределения непрерывной случайной величины</h2>
+<p>Из функции плотности вероятности можно построить <strong>функцию распределения непрерывной случайной величины (cumulative distribution function, CDF)</strong> — это будет первообразная от функции плотности:</p>
+<p><span class="math display">\[
+F(x) = \int_{-\infty}^x f(t) dt
+\]</span></p>
+</section>
+<section id="нормальное-распределение" class="slide level2">
+<h2>Нормальное распределение</h2>
+<ul>
+<li>непрерывное распределение</li>
+<li>задается двумя параметрами — <em>математическим ожиданием</em> и <em>дисперсией</em></li>
+</ul>
+<p><span class="math display">\[
+X \thicksim \mathcal N (\mu, \sigma^2),
+\]</span></p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\tfrac{(x - \mu)^2}{2\sigma^2}},
+\]</span></p>
+<p><span class="math inline">\(x \in \mathbb{R}, \, \mu \in \mathbb{R}, \, \sigma \in \mathbb{R}_{&gt;0}\)</span></p>
+</section>
+<section id="форма-нормального-распределения" class="slide level2">
+<h2>Форма нормального распределения</h2>
+
+<img data-src="s5_files/figure-revealjs/norm-dist-1.png" width="960" class="r-stretch"></section>
+<section id="коэффициенты-асимметрии-и-эксцесса" class="slide level2">
+<h2>Коэффициенты асимметрии и эксцесса</h2>
+<ul>
+<li>Любое нормальное распределение симметрично — коэффициент асимметрии равен нулю</li>
+<li>Коэффициент эксцесса зависит от дисперсии
+<ul>
+<li>дисперсия равна единице — коэффициент эксцесса равен нулю</li>
+<li>дисперсия меньше 1 — коэффициент эксцесса положительный</li>
+<li>дисперсия больше 1 — коэффициент эксцесса отрицательный</li>
+</ul></li>
+</ul>
+</section>
+<section id="стандартное-отклонение" class="slide level2">
+<h2>Стандартное отклонение</h2>
+<p><span class="math display">\[
+\sigma = \sqrt{\sigma^2}
+\]</span></p>
+
+<img data-src="s5_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"><ul>
+<li><span class="math inline">\(\mathbb{P}(X \in (\mu - \sigma, \mu + \sigma)) = 0.682\)</span></li>
+<li><span class="math inline">\(\mathbb{P}(X \in (\mu - 2\sigma, \mu + 2\sigma)) = 0.956\)</span></li>
+<li><span class="math inline">\(\mathbb{P}(X \in (\mu - 3\sigma, \mu + 3\sigma)) = 0.998\)</span></li>
+</ul>
+</section>
 <section id="итоги" class="slide level2">
 <h2>Итоги</h2>
 <ul>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
+<li>Выборка должна быть репрезентативной, чтобы исследование не было бессмысленным</li>
+<li>Случайный эксперимент преследует нас всюду</li>
+<li>Дискретные величины просты и понятны</li>
+<li>Непрерывные величины не принимают конкретных значений и требуют плотность</li>
+<li>Нормальное распределение красивое и хорошо изученное</li>
 </ul>
 </section></section>
 <section id="end" class="title-slide slide level1 center">
-<h1>L5. Введение в статистику. Случайный эксперимент и случайные величины</h1>
+<h1>L5 // Введение в статистику. Случайный эксперимент и случайные величины</h1>
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <p>Антон Ангельгардт</p>
