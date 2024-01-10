@@ -31,7 +31,7 @@ function render_analytics() {
   
   ## render dashboard, try-catch
   {
-    quarto render analytics/index.qmd --to html
+    quarto render analytics/index.qmd --to dashboard
   } || {
     return 1
   }
