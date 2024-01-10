@@ -982,11 +982,11 @@ ggplot() +
   geom_line(aes(x = c(2, 3),
                 y = c(26, 26)),
             size = 1, color = "indianred4") +
-  annotate(geom = "text", label = TeX("Δx"), 
+  annotate(geom = "text", label = "Δx", 
            x = 2.5, y = 18, color = "indianred4") +
-  annotate(geom = "text", label = TeX("Δy"), 
+  annotate(geom = "text", label = "Δy", 
            x = 3.2, y = 50, color = "indianred4") +
-  annotate(geom = "text", label = TeX("α"), 
+  annotate(geom = "text", label = "α", 
            x = 2.2, y = 30, color = "indianred4", size = 5) +
   xlim(0, 4) +
   labs(x = "x",
