@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -260,24 +294,24 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#hw6_main" id="toc-hw6_main" class="nav-link active" data-scroll-target="#hw6_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw6-1-title" id="toc-hw6-1-title" class="nav-link" data-scroll-target="#hw6-1-title">#1</a></li>
+  <li><a href="#hw6-2-title" id="toc-hw6-2-title" class="nav-link" data-scroll-target="#hw6-2-title">#2</a></li>
+  <li><a href="#hw6-3-title" id="toc-hw6-3-title" class="nav-link" data-scroll-target="#hw6-3-title">#3</a></li>
+  <li><a href="#hw6-4-title" id="toc-hw6-4-title" class="nav-link" data-scroll-target="#hw6-4-title">#4</a></li>
+  <li><a href="#hw6-5-title" id="toc-hw6-5-title" class="nav-link" data-scroll-target="#hw6-5-title">#5</a></li>
+  <li><a href="#hw6-6-title" id="toc-hw6-6-title" class="nav-link" data-scroll-target="#hw6-6-title">#6</a></li>
+  <li><a href="#hw6-7-title" id="toc-hw6-7-title" class="nav-link" data-scroll-target="#hw6-7-title">#7</a></li>
+  <li><a href="#hw6-8-title" id="toc-hw6-8-title" class="nav-link" data-scroll-target="#hw6-8-title">#8</a></li>
+  <li><a href="#hw6-9-title" id="toc-hw6-9-title" class="nav-link" data-scroll-target="#hw6-9-title">#9</a></li>
+  <li><a href="#hw6-10-title" id="toc-hw6-10-title" class="nav-link" data-scroll-target="#hw6-10-title">#10</a></li>
   </ul></li>
   <li><a href="#hw6_add" id="toc-hw6_add" class="nav-link" data-scroll-target="#hw6_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw6-11-title" id="toc-hw6-11-title" class="nav-link" data-scroll-target="#hw6-11-title">#1</a></li>
+  <li><a href="#hw6-12-title" id="toc-hw6-12-title" class="nav-link" data-scroll-target="#hw6-12-title">#2</a></li>
+  <li><a href="#hw6-13-title" id="toc-hw6-13-title" class="nav-link" data-scroll-target="#hw6-13-title">#3</a></li>
+  <li><a href="#hw6-14-title" id="toc-hw6-14-title" class="nav-link" data-scroll-target="#hw6-14-title">#4</a></li>
+  <li><a href="#hw6-15-title" id="toc-hw6-15-title" class="nav-link" data-scroll-target="#hw6-15-title">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -307,13 +341,16 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>, <span class="at">eval =</span> <span class="cn">FALSE</span>, <span class="at">include =</span> <span class="cn">FALSE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <section id="hw6_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw6_main">Основные задания</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">#1</h3>
+<section id="hw6-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-1-title">#1</h3>
 <p><img id="hw6-1-level" class="level"></p>
 <div id="hw6-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Честный, нечестный, невозможный восьмигранный кубик</p>
 </div>
 <div id="hw6-1-autocheck" class="autocheck">
 <div id="hw6-1-ir" class="input-requirements">
@@ -348,8 +385,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<section id="hw6-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-2-title">#2</h3>
 <p><img id="hw6-2-level" class="level"></p>
 <div id="hw6-2-task" class="task">
 <p>Текст задания.</p>
@@ -388,8 +425,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<section id="hw6-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-3-title">#3</h3>
 <p><img id="hw6-3-level" class="level"></p>
 <div id="hw6-3-task" class="task">
 <p>Текст задания.</p>
@@ -427,8 +464,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="hw6-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-4-title">#4</h3>
 <p><img id="hw6-4-level" class="level"></p>
 <div id="hw6-4-task" class="task">
 <p>Текст задания.</p>
@@ -466,8 +503,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="hw6-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-5-title">#5</h3>
 <p><img id="hw6-5-level" class="level"></p>
 <div id="hw6-5-task" class="task">
 <p>Текст задания.</p>
@@ -505,8 +542,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="hw6-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-6-title">#6</h3>
 <p><img id="hw6-6-level" class="level"></p>
 <div id="hw6-6-task" class="task">
 <p>Текст задания.</p>
@@ -544,8 +581,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="hw6-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-7-title">#7</h3>
 <p><img id="hw6-7-level" class="level"></p>
 <div id="hw6-7-task" class="task">
 <p>Текст задания.</p>
@@ -583,8 +620,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="hw6-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-8-title">#8</h3>
 <p><img id="hw6-8-level" class="level"></p>
 <div id="hw6-8-task" class="task">
 <p>Текст задания.</p>
@@ -622,8 +659,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="hw6-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-9-title">#9</h3>
 <p><img id="hw6-9-level" class="level"></p>
 <div id="hw6-9-task" class="task">
 <p>Текст задания.</p>
@@ -661,8 +698,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="hw6-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-10-title">#10</h3>
 <p><img id="hw6-10-level" class="level"></p>
 <div id="hw6-10-task" class="task">
 <p>Текст задания.</p>
@@ -703,8 +740,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw6_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw6_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="hw6-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-11-title">#1</h3>
 <p><img id="hw6-11-level" class="level"></p>
 <div id="hw6-11-task" class="task">
 <p>Текст задания.</p>
@@ -742,8 +779,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
+<section id="hw6-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-12-title">#2</h3>
 <p><img id="hw6-12-level" class="level"></p>
 <div id="hw6-12-task" class="task">
 <p>Текст задания.</p>
@@ -781,8 +818,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="hw6-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-13-title">#3</h3>
 <p><img id="hw6-13-level" class="level"></p>
 <div id="hw6-13-task" class="task">
 <p>Текст задания.</p>
@@ -820,8 +857,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="hw6-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-14-title">#4</h3>
 <p><img id="hw6-14-level" class="level"></p>
 <div id="hw6-14-task" class="task">
 <p>Текст задания.</p>
@@ -859,8 +896,8 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="hw6-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw6-15-title">#5</h3>
 <p><img id="hw6-15-level" class="level"></p>
 <div id="hw6-15-task" class="task">
 <p>Текст задания.</p>

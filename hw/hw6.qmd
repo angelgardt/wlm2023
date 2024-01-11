@@ -5,15 +5,40 @@
 REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, include = FALSE)
+```
+
+```{r pkgs}
+library(tidyverse)
+```
+
 ## Основные задания {#hw6_main}
 
-### #1
+### #1 {#hw6-1-title}
 
 <img id="hw6-1-level" class="level"/>
 
 ::: {#hw6-1-task .task}
-Текст задания `переменная`.
+
+Честный, нечестный, невозможный восьмигранный кубик
+
 :::
+
+```{r hw6-dice}
+dice1 <- function(n) {
+  sample(1:8, n, replace = TRUE, prob = 1/8)
+}
+dice2 <- function(n) {
+  sample(1:8, n, replace = TRUE, prob = c(1/4, rep(1/12, 6), 1/4))
+}
+dice3 <- function(n) {
+  sample(1:8, n, replace = TRUE, prob = c(1/4, rep(1/5, 6), 1/8))
+}
+
+dice1(100) %>% table()
+```
 
 ::: {#hw6-1-autocheck .autocheck}
 ::: {#hw6-1-ir .input-requirements}
@@ -54,7 +79,7 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </details>
 :::
 
-### #2
+### #2 {#hw6-2-title}
 
 <img id="hw6-2-level" class="level"/>
 
@@ -103,7 +128,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw6-3-title}
 
 <img id="hw6-3-level" class="level"/>
 
@@ -150,7 +175,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw6-4-title}
 
 <img id="hw6-4-level" class="level"/>
 
@@ -197,7 +222,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw6-5-title}
 
 <img id="hw6-5-level" class="level"/>
 
@@ -244,7 +269,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#hw6-6-title}
 
 <img id="hw6-6-level" class="level"/>
 
@@ -291,7 +316,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #7
+### #7 {#hw6-7-title}
 
 <img id="hw6-7-level" class="level"/>
 
@@ -338,7 +363,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#hw6-8-title}
 
 <img id="hw6-8-level" class="level"/>
 
@@ -385,7 +410,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#hw6-9-title}
 
 <img id="hw6-9-level" class="level"/>
 
@@ -432,7 +457,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #10
+### #10 {#hw6-10-title}
 
 <img id="hw6-10-level" class="level"/>
 
@@ -481,7 +506,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ## Дополнительные задания {#hw6_add}
 
-### #1
+### #1 {#hw6-11-title}
 
 <img id="hw6-11-level" class="level"/>
 
@@ -528,7 +553,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #2
+### #2 {#hw6-12-title}
 
 <img id="hw6-12-level" class="level"/>
 
@@ -575,7 +600,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw6-13-title}
 
 <img id="hw6-13-level" class="level"/>
 
@@ -622,7 +647,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw6-14-title}
 
 <img id="hw6-14-level" class="level"/>
 
@@ -669,7 +694,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw6-15-title}
 
 <img id="hw6-15-level" class="level"/>
 
