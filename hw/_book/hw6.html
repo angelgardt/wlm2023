@@ -450,10 +450,11 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 </tr>
 </tbody>
 </table>
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw6/task2.csv">Отсюда</a> можно скачать таблицу в формате CSV.</p>
 </div>
 <div id="hw6-2-autocheck" class="autocheck">
 <div id="hw6-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите получившееся значение математического ожидания.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-2')"></p>
@@ -470,16 +471,32 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Загрузите таблицу, задающую функцию вероятности случайной величины.</li>
+<li>В таблице есть две колонки: <code>x</code> — значение случайной величины, <code>p</code> — вероятность, с которой случайная величина принимает данное значение.</li>
+<li>Используя формулу математического ожидания для дискретной случайной величины, рассчитайте математическое ожидание данной случайной величины.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Что надо сделать?
 </summary>
+<ul>
+<li>Загрузить таблицу, задающую функцию вероятности случайной величины, с помощью функции <code>read_csv()</code> или <code>read.csv()</code>.</li>
+<li>В таблице есть две колонки: <code>x</code> — значение случайной величины, <code>p</code> — вероятность, с которой случайная величина принимает данное значение.</li>
+<li>Математическое ожидание дискретной случайной величины определяется следующим образом:</li>
+</ul>
+<p><span class="math display">\[
+\mathbb{E}(X) = \sum_{i=1}^{n} x_ip_i
+\]</span> * Используя эту формулу и знания о работе с датафреймами, вычислите математическое ожидание.</p>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте рассчеты — в результате вычислений должно получатся целое число.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -488,11 +505,11 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-3-title">#3</h3>
 <p><img id="hw6-3-level" class="level"></p>
 <div id="hw6-3-task" class="task">
-<p>Текст задания.</p>
+<p>Для случайной величины <a href="#hw6-2-title">из предыдущего задания</a> рассчитайте её дисперсию.</p>
 </div>
 <div id="hw6-3-autocheck" class="autocheck">
 <div id="hw6-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите получившееся значение дисперсии.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-3')"></p>
@@ -509,16 +526,34 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Добавьте в загруженную таблицу новую колонку, необходимую для расчета дисперсии.</li>
+<li>Используя формулу дисперсии для дискретной случайной величины, рассчитайте дисперсию данной случайной величины.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Что надо сделать?
 </summary>
+<ul>
+<li>Дисперсия случайной величины определяется следующим образом:</li>
+</ul>
+<p><span class="math display">\[
+\text{var}(X) = \mathbb{E}(X^2) - \big(\mathbb{E}(X)\big)^2
+\]</span></p>
+<ul>
+<li>Необходимо рассчитать значения квадрата случайной величины на основе данных в загруженной таблицы значений <code>x</code></li>
+<li>Используя вероятности <code>p</code> и значения из добавленной колонки, рассчитать математическое ожидание квадрата случайной величины.</li>
+<li>По формуле дисперсии случайной величины рассчитать дисперсию данной случайной величины.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте рассчеты — в результате вычислений должно получатся целое число.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -527,11 +562,16 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-4-title">#4</h3>
 <p><img id="hw6-4-level" class="level"></p>
 <div id="hw6-4-task" class="task">
-<p>Текст задания.</p>
+<p>Данные некоторого эксперимента собираются на трёх различных компьютерах, никак не взаимодействующих друг с другом. Вероятность того, что при записи данных на первом компьютере случится ошибка равна 0.2, на втором — 0.1, на третьем — 0.15.</p>
+<ol type="a">
+<li>Какова вероятность, что при обработке всех данных эксперимента будут обнаружены битые (содержащие ошибки записи) данные со всех трех компьютеров?</li>
+<li>В течение сбора данных эксперимента еа первом компьютере было записано 30 файлов, на втором — 20, на третьем — 35. Сколько битых (содержащих ошибки записи) файлов ожидается к моменту обработки данных?</li>
+</ol>
+<p>Считайте, что наличие ошибок записи зависит только от компьютера, на котором проводится эксперимент. Обработка данных начинается после сбора всех данных эксперимента.</p>
 </div>
 <div id="hw6-4-autocheck" class="autocheck">
 <div id="hw6-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите два числа, разделенные запятой. Первое число — ответ на пункт <em>а</em>, округленный <em>до тысячных</em>, второе — ответ на пункт <em>b</em>, округленный <em>до целого</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-4')"></p>
@@ -566,11 +606,15 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-5-title">#5</h3>
 <p><img id="hw6-5-level" class="level"></p>
 <div id="hw6-5-task" class="task">
-<p>Текст задания.</p>
+<p>Три психолога независимо друг от друга выполняют тестовое задание на позицию продуктового аналитика. У них разная степерь прошаренности в статистике, поэтому вероятности того, что они выполят тестовое задание правильно равны 0.8, 0.7 и 0.6 соответственно.</p>
+<ol type="a">
+<li>Какова вероятность, что никто из кандидатов не выполнит правильно тестовое задание?</li>
+<li>Какова вероятность, что хотя бы один из кандидатов выполнит правильно тестовое задание?</li>
+</ol>
 </div>
 <div id="hw6-5-autocheck" class="autocheck">
 <div id="hw6-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите два числа, разделенные запятой. Первое число — ответ на пункт <em>а</em>, второе — ответ на пункт <em>b</em>. Оба значения округлите <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-5')"></p>
@@ -605,11 +649,11 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-6-title">#6</h3>
 <p><img id="hw6-6-level" class="level"></p>
 <div id="hw6-6-task" class="task">
-<p>Текст задания.</p>
+<p>На специальности 37.03.01 «Психология» в бакалавриате некоего вуза учится 1500 студентов: 520 на первом курсе, 480 на втором и 315 на третьем. Вероятности того, что студент первого, второго, третьего и четвертого курса получил при освоении курса статистики «отлично», равны соответствено 0.6, 0.8, 0.7 и 0.65. В курилке мы случайным образом завели беседу с одним из студентов-психологов. Какова вероятность, что у него в зачетке «отлично» по статистике?</p>
 </div>
 <div id="hw6-6-autocheck" class="autocheck">
 <div id="hw6-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите получившееся значение, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-6')"></p>
@@ -644,11 +688,28 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-7-title">#7</h3>
 <p><img id="hw6-7-level" class="level"></p>
 <div id="hw6-7-task" class="task">
-<p>Текст задания.</p>
+<p>Российский ПЦР-тест на COVID-19 SARS-CoV-2, с помощью которого проводится экспресс-анализ для выявления коронавирусной инфекции, обладает 98% чувствительностью и 98% специфичностью. Будем считать, что в России проживает [согласно грубым оценкам] 146 700 000 человек, из которых в среднем 1 550 000 заражено COVID-19. Вы сдали тест SARS-CoV-2 на коронавирус, который показал положительный результат. Какова вероятность, что вы действительно заражены коронавирусной инфекцией?</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Чувствительность и специфичность
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Чувствительность клинического теста показывает вероятность того, что больной субъект будет идентифицирован как больной.</li>
+<li>Специфичность клинического теста показывает вероятность того, что здоровый субъект будет идентифицирован как здоровый.</li>
+</ul>
+<p>Подробнее можно почитать <a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity">тут</a>.</p>
+</div>
+</div>
 </div>
 <div id="hw6-7-autocheck" class="autocheck">
 <div id="hw6-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите получившееся значение, округленное <em>до сотых</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-7')"></p>
@@ -683,11 +744,14 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-8-title">#8</h3>
 <p><img id="hw6-8-level" class="level"></p>
 <div id="hw6-8-task" class="task">
-<p>Текст задания.</p>
+<p>Какова вероятность, что сотрудник случайно пройдет квалификационный тест, который включает в себя 30 тестовых вопросов с пятью вариантами ответа, если в каждом вопросе только один правильный ответ, а для прохождения теста необходимо набрать минимум 25 правильных ответов?</p>
 </div>
 <div id="hw6-8-autocheck" class="autocheck">
 <div id="hw6-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите получившееся значение в научном формате записи числа (scientific notation).</p>
+<p>Пример, как выглядит научный формат в жизни: <span class="math inline">\(2.3\times10^{-12}\)</span>.</p>
+<p>Пример, как это число вводить в поле ответа: <code>2.3*10^-12</code>.</p>
+<p>Мантиссу (число слева от знака умножения) округлите до сотых. В качестве десятичного разделителя используйте точку. Подробнее о научном формате записи чисел <a href="https://ru.wikipedia.org/wiki/Экспоненциальная_запись">тут</a>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-8')"></p>
@@ -722,11 +786,26 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-9-title">#9</h3>
 <p><img id="hw6-9-level" class="level"></p>
 <div id="hw6-9-task" class="task">
-<p>Текст задания.</p>
+<p>Известно, что время реакции (<span class="math inline">\(X\)</span>, секунды) в некотором эксперименте подчиняется следующему распределению:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw6_files/figure-html/hw6-9-plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Это гамма-распределение (<code>dgamma()</code>) с параметрами <code>shape = 2</code> и <code>rate = 1</code>.</p>
+<ol type="a">
+<li>Найдите вероятность, что время реакции в случайной пробе будет равно 8.28 секунды.</li>
+<li>Найдите вероятность, что время реакции в случайной пробе будет находится в пределах от 2 до 6 секунд.</li>
+</ol>
 </div>
 <div id="hw6-9-autocheck" class="autocheck">
 <div id="hw6-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите два числа, разделенные запятой. Первое число — ответ на пункт <em>а</em>, второе — ответ на пункт <em>b</em>. Оба значения округлите <em>до сотых</em>. В качестве десятичного разделителя используйте точку.</p>
+<p><em>Если в ответе получается целое число, то введите его в формате <code>2.00</code>.</em></p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-9')"></p>
@@ -761,7 +840,7 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-10-title">#10</h3>
 <p><img id="hw6-10-level" class="level"></p>
 <div id="hw6-10-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте функцию плотности вероятности нормального распределения с параметрами <span class="math inline">\(\mu = 8.2\)</span> и <span class="math inline">\(\sigma^2 = 37.21\)</span>.</p>
 </div>
 <div id="hw6-10-autocheck" class="autocheck">
 <div id="hw6-10-ir" class="input-requirements">
