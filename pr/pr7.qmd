@@ -5,6 +5,16 @@
 REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs, eval=TRUE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
 ## Основные задания {#pr7_main}
 
 ### #1 {#pr7-1-title}
@@ -12,7 +22,14 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <img id="pr7-1-level" class="level"/>
 
 ::: {#pr7-1-task .task}
-Текст задания `переменная`.
+
+Какова вероятность, что при броске трехгранного игрального кубика:
+
+a. выпадет число от 1 до 3?
+a. выпадет 1?
+a. выпадет 3?
+a. выпадет 4?
+
 :::
 
 ::: {#pr7-1-autocheck .autocheck}
@@ -59,9 +76,14 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <img id="pr7-2-level" class="level"/>
 
 ::: {#pr7-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Какова вероятность, что при броске четырехгранного игрального кубика выпадет:
+
+a. выпадет 1?
+a. выпадет 1 или 2?
+a. выпадет 1, 2 или 3?
+a. выпадет 2 или 4?
+
 :::
 
 ::: {#pr7-2-autocheck .autocheck}
@@ -155,8 +177,28 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr7-4-level" class="level"/>
 
 ::: {#pr7-4-task .task}
-Текст задания.
+
+По [ссылке](https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData) расположен файл `.RData` с симуляцией двух четырехгранных игральных кубиков `dice1` и `dice2`. Один из них является честным, другой --- нечестным.
+
+Выясните, каким имеено является каким.
+
 :::
+
+```{r pr7-3-dice}
+# rm(list = ls())
+dice1 <- function() {
+  sample(1:4, 1, replace = TRUE)
+}
+dice2 <- function() {
+  sample(1:4, 1, replace = TRUE, prob = c(rep(1, 3), 2))
+}
+save.image("../data/pr7/dice.RData")
+rm(list = ls())
+```
+
+```{r}
+
+```
 
 ::: {#pr7-4-autocheck .autocheck}
 ::: {#pr7-4-ir .input-requirements}
