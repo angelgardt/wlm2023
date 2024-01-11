@@ -341,20 +341,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!--
 REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 -->
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>, <span class="at">eval =</span> <span class="cn">FALSE</span>, <span class="at">include =</span> <span class="cn">FALSE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
 <section id="hw6_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw6_main">Основные задания</h2>
 <section id="hw6-1-title" class="level3">
 <h3 class="anchored" data-anchor-id="hw6-1-title">#1</h3>
 <p><img id="hw6-1-level" class="level"></p>
 <div id="hw6-1-task" class="task">
-<p>Честный, нечестный, невозможный восьмигранный кубик</p>
+<p>По <a href="https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData">ссылке</a> расположен файл <code>.RData</code> с симуляцией трёх восьмигранных игральный кубиков <code>dice1</code>, <code>dice2</code> и <code>dice3</code>. Один из них является честным, другой — нечестным, а третий — невозможным.</p>
+<p>Выясните, какой именно каким является.</p>
+<p>Симуляции представляют собой функции, которые принимают на вход число бросаний кубика <code>n</code> и возвращают вектор длины <code>n</code> с исходами бросаний кубиков.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Загрузить файл <code>.RData</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Для загрузки симуляций в окружение воспользуйтесь следующим кодом:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">url</span>(<span class="st">"link/to/file"</span>))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div id="hw6-1-autocheck" class="autocheck">
 <div id="hw6-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите через запятую номера кубиков в следующем порядке — <em>честный, нечестный, невозможный</em>. Формат ввода <code>1,2,3</code>. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw6-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw6-1')"></p>
@@ -371,16 +395,32 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <summary>
 Как делать задание?
 </summary>
+<ul>
+<li>Загрузите файл <code>.RData</code> с помощью кода из задания — в окружении должны отобразиться три функции <code>dice1</code>, <code>dice2</code> и <code>dice3</code>.</li>
+<li>Используя классический подход к вероятности, рассчитайте ожидаемые вероятности, с которыми будут выпадать значения при бросании честного игрального кубика.</li>
+<li>Используя статистический подход к вероятности, рассчитайте наблюдаемые вероятности, с которыми выпадают значения при бросании каждого из трех игральных кубиков.</li>
+<li>Сопоставьте результаты и определите, какой кубик является честным, какой — нечестным, а какой — невозможным.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Что надо сделать?
 </summary>
+<ul>
+<li>Загрузить файл с симуляциями с помощью кода <code>load(url("https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData"))</code></li>
+<li>Считая, что честный кубик тот, на котором выпадение каждого числа очков равновероятно, рассчитайте ожидаемые вероятности выпадения каждой грани для восьмигранного кубика.</li>
+<li>Используя загруженные функции, проведите достаточно большое количество испытаний каждого кубика — пример использования функции для 100 бросаний первого кубика: <code>dice1(100)</code>.</li>
+<li>Постройте таблицу наблюдаемых частот для каждого кубика и проверьте, совпадают ли полученные результаты с рассчетом классической вероятности.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что вы ввели тольно номера кубиков, то есть ваш ответ соответствует формату <code>1,2,3</code>, а не <code>dice1,dice2,dice3</code></li>
+<li>Проверьте, что вы провели достаточное количество испытаний, чтобы получить точные оценки вероятностей.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -389,8 +429,27 @@ REPLACE ALL hw6 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="hw6-2-title">#2</h3>
 <p><img id="hw6-2-level" class="level"></p>
 <div id="hw6-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Рассчитайте математическое ожидание случайной величины, имеющей следующую функцию вероятности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(2\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(3\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(6\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.1\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="hw6-2-autocheck" class="autocheck">
 <div id="hw6-2-ir" class="input-requirements">
