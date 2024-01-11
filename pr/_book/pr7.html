@@ -71,6 +71,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -326,6 +328,15 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 -->
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
 <section id="pr7_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr7_main">Основные задания</h2>
 <section id="pr7-1-title" class="level3">
@@ -422,7 +433,8 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr7-3-title">#3</h3>
 <p><img id="pr7-3-level" class="level"></p>
 <div id="pr7-3-task" class="task">
-<p>Текст задания.</p>
+<p>По <a href="https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData">ссылке</a> расположен файл <code>.RData</code> с симуляцией двух четырехгранных игральных кубиков <code>dice1</code> и <code>dice2</code>. Один из них является честным, другой — нечестным.</p>
+<p>Выясните, каким именно является каким.</p>
 </div>
 <div id="pr7-3-autocheck" class="autocheck">
 <div id="pr7-3-ir" class="input-requirements">
@@ -461,8 +473,37 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr7-4-title">#4</h3>
 <p><img id="pr7-4-level" class="level"></p>
 <div id="pr7-4-task" class="task">
-<p>По <a href="https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData">ссылке</a> расположен файл <code>.RData</code> с симуляцией двух четырехгранных игральных кубиков <code>dice1</code> и <code>dice2</code>. Один из них является честным, другой — нечестным.</p>
-<p>Выясните, каким имеено является каким.</p>
+<p>Если дискретная случайная величина определена на конечном множестве элементрных исходов, то её функцию вероятности можно задать с помощью таблицы:</p>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(x_1\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(x_2\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(x_3\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(...\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(x_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_1)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_2)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_3)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(...\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_n)\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="pr7-4-autocheck" class="autocheck">
 <div id="pr7-4-ir" class="input-requirements">

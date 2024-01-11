@@ -15,6 +15,8 @@ library(tidyverse)
 theme_set(theme_bw())
 ```
 
+{{< include ../book/_symbols.qmd >}}
+
 ## Основные задания {#pr7_main}
 
 ### #1 {#pr7-1-title}
@@ -130,8 +132,32 @@ a. выпадет 2 или 4?
 <img id="pr7-3-level" class="level"/>
 
 ::: {#pr7-3-task .task}
-Текст задания.
+
+По [ссылке](https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData) расположен файл `.RData` с симуляцией двух четырехгранных игральных кубиков `dice1` и `dice2`. Один из них является честным, другой --- нечестным.
+
+Выясните, каким именно является каким.
+
 :::
+
+```{r pr7-3-dice}
+# rm(list = ls())
+dice1 <- function(n) {
+  sample(1:4, n, replace = TRUE)
+}
+dice2 <- function(n) {
+  sample(1:4, n, replace = TRUE, prob = c(rep(1, 3), 2))
+}
+save.image("../data/pr7/dice.RData")
+rm(list = ls())
+```
+
+```{r}
+load(url("https://github.com/angelgardt/wlm2023/raw/master/data/pr7/dice.RData"))
+
+dice1(10000) %>% table() %>% `/`(10000)
+dice2(10000) %>% table() %>% `/`(10000)
+
+```
 
 ::: {#pr7-3-autocheck .autocheck}
 ::: {#pr7-3-ir .input-requirements}
@@ -178,27 +204,14 @@ a. выпадет 2 или 4?
 
 ::: {#pr7-4-task .task}
 
-По [ссылке](https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData) расположен файл `.RData` с симуляцией двух четырехгранных игральных кубиков `dice1` и `dice2`. Один из них является честным, другой --- нечестным.
+Если дискретная случайная величина определена на конечном множестве элементрных исходов, то её функцию вероятности можно задать с помощью таблицы:
 
-Выясните, каким имеено является каким.
+|$x$|$x_1$|$x_2$|$x_3$|$...$|$x_n$|
+|:---|:---|:---|:---|:---|:---|
+|$\prob(X=x)$|$\prob(X=x_1)$|$\prob(X=x_2)$|$\prob(X=x_3)$|$...$|$\prob(X=x_n)$|
 
 :::
 
-```{r pr7-3-dice}
-# rm(list = ls())
-dice1 <- function() {
-  sample(1:4, 1, replace = TRUE)
-}
-dice2 <- function() {
-  sample(1:4, 1, replace = TRUE, prob = c(rep(1, 3), 2))
-}
-save.image("../data/pr7/dice.RData")
-rm(list = ls())
-```
-
-```{r}
-
-```
 
 ::: {#pr7-4-autocheck .autocheck}
 ::: {#pr7-4-ir .input-requirements}
