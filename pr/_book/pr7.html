@@ -475,17 +475,9 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <div id="pr7-4-task" class="task">
 <p>Если дискретная случайная величина определена на конечном множестве элементрных исходов, то её функцию вероятности можно задать с помощью таблицы:</p>
 <table class="table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(X\)</span></th>
 <th style="text-align: left;"><span class="math inline">\(x_1\)</span></th>
 <th style="text-align: left;"><span class="math inline">\(x_2\)</span></th>
 <th style="text-align: left;"><span class="math inline">\(x_3\)</span></th>
@@ -496,14 +488,43 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_1)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_2)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_3)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(p_1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(p_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(p_3\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(...\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x_n)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(p_n\)</span></td>
 </tr>
 </tbody>
 </table>
+<p>Тогда математическое ожидание такой случайной величины будет определяться следующим образом:</p>
+<p><span class="math display">\[
+\mathbb{E}(X) = \sum_{i=1}^n x_i p_i
+\]</span></p>
+<p>Дана случайная величина <span class="math inline">\(X\)</span> со следующей функцией вероятности:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(2\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(4\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(8\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(9\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{P}(X=x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.15\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(0.25\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Найдите математическое ожидание данной случайное величины.</p>
+<p>Отсюда можно скачать таблицу, задающую функцию вероятности этой случайной величины.</p>
 </div>
 <div id="pr7-4-autocheck" class="autocheck">
 <div id="pr7-4-ir" class="input-requirements">
@@ -542,7 +563,10 @@ REPLACE ALL pr7 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="pr7-5-title">#5</h3>
 <p><img id="pr7-5-level" class="level"></p>
 <div id="pr7-5-task" class="task">
-<p>Текст задания.</p>
+<p>По таблице функции вероятности дискретной случайной величины можно найти и её дисперсию. Она определяется по формуле:</p>
+<p><span class="math display">\[
+\text{var}(X) = \mathbb{E}(X^2) - \big(\mathbb{E}(X)\big)^2
+\]</span></p>
 </div>
 <div id="pr7-5-autocheck" class="autocheck">
 <div id="pr7-5-ir" class="input-requirements">
