@@ -269,6 +269,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#точечные-оценки" id="toc-точечные-оценки" class="nav-link" data-scroll-target="#точечные-оценки"><span class="header-section-number">6.1.1</span> Точечные оценки</a></li>
   <li><a href="#свойства-точечных-оценок" id="toc-свойства-точечных-оценок" class="nav-link" data-scroll-target="#свойства-точечных-оценок"><span class="header-section-number">6.1.2</span> Свойства точечных оценок</a></li>
   <li><a href="#интервальные-оценки" id="toc-интервальные-оценки" class="nav-link" data-scroll-target="#интервальные-оценки"><span class="header-section-number">6.1.3</span> Интервальные оценки</a></li>
+  <li><a href="#интерпретация-доверительного-интервала" id="toc-интерпретация-доверительного-интервала" class="nav-link" data-scroll-target="#интерпретация-доверительного-интервала"><span class="header-section-number">6.1.4</span> Интерпретация доверительного интервала</a></li>
   </ul></li>
   <li><a href="#тестирование-гипотез" id="toc-тестирование-гипотез" class="nav-link" data-scroll-target="#тестирование-гипотез"><span class="header-section-number">6.2</span> Тестирование гипотез</a>
   <ul class="collapse">
@@ -331,9 +332,6 @@ ul.task-list li input[type="checkbox"] {
 <p>В итоге что мы имеем: так как нам не доступны <em>истинные</em> значения параметров, придётся использовать <em>оценки</em> этих параметров. Возникает вопрос: как нам получить эти оценки? и какими свойствами они должны обладать, чтобы хорошо отражать параметры генеральной совокупности?</p>
 <section id="точечные-оценки" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="точечные-оценки"><span class="header-section-number">6.1.1</span> Точечные оценки</h3>
-<div class="lab-chapter lab-junior">
-
-</div>
 <p>Пусть у нас есть некоторый параметр генеральной совокупности <span class="math inline">\(\theta\)</span>. Его аналогом на выборочной совокупности является его <em>точечная оценка</em> <span class="math inline">\(\hat \theta\)</span>. Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, является функцией — по факту, случайной величиной —- от результатов наблюдений:</p>
 <p><span class="math display">\[
 \hat \theta = \hat \theta (\mathbf{x}), \; \mathbf{x} = \pmatrix{ x_1 &amp; x_2 &amp; \dots &amp; x_n}
@@ -362,9 +360,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Наблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом <em>неопределённость и вариация</em>.</p>
 <section id="метод-моментов" class="level4" data-number="6.1.1.1">
 <h4 data-number="6.1.1.1" class="anchored" data-anchor-id="метод-моментов"><span class="header-section-number">6.1.1.1</span> Метод моментов</h4>
-<div class="lab-chapter lab-junior">
-
-</div>
 <p>Чтобы получить точечные оценки параметров, используются разные методы. Метод зависит от того, какой параметр мы хотим оценить, а также с какой моделью мы сейчас работаем. Сейчас мы познакомимся с самым простым — <strong>методом моментов</strong>.</p>
 <p>Слово «момент» обычно вызывает странные ощущения — какой момент? момент чего? что в этот момент случается? Тут надо отпустить привычное понимание слово «момент» как некоторого момента времени и принять тот факт, что «момент случайной величины» — а именно о нём мы говорим — это просто характеристика распределения случайной величины. То есть математическое ожидание — это момент распределения случайной величины, дисперсия — это момент распределения случайной величины.</p>
 <p>В методе моментов есть три этапа:</p>
@@ -384,51 +379,134 @@ ul.task-list li input[type="checkbox"] {
 <ol start="3" type="1">
 <li>истинный момент заменяется на выборочный — получается оценка.</li>
 </ol>
-<p>Для примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается <a href="#normal_distribution">нормальному закону</a>. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:</p>
+<p>Вернемся к IQ. Эквивален среднего значения в случае генерально совокупности является математическое ожидание, поэтому значение параметра <span class="math inline">\(\mu\)</span> определяется как</p>
 <p><span class="math display">\[
 \mu = \mathbb{E}X
 \]</span></p>
 <p>Выборочным аналогом математического ожидания является выборочное среднее:</p>
 <p><span class="math display">\[
-\hat \mu = \frac{1}{n} \sum_{i=1}^n x_i
+\hat \mu = \frac{1}{n} \sum_{i=1}^n x_i = \bar x
 \]</span></p>
-<p>И это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)</p>
-</section>
-<section id="метод-максимального-правдоподобия" class="level4" data-number="6.1.1.2">
-<h4 data-number="6.1.1.2" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">6.1.1.2</span> Метод максимального правдоподобия</h4>
-<div class="lab-chapter lab-middle">
-
-</div>
-</section>
-<section id="bootstrap" class="level4" data-number="6.1.1.3">
-<h4 data-number="6.1.1.3" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">6.1.1.3</span> Bootstrap</h4>
-<div class="lab-chapter lab-middle">
-
-</div>
+<p>И это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает.</p>
 </section>
 </section>
 <section id="свойства-точечных-оценок" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="свойства-точечных-оценок"><span class="header-section-number">6.1.2</span> Свойства точечных оценок</h3>
-<div class="lab-chapter lab-middle">
-
+<p>Так как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам, которые будут отражать «хорошесть» точечной оценки. Таких требования три: <em>несмещённость</em>, <em>состоятельность</em> и <em>эффективность</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Так как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: <em>несмещённость</em>, <em>состоятельность</em> и <em>эффективность</em>.</p>
+<div class="callout-title-container flex-fill">
+Свойства матемаческого ожидания
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>При обсуждении свойств точечных оценок нам потребуются два свойства математического ожидания:</p>
+<ol type="1">
+<li>Математическое ожидание суммы независимых случайных величины равно сумме их математических ожиданий</li>
+</ol>
+<p><span class="math display">\[
+\mathbb{E}(X_1 + X_2) = \mathbb{E}X_1 + \mathbb{E}X_2
+\]</span></p>
+<ol start="2" type="1">
+<li>Константу можно выносить за знак математического ожидания</li>
+</ol>
+<p><span class="math display">\[
+\mathbb{E}(cX) = c \mathbb{E}X
+\]</span></p>
+</div>
+</div>
 <section id="несмещенность" class="level4" data-number="6.1.2.1">
 <h4 data-number="6.1.2.1" class="anchored" data-anchor-id="несмещенность"><span class="header-section-number">6.1.2.1</span> Несмещенность</h4>
-<div class="lab-chapter lab-middle">
-
-</div>
-<p><strong>Несмещённость</strong> выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.</p>
+<p><strong>Несмещённость</strong> выражает следующую идею: когда мы постоянно используем выборочную оценку нашего параметра на выборках некоторого объема, мы <em>в среднем</em> не ошибаемся в оценке параметра.</p>
+<p>То есть, конечно, при каждой конкретной оценке нашего параметра на отдельной выборке мы будем совершать ошибку, однако <em>в среднем</em> при многократном повторении измерений и получения оценки мы будем попадать точно в цель — в параметр генеральной совокупности.</p>
 <p><span class="math display">\[
-\forall n \; \mathbb{E} \hat \theta = \theta, \quad (\mathbb{E}\hat \theta - \theta) \rightarrow 0,
-\]</span> где <span class="math inline">\(n\)</span> — объём выборки, <span class="math inline">\((\mathbb{E}\hat \theta - \theta)\)</span> — смещение.</p>
-<p>Слева представлено требование <em>несмещённости при любом объёме выборки</em>, а справа — <em>ассимптотической несмещённости</em>.</p>
+\forall n \; \mathbb{E} \hat \theta = \theta
+\]</span> где <span class="math inline">\(n\)</span> — объём выборок.</p>
+<p>Выше мы рассматривали выборочное среднее как оценку математического ожидания генеральной совокупности. Давайте проверим, является ли такая оценка несмещнной. Для этого нам надо проверить, что выполняется следующее соотношение:</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar x) = \mu
+\]</span></p>
+<p>Пусть у нас есть <span class="math inline">\(n\)</span> выборок, на которых измерена переменная <span class="math inline">\(X\)</span> — <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(X_n\)</span>. Эти выборки пришли из одной генеральной совокупности, то есть <span class="math inline">\(X_1, X_2, \dots ,X_n \overset{\text{i.i.d}}{\thicksim} (\mu, \sigma^2)\)</span>. Запись <span class="math inline">\(\text{i.i.d.}\)</span> означает «независимые одинаково распределенные» (independent identically distributed).</p>
+<p>Тогда получается следующее:</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar X) = \mathbb{E}\Big( \frac{1}{n} (X_1 + X_2 + \dots + X_n) \Big) = \frac{1}{n} \Big( \mathbb{E}(X_1) + \mathbb{E}(X_2) + \dots + \mathbb{E}(X_n) \Big)
+\]</span></p>
+<p>Поскольку все <span class="math inline">\(X_i\)</span> пришли из одного и того же распределения <span class="math inline">\((\mu, \sigma^2)\)</span>, то <span class="math inline">\(\forall i \, \mathbb{E}(x_i) = \mu\)</span>. Тогда</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar X) = \frac{1}{n} \cdot n \cdot \mu = \mu
+\]</span></p>
+<p>А это ровно то, что утверждается в качестве несмещенности. Таким образом, среднее является несмещенной оценкой математического ожидания.</p>
+<p>Кроме среднего, у нас есть еще дисперсия, и мы её тоже всегда оцениванием в ходе анализа данных. На практике мы говорили, что дисперсия случайной величины определяется как <span class="math inline">\(\text{var}(X) = \mathbb{E}(X^2) - \big( \mathbb{E}X\big)^2\)</span>. Эта формула удобна для расчетов, однако дисперсию можно определить и иначе:</p>
+<p><span class="math display">\[
+\text{var}(X) = \mathbb{E}(X - \mathbb{E}X)^2 = \frac{\sum_{i=1}^n(\mu - x_i)^2}{n}
+\]</span></p>
+<p>Две формулы, кстати, эквивалентны друг другу и одна выводится из другой:</p>
+<p><span class="math display">\[
+\begin{split}
+\text{var}(x) &amp;= \mathbb{E}\big( (X - \mathbb{E}X )^2 \big) = \mathbb{E}\big( X^2 - 2 X \mathbb{E}X + (\mathbb{E}X)^2 \big) = \\
+&amp; = \mathbb{E}(X^2) - 2 \mathbb{E}X \mathbb{E}X + (\mathbb{E}X)^2 = \mathbb{E}(X^2) - 2 (\mathbb{E}X^2) + (\mathbb{E}X)^2 = \\
+&amp; = \mathbb{E}(X^2) - (\mathbb{E}X^2)
+\end{split}
+\]</span></p>
+<p>Итак, в качестве оценки дисперсии, кажется, можно использоваться <span class="math inline">\(\text{var}(X) = \frac{\sum_{i=1}^n(\mu - x_i)^2}{n}\)</span>, однако из столкновения с реальностью мы знаем, что в знаменателе формулы, которую мы реально используем стоит <span class="math inline">\(n-1\)</span>. Почему?</p>
+<p>Проверим оценку дисперсии на несмещенность. Нам нужно показать, что <span class="math inline">\(\mathbb{E}(\hat \sigma^2) = \sigma^2\)</span>, тогда мы сможем сказать, что оценка является несмещенной. По формуле получается, что</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2) &amp; = \mathbb{E}\Big( \mathbb{E}(X^2) - (\mathbb{E}X)^2 \Big) = \\
+&amp; = \mathbb{E}\Big( \overline{X^2} - \bar X^2\Big) = \mathbb{E}(\overline{X^2}) - \mathbb{E}(\bar X^2)
+\end{split}
+\]</span></p>
+<p>Рассмотрим сначала <span class="math inline">\(\mathbb{E}(\overline{X^2})\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{E}(\overline{X^2}) = \mathbb{E}\Big( \frac{X_1^2 + X_2^2 + \dots + X_n^2}{n} \Big) = \frac{1}{n} \Big( \mathbb{E}X_1^2 + \mathbb{E}X_2^2 + \dots + \mathbb{E}X_n^2\Big)
+\]</span></p>
+<p>Так как все наблюдения приходят из одного и того же распределения, то все математические ожидания будут равны, поэтому:</p>
+<p><span class="math display">\[
+\mathbb{E}(\overline{X^2}) = \frac{1}{n} \cdot n \cdot \mathbb{E}(X_i^2) = \mathbb{E}(X_i^2)
+\]</span></p>
+<p>Теперь <span class="math inline">\(\mathbb{E}(\bar X^2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\bar X^2) &amp;= \mathbb{E}\Big( \frac{X_1 + X_2 + \dots + X_n}{n} \Big)^2 = \\
+&amp; = \frac{1}{n^2} \mathbb{E}(X_1 + X_2 + \dots + X_n)^2 = \\
+&amp; = \frac{1}{n^2} \mathbb{E}(X_1^2 + X_2^2 + \dots X_n^2 + 2X_1X_2 + \dots + 2X_{n-1}X_n) = \\
+&amp; = \frac{1}{n^2} \mathbb{E}\Big( (X_1^2 + X_2^2 + \dots X_n^2) + (2X_1X_2 + \dots + 2X_{n-1}X_n) \Big)
+\end{split}
+\]</span></p>
+<p>Внутри скобок получается два слагаемых: если с <span class="math inline">\(X_i^2\)</span> все понятно — выше мы уже с ним сталкивались, то со вторым надо разбираться, а именно, подсчитать, сколько попарных произведений случайных величин у нас будет. Их будет <span class="math inline">\(C_n^2 = \frac{n(n-1)}{2}\)</span>. Поэтому если мы будем раскрывать скобки, то получим слоедующее:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\bar X^2) &amp; = \frac{1}{n^2} \cdot n \cdot \mathbb{E}(X_i^2) + \frac{1}{n^2} \cdot \frac{n(n-1)}{2} \cdot 2 \mathbb{E}(X_iX_j) = \\
+&amp; = \frac{1}{n} \mathbb{E}(X_i^2) + \frac{n-1}{n} (\mathbb{E}X_i)^2
+\end{split}
+\]</span></p>
+<p>Теперь соберем две части вместе:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2) &amp; = \mathbb{E}(\overline{X^2}) - \mathbb{E}(\bar X^2) = \\
+&amp; = \mathbb{E}(X_i^2) - \frac{1}{n} \mathbb{E}(X_i^2) - \frac{n-1}{n} (\mathbb{E}X_i)^2 = \\
+&amp; = \frac{n}{n} \mathbb{E}(X_i^2) - \frac{1}{n} \mathbb{E}(X_i^2) - \frac{n-1}{n} (\mathbb{E}X_i)^2 = \\
+&amp; = \frac{n-1}{n} \Big ( \mathbb{E}(X_i^2) - (\mathbb{E}X_i)^2 \Big) = \\
+&amp; = \frac{n-1}{n} \sigma^2
+\end{split}
+\]</span></p>
+<p>Получается, что математическое ожидание нашей оценки оказывается равно не самому значению интересующего нас параметра, а значению параметра, умноженному на некоторое число <span class="math inline">\(\frac{n-1}{b}\)</span>, то есть оценка является смещенной. Именно поэтому для расчета дисперсии на выборке используется <em>выборочная, или исправленная, дисперсия</em>.</p>
+<p>Как она исправляется? Если у нас оценка дисперсии отличается от значения параметра в <span class="math inline">\(\frac{n-1}{n}\)</span> раз, то надо домножить оценку на <span class="math inline">\(\frac{n}{n-1}\)</span>:</p>
+<p><span class="math display">\[
+s^2 = \frac{n}{n-1} \cdot \hat \sigma^2 = \frac{n}{n-1} \cdot \frac{1}{n} \sum (x_i - \bar x)^2 = \frac{1}{n-1} \sum (x_i - \bar x)^2
+\]</span></p>
+<p>И вот мы получили знакомую нам формулу для расчета выборочной дисперсии. Такая оценка является несмещенной.</p>
+<p>Иногда несмещенность от оценки бывает потребовать сложно, тогда можно ограничиться <strong>ассимптотической несмещенностью</strong>:</p>
+<p><span class="math display">\[
+(\mathbb{E}\hat \theta - \theta) \underset{n \rightarrow \infty}{\rightarrow} 0,
+\]</span></p>
+<p>где <span class="math inline">\((\mathbb{E}\hat \theta - \theta)\)</span> — смещение. Ассимптотическая несмещенность требует, чтобы математическое ожидание нашей оценки приближалось к значению параметра с ростом объема выборки.</p>
 </section>
 <section id="состоятельность" class="level4" data-number="6.1.2.2">
 <h4 data-number="6.1.2.2" class="anchored" data-anchor-id="состоятельность"><span class="header-section-number">6.1.2.2</span> Состоятельность</h4>
-<div class="lab-chapter lab-middle">
-
-</div>
 <p>Математически <strong>состоятельность</strong> определяется следующим образом:</p>
 <p><span class="math display">\[
 \lim_{n \rightarrow \infty} \mathrm{P}(|\hat \theta - \theta| &lt; \varepsilon) = 1, \, \varepsilon &gt; 0
@@ -437,28 +515,27 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="эффективность" class="level4" data-number="6.1.2.3">
 <h4 data-number="6.1.2.3" class="anchored" data-anchor-id="эффективность"><span class="header-section-number">6.1.2.3</span> Эффективность</h4>
-<div class="lab-chapter lab-middle">
-
-</div>
 <p>Эффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть <em>дисперсия</em>. Чтобы оценка была <strong>эффективна</strong>, её дисперсия должна быть минимальной:</p>
 <p><span class="math display">\[
 \sigma^2_{\hat \theta} = \min
 \]</span></p>
-<p>Пример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.</p>
+</section>
+<section id="метод-максимального-правдоподобия" class="level4" data-number="6.1.2.4">
+<h4 data-number="6.1.2.4" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">6.1.2.4</span> Метод максимального правдоподобия</h4>
+</section>
+<section id="bootstrap" class="level4" data-number="6.1.2.5">
+<h4 data-number="6.1.2.5" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">6.1.2.5</span> Bootstrap</h4>
 </section>
 </section>
 <section id="интервальные-оценки" class="level3" data-number="6.1.3">
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="интервальные-оценки"><span class="header-section-number">6.1.3</span> Интервальные оценки</h3>
-<div class="lab-chapter lab-junior">
-
-</div>
 <p>Кроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как <strong>надёжность</strong>:</p>
 <p><span class="math display">\[
-\gamma = \mathrm{P}(\theta_\min &lt; \theta &lt; \theta_\max)
+\gamma = \mathbb{P}(\theta_\min &lt; \theta &lt; \theta_\max)
 \]</span></p>
 <p>Такая форма оценки называется <strong>интервальной оценкой параметра</strong>, так как мы указываем <em>интервал</em>, в котором находится истинное значение с определённой вероятностью.</p>
 <p>Такая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.</p>
-<p>Значение надежности <span class="math inline">\(\gamma\)</span> может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.</p>
+<p>Значение надежности <span class="math inline">\(\gamma\)</span> может быть выбрано произвольно, но обычно оно близко к единице. Однако необходимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.</p>
 <section id="стандартная-ошибка" class="level4" data-number="6.1.3.1">
 <h4 data-number="6.1.3.1" class="anchored" data-anchor-id="стандартная-ошибка"><span class="header-section-number">6.1.3.1</span> Стандартная ошибка</h4>
 <div class="lab-chapter lab-junior">
@@ -499,7 +576,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math inline">\(theta_\min\)</span> и <span class="math inline">\(\theta_\max\)</span> — границы доверительного интервала, <span class="math inline">\(\gamma\)</span> — доверительная вероятность. На практике её значение чаще всего принимается равным <span class="math inline">\(0.95\)</span>.</p>
 <p><strong>Алгоритм определения интервальной оценки</strong> следующий:</p>
 <ol type="1">
-<li>Найсти статистику <span class="math inline">\(\zeta(\theta)\)</span>, связанную с оцениваниемым параметром, закон распределения которой известен <span class="math inline">\(f(\zeta)\)</span>.</li>
+<li>Найти статистику <span class="math inline">\(\zeta(\theta)\)</span>, связанную с оцениваниемым параметром, закон распределения которой известен <span class="math inline">\(f(\zeta)\)</span>.</li>
 <li>Определить значения <span class="math inline">\(\zeta_\min\)</span> и <span class="math inline">\(\zeta_\max\)</span>, в пределах которых статистика находится с вероятностью <span class="math inline">\(\gamma\)</span>.</li>
 <li>Зная связь <span class="math inline">\(\zeta(\theta)\)</span> перейти к границам <span class="math inline">\(\theta_\min\)</span> и <span class="math inline">\(\theta_\max\)</span>.</li>
 </ol>
@@ -509,7 +586,7 @@ ul.task-list li input[type="checkbox"] {
 t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 \]</span></p>
 <p>где <span class="math inline">\(t\)</span> — значение статистики, <span class="math inline">\(\bar x\)</span> — выборочное среднее, <span class="math inline">\(\mu\)</span> — генеральное среднее, <span class="math inline">\(s\)</span> — выборочное стандартное отклонение, <span class="math inline">\(n\)</span> — объём выборки.</p>
-<p>Известен ли закон её распредления? Да. Эта статистика подчинается <span class="math inline">\(t\)</span>-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:</p>
+<p>Известен ли закон её распредления? Да. Эта статистика подчиняется <span class="math inline">\(t\)</span>-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:</p>
 <center>
 <img src="img/student_pdf.jpg">
 </center>
@@ -527,8 +604,10 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 <img src="img/mean_ci_graph.jpeg">
 </center>
 <p>Видим на ней наш доверительный интвервал и значения <span class="math inline">\(t_\alpha\)</span> и <span class="math inline">\(-t_\alpha\)</span>. Сама <span class="math inline">\(\alpha\)</span> обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.</p>
-<p>Хорошо, что весь этот ужас в R скрыт под капотом:</p>
 </section>
+</section>
+<section id="интерпретация-доверительного-интервала" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="интерпретация-доверительного-интервала"><span class="header-section-number">6.1.4</span> Интерпретация доверительного интервала</h3>
 </section>
 </section>
 <section id="тестирование-гипотез" class="level2" data-number="6.2">
@@ -608,7 +687,7 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 <p>Ошибки — это нехорошо, они нас не устраивают. Надо каким-то образом их контролировать.</p>
 <ul>
 <li><strong>Ошибка I рода</strong> контролируется достаточно просто. Так как мы <em>нашли</em> закономерность, которую искали, мы можем посчитать вероятность, с которой потенциально ошиблись. А собственно контролировать ошибку мы будем с помощью <strong>уровня значимости</strong> <span class="math inline">\(\alpha\)</span>, который <em>выбирается до начала процедуры тестирования гипотезы</em>. Он и задает вероятность, с который мы позволяем себе ошибиться — отклонить нулевую гипотезу, при условии, что она верна.</li>
-<li><strong>Ошибку II рода</strong> контролировать сложнее, так как мы <em>не нашли</em> закономерность, которую искали. Нам нужна какая-то метрика, которая позволит сказать, что мы сделали всё возможное для того, чтобы обнаружить искомую закономерность. Вероятность ошибки II рода обозначается <span class="math inline">\(\beta\)</span> — тогда вероятность того, что мы не совершили ошибку II рода будет <span class="math inline">\(1 - \beta\)</span>. Эта величина называется <a href="#stats-testing-effect-size"><strong>статистической мощностью</strong></a>, и она связана с <a href="#stats-testing-effect-size"><em>размером эффекта</em></a> и <em>объемом выборки</em>. Статистическую мощность можно рассчитать как до проведения статистического анализа для расчета требуемого объема выборки — так и после — для определения достигнутой статистической мощности.</li>
+<li><strong>Ошибку II рода</strong> контролировать сложнее, так как мы <em>не нашли</em> закономерность, которую искали. Нам нужна какая-то метрика, которая позволит сказать, что мы сделали всё возможное для того, чтобы обнаружить искомую закономерность. Вероятность ошибки II рода обозначается <span class="math inline">\(\beta\)</span> — тогда вероятность того, что мы не совершили ошибку II рода будет <span class="math inline">\(1 - \beta\)</span>. Эта величина называется <strong>статистической мощностью</strong>, и она связана с <em>размером эффекта</em> и <em>объемом выборки</em>. Статистическую мощность рассчитывают до проведения статистического анализа — она помогает определить требуемый объема выборки.</li>
 </ul>
 <p>Соберем все обозначения в единую табличку<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
 <table class="table">
@@ -638,42 +717,13 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 </tbody>
 </table>
 <p>Уровень значимости <span class="math inline">\(\alpha\)</span> <strong>выбирается близким к нулю</strong> — всем знакомо конвенциональное значение <span class="math inline">\(0.05\)</span>. Вообще <span class="math inline">\(\alpha\)</span> можно выбрать сколь угодно малым, однако при выборе уровня значимости руководствуются принципом разумной достаточности, так как если устремить <span class="math inline">\(\alpha\)</span> к нулю, то устремиться к нулю и вероятность отклонения нулевой гипотезы.</p>
-<div class="advanced">
-<details>
-<summary>
-<em>Математические руны</em>
-</summary>
-<span class="math display">\[
-\mathrm P (\hat H_1) = \mathrm P (\hat H_1 | H_0) \cdot \mathrm P (H_0) = \alpha \cdot \mathrm P(H_0)
-\]</span>
-</details>
-</div>
-<p>Достаточной статистической мощностью считается <span class="math inline">\(0.8\)</span>. Аналогично, устремляя мощность к единице (<span class="math inline">\((1 - \beta) \rightarrow 1 \Rightarrow \beta \rightarrow 0\)</span>), мы устремляем вероятность не отклонения нулевой гипотезы к нулю:</p>
-<div class="advanced">
-<details>
-<summary>
-<em>Ещё математические руны</em>
-</summary>
-<span class="math display">\[
-\mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_1) \cdot \mathrm P (H_1) = \beta \cdot \mathrm P (H_1)
-\]</span>
-</details>
-</div>
-<p>Необходимо также помнить, что ошибки первого и второго рода связаны между собой так, что</p>
 <p><span class="math display">\[
-\alpha \rightarrow 0 \Rightarrow \beta \rightarrow 1
+\mathrm P (\hat H_1) = \mathrm P (\hat H_1 | H_0) \cdot \mathrm P (H_0) = \alpha \cdot \mathrm P(H_0)
 \]</span></p>
-<div class="advanced">
-<details>
-<summary>
-<em>Опять математические руны</em>
-</summary>
-<span class="math display">\[
-\beta \cdot \mathrm P (H_1) = \mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_0) \cdot \mathrm P (H_0) \Rightarrow \beta = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot \mathrm P(\hat H_0 | H_0) \\
-\beta = \frac{1}{\mathrm P (H_1)} \cdot \big (1 - \mathrm P (H_1 | H_0)\big) = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot (1 - \alpha)
-\]</span>
-</details>
-</div>
+<p>Достаточной статистической мощностью считается <span class="math inline">\(0.8\)</span>. Аналогично, устремляя мощность к единице (<span class="math inline">\((1 - \beta) \rightarrow 1 \Rightarrow \beta \rightarrow 0\)</span>), мы устремляем вероятность не отклонения нулевой гипотезы к нулю:</p>
+<p><span class="math display">\[
+\mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_1) \cdot \mathrm P (H_1) = \beta \cdot \mathrm P (H_1)
+\]</span></p>
 <section id="stats-testing-asymmetry" class="level4" data-number="6.2.3.1">
 <h4 data-number="6.2.3.1" class="anchored" data-anchor-id="stats-testing-asymmetry"><span class="header-section-number">6.2.3.1</span> Асимметрия статистического вывода</h4>
 <p>Выше мы сказали, что для проверки гипотезы нужны две вещи:</p>
@@ -697,6 +747,17 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 </section>
 <section id="stats-testing-errors-connection" class="level4" data-number="6.2.3.2">
 <h4 data-number="6.2.3.2" class="anchored" data-anchor-id="stats-testing-errors-connection"><span class="header-section-number">6.2.3.2</span> Связь ошибки первого и второго рода</h4>
+<p>Необходимо также помнить, что ошибки первого и второго рода связаны между собой так, что</p>
+<p><span class="math display">\[
+\alpha \rightarrow 0 \Rightarrow \beta \rightarrow 1
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+\beta \cdot \mathrm P (H_1) &amp; = \mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_0) \cdot \mathrm P (H_0) \Rightarrow \\
+\beta &amp; = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot \mathrm P(\hat H_0 | H_0) \\
+\beta &amp; = \frac{1}{\mathrm P (H_1)} \cdot \big (1 - \mathrm P (H_1 | H_0)\big) = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot (1 - \alpha)
+\end{split}
+\]</span></p>
 </section>
 </section>
 <section id="stats-testing-algorithm" class="level3" data-number="6.2.4">
@@ -729,21 +790,6 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 </section>
 <section id="stats-testing-power" class="level3" data-number="6.2.6">
 <h3 data-number="6.2.6" class="anchored" data-anchor-id="stats-testing-power"><span class="header-section-number">6.2.6</span> Статистическая мощность</h3>
-<div class="callout callout-style-default callout-note callout-titled" title="Статистическая мощность Post hoc">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Статистическая мощность Post hoc
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>НАПИСАТЬ</p>
-<p>есть ли смысл рассчитывать статистическую мощность пост хок?</p>
-<p>кажется, нет, так как эффект уже нашли</p>
-</div>
-</div>
 </section>
 <section id="stats-testing-false-positive" class="level3" data-number="6.2.7">
 <h3 data-number="6.2.7" class="anchored" data-anchor-id="stats-testing-false-positive"><span class="header-section-number">6.2.7</span> Ложноположительный вывод</h3>
