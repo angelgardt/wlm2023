@@ -762,6 +762,12 @@ _Если в ответе получается целое число, то вв�
 
 :::
 
+```{r}
+ggplot() +
+  geom_function(fun = dnorm, args = list(mean = 8.2, sd = sqrt(37.21))) +
+  xlim(-20, 40)
+```
+
 ::: {hidden="true"}
 ::: {#hw6-10-autocheck .autocheck}
 ::: {#hw6-10-ir .input-requirements}
