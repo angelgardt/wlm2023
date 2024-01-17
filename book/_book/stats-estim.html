@@ -913,31 +913,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1     1    93
-2     2   118
-3     3   117
-4     4   106
-5     5   129
-6     6   136</code></pre>
+1     1   103
+2     2   109
+3     3   104
+4     4   127
+5     5    94
+6     6   114</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iq)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
      id    IQ
   &lt;int&gt; &lt;dbl&gt;
-1  9995    98
-2  9996   116
-3  9997   103
-4  9998    95
-5  9999   135
-6 10000    80</code></pre>
+1  9995    95
+2  9996    68
+3  9997   115
+4  9998    72
+5  9999   100
+6 10000   116</code></pre>
 </div>
 </div>
 <p>Так как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра <span class="math inline">\(\mu\)</span>. <strong>В реальной жизни мы этого сделать не можем!</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 100.197</code></pre>
+<pre><code>[1] 99.9475</code></pre>
 </div>
 </div>
 <p>Вполне ожидаемое значение<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Теперь попробуем наизвлекать выборок человек по 50 и посчитать <em>оценки среднего (выборочные средние)</em> <span class="math inline">\(\hat \mu\)</span> на них:</p>
@@ -1020,6 +1020,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 \forall n \; \mathbb{E} \hat \theta = \theta, \quad (\mathbb{E}\hat \theta - \theta) \rightarrow 0,
 \]</span> где <span class="math inline">\(n\)</span> — объём выборки, <span class="math inline">\((\mathbb{E}\hat \theta - \theta)\)</span> — смещение.</p>
 <p>Слева представлено требование <em>несмещённости при любом объёме выборки</em>, а справа — <em>ассимптотической несмещённости</em>.</p>
+<section id="проверка-среднего-как-оценки-математического-ожидания-на-несмещенность" class="level5" data-number="24.1.4.1.1">
+<h5 data-number="24.1.4.1.1" class="anchored" data-anchor-id="проверка-среднего-как-оценки-математического-ожидания-на-несмещенность"><span class="header-section-number">24.1.4.1.1</span> Проверка среднего как оценки математического ожидания на несмещенность</h5>
+<p><span class="math display">\[
+X_1, X_2, \dots , X_n \overset{\text{i.i.d}}{\thicksim} (\mu, \sigma^2)
+\]</span></p>
+<p><span class="math display">\[
+\hat \mu = \frac{1}{m}\sum_{j=1}^m x_j = \bar X
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{E}(\hat \mu) = \mathbb{E}(\bar X) \overset{?}{=} \mu
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{E}(\bar X) = \mathbb{E}\big (\frac{1}{n} \sum_{i=1}^n X_i \big ) = \frac{1}{n} \mathbb{E}\Big( \sum_{i=1}^n X_i \Big) = \frac{1}{n} \sum_{i=1}^n \mathbb{E}X_i \overset{X_i \overset{\text{i.i.d}}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n} \cdot n \cdot \mathbb{E}X = \frac{n}{n} \cdot \mu = \mu
+\]</span></p>
+</section>
+<section id="проверка-дисперсии-генеральной-совокупности-как-оценки-дисперсии-на-несмещенность" class="level5" data-number="24.1.4.1.2">
+<h5 data-number="24.1.4.1.2" class="anchored" data-anchor-id="проверка-дисперсии-генеральной-совокупности-как-оценки-дисперсии-на-несмещенность"><span class="header-section-number">24.1.4.1.2</span> Проверка дисперсии генеральной совокупности как оценки дисперсии на несмещенность</h5>
+<p><span class="math display">\[
+X_1, X_2, \dots , X_n \overset{\text{i.i.d}}{\thicksim} (\mu, \sigma^2)
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{D}X &amp; = \sigma^2 = \mathbb{E}(X - \mathbb{E}X)^2 = \mathbb{E}(X^2 - 2 X \mathbb{E}X + \mathbb{E}^2 X) = \\
+&amp; = \mathbb{E}X^2 - 2\mathbb{E}X \mathbb{E}X + \mathbb{E}^2 X = \mathbb{E}X^2 - 2\mathbb{E}^2 X + \mathbb{E}^2 X = \\
+&amp; = \mathbb{E}X^2 - \mathbb{E}^2 X
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar X)^2}{n}
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{E}(\hat \sigma^2) \overset{?}{=} \sigma^2
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2) &amp; = \frac{\sum_{i=1}^n (x_i - \bar X)^2}{n} = \\
+&amp; = \frac{1}{n} \left(\sum_{i=1}^n x_i^2 - 2 \sum_{i=1}^n x_i \bar X  + \sum_{i=1}^n \bar X \right)\\
+&amp; = \frac{1}{n} \left(\sum_{i=1}^n x_i^2 - 2 \bar X \sum_{i=1}^n x_i + n \bar X \right)= \\
+&amp; = \frac{\sum_{i=1}^n x_i^2}{n} - 2 \bar X \frac{\sum_{i=1}^n x_i}{n} + \bar X^2 = \\
+&amp; = \overline{X^2} - 2 \bar X^2 + \bar X^2 = \overline{X^2} - \bar X^2
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{E}(\hat \sigma^2) = \mathbb{E}(\overline {X^2} - \bar X^2) = \underset{[1]}{\mathbb{E}\overline{X^2}} - \underset{[2]}{\mathbb{E}\bar X^2}
+\]</span></p>
+$$
+<span class="math display">\[\begin{split}
+[1] \, \mathbb{E}\overline{X^2} : &amp; \\
+
+\mathbb{E}\overline{X^2} &amp; = \mathbb{E}\left(\frac{\sum_{i=1}^n X_i^2}{n} \right)= \frac{1}{n} \mathbb{E}\left(\sum_{i=1}^n X_i^2 \right)= \\
+&amp; = \frac{1}{n} \sum_{i=1}^n \mathbb{E}X_i^2] \overset{X_i \overset{\text{i.i.d}}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n} \cdot n \cdot \mathbb{E}X^2 = \mathbb{E}X^2
+
+\end{split}\]</span>
+<p>$$</p>
+$$
+<span class="math display">\[\begin{split}
+[2] \, \mathbb{E}\bar X^2 : &amp; \\
+
+\mathbb{E}\bar X^2 &amp; =
+\mathbb{E}\left[
+    \left(\frac{\sum_{i=1}^n X_i}{n} \right)^2
+  \right]=
+\frac{1}{n^2}
+\mathbb{E}\left[
+    \left(\sum_{i=1}^n X_i^2 \right)
+  \right]= \\
+&amp; = \frac{1}{n^2} \mathbb{E}\left[
+    \sum_{i=1}^n \mathbb{E}X_i^2 +
+    2 \sum_{
+      \substack{i=1, j=1 \\ i \neq j}
+      }^n X_i X_j
+    \right]= \\
+&amp; = \frac{1}{n^2} \left[
+      \sum_{i=1}^n \mathbb{E}(X_i^2) +
+      2 \sum_{
+        \substack{i=1, j=1 \\ i \neq j}
+      }^n \mathbb{E}(X_i X_j)
+    \right]= \\
+&amp; \overset{X_i \overset{\text{i.i.d}}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n^2} \left[
+    n \cdot \mathbb{E}X^2 +
+    2 \sum_{
+      \substack{i=1, j=1 \\ i \neq j}
+    }^n \mathbb{E}(X_i) \mathbb{E}(X_j) \right]= \\
+&amp; = \frac{1}{n} \left[n \cdot \mathbb{E}X2 + 2 \cdot \frac{n(n-1)}{2} \mathbb{E}^2 X \right]= \\
+&amp; = \frac{1}{n} \mathbb{E}X^2 + \frac{n-1}{n} \mathbb{E}^2 X
+\end{split}\]</span>
+<p>$$</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2)
+&amp; = \mathbb{E}\overline{X^2} - \mathbb{E}\bar X^2 = \\
+&amp; = \mathbb{E}X^2 - \left(\frac{1}{n} \mathbb{E}X^2 + \frac{n-1}{n} \mathbb{E}^2 X \right)= \\
+&amp; = \frac{n}{n} \mathbb{E}X^2 - \frac{1}{n} \mathbb{E}X^2 - \frac{n-1}{n} \mathbb{E}^2 X = \\
+&amp; = \frac{n-1}{n} \mathbb{E}X^2 - \frac{n-1}{n} \mathbb{E}^2 X = \frac{n-1}{n} \left(\mathbb{E}X^2 - \mathbb{E}^2 X \right)\\
+&amp; = \frac{n-1}{n} \sigma^2
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+s^2 = \frac{n}{n-1} \sigma^2 = \frac{n}{n-1} \cdot \frac{1}{n} \cdot \sum_{i=1}^n (x_i - \bar X) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar X)
+\]</span></p>
+</section>
 </section>
 <section id="состоятельность" class="level4" data-number="24.1.4.2">
 <h4 data-number="24.1.4.2" class="anchored" data-anchor-id="состоятельность"><span class="header-section-number">24.1.4.2</span> Состоятельность</h4>
@@ -1028,7 +1129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Математически <strong>состоятельность</strong> определяется следующим образом:</p>
 <p><span class="math display">\[
-\lim_{n \rightarrow \infty} \mathrm{P}(|\hat \theta - \theta| &lt; \varepsilon) = 1, \, \varepsilon &gt; 0
+\lim_{n \rightarrow \infty} \mathbb{P}(|\hat \theta - \theta| &lt; \varepsilon) = 1, \, \varepsilon &gt; 0
 \]</span></p>
 <p>Содержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.</p>
 </section>
@@ -1130,12 +1231,12 @@ t = \frac{\bar x - \mu}{s}\sqrt{n-1},
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_normal</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        y     ymin     ymax
-1 100.197 99.90477 100.4892</code></pre>
+1 99.9475 99.65574 100.2393</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_boot</span>(iq<span class="sc">$</span>IQ)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        y     ymin    ymax
-1 100.197 99.88662 100.485</code></pre>
+<pre><code>        y    ymin    ymax
+1 99.9475 99.6643 100.259</code></pre>
 </div>
 </div>
 

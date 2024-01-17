@@ -127,6 +127,123 @@ $$
 Слева представлено требование *несмещённости при любом объёме выборки*, а справа --- *ассимптотической несмещённости*.
 
 
+##### Проверка среднего как оценки математического ожидания на несмещенность
+
+$$ 
+X_1, X_2, \dots , X_n \overset{\iid}{\thicksim} (\mu, \sigma^2)
+$$
+
+$$
+\hat \mu = \frac{1}{m}\sum_{j=1}^m x_j = \bar X 
+$$
+
+$$
+\expect (\hat \mu) = \expect (\bar X) \overset{?}{=} \mu
+$$
+
+$$
+\expect (\bar X) = \expect \big (\frac{1}{n} \sum_{i=1}^n X_i \big ) = \frac{1}{n} \expect \Big( \sum_{i=1}^n X_i \Big) = \frac{1}{n} \sum_{i=1}^n \expect X_i \overset{X_i \overset{\iid}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n} \cdot n \cdot \expect X = \frac{n}{n} \cdot \mu = \mu
+$$
+
+
+
+##### Проверка дисперсии генеральной совокупности как оценки дисперсии на несмещенность
+
+$$ 
+X_1, X_2, \dots , X_n \overset{\iid}{\thicksim} (\mu, \sigma^2)
+$$
+
+$$
+\begin{split}
+\disp X & = \sigma^2 = \expect(X - \expect X)^2 = \expect (X^2 - 2 X \expect X + \expect^2 X) = \\
+& = \expect X^2 - 2\expect X \expect X + \expect^2 X = \expect X^2 - 2\expect^2 X + \expect^2 X = \\
+& = \expect X^2 - \expect^2 X
+\end{split}
+$$
+
+$$
+\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar X)^2}{n}
+$$
+
+$$
+\expect (\hat \sigma^2) \overset{?}{=} \sigma^2
+$$
+
+$$
+\begin{split}
+\expect (\hat \sigma^2) & = \frac{\sum_{i=1}^n (x_i - \bar X)^2}{n} = \\
+& = \frac{1}{n} \lp \sum_{i=1}^n x_i^2 - 2 \sum_{i=1}^n x_i \bar X  + \sum_{i=1}^n \bar X \rp \\ 
+& = \frac{1}{n} \lp \sum_{i=1}^n x_i^2 - 2 \bar X \sum_{i=1}^n x_i + n \bar X \rp = \\
+& = \frac{\sum_{i=1}^n x_i^2}{n} - 2 \bar X \frac{\sum_{i=1}^n x_i}{n} + \bar X^2 = \\
+& = \overline{X^2} - 2 \bar X^2 + \bar X^2 = \overline{X^2} - \bar X^2
+\end{split}
+$$
+
+$$
+\expect (\hat \sigma^2) = \expect (\overline {X^2} - \bar X^2) = \underset{[1]}{\expect \overline{X^2}} - \underset{[2]}{\expect \bar X^2}
+$$
+
+$$
+\begin{split}
+[1] \, \expect \overline{X^2} : & \\
+
+\expect \overline{X^2} & = \expect \lp \frac{\sum_{i=1}^n X_i^2}{n} \rp = \frac{1}{n} \expect \lp \sum_{i=1}^n X_i^2 \rp = \\
+& = \frac{1}{n} \sum_{i=1}^n \expect X_i^2] \overset{X_i \overset{\iid}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n} \cdot n \cdot \expect X^2 = \expect X^2
+
+\end{split}
+$$
+
+$$
+\begin{split}
+[2] \, \expect \bar X^2 : & \\
+
+\expect \bar X^2 & = 
+\expect \lb 
+    \lp \frac{\sum_{i=1}^n X_i}{n} \rp ^2 
+  \rb = 
+\frac{1}{n^2} 
+\expect \lb 
+    \lp \sum_{i=1}^n X_i^2 \rp 
+  \rb = \\
+& = \frac{1}{n^2} \expect \lb 
+    \sum_{i=1}^n \expect X_i^2 + 
+    2 \sum_{
+      \substack{i=1, j=1 \\ i \neq j}
+      }^n X_i X_j 
+    \rb = \\
+& = \frac{1}{n^2} \lb
+      \sum_{i=1}^n \expect (X_i^2) + 
+      2 \sum_{
+        \substack{i=1, j=1 \\ i \neq j}
+      }^n \expect (X_i X_j)
+    \rb = \\
+& \overset{X_i \overset{\iid}{\sim} (\mu, \sigma^2)}{=} \frac{1}{n^2} \lb 
+    n \cdot \expect X^2 + 
+    2 \sum_{
+      \substack{i=1, j=1 \\ i \neq j}
+    }^n \expect (X_i) \expect (X_j) \rb = \\
+& = \frac{1}{n} \lb n \cdot \expect X2 + 2 \cdot \frac{n(n-1)}{2} \expect^2 X \rb  = \\
+& = \frac{1}{n} \expect X^2 + \frac{n-1}{n} \expect^2 X
+\end{split}
+$$
+
+$$
+\begin{split}
+\expect (\hat \sigma^2) 
+& = \expect \overline{X^2} - \expect \bar X^2 = \\
+& = \expect X^2 - \lp \frac{1}{n} \expect X^2 + \frac{n-1}{n} \expect^2 X \rp = \\
+& = \frac{n}{n} \expect X^2 - \frac{1}{n} \expect X^2 - \frac{n-1}{n} \expect^2 X = \\
+& = \frac{n-1}{n} \expect X^2 - \frac{n-1}{n} \expect^2 X = \frac{n-1}{n} \lp \expect X^2 - \expect ^2 X \rp \\ 
+& = \frac{n-1}{n} \sigma^2
+\end{split}
+$$
+
+$$
+s^2 = \frac{n}{n-1} \sigma^2 = \frac{n}{n-1} \cdot \frac{1}{n} \cdot \sum_{i=1}^n (x_i - \bar X) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar X)
+$$
+
+
+
 #### Состоятельность
 ::: {.lab-chapter .lab-middle}
 :::
@@ -134,7 +251,7 @@ $$
 Математически **состоятельность** определяется следующим образом:
 
 $$
-\lim_{n \rightarrow \infty} \mathrm{P}(|\hat \theta - \theta| < \varepsilon) = 1, \, \varepsilon > 0
+\lim_{n \rightarrow \infty} \prob (|\hat \theta - \theta| < \varepsilon) = 1, \, \varepsilon > 0
 $$
 
 Содержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит. 
