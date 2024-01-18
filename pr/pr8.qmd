@@ -109,7 +109,7 @@ sim1 %>%
   apply(2, mean) %>% 
   tibble(x = .) %>% 
   ggplot(aes(x)) +
-  geom_histogram(aes(y = ..density..))
+  geom_histogram()
 ```
 
 ```{r p8-2-2}
