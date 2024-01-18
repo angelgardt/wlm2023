@@ -4,6 +4,10 @@
 # MAIN
 
 # 1
+
+library(tidyverse)
+theme_set(theme_bw())
+
 set.seed(404)
 matrix(rnorm(100*1000, mean = 10, sd = 15), ncol = 1000) -> sim1
 matrix(rnorm(100*1000, mean = 10, sd = 15), ncol = 1000) -> sim2
