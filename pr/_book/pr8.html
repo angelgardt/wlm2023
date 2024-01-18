@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -343,26 +309,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!--
 REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 -->
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <section id="pr8_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr8_main">Основные задания</h2>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr8-1-level" class="level"></p>
 <div id="pr8-1-task" class="task">
-<p>Генерация данных</p>
+<p>Сегодня мы будем активно заниматься симуляциями. Начнем с трёх матриц.</p>
+<p>Сгенерируйте матрицы <code>sim1</code>, <code>sim2</code> и <code>sim3</code>:</p>
+<ul>
+<li>первые две должны содержать по 1000 выборок из 100 наблюдений из генеральной совокупности, в которой параметр распределен <span class="math inline">\(\mathcal N (10, 225)\)</span></li>
+<li>третья должна содержать 1000 выборок из 100 наблюдений из генеральной совокупности, в которой параметр распределен <span class="math inline">\(\mathcal N (15, 225)\)</span></li>
+</ul>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">15</span>, <span class="at">sd =</span> <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">150</span>) <span class="sc">+</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Value"</span>, <span class="at">y =</span> <span class="st">"Density"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -370,12 +330,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 </figure>
 </div>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">404</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span><span class="sc">*</span><span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">15</span>), <span class="at">ncol =</span> <span class="dv">1000</span>) <span class="ot">-&gt;</span> sim1</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span><span class="sc">*</span><span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">15</span>), <span class="at">ncol =</span> <span class="dv">1000</span>) <span class="ot">-&gt;</span> sim2</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span><span class="sc">*</span><span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">15</span>, <span class="at">sd =</span> <span class="dv">15</span>), <span class="at">ncol =</span> <span class="dv">1000</span>) <span class="ot">-&gt;</span> sim3</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="pr8-1-autocheck" class="autocheck">
 <div id="pr8-1-ir" class="input-requirements">
@@ -414,7 +368,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr8-2-level" class="level"></p>
 <div id="pr8-2-task" class="task">
-<p>Визуализируйте центральную предельную теорему.</p>
+<p>Пользуясь матрицей <code>sim1</code> визуализируйте центральную предельную теорему.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -425,41 +379,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Центральная предельная теорема утверждает, что распрделение выборочных средних с ростом числа выборок стремиться к нормальному распределению.</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, mean) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, <span class="cf">function</span>(x) <span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(x))) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="ot">-&gt;</span> sim1_se</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, mean) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density))) <span class="sc">+</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> sim1_se))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-2-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<p>Центральная предельная теорема утверждает, что распределение выборочных средних с ростом числа выборок стремиться к нормальному распределению.</p>
 </div>
 </div>
 </div>
@@ -500,39 +420,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="pr8-3-level" class="level"></p>
 <div id="pr8-3-task" class="task">
-<p>На лекции мы математически вывели, что среднее арифметическое является насмещенной оценкой математического ожидания генеральной совокупности. Проверьте это на симуляции.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, mean) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"gray70"</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">"red2"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-3-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sim2 <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, mean) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"gray70"</span>) <span class="sc">+</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">"red2"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-3-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>На лекции мы математически вывели, что среднее арифметическое является несмещенной оценкой математического ожидания генеральной совокупности. Проверьте это на симуляции. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-3-autocheck" class="autocheck">
 <div id="pr8-3-ir" class="input-requirements">
@@ -571,59 +459,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="pr8-4-level" class="level"></p>
 <div id="pr8-4-task" class="task">
-<p>Проверьте на симуляциях, что оценка дисперсии <span class="math inline">\(\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n}\)</span> является смещенной, а оценка <span class="math inline">\(\hat \sigma^2 = s^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n-1}\)</span> является несмещенной.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>var_pop <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {<span class="fu">sum</span>((x <span class="sc">-</span> <span class="fu">mean</span>(x))<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> <span class="fu">length</span>(x)}</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">var =</span> <span class="fu">var</span>(value),</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">var_pop =</span> <span class="fu">var_pop</span>(value)) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(var),</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"lightblue3"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(var_pop),</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"seagreen3"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">225</span>, <span class="at">color =</span> <span class="st">"red2"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(var)),</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"blue3"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(var_pop)),</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"green3"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="co"># + xlim(200, 250)</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-4-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sim2 <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">var =</span> <span class="fu">var</span>(value),</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">var_pop =</span> <span class="fu">var_pop</span>(value)) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(var),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"lightblue3"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(var_pop),</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"seagreen3"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">225</span>, <span class="at">color =</span> <span class="st">"red2"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(var)),</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"blue3"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(var_pop)),</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"green3"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="co"># + xlim(200, 250)</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-4-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Мы также математически вывели, что оценка дисперсии <span class="math inline">\(\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n}\)</span> является смещенной, а оценка <span class="math inline">\(\hat \sigma^2 = s^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n-1}\)</span> является несмещенной. Проверьте это на симуляциях. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-4-autocheck" class="autocheck">
 <div id="pr8-4-ir" class="input-requirements">
@@ -662,33 +498,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="pr8-5-level" class="level"></p>
 <div id="pr8-5-task" class="task">
-<p>покажите симуляционно, что среднее как оценка математического ожидания является состоятельной</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1010</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sim4 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  sim4[[i]] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(i, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">15</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sim4 <span class="sc">%&gt;%</span> </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(mean) <span class="sc">%&gt;%</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>,</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"red2"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Ещё на лекции мы говорили о состоятельности оценки. Покажите с помощью симуляций, что среднее арифметической является состоятельной оценкой математического ожидания генеральной совокупности.</p>
 </div>
 <div id="pr8-5-autocheck" class="autocheck">
 <div id="pr8-5-ir" class="input-requirements">
@@ -727,25 +537,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr8-6-level" class="level"></p>
 <div id="pr8-6-task" class="task">
-<p>Покажите симуляционно, что оценки дисперсии является состоятельной</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sim4 <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(var) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">225</span>,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"red2"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Покажите с помощью симуляций, что <code>s^2</code> является состоятельной оценкой дисперсии генеральной совокупности.</p>
 </div>
 <div id="pr8-6-autocheck" class="autocheck">
 <div id="pr8-6-ir" class="input-requirements">
@@ -784,18 +576,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr8-7-level" class="level"></p>
 <div id="pr8-7-task" class="task">
-<p>функция для ДИ</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {se <span class="ot">&lt;-</span> <span class="fu">sd</span>(x) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">length</span>(x)); <span class="fu">return</span>(<span class="fu">c</span>(<span class="at">lower =</span> <span class="fu">mean</span>(x)<span class="sc">-</span><span class="fl">1.96</span> <span class="sc">*</span> se, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                                                           <span class="at">mean =</span> <span class="fu">mean</span>(x), </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                                                           <span class="at">upper =</span> <span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> se))}</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ci</span>(sim1[, <span class="dv">1</span>])</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   lower     mean    upper 
- 9.50157 12.26855 15.03554 </code></pre>
-</div>
+<p>Напишите функцию для вычисления доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
 </div>
 <div id="pr8-7-autocheck" class="autocheck">
 <div id="pr8-7-ir" class="input-requirements">
@@ -834,37 +615,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr8-8-level" class="level"></p>
 <div id="pr8-8-task" class="task">
-<p>интерпретация ДИ</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, ci) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set_names("lower", "mean", "upper") %&gt;% </span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sample =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>,</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">contains =</span> <span class="fu">ifelse</span>(lower <span class="sc">&lt;</span> <span class="dv">10</span> <span class="sc">&amp;</span> upper <span class="sc">&gt;</span> <span class="dv">10</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)) <span class="ot">-&gt;</span> sim1_ci</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>sim1_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample)) <span class="sc">+</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">y =</span> mean, </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymin =</span> lower, </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymax =</span> upper,</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                       <span class="at">color =</span> contains),</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sim1_ci<span class="sc">$</span>contains <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.932</code></pre>
-</div>
+<p>Постройте визуализацию, выражающую статистически корректную интерпретацию доверительного интервала для среднего. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-8-autocheck" class="autocheck">
 <div id="pr8-8-ir" class="input-requirements">
@@ -903,43 +654,8 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="pr8-9-level" class="level"></p>
 <div id="pr8-9-task" class="task">
-<p>capture percantage</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sim1 %&gt;% </span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   apply(2, ci) %&gt;% </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   t() %&gt;% </span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   as_tibble() %&gt;% </span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   set_names("lower", "mean", "upper") %&gt;% </span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(sample = 1:1000,</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#          contains = ifelse(lower &lt; 10 &amp; upper &gt; 10, TRUE, FALSE)) -&gt; sim1_ci</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>sim1_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">capture =</span> <span class="fu">ifelse</span>(mean <span class="sc">&gt;</span> lower[<span class="dv">1</span>] <span class="sc">&amp;</span> mean <span class="sc">&lt;</span> upper[<span class="dv">1</span>], <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)) <span class="ot">-&gt;</span> sim1_ci</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>sim1_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample)) <span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="dv">1000</span>,</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>                <span class="at">ymin =</span> lower[<span class="dv">1</span>], <span class="at">ymax =</span> upper[<span class="dv">1</span>]),</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">fill =</span> <span class="st">"gray70"</span>, <span class="at">alpha =</span> .<span class="dv">01</span>) <span class="sc">+</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">y =</span> mean, </span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymin =</span> lower, </span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymax =</span> upper,</span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>                       <span class="at">color =</span> capture),</span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sim1_ci<span class="sc">$</span>capture <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.621</code></pre>
-</div>
+<p>На лекции мы упомянули, что реальную вероятность того, что математическое ожидание попадает в пределы отдельного доверительного интервала называют <em>capture percantage</em>. Эта вероятность оказывается значительно меньше 0.95 для 95% доверительного интервала.</p>
+<p>Постройте визуализацию, показывающую это графически. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-9-autocheck" class="autocheck">
 <div id="pr8-9-ir" class="input-requirements">
@@ -978,73 +694,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="pr8-10-level" class="level"></p>
 <div id="pr8-10-task" class="task">
-<p>Повторите симуляции для ДИ и captire percantage на sim2</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sim2 <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, ci) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(<span class="st">"lower"</span>, <span class="st">"mean"</span>, <span class="st">"upper"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sample =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>,</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">contains =</span> <span class="fu">ifelse</span>(lower <span class="sc">&lt;</span> <span class="dv">10</span> <span class="sc">&amp;</span> upper <span class="sc">&gt;</span> <span class="dv">10</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)) <span class="ot">-&gt;</span> sim2_ci</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>sim2_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample)) <span class="sc">+</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">y =</span> mean, </span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymin =</span> lower, </span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymax =</span> upper,</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>                       <span class="at">color =</span> contains),</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-10-ci-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sim2_ci<span class="sc">$</span>contains <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.963</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sim1 %&gt;% </span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   apply(2, ci) %&gt;% </span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   t() %&gt;% </span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   as_tibble() %&gt;% </span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   set_names("lower", "mean", "upper") %&gt;% </span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(sample = 1:1000,</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">#          contains = ifelse(lower &lt; 10 &amp; upper &gt; 10, TRUE, FALSE)) -&gt; sim1_ci</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>sim2_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">capture =</span> <span class="fu">ifelse</span>(mean <span class="sc">&gt;</span> lower[<span class="dv">1</span>] <span class="sc">&amp;</span> mean <span class="sc">&lt;</span> upper[<span class="dv">1</span>], <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)) <span class="ot">-&gt;</span> sim2_ci</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>sim2_ci <span class="sc">%&gt;%</span> </span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample)) <span class="sc">+</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="dv">1000</span>,</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>                <span class="at">ymin =</span> lower[<span class="dv">1</span>], <span class="at">ymax =</span> upper[<span class="dv">1</span>]),</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">fill =</span> <span class="st">"gray70"</span>, <span class="at">alpha =</span> .<span class="dv">01</span>) <span class="sc">+</span></span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">y =</span> mean, </span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymin =</span> lower, </span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ymax =</span> upper,</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>                       <span class="at">color =</span> capture),</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-10-captire-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sim2_ci<span class="sc">$</span>capture <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.876</code></pre>
-</div>
+<p>Повторите построение визуализаций из двух предыдущих заданий для матрицы <code>sim2</code>. Сравните визуализации.</p>
 </div>
 <div id="pr8-10-autocheck" class="autocheck">
 <div id="pr8-10-ir" class="input-requirements">
@@ -1083,44 +733,15 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-10">#11</h3>
 <p><img id="pr8-11-level" class="level"></p>
 <div id="pr8-11-task" class="task">
+<p>Поизучаем закономерности p-value. Для этого нам потребуется какой-то статистический тест — возьмем t-тест Стьютенда как наиболее простой и, вероятно, знакомый:</p>
 <p><span class="math display">\[
 t = \frac{\bar X_1 - \bar X_2}{s_{\bar \Delta}}, \quad s_{\bar \Delta} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
 \]</span></p>
-<p>Существует также и одновыборочный t-тест:</p>
+<p>Формула выше справедлива для двухвыборочного t-теста (выборки независимы). Существует также и одновыборочный t-тест:</p>
 <p><span class="math display">\[
 t = \frac{\bar X - \mu}{s / \sqrt{n}} = \frac{\bar X - \mu}{\text{se}_X}
 \]</span></p>
-<p>Одновыборочный t-тест на первых выборка sim1 и sim3.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> sim1[, <span class="dv">1</span>], <span class="at">mu =</span> <span class="dv">10</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    One Sample t-test
-
-data:  sim1[, 1]
-t = 1.6069, df = 99, p-value = 0.1113
-alternative hypothesis: true mean is not equal to 10
-95 percent confidence interval:
-  9.467382 15.069727
-sample estimates:
-mean of x 
- 12.26855 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> sim3[, <span class="dv">1</span>], <span class="at">mu =</span> <span class="dv">10</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    One Sample t-test
-
-data:  sim3[, 1]
-t = 2.8669, df = 99, p-value = 0.005064
-alternative hypothesis: true mean is not equal to 10
-95 percent confidence interval:
- 11.44592 17.94632
-sample estimates:
-mean of x 
- 14.69612 </code></pre>
-</div>
+<p>Проведите одновыборочный t-тест на первых выборка <code>sim1</code> и <code>sim3</code>. Дайте статистическую интерпретацию результатов.</p>
 </div>
 <div id="pr8-11-autocheck" class="autocheck">
 <div id="pr8-11-ir" class="input-requirements">
@@ -1159,22 +780,10 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-11">#12</h3>
 <p><img id="pr8-12-level" class="level"></p>
 <div id="pr8-12-task" class="task">
-<p>сходимость t-распределения</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rep</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">by =</span> .<span class="dv">01</span>), <span class="dv">10</span>),</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">df =</span> <span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">50</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="at">each =</span> <span class="dv">1001</span>),</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">dt =</span> <span class="fu">dt</span>(x, <span class="at">df =</span> df)) <span class="sc">%&gt;%</span> </span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, dt, <span class="at">color =</span> df)) <span class="sc">+</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, <span class="at">color =</span> <span class="st">"red3"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-12-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Покажите графически, что t-распределение сходится к стандартному нормальному распределению с ростом объема выборки:</p>
+<p><span class="math display">\[
+t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
+\]</span></p>
 </div>
 <div id="pr8-12-autocheck" class="autocheck">
 <div id="pr8-12-ir" class="input-requirements">
@@ -1213,23 +822,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-12">#13</h3>
 <p><img id="pr8-13-level" class="level"></p>
 <div id="pr8-13-task" class="task">
-<p>вероятность ложноположительного вывода при заданном уровне значимости, если верна H0</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>pvalsH0 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(sim1)) {</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  pvalsH0[[i]] <span class="ot">&lt;-</span> <span class="fu">t.test</span>(sim1[, i], sim2[, i])<span class="sc">$</span>p.value</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>(<span class="fu">unlist</span>(pvalsH0) <span class="sc">&lt;</span>.<span class="dv">05</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.053</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>(<span class="fu">unlist</span>(pvalsH0) <span class="sc">&lt;</span>.<span class="dv">005</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.004</code></pre>
-</div>
+<p>Выясните с помощью симумляций, какова вероятность получить статистически значимые резульаты при заданном уровне значимости, если верна <span class="math inline">\(H_0\)</span>. Рассчитайте эту вероятность для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim2</code>.</p>
 </div>
 <div id="pr8-13-autocheck" class="autocheck">
 <div id="pr8-13-ir" class="input-requirements">
@@ -1268,23 +861,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-13">#14</h3>
 <p><img id="pr8-14-level" class="level"></p>
 <div id="pr8-14-task" class="task">
-<p>вероятность получить значимые различия, если верна H1</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>pvalsH1 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(sim1)) {</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  pvalsH1[[i]] <span class="ot">&lt;-</span> <span class="fu">t.test</span>(sim1[, i], sim3[, i])<span class="sc">$</span>p.value</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>(<span class="fu">unlist</span>(pvalsH1) <span class="sc">&lt;</span>.<span class="dv">05</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.664</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>(<span class="fu">unlist</span>(pvalsH1) <span class="sc">&lt;</span>.<span class="dv">005</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.314</code></pre>
-</div>
+<p>Рассчитайте вероятность получить статистически значимые результаты, если верна <span class="math inline">\(H_1\)</span>, для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim3</code>.</p>
 </div>
 <div id="pr8-14-autocheck" class="autocheck">
 <div id="pr8-14-ir" class="input-requirements">
@@ -1323,29 +900,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-14">#15</h3>
 <p><img id="pr8-15-level" class="level"></p>
 <div id="pr8-15-task" class="task">
-<p>распределение п-валью при H0 и H1</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>pvals <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(sim1)) {</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  pvals<span class="sc">$</span>H0[i] <span class="ot">&lt;-</span> <span class="fu">t.test</span>(sim1[, i], sim2[, i])<span class="sc">$</span>p.value</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  pvals<span class="sc">$</span>H1[i] <span class="ot">&lt;-</span> <span class="fu">t.test</span>(sim1[, i], sim3[, i])<span class="sc">$</span>p.value</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>pvals <span class="sc">%&gt;%</span> </span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value)) <span class="sc">+</span></span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> name)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-15-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Визуализируйте распределение p-value при справедливости <span class="math inline">\(H_0\)</span> и <span class="math inline">\(H_1\)</span>.</p>
 </div>
 <div id="pr8-15-autocheck" class="autocheck">
 <div id="pr8-15-ir" class="input-requirements">
@@ -1384,39 +939,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr8-16-level" class="level"></p>
 <div id="pr8-16-task" class="task">
-<p>зависимость p-value от объема выборки</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm(list=ls())</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">5</span>)</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>sim5 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(n)) {</span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    sim5[[i]] <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(n[i]<span class="sc">*</span><span class="dv">100</span>), <span class="at">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>sim5 <span class="sc">%&gt;%</span> </span>
-<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="cf">function</span>(x) </span>
-<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    {<span class="fu">apply</span>(x, <span class="dv">2</span>, <span class="cf">function</span>(y) </span>
-<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>      {<span class="fu">t.test</span>(y, <span class="at">mu =</span> .<span class="dv">5</span>)<span class="sc">$</span>p.value} </span>
-<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>      ) </span>
-<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>    } </span>
-<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">.name_repair =</span> <span class="st">"universal"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_remove</span>(name, <span class="st">"</span><span class="sc">\\</span><span class="st">.{3}"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a>           <span class="fu">as.numeric</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value)) <span class="sc">+</span></span>
-<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> name)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-16-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Визуализируйте зависимость распределения p-value от объема выборки.</p>
 </div>
 <div id="pr8-16-autocheck" class="autocheck">
 <div id="pr8-16-ir" class="input-requirements">
@@ -1455,39 +978,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr8-17-level" class="level"></p>
 <div id="pr8-17-task" class="task">
-<p>p-value и размер эффекта</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm(list=ls())</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>ef <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>)</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>sim6 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(ef)) {</span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    sim6[[i]] <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">50</span><span class="sc">*</span><span class="dv">100</span>, <span class="at">mean =</span> ef[i]), <span class="at">ncol =</span> <span class="dv">100</span>)</span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>sim6 <span class="sc">%&gt;%</span> </span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="cf">function</span>(x) </span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>    {<span class="fu">apply</span>(x, <span class="dv">2</span>, <span class="cf">function</span>(y) </span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>      {<span class="fu">t.test</span>(y, <span class="at">mu =</span> <span class="dv">0</span>)<span class="sc">$</span>p.value} </span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>      ) </span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    } </span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">.name_repair =</span> <span class="st">"universal"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_remove</span>(name, <span class="st">"</span><span class="sc">\\</span><span class="st">.{3}"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a>           <span class="fu">as.numeric</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value)) <span class="sc">+</span></span>
-<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> name)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-17-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<p>Визуализируйте зависимость распределения p-value от размера эффекта.</p>
 </div>
 <div id="pr8-17-autocheck" class="autocheck">
 <div id="pr8-17-ir" class="input-requirements">
@@ -1526,51 +1017,10 @@ mean of x
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr8-18-level" class="level"></p>
 <div id="pr8-18-task" class="task">
-<p>распределение размера эффекта</p>
+<p>Визуализируйте зависимость распределения размера эффекта от размера выборки.</p>
 <p><span class="math display">\[
 d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2}}
 \]</span></p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm(list=ls())</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>sim5 <span class="sc">%&gt;%</span> </span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="cf">function</span>(x) </span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    {<span class="fu">apply</span>(x, <span class="dv">2</span>, <span class="cf">function</span>(y) </span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>      {effectsize<span class="sc">::</span><span class="fu">cohens_d</span>(y, <span class="at">mu =</span> .<span class="dv">5</span>)<span class="sc">$</span>Cohens_d} </span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>      ) </span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    } </span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">.name_repair =</span> <span class="st">"universal"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_remove</span>(name, <span class="st">"</span><span class="sc">\\</span><span class="st">.{3}"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>           <span class="fu">as.numeric</span>()) <span class="ot">-&gt;</span> eff_size</span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>eff_size <span class="sc">%&gt;%</span> </span>
-<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value)) <span class="sc">+</span></span>
-<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> name)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-18-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>eff_size <span class="sc">%&gt;%</span> </span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">&gt;</span> <span class="dv">15</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value)) <span class="sc">+</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> name)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-18-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
 </div>
 <div id="pr8-18-autocheck" class="autocheck">
 <div id="pr8-18-ir" class="input-requirements">
@@ -1609,60 +1059,7 @@ d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 -
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr8-19-level" class="level"></p>
 <div id="pr8-19-task" class="task">
-<p>Перцентильный бутстрап</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rm(list=ls())</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="co"># smpl &lt;- rnorm(50)</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>smpl <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="dv">10</span>, <span class="dv">15</span>)</span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(smpl, <span class="at">breaks =</span> <span class="dv">30</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-19-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">sample</span>(<span class="at">x =</span> smpl, <span class="at">size =</span> <span class="dv">50</span> <span class="sc">*</span> <span class="dv">10000</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">ncol =</span> <span class="dv">10000</span>) <span class="ot">-&gt;</span> bs_mat</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>bs_mat <span class="sc">%&gt;%</span> </span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, mean) <span class="ot">-&gt;</span> bs_means</span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(bs_means, <span class="at">breaks =</span> <span class="dv">20</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr8_files/figure-html/p8-19-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(bs_means, .<span class="dv">025</span>); <span class="fu">mean</span>(smpl); <span class="fu">quantile</span>(bs_means, .<span class="dv">975</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    2.5% 
-6.802602 </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10.51605</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   97.5% 
-14.38336 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_normal</span>(smpl)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>         y     ymin     ymax
-1 10.51605 6.569113 14.46299</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cl_boot</span>(smpl)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>         y     ymin     ymax
-1 10.51605 6.460727 14.20402</code></pre>
-</div>
+<p>Постройте 95% доверительный интервал для среднего методом bootstrap.</p>
 </div>
 <div id="pr8-19-autocheck" class="autocheck">
 <div id="pr8-19-ir" class="input-requirements">
@@ -1701,24 +1098,7 @@ d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 -
 <h3 class="anchored" data-anchor-id="section-19">#20</h3>
 <p><img id="pr8-20-level" class="level"></p>
 <div id="pr8-20-task" class="task">
-<p>медиана бутстрап</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>bs_mat <span class="sc">%&gt;%</span> </span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply</span>(<span class="dv">2</span>, median) <span class="ot">-&gt;</span> bs_medians</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(bs_medians, .<span class="dv">025</span>); <span class="fu">median</span>(smpl); <span class="fu">quantile</span>(bs_medians, .<span class="dv">975</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    2.5% 
-4.292935 </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 8.910394</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   97.5% 
-16.20427 </code></pre>
-</div>
+<p>Постройте 95% доверительный интервал для медианы методом bootstrap.</p>
 </div>
 <div id="pr8-20-autocheck" class="autocheck">
 <div id="pr8-20-ir" class="input-requirements">
