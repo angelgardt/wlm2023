@@ -5,6 +5,16 @@
 REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs, eval=TRUE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
 ## Основные задания {#pr8_main}
 
 ### #1
@@ -12,8 +22,27 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <img id="pr8-1-level" class="level"/>
 
 ::: {#pr8-1-task .task}
-Текст задания `переменная`.
+
+Генерация данных
+
 :::
+
+```{r p8-1-dists, eval=TRUE}
+ggplot() +
+  geom_function(fun = dnorm, 
+                args = list(mean = 10, sd = 15)) +
+  geom_function(fun = dnorm, 
+                args = list(mean = 15, sd = 15)) +
+  xlim(-50, 150) +
+  labs(x = "Value", y = "Density")
+```
+
+```{r p8-1}
+set.seed(404)
+matrix(rnorm(100*1000, mean = 10, sd = 15), ncol = 1000) -> sim1
+matrix(rnorm(100*1000, mean = 10, sd = 15), ncol = 1000) -> sim2
+matrix(rnorm(100*1000, mean = 15, sd = 15), ncol = 1000) -> sim3
+```
 
 ::: {#pr8-1-autocheck .autocheck}
 ::: {#pr8-1-ir .input-requirements}
@@ -28,7 +57,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr8-1-hints">
 
 <summary>Подсказки</summary>
@@ -59,10 +88,38 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <img id="pr8-2-level" class="level"/>
 
 ::: {#pr8-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Визуализируйте центральную предельную теорему.
+
+:::{.callout-note}
+#### Центральная предельная теорема
+
+Центральная предельная теорема утверждает, что распрделение выборочных средних с ростом числа выборок стремиться к нормальному распределению.
 :::
+
+:::
+
+```{r p8-2}
+sim1 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram(aes(y = ..density..))
+```
+
+```{r p8-2-2}
+sim1 %>% 
+  apply(2, function(x) sd(x)/sqrt(length(x))) %>% 
+  mean() -> sim1_se
+
+sim1 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram(aes(y = after_stat(density))) +
+  geom_function(fun = dnorm,
+                args = list(mean = 10, sd = sim1_se))
+```
 
 ::: {#pr8-2-autocheck .autocheck}
 ::: {#pr8-2-ir .input-requirements}
@@ -77,7 +134,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-2-hints">
 
 <summary>Подсказки</summary>
@@ -108,8 +166,30 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-3-level" class="level"/>
 
 ::: {#pr8-3-task .task}
-Текст задания.
+
+На лекции мы математически вывели, что среднее арифметическое является насмещенной оценкой математического ожидания генеральной совокупности. Проверьте это на симуляции.
+
 :::
+
+```{r p8-3-1}
+sim1 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram(fill = "gray70") +
+  geom_vline(xintercept = 10, color = "red2", size = 1) +
+  geom_vline(aes(xintercept = mean(x)))
+```
+
+```{r p8-3-2}
+sim2 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram(fill = "gray70") +
+  geom_vline(xintercept = 10, color = "red2", size = 1) +
+  geom_vline(aes(xintercept = mean(x)))
+```
 
 ::: {#pr8-3-autocheck .autocheck}
 ::: {#pr8-3-ir .input-requirements}
@@ -124,7 +204,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-3-hints">
 
 <summary>Подсказки</summary>
@@ -155,9 +236,50 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-4-level" class="level"/>
 
 ::: {#pr8-4-task .task}
-Текст задания.
+
+Проверьте на симуляциях, что оценка дисперсии $\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n}$ является смещенной, а оценка $\hat \sigma^2 = s^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n-1}$ является несмещенной.
+
 :::
 
+```{r p8-4-1}
+var_pop <- function(x) {sum((x - mean(x))^2) / length(x)}
+
+sim1 %>%
+  as_tibble() %>% 
+  pivot_longer(cols = everything()) %>% 
+  group_by(name) %>% 
+  summarise(var = var(value),
+            var_pop = var_pop(value)) %>% 
+  ggplot() +
+  geom_histogram(aes(var),
+                 fill = "lightblue3", alpha = .5) +
+  geom_histogram(aes(var_pop),
+                 fill = "seagreen3", alpha = .5) +
+  geom_vline(xintercept = 225, color = "red2", size = 1) +
+  geom_vline(aes(xintercept = mean(var)),
+             color = "blue3", size = 1) +
+  geom_vline(aes(xintercept = mean(var_pop)),
+             color = "green3", size = 1) # + xlim(200, 250)
+```
+
+```{r, p8-4-2}
+sim2 %>%
+  as_tibble() %>% 
+  pivot_longer(cols = everything()) %>% 
+  group_by(name) %>% 
+  summarise(var = var(value),
+            var_pop = var_pop(value)) %>% 
+  ggplot() +
+  geom_histogram(aes(var),
+                 fill = "lightblue3", alpha = .5) +
+  geom_histogram(aes(var_pop),
+                 fill = "seagreen3", alpha = .5) +
+  geom_vline(xintercept = 225, color = "red2", size = 1) +
+  geom_vline(aes(xintercept = mean(var)),
+             color = "blue3", size = 1) +
+  geom_vline(aes(xintercept = mean(var_pop)),
+             color = "green3", size = 1) # + xlim(200, 250)
+```
 ::: {#pr8-4-autocheck .autocheck}
 ::: {#pr8-4-ir .input-requirements}
 Описание формата инпута.
@@ -171,7 +293,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-4-hints">
 
 <summary>Подсказки</summary>
@@ -202,8 +325,31 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-5-level" class="level"/>
 
 ::: {#pr8-5-task .task}
-Текст задания.
+
+покажите симуляционно, что среднее как оценка математического ожидания является состоятельной
+
 :::
+
+```{r p8-5}
+
+set.seed(1010)
+
+sim4 <- list()
+
+for (i in 1:1000) {
+  sim4[[i]] <- rnorm(i, mean = 10, sd = 15)
+}
+
+sim4 %>% 
+  map(mean) %>%
+  unlist() %>% 
+  tibble(x = 1:1000,
+         y = .) %>% 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_hline(yintercept = 10,
+             color = "red2")
+```
 
 ::: {#pr8-5-autocheck .autocheck}
 ::: {#pr8-5-ir .input-requirements}
@@ -218,7 +364,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-5-hints">
 
 <summary>Подсказки</summary>
@@ -249,8 +396,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-6-level" class="level"/>
 
 ::: {#pr8-6-task .task}
-Текст задания.
+
+Покажите симуляционно, что оценки дисперсии является состоятельной
+
 :::
+
+```{r p8-6}
+sim4 %>% 
+  map(var) %>%
+  unlist() %>% 
+  tibble(x = 1:1000,
+         y = .) %>% 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_hline(yintercept = 225,
+             color = "red2")
+```
 
 ::: {#pr8-6-autocheck .autocheck}
 ::: {#pr8-6-ir .input-requirements}
@@ -265,7 +426,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-6-hints">
 
 <summary>Подсказки</summary>
@@ -296,8 +458,18 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-7-level" class="level"/>
 
 ::: {#pr8-7-task .task}
-Текст задания.
+
+функция для ДИ
+
 :::
+
+```{r p8-7}
+ci <- function(x) {se <- sd(x) / sqrt(length(x)); return(c(lower = mean(x)-1.96 * se, 
+                                                           mean = mean(x), 
+                                                           upper = mean(x) + 1.96 * se))}
+
+ci(sim1[, 1])
+```
 
 ::: {#pr8-7-autocheck .autocheck}
 ::: {#pr8-7-ir .input-requirements}
@@ -312,7 +484,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-7-hints">
 
 <summary>Подсказки</summary>
@@ -343,8 +516,32 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-8-level" class="level"/>
 
 ::: {#pr8-8-task .task}
-Текст задания.
+
+интерпретация ДИ
+
 :::
+
+```{r p8-8}
+sim1 %>% 
+  apply(2, ci) %>% 
+  t() %>% 
+  as_tibble() %>% 
+  # set_names("lower", "mean", "upper") %>% 
+  mutate(sample = 1:1000,
+         contains = ifelse(lower < 10 & upper > 10, TRUE, FALSE)) -> sim1_ci
+
+sim1_ci %>% 
+  ggplot(aes(x = sample)) +
+  geom_pointrange(aes(y = mean, 
+                      ymin = lower, 
+                      ymax = upper,
+                       color = contains),
+                  alpha = .5) +
+  geom_hline(yintercept = 10) +
+  coord_flip()
+
+sim1_ci$contains %>% mean()
+```
 
 ::: {#pr8-8-autocheck .autocheck}
 ::: {#pr8-8-ir .input-requirements}
@@ -359,7 +556,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-8-hints">
 
 <summary>Подсказки</summary>
@@ -390,8 +588,38 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-9-level" class="level"/>
 
 ::: {#pr8-9-task .task}
-Текст задания.
+
+capture percantage
+
 :::
+
+```{r p8-9}
+# sim1 %>% 
+#   apply(2, ci) %>% 
+#   t() %>% 
+#   as_tibble() %>% 
+#   set_names("lower", "mean", "upper") %>% 
+#   mutate(sample = 1:1000,
+#          contains = ifelse(lower < 10 & upper > 10, TRUE, FALSE)) -> sim1_ci
+
+sim1_ci %>% 
+  mutate(capture = ifelse(mean > lower[1] & mean < upper[1], TRUE, FALSE)) -> sim1_ci
+
+sim1_ci %>% 
+  ggplot(aes(x = sample)) +
+  geom_rect(aes(xmin = 0, xmax = 1000,
+                ymin = lower[1], ymax = upper[1]),
+            fill = "gray70", alpha = .01) +
+  geom_pointrange(aes(y = mean, 
+                      ymin = lower, 
+                      ymax = upper,
+                       color = capture),
+                  alpha = .5) +
+  geom_hline(yintercept = 10) +
+  coord_flip()
+
+sim1_ci$capture %>% mean()
+```
 
 ::: {#pr8-9-autocheck .autocheck}
 ::: {#pr8-9-ir .input-requirements}
@@ -406,7 +634,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-9-hints">
 
 <summary>Подсказки</summary>
@@ -437,8 +666,61 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-10-level" class="level"/>
 
 ::: {#pr8-10-task .task}
-Текст задания.
+
+Повторите симуляции для ДИ и captire percantage на sim2
+
+
 :::
+
+```{r p8-10-ci}
+sim2 %>% 
+  apply(2, ci) %>% 
+  t() %>% 
+  as_tibble() %>% 
+  set_names("lower", "mean", "upper") %>% 
+  mutate(sample = 1:1000,
+         contains = ifelse(lower < 10 & upper > 10, TRUE, FALSE)) -> sim2_ci
+
+sim2_ci %>% 
+  ggplot(aes(x = sample)) +
+  geom_pointrange(aes(y = mean, 
+                      ymin = lower, 
+                      ymax = upper,
+                       color = contains),
+                  alpha = .5) +
+  geom_hline(yintercept = 10) +
+  coord_flip()
+
+sim2_ci$contains %>% mean()
+```
+
+```{r p8-10-captire}
+# sim1 %>% 
+#   apply(2, ci) %>% 
+#   t() %>% 
+#   as_tibble() %>% 
+#   set_names("lower", "mean", "upper") %>% 
+#   mutate(sample = 1:1000,
+#          contains = ifelse(lower < 10 & upper > 10, TRUE, FALSE)) -> sim1_ci
+
+sim2_ci %>% 
+  mutate(capture = ifelse(mean > lower[1] & mean < upper[1], TRUE, FALSE)) -> sim2_ci
+
+sim2_ci %>% 
+  ggplot(aes(x = sample)) +
+  geom_rect(aes(xmin = 0, xmax = 1000,
+                ymin = lower[1], ymax = upper[1]),
+            fill = "gray70", alpha = .01) +
+  geom_pointrange(aes(y = mean, 
+                      ymin = lower, 
+                      ymax = upper,
+                       color = capture),
+                  alpha = .5) +
+  geom_hline(yintercept = 10) +
+  coord_flip()
+
+sim2_ci$capture %>% mean()
+```
 
 ::: {#pr8-10-autocheck .autocheck}
 ::: {#pr8-10-ir .input-requirements}
@@ -453,7 +735,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-10-hints">
 
 <summary>Подсказки</summary>
@@ -484,8 +767,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-11-level" class="level"/>
 
 ::: {#pr8-11-task .task}
-Текст задания.
+
+$$
+t = \frac{\bar X_1 - \bar X_2}{s_{\bar \Delta}}, \quad s_{\bar \Delta} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+$$
+
+
+Существует также и одновыборочный t-тест:
+
+$$
+t = \frac{\bar X - \mu}{s / \sqrt{n}} = \frac{\bar X - \mu}{\text{se}_X}
+$$
+
+Одновыборочный t-тест на первых выборка sim1 и sim3.
+
 :::
+
+```{r p8-11}
+t.test(x = sim1[, 1], mu = 10)
+t.test(x = sim3[, 1], mu = 10)
+```
 
 ::: {#pr8-11-autocheck .autocheck}
 ::: {#pr8-11-ir .input-requirements}
@@ -500,7 +801,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-11-hints">
 
 <summary>Подсказки</summary>
@@ -528,11 +830,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ### #12
 
-<img class="level"/>
+<img id="pr8-12-level" class="level"/>
 
 ::: {#pr8-12-task .task}
-Текст задания.
+
+сходимость t-распределения
+
 :::
+
+```{r p8-12}
+tibble(x = rep(seq(-5, 5, by = .01), 10),
+       df = rep(seq(1, 50, by = 5), each = 1001),
+       dt = dt(x, df = df)) %>% 
+  ggplot(aes(x, dt, color = df)) +
+  geom_line() +
+  geom_function(fun = dnorm, color = "red3")
+```
 
 ::: {#pr8-12-autocheck .autocheck}
 ::: {#pr8-12-ir .input-requirements}
@@ -547,7 +860,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-12-hints">
 
 <summary>Подсказки</summary>
@@ -577,9 +891,22 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <img id="pr8-13-level" class="level"/>
 
-::: task
-Текст задания.
+::: {#pr8-13-task .task}
+
+вероятность ложноположительного вывода при заданном уровне значимости, если верна H0
+
 :::
+
+```{r p8-13}
+pvalsH0 <- list()
+
+for (i in 1:ncol(sim1)) {
+  pvalsH0[[i]] <- t.test(sim1[, i], sim2[, i])$p.value
+}
+
+(unlist(pvalsH0) <.05) %>% mean()
+(unlist(pvalsH0) <.005) %>% mean()
+```
 
 ::: {#pr8-13-autocheck .autocheck}
 ::: {#pr8-13-ir .input-requirements}
@@ -594,7 +921,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-13-hints">
 
 <summary>Подсказки</summary>
@@ -625,8 +953,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-14-level" class="level"/>
 
 ::: {#pr8-14-task .task}
-Текст задания.
+
+вероятность получить значимые различия, если верна H1
+
 :::
+
+```{r p8-14}
+pvalsH1 <- list()
+
+for (i in 1:ncol(sim1)) {
+  pvalsH1[[i]] <- t.test(sim1[, i], sim3[, i])$p.value
+}
+
+(unlist(pvalsH1) <.05) %>% mean()
+(unlist(pvalsH1) <.005) %>% mean()
+```
 
 ::: {#pr8-14-autocheck .autocheck}
 ::: {#pr8-14-ir .input-requirements}
@@ -641,7 +982,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-14-hints">
 
 <summary>Подсказки</summary>
@@ -672,8 +1014,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-15-level" class="level"/>
 
 ::: {#pr8-15-task .task}
-Текст задания.
+
+распределение п-валью при H0 и H1
+
 :::
+
+```{r p8-15}
+pvals <- list()
+
+for (i in 1:ncol(sim1)) {
+  pvals$H0[i] <- t.test(sim1[, i], sim2[, i])$p.value
+  pvals$H1[i] <- t.test(sim1[, i], sim3[, i])$p.value
+}
+
+pvals %>% 
+  as_tibble() %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(value)) +
+  geom_histogram() +
+  facet_wrap(~ name)
+```
 
 ::: {#pr8-15-autocheck .autocheck}
 ::: {#pr8-15-ir .input-requirements}
@@ -688,7 +1048,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-15-hints">
 
 <summary>Подсказки</summary>
@@ -719,8 +1080,37 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-16-level" class="level"/>
 
 ::: {#pr8-16-task .task}
-Текст задания.
+
+зависимость p-value от объема выборки
+
 :::
+
+```{r p8-16}
+# rm(list=ls())
+
+n <- seq(2, 100, by = 5)
+sim5 <- list()
+
+for (i in 1:length(n)) {
+    sim5[[i]] <- matrix(rnorm(n[i]*100), ncol = 100)
+}
+
+sim5 %>% 
+  map(function(x) 
+    {apply(x, 2, function(y) 
+      {t.test(y, mu = .5)$p.value} 
+      ) 
+    } 
+    ) %>% 
+  as_tibble(.name_repair = "universal") %>% 
+  pivot_longer(cols = everything()) %>% 
+  mutate(name = str_remove(name, "\\.{3}") %>% 
+           as.numeric()) %>% 
+  ggplot(aes(value)) +
+  geom_histogram() +
+  facet_wrap(~ name)
+```
+
 
 ::: {#pr8-16-autocheck .autocheck}
 ::: {#pr8-16-ir .input-requirements}
@@ -735,7 +1125,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-16-hints">
 
 <summary>Подсказки</summary>
@@ -766,8 +1157,36 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-17-level" class="level"/>
 
 ::: {#pr8-17-task .task}
-Текст задания.
+
+p-value и размер эффекта
+
 :::
+
+```{r p8-17}
+# rm(list=ls())
+
+ef <- seq(0, 1, by = 0.05)
+sim6 <- list()
+
+for (i in 1:length(ef)) {
+    sim6[[i]] <- matrix(rnorm(50*100, mean = ef[i]), ncol = 100)
+}
+
+sim6 %>% 
+  map(function(x) 
+    {apply(x, 2, function(y) 
+      {t.test(y, mu = 0)$p.value} 
+      ) 
+    } 
+    ) %>% 
+  as_tibble(.name_repair = "universal") %>% 
+  pivot_longer(cols = everything()) %>% 
+  mutate(name = str_remove(name, "\\.{3}") %>% 
+           as.numeric()) %>% 
+  ggplot(aes(value)) +
+  geom_histogram() +
+  facet_wrap(~ name)
+```
 
 ::: {#pr8-17-autocheck .autocheck}
 ::: {#pr8-17-ir .input-requirements}
@@ -782,7 +1201,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-17-hints">
 
 <summary>Подсказки</summary>
@@ -813,8 +1233,44 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-18-level" class="level"/>
 
 ::: {#pr8-18-task .task}
-Текст задания.
+
+распределение размера эффекта
+
+$$
+d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2}}
+$$
+
 :::
+
+```{r p8-18-1}
+# rm(list=ls())
+
+sim5 %>% 
+  map(function(x) 
+    {apply(x, 2, function(y) 
+      {effectsize::cohens_d(y, mu = .5)$Cohens_d} 
+      ) 
+    } 
+    ) %>% 
+  as_tibble(.name_repair = "universal") %>% 
+  pivot_longer(cols = everything()) %>% 
+  mutate(name = str_remove(name, "\\.{3}") %>% 
+           as.numeric()) -> eff_size
+
+eff_size %>% 
+  ggplot(aes(value)) +
+  geom_histogram() +
+  facet_wrap(~ name)
+```
+
+```{r p8-18-2}
+eff_size %>% 
+  filter(name > 15) %>% 
+  ggplot(aes(value)) +
+  geom_histogram() +
+  facet_wrap(~ name)
+```
+
 
 ::: {#pr8-18-autocheck .autocheck}
 ::: {#pr8-18-ir .input-requirements}
@@ -829,7 +1285,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-18-hints">
 
 <summary>Подсказки</summary>
@@ -860,8 +1317,37 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr8-19-level" class="level"/>
 
 ::: {#pr8-19-task .task}
-Текст задания.
+
+Перцентильный бутстрап
+
+
 :::
+
+```{r p8-19}
+# rm(list=ls())
+
+set.seed(123)
+
+# smpl <- rnorm(50)
+
+smpl <- rnorm(50, 10, 15)
+
+hist(smpl, breaks = 30)
+
+matrix(sample(x = smpl, size = 50 * 10000, replace = TRUE), ncol = 10000) -> bs_mat
+
+bs_mat %>% 
+  apply(2, mean) -> bs_means
+
+hist(bs_means, breaks = 20)
+
+quantile(bs_means, .025); mean(smpl); quantile(bs_means, .975)
+
+mean_cl_normal(smpl)
+mean_cl_boot(smpl)
+
+```
+
 
 ::: {#pr8-19-autocheck .autocheck}
 ::: {#pr8-19-ir .input-requirements}
@@ -876,7 +1362,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-19-hints">
 
 <summary>Подсказки</summary>
@@ -902,13 +1389,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+
 ### #20
 
 <img id="pr8-20-level" class="level"/>
 
 ::: {#pr8-20-task .task}
-Текст задания.
+
+медиана бутстрап
+
 :::
+
+```{r p8-20}
+
+bs_mat %>% 
+  apply(2, median) -> bs_medians
+
+quantile(bs_medians, .025); median(smpl); quantile(bs_medians, .975)
+
+```
+
 
 ::: {#pr8-20-autocheck .autocheck}
 ::: {#pr8-20-ir .input-requirements}
@@ -923,7 +1423,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
+
 <details class="hints" id="pr8-20-hints">
 
 <summary>Подсказки</summary>
@@ -949,477 +1450,6 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-## Дополнительные задания {#pr8_add}
-
-### #1
-
-<img id="pr8-21-level" class="level"/>
-
-::: {#pr8-21-task .task}
-Текст задания.
-:::
-
-::: {#pr8-21-autocheck .autocheck}
-::: {#pr8-21-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-21" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-21')">
-
-::: {#pr8-21-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-21-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #2
-
-<img id="pr8-22-level" class="level"/>
-
-::: {#pr8-22-task .task}
-Текст задания.
-:::
-
-::: {#pr8-22-autocheck .autocheck}
-::: {#pr8-22-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-22" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-22')">
-
-::: {#pr8-22-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-22-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #3
-
-<img id="pr8-23-level" class="level"/>
-
-::: {#pr8-23-task .task}
-Текст задания.
-:::
-
-::: {#pr8-23-autocheck .autocheck}
-::: {#pr8-23-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-23" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-23')">
-
-::: {#pr8-23-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-23-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #4
-
-<img id="pr8-24-level" class="level"/>
-
-::: {#pr8-24-task .task}
-Текст задания.
-:::
-
-::: {#pr8-24-autocheck .autocheck}
-::: {#pr8-24-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-24" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-24')">
-
-::: {#pr8-24-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-24-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #5
-
-<img id="pr8-25-level" class="level"/>
-
-::: {#pr8-25-task .task}
-Текст задания.
-:::
-
-::: {#pr8-25-autocheck .autocheck}
-::: {#pr8-25-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-25" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-25')">
-
-::: {#pr8-25-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-25-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #6
-
-<img id="pr8-26-level" class="level"/>
-
-::: {#pr8-26-task .task}
-Текст задания.
-:::
-
-::: {#pr8-26-autocheck .autocheck}
-::: {#pr8-26-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-26" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-26')">
-
-::: {#pr8-26-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-26-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #7
-
-<img id="pr8-27-level" class="level"/>
-
-::: {#pr8-27-task .task}
-Текст задания.
-:::
-
-::: {#pr8-27-autocheck .autocheck}
-::: {#pr8-27-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-27" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-27')">
-
-::: {#pr8-27-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-27-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #8
-
-<img id="pr8-28-level" class="level"/>
-
-::: {#pr8-28-task .task}
-Текст задания.
-:::
-
-::: {#pr8-28-autocheck .autocheck}
-::: {#pr8-28-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-28" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-28')">
-
-::: {#pr8-28-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-28-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #9
-
-<img id="pr8-29-level" class="level"/>
-
-::: {#pr8-29-task .task}
-Текст задания.
-:::
-
-::: {#pr8-29-autocheck .autocheck}
-::: {#pr8-29-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-29" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-29')">
-
-::: {#pr8-29-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-29-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #10
-
-<img id="pr8-30-level" class="level"/>
-
-::: {#pr8-30-task .task}
-Текст задания.
-:::
-
-::: {#pr8-30-autocheck .autocheck}
-::: {#pr8-30-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="pr8-30" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-30')">
-
-::: {#pr8-30-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="pr8-30-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ```{=html}
 <!--- CHANGE pr8 TO pr<n> IN THE LINES BELOW--->
