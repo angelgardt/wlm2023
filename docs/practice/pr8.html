@@ -281,19 +281,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
   <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
   </ul></li>
-  <li><a href="#pr8_add" id="toc-pr8_add" class="nav-link" data-scroll-target="#pr8_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
-  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
-  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
-  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
-  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
-  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -328,7 +315,21 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr8-1-level" class="level"></p>
 <div id="pr8-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Сегодня мы будем активно заниматься симуляциями. Начнем с трёх матриц.</p>
+<p>Сгенерируйте матрицы <code>sim1</code>, <code>sim2</code> и <code>sim3</code>:</p>
+<ul>
+<li>первые две должны содержать по 1000 выборок из 100 наблюдений из генеральной совокупности, в которой параметр распределен <span class="math inline">\(\mathcal N (10, 225)\)</span></li>
+<li>третья должна содержать 1000 выборок из 100 наблюдений из генеральной совокупности, в которой параметр распределен <span class="math inline">\(\mathcal N (15, 225)\)</span></li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr8_files/figure-html/p8-1-dists-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr8-1-autocheck" class="autocheck">
 <div id="pr8-1-ir" class="input-requirements">
@@ -340,7 +341,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-1-hints">
 <summary>
 Подсказки
@@ -367,8 +368,20 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr8-2-level" class="level"></p>
 <div id="pr8-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Пользуясь матрицей <code>sim1</code> визуализируйте центральную предельную теорему.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Центральная предельная теорема
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Центральная предельная теорема утверждает, что распределение выборочных средних с ростом числа выборок стремиться к нормальному распределению.</p>
+</div>
+</div>
 </div>
 <div id="pr8-2-autocheck" class="autocheck">
 <div id="pr8-2-ir" class="input-requirements">
@@ -380,7 +393,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-2-hints">
 <summary>
 Подсказки
@@ -407,7 +420,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="pr8-3-level" class="level"></p>
 <div id="pr8-3-task" class="task">
-<p>Текст задания.</p>
+<p>На лекции мы математически вывели, что среднее арифметическое является несмещенной оценкой математического ожидания генеральной совокупности. Проверьте это на симуляции. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-3-autocheck" class="autocheck">
 <div id="pr8-3-ir" class="input-requirements">
@@ -419,7 +432,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-3-hints">
 <summary>
 Подсказки
@@ -446,7 +459,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="pr8-4-level" class="level"></p>
 <div id="pr8-4-task" class="task">
-<p>Текст задания.</p>
+<p>Мы также математически вывели, что оценка дисперсии <span class="math inline">\(\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n}\)</span> является смещенной, а оценка <span class="math inline">\(\hat \sigma^2 = s^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n-1}\)</span> является несмещенной. Проверьте это на симуляциях. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-4-autocheck" class="autocheck">
 <div id="pr8-4-ir" class="input-requirements">
@@ -458,7 +471,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-4-hints">
 <summary>
 Подсказки
@@ -485,7 +498,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="pr8-5-level" class="level"></p>
 <div id="pr8-5-task" class="task">
-<p>Текст задания.</p>
+<p>Ещё на лекции мы говорили о состоятельности оценки. Покажите с помощью симуляций, что среднее арифметической является состоятельной оценкой математического ожидания генеральной совокупности.</p>
 </div>
 <div id="pr8-5-autocheck" class="autocheck">
 <div id="pr8-5-ir" class="input-requirements">
@@ -497,7 +510,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-5-hints">
 <summary>
 Подсказки
@@ -524,7 +537,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr8-6-level" class="level"></p>
 <div id="pr8-6-task" class="task">
-<p>Текст задания.</p>
+<p>Покажите с помощью симуляций, что <code>s^2</code> является состоятельной оценкой дисперсии генеральной совокупности.</p>
 </div>
 <div id="pr8-6-autocheck" class="autocheck">
 <div id="pr8-6-ir" class="input-requirements">
@@ -536,7 +549,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-6-hints">
 <summary>
 Подсказки
@@ -563,7 +576,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr8-7-level" class="level"></p>
 <div id="pr8-7-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите функцию для вычисления доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
 </div>
 <div id="pr8-7-autocheck" class="autocheck">
 <div id="pr8-7-ir" class="input-requirements">
@@ -575,7 +588,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-7-hints">
 <summary>
 Подсказки
@@ -602,7 +615,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr8-8-level" class="level"></p>
 <div id="pr8-8-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте визуализацию, выражающую статистически корректную интерпретацию доверительного интервала для среднего. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-8-autocheck" class="autocheck">
 <div id="pr8-8-ir" class="input-requirements">
@@ -614,7 +627,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-8-hints">
 <summary>
 Подсказки
@@ -641,7 +654,8 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="pr8-9-level" class="level"></p>
 <div id="pr8-9-task" class="task">
-<p>Текст задания.</p>
+<p>На лекции мы упомянули, что реальную вероятность того, что математическое ожидание попадает в пределы отдельного доверительного интервала называют <em>capture percantage</em>. Эта вероятность оказывается значительно меньше 0.95 для 95% доверительного интервала.</p>
+<p>Постройте визуализацию, показывающую это графически. Используйте матрицу <code>sim1</code>.</p>
 </div>
 <div id="pr8-9-autocheck" class="autocheck">
 <div id="pr8-9-ir" class="input-requirements">
@@ -653,7 +667,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-9-hints">
 <summary>
 Подсказки
@@ -680,7 +694,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="pr8-10-level" class="level"></p>
 <div id="pr8-10-task" class="task">
-<p>Текст задания.</p>
+<p>Повторите построение визуализаций из двух предыдущих заданий для матрицы <code>sim2</code>. Сравните визуализации.</p>
 </div>
 <div id="pr8-10-autocheck" class="autocheck">
 <div id="pr8-10-ir" class="input-requirements">
@@ -692,7 +706,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-10-hints">
 <summary>
 Подсказки
@@ -719,7 +733,15 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-10">#11</h3>
 <p><img id="pr8-11-level" class="level"></p>
 <div id="pr8-11-task" class="task">
-<p>Текст задания.</p>
+<p>Поизучаем закономерности p-value. Для этого нам потребуется какой-то статистический тест — возьмем t-тест Стьютенда как наиболее простой и, вероятно, знакомый:</p>
+<p><span class="math display">\[
+t = \frac{\bar X_1 - \bar X_2}{s_{\bar \Delta}}, \quad s_{\bar \Delta} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\]</span></p>
+<p>Формула выше справедлива для двухвыборочного t-теста (выборки независимы). Существует также и одновыборочный t-тест:</p>
+<p><span class="math display">\[
+t = \frac{\bar X - \mu}{s / \sqrt{n}} = \frac{\bar X - \mu}{\text{se}_X}
+\]</span></p>
+<p>Проведите одновыборочный t-тест на первых выборка <code>sim1</code> и <code>sim3</code>. Дайте статистическую интерпретацию результатов.</p>
 </div>
 <div id="pr8-11-autocheck" class="autocheck">
 <div id="pr8-11-ir" class="input-requirements">
@@ -731,7 +753,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-11-hints">
 <summary>
 Подсказки
@@ -756,9 +778,12 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 </section>
 <section id="section-11" class="level3">
 <h3 class="anchored" data-anchor-id="section-11">#12</h3>
-<p><img class="level"></p>
+<p><img id="pr8-12-level" class="level"></p>
 <div id="pr8-12-task" class="task">
-<p>Текст задания.</p>
+<p>Покажите графически, что t-распределение сходится к стандартному нормальному распределению с ростом объема выборки:</p>
+<p><span class="math display">\[
+t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
+\]</span></p>
 </div>
 <div id="pr8-12-autocheck" class="autocheck">
 <div id="pr8-12-ir" class="input-requirements">
@@ -770,7 +795,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-12-hints">
 <summary>
 Подсказки
@@ -796,8 +821,8 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <section id="section-12" class="level3">
 <h3 class="anchored" data-anchor-id="section-12">#13</h3>
 <p><img id="pr8-13-level" class="level"></p>
-<div class="task">
-<p>Текст задания.</p>
+<div id="pr8-13-task" class="task">
+<p>Выясните с помощью симумляций, какова вероятность получить статистически значимые резульаты при заданном уровне значимости, если верна <span class="math inline">\(H_0\)</span>. Рассчитайте эту вероятность для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim2</code>.</p>
 </div>
 <div id="pr8-13-autocheck" class="autocheck">
 <div id="pr8-13-ir" class="input-requirements">
@@ -809,7 +834,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-13-hints">
 <summary>
 Подсказки
@@ -836,7 +861,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-13">#14</h3>
 <p><img id="pr8-14-level" class="level"></p>
 <div id="pr8-14-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте вероятность получить статистически значимые результаты, если верна <span class="math inline">\(H_1\)</span>, для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim3</code>.</p>
 </div>
 <div id="pr8-14-autocheck" class="autocheck">
 <div id="pr8-14-ir" class="input-requirements">
@@ -848,7 +873,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-14-hints">
 <summary>
 Подсказки
@@ -875,7 +900,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-14">#15</h3>
 <p><img id="pr8-15-level" class="level"></p>
 <div id="pr8-15-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте распределение p-value при справедливости <span class="math inline">\(H_0\)</span> и <span class="math inline">\(H_1\)</span>.</p>
 </div>
 <div id="pr8-15-autocheck" class="autocheck">
 <div id="pr8-15-ir" class="input-requirements">
@@ -887,7 +912,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-15-hints">
 <summary>
 Подсказки
@@ -914,7 +939,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr8-16-level" class="level"></p>
 <div id="pr8-16-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте зависимость распределения p-value от объема выборки.</p>
 </div>
 <div id="pr8-16-autocheck" class="autocheck">
 <div id="pr8-16-ir" class="input-requirements">
@@ -926,7 +951,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-16-hints">
 <summary>
 Подсказки
@@ -953,7 +978,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr8-17-level" class="level"></p>
 <div id="pr8-17-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте зависимость распределения p-value от размера эффекта.</p>
 </div>
 <div id="pr8-17-autocheck" class="autocheck">
 <div id="pr8-17-ir" class="input-requirements">
@@ -965,7 +990,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-17-hints">
 <summary>
 Подсказки
@@ -992,7 +1017,10 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr8-18-level" class="level"></p>
 <div id="pr8-18-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте зависимость распределения размера эффекта от размера выборки.</p>
+<p><span class="math display">\[
+d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2}}
+\]</span></p>
 </div>
 <div id="pr8-18-autocheck" class="autocheck">
 <div id="pr8-18-ir" class="input-requirements">
@@ -1004,7 +1032,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-18-hints">
 <summary>
 Подсказки
@@ -1031,7 +1059,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr8-19-level" class="level"></p>
 <div id="pr8-19-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте 95% доверительный интервал для среднего методом bootstrap.</p>
 </div>
 <div id="pr8-19-autocheck" class="autocheck">
 <div id="pr8-19-ir" class="input-requirements">
@@ -1043,7 +1071,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-19-hints">
 <summary>
 Подсказки
@@ -1070,7 +1098,7 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-19">#20</h3>
 <p><img id="pr8-20-level" class="level"></p>
 <div id="pr8-20-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте 95% доверительный интервал для медианы методом bootstrap.</p>
 </div>
 <div id="pr8-20-autocheck" class="autocheck">
 <div id="pr8-20-ir" class="input-requirements">
@@ -1082,401 +1110,8 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr8-20-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-</section>
-<section id="pr8_add" class="level2">
-<h2 class="anchored" data-anchor-id="pr8_add">Дополнительные задания</h2>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">#1</h3>
-<p><img id="pr8-21-level" class="level"></p>
-<div id="pr8-21-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-21-autocheck" class="autocheck">
-<div id="pr8-21-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-21" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-21')"></p>
-<div id="pr8-21-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-21-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">#2</h3>
-<p><img id="pr8-22-level" class="level"></p>
-<div id="pr8-22-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-22-autocheck" class="autocheck">
-<div id="pr8-22-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-22" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-22')"></p>
-<div id="pr8-22-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-22-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">#3</h3>
-<p><img id="pr8-23-level" class="level"></p>
-<div id="pr8-23-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-23-autocheck" class="autocheck">
-<div id="pr8-23-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-23" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-23')"></p>
-<div id="pr8-23-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-23-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">#4</h3>
-<p><img id="pr8-24-level" class="level"></p>
-<div id="pr8-24-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-24-autocheck" class="autocheck">
-<div id="pr8-24-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-24" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-24')"></p>
-<div id="pr8-24-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-24-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">#5</h3>
-<p><img id="pr8-25-level" class="level"></p>
-<div id="pr8-25-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-25-autocheck" class="autocheck">
-<div id="pr8-25-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-25" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-25')"></p>
-<div id="pr8-25-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-25-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-25" class="level3">
-<h3 class="anchored" data-anchor-id="section-25">#6</h3>
-<p><img id="pr8-26-level" class="level"></p>
-<div id="pr8-26-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-26-autocheck" class="autocheck">
-<div id="pr8-26-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-26" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-26')"></p>
-<div id="pr8-26-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-26-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-26" class="level3">
-<h3 class="anchored" data-anchor-id="section-26">#7</h3>
-<p><img id="pr8-27-level" class="level"></p>
-<div id="pr8-27-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-27-autocheck" class="autocheck">
-<div id="pr8-27-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-27" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-27')"></p>
-<div id="pr8-27-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-27-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-27" class="level3">
-<h3 class="anchored" data-anchor-id="section-27">#8</h3>
-<p><img id="pr8-28-level" class="level"></p>
-<div id="pr8-28-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-28-autocheck" class="autocheck">
-<div id="pr8-28-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-28" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-28')"></p>
-<div id="pr8-28-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-28-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-28" class="level3">
-<h3 class="anchored" data-anchor-id="section-28">#9</h3>
-<p><img id="pr8-29-level" class="level"></p>
-<div id="pr8-29-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-29-autocheck" class="autocheck">
-<div id="pr8-29-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-29" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-29')"></p>
-<div id="pr8-29-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-29-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-29" class="level3">
-<h3 class="anchored" data-anchor-id="section-29">#10</h3>
-<p><img id="pr8-30-level" class="level"></p>
-<div id="pr8-30-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr8-30-autocheck" class="autocheck">
-<div id="pr8-30-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr8-30" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr8-30')"></p>
-<div id="pr8-30-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr8-30-hints">
 <summary>
 Подсказки
 </summary>
