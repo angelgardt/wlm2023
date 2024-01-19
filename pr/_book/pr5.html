@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,12 +17,11 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -47,13 +46,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -84,13 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -100,12 +123,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить",
-    "search-label": "Search"
+    "search-submit-button-title": "Отправить"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -114,9 +136,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -124,168 +146,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html"> 
-<span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html">
+ <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html"> 
-<span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html">
+ <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html"> 
-<span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html">
+ <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html"> 
-<span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html">
+ <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html"> 
-<span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html">
+ <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">P5 // Визуализация данных</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr5.html">P5 // Визуализация данных</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Вступление</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link">P1 // Введение в R. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P2 // Матрицы и списки. Функции</span></a>
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link">P2 // Матрицы и списки. Функции</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">P3 // Датафреймы. Исследование данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P4 // Предобработка данных</span></a>
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link">P4 // Предобработка данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">P5 // Визуализация данных</span></a>
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link active">P5 // Визуализация данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">P7 // Случайный эксперимент. Случайные величины</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">P9 // Описательные статистики. Корреляционный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">P10 // Простая линейная регрессия. Множественная линейная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">P11 // Дисперсионный анализ. Ковариационный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">P12 // Логистическая регрессия. Пуассоновская регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P14 // Смешанные линейные модели</span></a>
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">P14 // Смешанные линейные модели</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P15 // Кластерный анализ</span></a>
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">P15 // Кластерный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">P16 // Анализ главных компонент. Эксплораторный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">P17 // Конфирматорный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Источники</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -336,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="pr5" class="quarto-section-identifier">P5 // Визуализация данных</span></h1>
+<h1 class="title"><span id="pr5" class="quarto-section-identifier d-none d-lg-block">P5 // Визуализация данных</span></h1>
 </div>
 
 
@@ -349,21 +355,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-
 </header>
-
 
 <!--
 REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 -->
+<div class="cell">
+
+</div>
 <section id="pr5_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr5_main">Основные задания</h2>
-<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Описание данных
 </div>
 </div>
@@ -410,6 +417,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <li>Отберите 1000 случайных строк из данных и сохраните их в переменную <code>diam1000</code>. Используйте <code>set.seed(123)</code>.</li>
 </ul>
 </div>
+<div class="cell">
+
+</div>
 <div id="pr5-1-autocheck" class="autocheck">
 <div id="pr5-1-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -443,11 +453,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/2a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/2a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -455,11 +461,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/2b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/2b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -495,11 +497,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/3a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/3a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -507,11 +505,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/3b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/3b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -545,11 +539,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <p>Сгруппируйте бриллианты по уровню чистоты (<code>clarity</code>), отобразив эту переменную с помощью цвета.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -583,11 +573,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/5a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/5a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -595,11 +581,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/5b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/5b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -637,11 +619,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/6a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/6a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Мда… Получилось какое-то дикое месиво. Давайте немного причешем визуализацию. Например, подправим расположение точек, чтобы они лежали не на одной прямой, а рядом друг с другом — ведь небольшие отклонения вправо-влево по оси <code>x</code> для нас не имеют значения, так как по горизонтальной оси расположена категориальная переменная.</p>
@@ -650,22 +628,14 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/6b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/6b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Стало гораздо приятнее. Однако вы видим, что горизонтальные линии, обозначающие границы доверительных интервалов, слишком длинные и касаются друг друга. Надо обеспечить их личным пространством.</p>
 <p>с. Уменьшите ширину горизонтальный линий на границах доверительных интервалов, чтобы они не касались друг друга.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/6c-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/6c-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -702,11 +672,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/7a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/7a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -714,11 +680,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/7b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/7b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -754,11 +716,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-8-autocheck" class="autocheck">
@@ -790,11 +748,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <p>Задайте русские названия осей и легенды, а также добавьте заголовок, подзаголовок и подпись на график.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -823,6 +777,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <div id="pr5-10-task" class="task">
 <p>Ну, вот мы и построили публикабельную визуализацию. Чтобы её можно было отправить куда-либо — в журнал, на постер, в презентацию — её необходимо экспортировать.</p>
 <p>Экспортируйте построенный график в формате JPEG, размером 20×20 см в таком разрешении, чтобы он качественно смотрелся в печатном виде.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="pr5-10-autocheck" class="autocheck">
 <div id="pr5-10-ir" class="input-requirements">
@@ -854,6 +811,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <p>Мы задали тему графика внутри кода его построения. В таком случае, когда мы начнем строить другой график, будет импользована дефолтная серая тема.</p>
 <p>Установите черно-белую тему на всю сессию работы R.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="pr5-11-autocheck" class="autocheck">
 <div id="pr5-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -883,11 +843,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/12a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/12a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>На такой визуализации мы видим распределение цены в целом. Однаконам может быть интересно распределение цены в зависимости от каких-либо других характеристик.</p>
@@ -896,11 +852,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/12b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/12b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Симпатишно, но не то чтобы очень интерпретабельно. Надо найти другой способ отображения группировки.</p>
@@ -909,11 +861,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/12c-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/12c-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -949,11 +897,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/13a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/13a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -961,11 +905,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/13b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/13b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -995,11 +935,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-14-autocheck" class="autocheck">
@@ -1029,11 +965,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <p>Визуализируйте распределение цены бриллиантов в зависимости от категории чистоты с помощью ящиков с усами.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/15-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/15-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -1079,11 +1011,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/16a-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/16a-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="a">
@@ -1091,11 +1019,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/16b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/16b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="3" type="a">
@@ -1103,11 +1027,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/16c-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/16c-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -1151,11 +1071,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <p>Визуализируйте взаимосвязи между пунктами шкалы predictability с помощью корреляционный матрицы.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/17-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/17-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -1202,11 +1118,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/18-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/18-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-18-autocheck" class="autocheck">
@@ -1244,6 +1156,9 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 <ol type="a">
 <li>Сгенерируйте 20 выборок по 30 наблюдений из нормального распределения (<code>rnorm()</code>) с параметрами <code>mean = 5</code> и <code>sd = 2</code>. Сохраните результат в матрицу <code>sim</code> размером 30×20. Используйте <code>set.seed(999)</code>.</li>
 </ol>
+<div class="cell">
+
+</div>
 <ol start="2" type="a">
 <li>Визуализируйтер распределение сгенерированной случайной величины в каждой из выборок на одном графике.</li>
 </ol>
@@ -1254,11 +1169,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 ℹ Using compatibility `.name_repair`.</code></pre>
 </div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/19b-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/19b-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -1290,11 +1201,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/20-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/20-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-20-autocheck" class="autocheck">
@@ -1342,11 +1249,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/21-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/21-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-21-autocheck" class="autocheck">
@@ -1381,11 +1284,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/22-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/22-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-22-autocheck" class="autocheck">
@@ -1420,11 +1319,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/23-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/23-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-23-autocheck" class="autocheck">
@@ -1473,11 +1368,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/24-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/24-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-24-autocheck" class="autocheck">
@@ -1512,11 +1403,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/25-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/25-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-25-autocheck" class="autocheck">
@@ -1550,11 +1437,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/26-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/26-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-26-autocheck" class="autocheck">
@@ -1590,11 +1473,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/27-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/27-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-27-autocheck" class="autocheck">
@@ -1639,11 +1518,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/28-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-28-autocheck" class="autocheck">
@@ -1688,11 +1563,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/29-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/29-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-29-autocheck" class="autocheck">
@@ -1723,11 +1594,7 @@ REPLACE ALL pr5 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="pr5_files/figure-html/30-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<p><img src="pr5_files/figure-html/30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div id="pr5-30-autocheck" class="autocheck">
@@ -1814,33 +1681,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1907,15 +1747,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1942,23 +1780,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -1994,9 +1818,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2006,17 +1831,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2031,248 +1847,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        typesetMath(container);
-        return container.innerHTML
-      } else {
-        typesetMath(note);
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      typesetMath(note);
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -2314,18 +1888,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pr4.html" class="pagination-link  aria-label=" p4="" предобработка="" данных"="">
+      <a href="./pr4.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P4 // Предобработка данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pr7.html" class="pagination-link" aria-label="P7 // Случайный эксперимент. Случайные величины">
+      <a href="./pr7.html" class="pagination-link">
         <span class="nav-page-text">P7 // Случайный эксперимент. Случайные величины</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 

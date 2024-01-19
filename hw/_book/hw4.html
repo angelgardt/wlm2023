@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
 </style>
@@ -50,13 +50,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -66,10 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить",
-    "search-label": "Search"
+    "search-submit-button-title": "Отправить"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
 
 </head>
@@ -78,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -88,168 +82,152 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html"> 
-<span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html">
+ <span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html"> 
-<span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html">
+ <span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html"> 
-<span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html">
+ <span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html"> 
-<span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html">
+ <span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html"> 
-<span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html">
+ <span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">HW4 // Предобработка данных</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw4.html">HW4 // Предобработка данных</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Вступление</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link">HW1 // Введение в R. Типы данных. Векторы</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW2 // Матрицы и списки. Функции</span></a>
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link">HW2 // Матрицы и списки. Функции</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">HW3 // Датафреймы. Исследование данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">HW4 // Предобработка данных</span></a>
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link active">HW4 // Предобработка данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW5 // Визуализация данных</span></a>
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">HW5 // Визуализация данных</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">HW6 // Случайный эксперимент. Случайные величины</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">HW8 // Описательные статистики. Корреляционный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">HW9 // Простая линейная регрессия. Множественная линейная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">HW10 // Дисперсионный анализ. Ковариационный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">HW11 // Логистическая регрессия. Пуассоновская регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">HW13 // Смешанные линейные модели</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">HW14 // Кластерный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">HW16 // Конфирматорный факторный анализ</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Источники</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -285,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="hw4" class="quarto-section-identifier">HW4 // Предобработка данных</span></h1>
+<h1 class="title"><span id="hw4" class="quarto-section-identifier d-none d-lg-block">HW4 // Предобработка данных</span></h1>
 </div>
 
 
@@ -298,19 +276,20 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-
 </header>
-
 
 <!--
 REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 -->
-<div class="callout callout-style-simple callout-note callout-titled">
+<div class="cell">
+
+</div>
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Пакет с пакетами
 </div>
 </div>
@@ -320,12 +299,12 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 </div>
 <section id="hw4_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw4_main">Основные задания</h2>
-<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Описание данных
 </div>
 </div>
@@ -343,6 +322,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-1-task" class="task">
 <p>Скачайте <a href="https://drive.google.com/uc?export=download&amp;id=1KH8bI3CHaZbRf3VfUMPJ4-81qeZewR92">архив с данными</a>. Разархивируйте файлы в проект курса. Импортируйте данные в R. У вас должно получиться 4 датасета с данными с 4-х листов Excel-файлов. Назовите их <code>base_time</code>, <code>base_acc</code>, <code>super_time</code> и <code>suoer_acc</code> для времени реакции и точности и условиях с базовыми и суперординатными категориями соответственно.</p>
 <p>Возникли ли какие-то странности?</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-1-autocheck" class="autocheck">
 <div id="hw4-1-ir" class="input-requirements">
@@ -389,6 +371,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-2-task" class="task">
 <p>Проверьте, совпадает ли количество строк в получившихся датасетах.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-2-autocheck" class="autocheck">
 <div id="hw4-2-ir" class="input-requirements">
 <p>Для самопроверки введите число строк, если оно совпадает во всех датасетах, и <code>нет</code>, если оно отличается хотя бы в одном.</p>
@@ -427,6 +412,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p><img id="hw4-3-level" class="level"></p>
 <div id="hw4-3-task" class="task">
 <p>Выгрузите соцдем, содержащийся в данных, в отдельный датасет. Соедините обе его части в один объект.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-3-autocheck" class="autocheck">
 <div id="hw4-3-ir" class="input-requirements">
@@ -472,6 +460,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-4-task" class="task">
 <p>Удалите пропущенные значения из данных соцдема, если они есть, и задайте имена колонок — <code>sex</code> и <code>age</code> соответственно.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-4-autocheck" class="autocheck">
 <div id="hw4-4-ir" class="input-requirements">
 <p>Для самопроверки введите общее количество испытуемых в выборке эксперимента.</p>
@@ -510,6 +501,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p><img id="hw4-5-level" class="level"></p>
 <div id="hw4-5-task" class="task">
 <p>Удалите из данных эксперимента лишние строки и столбцы. В объектах должно остаться только то, что относится к экспериментальным данным. Лишними считайте те столбцы, которые не имеют названия, и те строки, в которых не указан идентификатор респондента. Перезапишите имеющиеся объекты.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-5-autocheck" class="autocheck">
 <div id="hw4-5-ir" class="input-requirements">
@@ -555,6 +549,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-6-task" class="task">
 <p>Создайте в датасетах эксперимента новую переменную <code>group</code>, содержащую информацию об уровне категории — базовая (<code>base</code>) или суперординатная (<code>super</code>).</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-6-autocheck" class="autocheck">
 <div id="hw4-6-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -594,6 +591,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-7-task" class="task">
 <p>Соедините датасеты с данными о точности и времени реакции друг с другом — <code>base_acc</code> с <code>super_acc</code> и <code>base_time</code> с <code>super_time</code>. Назовите новые датасеты <code>acc</code> и <code>time</code> соответственно.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-7-autocheck" class="autocheck">
 <div id="hw4-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -626,6 +626,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <li><code>reaction_time/accuracy</code> — время реакции / точность (в зависимости от датасета)</li>
 </ul>
 <p>При необходимости переименуйте столбцы.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-8-autocheck" class="autocheck">
 <div id="hw4-8-ir" class="input-requirements">
@@ -664,6 +667,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 </ul>
 <p>Сохраните результат в переменную <code>hybrid</code>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-9-autocheck" class="autocheck">
 <div id="hw4-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -688,6 +694,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p><img id="hw4-10-level" class="level"></p>
 <div id="hw4-10-task" class="task">
 <p>На получившемся датасете рассчитайте среднее, минимальное и максимальное время реакции, а также его стандартное отклонение, по всем сочетаниям независимых переменных.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-10-autocheck" class="autocheck">
 <div id="hw4-10-ir" class="input-requirements">
@@ -731,6 +740,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <div id="hw4-11-task" class="task">
 <p>В нашем случае названия файлов данных, которые у нас есть, содержат названия экспериментальных условий (<code>base.xlsx</code> и <code>super.xlsx</code>). Нам повезло, что эти название короткие, простые и их всего два — мы можем задать их вручную. Однако так случается не всегда, и хорошо автоматизировать этот процесс, чтобы не допустить лишних опечаток.</p>
 <p>Напишите код, с помощью которого можно вытащить вектор с экспериментальными условиями из названий файлов.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-11-autocheck" class="autocheck">
 <div id="hw4-11-ir" class="input-requirements">
@@ -782,6 +794,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p>Тело функции соберите из кода, который вы написали в ходе выполнения задания основной части.</p>
 <p>При необходимости можете использовать написанную функцию в какой-либо другой последовательности предобработки. По итогам предобработки должен получиться датасет, идентичный датасету <code>hybrid</code>, полученному в <a href="#hw4-9-title">задании 9</a>.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-12-autocheck" class="autocheck">
 <div id="hw4-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -814,12 +829,12 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 </details>
 </details>
 </div>
-<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Генерируем координаты
 </div>
 </div>
@@ -829,7 +844,7 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <center>
 <figure class="figure">
 <img src="pics/vs-grid.jpg" width="100%" class="figure-img">
-<figcaption>
+<figcaption class="figure-caption">
 Общая схема координатной сетки. Разрешение экрана — 1920×1080 пикселей. Координаты центра экрана — [0, 0]. Отступ от края экрана 100 пикселей с каждой стороны.
 </figcaption>
 </figure>
@@ -838,7 +853,7 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <center>
 <figure class="figure">
 <img src="pics/vs-grid-2.jpg" width="100%" class="figure-img">
-<figcaption>
+<figcaption class="figure-caption">
 Общая схема координатной сетки с расположением центров стимулов.
 </figcaption>
 </figure>
@@ -847,19 +862,19 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <center>
 <figure class="figure">
 <img src="pics/vs-grid-3.jpg" width="100%" class="figure-img">
-<figcaption>
+<figcaption class="figure-caption">
 Общая схема координатной сетки с расположением центром стимулов. Синим обозначены области, в которых стимулы могут свободно колебаться. Красным обозначен зазор, препятствующий столкновению стимулов.
 </figcaption>
 </figure>
 </center>
 </div>
 </div>
-<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-warning callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Исходные параметры для генерации координатной сетки
 </div>
 </div>
@@ -886,6 +901,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p>Рассчитайте координаты центров стимулов.</p>
 <p>Необходимо получить два вектора — <code>centers_x</code> и <code>centers_y</code> — которые будут содержать координаты центров стимулов по <code>x</code> и по <code>y</code> соответственно. Количество значений в векторах должно совпадать с количетвом стимулов по ширине и высоте экрана соответственно.</p>
 <p>Исходными параметрами, необходимым для расчета координат центра являются <code>res_x</code>, <code>res_y</code>, <code>margin_x</code>, <code>margin_y</code>, <code>n_x</code>, <code>n_y</code>.</p>
+</div>
+<div class="cell">
+
 </div>
 <div id="hw4-13-autocheck" class="autocheck">
 <div id="hw4-13-ir" class="input-requirements">
@@ -952,6 +970,9 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 <p>Исходными параметрами, необходимым для расчета максимального отклонения являются <code>gap</code>, <code>stim_size_x</code>, <code>stim_size_y</code>, а также расстояние между центрами стимулов.</p>
 <p>Если в ходе вычислений получаются нецелые значения, округлите их до ближайшего целого вниз.</p>
 </div>
+<div class="cell">
+
+</div>
 <div id="hw4-14-autocheck" class="autocheck">
 <div id="hw4-14-ir" class="input-requirements">
 <p>Для самопроверки введите через запятую значения <code>jitter_x</code> и <code>jitter_y</code>. Проверка игнорирует все пробелы.</p>
@@ -1000,7 +1021,7 @@ REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <colgroup>
 <col style="width: 2%">
 <col style="width: 5%">
@@ -1856,33 +1877,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1949,15 +1943,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1984,23 +1976,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -2036,9 +2014,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2048,17 +2027,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2073,248 +2043,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        typesetMath(container);
-        return container.innerHTML
-      } else {
-        typesetMath(note);
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      typesetMath(note);
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -2356,18 +2084,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./hw3.html" class="pagination-link  aria-label=" hw3="" датафреймы.="" исследование="" данных"="">
+      <a href="./hw3.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW3 // Датафреймы. Исследование данных</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./hw5.html" class="pagination-link" aria-label="HW5 // Визуализация данных">
+      <a href="./hw5.html" class="pagination-link">
         <span class="nav-page-text">HW5 // Визуализация данных</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 
