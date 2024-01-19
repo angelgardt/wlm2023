@@ -129,15 +129,15 @@ function deploy() {
 	    }
 	    
 	    ### render analytics
-	    {
-	      render_analytics
-	    } || {
-  	    printf "${RED}\n=====\n=====\n${NC}"
-  	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
-  	    printf "${RED}Analytics render error\n${NC}"
-  	    printf "${RED}=====\n=====\n\n${NC}"
-  	    exit
-	    }
+# 	    {
+# 	      render_analytics
+# 	    } || {
+#   	    printf "${RED}\n=====\n=====\n${NC}"
+#   	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+#   	    printf "${RED}Analytics render error\n${NC}"
+#   	    printf "${RED}=====\n=====\n\n${NC}"
+#   	    exit
+# 	    }
 	
 	  fi
 		
@@ -167,15 +167,15 @@ function deploy() {
 	  }
 	  
 	  ### update analytics
-	  {
-	    update_analytics
-	  } || {
-	    printf "${RED}\n=====\n=====\n${NC}"
-	    printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
-	    printf "${RED}Analytics update error\n${NC}"
-	    printf "${RED}=====\n=====\n\n${NC}"
-	    exit
-	  }
+	  # {
+	  #   update_analytics
+	  # } || {
+	  #   printf "${RED}\n=====\n=====\n${NC}"
+	  #   printf "${RED}DEPLOYMENT NOT COMPLETED\n${NC}"
+	  #   printf "${RED}Analytics update error\n${NC}"
+	  #   printf "${RED}=====\n=====\n\n${NC}"
+	  #   exit
+	  # }
 	  
 	fi
 	

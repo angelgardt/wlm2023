@@ -51,6 +51,7 @@ gs4_auth("a.n.angelgardt@gmail.com")
 
 ## classroom
 load("/home/nglgrdt/tokens/classroom_token.Rdata")
+# load("/home/angelgardt/tokens/classroom_token.Rdata")
 auth_from_secret(access_token = token$credentials$access_token,
                  refresh_token = token$credentials$refresh_token)
 ```

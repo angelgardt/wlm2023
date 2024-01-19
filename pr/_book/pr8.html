@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -59,13 +65,48 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -73,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -83,152 +124,168 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr8.html">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr1.html" class="sidebar-item-text sidebar-link">P1 // Введение в R. Типы данных. Векторы</a>
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr2.html" class="sidebar-item-text sidebar-link">P2 // Матрицы и списки. Функции</a>
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P2 // Матрицы и списки. Функции</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr3.html" class="sidebar-item-text sidebar-link">P3 // Датафреймы. Исследование данных</a>
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr4.html" class="sidebar-item-text sidebar-link">P4 // Предобработка данных</a>
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P4 // Предобработка данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr5.html" class="sidebar-item-text sidebar-link">P5 // Визуализация данных</a>
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P5 // Визуализация данных</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr7.html" class="sidebar-item-text sidebar-link">P7 // Случайный эксперимент. Случайные величины</a>
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr8.html" class="sidebar-item-text sidebar-link active">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a>
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr9.html" class="sidebar-item-text sidebar-link">P9 // Описательные статистики. Корреляционный анализ</a>
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr10.html" class="sidebar-item-text sidebar-link">P10 // Простая линейная регрессия. Множественная линейная регрессия</a>
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr11.html" class="sidebar-item-text sidebar-link">P11 // Дисперсионный анализ. Ковариационный анализ</a>
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr12.html" class="sidebar-item-text sidebar-link">P12 // Логистическая регрессия. Пуассоновская регрессия</a>
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr13.html" class="sidebar-item-text sidebar-link">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</a>
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr14.html" class="sidebar-item-text sidebar-link">P14 // Смешанные линейные модели</a>
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P14 // Смешанные линейные модели</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr15.html" class="sidebar-item-text sidebar-link">P15 // Кластерный анализ</a>
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P15 // Кластерный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr16.html" class="sidebar-item-text sidebar-link">P16 // Анализ главных компонент. Эксплораторный факторный анализ</a>
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr17.html" class="sidebar-item-text sidebar-link">P17 // Конфирматорный факторный анализ</a>
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -266,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="pr8" class="quarto-section-identifier d-none d-lg-block">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></h1>
+<h1 class="title"><span id="pr8" class="quarto-section-identifier">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></h1>
 </div>
 
 
@@ -279,17 +336,13 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!--
 REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 -->
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <section id="pr8_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr8_main">Основные задания</h2>
 <section id="section" class="level3">
@@ -305,11 +358,12 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="pr8_files/figure-html/p8-1-dists-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="pr8_files/figure-html/p8-1-dists-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<div class="cell">
-
 </div>
 <div id="pr8-1-autocheck" class="autocheck">
 <div id="pr8-1-ir" class="input-requirements">
@@ -349,12 +403,12 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p><img id="pr8-2-level" class="level"></p>
 <div id="pr8-2-task" class="task">
 <p>Пользуясь матрицей <code>sim1</code> визуализируйте центральную предельную теорему.</p>
-<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Центральная предельная теорема
 </div>
 </div>
@@ -362,12 +416,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p>Центральная предельная теорема утверждает, что распределение выборочных средних с ростом числа выборок стремиться к нормальному распределению.</p>
 </div>
 </div>
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-2-autocheck" class="autocheck">
 <div id="pr8-2-ir" class="input-requirements">
@@ -408,12 +456,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <div id="pr8-3-task" class="task">
 <p>На лекции мы математически вывели, что среднее арифметическое является несмещенной оценкой математического ожидания генеральной совокупности. Проверьте это на симуляции. Используйте матрицу <code>sim1</code>.</p>
 </div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <div id="pr8-3-autocheck" class="autocheck">
 <div id="pr8-3-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -452,12 +494,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p><img id="pr8-4-level" class="level"></p>
 <div id="pr8-4-task" class="task">
 <p>Мы также математически вывели, что оценка дисперсии <span class="math inline">\(\hat \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n}\)</span> является смещенной, а оценка <span class="math inline">\(\hat \sigma^2 = s^2 = \frac{\sum_{i=1}^n (x_i - \bar x)}{n-1}\)</span> является несмещенной. Проверьте это на симуляциях. Используйте матрицу <code>sim1</code>.</p>
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-4-autocheck" class="autocheck">
 <div id="pr8-4-ir" class="input-requirements">
@@ -498,9 +534,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <div id="pr8-5-task" class="task">
 <p>Ещё на лекции мы говорили о состоятельности оценки. Покажите с помощью симуляций, что среднее арифметической является состоятельной оценкой математического ожидания генеральной совокупности.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-5-autocheck" class="autocheck">
 <div id="pr8-5-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -539,9 +572,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p><img id="pr8-6-level" class="level"></p>
 <div id="pr8-6-task" class="task">
 <p>Покажите с помощью симуляций, что <code>s^2</code> является состоятельной оценкой дисперсии генеральной совокупности.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-6-autocheck" class="autocheck">
 <div id="pr8-6-ir" class="input-requirements">
@@ -582,9 +612,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <div id="pr8-7-task" class="task">
 <p>Напишите функцию для вычисления доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-7-autocheck" class="autocheck">
 <div id="pr8-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -623,9 +650,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p><img id="pr8-8-level" class="level"></p>
 <div id="pr8-8-task" class="task">
 <p>Постройте визуализацию, выражающую статистически корректную интерпретацию доверительного интервала для среднего. Используйте матрицу <code>sim1</code>.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-8-autocheck" class="autocheck">
 <div id="pr8-8-ir" class="input-requirements">
@@ -667,9 +691,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p>На лекции мы упомянули, что реальную вероятность того, что математическое ожидание попадает в пределы отдельного доверительного интервала называют <em>capture percantage</em>. Эта вероятность оказывается значительно меньше 0.95 для 95% доверительного интервала.</p>
 <p>Постройте визуализацию, показывающую это графически. Используйте матрицу <code>sim1</code>.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-9-autocheck" class="autocheck">
 <div id="pr8-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -708,12 +729,6 @@ REPLACE ALL pr8 TO pr<n> WITH MATCH CASE
 <p><img id="pr8-10-level" class="level"></p>
 <div id="pr8-10-task" class="task">
 <p>Повторите построение визуализаций из двух предыдущих заданий для матрицы <code>sim2</code>. Сравните визуализации.</p>
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-10-autocheck" class="autocheck">
 <div id="pr8-10-ir" class="input-requirements">
@@ -762,9 +777,6 @@ t = \frac{\bar X - \mu}{s / \sqrt{n}} = \frac{\bar X - \mu}{\text{se}_X}
 \]</span></p>
 <p>Проведите одновыборочный t-тест на первых выборка <code>sim1</code> и <code>sim3</code>. Дайте статистическую интерпретацию результатов.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-11-autocheck" class="autocheck">
 <div id="pr8-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -807,9 +819,6 @@ t = \frac{\bar X - \mu}{s / \sqrt{n}} = \frac{\bar X - \mu}{\text{se}_X}
 t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 \]</span></p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-12-autocheck" class="autocheck">
 <div id="pr8-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -848,9 +857,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 <p><img id="pr8-13-level" class="level"></p>
 <div id="pr8-13-task" class="task">
 <p>Выясните с помощью симумляций, какова вероятность получить статистически значимые резульаты при заданном уровне значимости, если верна <span class="math inline">\(H_0\)</span>. Рассчитайте эту вероятность для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim2</code>.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-13-autocheck" class="autocheck">
 <div id="pr8-13-ir" class="input-requirements">
@@ -891,9 +897,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 <div id="pr8-14-task" class="task">
 <p>Рассчитайте вероятность получить статистически значимые результаты, если верна <span class="math inline">\(H_1\)</span>, для случаев <span class="math inline">\(\alpha = 0.05\)</span> и <span class="math inline">\(\alpha = 0.005\)</span>. Используйте матрицы <code>sim1</code> и <code>sim3</code>.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-14-autocheck" class="autocheck">
 <div id="pr8-14-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -932,9 +935,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 <p><img id="pr8-15-level" class="level"></p>
 <div id="pr8-15-task" class="task">
 <p>Визуализируйте распределение p-value при справедливости <span class="math inline">\(H_0\)</span> и <span class="math inline">\(H_1\)</span>.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-15-autocheck" class="autocheck">
 <div id="pr8-15-ir" class="input-requirements">
@@ -975,9 +975,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 <div id="pr8-16-task" class="task">
 <p>Визуализируйте зависимость распределения p-value от объема выборки.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-16-autocheck" class="autocheck">
 <div id="pr8-16-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -1016,9 +1013,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 <p><img id="pr8-17-level" class="level"></p>
 <div id="pr8-17-task" class="task">
 <p>Визуализируйте зависимость распределения p-value от размера эффекта.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-17-autocheck" class="autocheck">
 <div id="pr8-17-ir" class="input-requirements">
@@ -1062,12 +1056,6 @@ t(n-1) \underset{n \to \infty}{\to} \mathcal N (0,1)
 d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2}}
 \]</span></p>
 </div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <div id="pr8-18-autocheck" class="autocheck">
 <div id="pr8-18-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -1107,9 +1095,6 @@ d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 -
 <div id="pr8-19-task" class="task">
 <p>Постройте 95% доверительный интервал для среднего методом bootstrap.</p>
 </div>
-<div class="cell">
-
-</div>
 <div id="pr8-19-autocheck" class="autocheck">
 <div id="pr8-19-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
@@ -1148,9 +1133,6 @@ d = \frac{\bar X_1 - \bar X_2}{s}, \quad s = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 -
 <p><img id="pr8-20-level" class="level"></p>
 <div id="pr8-20-task" class="task">
 <p>Постройте 95% доверительный интервал для медианы методом bootstrap.</p>
-</div>
-<div class="cell">
-
 </div>
 <div id="pr8-20-autocheck" class="autocheck">
 <div id="pr8-20-ir" class="input-requirements">
@@ -1236,6 +1218,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1302,13 +1311,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1335,9 +1346,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1373,10 +1398,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1386,8 +1410,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1402,6 +1435,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1443,17 +1708,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pr7.html" class="pagination-link">
+      <a href="./pr7.html" class="pagination-link  aria-label=" p7="" случайный="" эксперимент.="" случайные="" величины"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P7 // Случайный эксперимент. Случайные величины</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pr9.html" class="pagination-link">
+      <a href="./pr9.html" class="pagination-link" aria-label="P9 // Описательные статистики. Корреляционный анализ">
         <span class="nav-page-text">P9 // Описательные статистики. Корреляционный анализ</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

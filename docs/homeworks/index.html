@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,11 +65,18 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
@@ -277,12 +284,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-contents">
     <p class="author">Антон Ангельгардт <a href="mailto:anton.angelgardt@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             HSE UX LAB, HSE University
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -290,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Опубликовано</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Jan 11, 2024</p>
+      <p class="date">Jan 19, 2024</p>
     </div>
   </div>
   
@@ -307,26 +314,7 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="unnumbered">Вступление</h1><p><img src="pics/hw-cover.png" title="HW // WLM 2023" class="quarto-cover-image img-fluid"></p>
 <p>В этой книжке собраны домашки с курса WLM 2023.</p>
 <p>Разборы домашек опубликованы <a href="https://youtube.com/playlist?list=PL3GWEmQN96bvT5WQ45rxUgj3L2DMSJ-E3&amp;si=-C8a7c6kpfxHvhQw">здесь</a>.</p>
-<p>Записи консультаций опубликованы <a href="https://youtube.com/playlist?list=PL3GWEmQN96buzntjSglyH3gXbc2nyhyRp&amp;si=731cQXHxrNQtnrVm">здесь</a>.<br>
-</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 240 × 6
-   task   level  has_autocheck autocheck_answer                    hw        n
-   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                               &lt;chr&gt; &lt;dbl&gt;
- 1 hw1-1  easy   True          85.62193,60.32914                   hw1       1
- 2 hw1-2  easy   True          12080.19                            hw1       2
- 3 hw1-3  medium True          11258.1                             hw1       3
- 4 hw1-4  easy   True          178                                 hw1       4
- 5 hw1-5  medium True          character,10                        hw1       5
- 6 hw1-6  medium True          167                                 hw1       6
- 7 hw1-7  easy   True          42.42735,124.2649,79.84587,79.95837 hw1       7
- 8 hw1-8  medium True          68.77115,94.24174                   hw1       8
- 9 hw1-9  medium False         &lt;NA&gt;                                hw1       9
-10 hw1-10 hard   False         &lt;NA&gt;                                hw1      10
-# ℹ 230 more rows</code></pre>
-</div>
-</div>
+<p>Записи консультаций опубликованы <a href="https://youtube.com/playlist?list=PL3GWEmQN96buzntjSglyH3gXbc2nyhyRp&amp;si=731cQXHxrNQtnrVm">здесь</a>.</p>
 
 
 </section>
@@ -604,27 +592,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -639,10 +606,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -651,8 +622,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

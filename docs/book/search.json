@@ -24,17 +24,17 @@
     "href": "index.html#thanks",
     "title": "WLM 2023",
     "section": "Благодарности",
-    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.1.2 (2021-11-01)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 22.04.2 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0\nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=ru_RU.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=ru_RU.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=ru_RU.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=ru_RU.UTF-8 LC_IDENTIFICATION=C       \n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.2 compiler_4.1.2    fastmap_1.1.1     cli_3.6.2        \n [5] tools_4.1.2       htmltools_0.5.6   rstudioapi_0.15.0 rmarkdown_2.25   \n [9] knitr_1.44        jsonlite_1.8.7    xfun_0.40         digest_0.6.33    \n[13] rlang_1.1.2       evaluate_0.22",
+    "text": "Благодарности\n\n\nSession info\n\nsessionInfo()\n\nR version 4.3.1 (2023-06-16)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 22.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       \n\ntime zone: Europe/Moscow\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.2 compiler_4.3.1    fastmap_1.1.1     cli_3.6.1        \n [5] tools_4.3.1       htmltools_0.5.5   rmarkdown_2.21    knitr_1.42       \n [9] jsonlite_1.8.4    xfun_0.39         digest_0.6.31     rlang_1.1.1      \n[13] evaluate_0.21",
     "crumbs": [
       "Вступление"
     ]
   },
   {
-    "objectID": "signs.html#book_labels",
-    "href": "signs.html#book_labels",
+    "objectID": "signs.html",
+    "href": "signs.html",
     "title": "Обозначения",
-    "section": "Лейблы",
-    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\n\n\n\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\n\n\n\nДля тех, кто разобрался с основами и хочет пойти дальше.\n\n\n\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\n\n\n\nДля тех, кто преисполнился и хочет жести.",
+    "section": "",
+    "text": "Лейблы\nВ каждой главе на разделах и подразделах стоят лейблы, которые маркируют уровень сложности материала:\nДля начинающих и тех, кто пока не чувствует себя уверенно в самых основах.\nДля тех, кто разобрался с основами и хочет пойти дальше.\nДля тех, кто уверенно себя чувствует в материале и хочет разбираться в деталях.\nДля тех, кто преисполнился и хочет жести.",
     "crumbs": [
       "Обозначения"
     ]
@@ -70,11 +70,21 @@
     ]
   },
   {
+    "objectID": "r-basics.html",
+    "href": "r-basics.html",
+    "title": "1  Основы R",
+    "section": "",
+    "text": "1.1 Установка\nЧтобы стать счастливым пользователем R, надо установить на свой комп две программы:\nПричем во избежание возможных проблем, надо поставить программы именно в этом порядке — сначала R, а потом RStudio, иначе IDE может на найти R и будет ругаться.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
     "objectID": "r-basics.html#rbasics-rinstall",
     "href": "r-basics.html#rbasics-rinstall",
     "title": "1  Основы R",
-    "section": "1.1 Установка",
-    "text": "1.1 Установка\n\n\n\nЧтобы стать счастливым пользователем R, надо установить на свой комп две программы:\n\nсобственно R\n\nна Win\nна Mac\nна Linux\n\nIDE RStudio1\n\nПричем во избежание возможных проблем, надо поставить программы именно в этом порядке — сначала R, а потом RStudio, иначе IDE может на найти R и будет ругаться.\n\n1.1.1 Зачем ставить две проги?\nВопрос не безосновательный. В целом, можно обойти и только R — можно работать на нём хоть из командной строки — однако это всё же не совсем удобно. Интерфейс самого R довольно скудный и не слишком приветливый.\n\n\n\n\nИнтерфейс R\n\n\n\nRStudio же, являясь, как уже вскользь отмечалось выше, интегрированной средой разработки (IDE), расширяет возможности R, предоставляет более юзабельный интерфейс для взаимодействия с языком и в целом делает работу с R радостной и приятной. С её интерфейсом и возможностями мы познакомимся далее.\nRStudio это не единственная среда для работы с R, но определенно самая удобная и популярная, поэтому мы будем пользоваться именно ею. RStudio является IDE, разработанной специально для работы в R, однако это вовсе не значит, что в ней нельзя использовать другие языки программирования. Например, книжка, которуя вы сейчас читаете, написана с использованием R, Python, HTML, SASS, JavaScript, YAML и других языков — при этом вся работа велась в RStudio. Вот такая мощная вещь.\n\n\n1.1.2 Что такое IDE?\nИнтегрированная среда разработки (IDE, integrated development environment) — это специальная программа, которое предоставляет широкий спектр возможностей для разработки программного обеспечения. Возможно, вы слышали такие слова, как PyCharm или Visual Studio Code — это всё варианты IDE.\nОбычно IDE содержит несколько ключевых компонентов:\n\nтекстовый редактор для написания скриптов\nтранслятор языка\nотладчик (debugger)\nсредства автоматизации сборки (build automation tools)\n\nОбычно IDE позволяют работать с несколькими языками программирования (ЯП), но бывают и специализированные.\n\nИ хотя всё ещё присутствует холивар относительного того, является ли R языком программирования (ССЫЛКА), RStudio однозначно можно назвать полноценной IDE, так как разработка в ней вполне может вестить. Пример продукта разработки прямо перед вами — книжка и другие материалы курса.",
+    "section": "",
+    "text": "собственно R\n\nна Win\nна Mac\nна Linux\n\nIDE RStudio1\n\n\n\n1.1.1 Зачем ставить две проги?\nВопрос не безосновательный. В целом, можно обойти и только R — можно работать на нём хоть из командной строки — однако это всё же не совсем удобно. Интерфейс самого R довольно скудный и не слишком приветливый.\n\n\n\n\nИнтерфейс R\n\n\n\nRStudio же, являясь, как уже вскользь отмечалось выше, интегрированной средой разработки (IDE), расширяет возможности R, предоставляет более юзабельный интерфейс для взаимодействия с языком и в целом делает работу с R радостной и приятной. С её интерфейсом и возможностями мы познакомимся далее.\nRStudio это не единственная среда для работы с R, но определенно самая удобная и популярная, поэтому мы будем пользоваться именно ею. RStudio является IDE, разработанной специально для работы в R, однако это вовсе не значит, что в ней нельзя использовать другие языки программирования. Например, книжка, которуя вы сейчас читаете, написана с использованием R, Python, HTML, SASS, JavaScript, YAML и других языков — при этом вся работа велась в RStudio. Вот такая мощная вещь.\n\n\n1.1.2 Что такое IDE?\nИнтегрированная среда разработки (IDE, integrated development environment) — это специальная программа, которое предоставляет широкий спектр возможностей для разработки программного обеспечения. Возможно, вы слышали такие слова, как PyCharm или Visual Studio Code — это всё варианты IDE.\nОбычно IDE содержит несколько ключевых компонентов:\n\nтекстовый редактор для написания скриптов\nтранслятор языка\nотладчик (debugger)\nсредства автоматизации сборки (build automation tools)\n\nОбычно IDE позволяют работать с несколькими языками программирования (ЯП), но бывают и специализированные.\n\nИ хотя всё ещё присутствует холивар относительного того, является ли R языком программирования (ССЫЛКА), RStudio однозначно можно назвать полноценной IDE, так как разработка в ней вполне может вестить. Пример продукта разработки прямо перед вами — книжка и другие материалы курса.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
     ]
@@ -140,11 +150,31 @@
     ]
   },
   {
+    "objectID": "r-basics.html#footnotes",
+    "href": "r-basics.html#footnotes",
+    "title": "1  Основы R",
+    "section": "",
+    "text": "По пути надо ещё не перепутать её с R-Studio, которая восстанавливает данные с диска. Критическое сходство названий двух программ обязывает к повышенной внимательности при написании работ/статей/отчётов/заявок на гранты, в которых вы ссылаетесь на RStudio — иногда рецензенты весьма недоумевают, как исследователи анализировали данные с помощью ПО для восстановления данных…↩︎\nGUI — графический интерфейс пользователя (graphical user interface)↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Основы R</span>"
+    ]
+  },
+  {
+    "objectID": "r-dtypes.html",
+    "href": "r-dtypes.html",
+    "title": "2  Типы данных",
+    "section": "",
+    "text": "2.1 Числовые данные",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
+    ]
+  },
+  {
     "objectID": "r-dtypes.html#rdtypes-numbers",
     "href": "r-dtypes.html#rdtypes-numbers",
     "title": "2  Типы данных",
-    "section": "2.1 Числовые данные",
-    "text": "2.1 Числовые данные\n\n\n\n\n2.1.1 Целые числа\n\n\n\n\n\n2.1.2 Числа с плавающей точкой\n\n\n\n\n\n2.1.3 Комплексные числа",
+    "section": "",
+    "text": "2.1.1 Целые числа\n\n\n\n\n\n2.1.2 Числа с плавающей точкой\n\n\n\n\n\n2.1.3 Комплексные числа",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Типы данных</span>"
     ]
@@ -190,11 +220,21 @@
     ]
   },
   {
+    "objectID": "r-dstructs.html",
+    "href": "r-dstructs.html",
+    "title": "3  Структуры данных",
+    "section": "",
+    "text": "3.1 Векторы",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
+    ]
+  },
+  {
     "objectID": "r-dstructs.html#rdstructs-vectors",
     "href": "r-dstructs.html#rdstructs-vectors",
     "title": "3  Структуры данных",
-    "section": "3.1 Векторы",
-    "text": "3.1 Векторы\n\n\n\n\n3.1.1 Создание векторов\n\n\n3.1.2 Генерация числовых последовательностей\n\n\n3.1.3 Индексация векторов\n\n\n3.1.4 Операции над векторами",
+    "section": "",
+    "text": "3.1.1 Создание векторов\n\n\n3.1.2 Генерация числовых последовательностей\n\n\n3.1.3 Индексация векторов\n\n\n3.1.4 Операции над векторами",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Структуры данных</span>"
     ]
@@ -240,11 +280,21 @@
     ]
   },
   {
+    "objectID": "r-funcs.html",
+    "href": "r-funcs.html",
+    "title": "4  Функции",
+    "section": "",
+    "text": "4.1 Концепт функции",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Функции</span>"
+    ]
+  },
+  {
     "objectID": "r-funcs.html#rfuncs-concept",
     "href": "r-funcs.html#rfuncs-concept",
     "title": "4  Функции",
-    "section": "4.1 Концепт функции",
-    "text": "4.1 Концепт функции\n\n4.1.1 Окружение и область видимости переменных",
+    "section": "",
+    "text": "4.1.1 Окружение и область видимости переменных",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Функции</span>"
     ]
@@ -270,11 +320,21 @@
     ]
   },
   {
+    "objectID": "r-controlflow.html",
+    "href": "r-controlflow.html",
+    "title": "5  Управляющие конструкции",
+    "section": "",
+    "text": "5.1 Циклы",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Управляющие конструкции</span>"
+    ]
+  },
+  {
     "objectID": "r-controlflow.html#controlflow-forwhile",
     "href": "r-controlflow.html#controlflow-forwhile",
     "title": "5  Управляющие конструкции",
-    "section": "5.1 Циклы",
-    "text": "5.1 Циклы\n\n5.1.1 for\n\n\n5.1.2 while",
+    "section": "",
+    "text": "5.1.1 for\n\n\n5.1.2 while",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Управляющие конструкции</span>"
     ]
@@ -290,11 +350,21 @@
     ]
   },
   {
+    "objectID": "r-strings.html",
+    "href": "r-strings.html",
+    "title": "7  Строки",
+    "section": "",
+    "text": "7.1 Установка дополнительных пакетов",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Строки</span>"
+    ]
+  },
+  {
     "objectID": "r-strings.html#rstrings-packages",
     "href": "r-strings.html#rstrings-packages",
     "title": "7  Строки",
-    "section": "7.1 Установка дополнительных пакетов",
-    "text": "7.1 Установка дополнительных пакетов\n\n7.1.1 Установка с CRAN\n\n\n7.1.2 Установка с недефолтных зеркал\n\n\n7.1.3 Установка с GitHub",
+    "section": "",
+    "text": "7.1.1 Установка с CRAN\n\n\n7.1.2 Установка с недефолтных зеркал\n\n\n7.1.3 Установка с GitHub",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Строки</span>"
     ]
@@ -320,11 +390,21 @@
     ]
   },
   {
+    "objectID": "r-dates.html",
+    "href": "r-dates.html",
+    "title": "8  Дата и время",
+    "section": "",
+    "text": "8.1 Способы записи информации о дате и времени\ntimestamp",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Дата и время</span>"
+    ]
+  },
+  {
     "objectID": "r-dates.html#rdates-storing",
     "href": "r-dates.html#rdates-storing",
     "title": "8  Дата и время",
-    "section": "8.1 Способы записи информации о дате и времени",
-    "text": "8.1 Способы записи информации о дате и времени\ntimestamp\n\n8.1.1 Форматы даты и времени\n\n\n8.1.2 Часовые пояса",
+    "section": "",
+    "text": "8.1.1 Форматы даты и времени\n\n\n8.1.2 Часовые пояса",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Дата и время</span>"
     ]
@@ -350,11 +430,21 @@
     ]
   },
   {
+    "objectID": "math-logic.html",
+    "href": "math-logic.html",
+    "title": "14  Элементы алгебры логики",
+    "section": "",
+    "text": "14.1 Высказывания",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Элементы алгебры логики</span>"
+    ]
+  },
+  {
     "objectID": "math-logic.html#math-logic-utterance",
     "href": "math-logic.html#math-logic-utterance",
     "title": "14  Элементы алгебры логики",
-    "section": "14.1 Высказывания",
-    "text": "14.1 Высказывания\n\n14.1.1 Атомарные высказывания",
+    "section": "",
+    "text": "14.1.1 Атомарные высказывания",
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Элементы алгебры логики</span>"
     ]
@@ -380,11 +470,21 @@
     ]
   },
   {
+    "objectID": "math-settheory.html",
+    "href": "math-settheory.html",
+    "title": "15  Элементы теории множеств",
+    "section": "",
+    "text": "15.1 Множества и подмножества",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Элементы теории множеств</span>"
+    ]
+  },
+  {
     "objectID": "math-settheory.html#math-settheory-set",
     "href": "math-settheory.html#math-settheory-set",
     "title": "15  Элементы теории множеств",
-    "section": "15.1 Множества и подмножества",
-    "text": "15.1 Множества и подмножества\n\n15.1.1 Принадлежность элемента множеству\n\n\n15.1.2 Включение",
+    "section": "",
+    "text": "15.1.1 Принадлежность элемента множеству\n\n\n15.1.2 Включение",
     "crumbs": [
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Элементы теории множеств</span>"
     ]
@@ -420,10 +520,10 @@
     ]
   },
   {
-    "objectID": "math-combinatorics.html#принцип-сложения.-принцип-умножения",
-    "href": "math-combinatorics.html#принцип-сложения.-принцип-умножения",
+    "objectID": "math-combinatorics.html",
+    "href": "math-combinatorics.html",
     "title": "16  Элементы комбинаторики",
-    "section": "16.1 Принцип сложения. Принцип умножения",
+    "section": "",
     "text": "16.1 Принцип сложения. Принцип умножения",
     "crumbs": [
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Элементы комбинаторики</span>"
@@ -460,11 +560,21 @@
     ]
   },
   {
+    "objectID": "math-analysis.html",
+    "href": "math-analysis.html",
+    "title": "17  Элементы математического анализа",
+    "section": "",
+    "text": "17.1 Последовательность",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Элементы математического анализа</span>"
+    ]
+  },
+  {
     "objectID": "math-analysis.html#math-analysis-sequence",
     "href": "math-analysis.html#math-analysis-sequence",
     "title": "17  Элементы математического анализа",
-    "section": "17.1 Последовательность",
-    "text": "17.1 Последовательность\n\n17.1.1 Ряд\n\n\n17.1.2 Частичные суммы ряда",
+    "section": "",
+    "text": "17.1.1 Ряд\n\n\n17.1.2 Частичные суммы ряда",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Элементы математического анализа</span>"
     ]
@@ -540,10 +650,10 @@
     ]
   },
   {
-    "objectID": "math-linal.html#матрица-и-вектор",
-    "href": "math-linal.html#матрица-и-вектор",
+    "objectID": "math-linal.html",
+    "href": "math-linal.html",
     "title": "18  Элементы линейной алгебры",
-    "section": "18.1 Матрица и вектор",
+    "section": "",
     "text": "18.1 Матрица и вектор",
     "crumbs": [
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Элементы линейной алгебры</span>"
@@ -630,11 +740,21 @@
     ]
   },
   {
+    "objectID": "stats-intro.html",
+    "href": "stats-intro.html",
+    "title": "21  Введение в статистику",
+    "section": "",
+    "text": "21.1 Задачи статистики\nМы в какой-то малоприятной ситуации… Мы пытаемся измерить то, что в определенном смысле невозможно измерить, при этом достаточно точно, чтобы потом это можно было сравнивать или строить какие-то модели. Задача выглядит заведомо провальной…\nОднако именно в этот момент на помощь нам приходит статистика. Не в гордом одиночестве, конечно. Она проводит с собой теорию измерений, психометрику, теорию обнаружения сигнала и др. Всё это работает в нашей психологической науке в комлексе. Мы же в данном курсе сосредотачиваемся на статистической части этого салата.\nСтатистика даёт на теоретический и математический инструментарий, чтобы мы могли делать какие-либо выводы по нашим собранным данным. К сожалению, как бы нам не хотелось, мы не можем делать выводы по сырым данным, потому что измерения по выборке не отражают вот прям ровно то, что есть в генеральной совокупности. Нам их надо определенным образом обсчитать, чтобы наши выводы были корректными. Этим и занимается статистика.\nВозможно, это звучит достаточно абстрактно, но я хочу, чтобы на данном моменте вы поймали некоторое интуитивное понимание того, зачем нужна статистика. Далее это обрастёт содержанием и уложится, я надеюсь, в достаточно стройную систему.",
+    "crumbs": [
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Введение в статистику</span>"
+    ]
+  },
+  {
     "objectID": "stats-intro.html#stats-goals",
     "href": "stats-intro.html#stats-goals",
     "title": "21  Введение в статистику",
-    "section": "21.1 Задачи статистики",
-    "text": "21.1 Задачи статистики\nМы в какой-то малоприятной ситуации… Мы пытаемся измерить то, что в определенном смысле невозможно измерить, при этом достаточно точно, чтобы потом это можно было сравнивать или строить какие-то модели. Задача выглядит заведомо провальной…\nОднако именно в этот момент на помощь нам приходит статистика. Не в гордом одиночестве, конечно. Она проводит с собой теорию измерений, психометрику, теорию обнаружения сигнала и др. Всё это работает в нашей психологической науке в комлексе. Мы же в данном курсе сосредотачиваемся на статистической части этого салата.\nСтатистика даёт на теоретический и математический инструментарий, чтобы мы могли делать какие-либо выводы по нашим собранным данным. К сожалению, как бы нам не хотелось, мы не можем делать выводы по сырым данным, потому что измерения по выборке не отражают вот прям ровно то, что есть в генеральной совокупности. Нам их надо определенным образом обсчитать, чтобы наши выводы были корректными. Этим и занимается статистика.\nВозможно, это звучит достаточно абстрактно, но я хочу, чтобы на данном моменте вы поймали некоторое интуитивное понимание того, зачем нужна статистика. Далее это обрастёт содержанием и уложится, я надеюсь, в достаточно стройную систему.\n\n\n\n\n\n\nВажно\n\n\n\nСтатистика помогает нам делать выводы о нашей генеральной совокупности по выборке.",
+    "section": "",
+    "text": "Важно\n\n\n\nСтатистика помогает нам делать выводы о нашей генеральной совокупности по выборке.",
     "crumbs": [
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Введение в статистику</span>"
     ]
@@ -670,10 +790,20 @@
     ]
   },
   {
-    "objectID": "stats-rand-exp.html#stats-rand-exp-research",
-    "href": "stats-rand-exp.html#stats-rand-exp-research",
+    "objectID": "stats-intro.html#footnotes",
+    "href": "stats-intro.html#footnotes",
+    "title": "21  Введение в статистику",
+    "section": "",
+    "text": "Mass (uncountable) noun↩︎\nCountable noun, plural in this case↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Введение в статистику</span>"
+    ]
+  },
+  {
+    "objectID": "stats-rand-exp.html",
+    "href": "stats-rand-exp.html",
     "title": "22  Случайный эксперимент",
-    "section": "22.1 Ход исследования",
+    "section": "",
     "text": "22.1 Ход исследования",
     "crumbs": [
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Случайный эксперимент</span>"
@@ -730,11 +860,21 @@
     ]
   },
   {
+    "objectID": "stats-rand-values.html",
+    "href": "stats-rand-values.html",
+    "title": "23  Случайные величины",
+    "section": "",
+    "text": "23.1 Дискретные случайные величины",
+    "crumbs": [
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Случайные величины</span>"
+    ]
+  },
+  {
     "objectID": "stats-rand-values.html#stats-rand-values-discrete",
     "href": "stats-rand-values.html#stats-rand-values-discrete",
     "title": "23  Случайные величины",
-    "section": "23.1 Дискретные случайные величины",
-    "text": "23.1 Дискретные случайные величины\n\n23.1.1 Распределение дискретной случайной величины",
+    "section": "",
+    "text": "23.1.1 Распределение дискретной случайной величины",
     "crumbs": [
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Случайные величины</span>"
     ]
@@ -770,11 +910,21 @@
     ]
   },
   {
+    "objectID": "stats-estim.html",
+    "href": "stats-estim.html",
+    "title": "24  Оценивание статистических параметров",
+    "section": "",
+    "text": "24.1 Точечные оценки\nПараметр обычно обозначается греческой буквой. Пусть у нас есть некоторый параметр генеральной совокупности \\(\\theta\\). Его аналогом на выборочной совокупности является его точечная оценка \\(\\hat \\theta\\). Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, она является функцией от результатов наблюдений:\n\\[\n\\hat \\theta = \\hat \\theta (x), \\; x = (x_1, x_2, \\dots, x_n)\n\\]\nЧто это значит? То, что на разных выборках эта оценка может различаться. Возьмем для примера такой параметр как среднее значение. Предположим, что мы исследуем интеллект, и наша генеральная совокупность представлена таким набором наблюдений:\nnrow(iq)\n\n[1] 10000\n\nhead(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1     1   112\n2     2    95\n3     3    65\n4     4   110\n5     5    93\n6     6   108\n\ntail(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1  9995   101\n2  9996    87\n3  9997    94\n4  9998   112\n5  9999    99\n6 10000   102\nТак как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра \\(\\mu\\). В реальной жизни мы этого сделать не можем!\nmean(iq$IQ)\n\n[1] 100.1305\nВполне ожидаемое значение1. Теперь попробуем наизвлекать выборок человек по 50 и посчитать оценки среднего (выборочные средние) \\(\\hat \\mu\\) на них:\nmeans &lt;- numeric()\nfor (i in 1:100) {\n  means[i] &lt;- mean(sample(iq$IQ, 50, replace = FALSE))\n}\nggplot(NULL, aes(means)) +\n  geom_histogram(binwidth = 1, fill = 'royalblue4', color = 'lightgray') +\n  geom_vline(xintercept = mean(iq$IQ)) +\n  labs(x = 'Выборочные средние IQ',\n       y = 'Количество')\nНаблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом неопределённость и вариация.",
+    "crumbs": [
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
+    ]
+  },
+  {
     "objectID": "stats-estim.html#точечные-оценки",
     "href": "stats-estim.html#точечные-оценки",
     "title": "24  Оценивание статистических параметров",
-    "section": "24.1 Точечные оценки",
-    "text": "24.1 Точечные оценки\n\n\n\nПараметр обычно обозначается греческой буквой. Пусть у нас есть некоторый параметр генеральной совокупности \\(\\theta\\). Его аналогом на выборочной совокупности является его точечная оценка \\(\\hat \\theta\\). Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, она является функцией от результатов наблюдений:\n\\[\n\\hat \\theta = \\hat \\theta (x), \\; x = (x_1, x_2, \\dots, x_n)\n\\]\nЧто это значит? То, что на разных выборках эта оценка может различаться. Возьмем для примера такой параметр как среднее значение. Предположим, что мы исследуем интеллект, и наша генеральная совокупность представлена таким набором наблюдений:\n\nnrow(iq)\n\n[1] 10000\n\nhead(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1     1   101\n2     2    87\n3     3   102\n4     4   100\n5     5   104\n6     6   107\n\ntail(iq)\n\n# A tibble: 6 × 2\n     id    IQ\n  &lt;int&gt; &lt;dbl&gt;\n1  9995   126\n2  9996    91\n3  9997   115\n4  9998    99\n5  9999    93\n6 10000   107\n\n\nТак как мы предположили, что это генеральная совокупность, то мы можем посчитать истинное значение параметра \\(\\mu\\). В реальной жизни мы этого сделать не можем!\n\nmean(iq$IQ)\n\n[1] 99.8836\n\n\nВполне ожидаемое значение1. Теперь попробуем наизвлекать выборок человек по 50 и посчитать оценки среднего (выборочные средние) \\(\\hat \\mu\\) на них:\n\nmeans &lt;- numeric()\nfor (i in 1:100) {\n  means[i] &lt;- mean(sample(iq$IQ, 50, replace = FALSE))\n}\nggplot(NULL, aes(means)) +\n  geom_histogram(binwidth = 1, fill = 'royalblue4', color = 'lightgray') +\n  geom_vline(xintercept = mean(iq$IQ)) +\n  labs(x = 'Выборочные средние IQ',\n       y = 'Количество')\n\n\n\n\n\n\n\n\nНаблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом неопределённость и вариация.\n\n24.1.1 Метод моментов\n\n\n\nЧтобы получить точечные оценки параметров, используются разные методы в зависимости от конкретной модели анализа. Сейчас мы познакомимся с самым простым — методом моментов.\nСамо название метода отсылает нас к обсуждению характеристик распределений случайных величин. Мы говорили о том, что распредления характеризуются их моментами. В методе моментов есть три этапа:\n\nустанавливается связь между оцениваемым параметром и моментом распределения\n\n\\[\n\\theta = \\xi(\\nu_k) \\quad \\text{или} \\quad \\theta = \\xi(\\mu_k)\n\\]\n\nнаходятся выборочные моменты\n\n\\[\n\\hat \\theta = \\xi(\\nu_k^*) \\quad \\text{или} \\quad \\hat \\theta = \\xi(\\mu_k^*)\n\\]\n\nистинный момент заменяется на выборочный — получается оценка.\n\nДля примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается нормальному закону. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:\n\\[\n\\mu = \\mathbb{E}X\n\\]\nВыборочным аналогом математического ожидания является выборочное среднее:\n\\[\n\\hat \\mu = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\nИ это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)\n\n\n24.1.2 Метод максимального правдоподобия\n\n\n\n\n\n24.1.3 Bootstrap\n\n\n\n\n\n24.1.4 Свойства точечных оценок\n\n\n\nТак как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: несмещённость, состоятельность и эффективность.\n\n24.1.4.1 Несмещенность\n\n\n\nНесмещённость выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.\n\\[\n\\forall n \\; \\mathbb{E} \\hat \\theta = \\theta, \\quad (\\mathbb{E}\\hat \\theta - \\theta) \\rightarrow 0,\n\\] где \\(n\\) — объём выборки, \\((\\mathbb{E}\\hat \\theta - \\theta)\\) — смещение.\nСлева представлено требование несмещённости при любом объёме выборки, а справа — ассимптотической несмещённости.\n\n24.1.4.1.1 Проверка среднего как оценки математического ожидания на несмещенность\n\\[\nX_1, X_2, \\dots , X_n \\overset{\\text{i.i.d}}{\\thicksim} (\\mu, \\sigma^2)\n\\]\n\\[\n\\hat \\mu = \\frac{1}{m}\\sum_{j=1}^m x_j = \\bar X\n\\]\n\\[\n\\mathbb{E}(\\hat \\mu) = \\mathbb{E}(\\bar X) \\overset{?}{=} \\mu\n\\]\n\\[\n\\mathbb{E}(\\bar X) = \\mathbb{E}\\big (\\frac{1}{n} \\sum_{i=1}^n X_i \\big ) = \\frac{1}{n} \\mathbb{E}\\Big( \\sum_{i=1}^n X_i \\Big) = \\frac{1}{n} \\sum_{i=1}^n \\mathbb{E}X_i \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n} \\cdot n \\cdot \\mathbb{E}X = \\frac{n}{n} \\cdot \\mu = \\mu\n\\]\n\n\n24.1.4.1.2 Проверка дисперсии генеральной совокупности как оценки дисперсии на несмещенность\n\\[\nX_1, X_2, \\dots , X_n \\overset{\\text{i.i.d}}{\\thicksim} (\\mu, \\sigma^2)\n\\]\n\\[\n\\begin{split}\n\\mathbb{D}X & = \\sigma^2 = \\mathbb{E}(X - \\mathbb{E}X)^2 = \\mathbb{E}(X^2 - 2 X \\mathbb{E}X + \\mathbb{E}^2 X) = \\\\\n& = \\mathbb{E}X^2 - 2\\mathbb{E}X \\mathbb{E}X + \\mathbb{E}^2 X = \\mathbb{E}X^2 - 2\\mathbb{E}^2 X + \\mathbb{E}^2 X = \\\\\n& = \\mathbb{E}X^2 - \\mathbb{E}^2 X\n\\end{split}\n\\]\n\\[\n\\hat \\sigma^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar X)^2}{n}\n\\]\n\\[\n\\mathbb{E}(\\hat \\sigma^2) \\overset{?}{=} \\sigma^2\n\\]\n\\[\n\\begin{split}\n\\mathbb{E}(\\hat \\sigma^2) & = \\frac{\\sum_{i=1}^n (x_i - \\bar X)^2}{n} = \\\\\n& = \\frac{1}{n} \\left(\\sum_{i=1}^n x_i^2 - 2 \\sum_{i=1}^n x_i \\bar X  + \\sum_{i=1}^n \\bar X \\right)\\\\\n& = \\frac{1}{n} \\left(\\sum_{i=1}^n x_i^2 - 2 \\bar X \\sum_{i=1}^n x_i + n \\bar X \\right)= \\\\\n& = \\frac{\\sum_{i=1}^n x_i^2}{n} - 2 \\bar X \\frac{\\sum_{i=1}^n x_i}{n} + \\bar X^2 = \\\\\n& = \\overline{X^2} - 2 \\bar X^2 + \\bar X^2 = \\overline{X^2} - \\bar X^2\n\\end{split}\n\\]\n\\[\n\\mathbb{E}(\\hat \\sigma^2) = \\mathbb{E}(\\overline {X^2} - \\bar X^2) = \\underset{[1]}{\\mathbb{E}\\overline{X^2}} - \\underset{[2]}{\\mathbb{E}\\bar X^2}\n\\]\n$$\n\\[\\begin{split}\n[1] \\, \\mathbb{E}\\overline{X^2} : & \\\\\n\n\\mathbb{E}\\overline{X^2} & = \\mathbb{E}\\left(\\frac{\\sum_{i=1}^n X_i^2}{n} \\right)= \\frac{1}{n} \\mathbb{E}\\left(\\sum_{i=1}^n X_i^2 \\right)= \\\\\n& = \\frac{1}{n} \\sum_{i=1}^n \\mathbb{E}X_i^2] \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n} \\cdot n \\cdot \\mathbb{E}X^2 = \\mathbb{E}X^2\n\n\\end{split}\\]\n$$\n$$\n\\[\\begin{split}\n[2] \\, \\mathbb{E}\\bar X^2 : & \\\\\n\n\\mathbb{E}\\bar X^2 & =\n\\mathbb{E}\\left[\n    \\left(\\frac{\\sum_{i=1}^n X_i}{n} \\right)^2\n  \\right]=\n\\frac{1}{n^2}\n\\mathbb{E}\\left[\n    \\left(\\sum_{i=1}^n X_i^2 \\right)\n  \\right]= \\\\\n& = \\frac{1}{n^2} \\mathbb{E}\\left[\n    \\sum_{i=1}^n \\mathbb{E}X_i^2 +\n    2 \\sum_{\n      \\substack{i=1, j=1 \\\\ i \\neq j}\n      }^n X_i X_j\n    \\right]= \\\\\n& = \\frac{1}{n^2} \\left[\n      \\sum_{i=1}^n \\mathbb{E}(X_i^2) +\n      2 \\sum_{\n        \\substack{i=1, j=1 \\\\ i \\neq j}\n      }^n \\mathbb{E}(X_i X_j)\n    \\right]= \\\\\n& \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n^2} \\left[\n    n \\cdot \\mathbb{E}X^2 +\n    2 \\sum_{\n      \\substack{i=1, j=1 \\\\ i \\neq j}\n    }^n \\mathbb{E}(X_i) \\mathbb{E}(X_j) \\right]= \\\\\n& = \\frac{1}{n} \\left[n \\cdot \\mathbb{E}X2 + 2 \\cdot \\frac{n(n-1)}{2} \\mathbb{E}^2 X \\right]= \\\\\n& = \\frac{1}{n} \\mathbb{E}X^2 + \\frac{n-1}{n} \\mathbb{E}^2 X\n\\end{split}\\]\n$$\n\\[\n\\begin{split}\n\\mathbb{E}(\\hat \\sigma^2)\n& = \\mathbb{E}\\overline{X^2} - \\mathbb{E}\\bar X^2 = \\\\\n& = \\mathbb{E}X^2 - \\left(\\frac{1}{n} \\mathbb{E}X^2 + \\frac{n-1}{n} \\mathbb{E}^2 X \\right)= \\\\\n& = \\frac{n}{n} \\mathbb{E}X^2 - \\frac{1}{n} \\mathbb{E}X^2 - \\frac{n-1}{n} \\mathbb{E}^2 X = \\\\\n& = \\frac{n-1}{n} \\mathbb{E}X^2 - \\frac{n-1}{n} \\mathbb{E}^2 X = \\frac{n-1}{n} \\left(\\mathbb{E}X^2 - \\mathbb{E}^2 X \\right)\\\\\n& = \\frac{n-1}{n} \\sigma^2\n\\end{split}\n\\]\n\\[\ns^2 = \\frac{n}{n-1} \\sigma^2 = \\frac{n}{n-1} \\cdot \\frac{1}{n} \\cdot \\sum_{i=1}^n (x_i - \\bar X) = \\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar X)\n\\]\n\n\n\n24.1.4.2 Состоятельность\n\n\n\nМатематически состоятельность определяется следующим образом:\n\\[\n\\lim_{n \\rightarrow \\infty} \\mathbb{P}(|\\hat \\theta - \\theta| &lt; \\varepsilon) = 1, \\, \\varepsilon &gt; 0\n\\]\nСодержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.\n\n\n24.1.4.3 Эффективность\n\n\n\nЭффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть дисперсия. Чтобы оценка была эффективна, её дисперсия должна быть минимальной:\n\\[\n\\sigma^2_{\\hat \\theta} = \\min\n\\]\nПример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.",
+    "section": "",
+    "text": "24.1.1 Метод моментов\n\n\n\nЧтобы получить точечные оценки параметров, используются разные методы в зависимости от конкретной модели анализа. Сейчас мы познакомимся с самым простым — методом моментов.\nСамо название метода отсылает нас к обсуждению характеристик распределений случайных величин. Мы говорили о том, что распредления характеризуются их моментами. В методе моментов есть три этапа:\n\nустанавливается связь между оцениваемым параметром и моментом распределения\n\n\\[\n\\theta = \\xi(\\nu_k) \\quad \\text{или} \\quad \\theta = \\xi(\\mu_k)\n\\]\n\nнаходятся выборочные моменты\n\n\\[\n\\hat \\theta = \\xi(\\nu_k^*) \\quad \\text{или} \\quad \\hat \\theta = \\xi(\\mu_k^*)\n\\]\n\nистинный момент заменяется на выборочный — получается оценка.\n\nДля примера разберём всё тот же датасет с IQ. Мы знаем, что распределение баллов IQ подчинается нормальному закону. Поэтому в качестве параметра «среднее значение коэффициента интеллекта» генеральной совокупности можно использовать математическое ожидание:\n\\[\n\\mu = \\mathbb{E}X\n\\]\nВыборочным аналогом математического ожидания является выборочное среднее:\n\\[\n\\hat \\mu = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\nИ это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает. :)\n\n\n24.1.2 Метод максимального правдоподобия\n\n\n\n\n\n24.1.3 Bootstrap\n\n\n\n\n\n24.1.4 Свойства точечных оценок\n\n\n\nТак как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам. Их три: несмещённость, состоятельность и эффективность.\n\n24.1.4.1 Несмещенность\n\n\n\nНесмещённость выражает следующую идею: когда мы рассчитываем выборочную оценку, мы должны как можно ближе попадать в истинное значение параметра.\n\\[\n\\forall n \\; \\mathbb{E} \\hat \\theta = \\theta, \\quad (\\mathbb{E}\\hat \\theta - \\theta) \\rightarrow 0,\n\\] где \\(n\\) — объём выборки, \\((\\mathbb{E}\\hat \\theta - \\theta)\\) — смещение.\nСлева представлено требование несмещённости при любом объёме выборки, а справа — ассимптотической несмещённости.\n\n24.1.4.1.1 Проверка среднего как оценки математического ожидания на несмещенность\n\\[\nX_1, X_2, \\dots , X_n \\overset{\\text{i.i.d}}{\\thicksim} (\\mu, \\sigma^2)\n\\]\n\\[\n\\hat \\mu = \\frac{1}{m}\\sum_{j=1}^m x_j = \\bar X\n\\]\n\\[\n\\mathbb{E}(\\hat \\mu) = \\mathbb{E}(\\bar X) \\overset{?}{=} \\mu\n\\]\n\\[\n\\mathbb{E}(\\bar X) = \\mathbb{E}\\big (\\frac{1}{n} \\sum_{i=1}^n X_i \\big ) = \\frac{1}{n} \\mathbb{E}\\Big( \\sum_{i=1}^n X_i \\Big) = \\frac{1}{n} \\sum_{i=1}^n \\mathbb{E}X_i \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n} \\cdot n \\cdot \\mathbb{E}X = \\frac{n}{n} \\cdot \\mu = \\mu\n\\]\n\n\n24.1.4.1.2 Проверка дисперсии генеральной совокупности как оценки дисперсии на несмещенность\n\\[\nX_1, X_2, \\dots , X_n \\overset{\\text{i.i.d}}{\\thicksim} (\\mu, \\sigma^2)\n\\]\n\\[\n\\begin{split}\n\\mathbb{D}X & = \\sigma^2 = \\mathbb{E}(X - \\mathbb{E}X)^2 = \\mathbb{E}(X^2 - 2 X \\mathbb{E}X + \\mathbb{E}^2 X) = \\\\\n& = \\mathbb{E}X^2 - 2\\mathbb{E}X \\mathbb{E}X + \\mathbb{E}^2 X = \\mathbb{E}X^2 - 2\\mathbb{E}^2 X + \\mathbb{E}^2 X = \\\\\n& = \\mathbb{E}X^2 - \\mathbb{E}^2 X\n\\end{split}\n\\]\n\\[\n\\hat \\sigma^2 = \\frac{\\sum_{i=1}^n (x_i - \\bar X)^2}{n}\n\\]\n\\[\n\\mathbb{E}(\\hat \\sigma^2) \\overset{?}{=} \\sigma^2\n\\]\n\\[\n\\begin{split}\n\\mathbb{E}(\\hat \\sigma^2) & = \\frac{\\sum_{i=1}^n (x_i - \\bar X)^2}{n} = \\\\\n& = \\frac{1}{n} \\left(\\sum_{i=1}^n x_i^2 - 2 \\sum_{i=1}^n x_i \\bar X  + \\sum_{i=1}^n \\bar X \\right)\\\\\n& = \\frac{1}{n} \\left(\\sum_{i=1}^n x_i^2 - 2 \\bar X \\sum_{i=1}^n x_i + n \\bar X \\right)= \\\\\n& = \\frac{\\sum_{i=1}^n x_i^2}{n} - 2 \\bar X \\frac{\\sum_{i=1}^n x_i}{n} + \\bar X^2 = \\\\\n& = \\overline{X^2} - 2 \\bar X^2 + \\bar X^2 = \\overline{X^2} - \\bar X^2\n\\end{split}\n\\]\n\\[\n\\mathbb{E}(\\hat \\sigma^2) = \\mathbb{E}(\\overline {X^2} - \\bar X^2) = \\underset{[1]}{\\mathbb{E}\\overline{X^2}} - \\underset{[2]}{\\mathbb{E}\\bar X^2}\n\\]\n$$\n\\[\\begin{split}\n[1] \\, \\mathbb{E}\\overline{X^2} : & \\\\\n\n\\mathbb{E}\\overline{X^2} & = \\mathbb{E}\\left(\\frac{\\sum_{i=1}^n X_i^2}{n} \\right)= \\frac{1}{n} \\mathbb{E}\\left(\\sum_{i=1}^n X_i^2 \\right)= \\\\\n& = \\frac{1}{n} \\sum_{i=1}^n \\mathbb{E}X_i^2] \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n} \\cdot n \\cdot \\mathbb{E}X^2 = \\mathbb{E}X^2\n\n\\end{split}\\]\n$$\n$$\n\\[\\begin{split}\n[2] \\, \\mathbb{E}\\bar X^2 : & \\\\\n\n\\mathbb{E}\\bar X^2 & =\n\\mathbb{E}\\left[\n    \\left(\\frac{\\sum_{i=1}^n X_i}{n} \\right)^2\n  \\right]=\n\\frac{1}{n^2}\n\\mathbb{E}\\left[\n    \\left(\\sum_{i=1}^n X_i^2 \\right)\n  \\right]= \\\\\n& = \\frac{1}{n^2} \\mathbb{E}\\left[\n    \\sum_{i=1}^n \\mathbb{E}X_i^2 +\n    2 \\sum_{\n      \\substack{i=1, j=1 \\\\ i \\neq j}\n      }^n X_i X_j\n    \\right]= \\\\\n& = \\frac{1}{n^2} \\left[\n      \\sum_{i=1}^n \\mathbb{E}(X_i^2) +\n      2 \\sum_{\n        \\substack{i=1, j=1 \\\\ i \\neq j}\n      }^n \\mathbb{E}(X_i X_j)\n    \\right]= \\\\\n& \\overset{X_i \\overset{\\text{i.i.d}}{\\sim} (\\mu, \\sigma^2)}{=} \\frac{1}{n^2} \\left[\n    n \\cdot \\mathbb{E}X^2 +\n    2 \\sum_{\n      \\substack{i=1, j=1 \\\\ i \\neq j}\n    }^n \\mathbb{E}(X_i) \\mathbb{E}(X_j) \\right]= \\\\\n& = \\frac{1}{n} \\left[n \\cdot \\mathbb{E}X2 + 2 \\cdot \\frac{n(n-1)}{2} \\mathbb{E}^2 X \\right]= \\\\\n& = \\frac{1}{n} \\mathbb{E}X^2 + \\frac{n-1}{n} \\mathbb{E}^2 X\n\\end{split}\\]\n$$\n\\[\n\\begin{split}\n\\mathbb{E}(\\hat \\sigma^2)\n& = \\mathbb{E}\\overline{X^2} - \\mathbb{E}\\bar X^2 = \\\\\n& = \\mathbb{E}X^2 - \\left(\\frac{1}{n} \\mathbb{E}X^2 + \\frac{n-1}{n} \\mathbb{E}^2 X \\right)= \\\\\n& = \\frac{n}{n} \\mathbb{E}X^2 - \\frac{1}{n} \\mathbb{E}X^2 - \\frac{n-1}{n} \\mathbb{E}^2 X = \\\\\n& = \\frac{n-1}{n} \\mathbb{E}X^2 - \\frac{n-1}{n} \\mathbb{E}^2 X = \\frac{n-1}{n} \\left(\\mathbb{E}X^2 - \\mathbb{E}^2 X \\right)\\\\\n& = \\frac{n-1}{n} \\sigma^2\n\\end{split}\n\\]\n\\[\ns^2 = \\frac{n}{n-1} \\sigma^2 = \\frac{n}{n-1} \\cdot \\frac{1}{n} \\cdot \\sum_{i=1}^n (x_i - \\bar X) = \\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar X)\n\\]\n\n\n\n24.1.4.2 Состоятельность\n\n\n\nМатематически состоятельность определяется следующим образом:\n\\[\n\\lim_{n \\rightarrow \\infty} \\mathbb{P}(|\\hat \\theta - \\theta| &lt; \\varepsilon) = 1, \\, \\varepsilon &gt; 0\n\\]\nСодержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.\n\n\n24.1.4.3 Эффективность\n\n\n\nЭффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть дисперсия. Чтобы оценка была эффективна, её дисперсия должна быть минимальной:\n\\[\n\\sigma^2_{\\hat \\theta} = \\min\n\\]\nПример несмещённой, состоятельной и эффективной оценки — это выборочное среднее для оценки математического ожидания нормально распределённой величины. Именно то, что мы и делали в примере применения метода моментов.",
     "crumbs": [
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
     ]
@@ -784,17 +934,37 @@
     "href": "stats-estim.html#интервальные-оценки",
     "title": "24  Оценивание статистических параметров",
     "section": "24.2 Интервальные оценки",
-    "text": "24.2 Интервальные оценки\n\n\n\nКроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как надёжность:\n\\[\n\\gamma = \\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max)\n\\]\nТакая форма оценки называется интервальной оценкой параметра, так как мы указываем интервал, в котором находится истинное значение с определённой вероятностью.\nТакая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.\nЗначение надежности \\(\\gamma\\) может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.\n\n24.2.1 Стандартная ошибка\n\n\n\n\n24.2.1.1 Почему \\(\\text{se}(X) = \\frac{\\text{sd}(X)}{\\sqrt{n}}\\)\n\n\n\n\\[\n\\text{var}(X + Y) = \\text{var}(X) + \\text{var}(Y) + 2 \\text{cov}(X, Y)\n\\]\n\\[\n\\text{var}(aX) = a^2 \\text{var}(X)\n\\]\nТак как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то\n\\[\n\\text{cov}(X_i, X_j) = 0, \\sigma_{X_i} = \\sigma_{X_j} = \\sigma\n\\]\n\\[\n\\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big) = \\frac{1}{n^2} \\sum \\text{var}(X_i) = \\frac{1}{n^2} \\sum \\sigma^2 = \\frac{n}{n^2} \\sigma^2 = \\frac{\\sigma^2}{n}\n\\]\n\\[\n\\text{se}_X = \\sqrt{ \\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big)} = \\sqrt{\\frac{\\sigma^2}{n}} = \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n24.2.2 Доверительный интервал\n\n\n\nВариантом интервальной оценки является доверительный интервал (confidence interval). Итак, ещё раз:\n\\[\n\\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max) = \\gamma, \\; \\gamma \\rightarrow 1\n\\]\n\\(theta_\\min\\) и \\(\\theta_\\max\\) — границы доверительного интервала, \\(\\gamma\\) — доверительная вероятность. На практике её значение чаще всего принимается равным \\(0.95\\).\nАлгоритм определения интервальной оценки следующий:\n\nНайсти статистику \\(\\zeta(\\theta)\\), связанную с оцениваниемым параметром, закон распределения которой известен \\(f(\\zeta)\\).\nОпределить значения \\(\\zeta_\\min\\) и \\(\\zeta_\\max\\), в пределах которых статистика находится с вероятностью \\(\\gamma\\).\nЗная связь \\(\\zeta(\\theta)\\) перейти к границам \\(\\theta_\\min\\) и \\(\\theta_\\max\\).\n\nРазберемся с этим на примере построения доверительного интервала для генерального среднего.\nПервая задача — найти статистику. Мы воспользуемся тем, что за нас поработали учёные-статистики и сказали, что вот такая вполне подойдёт:\n\\[\nt = \\frac{\\bar x - \\mu}{s}\\sqrt{n-1},\n\\]\nгде \\(t\\) — значение статистики, \\(\\bar x\\) — выборочное среднее, \\(\\mu\\) — генеральное среднее, \\(s\\) — выборочное стандартное отклонение, \\(n\\) — объём выборки.\nИзвестен ли закон её распредления? Да. Эта статистика подчинается \\(t\\)-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:\n\n\n\nТеперь надо сформулировать вид интервальной оценки для генерального среднего. Путем арифметических преобразований формулы выше мы имеет следующее:\n\\[\n\\mu = \\bar x - t \\frac{s}{\\sqrt{n-1}}\n\\]\nЗначит вид интервальной оценки будет таков:\n\\[\n\\mathrm{P}\\Big( \\bar x - t_\\alpha \\frac{s}{\\sqrt{n-1}} &lt; \\mu &lt;\n\\bar x + t_\\alpha \\frac{s}{\\sqrt{n-1}}\\Big) = 1 - \\alpha = \\gamma\n\\]\nПосмотрим на картинку:\n\n\n\nВидим на ней наш доверительный интвервал и значения \\(t_\\alpha\\) и \\(-t_\\alpha\\). Сама \\(\\alpha\\) обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.\nХорошо, что весь этот ужас в R скрыт под капотом:\n\nmean_cl_normal(iq$IQ)\n\n        y     ymin     ymax\n1 99.8836 99.59179 100.1754\n\nmean_cl_boot(iq$IQ)\n\n        y     ymin     ymax\n1 99.8836 99.57664 100.1841",
+    "text": "24.2 Интервальные оценки\n\n\n\nКроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как надёжность:\n\\[\n\\gamma = \\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max)\n\\]\nТакая форма оценки называется интервальной оценкой параметра, так как мы указываем интервал, в котором находится истинное значение с определённой вероятностью.\nТакая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.\nЗначение надежности \\(\\gamma\\) может быть выбрано произвольно, но обычно оно близко к единице. Однако необхожимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.\n\n24.2.1 Стандартная ошибка\n\n\n\n\n24.2.1.1 Почему \\(\\text{se}(X) = \\frac{\\text{sd}(X)}{\\sqrt{n}}\\)\n\n\n\n\\[\n\\text{var}(X + Y) = \\text{var}(X) + \\text{var}(Y) + 2 \\text{cov}(X, Y)\n\\]\n\\[\n\\text{var}(aX) = a^2 \\text{var}(X)\n\\]\nТак как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то\n\\[\n\\text{cov}(X_i, X_j) = 0, \\sigma_{X_i} = \\sigma_{X_j} = \\sigma\n\\]\n\\[\n\\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big) = \\frac{1}{n^2} \\sum \\text{var}(X_i) = \\frac{1}{n^2} \\sum \\sigma^2 = \\frac{n}{n^2} \\sigma^2 = \\frac{\\sigma^2}{n}\n\\]\n\\[\n\\text{se}_X = \\sqrt{ \\text{var}\\Big( \\frac{1}{n} \\sum X_i \\Big)} = \\sqrt{\\frac{\\sigma^2}{n}} = \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n24.2.2 Доверительный интервал\n\n\n\nВариантом интервальной оценки является доверительный интервал (confidence interval). Итак, ещё раз:\n\\[\n\\mathrm{P}(\\theta_\\min &lt; \\theta &lt; \\theta_\\max) = \\gamma, \\; \\gamma \\rightarrow 1\n\\]\n\\(theta_\\min\\) и \\(\\theta_\\max\\) — границы доверительного интервала, \\(\\gamma\\) — доверительная вероятность. На практике её значение чаще всего принимается равным \\(0.95\\).\nАлгоритм определения интервальной оценки следующий:\n\nНайсти статистику \\(\\zeta(\\theta)\\), связанную с оцениваниемым параметром, закон распределения которой известен \\(f(\\zeta)\\).\nОпределить значения \\(\\zeta_\\min\\) и \\(\\zeta_\\max\\), в пределах которых статистика находится с вероятностью \\(\\gamma\\).\nЗная связь \\(\\zeta(\\theta)\\) перейти к границам \\(\\theta_\\min\\) и \\(\\theta_\\max\\).\n\nРазберемся с этим на примере построения доверительного интервала для генерального среднего.\nПервая задача — найти статистику. Мы воспользуемся тем, что за нас поработали учёные-статистики и сказали, что вот такая вполне подойдёт:\n\\[\nt = \\frac{\\bar x - \\mu}{s}\\sqrt{n-1},\n\\]\nгде \\(t\\) — значение статистики, \\(\\bar x\\) — выборочное среднее, \\(\\mu\\) — генеральное среднее, \\(s\\) — выборочное стандартное отклонение, \\(n\\) — объём выборки.\nИзвестен ли закон её распредления? Да. Эта статистика подчинается \\(t\\)-распределению (распределению Стьюдента). Оно похоже на нормальное, но хвосты у него повыше:\n\n\n\nТеперь надо сформулировать вид интервальной оценки для генерального среднего. Путем арифметических преобразований формулы выше мы имеет следующее:\n\\[\n\\mu = \\bar x - t \\frac{s}{\\sqrt{n-1}}\n\\]\nЗначит вид интервальной оценки будет таков:\n\\[\n\\mathrm{P}\\Big( \\bar x - t_\\alpha \\frac{s}{\\sqrt{n-1}} &lt; \\mu &lt;\n\\bar x + t_\\alpha \\frac{s}{\\sqrt{n-1}}\\Big) = 1 - \\alpha = \\gamma\n\\]\nПосмотрим на картинку:\n\n\n\nВидим на ней наш доверительный интвервал и значения \\(t_\\alpha\\) и \\(-t_\\alpha\\). Сама \\(\\alpha\\) обозначает вероятность выхода за границы доверительного интервала. Осталось всё это высчитать в числах, и получить границы доверительного интервала.\nХорошо, что весь этот ужас в R скрыт под капотом:\n\nmean_cl_normal(iq$IQ)\n\n         y     ymin     ymax\n1 100.1305 99.83668 100.4243\n\nmean_cl_boot(iq$IQ)\n\n         y     ymin     ymax\n1 100.1305 99.83929 100.4235",
     "crumbs": [
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
+    ]
+  },
+  {
+    "objectID": "stats-estim.html#footnotes",
+    "href": "stats-estim.html#footnotes",
+    "title": "24  Оценивание статистических параметров",
+    "section": "",
+    "text": "Шкала IQ устроена так, что её среднее значение равно 100, а стандартное отклонение 15.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Оценивание статистических параметров</span>"
+    ]
+  },
+  {
+    "objectID": "stats-testing.html",
+    "href": "stats-testing.html",
+    "title": "25  Тестирование статистических гипотез",
+    "section": "",
+    "text": "25.1 Нулевая и альтернативная гипотезы\nЕще раз тезисно вспомним о гипотезах в целом:\nСтатистические гипотезы бывают простыми и сложными:\nВ рамках самого хода тестирования гипотез существует проверяемая (нулевая) гипотеза (\\(H_0\\)). Её обычно стараются предельно упростить, поэтому она формулируется как простая гипотеза. В противовес ей выдвигается альтернативная гипотеза (\\(H_1\\)), которая будет иметь вид сложной гипотезы.\nДля проверки гипотезы необходимы две вещи:\nРезультаты наблюдений, полученные на выборке, сами по себе, как правило, не используются. Однако на их основе рассчитываются выборочные статистики (показатели), которые непосредственно участвуют в проверке гипотезы.",
+    "crumbs": [
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Тестирование статистических гипотез</span>"
     ]
   },
   {
     "objectID": "stats-testing.html#stats-testing-hyotheses",
     "href": "stats-testing.html#stats-testing-hyotheses",
     "title": "25  Тестирование статистических гипотез",
-    "section": "25.1 Нулевая и альтернативная гипотезы",
-    "text": "25.1 Нулевая и альтернативная гипотезы\nЕще раз тезисно вспомним о гипотезах в целом:\n\nГипотеза (\\(H\\)) — это предположение, которое подлежит проверке на основе результатов наблюдений.\nГипотезы бывают:\n\nтеоретические — про конструкты\nэмпирические — про переменные\nстатистические — про параметры [генеральной совокупности] и данные\n\n\nСтатистические гипотезы бывают простыми и сложными:\n\nПростая гипотеза — это такое предположение, которое включает в себя какое-либо однозначно определеяемое утверждение. Например, истинная величина параметра соответствует некоторому строго заданному значению: \\(H : \\theta = \\theta_0\\). Другой вариант — две генеральные совокупности имеют одно и то же значение одной и той же характеристики: \\(H : \\theta_1 = \\theta_2\\).\nСложная гипотеза предполагает множественность вариантов для параметра, которые укладываются в рамки проверяемого предположения. Например, \\(H : \\theta &gt; \\theta_0\\) или \\(H : \\theta_1 \\neq \\theta_2\\).\n\nВ рамках самого хода тестирования гипотез существует проверяемая (нулевая) гипотеза (\\(H_0\\)). Её обычно стараются предельно упростить, поэтому она формулируется как простая гипотеза. В противовес ей выдвигается альтернативная гипотеза (\\(H_1\\)), которая будет иметь вид сложной гипотезы.\nДля проверки гипотезы необходимы две вещи:\n\nрезультаты наблюдений и\nкритерий.\n\nРезультаты наблюдений, полученные на выборке, сами по себе, как правило, не используются. Однако на их основе рассчитываются выборочные статистики (показатели), которые непосредственно участвуют в проверке гипотезы.",
+    "section": "",
+    "text": "Гипотеза (\\(H\\)) — это предположение, которое подлежит проверке на основе результатов наблюдений.\nГипотезы бывают:\n\nтеоретические — про конструкты\nэмпирические — про переменные\nстатистические — про параметры [генеральной совокупности] и данные\n\n\n\n\nПростая гипотеза — это такое предположение, которое включает в себя какое-либо однозначно определеяемое утверждение. Например, истинная величина параметра соответствует некоторому строго заданному значению: \\(H : \\theta = \\theta_0\\). Другой вариант — две генеральные совокупности имеют одно и то же значение одной и той же характеристики: \\(H : \\theta_1 = \\theta_2\\).\nСложная гипотеза предполагает множественность вариантов для параметра, которые укладываются в рамки проверяемого предположения. Например, \\(H : \\theta &gt; \\theta_0\\) или \\(H : \\theta_1 \\neq \\theta_2\\).\n\n\n\n\nрезультаты наблюдений и\nкритерий.",
     "crumbs": [
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Тестирование статистических гипотез</span>"
     ]
@@ -860,11 +1030,31 @@
     ]
   },
   {
+    "objectID": "stats-testing.html#footnotes",
+    "href": "stats-testing.html#footnotes",
+    "title": "25  Тестирование статистических гипотез",
+    "section": "",
+    "text": "Здесь использовано обозначение условной вероятности \\(\\mathrm P(A|B)\\), то есть это вероятность того, что случилось событие \\(A\\) при условии, что случилось событие \\(B\\).↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Тестирование статистических гипотез</span>"
+    ]
+  },
+  {
+    "objectID": "andan-descriptives.html",
+    "href": "andan-descriptives.html",
+    "title": "26  Описательные статистики",
+    "section": "",
+    "text": "26.1 Виды статистики\nНапомним себе, что статистика [как набор методов и инструментов] делится на два вида — описательная статистика и статистика вывода.",
+    "crumbs": [
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Описательные статистики</span>"
+    ]
+  },
+  {
     "objectID": "andan-descriptives.html#andan-descriptives-kinds-of-stats",
     "href": "andan-descriptives.html#andan-descriptives-kinds-of-stats",
     "title": "26  Описательные статистики",
-    "section": "26.1 Виды статистики",
-    "text": "26.1 Виды статистики\n\n\n\nНапомним себе, что статистика [как набор методов и инструментов] делится на два вида — описательная статистика и статистика вывода.\n\nОписательная статистика (descriptive statistics1) занимается обработкой статистических данных, их наглядным представлением, и собственно описанием через некоторые характеристики.\n\nЭти характеристики, количественно описывающие особенности имеющихся данных, называются описательными статистиками (descriptive statistics2).\nЗадача описательной статистики — ёмко описать имеющиеся данные и составить на основе этих описаний общее представление о них, а также обнаружить особенности, которые могут повлиять на дальнейший анализ.\n\nСтатистика вывода (inferential statistics) занимается поиском ответов на содержательные вопросы, которые мы задаем данным в ходе их анализа в рамках научных и практических исследований.\n\nСостоит из двух компонентов — тестирования статистических гипотез и статистических методов.\n\n\n\n\n\n\n\n\nЗамечание о машинном обучении\n\n\n\nВ названии книги упомянуто «машинное обучение». Иногда его причисляют к статистике, иногда рассматривают отдельно. На самом же деле, статистические методы лежат где-то между статистикой вывода и машинным обучением.\nПочему?\nДело в том, что на статистические методы можно смотреть по-разному.\n\nЕсли нашей задачей является поиск ответов на исследовательские вопросы о закономерностях, о связи каких-либо факторов или влиянии переменных друг на друга, то мы будем смотреть на статистические модели с точки зрения статистики вывода. Это позволит нам находить ответы на интересующие нас вопросы — причем не важно, говорим мы о научных исследованиях или об исследованиях в индустрии.\nЕсли перед нами стоит задача хорошо предсказывать одни переменные на основании значений других — например, выдавать рекомендации на Яндекс.Музыке или в Яндекс.Лавке — то мы будем смотреть на те же статистические модели с точки зрения машинного обучения.\n\nТо есть, модели в анализе данных и машинном обучении одни и те же, но то, какую модель мы назовем хорошей и как мы эту «хорошесть» определим, будет отличаться в зависимости от задачи — исследовательская или предиктивная — которая перед нами стоит.",
+    "section": "",
+    "text": "Описательная статистика (descriptive statistics1) занимается обработкой статистических данных, их наглядным представлением, и собственно описанием через некоторые характеристики.\n\nЭти характеристики, количественно описывающие особенности имеющихся данных, называются описательными статистиками (descriptive statistics2).\nЗадача описательной статистики — ёмко описать имеющиеся данные и составить на основе этих описаний общее представление о них, а также обнаружить особенности, которые могут повлиять на дальнейший анализ.\n\nСтатистика вывода (inferential statistics) занимается поиском ответов на содержательные вопросы, которые мы задаем данным в ходе их анализа в рамках научных и практических исследований.\n\nСостоит из двух компонентов — тестирования статистических гипотез и статистических методов.\n\n\n\n\n\n\n\n\nЗамечание о машинном обучении\n\n\n\nВ названии книги упомянуто «машинное обучение». Иногда его причисляют к статистике, иногда рассматривают отдельно. На самом же деле, статистические методы лежат где-то между статистикой вывода и машинным обучением.\nПочему?\nДело в том, что на статистические методы можно смотреть по-разному.\n\nЕсли нашей задачей является поиск ответов на исследовательские вопросы о закономерностях, о связи каких-либо факторов или влиянии переменных друг на друга, то мы будем смотреть на статистические модели с точки зрения статистики вывода. Это позволит нам находить ответы на интересующие нас вопросы — причем не важно, говорим мы о научных исследованиях или об исследованиях в индустрии.\nЕсли перед нами стоит задача хорошо предсказывать одни переменные на основании значений других — например, выдавать рекомендации на Яндекс.Музыке или в Яндекс.Лавке — то мы будем смотреть на те же статистические модели с точки зрения машинного обучения.\n\nТо есть, модели в анализе данных и машинном обучении одни и те же, но то, какую модель мы назовем хорошей и как мы эту «хорошесть» определим, будет отличаться в зависимости от задачи — исследовательская или предиктивная — которая перед нами стоит.",
     "crumbs": [
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Описательные статистики</span>"
     ]
@@ -950,11 +1140,31 @@
     ]
   },
   {
+    "objectID": "andan-descriptives.html#footnotes",
+    "href": "andan-descriptives.html#footnotes",
+    "title": "26  Описательные статистики",
+    "section": "",
+    "text": "Mass (uncountable) noun↩︎\nCountable noun, plural in this case↩︎\nЗдесь в примере локальный максимум функции плотности вероятности на интервале \\((-4, \\, 4)\\) совпадает с глобальным максимумом — мы об этом знаем, потому что форма распределения нам известна. В случае эмпрического распределения корректнее говорить именно о локальном максимуме, так как глобальный максимум нам не доступен ввиду того, что мы работаем с выборкой.↩︎\nPer se (лат.) — «само по себе», «как таковое», «в чистом виде».↩︎\nНо если мы рисуем несколько боксплотов рядом, то на оси x будет категориальная переменная.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Описательные статистики</span>"
+    ]
+  },
+  {
+    "objectID": "andan-corr.html",
+    "href": "andan-corr.html",
+    "title": "29  Корреляционный анализ",
+    "section": "",
+    "text": "29.1 Ковариация\nМы хотим описать имеющиеся взаимосвязи как можно проще и опираясь на то, что у нас уже есть. Мы говорили, что дисперсия, или вариация, заключает в себе информацию об изменчивости признака. Если мы хотим исследовать взаимосвязь между признаками, то логично будет посмотреть, как изменяется один из признаков при изменении другого — иначе говоря, рассчитать совместную изменчивость признаков, или ко-вариацию (covariance).\nКак мы её будем считать? Подумаем графически. Расположим две переменные на осях и сопоставим каждому имеющемуся наблюдению точку на плоскости.\nКАРТИНКА\nОтметим средние значения по обеим переменным.\nКАРТИНКА\nЗаметим, что если наши наблюдения по переменной \\(x_1\\) отклоняются в большую сторону, то они отклоняются в большую сторону и по переменной \\(x_2\\). Аналогично, если они будут отклоняться в меньшую сторону по \\(x_1\\), то в меньшую же сторону они будут отклоняться и по \\(x_2\\).\nКАРТИНКА\nПолучается, мы можем на основании согласованности отклонений уже заключить о направлении связи. Произведение отклонений по обеим величинам будет положительно, если отклонения сонаправленны. Запишем это математически.\n\\[\n(\\bar x_1 - x_{i1}) (\\bar x_2 - x_{i2}) &gt; 0 \\Leftarrow \\big( (\\bar x_1 - x_{i1}) &gt; 0 \\wedge (\\bar x_2 - x_{i2}) &gt; 0 \\big) \\vee \\big( (\\bar x_1 - x_{i1}) &lt; 0 \\wedge (\\bar x_2 - x_{i2}) &lt; 0 \\big)\n\\]\nСоответственно, если отклонения будут направлены в разные стороны, из произведение будет отрицательным. Ну, осталось только понять, как совместные отклонения организованы в среднем — это и будет ковариацией двух величин:\n\\[\n\\mathrm{cov}(X_1, X_2) = \\frac{1}{n-1} \\sum_{i=1}^n (\\bar x_1 - x_{i1}) (\\bar x_2 - x_{i2})\n\\]\nВажно отметить, что ковариация улавливается только линейную составляющую взаимосвязи между признаками, поэтому если \\(\\mathrm{cov}(X_1,X_2) = 0\\), то мы можем сказать, что между переменными нет линейной взаимосвязи, однако это не значит, что между этими переменными нет никакой другой зависимости.\nКАРТИНКА\nУ ковариации есть два важных недостатка:\nПоэтому нам нужно как-то модицифировать эту статистику, чтобы мы могли больше вытащить из её значения.",
+    "crumbs": [
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Корреляционный анализ</span>"
+    ]
+  },
+  {
     "objectID": "andan-corr.html#andan-corr-cov",
     "href": "andan-corr.html#andan-corr-cov",
     "title": "29  Корреляционный анализ",
-    "section": "29.1 Ковариация",
-    "text": "29.1 Ковариация\nМы хотим описать имеющиеся взаимосвязи как можно проще и опираясь на то, что у нас уже есть. Мы говорили, что дисперсия, или вариация, заключает в себе информацию об изменчивости признака. Если мы хотим исследовать взаимосвязь между признаками, то логично будет посмотреть, как изменяется один из признаков при изменении другого — иначе говоря, рассчитать совместную изменчивость признаков, или ко-вариацию (covariance).\nКак мы её будем считать? Подумаем графически. Расположим две переменные на осях и сопоставим каждому имеющемуся наблюдению точку на плоскости.\nКАРТИНКА\nОтметим средние значения по обеим переменным.\nКАРТИНКА\nЗаметим, что если наши наблюдения по переменной \\(x_1\\) отклоняются в большую сторону, то они отклоняются в большую сторону и по переменной \\(x_2\\). Аналогично, если они будут отклоняться в меньшую сторону по \\(x_1\\), то в меньшую же сторону они будут отклоняться и по \\(x_2\\).\nКАРТИНКА\nПолучается, мы можем на основании согласованности отклонений уже заключить о направлении связи. Произведение отклонений по обеим величинам будет положительно, если отклонения сонаправленны. Запишем это математически.\n\\[\n(\\bar x_1 - x_{i1}) (\\bar x_2 - x_{i2}) &gt; 0 \\Leftarrow \\big( (\\bar x_1 - x_{i1}) &gt; 0 \\wedge (\\bar x_2 - x_{i2}) &gt; 0 \\big) \\vee \\big( (\\bar x_1 - x_{i1}) &lt; 0 \\wedge (\\bar x_2 - x_{i2}) &lt; 0 \\big)\n\\]\nСоответственно, если отклонения будут направлены в разные стороны, из произведение будет отрицательным. Ну, осталось только понять, как совместные отклонения организованы в среднем — это и будет ковариацией двух величин:\n\\[\n\\mathrm{cov}(X_1, X_2) = \\frac{1}{n-1} \\sum_{i=1}^n (\\bar x_1 - x_{i1}) (\\bar x_2 - x_{i2})\n\\]\n\nЧто такое ковариация величины самой с собой (\\(\\mathrm{cov}(X_1, X_1)\\))?\nПопробуйте получить ответ через вывод формулы.\n\nВажно отметить, что ковариация улавливается только линейную составляющую взаимосвязи между признаками, поэтому если \\(\\mathrm{cov}(X_1,X_2) = 0\\), то мы можем сказать, что между переменными нет линейной взаимосвязи, однако это не значит, что между этими переменными нет никакой другой зависимости.\nКАРТИНКА\nУ ковариации есть два важных недостатка:\n\nэто размерная величина, поэтому её значение зависит от единиц измерения признаков,\nона зависит от дисперсий признаков, поэтому по её значению можно определить только направление связи (прямая или обратная), однако ничего нельзая сказать о силе связи.\n\nПоэтому нам нужно как-то модицифировать эту статистику, чтобы мы могли больше вытащить из её значения.",
+    "section": "",
+    "text": "Что такое ковариация величины самой с собой (\\(\\mathrm{cov}(X_1, X_1)\\))?\nПопробуйте получить ответ через вывод формулы.\n\n\n\n\n\nэто размерная величина, поэтому её значение зависит от единиц измерения признаков,\nона зависит от дисперсий признаков, поэтому по её значению можно определить только направление связи (прямая или обратная), однако ничего нельзая сказать о силе связи.",
     "crumbs": [
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Корреляционный анализ</span>"
     ]
@@ -1010,20 +1220,40 @@
     ]
   },
   {
-    "objectID": "andan-simplelinear.html#вычисление-коэффициентов-линейной-регрессии",
-    "href": "andan-simplelinear.html#вычисление-коэффициентов-линейной-регрессии",
+    "objectID": "andan-corr.html#footnotes",
+    "href": "andan-corr.html#footnotes",
+    "title": "29  Корреляционный анализ",
+    "section": "",
+    "text": "Вы точно видели это словосочетание, когда сталкивались с линейной регресией.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Корреляционный анализ</span>"
+    ]
+  },
+  {
+    "objectID": "andan-simplelinear.html",
+    "href": "andan-simplelinear.html",
     "title": "31  Общие линейные модели. Простая линейная регрессия",
-    "section": "31.1 Вычисление коэффициентов линейной регрессии",
-    "text": "31.1 Вычисление коэффициентов линейной регрессии\n\n\n\n\n31.1.1 Матричное вычисление коэффициентов\n\n\n31.1.2 Аналитическое вычисление коэффициентов\n\\[\nf(b_0, b_1) = \\sum (y_i - \\hat y_i)^2 = \\sum (y_i - b_0 - b_1x_i)^2 \\rightarrow \\min_{b_0, b_1}\n\\]\n\\[\nf(b_0, b_1) = \\sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)\n\\]\n\\[\nf(b_0, b_1) =\n\\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)\n\\]\n\\[\nf(b_0, b_1) =\n\\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)\n\\]\n\\[\n\\frac{f(b_0, b_1)}{\\partial b_0} = \\sum (-2y_i + 2b_0 + 2x_ib_1) =\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big)\n\\]\n\\[\n\\frac{f(b_0, b_1)}{\\partial b_1} = \\sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i\n\\]\n\\[\n\\cases {\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) = 0 \\\\\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum \\big( y_i - (b_0 + b_1 x_i) \\big) = 0 \\\\\n\\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum y_i - \\sum b_0 + \\sum b_1 x_i = 0 \\\\\n\\sum y_i x_i - \\sum b_0 x_i + \\sum b_1 x^2_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum b_0 + \\sum b_1 x_i = \\sum y_i \\\\\n\\sum b_0 x_i + \\sum b_1 x_i^2 = \\sum y_i x_i\n}\n\\]\n\\[\n\\cases{\nb1 \\sum x_i + n b_0 = \\sum y_i \\\\\nb1 \\sum x^2_i + b_0 \\sum x_i = \\sum y_i x_i\n}\n\\]\n\\[\nb_0 = \\frac{\\sum y_i}{n} - b_1 \\frac{\\sum x_i}{n} = \\bar y - b_1 \\bar x\n\\]\n\\[\nb1 \\sum x_i^2 + (\\bar y - b_1 \\bar x) \\sum x_i = \\sum x_i y_i\n\\]\n\\[\n\\underline{b_1 \\sum x_i^2} + \\bar y \\sum x_i - \\underline{b_1 \\bar x \\sum x_i} = \\sum x_i y_i\n\\]\n\\[\nb_1 \\Big( \\sum x_i^2 - \\bar x \\sum x_i \\Big) =\n\\sum x_i y_i - \\bar y \\sum x_i\n\\]\n\\[\nb_1 = \\frac{\\sum x_i y_i - \\bar y \\sum x_i}{\\sum x_i^2 - \\bar x \\sum x_i} =\n\\frac{(\\sum x_i y_i - \\bar y \\sum x_i) \\times n}{(\\sum x_i^2 - \\bar x \\sum x_i) \\times n}\n\\]\n\\[\nb_1 = \\frac{\\overline{xy} - \\bar x \\bar y}{\\overline{x^2} - \\bar x^2} =\n\\frac{\\overline{xy} - \\bar x \\bar y}{\\sigma_X^2}\n\\]\n\n\n31.1.3 Угловой коэффициент и коэффициент корреляции\n\n\n\n\\[\nb_1 = r_{X,Y} \\times \\frac{s_Y}{s_X}\n\\]\n\\[\nr_{X,Y} = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\times\n\\frac{s_Y}{s_X}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\times\n\\frac{\\sqrt{\\sum (y_i - \\bar y)^2 / (n-1)}}{\\sqrt{\\sum (x_i - \\bar x)^2 / (n-1)}}\n\\]\nСократим дробь:\n\\[\n\\frac{\\sqrt{(y_i - \\bar y)^2 / (n-1)}}{\\sqrt{(x_i - \\bar x)^2 / (n-1)}} =\n\\frac{\\sqrt{(y_i - \\bar y)^2} \\times \\sqrt{(n-1)}}{\\sqrt{(x_i - \\bar x)^2} \\times \\sqrt{(n-1)}} = \\frac{\\sqrt{(y_i - \\bar y)^2}}{\\sqrt{(x_i - \\bar x)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2} \\times \\color{green}{\\sqrt{\\sum(y_i - \\bar y)^2}}}\n\\times\n\\frac{\\color{green}{\\sqrt{\\sum(y_i - \\bar y)^2}}}{\\sqrt{\\sum(x_i - \\bar x)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sum(x_i - \\bar x)^2}\n\\]\nСумма отклонений от среднего равна нулю:\n\\[\n\\sum(x_i - \\bar x) = \\sum (y_i - \\bar y) = 0\n\\]\nРазложим числитель:\n\\[\n\\sum (x_i - \\bar x) (y_i - \\bar y) =\n\\sum x_i (y_i - \\bar y) - \\sum \\bar x (y_i - \\bar y) =\n\\sum x_i (y_i - \\bar y)\n\\]\n\\[\nb_1 = \\frac{\\sum x_i (y_i - \\bar y)}{\\sum (x_i - \\bar x)^2} =\n\\frac{\\Big( \\sum x_i (y_i - \\bar y) \\Big) \\times n}{\\Big( \\sum (x_i - \\bar x)^2 \\Big) \\times n} = \\frac{\\overline{xy} - \\bar x \\bar y}{\\sigma_X^2}\n\\]\n\n\n31.1.4 TSS = ESS + RSS?\n\n\n\n\\[\n\\mathrm{TSS} =\n\\sum (y_i - \\bar y)^2 =\n\\sum (y_i - \\hat y + \\hat y - \\bar y)^2 =\n\\sum \\big( (y_i - \\hat y_i) + (\\hat y_i - \\bar y) \\big)^2 =\n\\]\n\\[\n= \\sum (y_i - \\hat y_i) = \\sum (\\hat y_i - \\bar y) + 2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) =\n\\]\n\\[\n= \\mathrm{RSS} + \\mathrm{ESS} + 2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y)\n\\]\nОкей, осталось доказать, что \\(2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) = 0\\), и все будет найс.\nТак как \\(b_0 = \\bar y - b_1 x\\).\n\\[\n\\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) = \\sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \\bar y) =\n\\]\n\\[\n= \\sum (y_i - \\bar y + b_1 \\bar x - b_1x_i) (\\bar y - b_1 \\bar x + b_1 x_i - \\bar y) =\n\\]\n\\[\n= \\sum \\big( (y_i - \\bar y) - b_1(x_i - \\bar x) \\big) \\times b_1 (x_i - \\bar x) =\n\\sum \\big( b_1 (x_i - \\bar x) (y_i - \\bar y) - b_1^2 (x_i - \\bar x)^2 \\big) =\n\\]\n\\[\n= b_1 \\sum (x_i - \\bar x) (y_i - \\bar y) - b_1^2 \\sum (x_i - \\bar x)\n\\]\nТак как \\(b_1 = \\frac{\\sum(x_i - \\bar x)(y_i - \\bar y)}{\\sum (x_i - \\bar x)^2}\\), получается, что:\n\\[\n\\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} - \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2 \\times \\sum (x_i - \\bar x)^2}{\\Big( \\sum (x_i - \\bar x)^2\\Big)^2} =\n\\]\n\\[\n= \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} - \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} = 0\n\\]",
+    "section": "",
+    "text": "31.1 Вычисление коэффициентов линейной регрессии",
     "crumbs": [
       "<span class='chapter-number'>31</span>  <span class='chapter-title'>Общие линейные модели. Простая линейная регрессия</span>"
     ]
   },
   {
-    "objectID": "andan-logreg.html#линеаризация-логистической-кривой-посредством-logit-преобразования",
-    "href": "andan-logreg.html#линеаризация-логистической-кривой-посредством-logit-преобразования",
+    "objectID": "andan-simplelinear.html#вычисление-коэффициентов-линейной-регрессии",
+    "href": "andan-simplelinear.html#вычисление-коэффициентов-линейной-регрессии",
+    "title": "31  Общие линейные модели. Простая линейная регрессия",
+    "section": "",
+    "text": "31.1.1 Матричное вычисление коэффициентов\n\n\n31.1.2 Аналитическое вычисление коэффициентов\n\\[\nf(b_0, b_1) = \\sum (y_i - \\hat y_i)^2 = \\sum (y_i - b_0 - b_1x_i)^2 \\rightarrow \\min_{b_0, b_1}\n\\]\n\\[\nf(b_0, b_1) = \\sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)\n\\]\n\\[\nf(b_0, b_1) =\n\\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)\n\\]\n\\[\nf(b_0, b_1) =\n\\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)\n\\]\n\\[\n\\frac{f(b_0, b_1)}{\\partial b_0} = \\sum (-2y_i + 2b_0 + 2x_ib_1) =\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big)\n\\]\n\\[\n\\frac{f(b_0, b_1)}{\\partial b_1} = \\sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i\n\\]\n\\[\n\\cases {\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) = 0 \\\\\n-2 \\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum \\big( y_i - (b_0 + b_1 x_i) \\big) = 0 \\\\\n\\sum \\big( y_i - (b_0 + b_1 x_i) \\big) x_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum y_i - \\sum b_0 + \\sum b_1 x_i = 0 \\\\\n\\sum y_i x_i - \\sum b_0 x_i + \\sum b_1 x^2_i = 0\n}\n\\]\n\\[\n\\cases{\n\\sum b_0 + \\sum b_1 x_i = \\sum y_i \\\\\n\\sum b_0 x_i + \\sum b_1 x_i^2 = \\sum y_i x_i\n}\n\\]\n\\[\n\\cases{\nb1 \\sum x_i + n b_0 = \\sum y_i \\\\\nb1 \\sum x^2_i + b_0 \\sum x_i = \\sum y_i x_i\n}\n\\]\n\\[\nb_0 = \\frac{\\sum y_i}{n} - b_1 \\frac{\\sum x_i}{n} = \\bar y - b_1 \\bar x\n\\]\n\\[\nb1 \\sum x_i^2 + (\\bar y - b_1 \\bar x) \\sum x_i = \\sum x_i y_i\n\\]\n\\[\n\\underline{b_1 \\sum x_i^2} + \\bar y \\sum x_i - \\underline{b_1 \\bar x \\sum x_i} = \\sum x_i y_i\n\\]\n\\[\nb_1 \\Big( \\sum x_i^2 - \\bar x \\sum x_i \\Big) =\n\\sum x_i y_i - \\bar y \\sum x_i\n\\]\n\\[\nb_1 = \\frac{\\sum x_i y_i - \\bar y \\sum x_i}{\\sum x_i^2 - \\bar x \\sum x_i} =\n\\frac{(\\sum x_i y_i - \\bar y \\sum x_i) \\times n}{(\\sum x_i^2 - \\bar x \\sum x_i) \\times n}\n\\]\n\\[\nb_1 = \\frac{\\overline{xy} - \\bar x \\bar y}{\\overline{x^2} - \\bar x^2} =\n\\frac{\\overline{xy} - \\bar x \\bar y}{\\sigma_X^2}\n\\]\n\n\n31.1.3 Угловой коэффициент и коэффициент корреляции\n\n\n\n\\[\nb_1 = r_{X,Y} \\times \\frac{s_Y}{s_X}\n\\]\n\\[\nr_{X,Y} = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\times\n\\frac{s_Y}{s_X}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2 \\sum(y_i - \\bar y)^2}}\n\\times\n\\frac{\\sqrt{\\sum (y_i - \\bar y)^2 / (n-1)}}{\\sqrt{\\sum (x_i - \\bar x)^2 / (n-1)}}\n\\]\nСократим дробь:\n\\[\n\\frac{\\sqrt{(y_i - \\bar y)^2 / (n-1)}}{\\sqrt{(x_i - \\bar x)^2 / (n-1)}} =\n\\frac{\\sqrt{(y_i - \\bar y)^2} \\times \\sqrt{(n-1)}}{\\sqrt{(x_i - \\bar x)^2} \\times \\sqrt{(n-1)}} = \\frac{\\sqrt{(y_i - \\bar y)^2}}{\\sqrt{(x_i - \\bar x)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sqrt{\\sum(x_i - \\bar x)^2} \\times \\color{green}{\\sqrt{\\sum(y_i - \\bar y)^2}}}\n\\times\n\\frac{\\color{green}{\\sqrt{\\sum(y_i - \\bar y)^2}}}{\\sqrt{\\sum(x_i - \\bar x)^2}}\n\\]\n\\[\nb_1 = \\frac{\\sum (x_i - \\bar x)(y_i - \\bar y)}{\\sum(x_i - \\bar x)^2}\n\\]\nСумма отклонений от среднего равна нулю:\n\\[\n\\sum(x_i - \\bar x) = \\sum (y_i - \\bar y) = 0\n\\]\nРазложим числитель:\n\\[\n\\sum (x_i - \\bar x) (y_i - \\bar y) =\n\\sum x_i (y_i - \\bar y) - \\sum \\bar x (y_i - \\bar y) =\n\\sum x_i (y_i - \\bar y)\n\\]\n\\[\nb_1 = \\frac{\\sum x_i (y_i - \\bar y)}{\\sum (x_i - \\bar x)^2} =\n\\frac{\\Big( \\sum x_i (y_i - \\bar y) \\Big) \\times n}{\\Big( \\sum (x_i - \\bar x)^2 \\Big) \\times n} = \\frac{\\overline{xy} - \\bar x \\bar y}{\\sigma_X^2}\n\\]\n\n\n31.1.4 TSS = ESS + RSS?\n\n\n\n\\[\n\\mathrm{TSS} =\n\\sum (y_i - \\bar y)^2 =\n\\sum (y_i - \\hat y + \\hat y - \\bar y)^2 =\n\\sum \\big( (y_i - \\hat y_i) + (\\hat y_i - \\bar y) \\big)^2 =\n\\]\n\\[\n= \\sum (y_i - \\hat y_i) = \\sum (\\hat y_i - \\bar y) + 2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) =\n\\]\n\\[\n= \\mathrm{RSS} + \\mathrm{ESS} + 2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y)\n\\]\nОкей, осталось доказать, что \\(2 \\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) = 0\\), и все будет найс.\nТак как \\(b_0 = \\bar y - b_1 x\\).\n\\[\n\\sum (y_i - \\hat y_i)(\\hat y_i - \\bar y) = \\sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \\bar y) =\n\\]\n\\[\n= \\sum (y_i - \\bar y + b_1 \\bar x - b_1x_i) (\\bar y - b_1 \\bar x + b_1 x_i - \\bar y) =\n\\]\n\\[\n= \\sum \\big( (y_i - \\bar y) - b_1(x_i - \\bar x) \\big) \\times b_1 (x_i - \\bar x) =\n\\sum \\big( b_1 (x_i - \\bar x) (y_i - \\bar y) - b_1^2 (x_i - \\bar x)^2 \\big) =\n\\]\n\\[\n= b_1 \\sum (x_i - \\bar x) (y_i - \\bar y) - b_1^2 \\sum (x_i - \\bar x)\n\\]\nТак как \\(b_1 = \\frac{\\sum(x_i - \\bar x)(y_i - \\bar y)}{\\sum (x_i - \\bar x)^2}\\), получается, что:\n\\[\n\\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} - \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2 \\times \\sum (x_i - \\bar x)^2}{\\Big( \\sum (x_i - \\bar x)^2\\Big)^2} =\n\\]\n\\[\n= \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} - \\frac{\\Big( \\sum (x_i - \\bar x) (y_i - \\bar y) \\Big)^2}{\\sum (x_i - \\bar x)^2} = 0\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Общие линейные модели. Простая линейная регрессия</span>"
+    ]
+  },
+  {
+    "objectID": "andan-logreg.html",
+    "href": "andan-logreg.html",
     "title": "42  Обобщенные линейные модели. Логистическая регрессия",
-    "section": "42.1 Линеаризация логистической кривой посредством logit-преобразования",
+    "section": "",
     "text": "42.1 Линеаризация логистической кривой посредством logit-преобразования\n\\[\np = \\frac{e^{\\beta_0 + \\beta_1 x}}{1 + e^{\\beta_0 + \\beta_1 x}}\n\\]\nПроизведем замену:\n\\[\n\\beta_0 + \\beta_1 x = t\n\\]\n\\[\n\\mathrm{logit}(p) = \\ln \\Big( \\frac{p}{1-p} \\Big)\n\\]\nЕсли logit-преобразование действительно линеризует логистическую кривую, что должно выполняться равенство:\n\\[\n\\mathrm{logit}(p) = t \\Rightarrow \\ln \\Big( \\frac{p}{1-p} \\Big) = t\n\\]\nДокажем это.\n\\[\n\\ln \\Big( \\frac{p}{1-p} \\Big) =\n\\ln \\Bigg( \\frac{\\frac{e^t}{1 + e^t}}{1 - \\frac{e^t}{1 + e^t}} \\Bigg) =\n\\ln \\Big( \\frac{e^t}{1 + e^t} \\Big) - \\ln \\Big(1 - \\frac{e^t}{1 + e^t} \\Big) =\n\\]\n\\[\n= \\ln \\Big( \\frac{e^t}{1 + e^t} \\Big) - \\ln \\Big(\\frac{1 + e^t - e^t}{1 + e^t} \\Big) =\n\\ln \\Big( \\frac{e^t}{1 + e^t} \\Big) - \\ln \\Big( \\frac{1}{1 + e^t} \\Big) =\n\\]\n\\[\n= \\ln (e^t) - \\ln (1 + e^t) - \\big(\\ln (1) - \\ln (1+e^t)\\big) =\n\\ln (e^t) - \\ln (1) =\n\\ln (e^t) = t\n\\]",
     "crumbs": [
       "<span class='chapter-number'>42</span>  <span class='chapter-title'>Обобщенные линейные модели. Логистическая регрессия</span>"
@@ -1040,11 +1270,21 @@
     ]
   },
   {
+    "objectID": "appendix-numbers.html",
+    "href": "appendix-numbers.html",
+    "title": "94  Числа и железо",
+    "section": "",
+    "text": "94.1 Целые числа",
+    "crumbs": [
+      "<span class='chapter-number'>94</span>  <span class='chapter-title'>Числа и железо</span>"
+    ]
+  },
+  {
     "objectID": "appendix-numbers.html#integer_iron",
     "href": "appendix-numbers.html#integer_iron",
     "title": "94  Числа и железо",
-    "section": "94.1 Целые числа",
-    "text": "94.1 Целые числа\n\n94.1.1 Системы счисления\n\n\n94.1.2 Перевод числа из одной системы счисления в другую\n\n\n94.1.3 Целочисленные типы",
+    "section": "",
+    "text": "94.1.1 Системы счисления\n\n\n94.1.2 Перевод числа из одной системы счисления в другую\n\n\n94.1.3 Целочисленные типы",
     "crumbs": [
       "<span class='chapter-number'>94</span>  <span class='chapter-title'>Числа и железо</span>"
     ]
@@ -1070,10 +1310,10 @@
     ]
   },
   {
-    "objectID": "appendix-git.html#концепция-git",
-    "href": "appendix-git.html#концепция-git",
+    "objectID": "appendix-git.html",
+    "href": "appendix-git.html",
     "title": "99  Git",
-    "section": "99.1 Концепция Git",
+    "section": "",
     "text": "99.1 Концепция Git",
     "crumbs": [
       "<span class='chapter-number'>99</span>  <span class='chapter-title'>Git</span>"
@@ -1100,11 +1340,21 @@
     ]
   },
   {
+    "objectID": "appendix-formulas.html",
+    "href": "appendix-formulas.html",
+    "title": "100  Формулы",
+    "section": "",
+    "text": "100.1 Степени и корни",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
     "objectID": "appendix-formulas.html#formulas_power",
     "href": "appendix-formulas.html#formulas_power",
     "title": "100  Формулы",
-    "section": "100.1 Степени и корни",
-    "text": "100.1 Степени и корни\n\n100.1.1 Определения\n\\[\na^b \\overset{\\text{def}}{=}\\prod_{i=1}^b a_i\n\\]\n\\[\n\\sqrt[n]a \\overset{\\text{def}}{=}b \\Leftrightarrow b^n = a\n\\]\n\n\n100.1.2 Свойства\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]",
+    "section": "",
+    "text": "100.1.1 Определения\n\\[\na^b \\overset{\\text{def}}{=}\\prod_{i=1}^b a_i\n\\]\n\\[\n\\sqrt[n]a \\overset{\\text{def}}{=}b \\Leftrightarrow b^n = a\n\\]\n\n\n100.1.2 Свойства\n\n\n\n\\[a^n \\cdot a^m = a^{n+m}\\] \\[\\frac{a^n}{a^m} = a^{n-m}\\] \\[(a^n)^m = a^{nm}\\] \\[a^0 = 1\\] \\[a^{-n}=\\frac{1}{a^n}\\] \\[(a \\cdot b)^n = a^n \\cdot b^n\\] \\[\\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}\\]\n\n\n\\[a^{\\frac{1}{n}}=\\sqrt[n]{a}\\] \\[a^{\\frac{m}{n}}=\\sqrt[n]{a^m}\\] \\[\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}\\] \\[(a \\cdot b)^{\\frac{1}{n}} = a^{\\frac{1}{n}} \\cdot b^{\\frac{1}{n}}\\] \\[\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}\\] \\[\\Big(\\frac{a}{b}\\Big)^{\\frac{1}{n}} = \\frac{a^{\\frac{1}{n}}}{b^{\\frac{1}{n}}}\\]\n\n\n\n\\[\nx^n = a \\Rightarrow x =\n\\begin{cases}\n\\pm \\sqrt[n]{a}, &\\quad x \\mod 2 = 0 \\\\\n\\sqrt[n]{a}, &\\quad x \\mod 2 = 1\n\\end{cases}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
     ]
@@ -1150,10 +1400,20 @@
     ]
   },
   {
-    "objectID": "appendix-design.html#цвет",
-    "href": "appendix-design.html#цвет",
+    "objectID": "appendix-formulas.html#footnotes",
+    "href": "appendix-formulas.html#footnotes",
+    "title": "100  Формулы",
+    "section": "",
+    "text": "Функция называется чётной, если \\(f(-x) = f(x)\\), и нечётной, если \\(f(-x) = -f(x)\\).↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>100</span>  <span class='chapter-title'>Формулы</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-design.html",
+    "href": "appendix-design.html",
     "title": "101  Дизайн",
-    "section": "101.1 Цвет",
+    "section": "",
     "text": "101.1 Цвет",
     "crumbs": [
       "<span class='chapter-number'>101</span>  <span class='chapter-title'>Дизайн</span>"

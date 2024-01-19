@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,16 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +40,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,7 +70,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -78,11 +85,18 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <script src="site_libs/plotly-binding-4.10.2/plotly.js"></script>
 <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
@@ -92,7 +106,35 @@ div.csl-indent {
 <link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -100,9 +142,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -110,182 +152,200 @@ div.csl-indent {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">R</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></a>
+  <a href="./l1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></a>
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Математика и статистика</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></a>
+  <a href="./l3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></a>
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a>
+  <a href="./l5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./l6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Анализ данных</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./l7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></a>
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></a>
+  <a href="./l11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></a>
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l13.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a>
+  <a href="./l13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></a>
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></a>
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#дискретная-математика" id="toc-дискретная-математика" class="nav-link active" data-scroll-target="#дискретная-математика"><span class="toc-section-number">3.1</span>  Дискретная математика</a>
+  <li><a href="#дискретная-математика" id="toc-дискретная-математика" class="nav-link active" data-scroll-target="#дискретная-математика"><span class="header-section-number">3.1</span> Дискретная математика</a>
   <ul class="collapse">
-  <li><a href="#алгебра-логики" id="toc-алгебра-логики" class="nav-link" data-scroll-target="#алгебра-логики"><span class="toc-section-number">3.1.1</span>  Алгебра логики</a></li>
-  <li><a href="#элементы-теории-множеств" id="toc-элементы-теории-множеств" class="nav-link" data-scroll-target="#элементы-теории-множеств"><span class="toc-section-number">3.1.2</span>  Элементы теории множеств</a></li>
-  <li><a href="#элементы-комбинаторики" id="toc-элементы-комбинаторики" class="nav-link" data-scroll-target="#элементы-комбинаторики"><span class="toc-section-number">3.1.3</span>  Элементы комбинаторики</a></li>
+  <li><a href="#алгебра-логики" id="toc-алгебра-логики" class="nav-link" data-scroll-target="#алгебра-логики"><span class="header-section-number">3.1.1</span> Алгебра логики</a></li>
+  <li><a href="#элементы-теории-множеств" id="toc-элементы-теории-множеств" class="nav-link" data-scroll-target="#элементы-теории-множеств"><span class="header-section-number">3.1.2</span> Элементы теории множеств</a></li>
+  <li><a href="#элементы-комбинаторики" id="toc-элементы-комбинаторики" class="nav-link" data-scroll-target="#элементы-комбинаторики"><span class="header-section-number">3.1.3</span> Элементы комбинаторики</a></li>
   </ul></li>
-  <li><a href="#элементы-математического-анализа" id="toc-элементы-математического-анализа" class="nav-link" data-scroll-target="#элементы-математического-анализа"><span class="toc-section-number">3.2</span>  Элементы математического анализа</a>
+  <li><a href="#элементы-математического-анализа" id="toc-элементы-математического-анализа" class="nav-link" data-scroll-target="#элементы-математического-анализа"><span class="header-section-number">3.2</span> Элементы математического анализа</a>
   <ul class="collapse">
-  <li><a href="#последовательности" id="toc-последовательности" class="nav-link" data-scroll-target="#последовательности"><span class="toc-section-number">3.2.1</span>  Последовательности</a></li>
-  <li><a href="#предел-последовательности" id="toc-предел-последовательности" class="nav-link" data-scroll-target="#предел-последовательности"><span class="toc-section-number">3.2.2</span>  Предел последовательности</a></li>
-  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="toc-section-number">3.2.3</span>  Функции</a></li>
-  <li><a href="#производная" id="toc-производная" class="nav-link" data-scroll-target="#производная"><span class="toc-section-number">3.2.4</span>  Производная</a></li>
-  <li><a href="#частная-производная" id="toc-частная-производная" class="nav-link" data-scroll-target="#частная-производная"><span class="toc-section-number">3.2.5</span>  Частная производная</a></li>
-  <li><a href="#интеграл" id="toc-интеграл" class="nav-link" data-scroll-target="#интеграл"><span class="toc-section-number">3.2.6</span>  Интеграл</a></li>
+  <li><a href="#последовательности" id="toc-последовательности" class="nav-link" data-scroll-target="#последовательности"><span class="header-section-number">3.2.1</span> Последовательности</a></li>
+  <li><a href="#предел-последовательности" id="toc-предел-последовательности" class="nav-link" data-scroll-target="#предел-последовательности"><span class="header-section-number">3.2.2</span> Предел последовательности</a></li>
+  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="header-section-number">3.2.3</span> Функции</a></li>
+  <li><a href="#производная" id="toc-производная" class="nav-link" data-scroll-target="#производная"><span class="header-section-number">3.2.4</span> Производная</a></li>
+  <li><a href="#частная-производная" id="toc-частная-производная" class="nav-link" data-scroll-target="#частная-производная"><span class="header-section-number">3.2.5</span> Частная производная</a></li>
+  <li><a href="#интеграл" id="toc-интеграл" class="nav-link" data-scroll-target="#интеграл"><span class="header-section-number">3.2.6</span> Интеграл</a></li>
   </ul></li>
-  <li><a href="#элементы-линейной-алгебры" id="toc-элементы-линейной-алгебры" class="nav-link" data-scroll-target="#элементы-линейной-алгебры"><span class="toc-section-number">3.3</span>  Элементы линейной алгебры</a>
+  <li><a href="#элементы-линейной-алгебры" id="toc-элементы-линейной-алгебры" class="nav-link" data-scroll-target="#элементы-линейной-алгебры"><span class="header-section-number">3.3</span> Элементы линейной алгебры</a>
   <ul class="collapse">
-  <li><a href="#системы-линейных-уравнений" id="toc-системы-линейных-уравнений" class="nav-link" data-scroll-target="#системы-линейных-уравнений"><span class="toc-section-number">3.3.1</span>  Системы линейных уравнений</a></li>
-  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="toc-section-number">3.3.2</span>  Векторы</a></li>
-  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="toc-section-number">3.3.3</span>  Матрицы</a></li>
+  <li><a href="#системы-линейных-уравнений" id="toc-системы-линейных-уравнений" class="nav-link" data-scroll-target="#системы-линейных-уравнений"><span class="header-section-number">3.3.1</span> Системы линейных уравнений</a></li>
+  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="header-section-number">3.3.2</span> Векторы</a></li>
+  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="header-section-number">3.3.3</span> Матрицы</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -295,7 +355,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></h1>
 </div>
 
 
@@ -308,9 +368,11 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<!--- {{< include _symbols.qmd >}} --->
+
+<!---  --->
 <!--- Logic --->
 <!--- Number sets--->
 <!--- Linear Algebra --->
@@ -319,9 +381,6 @@ div.csl-indent {
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
-<div class="cell">
-
-</div>
 <section id="дискретная-математика" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="дискретная-математика"><span class="header-section-number">3.1</span> Дискретная математика</h2>
 <section id="алгебра-логики" class="level3" data-number="3.1.1">
@@ -366,7 +425,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/negation.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Логическое отрицание
 </figcaption>
 </figure>
@@ -415,7 +474,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/and.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Конъюнкция (логическое И)
 </figcaption>
 </figure>
@@ -460,7 +519,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/or.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Дизъюнкция (логическое ИЛИ)
 </figcaption>
 </figure>
@@ -472,7 +531,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/xor.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Разделительная дизъюнкция (исключающее ИЛИ)
 </figcaption>
 </figure>
@@ -554,7 +613,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/implication.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Импликация <span class="math inline">\(p \rightarrow q\)</span>
 </figcaption>
 </figure>
@@ -598,7 +657,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/replication.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Репликация <span class="math inline">\(p \leftarrow q\)</span>
 </figcaption>
 </figure>
@@ -642,7 +701,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/equivalence.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Эквиваленция <span class="math inline">\(p \leftrightarrow q\)</span>
 </figcaption>
 </figure>
@@ -661,7 +720,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/set-a.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Множество <span class="math inline">\(А\)</span>, содержащее элементы <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, <span class="math inline">\(a_3\)</span>, <span class="math inline">\(a_4\)</span>, <span class="math inline">\(a_5\)</span>
 </figcaption>
 </figure>
@@ -683,7 +742,7 @@ div.csl-indent {
 <center>
 <figure class="figure">
 <img src="pics/set-a1.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Множество <span class="math inline">\(А_1\)</span>, состоящее из элементов <span class="math inline">\(a_1\)</span> и <span class="math inline">\(a_2\)</span>, является подмножеством множества <span class="math inline">\(A\)</span>
 </figcaption>
 </figure>
@@ -716,7 +775,7 @@ A + B = A \cup B = \{ x : x \in A \vee x \in B \}
 <center>
 <figure class="figure">
 <img src="pics/union.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Объединение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
 </figcaption>
 </figure>
@@ -732,7 +791,7 @@ A \cdot B = A \cap B = \{ x : x \in A \wedge x \in B \}
 <center>
 <figure class="figure">
 <img src="pics/intersection.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Пересечение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
 </figcaption>
 </figure>
@@ -747,7 +806,7 @@ A ∖ B = \{ x : x \in A \wedge x \notin B \}
 <center>
 <figure class="figure">
 <img src="pics/difference.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Разность множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
 </figcaption>
 </figure>
@@ -759,7 +818,7 @@ U ∖ A = A^c = \bar A = \{ x : x \notin A \}
 <center>
 <figure class="figure">
 <img src="pics/complement.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Дополнение множества <span class="math inline">\(A\)</span>
 </figcaption>
 </figure>
@@ -774,7 +833,7 @@ A \, \Delta \, B = ( A ∖ B ) \cup ( B ∖ A ) = \{ x : x \in A \text{XOR} \x \
 <center>
 <figure class="figure">
 <img src="pics/symm-difference.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Симметрическая разность множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
 </figcaption>
 </figure>
@@ -789,7 +848,7 @@ A \times B = \{ (a,b) : a \in A, b \in B \}
 <center>
 <figure class="figure">
 <img src="pics/decart-prod.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Декартово произведение множеств <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>
 </figcaption>
 </figure>
@@ -822,7 +881,7 @@ f(\text{a}) = 1, \quad f(\text{b}) = 2, \quad f(\text{z}) = 26
 <center>
 <figure class="figure">
 <img src="pics/set-func.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Отображение <span class="math inline">\(F : L \rightarrow N\)</span>
 </figcaption>
 </figure>
@@ -951,14 +1010,11 @@ A_n^k = \frac{n!}{(n-k)!}
 </ol>
 <p>Примерами функций могут быть <span class="math inline">\(y = x^2\)</span>, <span class="math inline">\(y = kx + b\)</span>, <span class="math inline">\(y = |x|\)</span> и другие.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="l3_files/figure-html/func_graphs-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Примеры функций</figcaption><p></p>
+<figcaption>Примеры функций</figcaption>
 </figure>
 </div>
 </div>
@@ -971,7 +1027,7 @@ A_n^k = \frac{n!}{(n-k)!}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="l3_files/figure-html/func-graphs-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Пример графика дискретной функции</figcaption><p></p>
+<figcaption>Пример графика дискретной функции</figcaption>
 </figure>
 </div>
 </div>
@@ -987,25 +1043,41 @@ A_n^k = \frac{n!}{(n-k)!}
 <p>Пусть дана функция <span class="math inline">\(f(x) = 2x^3 + 3x^2-4x+6\)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/deriv1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Выберем точку <span class="math inline">\(x_0\)</span>, в которой мы хотим определить, куда и с какой скоростью движется наша функция. В этой точке функция имеет значение <span class="math inline">\(y_0\)</span>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/deriv2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Шагнём на некоторую дистанцию <span class="math inline">\(\Delta x\)</span> вправо (по направлению оси <span class="math inline">\(x\)</span>). Назовём эту дистанцию <em>приращением аргумента</em>. В точке <span class="math inline">\(x_0 + \Delta x\)</span> фунция будет иметь какое-то значение <span class="math inline">\(y_0 + \Delta y\)</span>, где <span class="math inline">\(\Delta y\)</span> — <em>приращение функции</em>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/deriv3-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Наша функция движется из точки <span class="math inline">\((x_0,y_0)\)</span> в точку <span class="math inline">\((x_0 + \Delta x, y_0 + \Delta y)\)</span>. Имеем следующий треугольник — приблизим картинку:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/deriv4-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Нас интересует угол <span class="math inline">\(alpha\)</span> — именно он задает скорость и направление изменения функции. Если мы узнаем, каков угол <span class="math inline">\(\alpha\)</span> — а точнее <span class="math inline">\(\tan \alpha\)</span>, потому что так проще — то узнаем, куда движется функция.</p>
@@ -1025,7 +1097,11 @@ f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{\Delta f_(x)}{\Delta x} = \frac{df
 <p>Важное свойство этой функции, которое нам понадобится в дальнейшем, заключается в том, что там, где график производной пересекает ось <span class="math inline">\(x\)</span> — то есть <em>там, где производная равна нулю</em> — на исходной функции случаются точки смены монотонности — <em>точки минимума</em> и <em>максимума</em>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/deriv-graph-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/deriv-graph-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Производные основных элементарных функций можно найти <a href="../book/appendix-formulas.html#formulas_deriv">тут</a>.</p>
@@ -1039,8 +1115,8 @@ f(x, y) = 2x^2 + y^3
 <p>Теперь у нас две переменные — <span class="math inline">\(x\)</span> и <span class="math inline">\(y\)</span> — и от них обоих зависит значение функции. Это даже можно изобразить:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4071c44ff4ef6eccf842" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-4071c44ff4ef6eccf842">{"x":{"visdat":{"9d5c6131d0cd":["function () ","plotlyVisDat"]},"cur_data":"9d5c6131d0cd","attrs":{"9d5c6131d0cd":{"x":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"y":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"z":[[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45],[-10.18,-7.569,-5.13199999999999,-2.863,-0.756,1.195,2.996,4.653,6.172,7.559,8.82,9.961,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-11.32,-8.709,-6.272,-4.00300000000001,-1.896,0.0549999999999979,1.856,3.513,5.03199999999999,6.419,7.68,8.821,9.848,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999997,1.353,2.872,4.259,5.52,6.661,7.688,8.607,9.424,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.304,-0.646999999999998,0.871999999999996,2.259,3.52,4.661,5.688,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-16.42,-13.809,-11.372,-9.10300000000001,-6.996,-5.045,-3.244,-1.587,-0.0680000000000049,1.319,2.58,3.721,4.748,5.667,6.484,7.205,7.836,8.383,8.852,9.249,9.58,9.851,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.004,-3.347,-1.828,-0.441000000000001,0.82,1.961,2.988,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.78,0.361000000000001,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.344,-5.687,-4.168,-2.781,-1.52,-0.379,0.648000000000001,1.567,2.384,3.105,3.736,4.283,4.752,5.149,5.48,5.751,5.968,6.137,6.264,6.355,6.416,6.453,6.472,6.479,6.48,6.481,6.488,6.507,6.544,6.605,6.696,6.823,6.992,7.209,7.48,7.811,8.208,8.677,9.224,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999987,0.867,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.704,-7.047,-5.528,-4.141,-2.88,-1.739,-0.711999999999999,0.207,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.451,6.848,7.317,7.864,8.495,9.216,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.993,-0.176,0.544999999999999,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.016,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.495,0.136000000000001,0.683000000000001,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.976,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.955000000000001,-0.324,0.223,0.692,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.516,7.333,8.25200000000001,9.279,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.577,-0.108,0.289,0.62,0.891,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.716,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.917,-0.448,-0.0510000000000002,0.279999999999999,0.551,0.768,0.937,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.376,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.748000000000001,-0.351,-0.0200000000000008,0.250999999999999,0.468,0.637,0.764,0.854999999999999,0.915999999999999,0.952999999999999,0.971999999999999,0.978999999999999,0.979999999999999,0.980999999999999,0.987999999999999,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.611,-0.280000000000001,-0.00900000000000056,0.208,0.377,0.504,0.594999999999999,0.655999999999999,0.692999999999999,0.711999999999999,0.718999999999999,0.719999999999999,0.720999999999999,0.727999999999999,0.746999999999999,0.783999999999999,0.844999999999999,0.935999999999999,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.68,-0.409,-0.192,-0.0229999999999997,0.104,0.195,0.256,0.293,0.312,0.319,0.32,0.321,0.328,0.347,0.384,0.445,0.536,0.663,0.832,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.549,-0.332,-0.163,-0.0359999999999998,0.0549999999999998,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523,0.692,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.276,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.263,-0.136,-0.0450000000000002,0.0159999999999998,0.0529999999999998,0.0719999999999998,0.0789999999999998,0.0799999999999998,0.0809999999999998,0.0879999999999998,0.107,0.144,0.205,0.296,0.423,0.592,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0440000000000001,-0.00700000000000009,0.0119999999999999,0.0189999999999999,0.0199999999999999,0.0209999999999999,0.0279999999999999,0.0469999999999999,0.084,0.145,0.236,0.363,0.532,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-27,-24.389,-21.952,-19.683,-17.576,-15.625,-13.824,-12.167,-10.648,-9.261,-8,-6.859,-5.832,-4.913,-4.096,-3.375,-2.744,-2.197,-1.728,-1.331,-1,-0.729,-0.512,-0.343,-0.216,-0.125,-0.064,-0.027,-0.00799999999999997,-0.000999999999999989,0,0.001,0.00800000000000002,0.0270000000000001,0.0640000000000002,0.125,0.216,0.343,0.512000000000001,0.729000000000001,1,1.331,1.728,2.197,2.744,3.375,4.096,4.913,5.83200000000001,6.859,8,9.26100000000001,10.648,12.167,13.824,15.625,17.576,19.683,21.952,24.389,27],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0439999999999999,-0.00699999999999992,0.0120000000000001,0.019,0.02,0.021,0.0280000000000001,0.0470000000000001,0.0840000000000002,0.145,0.236,0.363,0.532000000000001,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.262999999999999,-0.135999999999999,-0.0449999999999999,0.0160000000000002,0.0530000000000002,0.0720000000000002,0.0790000000000002,0.0800000000000001,0.0810000000000001,0.0880000000000002,0.107,0.144,0.205,0.296,0.423,0.592000000000001,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.548999999999999,-0.331999999999999,-0.162999999999999,-0.0359999999999993,0.0550000000000003,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523000000000001,0.692000000000001,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.27600000000001,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.679999999999999,-0.408999999999999,-0.191999999999999,-0.022999999999999,0.104000000000001,0.195000000000001,0.256000000000001,0.293000000000001,0.312000000000001,0.319000000000001,0.320000000000001,0.321000000000001,0.328000000000001,0.347000000000001,0.384000000000001,0.445000000000001,0.536000000000001,0.663000000000001,0.832000000000001,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.610999999999999,-0.28,-0.00899999999999956,0.208000000000001,0.377000000000001,0.504000000000001,0.595,0.656,0.693,0.712,0.719,0.72,0.721,0.728,0.747,0.784,0.845,0.936,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.747999999999999,-0.350999999999999,-0.0199999999999995,0.251000000000001,0.468000000000001,0.637000000000001,0.764000000000001,0.855000000000001,0.916000000000001,0.953000000000001,0.972000000000001,0.979000000000001,0.980000000000001,0.981000000000001,0.988000000000001,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.916999999999998,-0.447999999999999,-0.0509999999999986,0.280000000000001,0.551000000000001,0.768000000000001,0.937000000000001,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.37600000000001,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.576999999999998,-0.107999999999999,0.289000000000002,0.620000000000001,0.891000000000001,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.71600000000001,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.954999999999998,-0.323999999999997,0.223000000000003,0.692000000000002,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.51600000000001,7.333,8.25200000000001,9.27900000000001,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.494999999999999,0.136000000000001,0.683000000000002,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.97600000000001,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.992999999999997,-0.175999999999997,0.545000000000002,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.01600000000001,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.70399999999999,-7.04699999999999,-5.528,-4.141,-2.88,-1.739,-0.711999999999994,0.207000000000004,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.45100000000001,6.848,7.317,7.86400000000001,8.495,9.21600000000001,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999969,0.867000000000002,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.34399999999999,-5.68699999999999,-4.168,-2.781,-1.52,-0.378999999999994,0.648000000000007,1.56700000000001,2.38400000000001,3.105,3.73600000000001,4.28300000000001,4.75200000000001,5.14900000000001,5.48,5.751,5.96800000000001,6.137,6.26400000000001,6.355,6.416,6.453,6.472,6.479,6.48,6.48100000000001,6.488,6.50700000000001,6.544,6.605,6.69600000000001,6.823,6.99200000000001,7.20900000000001,7.48,7.81100000000001,8.20800000000001,8.677,9.22400000000001,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.779999999999998,0.361000000000003,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.00399999999999,-3.34699999999999,-1.828,-0.440999999999997,0.820000000000004,1.961,2.98800000000001,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-16.42,-13.809,-11.372,-9.103,-6.99599999999999,-5.04499999999999,-3.24399999999999,-1.58699999999999,-0.0679999999999961,1.31900000000001,2.58000000000001,3.72100000000001,4.74800000000001,5.66700000000001,6.48400000000001,7.20500000000001,7.83600000000001,8.38300000000001,8.85200000000001,9.24900000000001,9.58000000000001,9.85100000000001,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.30399999999999,-0.646999999999995,0.872,2.259,3.52,4.661,5.68800000000001,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999993,1.35300000000001,2.872,4.259,5.52,6.66100000000001,7.68800000000001,8.60700000000001,9.42400000000001,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-11.32,-8.70899999999999,-6.27199999999999,-4.00299999999999,-1.89599999999999,0.0550000000000086,1.85600000000001,3.51300000000001,5.03200000000001,6.41900000000001,7.68000000000001,8.82100000000001,9.84800000000001,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-10.18,-7.569,-5.13199999999999,-2.863,-0.755999999999997,1.195,2.99600000000001,4.65300000000001,6.172,7.559,8.82,9.96100000000001,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45]],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"y":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"z":[[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45],[-10.18,-7.569,-5.13199999999999,-2.863,-0.756,1.195,2.996,4.653,6.172,7.559,8.82,9.961,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-11.32,-8.709,-6.272,-4.00300000000001,-1.896,0.0549999999999979,1.856,3.513,5.03199999999999,6.419,7.68,8.821,9.848,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999997,1.353,2.872,4.259,5.52,6.661,7.688,8.607,9.424,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.304,-0.646999999999998,0.871999999999996,2.259,3.52,4.661,5.688,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-16.42,-13.809,-11.372,-9.10300000000001,-6.996,-5.045,-3.244,-1.587,-0.0680000000000049,1.319,2.58,3.721,4.748,5.667,6.484,7.205,7.836,8.383,8.852,9.249,9.58,9.851,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.004,-3.347,-1.828,-0.441000000000001,0.82,1.961,2.988,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.78,0.361000000000001,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.344,-5.687,-4.168,-2.781,-1.52,-0.379,0.648000000000001,1.567,2.384,3.105,3.736,4.283,4.752,5.149,5.48,5.751,5.968,6.137,6.264,6.355,6.416,6.453,6.472,6.479,6.48,6.481,6.488,6.507,6.544,6.605,6.696,6.823,6.992,7.209,7.48,7.811,8.208,8.677,9.224,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999987,0.867,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.704,-7.047,-5.528,-4.141,-2.88,-1.739,-0.711999999999999,0.207,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.451,6.848,7.317,7.864,8.495,9.216,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.993,-0.176,0.544999999999999,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.016,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.495,0.136000000000001,0.683000000000001,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.976,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.955000000000001,-0.324,0.223,0.692,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.516,7.333,8.25200000000001,9.279,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.577,-0.108,0.289,0.62,0.891,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.716,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.917,-0.448,-0.0510000000000002,0.279999999999999,0.551,0.768,0.937,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.376,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.748000000000001,-0.351,-0.0200000000000008,0.250999999999999,0.468,0.637,0.764,0.854999999999999,0.915999999999999,0.952999999999999,0.971999999999999,0.978999999999999,0.979999999999999,0.980999999999999,0.987999999999999,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.611,-0.280000000000001,-0.00900000000000056,0.208,0.377,0.504,0.594999999999999,0.655999999999999,0.692999999999999,0.711999999999999,0.718999999999999,0.719999999999999,0.720999999999999,0.727999999999999,0.746999999999999,0.783999999999999,0.844999999999999,0.935999999999999,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.68,-0.409,-0.192,-0.0229999999999997,0.104,0.195,0.256,0.293,0.312,0.319,0.32,0.321,0.328,0.347,0.384,0.445,0.536,0.663,0.832,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.549,-0.332,-0.163,-0.0359999999999998,0.0549999999999998,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523,0.692,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.276,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.263,-0.136,-0.0450000000000002,0.0159999999999998,0.0529999999999998,0.0719999999999998,0.0789999999999998,0.0799999999999998,0.0809999999999998,0.0879999999999998,0.107,0.144,0.205,0.296,0.423,0.592,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0440000000000001,-0.00700000000000009,0.0119999999999999,0.0189999999999999,0.0199999999999999,0.0209999999999999,0.0279999999999999,0.0469999999999999,0.084,0.145,0.236,0.363,0.532,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-27,-24.389,-21.952,-19.683,-17.576,-15.625,-13.824,-12.167,-10.648,-9.261,-8,-6.859,-5.832,-4.913,-4.096,-3.375,-2.744,-2.197,-1.728,-1.331,-1,-0.729,-0.512,-0.343,-0.216,-0.125,-0.064,-0.027,-0.00799999999999997,-0.000999999999999989,0,0.001,0.00800000000000002,0.0270000000000001,0.0640000000000002,0.125,0.216,0.343,0.512000000000001,0.729000000000001,1,1.331,1.728,2.197,2.744,3.375,4.096,4.913,5.83200000000001,6.859,8,9.26100000000001,10.648,12.167,13.824,15.625,17.576,19.683,21.952,24.389,27],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0439999999999999,-0.00699999999999992,0.0120000000000001,0.019,0.02,0.021,0.0280000000000001,0.0470000000000001,0.0840000000000002,0.145,0.236,0.363,0.532000000000001,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.262999999999999,-0.135999999999999,-0.0449999999999999,0.0160000000000002,0.0530000000000002,0.0720000000000002,0.0790000000000002,0.0800000000000001,0.0810000000000001,0.0880000000000002,0.107,0.144,0.205,0.296,0.423,0.592000000000001,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.548999999999999,-0.331999999999999,-0.162999999999999,-0.0359999999999993,0.0550000000000003,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523000000000001,0.692000000000001,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.27600000000001,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.679999999999999,-0.408999999999999,-0.191999999999999,-0.022999999999999,0.104000000000001,0.195000000000001,0.256000000000001,0.293000000000001,0.312000000000001,0.319000000000001,0.320000000000001,0.321000000000001,0.328000000000001,0.347000000000001,0.384000000000001,0.445000000000001,0.536000000000001,0.663000000000001,0.832000000000001,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.610999999999999,-0.28,-0.00899999999999956,0.208000000000001,0.377000000000001,0.504000000000001,0.595,0.656,0.693,0.712,0.719,0.72,0.721,0.728,0.747,0.784,0.845,0.936,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.747999999999999,-0.350999999999999,-0.0199999999999995,0.251000000000001,0.468000000000001,0.637000000000001,0.764000000000001,0.855000000000001,0.916000000000001,0.953000000000001,0.972000000000001,0.979000000000001,0.980000000000001,0.981000000000001,0.988000000000001,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.916999999999998,-0.447999999999999,-0.0509999999999986,0.280000000000001,0.551000000000001,0.768000000000001,0.937000000000001,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.37600000000001,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.576999999999998,-0.107999999999999,0.289000000000002,0.620000000000001,0.891000000000001,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.71600000000001,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.954999999999998,-0.323999999999997,0.223000000000003,0.692000000000002,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.51600000000001,7.333,8.25200000000001,9.27900000000001,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.494999999999999,0.136000000000001,0.683000000000002,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.97600000000001,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.992999999999997,-0.175999999999997,0.545000000000002,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.01600000000001,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.70399999999999,-7.04699999999999,-5.528,-4.141,-2.88,-1.739,-0.711999999999994,0.207000000000004,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.45100000000001,6.848,7.317,7.86400000000001,8.495,9.21600000000001,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999969,0.867000000000002,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.34399999999999,-5.68699999999999,-4.168,-2.781,-1.52,-0.378999999999994,0.648000000000007,1.56700000000001,2.38400000000001,3.105,3.73600000000001,4.28300000000001,4.75200000000001,5.14900000000001,5.48,5.751,5.96800000000001,6.137,6.26400000000001,6.355,6.416,6.453,6.472,6.479,6.48,6.48100000000001,6.488,6.50700000000001,6.544,6.605,6.69600000000001,6.823,6.99200000000001,7.20900000000001,7.48,7.81100000000001,8.20800000000001,8.677,9.22400000000001,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.779999999999998,0.361000000000003,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.00399999999999,-3.34699999999999,-1.828,-0.440999999999997,0.820000000000004,1.961,2.98800000000001,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-16.42,-13.809,-11.372,-9.103,-6.99599999999999,-5.04499999999999,-3.24399999999999,-1.58699999999999,-0.0679999999999961,1.31900000000001,2.58000000000001,3.72100000000001,4.74800000000001,5.66700000000001,6.48400000000001,7.20500000000001,7.83600000000001,8.38300000000001,8.85200000000001,9.24900000000001,9.58000000000001,9.85100000000001,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.30399999999999,-0.646999999999995,0.872,2.259,3.52,4.661,5.68800000000001,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999993,1.35300000000001,2.872,4.259,5.52,6.66100000000001,7.68800000000001,8.60700000000001,9.42400000000001,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-11.32,-8.70899999999999,-6.27199999999999,-4.00299999999999,-1.89599999999999,0.0550000000000086,1.85600000000001,3.51300000000001,5.03200000000001,6.41900000000001,7.68000000000001,8.82100000000001,9.84800000000001,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-10.18,-7.569,-5.13199999999999,-2.863,-0.755999999999997,1.195,2.99600000000001,4.65300000000001,6.172,7.559,8.82,9.96100000000001,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c85995c11b49bf1cb3ca" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c85995c11b49bf1cb3ca">{"x":{"visdat":{"1e81a824b6":["function () ","plotlyVisDat"]},"cur_data":"1e81a824b6","attrs":{"1e81a824b6":{"x":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"y":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"z":[[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45],[-10.18,-7.569,-5.13199999999999,-2.863,-0.756,1.195,2.996,4.653,6.172,7.559,8.82,9.961,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-11.32,-8.709,-6.272,-4.00300000000001,-1.896,0.0549999999999979,1.856,3.513,5.03199999999999,6.419,7.68,8.821,9.848,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999997,1.353,2.872,4.259,5.52,6.661,7.688,8.607,9.424,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.304,-0.646999999999998,0.871999999999996,2.259,3.52,4.661,5.688,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-16.42,-13.809,-11.372,-9.10300000000001,-6.996,-5.045,-3.244,-1.587,-0.0680000000000049,1.319,2.58,3.721,4.748,5.667,6.484,7.205,7.836,8.383,8.852,9.249,9.58,9.851,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.004,-3.347,-1.828,-0.441000000000001,0.82,1.961,2.988,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.78,0.361000000000001,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.344,-5.687,-4.168,-2.781,-1.52,-0.379,0.648000000000001,1.567,2.384,3.105,3.736,4.283,4.752,5.149,5.48,5.751,5.968,6.137,6.264,6.355,6.416,6.453,6.472,6.479,6.48,6.481,6.488,6.507,6.544,6.605,6.696,6.823,6.992,7.209,7.48,7.811,8.208,8.677,9.224,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999987,0.867,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.704,-7.047,-5.528,-4.141,-2.88,-1.739,-0.711999999999999,0.207,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.451,6.848,7.317,7.864,8.495,9.216,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.993,-0.176,0.544999999999999,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.016,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.495,0.136000000000001,0.683000000000001,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.976,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.955000000000001,-0.324,0.223,0.692,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.516,7.333,8.25200000000001,9.279,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.577,-0.108,0.289,0.62,0.891,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.716,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.917,-0.448,-0.0510000000000002,0.279999999999999,0.551,0.768,0.937,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.376,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.748000000000001,-0.351,-0.0200000000000008,0.250999999999999,0.468,0.637,0.764,0.854999999999999,0.915999999999999,0.952999999999999,0.971999999999999,0.978999999999999,0.979999999999999,0.980999999999999,0.987999999999999,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.611,-0.280000000000001,-0.00900000000000056,0.208,0.377,0.504,0.594999999999999,0.655999999999999,0.692999999999999,0.711999999999999,0.718999999999999,0.719999999999999,0.720999999999999,0.727999999999999,0.746999999999999,0.783999999999999,0.844999999999999,0.935999999999999,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.68,-0.409,-0.192,-0.0229999999999997,0.104,0.195,0.256,0.293,0.312,0.319,0.32,0.321,0.328,0.347,0.384,0.445,0.536,0.663,0.832,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.549,-0.332,-0.163,-0.0359999999999998,0.0549999999999998,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523,0.692,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.276,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.263,-0.136,-0.0450000000000002,0.0159999999999998,0.0529999999999998,0.0719999999999998,0.0789999999999998,0.0799999999999998,0.0809999999999998,0.0879999999999998,0.107,0.144,0.205,0.296,0.423,0.592,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0440000000000001,-0.00700000000000009,0.0119999999999999,0.0189999999999999,0.0199999999999999,0.0209999999999999,0.0279999999999999,0.0469999999999999,0.084,0.145,0.236,0.363,0.532,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-27,-24.389,-21.952,-19.683,-17.576,-15.625,-13.824,-12.167,-10.648,-9.261,-8,-6.859,-5.832,-4.913,-4.096,-3.375,-2.744,-2.197,-1.728,-1.331,-1,-0.729,-0.512,-0.343,-0.216,-0.125,-0.064,-0.027,-0.00799999999999997,-0.000999999999999989,0,0.001,0.00800000000000002,0.0270000000000001,0.0640000000000002,0.125,0.216,0.343,0.512000000000001,0.729000000000001,1,1.331,1.728,2.197,2.744,3.375,4.096,4.913,5.83200000000001,6.859,8,9.26100000000001,10.648,12.167,13.824,15.625,17.576,19.683,21.952,24.389,27],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0439999999999999,-0.00699999999999992,0.0120000000000001,0.019,0.02,0.021,0.0280000000000001,0.0470000000000001,0.0840000000000002,0.145,0.236,0.363,0.532000000000001,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.262999999999999,-0.135999999999999,-0.0449999999999999,0.0160000000000002,0.0530000000000002,0.0720000000000002,0.0790000000000002,0.0800000000000001,0.0810000000000001,0.0880000000000002,0.107,0.144,0.205,0.296,0.423,0.592000000000001,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.548999999999999,-0.331999999999999,-0.162999999999999,-0.0359999999999993,0.0550000000000003,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523000000000001,0.692000000000001,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.27600000000001,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.679999999999999,-0.408999999999999,-0.191999999999999,-0.022999999999999,0.104000000000001,0.195000000000001,0.256000000000001,0.293000000000001,0.312000000000001,0.319000000000001,0.320000000000001,0.321000000000001,0.328000000000001,0.347000000000001,0.384000000000001,0.445000000000001,0.536000000000001,0.663000000000001,0.832000000000001,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.610999999999999,-0.28,-0.00899999999999956,0.208000000000001,0.377000000000001,0.504000000000001,0.595,0.656,0.693,0.712,0.719,0.72,0.721,0.728,0.747,0.784,0.845,0.936,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.747999999999999,-0.350999999999999,-0.0199999999999995,0.251000000000001,0.468000000000001,0.637000000000001,0.764000000000001,0.855000000000001,0.916000000000001,0.953000000000001,0.972000000000001,0.979000000000001,0.980000000000001,0.981000000000001,0.988000000000001,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.916999999999998,-0.447999999999999,-0.0509999999999986,0.280000000000001,0.551000000000001,0.768000000000001,0.937000000000001,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.37600000000001,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.576999999999998,-0.107999999999999,0.289000000000002,0.620000000000001,0.891000000000001,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.71600000000001,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.954999999999998,-0.323999999999997,0.223000000000003,0.692000000000002,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.51600000000001,7.333,8.25200000000001,9.27900000000001,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.494999999999999,0.136000000000001,0.683000000000002,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.97600000000001,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.992999999999997,-0.175999999999997,0.545000000000002,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.01600000000001,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.70399999999999,-7.04699999999999,-5.528,-4.141,-2.88,-1.739,-0.711999999999994,0.207000000000004,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.45100000000001,6.848,7.317,7.86400000000001,8.495,9.21600000000001,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999969,0.867000000000002,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.34399999999999,-5.68699999999999,-4.168,-2.781,-1.52,-0.378999999999994,0.648000000000007,1.56700000000001,2.38400000000001,3.105,3.73600000000001,4.28300000000001,4.75200000000001,5.14900000000001,5.48,5.751,5.96800000000001,6.137,6.26400000000001,6.355,6.416,6.453,6.472,6.479,6.48,6.48100000000001,6.488,6.50700000000001,6.544,6.605,6.69600000000001,6.823,6.99200000000001,7.20900000000001,7.48,7.81100000000001,8.20800000000001,8.677,9.22400000000001,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.779999999999998,0.361000000000003,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.00399999999999,-3.34699999999999,-1.828,-0.440999999999997,0.820000000000004,1.961,2.98800000000001,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-16.42,-13.809,-11.372,-9.103,-6.99599999999999,-5.04499999999999,-3.24399999999999,-1.58699999999999,-0.0679999999999961,1.31900000000001,2.58000000000001,3.72100000000001,4.74800000000001,5.66700000000001,6.48400000000001,7.20500000000001,7.83600000000001,8.38300000000001,8.85200000000001,9.24900000000001,9.58000000000001,9.85100000000001,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.30399999999999,-0.646999999999995,0.872,2.259,3.52,4.661,5.68800000000001,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999993,1.35300000000001,2.872,4.259,5.52,6.66100000000001,7.68800000000001,8.60700000000001,9.42400000000001,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-11.32,-8.70899999999999,-6.27199999999999,-4.00299999999999,-1.89599999999999,0.0550000000000086,1.85600000000001,3.51300000000001,5.03200000000001,6.41900000000001,7.68000000000001,8.82100000000001,9.84800000000001,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-10.18,-7.569,-5.13199999999999,-2.863,-0.755999999999997,1.195,2.99600000000001,4.65300000000001,6.172,7.559,8.82,9.96100000000001,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45]],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"y":[-3,-2.9,-2.8,-2.7,-2.6,-2.5,-2.4,-2.3,-2.2,-2.1,-2,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.3,-1.2,-1.1,-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.0999999999999996,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3],"z":[[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45],[-10.18,-7.569,-5.13199999999999,-2.863,-0.756,1.195,2.996,4.653,6.172,7.559,8.82,9.961,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-11.32,-8.709,-6.272,-4.00300000000001,-1.896,0.0549999999999979,1.856,3.513,5.03199999999999,6.419,7.68,8.821,9.848,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999997,1.353,2.872,4.259,5.52,6.661,7.688,8.607,9.424,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.304,-0.646999999999998,0.871999999999996,2.259,3.52,4.661,5.688,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-16.42,-13.809,-11.372,-9.10300000000001,-6.996,-5.045,-3.244,-1.587,-0.0680000000000049,1.319,2.58,3.721,4.748,5.667,6.484,7.205,7.836,8.383,8.852,9.249,9.58,9.851,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.004,-3.347,-1.828,-0.441000000000001,0.82,1.961,2.988,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.78,0.361000000000001,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.344,-5.687,-4.168,-2.781,-1.52,-0.379,0.648000000000001,1.567,2.384,3.105,3.736,4.283,4.752,5.149,5.48,5.751,5.968,6.137,6.264,6.355,6.416,6.453,6.472,6.479,6.48,6.481,6.488,6.507,6.544,6.605,6.696,6.823,6.992,7.209,7.48,7.811,8.208,8.677,9.224,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999987,0.867,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.704,-7.047,-5.528,-4.141,-2.88,-1.739,-0.711999999999999,0.207,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.451,6.848,7.317,7.864,8.495,9.216,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.993,-0.176,0.544999999999999,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.016,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.495,0.136000000000001,0.683000000000001,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.976,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.955000000000001,-0.324,0.223,0.692,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.516,7.333,8.25200000000001,9.279,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.577,-0.108,0.289,0.62,0.891,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.716,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.917,-0.448,-0.0510000000000002,0.279999999999999,0.551,0.768,0.937,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.376,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.748000000000001,-0.351,-0.0200000000000008,0.250999999999999,0.468,0.637,0.764,0.854999999999999,0.915999999999999,0.952999999999999,0.971999999999999,0.978999999999999,0.979999999999999,0.980999999999999,0.987999999999999,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.611,-0.280000000000001,-0.00900000000000056,0.208,0.377,0.504,0.594999999999999,0.655999999999999,0.692999999999999,0.711999999999999,0.718999999999999,0.719999999999999,0.720999999999999,0.727999999999999,0.746999999999999,0.783999999999999,0.844999999999999,0.935999999999999,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.68,-0.409,-0.192,-0.0229999999999997,0.104,0.195,0.256,0.293,0.312,0.319,0.32,0.321,0.328,0.347,0.384,0.445,0.536,0.663,0.832,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.549,-0.332,-0.163,-0.0359999999999998,0.0549999999999998,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523,0.692,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.276,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.263,-0.136,-0.0450000000000002,0.0159999999999998,0.0529999999999998,0.0719999999999998,0.0789999999999998,0.0799999999999998,0.0809999999999998,0.0879999999999998,0.107,0.144,0.205,0.296,0.423,0.592,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0440000000000001,-0.00700000000000009,0.0119999999999999,0.0189999999999999,0.0199999999999999,0.0209999999999999,0.0279999999999999,0.0469999999999999,0.084,0.145,0.236,0.363,0.532,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-27,-24.389,-21.952,-19.683,-17.576,-15.625,-13.824,-12.167,-10.648,-9.261,-8,-6.859,-5.832,-4.913,-4.096,-3.375,-2.744,-2.197,-1.728,-1.331,-1,-0.729,-0.512,-0.343,-0.216,-0.125,-0.064,-0.027,-0.00799999999999997,-0.000999999999999989,0,0.001,0.00800000000000002,0.0270000000000001,0.0640000000000002,0.125,0.216,0.343,0.512000000000001,0.729000000000001,1,1.331,1.728,2.197,2.744,3.375,4.096,4.913,5.83200000000001,6.859,8,9.26100000000001,10.648,12.167,13.824,15.625,17.576,19.683,21.952,24.389,27],[-26.98,-24.369,-21.932,-19.663,-17.556,-15.605,-13.804,-12.147,-10.628,-9.241,-7.98,-6.839,-5.812,-4.893,-4.076,-3.355,-2.724,-2.177,-1.708,-1.311,-0.98,-0.709,-0.492,-0.323,-0.196,-0.105,-0.0439999999999999,-0.00699999999999992,0.0120000000000001,0.019,0.02,0.021,0.0280000000000001,0.0470000000000001,0.0840000000000002,0.145,0.236,0.363,0.532000000000001,0.749000000000001,1.02,1.351,1.748,2.217,2.764,3.395,4.116,4.933,5.85200000000001,6.879,8.02,9.28100000000001,10.668,12.187,13.844,15.645,17.596,19.703,21.972,24.409,27.02],[-26.92,-24.309,-21.872,-19.603,-17.496,-15.545,-13.744,-12.087,-10.568,-9.181,-7.92,-6.779,-5.752,-4.833,-4.016,-3.295,-2.664,-2.117,-1.648,-1.251,-0.92,-0.649,-0.432,-0.262999999999999,-0.135999999999999,-0.0449999999999999,0.0160000000000002,0.0530000000000002,0.0720000000000002,0.0790000000000002,0.0800000000000001,0.0810000000000001,0.0880000000000002,0.107,0.144,0.205,0.296,0.423,0.592000000000001,0.809000000000001,1.08,1.411,1.808,2.277,2.824,3.455,4.176,4.993,5.91200000000001,6.939,8.08,9.34100000000001,10.728,12.247,13.904,15.705,17.656,19.763,22.032,24.469,27.08],[-26.82,-24.209,-21.772,-19.503,-17.396,-15.445,-13.644,-11.987,-10.468,-9.081,-7.82,-6.679,-5.652,-4.733,-3.916,-3.195,-2.564,-2.017,-1.548,-1.151,-0.82,-0.548999999999999,-0.331999999999999,-0.162999999999999,-0.0359999999999993,0.0550000000000003,0.116,0.153,0.172,0.179,0.18,0.181,0.188,0.207,0.244,0.305,0.396,0.523000000000001,0.692000000000001,0.909000000000001,1.18,1.511,1.908,2.377,2.924,3.555,4.27600000000001,5.093,6.01200000000001,7.039,8.18,9.44100000000001,10.828,12.347,14.004,15.805,17.756,19.863,22.132,24.569,27.18],[-26.68,-24.069,-21.632,-19.363,-17.256,-15.305,-13.504,-11.847,-10.328,-8.941,-7.68,-6.539,-5.512,-4.593,-3.776,-3.055,-2.424,-1.877,-1.408,-1.011,-0.679999999999999,-0.408999999999999,-0.191999999999999,-0.022999999999999,0.104000000000001,0.195000000000001,0.256000000000001,0.293000000000001,0.312000000000001,0.319000000000001,0.320000000000001,0.321000000000001,0.328000000000001,0.347000000000001,0.384000000000001,0.445000000000001,0.536000000000001,0.663000000000001,0.832000000000001,1.049,1.32,1.651,2.048,2.517,3.064,3.695,4.416,5.233,6.15200000000001,7.179,8.32,9.58100000000001,10.968,12.487,14.144,15.945,17.896,20.003,22.272,24.709,27.32],[-26.5,-23.889,-21.452,-19.183,-17.076,-15.125,-13.324,-11.667,-10.148,-8.761,-7.5,-6.359,-5.332,-4.413,-3.596,-2.875,-2.244,-1.697,-1.228,-0.831,-0.5,-0.229,-0.0119999999999997,0.157,0.284,0.375,0.436,0.473,0.492,0.499,0.5,0.501,0.508,0.527,0.564,0.625,0.716,0.843,1.012,1.229,1.5,1.831,2.228,2.697,3.244,3.875,4.596,5.413,6.33200000000001,7.359,8.5,9.76100000000001,11.148,12.667,14.324,16.125,18.076,20.183,22.452,24.889,27.5],[-26.28,-23.669,-21.232,-18.963,-16.856,-14.905,-13.104,-11.447,-9.928,-8.541,-7.28,-6.139,-5.112,-4.193,-3.376,-2.655,-2.024,-1.477,-1.008,-0.610999999999999,-0.28,-0.00899999999999956,0.208000000000001,0.377000000000001,0.504000000000001,0.595,0.656,0.693,0.712,0.719,0.72,0.721,0.728,0.747,0.784,0.845,0.936,1.063,1.232,1.449,1.72,2.051,2.448,2.917,3.464,4.095,4.816,5.633,6.55200000000001,7.579,8.72,9.98100000000001,11.368,12.887,14.544,16.345,18.296,20.403,22.672,25.109,27.72],[-26.02,-23.409,-20.972,-18.703,-16.596,-14.645,-12.844,-11.187,-9.668,-8.281,-7.02,-5.879,-4.852,-3.933,-3.116,-2.395,-1.764,-1.217,-0.747999999999999,-0.350999999999999,-0.0199999999999995,0.251000000000001,0.468000000000001,0.637000000000001,0.764000000000001,0.855000000000001,0.916000000000001,0.953000000000001,0.972000000000001,0.979000000000001,0.980000000000001,0.981000000000001,0.988000000000001,1.007,1.044,1.105,1.196,1.323,1.492,1.709,1.98,2.311,2.708,3.177,3.724,4.355,5.076,5.893,6.81200000000001,7.839,8.98,10.241,11.628,13.147,14.804,16.605,18.556,20.663,22.932,25.369,27.98],[-25.72,-23.109,-20.672,-18.403,-16.296,-14.345,-12.544,-10.887,-9.368,-7.981,-6.72,-5.579,-4.552,-3.633,-2.816,-2.095,-1.464,-0.916999999999998,-0.447999999999999,-0.0509999999999986,0.280000000000001,0.551000000000001,0.768000000000001,0.937000000000001,1.064,1.155,1.216,1.253,1.272,1.279,1.28,1.281,1.288,1.307,1.344,1.405,1.496,1.623,1.792,2.009,2.28,2.611,3.008,3.477,4.024,4.655,5.37600000000001,6.193,7.11200000000001,8.139,9.28,10.541,11.928,13.447,15.104,16.905,18.856,20.963,23.232,25.669,28.28],[-25.38,-22.769,-20.332,-18.063,-15.956,-14.005,-12.204,-10.547,-9.028,-7.641,-6.38,-5.239,-4.212,-3.293,-2.476,-1.755,-1.124,-0.576999999999998,-0.107999999999999,0.289000000000002,0.620000000000001,0.891000000000001,1.108,1.277,1.404,1.495,1.556,1.593,1.612,1.619,1.62,1.621,1.628,1.647,1.684,1.745,1.836,1.963,2.132,2.349,2.62,2.951,3.348,3.817,4.364,4.995,5.71600000000001,6.533,7.45200000000001,8.479,9.62,10.881,12.268,13.787,15.444,17.245,19.196,21.303,23.572,26.009,28.62],[-25,-22.389,-19.952,-17.683,-15.576,-13.625,-11.824,-10.167,-8.648,-7.261,-6,-4.859,-3.832,-2.913,-2.096,-1.375,-0.743999999999999,-0.196999999999999,0.272,0.669,1,1.271,1.488,1.657,1.784,1.875,1.936,1.973,1.992,1.999,2,2.001,2.008,2.027,2.064,2.125,2.216,2.343,2.512,2.729,3,3.331,3.728,4.197,4.744,5.375,6.096,6.913,7.83200000000001,8.859,10,11.261,12.648,14.167,15.824,17.625,19.576,21.683,23.952,26.389,29],[-24.58,-21.969,-19.532,-17.263,-15.156,-13.205,-11.404,-9.747,-8.228,-6.841,-5.58,-4.439,-3.412,-2.493,-1.676,-0.954999999999998,-0.323999999999997,0.223000000000003,0.692000000000002,1.089,1.42,1.691,1.908,2.077,2.204,2.295,2.356,2.393,2.412,2.419,2.42,2.421,2.428,2.447,2.484,2.545,2.636,2.763,2.932,3.149,3.42,3.751,4.148,4.617,5.164,5.795,6.51600000000001,7.333,8.25200000000001,9.27900000000001,10.42,11.681,13.068,14.587,16.244,18.045,19.996,22.103,24.372,26.809,29.42],[-24.12,-21.509,-19.072,-16.803,-14.696,-12.745,-10.944,-9.287,-7.768,-6.381,-5.12,-3.979,-2.952,-2.033,-1.216,-0.494999999999999,0.136000000000001,0.683000000000002,1.152,1.549,1.88,2.151,2.368,2.537,2.664,2.755,2.816,2.853,2.872,2.879,2.88,2.881,2.888,2.907,2.944,3.005,3.096,3.223,3.392,3.609,3.88,4.211,4.608,5.077,5.624,6.255,6.97600000000001,7.793,8.71200000000001,9.739,10.88,12.141,13.528,15.047,16.704,18.505,20.456,22.563,24.832,27.269,29.88],[-23.62,-21.009,-18.572,-16.303,-14.196,-12.245,-10.444,-8.787,-7.268,-5.881,-4.62,-3.479,-2.452,-1.533,-0.716,0.00499999999999901,0.636,1.183,1.652,2.049,2.38,2.651,2.868,3.037,3.164,3.255,3.316,3.353,3.372,3.379,3.38,3.381,3.388,3.407,3.444,3.505,3.596,3.723,3.892,4.109,4.38,4.711,5.108,5.577,6.124,6.755,7.476,8.293,9.21200000000001,10.239,11.38,12.641,14.028,15.547,17.204,19.005,20.956,23.063,25.332,27.769,30.38],[-23.08,-20.469,-18.032,-15.763,-13.656,-11.705,-9.904,-8.247,-6.728,-5.341,-4.08,-2.939,-1.912,-0.992999999999997,-0.175999999999997,0.545000000000002,1.176,1.723,2.192,2.589,2.92,3.191,3.408,3.577,3.704,3.795,3.856,3.893,3.912,3.919,3.92,3.921,3.928,3.947,3.984,4.045,4.136,4.263,4.432,4.649,4.92,5.251,5.648,6.117,6.664,7.295,8.01600000000001,8.833,9.75200000000001,10.779,11.92,13.181,14.568,16.087,17.744,19.545,21.496,23.603,25.872,28.309,30.92],[-22.5,-19.889,-17.452,-15.183,-13.076,-11.125,-9.324,-7.667,-6.148,-4.761,-3.5,-2.359,-1.332,-0.412999999999999,0.404000000000001,1.125,1.756,2.303,2.772,3.169,3.5,3.771,3.988,4.157,4.284,4.375,4.436,4.473,4.492,4.499,4.5,4.501,4.508,4.527,4.564,4.625,4.716,4.843,5.012,5.229,5.5,5.831,6.228,6.697,7.244,7.875,8.596,9.413,10.332,11.359,12.5,13.761,15.148,16.667,18.324,20.125,22.076,24.183,26.452,28.889,31.5],[-21.88,-19.269,-16.832,-14.563,-12.456,-10.505,-8.70399999999999,-7.04699999999999,-5.528,-4.141,-2.88,-1.739,-0.711999999999994,0.207000000000004,1.024,1.745,2.376,2.923,3.392,3.789,4.12,4.391,4.608,4.777,4.904,4.995,5.056,5.093,5.112,5.119,5.12,5.121,5.128,5.147,5.184,5.245,5.336,5.463,5.632,5.849,6.12,6.45100000000001,6.848,7.317,7.86400000000001,8.495,9.21600000000001,10.033,10.952,11.979,13.12,14.381,15.768,17.287,18.944,20.745,22.696,24.803,27.072,29.509,32.12],[-21.22,-18.609,-16.172,-13.903,-11.796,-9.845,-8.044,-6.387,-4.868,-3.481,-2.22,-1.079,-0.0519999999999969,0.867000000000002,1.684,2.405,3.036,3.583,4.052,4.449,4.78,5.051,5.268,5.437,5.564,5.655,5.716,5.753,5.772,5.779,5.78,5.781,5.788,5.807,5.844,5.905,5.996,6.123,6.292,6.509,6.78,7.111,7.508,7.977,8.524,9.155,9.876,10.693,11.612,12.639,13.78,15.041,16.428,17.947,19.604,21.405,23.356,25.463,27.732,30.169,32.78],[-20.52,-17.909,-15.472,-13.203,-11.096,-9.145,-7.34399999999999,-5.68699999999999,-4.168,-2.781,-1.52,-0.378999999999994,0.648000000000007,1.56700000000001,2.38400000000001,3.105,3.73600000000001,4.28300000000001,4.75200000000001,5.14900000000001,5.48,5.751,5.96800000000001,6.137,6.26400000000001,6.355,6.416,6.453,6.472,6.479,6.48,6.48100000000001,6.488,6.50700000000001,6.544,6.605,6.69600000000001,6.823,6.99200000000001,7.20900000000001,7.48,7.81100000000001,8.20800000000001,8.677,9.22400000000001,9.855,10.576,11.393,12.312,13.339,14.48,15.741,17.128,18.647,20.304,22.105,24.056,26.163,28.432,30.869,33.48],[-19.78,-17.169,-14.732,-12.463,-10.356,-8.405,-6.604,-4.947,-3.428,-2.041,-0.779999999999998,0.361000000000003,1.388,2.307,3.124,3.845,4.476,5.023,5.492,5.889,6.22,6.491,6.708,6.877,7.004,7.095,7.156,7.193,7.212,7.219,7.22,7.221,7.228,7.247,7.284,7.345,7.436,7.563,7.732,7.949,8.22,8.551,8.948,9.417,9.964,10.595,11.316,12.133,13.052,14.079,15.22,16.481,17.868,19.387,21.044,22.845,24.796,26.903,29.172,31.609,34.22],[-19,-16.389,-13.952,-11.683,-9.576,-7.625,-5.824,-4.167,-2.648,-1.261,0,1.141,2.168,3.087,3.904,4.625,5.256,5.803,6.272,6.669,7,7.271,7.488,7.657,7.784,7.875,7.936,7.973,7.992,7.999,8,8.001,8.008,8.027,8.064,8.125,8.216,8.343,8.512,8.729,9,9.331,9.728,10.197,10.744,11.375,12.096,12.913,13.832,14.859,16,17.261,18.648,20.167,21.824,23.625,25.576,27.683,29.952,32.389,35],[-18.18,-15.569,-13.132,-10.863,-8.756,-6.805,-5.00399999999999,-3.34699999999999,-1.828,-0.440999999999997,0.820000000000004,1.961,2.98800000000001,3.907,4.724,5.445,6.076,6.623,7.092,7.489,7.82,8.091,8.308,8.477,8.604,8.695,8.756,8.793,8.812,8.819,8.82,8.821,8.828,8.847,8.884,8.945,9.036,9.163,9.332,9.549,9.82,10.151,10.548,11.017,11.564,12.195,12.916,13.733,14.652,15.679,16.82,18.081,19.468,20.987,22.644,24.445,26.396,28.503,30.772,33.209,35.82],[-17.32,-14.709,-12.272,-10.003,-7.896,-5.945,-4.144,-2.487,-0.968000000000002,0.419,1.68,2.821,3.848,4.767,5.584,6.305,6.936,7.483,7.952,8.349,8.68,8.951,9.168,9.337,9.464,9.555,9.616,9.653,9.672,9.679,9.68,9.681,9.688,9.707,9.744,9.805,9.896,10.023,10.192,10.409,10.68,11.011,11.408,11.877,12.424,13.055,13.776,14.593,15.512,16.539,17.68,18.941,20.328,21.847,23.504,25.305,27.256,29.363,31.632,34.069,36.68],[-16.42,-13.809,-11.372,-9.103,-6.99599999999999,-5.04499999999999,-3.24399999999999,-1.58699999999999,-0.0679999999999961,1.31900000000001,2.58000000000001,3.72100000000001,4.74800000000001,5.66700000000001,6.48400000000001,7.20500000000001,7.83600000000001,8.38300000000001,8.85200000000001,9.24900000000001,9.58000000000001,9.85100000000001,10.068,10.237,10.364,10.455,10.516,10.553,10.572,10.579,10.58,10.581,10.588,10.607,10.644,10.705,10.796,10.923,11.092,11.309,11.58,11.911,12.308,12.777,13.324,13.955,14.676,15.493,16.412,17.439,18.58,19.841,21.228,22.747,24.404,26.205,28.156,30.263,32.532,34.969,37.58],[-15.48,-12.869,-10.432,-8.163,-6.056,-4.105,-2.30399999999999,-0.646999999999995,0.872,2.259,3.52,4.661,5.68800000000001,6.607,7.424,8.145,8.776,9.323,9.792,10.189,10.52,10.791,11.008,11.177,11.304,11.395,11.456,11.493,11.512,11.519,11.52,11.521,11.528,11.547,11.584,11.645,11.736,11.863,12.032,12.249,12.52,12.851,13.248,13.717,14.264,14.895,15.616,16.433,17.352,18.379,19.52,20.781,22.168,23.687,25.344,27.145,29.096,31.203,33.472,35.909,38.52],[-14.5,-11.889,-9.45199999999999,-7.183,-5.076,-3.125,-1.324,0.333000000000002,1.852,3.239,4.5,5.641,6.668,7.587,8.404,9.125,9.756,10.303,10.772,11.169,11.5,11.771,11.988,12.157,12.284,12.375,12.436,12.473,12.492,12.499,12.5,12.501,12.508,12.527,12.564,12.625,12.716,12.843,13.012,13.229,13.5,13.831,14.228,14.697,15.244,15.875,16.596,17.413,18.332,19.359,20.5,21.761,23.148,24.667,26.324,28.125,30.076,32.183,34.452,36.889,39.5],[-13.48,-10.869,-8.43199999999999,-6.163,-4.056,-2.105,-0.303999999999993,1.35300000000001,2.872,4.259,5.52,6.66100000000001,7.68800000000001,8.60700000000001,9.42400000000001,10.145,10.776,11.323,11.792,12.189,12.52,12.791,13.008,13.177,13.304,13.395,13.456,13.493,13.512,13.519,13.52,13.521,13.528,13.547,13.584,13.645,13.736,13.863,14.032,14.249,14.52,14.851,15.248,15.717,16.264,16.895,17.616,18.433,19.352,20.379,21.52,22.781,24.168,25.687,27.344,29.145,31.096,33.203,35.472,37.909,40.52],[-12.42,-9.809,-7.37199999999999,-5.103,-2.996,-1.045,0.756000000000004,2.413,3.932,5.319,6.58,7.721,8.748,9.667,10.484,11.205,11.836,12.383,12.852,13.249,13.58,13.851,14.068,14.237,14.364,14.455,14.516,14.553,14.572,14.579,14.58,14.581,14.588,14.607,14.644,14.705,14.796,14.923,15.092,15.309,15.58,15.911,16.308,16.777,17.324,17.955,18.676,19.493,20.412,21.439,22.58,23.841,25.228,26.747,28.404,30.205,32.156,34.263,36.532,38.969,41.58],[-11.32,-8.70899999999999,-6.27199999999999,-4.00299999999999,-1.89599999999999,0.0550000000000086,1.85600000000001,3.51300000000001,5.03200000000001,6.41900000000001,7.68000000000001,8.82100000000001,9.84800000000001,10.767,11.584,12.305,12.936,13.483,13.952,14.349,14.68,14.951,15.168,15.337,15.464,15.555,15.616,15.653,15.672,15.679,15.68,15.681,15.688,15.707,15.744,15.805,15.896,16.023,16.192,16.409,16.68,17.011,17.408,17.877,18.424,19.055,19.776,20.593,21.512,22.539,23.68,24.941,26.328,27.847,29.504,31.305,33.256,35.363,37.632,40.069,42.68],[-10.18,-7.569,-5.13199999999999,-2.863,-0.755999999999997,1.195,2.99600000000001,4.65300000000001,6.172,7.559,8.82,9.96100000000001,10.988,11.907,12.724,13.445,14.076,14.623,15.092,15.489,15.82,16.091,16.308,16.477,16.604,16.695,16.756,16.793,16.812,16.819,16.82,16.821,16.828,16.847,16.884,16.945,17.036,17.163,17.332,17.549,17.82,18.151,18.548,19.017,19.564,20.195,20.916,21.733,22.652,23.679,24.82,26.081,27.468,28.987,30.644,32.445,34.396,36.503,38.772,41.209,43.82],[-9,-6.389,-3.95199999999999,-1.683,0.423999999999999,2.375,4.176,5.833,7.352,8.739,10,11.141,12.168,13.087,13.904,14.625,15.256,15.803,16.272,16.669,17,17.271,17.488,17.657,17.784,17.875,17.936,17.973,17.992,17.999,18,18.001,18.008,18.027,18.064,18.125,18.216,18.343,18.512,18.729,19,19.331,19.728,20.197,20.744,21.375,22.096,22.913,23.832,24.859,26,27.261,28.648,30.167,31.824,33.625,35.576,37.683,39.952,42.389,45]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>В общем-то наличие второй переменной практически ничего не меняет, однако появляется важная фича — мы можем смотреть, как изменяются значения функции при изменении каждой переменной в отдельности. Это позволяют делать <strong>частные производные</strong>.</p>
@@ -1073,13 +1149,21 @@ x = \text{const}\Rightarrow 2x^2 = \text{const}= c
 <p>Пусть у нас есть функция <span class="math inline">\(y = \sqrt{x}\)</span>. Нам надо найти площадь под её графиком на отрезке от <span class="math inline">\(0\)</span> до <span class="math inline">\(3\)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Мы можем разбить этот отрезок на части размером <span class="math inline">\(\Delta x\)</span>, а саму площадь на соответствующие прямоугольники. Это нам позволит оценить площадь. На рисунке ниже <span class="math inline">\(\Delta x = 0.25\)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/integral-plot-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/integral-plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Получается, площадь можно оценить, сложив площади всех прямоугольников:</p>
@@ -1089,12 +1173,20 @@ S \approx \sum_{i=1}^n y_i \Delta x
 <p>Ясно, что чем более узкими прямоугольники у нас будут, тем точнее мы будем знать площадь. Ниже представлены рисунки для случая <span class="math inline">\(\Delta x = 0.1\)</span> и <span class="math inline">\(\Delta x = 0.05\)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/integral-plot01-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/integral-plot01-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l3_files/figure-html/integral-plot005-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l3_files/figure-html/integral-plot005-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Чтобы вычислить площадт точно, снова воспользуемся пределами, и определим с их помощью <strong>определенный интеграл</strong>:</p>
@@ -1109,7 +1201,7 @@ S \approx \sum_{i=1}^n y_i \Delta x
 <center>
 <figure class="figure">
 <img src="pics/antideriv.gif" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Построение неопределенного интеграла
 </figcaption>
 </figure>
@@ -1294,7 +1386,7 @@ a_{n1} + b_{n1} &amp; a_{n2} + b_{n2} &amp; \dots &amp; a_{nm} + b_{nm} \\
 <center>
 <figure class="figure">
 <img src="pics/matrix-prod.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Принцип матричного умножения
 </figcaption>
 </figure>
@@ -1407,8 +1499,8 @@ a_{1k} &amp; a_{2k} &amp; \dots &amp; a_{nk}
 \]</span></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-segeth85" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-segeth85" class="csl-entry" role="listitem">
 Зегет, В. 1985. <em>Элементарная Логика</em>. Москва: Высшая школа.
 </div>
 </div>
@@ -1468,6 +1560,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1536,13 +1655,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1569,9 +1690,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1607,10 +1742,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1620,8 +1754,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1636,6 +1779,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1677,17 +2052,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./part-math.html" class="pagination-link">
+      <a href="./part-math.html" class="pagination-link  aria-label=" математика="" и="" статистика"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Математика и статистика</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./l4.html" class="pagination-link">
+      <a href="./l4.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>L4 // Теория измерений</span>">
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

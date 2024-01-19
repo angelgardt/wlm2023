@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -59,13 +65,48 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -73,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -83,181 +124,199 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">R</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></a>
+  <a href="./l1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></a>
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Математика и статистика</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></a>
+  <a href="./l3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></a>
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a>
+  <a href="./l5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./l6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Анализ данных</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./l7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></a>
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></a>
+  <a href="./l11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></a>
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l13.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a>
+  <a href="./l13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></a>
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></a>
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#введение-в-математическую-статистику" id="toc-введение-в-математическую-статистику" class="nav-link active" data-scroll-target="#введение-в-математическую-статистику"><span class="toc-section-number">5.1</span>  Введение в математическую статистику</a>
+  <li><a href="#введение-в-математическую-статистику" id="toc-введение-в-математическую-статистику" class="nav-link active" data-scroll-target="#введение-в-математическую-статистику"><span class="header-section-number">5.1</span> Введение в математическую статистику</a>
   <ul class="collapse">
-  <li><a href="#генеральная-совокупность" id="toc-генеральная-совокупность" class="nav-link" data-scroll-target="#генеральная-совокупность"><span class="toc-section-number">5.1.1</span>  Генеральная совокупность</a></li>
-  <li><a href="#выборка" id="toc-выборка" class="nav-link" data-scroll-target="#выборка"><span class="toc-section-number">5.1.2</span>  Выборка</a></li>
-  <li><a href="#характетистики-объектов-выборки-и-генеральной-совокупности" id="toc-характетистики-объектов-выборки-и-генеральной-совокупности" class="nav-link" data-scroll-target="#характетистики-объектов-выборки-и-генеральной-совокупности"><span class="toc-section-number">5.1.3</span>  Характетистики объектов выборки и генеральной совокупности</a></li>
-  <li><a href="#характеристики-статистических-данных" id="toc-характеристики-статистических-данных" class="nav-link" data-scroll-target="#характеристики-статистических-данных"><span class="toc-section-number">5.1.4</span>  Характеристики статистических данных</a></li>
-  <li><a href="#зачем-нужна-статистика" id="toc-зачем-нужна-статистика" class="nav-link" data-scroll-target="#зачем-нужна-статистика"><span class="toc-section-number">5.1.5</span>  Зачем нужна статистика?</a></li>
+  <li><a href="#генеральная-совокупность" id="toc-генеральная-совокупность" class="nav-link" data-scroll-target="#генеральная-совокупность"><span class="header-section-number">5.1.1</span> Генеральная совокупность</a></li>
+  <li><a href="#выборка" id="toc-выборка" class="nav-link" data-scroll-target="#выборка"><span class="header-section-number">5.1.2</span> Выборка</a></li>
+  <li><a href="#характетистики-объектов-выборки-и-генеральной-совокупности" id="toc-характетистики-объектов-выборки-и-генеральной-совокупности" class="nav-link" data-scroll-target="#характетистики-объектов-выборки-и-генеральной-совокупности"><span class="header-section-number">5.1.3</span> Характетистики объектов выборки и генеральной совокупности</a></li>
+  <li><a href="#характеристики-статистических-данных" id="toc-характеристики-статистических-данных" class="nav-link" data-scroll-target="#характеристики-статистических-данных"><span class="header-section-number">5.1.4</span> Характеристики статистических данных</a></li>
+  <li><a href="#зачем-нужна-статистика" id="toc-зачем-нужна-статистика" class="nav-link" data-scroll-target="#зачем-нужна-статистика"><span class="header-section-number">5.1.5</span> Зачем нужна статистика?</a></li>
   </ul></li>
-  <li><a href="#случайный-эксперимент" id="toc-случайный-эксперимент" class="nav-link" data-scroll-target="#случайный-эксперимент"><span class="toc-section-number">5.2</span>  Случайный эксперимент</a>
+  <li><a href="#случайный-эксперимент" id="toc-случайный-эксперимент" class="nav-link" data-scroll-target="#случайный-эксперимент"><span class="header-section-number">5.2</span> Случайный эксперимент</a>
   <ul class="collapse">
-  <li><a href="#модель-случайного-эксперимента" id="toc-модель-случайного-эксперимента" class="nav-link" data-scroll-target="#модель-случайного-эксперимента"><span class="toc-section-number">5.2.1</span>  Модель случайного эксперимента</a></li>
-  <li><a href="#элементарные-исходы-и-события" id="toc-элементарные-исходы-и-события" class="nav-link" data-scroll-target="#элементарные-исходы-и-события"><span class="toc-section-number">5.2.2</span>  Элементарные исходы и события</a></li>
-  <li><a href="#вероятность" id="toc-вероятность" class="nav-link" data-scroll-target="#вероятность"><span class="toc-section-number">5.2.3</span>  Вероятность</a></li>
+  <li><a href="#модель-случайного-эксперимента" id="toc-модель-случайного-эксперимента" class="nav-link" data-scroll-target="#модель-случайного-эксперимента"><span class="header-section-number">5.2.1</span> Модель случайного эксперимента</a></li>
+  <li><a href="#элементарные-исходы-и-события" id="toc-элементарные-исходы-и-события" class="nav-link" data-scroll-target="#элементарные-исходы-и-события"><span class="header-section-number">5.2.2</span> Элементарные исходы и события</a></li>
+  <li><a href="#вероятность" id="toc-вероятность" class="nav-link" data-scroll-target="#вероятность"><span class="header-section-number">5.2.3</span> Вероятность</a></li>
   </ul></li>
-  <li><a href="#случайные-величины" id="toc-случайные-величины" class="nav-link" data-scroll-target="#случайные-величины"><span class="toc-section-number">5.3</span>  Случайные величины</a>
+  <li><a href="#случайные-величины" id="toc-случайные-величины" class="nav-link" data-scroll-target="#случайные-величины"><span class="header-section-number">5.3</span> Случайные величины</a>
   <ul class="collapse">
-  <li><a href="#дискретные-случайные-величины" id="toc-дискретные-случайные-величины" class="nav-link" data-scroll-target="#дискретные-случайные-величины"><span class="toc-section-number">5.3.1</span>  Дискретные случайные величины</a></li>
-  <li><a href="#непрерывные-случайные-величины" id="toc-непрерывные-случайные-величины" class="nav-link" data-scroll-target="#непрерывные-случайные-величины"><span class="toc-section-number">5.3.2</span>  Непрерывные случайные величины</a></li>
-  <li><a href="#нормальное-распределение" id="toc-нормальное-распределение" class="nav-link" data-scroll-target="#нормальное-распределение"><span class="toc-section-number">5.3.3</span>  Нормальное распределение</a></li>
+  <li><a href="#дискретные-случайные-величины" id="toc-дискретные-случайные-величины" class="nav-link" data-scroll-target="#дискретные-случайные-величины"><span class="header-section-number">5.3.1</span> Дискретные случайные величины</a></li>
+  <li><a href="#непрерывные-случайные-величины" id="toc-непрерывные-случайные-величины" class="nav-link" data-scroll-target="#непрерывные-случайные-величины"><span class="header-section-number">5.3.2</span> Непрерывные случайные величины</a></li>
+  <li><a href="#нормальное-распределение" id="toc-нормальное-распределение" class="nav-link" data-scroll-target="#нормальное-распределение"><span class="header-section-number">5.3.3</span> Нормальное распределение</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -267,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></h1>
 </div>
 
 
@@ -280,9 +339,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<!--- {{< include _symbols.qmd >}} --->
+
+<!---  --->
 <!--- Logic --->
 <!--- Number sets--->
 <!--- Linear Algebra --->
@@ -291,12 +352,6 @@ ul.task-list li input[type="checkbox"] {
 <!--- Distributions --->
 <!--- Other --->
 <!--- Trig --->
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <section id="введение-в-математическую-статистику" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="введение-в-математическую-статистику"><span class="header-section-number">5.1</span> Введение в математическую статистику</h2>
 <p><strong>Статистика</strong> — это междисциплинарная область знаний, а также практической деятельности, изучающая массовые явления, а также прицнипи и методы работы с данными, характеризующими эти явления.</p>
@@ -365,13 +420,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Представим, что на этой картинке изображена вся генеральная совокупность:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/simple-random-pop-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/simple-random-pop-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Если мы наберем простую случайную выборку из этой генеральной совокупности, она будет выглядеть так (черные точки):</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/simple-random-sample-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/simple-random-sample-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Как можно заметить, в выборку попали объекты из всех частей нашей генеральной совокупности — говорит о том, что выборка репрезентативна.</p>
@@ -385,19 +448,31 @@ ul.task-list li input[type="checkbox"] {
 <p>Пусть в нашей генеральной совокупности есть четыре страты:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/strat-pop-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/strat-pop-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Тогда мы можем разделить её на четыре «генеральных совокупности» соответственно:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/strat-sample-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/strat-sample-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Из каждой такой «генеральной совокупности» будем извлекать случайную выборку:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/strat-pop-strata-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/strat-pop-strata-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -411,19 +486,31 @@ ul.task-list li input[type="checkbox"] {
 <p>Пусть мы разделили нашу генеральную совокупность на 8 кластеров:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/cluster-pop-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/cluster-pop-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Кластеры у нас примерно одинаковые по характеристикам между собой — по крайне мере, мы так предполагаем. Выберем случайно четыре кластера, которые примут участие в исследовании:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/cluster-clusters-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/cluster-clusters-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Теперь из этих кластеров наберем выборку (допустим, по 20 наблюдений из кластера) случайным образом (объекты, попавшие в итоговую выборку отмечены черным контуром, не попавшие — серым):</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/cluster-sample-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/cluster-sample-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Такой подход к формированию выборки позволяет экономить драгоценные ресурсы при проведении исследования.</p>
@@ -659,20 +746,32 @@ ul.task-list li input[type="checkbox"] {
 <p>Возьмем квадрат, в который вписан круг:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/geomprob-square-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/geomprob-square-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Будем бросать в этот квадрат точки случайным образом:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/geomprob-dots-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/geomprob-dots-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Вопрос: <strong>какова вероятность, что случайно брошенная точка попадет в круг (событие <span class="math inline">\(A\)</span>)?</strong></p>
 <p>Мы можем воспользоваться статистическим подходом к вероятности, набросать побольше точек и посчитать, сколько из них попало в пределы круга:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/geomprob-incircle-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/geomprob-incircle-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Из визуализации видно, что в конечном итоге при очень большом количестве бросаний точек они заполнят всю площадь квадрата, а значит, и всю площадь круга, поэтому вероятность попадания случайно прошенной точки в круг равняется отношению площади круга к площади квадрата, то есть:</p>
@@ -720,7 +819,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Посмотрим на примере игрального кубика. Множество определения функции вероятности известно — <span class="math inline">\(\{1, 2, 3, 4, 5, 6\}\)</span>. Каждое значение выпадает с вероятностью <span class="math inline">\(\frac{1}{2}\)</span>, поэтому множество значений также известно. Можно построить график функции вероятности для этой случайной величины <span class="math inline">\(X\)</span>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/pmf-dice-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/pmf-dice-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Поскольку случайная величина дискретная, то и функция у нас получается дискретная, что выражается в том, что она отображена точками. Задав таким способом случайную величину мы полностью определяем её математическое поведение и можем с ней работать. Более того, мы можем записать её следующим образом:</p>
@@ -744,7 +847,11 @@ F(x) = \sum_{x' \leq x} f(x')
 <p>Опираясь на это определение, можно изобразить график для случая игрального кубика:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/cfd-dice-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/cfd-dice-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Эта функция также является дискретной.</p>
@@ -780,27 +887,43 @@ F(x) = \sum_{x' \leq x} f(x')
 <p>Мы видели функцию вероятности для игрального кубика — напомним себе, как она выглядит:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/pmf-dice-repeat-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/pmf-dice-repeat-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Значения на гранях кубика выпадают равновероятно, поэтому мы видим «прямую» из точек. Если мы допускаем, что точки из нашего отрезка извлекаются также равновероятно, то мы хотели бы увидеть что-то такое:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/pdf-segment-nolabs-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/pdf-segment-nolabs-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>По оси <span class="math inline">\(x\)</span> у нас идут значения случайной величины — от 0 до 1. За этими пределами чисел мы не набираем, поэтому линия туда не продолжается. Внутри этого отрезка у нас прямая линия, которая выражает идею равновероятного выбора любой точки из отрезка. Вопрос только один: <strong>что по оси <span class="math inline">\(y\)</span>???</strong></p>
 <p>Чтобы это понять, дайате сравним два графика ниже:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/pmf-vs-pdf-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/pmf-vs-pdf-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Они похожи, только на верхнем отображена функция вероятности для дискретной величины. а на нижнем что-то аналогичное для непрерывной. Если на верхнем по оси <span class="math inline">\(y\)</span> явно идет вероятность, то на нижнем какая-то другая величина. Однако и по верхнему, и по нижнему графику мы можем сказать, что значения около 15 встречаются чаще, чем значения около, например, 20. Значения же около 2–3 встречаются так же редко, как значения около 29–30.</p>
 <p>Окей, мы не можем работать в случае непрерывных случайных величин с конкретными значениями, но если мы выделим интервалы около интересующих нас значений, то вероятности попадания случайной величины в них мы уже можем посчитать. Возьмем значения 15 и 20 и немного отступим от них вправо — получатся интервалы <span class="math inline">\([15, 15 + \Delta x]\)</span> и <span class="math inline">\([20, 20 + \Delta x]\)</span>:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/pdf-inetrvals-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/pdf-inetrvals-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>График нам визуально подсказывает, что значения из интервала <span class="math inline">\([15, 15 + \Delta x]\)</span> встречаются чаще, чем значения из интервала <span class="math inline">\([20, 20 + \Delta x]\)</span> — это мы выяснили выше. Но можем ли мы на визуализации этих интервалов найти вероятность? Да, это будут закрашенные области под графиком. Идея здесь похожа на геометрическую вероятность, которую мы обсуждали ранее — чем больше площадь под графиком, тем больше вероятность попасть в заданный интервал.</p>
@@ -838,7 +961,11 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\tfrac{(x - \mu)^2}{2\sigma^2}},
 <p>Графически в зависимости от параметров <span class="math inline">\(\mu\)</span> и <span class="math inline">\(\sigma^2\)</span> может выглядеть по-разному, но это всегда хорошо знакомый всем «колокол»:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/norm-dist-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/norm-dist-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Математическое ожидание <code>\mu</code> задает положение середины «колокола» на оси <span class="math inline">\(x\)</span>, а дисперсия <span class="math inline">\(\sigma^2\)</span> — ширину колокола.</p>
@@ -855,7 +982,11 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\tfrac{(x - \mu)^2}{2\sigma^2}},
 <p>Ширину «колокола» распределения можно описывать не только через дисперсию, но и через старндартное отклонение <span class="math inline">\(\sigma = \sqrt{\sigma^2}\)</span>. Использование стандартного отклонения позволяет определить верояности попадания значений случайной величины в определенные диапазоны:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="l5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Конкретно с этими вероятностями мы работаем реже — полезнее оказываются следующие:</p>
@@ -927,6 +1058,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -993,13 +1151,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1026,9 +1186,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1064,10 +1238,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1077,8 +1250,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1093,6 +1275,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1134,17 +1548,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./l4.html" class="pagination-link">
+      <a href="./l4.html" class="pagination-link  aria-label=" &lt;span="" теория="" измерений&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./l6.html" class="pagination-link">
+      <a href="./l6.html" class="pagination-link" aria-label="<span class='chapter-number'>6</span>&nbsp; <span class='chapter-title'>L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span>">
         <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

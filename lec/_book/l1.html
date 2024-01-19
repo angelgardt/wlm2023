@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,11 +17,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -46,43 +47,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -113,7 +84,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Ничего не найдено",
     "search-matching-documents-text": "matching documents",
@@ -122,13 +99,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
-    "search-submit-button-title": "Отправить"
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -136,9 +148,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./pics/logo.png" alt="" class="navbar-logo">
     </a>
@@ -146,214 +158,232 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html">
- <span class="menu-text">Книга</span></a>
+    <a class="nav-link" href="./../book/index.html"> 
+<span class="menu-text">Книга</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../lectures/index.html">
- <span class="menu-text">Лекции</span></a>
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../practice/index.html">
- <span class="menu-text">Практики</span></a>
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../homeworks/index.html">
- <span class="menu-text">Домашки</span></a>
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../projects/index.html">
- <span class="menu-text">Проекты</span></a>
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Вступление</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">R</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></a>
+  <a href="./l1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></a>
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Математика и статистика</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></a>
+  <a href="./l3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></a>
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a>
+  <a href="./l5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  <a href="./l6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">Анализ данных</span>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></a>
+  <a href="./l7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></a>
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></a>
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></a>
+  <a href="./l11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></a>
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l13.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a>
+  <a href="./l13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></a>
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></a>
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">Источники</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#установка-r-и-rstudio" id="toc-установка-r-и-rstudio" class="nav-link active" data-scroll-target="#установка-r-и-rstudio"><span class="toc-section-number">1.1</span>  Установка R и RStudio</a></li>
-  <li><a href="#r-как-язык-программирования.-команды" id="toc-r-как-язык-программирования.-команды" class="nav-link" data-scroll-target="#r-как-язык-программирования.-команды"><span class="toc-section-number">1.2</span>  R как язык программирования. Команды</a>
+  <li><a href="#установка-r-и-rstudio" id="toc-установка-r-и-rstudio" class="nav-link active" data-scroll-target="#установка-r-и-rstudio"><span class="header-section-number">1.1</span> Установка R и RStudio</a></li>
+  <li><a href="#r-как-язык-программирования.-команды" id="toc-r-как-язык-программирования.-команды" class="nav-link" data-scroll-target="#r-как-язык-программирования.-команды"><span class="header-section-number">1.2</span> R как язык программирования. Команды</a>
   <ul class="collapse">
-  <li><a href="#математические-операции" id="toc-математические-операции" class="nav-link" data-scroll-target="#математические-операции"><span class="toc-section-number">1.2.1</span>  Математические операции</a></li>
-  <li><a href="#математические-функции" id="toc-математические-функции" class="nav-link" data-scroll-target="#математические-функции"><span class="toc-section-number">1.2.2</span>  Математические функции</a></li>
-  <li><a href="#логические-операции" id="toc-логические-операции" class="nav-link" data-scroll-target="#логические-операции"><span class="toc-section-number">1.2.3</span>  Логические операции</a></li>
-  <li><a href="#переменные-и-объекты" id="toc-переменные-и-объекты" class="nav-link" data-scroll-target="#переменные-и-объекты"><span class="toc-section-number">1.2.4</span>  Переменные и объекты</a></li>
+  <li><a href="#математические-операции" id="toc-математические-операции" class="nav-link" data-scroll-target="#математические-операции"><span class="header-section-number">1.2.1</span> Математические операции</a></li>
+  <li><a href="#математические-функции" id="toc-математические-функции" class="nav-link" data-scroll-target="#математические-функции"><span class="header-section-number">1.2.2</span> Математические функции</a></li>
+  <li><a href="#логические-операции" id="toc-логические-операции" class="nav-link" data-scroll-target="#логические-операции"><span class="header-section-number">1.2.3</span> Логические операции</a></li>
+  <li><a href="#переменные-и-объекты" id="toc-переменные-и-объекты" class="nav-link" data-scroll-target="#переменные-и-объекты"><span class="header-section-number">1.2.4</span> Переменные и объекты</a></li>
   </ul></li>
-  <li><a href="#типы-данных" id="toc-типы-данных" class="nav-link" data-scroll-target="#типы-данных"><span class="toc-section-number">1.3</span>  Типы данных</a>
+  <li><a href="#типы-данных" id="toc-типы-данных" class="nav-link" data-scroll-target="#типы-данных"><span class="header-section-number">1.3</span> Типы данных</a>
   <ul class="collapse">
-  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="toc-section-number">1.3.1</span>  <code>numeric</code></a></li>
-  <li><a href="#integer" id="toc-integer" class="nav-link" data-scroll-target="#integer"><span class="toc-section-number">1.3.2</span>  <code>integer</code></a></li>
-  <li><a href="#complex" id="toc-complex" class="nav-link" data-scroll-target="#complex"><span class="toc-section-number">1.3.3</span>  <code>complex</code></a></li>
-  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="toc-section-number">1.3.4</span>  <code>character</code></a></li>
-  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="toc-section-number">1.3.5</span>  <code>factor</code></a></li>
-  <li><a href="#специальные-литералы" id="toc-специальные-литералы" class="nav-link" data-scroll-target="#специальные-литералы"><span class="toc-section-number">1.3.6</span>  Специальные литералы</a></li>
+  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="header-section-number">1.3.1</span> <code>numeric</code></a></li>
+  <li><a href="#integer" id="toc-integer" class="nav-link" data-scroll-target="#integer"><span class="header-section-number">1.3.2</span> <code>integer</code></a></li>
+  <li><a href="#complex" id="toc-complex" class="nav-link" data-scroll-target="#complex"><span class="header-section-number">1.3.3</span> <code>complex</code></a></li>
+  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="header-section-number">1.3.4</span> <code>character</code></a></li>
+  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="header-section-number">1.3.5</span> <code>factor</code></a></li>
+  <li><a href="#специальные-литералы" id="toc-специальные-литералы" class="nav-link" data-scroll-target="#специальные-литералы"><span class="header-section-number">1.3.6</span> Специальные литералы</a></li>
   </ul></li>
-  <li><a href="#структуры-данных" id="toc-структуры-данных" class="nav-link" data-scroll-target="#структуры-данных"><span class="toc-section-number">1.4</span>  Структуры данных</a>
+  <li><a href="#структуры-данных" id="toc-структуры-данных" class="nav-link" data-scroll-target="#структуры-данных"><span class="header-section-number">1.4</span> Структуры данных</a>
   <ul class="collapse">
-  <li><a href="#датафрейм" id="toc-датафрейм" class="nav-link" data-scroll-target="#датафрейм"><span class="toc-section-number">1.4.1</span>  Датафрейм</a></li>
-  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="toc-section-number">1.4.2</span>  Векторы</a></li>
+  <li><a href="#датафрейм" id="toc-датафрейм" class="nav-link" data-scroll-target="#датафрейм"><span class="header-section-number">1.4.1</span> Датафрейм</a></li>
+  <li><a href="#векторы" id="toc-векторы" class="nav-link" data-scroll-target="#векторы"><span class="header-section-number">1.4.2</span> Векторы</a></li>
   </ul></li>
-  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="toc-section-number">1.5</span>  Матрицы</a>
+  <li><a href="#матрицы" id="toc-матрицы" class="nav-link" data-scroll-target="#матрицы"><span class="header-section-number">1.5</span> Матрицы</a>
   <ul class="collapse">
-  <li><a href="#индексация-матриц" id="toc-индексация-матриц" class="nav-link" data-scroll-target="#индексация-матриц"><span class="toc-section-number">1.5.1</span>  Индексация матриц</a></li>
+  <li><a href="#индексация-матриц" id="toc-индексация-матриц" class="nav-link" data-scroll-target="#индексация-матриц"><span class="header-section-number">1.5.1</span> Индексация матриц</a></li>
   </ul></li>
-  <li><a href="#массивы" id="toc-массивы" class="nav-link" data-scroll-target="#массивы"><span class="toc-section-number">1.6</span>  Массивы</a></li>
-  <li><a href="#списки" id="toc-списки" class="nav-link" data-scroll-target="#списки"><span class="toc-section-number">1.7</span>  Списки</a>
+  <li><a href="#массивы" id="toc-массивы" class="nav-link" data-scroll-target="#массивы"><span class="header-section-number">1.6</span> Массивы</a></li>
+  <li><a href="#списки" id="toc-списки" class="nav-link" data-scroll-target="#списки"><span class="header-section-number">1.7</span> Списки</a>
   <ul class="collapse">
-  <li><a href="#индексация-списков" id="toc-индексация-списков" class="nav-link" data-scroll-target="#индексация-списков"><span class="toc-section-number">1.7.1</span>  Индексация списков</a></li>
+  <li><a href="#индексация-списков" id="toc-индексация-списков" class="nav-link" data-scroll-target="#индексация-списков"><span class="header-section-number">1.7.1</span> Индексация списков</a></li>
   </ul></li>
-  <li><a href="#собираем-датафрейм" id="toc-собираем-датафрейм" class="nav-link" data-scroll-target="#собираем-датафрейм"><span class="toc-section-number">1.8</span>  Собираем датафрейм</a>
+  <li><a href="#собираем-датафрейм" id="toc-собираем-датафрейм" class="nav-link" data-scroll-target="#собираем-датафрейм"><span class="header-section-number">1.8</span> Собираем датафрейм</a>
   <ul class="collapse">
-  <li><a href="#индексация-датафрейма" id="toc-индексация-датафрейма" class="nav-link" data-scroll-target="#индексация-датафрейма"><span class="toc-section-number">1.8.1</span>  Индексация датафрейма</a></li>
+  <li><a href="#индексация-датафрейма" id="toc-индексация-датафрейма" class="nav-link" data-scroll-target="#индексация-датафрейма"><span class="header-section-number">1.8.1</span> Индексация датафрейма</a></li>
   </ul></li>
-  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="toc-section-number">1.9</span>  Функции</a>
+  <li><a href="#функции" id="toc-функции" class="nav-link" data-scroll-target="#функции"><span class="header-section-number">1.9</span> Функции</a>
   <ul class="collapse">
-  <li><a href="#синтаксис-функции" id="toc-синтаксис-функции" class="nav-link" data-scroll-target="#синтаксис-функции"><span class="toc-section-number">1.9.1</span>  Синтаксис функции</a></li>
-  <li><a href="#пример-функции" id="toc-пример-функции" class="nav-link" data-scroll-target="#пример-функции"><span class="toc-section-number">1.9.2</span>  Пример функции</a></li>
-  <li><a href="#пример-более-полезной-функции" id="toc-пример-более-полезной-функции" class="nav-link" data-scroll-target="#пример-более-полезной-функции"><span class="toc-section-number">1.9.3</span>  Пример более полезной функции</a></li>
+  <li><a href="#синтаксис-функции" id="toc-синтаксис-функции" class="nav-link" data-scroll-target="#синтаксис-функции"><span class="header-section-number">1.9.1</span> Синтаксис функции</a></li>
+  <li><a href="#пример-функции" id="toc-пример-функции" class="nav-link" data-scroll-target="#пример-функции"><span class="header-section-number">1.9.2</span> Пример функции</a></li>
+  <li><a href="#пример-более-полезной-функции" id="toc-пример-более-полезной-функции" class="nav-link" data-scroll-target="#пример-более-полезной-функции"><span class="header-section-number">1.9.3</span> Пример более полезной функции</a></li>
   </ul></li>
-  <li><a href="#условный-оператор" id="toc-условный-оператор" class="nav-link" data-scroll-target="#условный-оператор"><span class="toc-section-number">1.10</span>  Условный оператор</a>
+  <li><a href="#условный-оператор" id="toc-условный-оператор" class="nav-link" data-scroll-target="#условный-оператор"><span class="header-section-number">1.10</span> Условный оператор</a>
   <ul class="collapse">
-  <li><a href="#структура-условного-оператора" id="toc-структура-условного-оператора" class="nav-link" data-scroll-target="#структура-условного-оператора"><span class="toc-section-number">1.10.1</span>  Структура условного оператора</a></li>
-  <li><a href="#пример-функции-с-условным-оператором" id="toc-пример-функции-с-условным-оператором" class="nav-link" data-scroll-target="#пример-функции-с-условным-оператором"><span class="toc-section-number">1.10.2</span>  Пример функции с условным оператором</a></li>
+  <li><a href="#структура-условного-оператора" id="toc-структура-условного-оператора" class="nav-link" data-scroll-target="#структура-условного-оператора"><span class="header-section-number">1.10.1</span> Структура условного оператора</a></li>
+  <li><a href="#пример-функции-с-условным-оператором" id="toc-пример-функции-с-условным-оператором" class="nav-link" data-scroll-target="#пример-функции-с-условным-оператором"><span class="header-section-number">1.10.2</span> Пример функции с условным оператором</a></li>
   </ul></li>
-  <li><a href="#пример-функции-из-реального-проекта-с-условным-оператором" id="toc-пример-функции-из-реального-проекта-с-условным-оператором" class="nav-link" data-scroll-target="#пример-функции-из-реального-проекта-с-условным-оператором"><span class="toc-section-number">1.11</span>  Пример функции из реального проекта с условным оператором</a></li>
-  <li><a href="#вне-функций" id="toc-вне-функций" class="nav-link" data-scroll-target="#вне-функций"><span class="toc-section-number">1.12</span>  Вне функций</a></li>
-  <li><a href="#циклы" id="toc-циклы" class="nav-link" data-scroll-target="#циклы"><span class="toc-section-number">1.13</span>  Циклы</a></li>
-  <li><a href="#пример-простеньких-циклов" id="toc-пример-простеньких-циклов" class="nav-link" data-scroll-target="#пример-простеньких-циклов"><span class="toc-section-number">1.14</span>  Пример простеньких циклов</a></li>
-  <li><a href="#пример-цикла-для-чтения-и-предоработки-данных" id="toc-пример-цикла-для-чтения-и-предоработки-данных" class="nav-link" data-scroll-target="#пример-цикла-для-чтения-и-предоработки-данных"><span class="toc-section-number">1.15</span>  Пример цикла для чтения и предоработки данных</a></li>
-  <li><a href="#циклы-в-r-это-зло-они-долго-работают" id="toc-циклы-в-r-это-зло-они-долго-работают" class="nav-link" data-scroll-target="#циклы-в-r-это-зло-они-долго-работают"><span class="toc-section-number">1.16</span>  Циклы в R — это зло! Они долго работают!</a></li>
+  <li><a href="#пример-функции-из-реального-проекта-с-условным-оператором" id="toc-пример-функции-из-реального-проекта-с-условным-оператором" class="nav-link" data-scroll-target="#пример-функции-из-реального-проекта-с-условным-оператором"><span class="header-section-number">1.11</span> Пример функции из реального проекта с условным оператором</a></li>
+  <li><a href="#вне-функций" id="toc-вне-функций" class="nav-link" data-scroll-target="#вне-функций"><span class="header-section-number">1.12</span> Вне функций</a></li>
+  <li><a href="#циклы" id="toc-циклы" class="nav-link" data-scroll-target="#циклы"><span class="header-section-number">1.13</span> Циклы</a></li>
+  <li><a href="#пример-простеньких-циклов" id="toc-пример-простеньких-циклов" class="nav-link" data-scroll-target="#пример-простеньких-циклов"><span class="header-section-number">1.14</span> Пример простеньких циклов</a></li>
+  <li><a href="#пример-цикла-для-чтения-и-предоработки-данных" id="toc-пример-цикла-для-чтения-и-предоработки-данных" class="nav-link" data-scroll-target="#пример-цикла-для-чтения-и-предоработки-данных"><span class="header-section-number">1.15</span> Пример цикла для чтения и предоработки данных</a></li>
+  <li><a href="#циклы-в-r-это-зло-они-долго-работают" id="toc-циклы-в-r-это-зло-они-долго-работают" class="nav-link" data-scroll-target="#циклы-в-r-это-зло-они-долго-работают"><span class="header-section-number">1.16</span> Циклы в R — это зло! Они долго работают!</a></li>
   </ul>
 </nav>
     </div>
@@ -362,7 +392,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="l1" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></h1>
+<h1 class="title"><span id="l1" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></h1>
 </div>
 
 
@@ -375,11 +405,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
+
 </header>
 
-<div class="cell">
 
-</div>
 <section id="установка-r-и-rstudio" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="установка-r-и-rstudio"><span class="header-section-number">1.1</span> Установка R и RStudio</h2>
 <p>Чтобы стать счастливым пользователем R, надо установить на свой комп две программы:</p>
@@ -614,11 +643,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Правда чтобы создать именно целое число, надо указать, что мы хотим именно целое число с помощью литерала <code>L</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(3L)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">3</span>L)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(3L)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">3</span>L)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
@@ -629,7 +658,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 data-number="1.3.3" class="anchored" data-anchor-id="complex"><span class="header-section-number">1.3.3</span> <code>complex</code></h3>
 <p>Комплексные числа тоже существуют, и мы с ними немного познакомимся, чтобы перестать их бояться.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">2</span><span class="sc">+</span>3i)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">3</span>i)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "complex"</code></pre>
 </div>
@@ -717,7 +746,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <center>
 <figure class="figure">
 <img src="pics/tidy-2.jpg" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Пример данных
 </figcaption>
 </figure>
@@ -757,7 +786,11 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 'expression'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="l1_files/figure-html/vec-classic-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l1_files/figure-html/vec-classic-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Именно так мы понимали вектор в школе. Договоримся, что все векторы у нас начинаются из точки <span class="math inline">\((0, 0)\)</span>:</p>
@@ -767,7 +800,11 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 'expression'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="l1_files/figure-html/vec-free-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l1_files/figure-html/vec-free-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Если теперь у нас все вектора начинаются из начал координат, то мы можем полностью описать вектор только координатами его конца. Поэтому уберем вектор:</p>
@@ -777,7 +814,11 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 'expression'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="l1_files/figure-html/vec-remove-vector-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l1_files/figure-html/vec-remove-vector-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>То есть для нас теперь вектор равносилен точке на плоскости. А точка однозначно описывается двумя координатами. Получается, можно просто записать:</p>
@@ -794,7 +835,11 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 'expression'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="l1_files/figure-html/vec-same-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="l1_files/figure-html/vec-same-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Теперь обобщим вектор на более общие случаи:</p>
@@ -894,7 +939,7 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 <center>
 <figure class="figure">
 <img src="pics/vec-to-mat.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Варианты преобразования вектора в матрицу
 </figcaption>
 </figure>
@@ -998,7 +1043,7 @@ Warning in is.na(x): is.na() applied to non-(list or vector) of type
 <center>
 <figure class="figure">
 <img src="pics/list-structure.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Схема внутренней структуры списка
 </figcaption>
 </figure>
@@ -1079,7 +1124,7 @@ $m
 <center>
 <figure class="figure">
 <img src="pics/list-vs-df.png" class="figure-img">
-<figcaption class="figure-caption">
+<figcaption>
 Структура списка и датафрейма
 </figcaption>
 </figure>
@@ -1087,9 +1132,6 @@ $m
 <section id="индексация-датафрейма" class="level3" data-number="1.8.1">
 <h3 data-number="1.8.1" class="anchored" data-anchor-id="индексация-датафрейма"><span class="header-section-number">1.8.1</span> Индексация датафрейма</h3>
 <p>Для примера возьмем датафрейм про бриллианты:</p>
-<div class="cell">
-
-</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb157"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a>diam</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1216,12 +1258,12 @@ $m
 <h3 data-number="1.9.3" class="anchored" data-anchor-id="пример-более-полезной-функции"><span class="header-section-number">1.9.3</span> Пример более полезной функции</h3>
 <p><strong>Осторожно, большое!</strong></p>
 <p>Это функция, которая занималась предобработкой данных в реальном проекте. Прикиньте, если бы мы такой кусок кода повторяли для каждого датасета… — жуть!</p>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Важно!
 </div>
 </div>
@@ -1327,12 +1369,12 @@ $m
 </section>
 <section id="пример-функции-из-реального-проекта-с-условным-оператором" class="level2" data-number="1.11">
 <h2 data-number="1.11" class="anchored" data-anchor-id="пример-функции-из-реального-проекта-с-условным-оператором"><span class="header-section-number">1.11</span> Пример функции из реального проекта с условным оператором</h2>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Важно!
 </div>
 </div>
@@ -1455,12 +1497,12 @@ $m
 </section>
 <section id="пример-цикла-для-чтения-и-предоработки-данных" class="level2" data-number="1.15">
 <h2 data-number="1.15" class="anchored" data-anchor-id="пример-цикла-для-чтения-и-предоработки-данных"><span class="header-section-number">1.15</span> Пример цикла для чтения и предоработки данных</h2>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Важно!
 </div>
 </div>
@@ -1549,6 +1591,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1615,13 +1684,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1648,9 +1719,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1686,10 +1771,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1699,8 +1783,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1715,6 +1808,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1756,17 +2081,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./part-r.html" class="pagination-link">
+      <a href="./part-r.html" class="pagination-link  aria-label=" r"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">R</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./l2.html" class="pagination-link">
+      <a href="./l2.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>L2 // Предобработка данных. Дата и время Визуализация данных</span>">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
