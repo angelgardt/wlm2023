@@ -8,7 +8,7 @@
 <link href="s2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.545">
+  <meta name="generator" content="quarto-1.4.510">
 
   <meta name="author" content="Антон Ангельгардт">
   <title>L2 // Предобработка данных. Дата и время. Визуализация данных</title>
@@ -406,7 +406,7 @@
 <section id="что-будет" class="slide level2">
 <h2>Что будет?</h2>
 <div class="cell">
-<script type="text/javascript">
+<script>
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
 var link = document.createElement('link');
@@ -444,7 +444,7 @@ link.href = 'pics/favicon.png';
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">read.csv</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">read.csv</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="форматы-файлов-данных.-tsv" class="slide level2">
@@ -454,7 +454,7 @@ link.href = 'pics/favicon.png';
 <li>Значения разделены знаком табуляции (<code>\t</code>, <strong>T</strong>ab-<strong>S</strong>eparated <strong>V</strong>alues)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">read.table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">read.table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="форматы-файлов-данных.-txt" class="slide level2">
@@ -464,7 +464,7 @@ link.href = 'pics/favicon.png';
 <li>Разделитель может быть любой</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">read.table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">read.table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="форматы-файлов-данных.-табличные-форматы" class="slide level2">
@@ -473,8 +473,8 @@ link.href = 'pics/favicon.png';
 <li>Файлы Excel — <code>.xls</code>, <code>.xlsx</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_xls</span>()</span>
-<span id="cb4-2"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_xlsx</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>readxl<span class="sc">::</span><span class="fu">read_xls</span>()</span>
+<span id="cb4-2"><a href="#cb4-2"></a>readxl<span class="sc">::</span><span class="fu">read_xlsx</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="форматы-файлов-данных.-особая-разметка" class="slide level2">
@@ -482,77 +482,77 @@ link.href = 'pics/favicon.png';
 <p><br></p>
 <h3 id="json">JSON</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href=""></a><span class="fu">{</span></span>
-<span id="cb5-2"><a href=""></a>  <span class="dt">"first_name"</span><span class="fu">:</span> <span class="st">"John"</span><span class="fu">,</span></span>
-<span id="cb5-3"><a href=""></a>  <span class="dt">"last_name"</span><span class="fu">:</span> <span class="st">"Smith"</span><span class="fu">,</span></span>
-<span id="cb5-4"><a href=""></a>  <span class="dt">"is_alive"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
-<span id="cb5-5"><a href=""></a>  <span class="dt">"age"</span><span class="fu">:</span> <span class="dv">27</span><span class="fu">,</span></span>
-<span id="cb5-6"><a href=""></a>  <span class="dt">"address"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb5-7"><a href=""></a>    <span class="dt">"street_address"</span><span class="fu">:</span> <span class="st">"21 2nd Street"</span><span class="fu">,</span></span>
-<span id="cb5-8"><a href=""></a>    <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span></span>
-<span id="cb5-9"><a href=""></a>    <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"NY"</span><span class="fu">,</span></span>
-<span id="cb5-10"><a href=""></a>    <span class="dt">"postal_code"</span><span class="fu">:</span> <span class="st">"10021-3100"</span></span>
-<span id="cb5-11"><a href=""></a>  <span class="fu">},</span></span>
-<span id="cb5-12"><a href=""></a>  <span class="dt">"phone_numbers"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb5-13"><a href=""></a>    <span class="fu">{</span></span>
-<span id="cb5-14"><a href=""></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"home"</span><span class="fu">,</span></span>
-<span id="cb5-15"><a href=""></a>      <span class="dt">"number"</span><span class="fu">:</span> <span class="st">"212 555-1234"</span></span>
-<span id="cb5-16"><a href=""></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb5-17"><a href=""></a>    <span class="fu">{</span></span>
-<span id="cb5-18"><a href=""></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"office"</span><span class="fu">,</span></span>
-<span id="cb5-19"><a href=""></a>      <span class="dt">"number"</span><span class="fu">:</span> <span class="st">"646 555-4567"</span></span>
-<span id="cb5-20"><a href=""></a>    <span class="fu">}</span></span>
-<span id="cb5-21"><a href=""></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb5-22"><a href=""></a>  <span class="dt">"children"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb5-23"><a href=""></a>    <span class="st">"Catherine"</span><span class="ot">,</span></span>
-<span id="cb5-24"><a href=""></a>    <span class="st">"Thomas"</span><span class="ot">,</span></span>
-<span id="cb5-25"><a href=""></a>    <span class="st">"Trevor"</span></span>
-<span id="cb5-26"><a href=""></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb5-27"><a href=""></a>  <span class="dt">"spouse"</span><span class="fu">:</span> <span class="kw">null</span></span>
-<span id="cb5-28"><a href=""></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="dt">"first_name"</span><span class="fu">:</span> <span class="st">"John"</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="dt">"last_name"</span><span class="fu">:</span> <span class="st">"Smith"</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="dt">"is_alive"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="dt">"age"</span><span class="fu">:</span> <span class="dv">27</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="dt">"address"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="dt">"street_address"</span><span class="fu">:</span> <span class="st">"21 2nd Street"</span><span class="fu">,</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>    <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"NY"</span><span class="fu">,</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="dt">"postal_code"</span><span class="fu">:</span> <span class="st">"10021-3100"</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">},</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="dt">"phone_numbers"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="fu">{</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"home"</span><span class="fu">,</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>      <span class="dt">"number"</span><span class="fu">:</span> <span class="st">"212 555-1234"</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>    <span class="fu">{</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"office"</span><span class="fu">,</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a>      <span class="dt">"number"</span><span class="fu">:</span> <span class="st">"646 555-4567"</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a>    <span class="fu">}</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a>  <span class="dt">"children"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a>    <span class="st">"Catherine"</span><span class="ot">,</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a>    <span class="st">"Thomas"</span><span class="ot">,</span></span>
+<span id="cb5-25"><a href="#cb5-25"></a>    <span class="st">"Trevor"</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a>  <span class="dt">"spouse"</span><span class="fu">:</span> <span class="kw">null</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <h3 id="xml">XML</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb6-1"><a href=""></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="fu">?&gt;</span></span>
-<span id="cb6-2"><a href=""></a>&lt;<span class="kw">catalog</span>&gt;</span>
-<span id="cb6-3"><a href=""></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk101"</span>&gt;</span>
-<span id="cb6-4"><a href=""></a>      &lt;<span class="kw">author</span>&gt;Gambardella, Matthew&lt;/<span class="kw">author</span>&gt;</span>
-<span id="cb6-5"><a href=""></a>      &lt;<span class="kw">title</span>&gt;XML Developer's Guide&lt;/<span class="kw">title</span>&gt;</span>
-<span id="cb6-6"><a href=""></a>      &lt;<span class="kw">genre</span>&gt;Computer&lt;/<span class="kw">genre</span>&gt;</span>
-<span id="cb6-7"><a href=""></a>      &lt;<span class="kw">price</span>&gt;44.95&lt;/<span class="kw">price</span>&gt;</span>
-<span id="cb6-8"><a href=""></a>      &lt;<span class="kw">publish_date</span>&gt;2000-10-01&lt;/<span class="kw">publish_date</span>&gt;</span>
-<span id="cb6-9"><a href=""></a>      &lt;<span class="kw">description</span>&gt;An in-depth look at creating applications </span>
-<span id="cb6-10"><a href=""></a>      with XML.&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb6-11"><a href=""></a>   &lt;/<span class="kw">book</span>&gt;</span>
-<span id="cb6-12"><a href=""></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk102"</span>&gt;</span>
-<span id="cb6-13"><a href=""></a>      &lt;<span class="kw">author</span>&gt;Ralls, Kim&lt;/<span class="kw">author</span>&gt;</span>
-<span id="cb6-14"><a href=""></a>      &lt;<span class="kw">title</span>&gt;Midnight Rain&lt;/<span class="kw">title</span>&gt;</span>
-<span id="cb6-15"><a href=""></a>      &lt;<span class="kw">genre</span>&gt;Fantasy&lt;/<span class="kw">genre</span>&gt;</span>
-<span id="cb6-16"><a href=""></a>      &lt;<span class="kw">price</span>&gt;5.95&lt;/<span class="kw">price</span>&gt;</span>
-<span id="cb6-17"><a href=""></a>      &lt;<span class="kw">publish_date</span>&gt;2000-12-16&lt;/<span class="kw">publish_date</span>&gt;</span>
-<span id="cb6-18"><a href=""></a>      &lt;<span class="kw">description</span>&gt;A former architect battles corporate zombies, </span>
-<span id="cb6-19"><a href=""></a>      an evil sorceress, and her own childhood to become queen </span>
-<span id="cb6-20"><a href=""></a>      of the world.&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb6-21"><a href=""></a>   &lt;/<span class="kw">book</span>&gt;</span>
-<span id="cb6-22"><a href=""></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk103"</span>&gt;</span>
-<span id="cb6-23"><a href=""></a>      &lt;<span class="kw">author</span>&gt;Corets, Eva&lt;/<span class="kw">author</span>&gt;</span>
-<span id="cb6-24"><a href=""></a>      &lt;<span class="kw">title</span>&gt;Maeve Ascendant&lt;/<span class="kw">title</span>&gt;</span>
-<span id="cb6-25"><a href=""></a>      &lt;<span class="kw">genre</span>&gt;Fantasy&lt;/<span class="kw">genre</span>&gt;</span>
-<span id="cb6-26"><a href=""></a>      &lt;<span class="kw">price</span>&gt;5.95&lt;/<span class="kw">price</span>&gt;</span>
-<span id="cb6-27"><a href=""></a>      &lt;<span class="kw">publish_date</span>&gt;2000-11-17&lt;/<span class="kw">publish_date</span>&gt;</span>
-<span id="cb6-28"><a href=""></a>      &lt;<span class="kw">description</span>&gt;After the collapse of a nanotechnology </span>
-<span id="cb6-29"><a href=""></a>      society in England, the young survivors lay the </span>
-<span id="cb6-30"><a href=""></a>      foundation for a new society.&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb6-31"><a href=""></a>   &lt;/<span class="kw">book</span>&gt;</span>
-<span id="cb6-32"><a href=""></a>&lt;/<span class="kw">catalog</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="fu">?&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>&lt;<span class="kw">catalog</span>&gt;</span>
+<span id="cb6-3"><a href="#cb6-3"></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk101"</span>&gt;</span>
+<span id="cb6-4"><a href="#cb6-4"></a>      &lt;<span class="kw">author</span>&gt;Gambardella, Matthew&lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb6-5"><a href="#cb6-5"></a>      &lt;<span class="kw">title</span>&gt;XML Developer's Guide&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb6-6"><a href="#cb6-6"></a>      &lt;<span class="kw">genre</span>&gt;Computer&lt;/<span class="kw">genre</span>&gt;</span>
+<span id="cb6-7"><a href="#cb6-7"></a>      &lt;<span class="kw">price</span>&gt;44.95&lt;/<span class="kw">price</span>&gt;</span>
+<span id="cb6-8"><a href="#cb6-8"></a>      &lt;<span class="kw">publish_date</span>&gt;2000-10-01&lt;/<span class="kw">publish_date</span>&gt;</span>
+<span id="cb6-9"><a href="#cb6-9"></a>      &lt;<span class="kw">description</span>&gt;An in-depth look at creating applications </span>
+<span id="cb6-10"><a href="#cb6-10"></a>      with XML.&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb6-11"><a href="#cb6-11"></a>   &lt;/<span class="kw">book</span>&gt;</span>
+<span id="cb6-12"><a href="#cb6-12"></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk102"</span>&gt;</span>
+<span id="cb6-13"><a href="#cb6-13"></a>      &lt;<span class="kw">author</span>&gt;Ralls, Kim&lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb6-14"><a href="#cb6-14"></a>      &lt;<span class="kw">title</span>&gt;Midnight Rain&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb6-15"><a href="#cb6-15"></a>      &lt;<span class="kw">genre</span>&gt;Fantasy&lt;/<span class="kw">genre</span>&gt;</span>
+<span id="cb6-16"><a href="#cb6-16"></a>      &lt;<span class="kw">price</span>&gt;5.95&lt;/<span class="kw">price</span>&gt;</span>
+<span id="cb6-17"><a href="#cb6-17"></a>      &lt;<span class="kw">publish_date</span>&gt;2000-12-16&lt;/<span class="kw">publish_date</span>&gt;</span>
+<span id="cb6-18"><a href="#cb6-18"></a>      &lt;<span class="kw">description</span>&gt;A former architect battles corporate zombies, </span>
+<span id="cb6-19"><a href="#cb6-19"></a>      an evil sorceress, and her own childhood to become queen </span>
+<span id="cb6-20"><a href="#cb6-20"></a>      of the world.&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb6-21"><a href="#cb6-21"></a>   &lt;/<span class="kw">book</span>&gt;</span>
+<span id="cb6-22"><a href="#cb6-22"></a>   &lt;<span class="kw">book</span><span class="ot"> id=</span><span class="st">"bk103"</span>&gt;</span>
+<span id="cb6-23"><a href="#cb6-23"></a>      &lt;<span class="kw">author</span>&gt;Corets, Eva&lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb6-24"><a href="#cb6-24"></a>      &lt;<span class="kw">title</span>&gt;Maeve Ascendant&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb6-25"><a href="#cb6-25"></a>      &lt;<span class="kw">genre</span>&gt;Fantasy&lt;/<span class="kw">genre</span>&gt;</span>
+<span id="cb6-26"><a href="#cb6-26"></a>      &lt;<span class="kw">price</span>&gt;5.95&lt;/<span class="kw">price</span>&gt;</span>
+<span id="cb6-27"><a href="#cb6-27"></a>      &lt;<span class="kw">publish_date</span>&gt;2000-11-17&lt;/<span class="kw">publish_date</span>&gt;</span>
+<span id="cb6-28"><a href="#cb6-28"></a>      &lt;<span class="kw">description</span>&gt;After the collapse of a nanotechnology </span>
+<span id="cb6-29"><a href="#cb6-29"></a>      society in England, the young survivors lay the </span>
+<span id="cb6-30"><a href="#cb6-30"></a>      foundation for a new society.&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb6-31"><a href="#cb6-31"></a>   &lt;/<span class="kw">book</span>&gt;</span>
+<span id="cb6-32"><a href="#cb6-32"></a>&lt;/<span class="kw">catalog</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="организация-рабочего-пространства" class="slide level2">
 <h2>Организация рабочего пространства</h2>
 <p><strong>Рабочая директория</strong> — папка, в которую по умолчанию смотрит R, когда начинает искать файлы.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -560,7 +560,7 @@ link.href = 'pics/favicon.png';
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">setwd</span>(<span class="st">"/home/nglgrdt/R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">setwd</span>(<span class="st">"/home/nglgrdt/R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="путь-к-файлу" class="slide level2">
@@ -597,10 +597,10 @@ link.href = 'pics/favicon.png';
 <section id="первичное-исследование-данных" class="slide level2">
 <h2>Первичное исследование данных</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>lec2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/lecture2.csv"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>lec2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/lecture2.csv"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">head</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">head</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id var1 var2  var3  var4 var5
 1  1  Abc    5  TRUE cond1 12.8
@@ -612,7 +612,7 @@ link.href = 'pics/favicon.png';
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">tail</span>(lec2, <span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">tail</span>(lec2, <span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id var1 var2  var3  var4 var5
 5  5  Mno   11  TRUE cond3  6.3
@@ -621,7 +621,7 @@ link.href = 'pics/favicon.png';
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">str</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">str</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   7 obs. of  6 variables:
  $ id  : int  1 2 3 4 5 6 7
@@ -633,7 +633,7 @@ link.href = 'pics/favicon.png';
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">summary</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">summary</span>(lec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       id          var1                var2          var3        
  Min.   :1.0   Length:7           Min.   :  5.0   Mode :logical  
@@ -652,7 +652,7 @@ link.href = 'pics/favicon.png';
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">table</span>(lec2<span class="sc">$</span>var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">table</span>(lec2<span class="sc">$</span>var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 cond1 cond2 cond3 
@@ -660,19 +660,19 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="fu">unique</span>(lec2<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">unique</span>(lec2<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4 5 6 7</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">sort</span>(lec2<span class="sc">$</span>var5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">sort</span>(lec2<span class="sc">$</span>var5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  6.3  9.4 11.7 12.8 14.2 32.5 95.5</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">apply</span>(lec2, <span class="dv">2</span>, is.na)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">apply</span>(lec2, <span class="dv">2</span>, is.na)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        id  var1  var2  var3  var4  var5
 [1,] FALSE FALSE FALSE FALSE FALSE FALSE
@@ -685,7 +685,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="fu">sapply</span>(lec2, <span class="cf">function</span>(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">sapply</span>(lec2, <span class="cf">function</span>(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id var1 var2 var3 var4 var5 
    0    0    0    0    0    0 </code></pre>
@@ -730,18 +730,18 @@ cond1 cond2 cond3
 <h2>Семейство пакетов <code>tidyverse</code></h2>
 <p>Установить пакет:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Подключить пакет к текущей сессии R:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ dplyr     1.1.3     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
@@ -752,8 +752,8 @@ cond1 cond2 cond3
 <section id="импорт-данных.-tibble" class="slide level2">
 <h2>Импорт данных. <code>tibble</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a>ds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/lecture2.csv"</span>)</span>
-<span id="cb32-2"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/lecture2.csv"</span>)</span>
+<span id="cb32-2"><a href="#cb32-2"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -768,8 +768,8 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">read_csv2</span>()</span>
-<span id="cb34-2"><a href=""></a><span class="fu">read_delim</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">read_csv2</span>()</span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="fu">read_delim</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="pipe" class="slide level2">
@@ -791,39 +791,39 @@ cond1 cond2 cond3
 <p>С точки зрения пользователя практически не отличаются друг от друга.</p>
 <p>Пайп передает то, что слева от него, в функцию, которая справа от него, в качестве первого аргумента.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">%&gt;%</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">%&gt;%</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a><span class="fu">round</span>(pi, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">round</span>(pi, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.14</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>pi <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>pi <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.14</code></pre>
 </div>
 </div>
 <p>Позволяет выстраивать цепочки последовательных преобразований:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">sqrt</span>(<span class="fu">abs</span>(<span class="fu">log</span>(<span class="fu">abs</span>(<span class="fu">round</span>(<span class="fu">sin</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">cos</span>(<span class="dv">3</span>)), <span class="dv">2</span>)), <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">sqrt</span>(<span class="fu">abs</span>(<span class="fu">log</span>(<span class="fu">abs</span>(<span class="fu">round</span>(<span class="fu">sin</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">cos</span>(<span class="dv">3</span>)), <span class="dv">2</span>)), <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3846181</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="dv">3</span> <span class="sc">%&gt;%</span> <span class="fu">cos</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href=""></a>  <span class="st">`</span><span class="at">/</span><span class="st">`</span>(<span class="dv">1</span>, .) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-3"><a href=""></a>  <span class="fu">sin</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb45-4"><a href=""></a>  <span class="fu">round</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-5"><a href=""></a>  <span class="fu">abs</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb45-6"><a href=""></a>  <span class="fu">log</span>(<span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-7"><a href=""></a>  <span class="fu">abs</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb45-8"><a href=""></a>  <span class="fu">sqrt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="dv">3</span> <span class="sc">%&gt;%</span> <span class="fu">cos</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="#cb45-2"></a>  <span class="st">`</span><span class="at">/</span><span class="st">`</span>(<span class="dv">1</span>, .) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">sin</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb45-4"><a href="#cb45-4"></a>  <span class="fu">round</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-5"><a href="#cb45-5"></a>  <span class="fu">abs</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb45-6"><a href="#cb45-6"></a>  <span class="fu">log</span>(<span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-7"><a href="#cb45-7"></a>  <span class="fu">abs</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb45-8"><a href="#cb45-8"></a>  <span class="fu">sqrt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3846181</code></pre>
 </div>
@@ -832,7 +832,7 @@ cond1 cond2 cond3
 <section id="переименование-переменных" class="slide level2">
 <h2>Переименование переменных</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -847,9 +847,9 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb49-2"><a href=""></a>  <span class="fu">rename</span>(<span class="at">city =</span> var1,</span>
-<span id="cb49-3"><a href=""></a>         <span class="at">age =</span> var2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">rename</span>(<span class="at">city =</span> var1,</span>
+<span id="cb49-3"><a href="#cb49-3"></a>         <span class="at">age =</span> var2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id city    age var3  var4   var5
@@ -864,8 +864,8 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb51-2"><a href=""></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
   `~id` `~city` `~age` `~student` `~condition` `~score`
@@ -880,9 +880,9 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb53-2"><a href=""></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score)) <span class="sc">%&gt;%</span> </span>
-<span id="cb53-3"><a href=""></a>  <span class="fu">rename_all</span>(str_remove, <span class="st">"~"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb53-2"><a href="#cb53-2"></a>  <span class="fu">set_names</span>(<span class="fu">vars</span>(id, city, age, student, condition, score)) <span class="sc">%&gt;%</span> </span>
+<span id="cb53-3"><a href="#cb53-3"></a>  <span class="fu">rename_all</span>(str_remove, <span class="st">"~"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id city    age student condition score
@@ -900,7 +900,7 @@ cond1 cond2 cond3
 <section id="фильтрация-данных.-строки" class="slide level2">
 <h2>Фильтрация данных. Строки</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -913,8 +913,8 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb57-2"><a href=""></a>  <span class="fu">filter</span>(var5 <span class="sc">&gt;</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">filter</span>(var5 <span class="sc">&gt;</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 6
      id var1   var2 var3  var4   var5
@@ -925,8 +925,8 @@ cond1 cond2 cond3
 4     6 Pqr     100 TRUE  cond3  11.7
 5     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb59-2"><a href=""></a>  <span class="fu">filter</span>(var3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb59-2"><a href="#cb59-2"></a>  <span class="fu">filter</span>(var3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 6
      id var1   var2 var3  var4   var5
@@ -935,7 +935,7 @@ cond1 cond2 cond3
 2     5 Mno      11 TRUE  cond3   6.3
 3     6 Pqr     100 TRUE  cond3  11.7</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href=""></a>ds <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>ds <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 6
      id var1   var2 var3  var4   var5
@@ -949,7 +949,7 @@ cond1 cond2 cond3
 <section id="фильтрация-данных.-столбцы" class="slide level2">
 <h2>Фильтрация данных. Столбцы</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -962,8 +962,8 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb65-2"><a href=""></a>  <span class="fu">select</span>(id, var1, var3, var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb65-2"><a href="#cb65-2"></a>  <span class="fu">select</span>(id, var1, var3, var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 4
      id var1  var3  var4 
@@ -976,8 +976,8 @@ cond1 cond2 cond3
 6     6 Pqr   TRUE  cond3
 7     7 Stu   FALSE cond1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb67-2"><a href=""></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"var"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb67-2"><a href="#cb67-2"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"var"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 5
   var1   var2 var3  var4   var5
@@ -995,7 +995,7 @@ cond1 cond2 cond3
 <section id="сортировка-данных" class="slide level2">
 <h2>Сортировка данных</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -1008,8 +1008,8 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb71-2"><a href=""></a>  <span class="fu">arrange</span>(var5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb71-2"><a href="#cb71-2"></a>  <span class="fu">arrange</span>(var5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -1022,8 +1022,8 @@ cond1 cond2 cond3
 6     3 Ghi      94 FALSE cond2  32.5
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb73-2"><a href=""></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(var5))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb73-2"><a href="#cb73-2"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(var5))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -1036,8 +1036,8 @@ cond1 cond2 cond3
 6     4 Jkl      28 FALSE cond2   9.4
 7     5 Mno      11 TRUE  cond3   6.3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb75-2"><a href=""></a>  <span class="fu">distinct</span>(var4, var3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb75-2"><a href="#cb75-2"></a>  <span class="fu">distinct</span>(var4, var3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   var4  var3 
@@ -1052,7 +1052,7 @@ cond1 cond2 cond3
 <section id="создание-и-изменение-переменных" class="slide level2">
 <h2>Создание и изменение переменных</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -1065,8 +1065,8 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb79-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">banch =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb79-2"><a href="#cb79-2"></a>  <span class="fu">mutate</span>(<span class="at">banch =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 7
      id var1   var2 var3  var4   var5 banch
@@ -1079,13 +1079,13 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7     1
 7     7 Stu      96 FALSE cond1  95.5     1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb81-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">banch =</span> <span class="dv">1</span>,</span>
-<span id="cb81-3"><a href=""></a>         <span class="at">var5_cat =</span> <span class="fu">ifelse</span>(var5 <span class="sc">&gt;</span> <span class="fu">mean</span>(var5), <span class="st">"high"</span>, <span class="st">"low"</span>),</span>
-<span id="cb81-4"><a href=""></a>         <span class="at">var4 =</span> <span class="fu">recode</span>(var4,</span>
-<span id="cb81-5"><a href=""></a>                       <span class="st">"cond1"</span> <span class="ot">=</span> <span class="st">"easy"</span>,</span>
-<span id="cb81-6"><a href=""></a>                       <span class="st">"cond2"</span> <span class="ot">=</span> <span class="st">"medium"</span>,</span>
-<span id="cb81-7"><a href=""></a>                       <span class="st">"cond3"</span> <span class="ot">=</span> <span class="st">"hard"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb81-2"><a href="#cb81-2"></a>  <span class="fu">mutate</span>(<span class="at">banch =</span> <span class="dv">1</span>,</span>
+<span id="cb81-3"><a href="#cb81-3"></a>         <span class="at">var5_cat =</span> <span class="fu">ifelse</span>(var5 <span class="sc">&gt;</span> <span class="fu">mean</span>(var5), <span class="st">"high"</span>, <span class="st">"low"</span>),</span>
+<span id="cb81-4"><a href="#cb81-4"></a>         <span class="at">var4 =</span> <span class="fu">recode</span>(var4,</span>
+<span id="cb81-5"><a href="#cb81-5"></a>                       <span class="st">"cond1"</span> <span class="ot">=</span> <span class="st">"easy"</span>,</span>
+<span id="cb81-6"><a href="#cb81-6"></a>                       <span class="st">"cond2"</span> <span class="ot">=</span> <span class="st">"medium"</span>,</span>
+<span id="cb81-7"><a href="#cb81-7"></a>                       <span class="st">"cond3"</span> <span class="ot">=</span> <span class="st">"hard"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 8
      id var1   var2 var3  var4    var5 banch var5_cat
@@ -1103,7 +1103,7 @@ cond1 cond2 cond3
 <section id="группировка-и-аггрегация-данных" class="slide level2">
 <h2>Группировка и аггрегация данных</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href=""></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
      id var1   var2 var3  var4   var5
@@ -1116,20 +1116,20 @@ cond1 cond2 cond3
 6     6 Pqr     100 TRUE  cond3  11.7
 7     7 Stu      96 FALSE cond1  95.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb85-2"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
-<span id="cb85-3"><a href=""></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb85-2"><a href="#cb85-2"></a>  <span class="fu">summarise</span>(<span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
+<span id="cb85-3"><a href="#cb85-3"></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   v5_mean v2_median
     &lt;dbl&gt;     &lt;dbl&gt;
 1    26.1        28</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb87-2"><a href=""></a>  <span class="fu">group_by</span>(var4) <span class="sc">%&gt;%</span> </span>
-<span id="cb87-3"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb87-4"><a href=""></a>            <span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
-<span id="cb87-5"><a href=""></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb87-2"><a href="#cb87-2"></a>  <span class="fu">group_by</span>(var4) <span class="sc">%&gt;%</span> </span>
+<span id="cb87-3"><a href="#cb87-3"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb87-4"><a href="#cb87-4"></a>            <span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
+<span id="cb87-5"><a href="#cb87-5"></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   var4      n v5_mean v2_median
@@ -1138,11 +1138,11 @@ cond1 cond2 cond3
 2 cond2     2    21.0      61  
 3 cond3     2     9        55.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href=""></a>ds <span class="sc">%&gt;%</span> </span>
-<span id="cb89-2"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb89-3"><a href=""></a>            <span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
-<span id="cb89-4"><a href=""></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2),</span>
-<span id="cb89-5"><a href=""></a>            <span class="at">.by =</span> var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1"></a>ds <span class="sc">%&gt;%</span> </span>
+<span id="cb89-2"><a href="#cb89-2"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb89-3"><a href="#cb89-3"></a>            <span class="at">v5_mean =</span> <span class="fu">mean</span>(var5),</span>
+<span id="cb89-4"><a href="#cb89-4"></a>            <span class="at">v2_median =</span> <span class="fu">median</span>(var2),</span>
+<span id="cb89-5"><a href="#cb89-5"></a>            <span class="at">.by =</span> var4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   var4      n v5_mean v2_median
@@ -1153,13 +1153,13 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href=""></a><span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1"></a><span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="объединение-датасетов.-строки-и-столбцы" class="slide level2">
 <h2>Объединение датасетов. Строки и столбцы</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href=""></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1169,7 +1169,7 @@ cond1 cond2 cond3
 3     3 Ghi      94
 4     4 Jkl      28</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href=""></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3  var4 
@@ -1179,7 +1179,7 @@ cond1 cond2 cond3
 3     3 FALSE cond2
 4     4 FALSE cond2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href=""></a>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1"></a>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
      id var1   var2
@@ -1188,8 +1188,8 @@ cond1 cond2 cond3
 2     6 Pqr     100
 3     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href=""></a>a <span class="sc">%&gt;%</span> </span>
-<span id="cb98-2"><a href=""></a>  <span class="fu">bind_cols</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a>a <span class="sc">%&gt;%</span> </span>
+<span id="cb98-2"><a href="#cb98-2"></a>  <span class="fu">bind_cols</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   id...1 var1   var2 id...4 var3  var4 
@@ -1199,8 +1199,8 @@ cond1 cond2 cond3
 3      3 Ghi      94      3 FALSE cond2
 4      4 Jkl      28      4 FALSE cond2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href=""></a>a <span class="sc">%&gt;%</span> </span>
-<span id="cb100-2"><a href=""></a>  <span class="fu">bind_rows</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a>a <span class="sc">%&gt;%</span> </span>
+<span id="cb100-2"><a href="#cb100-2"></a>  <span class="fu">bind_rows</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 3
      id var1   var2
@@ -1227,7 +1227,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1237,7 +1237,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1261,7 +1261,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1271,7 +1271,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1281,7 +1281,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
      id var1   var2 var3   var4
@@ -1303,7 +1303,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1313,7 +1313,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1323,7 +1323,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
      id var1   var2 var3   var4
@@ -1347,7 +1347,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1357,7 +1357,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1367,7 +1367,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
      id var1   var2 var3   var4
@@ -1391,7 +1391,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1401,7 +1401,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1411,7 +1411,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
      id var1   var2 var3   var4
@@ -1437,7 +1437,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1447,7 +1447,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1457,7 +1457,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id var1   var2
@@ -1465,7 +1465,7 @@ cond1 cond2 cond3
 1     1 Abc       5
 2     2 Def      16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href=""></a>y <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1"></a>y <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id var3   var4
@@ -1487,7 +1487,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var1   var2
@@ -1497,7 +1497,7 @@ cond1 cond2 cond3
 3     5 Mno      11
 4     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id var3   var4
@@ -1507,7 +1507,7 @@ cond1 cond2 cond3
 3     3 cond2  32.5
 4     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id var1   var2
@@ -1515,7 +1515,7 @@ cond1 cond2 cond3
 1     5 Mno      11
 2     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href=""></a>y <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1"></a>y <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id var3   var4
@@ -1537,7 +1537,7 @@ cond1 cond2 cond3
 </center>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href=""></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
      id var1   var2
@@ -1548,7 +1548,7 @@ cond1 cond2 cond3
 4     5 Mno      11
 5     7 Stu      96</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href=""></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
      id var3   var4
@@ -1559,7 +1559,7 @@ cond1 cond2 cond3
 4     3 cond2  32.5
 5     4 cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
      id var1   var2 var3   var4
@@ -1569,7 +1569,7 @@ cond1 cond2 cond3
 3     2 Def      16 cond1  14.2
 4     2 Def      16 cond2   2  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
      id var1   var2 var3   var4
@@ -1581,7 +1581,7 @@ cond1 cond2 cond3
 5     5 Mno      11 &lt;NA&gt;   NA  
 6     7 Stu      96 &lt;NA&gt;   NA  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
      id var1   var2 var3   var4
@@ -1593,7 +1593,7 @@ cond1 cond2 cond3
 5     3 &lt;NA&gt;     NA cond2  32.5
 6     4 &lt;NA&gt;     NA cond2   9.4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href=""></a>x <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1"></a>x <span class="sc">%&gt;%</span> <span class="fu">full_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 5
      id var1   var2 var3   var4
@@ -1631,7 +1631,7 @@ cond1 cond2 cond3
 </figure>
 </center>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href=""></a>long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1"></a>long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
      id var1   var2
@@ -1643,10 +1643,10 @@ cond1 cond2 cond3
 5     1 cond3   6.3
 6     2 cond3  11.7</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb160"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a href=""></a>long <span class="sc">%&gt;%</span> </span>
-<span id="cb160-2"><a href=""></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var1,</span>
-<span id="cb160-3"><a href=""></a>              <span class="at">values_from =</span> var2) <span class="ot">-&gt;</span> wide</span>
-<span id="cb160-4"><a href=""></a>wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb160"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a href="#cb160-1"></a>long <span class="sc">%&gt;%</span> </span>
+<span id="cb160-2"><a href="#cb160-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> var1,</span>
+<span id="cb160-3"><a href="#cb160-3"></a>              <span class="at">values_from =</span> var2) <span class="ot">-&gt;</span> wide</span>
+<span id="cb160-4"><a href="#cb160-4"></a>wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
      id cond1 cond2 cond3
@@ -1654,8 +1654,8 @@ cond1 cond2 cond3
 1     1  12.8  32.5   6.3
 2     2  14.2   9.4  11.7</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href=""></a>wide <span class="sc">%&gt;%</span> </span>
-<span id="cb162-2"><a href=""></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>id) <span class="co"># names_to, values_to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href="#cb162-1"></a>wide <span class="sc">%&gt;%</span> </span>
+<span id="cb162-2"><a href="#cb162-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>id) <span class="co"># names_to, values_to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
      id name  value
@@ -1677,28 +1677,28 @@ cond1 cond2 cond3
 <li><code>stringi</code> (устанавливается отдельно)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb164"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a href=""></a><span class="co"># install.packages("stringi")</span></span>
-<span id="cb164-2"><a href=""></a><span class="fu">library</span>(stringi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb164"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a href="#cb164-1"></a><span class="co"># install.packages("stringi")</span></span>
+<span id="cb164-2"><a href="#cb164-2"></a><span class="fu">library</span>(stringi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <h3 id="как-создать-строку">Как создать строку?</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a href=""></a>s1 <span class="ot">&lt;-</span> <span class="st">"сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений"</span></span>
-<span id="cb165-2"><a href=""></a>s1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a href="#cb165-1"></a>s1 <span class="ot">&lt;-</span> <span class="st">"сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений"</span></span>
+<span id="cb165-2"><a href="#cb165-2"></a>s1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href=""></a>s2 <span class="ot">&lt;-</span> <span class="st">'С другой стороны постоянный количественный "рост" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации'</span></span>
-<span id="cb167-2"><a href=""></a>s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href="#cb167-1"></a>s2 <span class="ot">&lt;-</span> <span class="st">'С другой стороны постоянный количественный "рост" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации'</span></span>
+<span id="cb167-2"><a href="#cb167-2"></a>s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "С другой стороны постоянный количественный \"рост\" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href=""></a>s3 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный "</span>рост<span class="st">" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
-<span id="cb169-2"><a href=""></a>s3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href="#cb169-1"></a>s3 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный "</span>рост<span class="st">" и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
+<span id="cb169-2"><a href="#cb169-2"></a>s3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error: &lt;text&gt;:1:52: unexpected symbol
 1: s3 &lt;- "С другой стороны постоянный количественный "рост
@@ -1706,15 +1706,15 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb171"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a href=""></a>s4 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный 'рост' и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
-<span id="cb171-2"><a href=""></a>s4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb171"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a href="#cb171-1"></a>s4 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный 'рост' и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
+<span id="cb171-2"><a href="#cb171-2"></a>s4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "С другой стороны постоянный количественный 'рост' и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb173"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a href=""></a>s5 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный «рост» и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
-<span id="cb173-2"><a href=""></a>s5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb173"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a href="#cb173-1"></a>s5 <span class="ot">&lt;-</span> <span class="st">"С другой стороны постоянный количественный «рост» и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</span></span>
+<span id="cb173-2"><a href="#cb173-2"></a>s5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "С другой стороны постоянный количественный «рост» и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации"</code></pre>
 </div>
@@ -1723,10 +1723,10 @@ cond1 cond2 cond3
 <section id="генерация-случайных-строк" class="slide level2">
 <h2>Генерация случайных строк</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href=""></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href="#cb175-1"></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "fkst3" "H7bk4" "9PLPJ" "bUpw8" "hwVnZ" "5T2sM" "OUoWV" "wkYjg" "3tYXw"
-[10] "HIkoP"</code></pre>
+<pre><code> [1] "IJLpL" "jF0WL" "khbUg" "D18ax" "uBHmO" "ZaXuZ" "acEjd" "0fmOb" "hpeiU"
+[10] "bxtUt"</code></pre>
 </div>
 </div>
 </section>
@@ -1735,82 +1735,82 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="конкатенация-строк">Конкатенация строк</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb177"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb177-1"><a href=""></a><span class="fu">paste</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb177"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb177-1"><a href="#cb177-1"></a><span class="fu">paste</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "first second third"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb179"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a href=""></a><span class="fu">paste</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">"_"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb179"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a href="#cb179-1"></a><span class="fu">paste</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">"_"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "first_second_third"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb181"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a href=""></a><span class="fu">paste0</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb181"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a href="#cb181-1"></a><span class="fu">paste0</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "firstsecondthird"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb183"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a href=""></a><span class="fu">str_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb183"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a href="#cb183-1"></a><span class="fu">str_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "firstsecondthird"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb185"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb185-1"><a href=""></a><span class="fu">str_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">"|"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb185"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb185-1"><a href="#cb185-1"></a><span class="fu">str_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">"|"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "first|second|third"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a href=""></a><span class="fu">stri_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a href="#cb187-1"></a><span class="fu">stri_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "firstsecondthird"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb189"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb189-1"><a href=""></a><span class="fu">stri_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">" &amp; "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb189"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb189-1"><a href="#cb189-1"></a><span class="fu">stri_c</span>(<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>, <span class="at">sep =</span> <span class="st">" &amp; "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "first &amp; second &amp; third"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb191"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb191-1"><a href=""></a>ds_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb191"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb191-1"><a href="#cb191-1"></a>ds_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 4
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
- 1     1 A         1     4
- 2     1 A         2     4
- 3     1 A         3     4
- 4     1 A         4     2
+ 1     1 A         1     1
+ 2     1 A         2     5
+ 3     1 A         3     1
+ 4     1 A         4     4
  5     1 A         5     4
- 6     1 B         1     5
- 7     1 B         2     3
+ 6     1 B         1     3
+ 7     1 B         2     5
  8     1 B         3     3
  9     1 B         4     2
-10     1 B         5     4
+10     1 B         5     1
 # ℹ 140 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb193"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a href=""></a>ds_1 <span class="sc">%&gt;%</span> </span>
-<span id="cb193-2"><a href=""></a>  <span class="fu">unite</span>(scale_item, scale, item, <span class="at">sep =</span> <span class="st">"_"</span>) <span class="ot">-&gt;</span> ds_2</span>
-<span id="cb193-3"><a href=""></a>ds_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb193"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a href="#cb193-1"></a>ds_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb193-2"><a href="#cb193-2"></a>  <span class="fu">unite</span>(scale_item, scale, item, <span class="at">sep =</span> <span class="st">"_"</span>) <span class="ot">-&gt;</span> ds_2</span>
+<span id="cb193-3"><a href="#cb193-3"></a>ds_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
- 1     1 A_1            4
- 2     1 A_2            4
- 3     1 A_3            4
- 4     1 A_4            2
+ 1     1 A_1            1
+ 2     1 A_2            5
+ 3     1 A_3            1
+ 4     1 A_4            4
  5     1 A_5            4
- 6     1 B_1            5
- 7     1 B_2            3
+ 6     1 B_1            3
+ 7     1 B_2            5
  8     1 B_3            3
  9     1 B_4            2
-10     1 B_5            4
+10     1 B_5            1
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -1820,29 +1820,29 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="разделение-строк">Разделение строк</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb195"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb195-1"><a href=""></a><span class="fu">str_split</span>(<span class="st">"first second third"</span>, <span class="at">pattern =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb195"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb195-1"><a href="#cb195-1"></a><span class="fu">str_split</span>(<span class="st">"first second third"</span>, <span class="at">pattern =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "first"  "second" "third" </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb197"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb197-1"><a href=""></a>ds_2 <span class="sc">%&gt;%</span> </span>
-<span id="cb197-2"><a href=""></a>  <span class="fu">separate</span>(scale_item, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"scale"</span>, <span class="st">"item"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb197"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb197-1"><a href="#cb197-1"></a>ds_2 <span class="sc">%&gt;%</span> </span>
+<span id="cb197-2"><a href="#cb197-2"></a>  <span class="fu">separate</span>(scale_item, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"scale"</span>, <span class="st">"item"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 4
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1     1 A     1         4
- 2     1 A     2         4
- 3     1 A     3         4
- 4     1 A     4         2
+ 1     1 A     1         1
+ 2     1 A     2         5
+ 3     1 A     3         1
+ 4     1 A     4         4
  5     1 A     5         4
- 6     1 B     1         5
- 7     1 B     2         3
+ 6     1 B     1         3
+ 7     1 B     2         5
  8     1 B     3         3
  9     1 B     4         2
-10     1 B     5         4
+10     1 B     5         1
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -1850,7 +1850,7 @@ cond1 cond2 cond3
 <section id="сортировка-строк" class="slide level2">
 <h2>Сортировка строк</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb199"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb199-1"><a href=""></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb199"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb199-1"><a href="#cb199-1"></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Odl" "Snm" "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "Swx" "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
@@ -1858,7 +1858,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb201"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb201-1"><a href=""></a><span class="fu">sort</span>(unsorted_s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb201"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb201-1"><a href="#cb201-1"></a><span class="fu">sort</span>(unsorted_s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Ccw" "Cka" "Ejt" "Eph" "Gbz" "Hfj" "Ixs" "Iyc" "Jgf" "Jhe" "Koi" "Nqr"
 [13] "Nvd" "Odl" "Ruu" "Snm" "Swx" "Szq" "Tmp" "Vin" "Vlo" "Yey" "Ysv" "Ytg"
@@ -1866,7 +1866,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb203"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb203-1"><a href=""></a><span class="fu">str_sort</span>(unsorted_s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb203"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb203-1"><a href="#cb203-1"></a><span class="fu">str_sort</span>(unsorted_s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Ccw" "Cka" "Ejt" "Eph" "Gbz" "Hfj" "Ixs" "Iyc" "Jgf" "Jhe" "Koi" "Nqr"
 [13] "Nvd" "Odl" "Ruu" "Snm" "Swx" "Szq" "Tmp" "Vin" "Vlo" "Yey" "Ysv" "Ytg"
@@ -1874,15 +1874,15 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb205"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb205-1"><a href=""></a><span class="co"># по умолчанию</span></span>
-<span id="cb205-2"><a href=""></a><span class="fu">str_sort</span>(<span class="fu">c</span>(<span class="st">"э"</span>, <span class="st">"а"</span>, <span class="st">"у"</span>, <span class="st">"i"</span>), <span class="at">locale =</span> <span class="st">'en'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb205"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb205-1"><a href="#cb205-1"></a><span class="co"># по умолчанию</span></span>
+<span id="cb205-2"><a href="#cb205-2"></a><span class="fu">str_sort</span>(<span class="fu">c</span>(<span class="st">"э"</span>, <span class="st">"а"</span>, <span class="st">"у"</span>, <span class="st">"i"</span>), <span class="at">locale =</span> <span class="st">'en'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "i" "а" "у" "э"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb207"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb207-1"><a href=""></a><span class="co"># для русского языка</span></span>
-<span id="cb207-2"><a href=""></a><span class="fu">str_sort</span>(<span class="fu">c</span>(<span class="st">"э"</span>, <span class="st">"а"</span>, <span class="st">"у"</span>, <span class="st">"i"</span>), <span class="at">locale =</span> <span class="st">'ru'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb207"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb207-1"><a href="#cb207-1"></a><span class="co"># для русского языка</span></span>
+<span id="cb207-2"><a href="#cb207-2"></a><span class="fu">str_sort</span>(<span class="fu">c</span>(<span class="st">"э"</span>, <span class="st">"а"</span>, <span class="st">"у"</span>, <span class="st">"i"</span>), <span class="at">locale =</span> <span class="st">'ru'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "а" "у" "э" "i"</code></pre>
 </div>
@@ -1893,13 +1893,13 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="выделение-подстроки">Выделение подстроки</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb209"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb209-1"><a href=""></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb209"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb209-1"><a href="#cb209-1"></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Odl" "Snm" "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "Swx" "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
 [25] "Iyc" "Szq"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb211"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb211-1"><a href=""></a><span class="fu">str_sub</span>(unsorted_s, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb211"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb211-1"><a href="#cb211-1"></a><span class="fu">str_sub</span>(unsorted_s, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Od" "Sn" "Nq" "Ck" "Jg" "Ru" "Vl" "Ko" "Ej" "Tm" "Nv" "Vi" "Ys" "Zr" "Ep"
 [16] "Sw" "Ye" "Yt" "Ix" "Cc" "Hf" "Za" "Gb" "Jh" "Iy" "Sz"</code></pre>
@@ -1908,13 +1908,13 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="замена-подстроки">Замена подстроки</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb213"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb213-1"><a href=""></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb213"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb213-1"><a href="#cb213-1"></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Odl" "Snm" "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "Swx" "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
 [25] "Iyc" "Szq"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb215"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb215-1"><a href=""></a><span class="fu">str_replace</span>(unsorted_s, <span class="at">pattern =</span> <span class="st">"O"</span>, <span class="at">replacement =</span> <span class="st">"Ь"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb215"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb215-1"><a href="#cb215-1"></a><span class="fu">str_replace</span>(unsorted_s, <span class="at">pattern =</span> <span class="st">"O"</span>, <span class="at">replacement =</span> <span class="st">"Ь"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Ьdl" "Snm" "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "Swx" "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
@@ -1924,13 +1924,13 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="удаление-подстроки">Удаление подстроки</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb217"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb217-1"><a href=""></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb217"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb217-1"><a href="#cb217-1"></a>unsorted_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Odl" "Snm" "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "Swx" "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
 [25] "Iyc" "Szq"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb219"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb219-1"><a href=""></a><span class="fu">str_remove</span>(unsorted_s, <span class="st">"S"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb219"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb219-1"><a href="#cb219-1"></a><span class="fu">str_remove</span>(unsorted_s, <span class="st">"S"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Odl" "nm"  "Nqr" "Cka" "Jgf" "Ruu" "Vlo" "Koi" "Ejt" "Tmp" "Nvd" "Vin"
 [13] "Ysv" "Zrk" "Eph" "wx"  "Yey" "Ytg" "Ixs" "Ccw" "Hfj" "Zab" "Gbz" "Jhe"
@@ -1941,8 +1941,8 @@ cond1 cond2 cond3
 <section id="регулярные-выражения" class="slide level2">
 <h2>Регулярные выражения</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb221"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb221-1"><a href=""></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span>
-<span id="cb221-2"><a href=""></a>dates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb221"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb221-1"><a href="#cb221-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span>
+<span id="cb221-2"><a href="#cb221-2"></a>dates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "21.92.2001" "01.04.1994" "5-3-2011"   "6/04/1999" </code></pre>
 </div>
@@ -1950,7 +1950,7 @@ cond1 cond2 cond3
 <p><br></p>
 <h3 id="метасимволы">Метасимволы</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb223"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb223-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb223"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb223-1"><a href="#cb223-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;2&gt;&lt;1&gt;&lt;.&gt;&lt;9&gt;&lt;2&gt;&lt;.&gt;&lt;2&gt;&lt;0&gt;&lt;0&gt;&lt;1&gt;
 [2] │ &lt;0&gt;&lt;1&gt;&lt;.&gt;&lt;0&gt;&lt;4&gt;&lt;.&gt;&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;4&gt;
@@ -1959,7 +1959,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb225"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb225-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="co"># экранирование метасимволов</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb225"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb225-1"><a href="#cb225-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="co"># экранирование метасимволов</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ 21&lt;.&gt;92&lt;.&gt;2001
 [2] │ 01&lt;.&gt;04&lt;.&gt;1994
@@ -1968,7 +1968,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb227"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb227-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"^0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb227"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb227-1"><a href="#cb227-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"^0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ 21.92.2001
 [2] │ &lt;0&gt;1.04.1994
@@ -1977,7 +1977,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb229"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb229-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"9$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb229"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb229-1"><a href="#cb229-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"9$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ 21.92.2001
 [2] │ 01.04.1994
@@ -1990,7 +1990,7 @@ cond1 cond2 cond3
 <h2>Регулярные выражения</h2>
 <h3 id="классы-знаков">Классы знаков</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb231"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb231-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">'</span><span class="sc">\\</span><span class="st">d'</span>) <span class="co"># ищем цифры</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb231"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb231-1"><a href="#cb231-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">'</span><span class="sc">\\</span><span class="st">d'</span>) <span class="co"># ищем цифры</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;2&gt;&lt;1&gt;.&lt;9&gt;&lt;2&gt;.&lt;2&gt;&lt;0&gt;&lt;0&gt;&lt;1&gt;
 [2] │ &lt;0&gt;&lt;1&gt;.&lt;0&gt;&lt;4&gt;.&lt;1&gt;&lt;9&gt;&lt;9&gt;&lt;4&gt;
@@ -1999,7 +1999,7 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb233"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb233-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">'</span><span class="sc">\\</span><span class="st">D'</span>) <span class="co"># ищем не-цифры</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb233"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb233-1"><a href="#cb233-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">'</span><span class="sc">\\</span><span class="st">D'</span>) <span class="co"># ищем не-цифры</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ 21&lt;.&gt;92&lt;.&gt;2001
 [2] │ 01&lt;.&gt;04&lt;.&gt;1994
@@ -2008,25 +2008,25 @@ cond1 cond2 cond3
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb235"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb235-1"><a href=""></a><span class="fu">str_view_all</span>(<span class="st">'успешный успех'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">s'</span>) <span class="co"># пробелы</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb235"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb235-1"><a href="#cb235-1"></a><span class="fu">str_view_all</span>(<span class="st">'успешный успех'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">s'</span>) <span class="co"># пробелы</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ успешный&lt; &gt;успех</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb237"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb237-1"><a href=""></a><span class="fu">str_view_all</span>(<span class="st">'успешный успех'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">S'</span>) <span class="co"># не-пробелы</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb237"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb237-1"><a href="#cb237-1"></a><span class="fu">str_view_all</span>(<span class="st">'успешный успех'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">S'</span>) <span class="co"># не-пробелы</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;у&gt;&lt;с&gt;&lt;п&gt;&lt;е&gt;&lt;ш&gt;&lt;н&gt;&lt;ы&gt;&lt;й&gt; &lt;у&gt;&lt;с&gt;&lt;п&gt;&lt;е&gt;&lt;х&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb239"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb239-1"><a href=""></a><span class="fu">str_view_all</span>(<span class="st">'верно ведь, что здесь что-то есть'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">w'</span>) <span class="co"># не пробелы и не знаки препинания</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb239"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb239-1"><a href="#cb239-1"></a><span class="fu">str_view_all</span>(<span class="st">'верно ведь, что здесь что-то есть'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">w'</span>) <span class="co"># не пробелы и не знаки препинания</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;в&gt;&lt;е&gt;&lt;р&gt;&lt;н&gt;&lt;о&gt; &lt;в&gt;&lt;е&gt;&lt;д&gt;&lt;ь&gt;, &lt;ч&gt;&lt;т&gt;&lt;о&gt; &lt;з&gt;&lt;д&gt;&lt;е&gt;&lt;с&gt;&lt;ь&gt; &lt;ч&gt;&lt;т&gt;&lt;о&gt;-&lt;т&gt;&lt;о&gt; &lt;е&gt;&lt;с&gt;&lt;т&gt;&lt;ь&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb241"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb241-1"><a href=""></a><span class="fu">str_view_all</span>(<span class="st">'верно ведь, что здесь что-то есть'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">W'</span>) <span class="co"># пробелы и знаки препинания</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb241"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb241-1"><a href="#cb241-1"></a><span class="fu">str_view_all</span>(<span class="st">'верно ведь, что здесь что-то есть'</span>, <span class="st">'</span><span class="sc">\\</span><span class="st">W'</span>) <span class="co"># пробелы и знаки препинания</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ верно&lt; &gt;ведь&lt;,&gt;&lt; &gt;что&lt; &gt;здесь&lt; &gt;что&lt;-&gt;то&lt; &gt;есть</code></pre>
 </div>
@@ -2042,7 +2042,7 @@ cond1 cond2 cond3
 <li><code>{n}</code> — n раз</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb243"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb243-1"><a href=""></a><span class="fu">str_view_all</span>(dates, <span class="st">'</span><span class="sc">\\</span><span class="st">d{2}'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb243"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb243-1"><a href="#cb243-1"></a><span class="fu">str_view_all</span>(dates, <span class="st">'</span><span class="sc">\\</span><span class="st">d{2}'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;21&gt;.&lt;92&gt;.&lt;20&gt;&lt;01&gt;
 [2] │ &lt;01&gt;.&lt;04&gt;.&lt;19&gt;&lt;94&gt;
@@ -2061,15 +2061,15 @@ cond1 cond2 cond3
 </ul>
 <p>Все это автоматически обрабатывает <code>lubridate</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb245"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb245-1"><a href=""></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb245"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb245-1"><a href="#cb245-1"></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-19"</code></pre>
+<pre><code>[1] "2024-01-20"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb247"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb247-1"><a href=""></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb247"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb247-1"><a href="#cb247-1"></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-19 16:18:56 MSK"</code></pre>
+<pre><code>[1] "2024-01-20 00:10:20 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2088,38 +2088,38 @@ cond1 cond2 cond3
 <section id="операция-над-датами" class="slide level2">
 <h2>Операция над датами</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb249"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb249-1"><a href=""></a><span class="do">## текущий timestamp</span></span>
-<span id="cb249-2"><a href=""></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb249"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb249-1"><a href="#cb249-1"></a><span class="do">## текущий timestamp</span></span>
+<span id="cb249-2"><a href="#cb249-2"></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1705670336</code></pre>
+<pre><code>[1] 1705698621</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb251"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb251-1"><a href=""></a><span class="fu">year</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb251"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb251-1"><a href="#cb251-1"></a><span class="fu">year</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2024</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb253"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb253-1"><a href=""></a><span class="fu">month</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb253"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb253-1"><a href="#cb253-1"></a><span class="fu">month</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb255"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb255-1"><a href=""></a><span class="fu">day</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb255"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb255-1"><a href="#cb255-1"></a><span class="fu">day</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 19</code></pre>
+<pre><code>[1] 20</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb257"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb257-1"><a href=""></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb257"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb257-1"><a href="#cb257-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 16</code></pre>
+<pre><code>[1] 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb259"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb259-1"><a href=""></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb259"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb259-1"><a href="#cb259-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 18</code></pre>
+<pre><code>[1] 10</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb261"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb261-1"><a href=""></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb261"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb261-1"><a href="#cb261-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 56.50638</code></pre>
+<pre><code>[1] 20.59284</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb263"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb263-1"><a href=""></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb263"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb263-1"><a href="#cb263-1"></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Time difference of 170 mins</code></pre>
 </div>
@@ -2320,11 +2320,9 @@ cond1 cond2 cond3
 <p>Антон Ангельгардт</p>
 </div>
 </div>
-<div class="quarto-auto-generated-content">
-<p><img src="pics/logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img src="pics/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>WLM 2023</p>
-</div>
 </div>
 </section>
     </div>
