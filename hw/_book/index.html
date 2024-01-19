@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,7 +65,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -284,12 +283,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-contents">
     <p class="author">Антон Ангельгардт <a href="mailto:anton.angelgardt@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
-  <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
         <p class="affiliation">
             HSE UX LAB, HSE University
           </p>
       </div>
-  </div>
+    </div>
 
 <div class="quarto-title-meta">
 
@@ -315,6 +314,20 @@ ul.task-list li input[type="checkbox"] {
 <p>В этой книжке собраны домашки с курса WLM 2023.</p>
 <p>Разборы домашек опубликованы <a href="https://youtube.com/playlist?list=PL3GWEmQN96bvT5WQ45rxUgj3L2DMSJ-E3&amp;si=-C8a7c6kpfxHvhQw">здесь</a>.</p>
 <p>Записи консультаций опубликованы <a href="https://youtube.com/playlist?list=PL3GWEmQN96buzntjSglyH3gXbc2nyhyRp&amp;si=731cQXHxrNQtnrVm">здесь</a>.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Версия не является окончательной
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Книжка находится в разработке, может содержать опечатки, типографические ошибки и баги.</p>
+<p>Все трое активно исправляются.</p>
+</div>
+</div>
 
 
 </section>
@@ -592,6 +605,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -606,14 +640,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
+        typesetMath(container);
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -622,15 +652,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      typesetMath(note);
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
