@@ -299,19 +299,11 @@ window.Quarto = {
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
   <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  </ul></li>
-  <li><a href="#hw7_add" id="toc-hw7_add" class="nav-link" data-scroll-target="#hw7_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw7-6-title" id="toc-hw7-6-title" class="nav-link" data-scroll-target="#hw7-6-title">#6</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#7</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#8</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#9</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -347,9 +339,20 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw7-1-level" class="level"></p>
 <div id="hw7-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Нам вновь потребуются сгенерированные данные.</p>
+<p>Сгенерируйте 1000 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>.</p>
+<p>В качестве зерна датчика случайных чисел используйте 333 <code>set.seed(333)</code>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw7_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-<div id="hw7-1-autocheck" class="autocheck">
+</div>
+</div>
+</div>
+<div id="hw7-1-autocheck" class="autocheck" hidden="true">
 <div id="hw7-1-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -386,10 +389,10 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw7-2-level" class="level"></p>
 <div id="hw7-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>На практике мы посмотрели, что центральная предельная теорема (ЦПТ) выполняется в случае с симметричным распределением, а именно с нормальным. Однако сама по себе ЦПТ не оговаривает какие-либо специальные требования к форме исходного распределения. Покажите с помощью симуляции, что распределение выборочных средних большого числа ассиметричных случайных величин будет стремиться к нормальному распределению.</p>
+<p>Используйте матрицу <code>sim1</code>.</p>
 </div>
-<div id="hw7-2-autocheck" class="autocheck">
+<div id="hw7-2-autocheck" class="autocheck" hidden="true">
 <div id="hw7-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -426,9 +429,10 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw7-3-level" class="level"></p>
 <div id="hw7-3-task" class="task">
-<p>Текст задания.</p>
+<p>Мы также увидели на практике, что среднее арифметическое является несмещенной оценкой математического ожидания. Ну, в какой-то мере это был ожидаемый результат — распределение всё-таки у нас было симметричное. Не вполне ясно, будет ли сохранться несмещенность оценки, если наше распределение в генеральной совокупности теперь асимметрично.</p>
+<p>Покажите, что среднее арифметическое является несмещенной оценкой математического ожидания и в случае асимметричного распределения. Математическое ожидание распределения <span class="math inline">\(\chi^2(3)\)</span> равно 3: <span class="math inline">\(\mathbb E \big( \chi^2(3) \big) = 3\)</span>. Используйте матрицу <code>sim1</code>.</p>
 </div>
-<div id="hw7-3-autocheck" class="autocheck">
+<div id="hw7-3-autocheck" class="autocheck" hidden="true">
 <div id="hw7-3-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -465,9 +469,10 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="hw7-4-level" class="level"></p>
 <div id="hw7-4-task" class="task">
-<p>Текст задания.</p>
+<p>Вопрос про состоятельность также возникает в случае асимметричного распределения. Потребуется другая структура данных, чтобы проверить сохранение этого свойства оценки.</p>
+<p>Сгенерируйте 1000 выборок, объемом от 1 до 1000 наблюдений, из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>. Результаты генерации сохраните в список <code>sim2</code>.</p>
 </div>
-<div id="hw7-4-autocheck" class="autocheck">
+<div id="hw7-4-autocheck" class="autocheck" hidden="true">
 <div id="hw7-4-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -504,9 +509,9 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="hw7-5-level" class="level"></p>
 <div id="hw7-5-task" class="task">
-<p>Текст задания.</p>
+<p>На сгенерированных в предыдущем задании данных проверьте, является ли выборочная дисперсия <code>s^2</code> (<code>var()</code>) состоятельной оценкой дисперсии генеральной совокупности в случае асимметричного распределения. Дисперсия распределения <span class="math inline">\(\chi^2(3)\)</span> равна 6 — <span class="math inline">\(\mathbb D \big( \chi^2 (3) \big) = 6\)</span>.</p>
 </div>
-<div id="hw7-5-autocheck" class="autocheck">
+<div id="hw7-5-autocheck" class="autocheck" hidden="true">
 <div id="hw7-5-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -539,13 +544,14 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="hw7-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw7-6-title">#6</h3>
 <p><img id="hw7-6-level" class="level"></p>
 <div id="hw7-6-task" class="task">
-<p>Текст задания.</p>
+<p>Напишите функцию <code>ci</code> для вычисления 90% доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
+<p>Пороговыми значениями стандартного нормального распределения считайте следующие: <span class="math inline">\(z_{0.05} = -1.64\)</span>, <span class="math inline">\(z_{0.95} = 1.64\)</span>.</p>
 </div>
-<div id="hw7-6-autocheck" class="autocheck">
+<div id="hw7-6-autocheck" class="autocheck" hidden="true">
 <div id="hw7-6-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -578,13 +584,16 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">#7</h3>
 <p><img id="hw7-7-level" class="level"></p>
 <div id="hw7-7-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте визуализацию, выражающую статистически корректную интерпретацию 90% доверительного интервала для среднего. Используйте матрицу <code>sim1</code>.</li>
+<li>Рассчитайте долю доверительных интервалов симуляции <code>sim1</code>, в границы которых попало значение параметра генеральной совокупности.</li>
+</ol>
 </div>
-<div id="hw7-7-autocheck" class="autocheck">
+<div id="hw7-7-autocheck" class="autocheck" hidden="true">
 <div id="hw7-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -617,13 +626,16 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">#8</h3>
 <p><img id="hw7-8-level" class="level"></p>
 <div id="hw7-8-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте визуализацию, показывающую это графически смысл <em>capture percentage</em>. Считайте, что мы работаем с 1000-ой выборкой из симуляции <code>sim1</code> — capture percentage именно для этого доверительного интервала нас интересует.</li>
+<li>Рассчитайте capture percentage для этого доверительного интервала.</li>
+</ol>
 </div>
-<div id="hw7-8-autocheck" class="autocheck">
+<div id="hw7-8-autocheck" class="autocheck" hidden="true">
 <div id="hw7-8-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -656,13 +668,19 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">#9</h3>
 <p><img id="hw7-9-level" class="level"></p>
 <div id="hw7-9-task" class="task">
-<p>Текст задания.</p>
+<p>Согласно формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, стандартная ошибка должна уменьшаться с ростом объема выборки. Соответственно, границы доверительных интервалов также должны становиться более узкими.</p>
+<p>Используя симуляцию <code>sim2</code> покажите, что:</p>
+<ol type="a">
+<li>стандартная ошибка среднего уменьшается с ростом объема выборки</li>
+<li>доверительные интервалы становятся более узкими с ростом объема выборки</li>
+</ol>
+<p><em>Для расчета доверительного интервала используйте функцию <code>ci</code>, написанную в <a href="#hw7-6-title">задании 6</a>. Для визуализации доверительных интервало в этом задании лучше подойдет <code>geom_errorbar()</code>.</em></p>
 </div>
-<div id="hw7-9-autocheck" class="autocheck">
+<div id="hw7-9-autocheck" class="autocheck" hidden="true">
 <div id="hw7-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -695,13 +713,22 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#10</h3>
 <p><img id="hw7-10-level" class="level"></p>
 <div id="hw7-10-task" class="task">
-<p>Текст задания.</p>
+<p>Согласно всё той же формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, она должна расти с увеличением дисперсии. Соответственно, границы доверительных интервалов также должны становиться более широкими.</p>
+<ol type="a">
+<li>Сгенерируйте 200 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq(n, df = k)</code>) <span class="math inline">\(X \sim \chi^2(k)\)</span>, а параметр <span class="math inline">\(k\)</span> меняется от 1 до 200. Сохраните результаты в список <code>sim3</code>.</li>
+</ol>
+<p>Используя полученную симуляцию <code>sim3</code> покажите, что:</p>
+<ol start="2" type="a">
+<li>стандартная ошибка растет с увеличением дисперсии выборки</li>
+<li>доверительные интервалы становятся более широкими с увеличением дисперсии выборки</li>
+</ol>
+<p><em>Для расчета доверительного интервала используйте функцию <code>ci</code>, написанную в <a href="#hw7-6-title">задании 6</a>. Для визуализации доверительных интервало в этом задании лучше подойдет <code>geom_errorbar()</code>.</em></p>
 </div>
-<div id="hw7-10-autocheck" class="autocheck">
+<div id="hw7-10-autocheck" class="autocheck" hidden="true">
 <div id="hw7-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -713,204 +740,6 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 </div>
 <div class="hints-wrapper">
 <details class="hints" id="hw7-10-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-</section>
-<section id="hw7_add" class="level2">
-<h2 class="anchored" data-anchor-id="hw7_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
-<p><img id="hw7-11-level" class="level"></p>
-<div id="hw7-11-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw7-11-autocheck" class="autocheck">
-<div id="hw7-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw7-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-11')"></p>
-<div id="hw7-11-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw7-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw7-12-level" class="level"></p>
-<div id="hw7-12-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw7-12-autocheck" class="autocheck">
-<div id="hw7-12-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw7-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-12')"></p>
-<div id="hw7-12-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw7-12-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
-<p><img id="hw7-13-level" class="level"></p>
-<div id="hw7-13-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw7-13-autocheck" class="autocheck">
-<div id="hw7-13-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw7-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-13')"></p>
-<div id="hw7-13-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw7-13-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
-<p><img id="hw7-14-level" class="level"></p>
-<div id="hw7-14-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw7-14-autocheck" class="autocheck">
-<div id="hw7-14-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw7-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-14')"></p>
-<div id="hw7-14-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw7-14-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
-<p><img id="hw7-15-level" class="level"></p>
-<div id="hw7-15-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw7-15-autocheck" class="autocheck">
-<div id="hw7-15-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw7-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-15')"></p>
-<div id="hw7-15-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="hw7-15-hints">
 <summary>
 Подсказки
 </summary>

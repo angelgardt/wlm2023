@@ -7,15 +7,43 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 ```
 ## Основные задания {#hw7_main}
 
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs, eval=TRUE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
 ### #1
 
 <img id="hw7-1-level" class="level"/>
 
 ::: {#hw7-1-task .task}
-Текст задания `переменная`.
+
+Нам вновь потребуются сгенерированные данные.
+
+Сгенерируйте 1000 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (`rchisq()`) с параметром 3 (`df = 3`) --- $X \sim \chi^2(3)$.
+
+В качестве зерна датчика случайных чисел используйте 333 `set.seed(333)`.
+
+```{r, eval=TRUE}
+ggplot() +
+  geom_function(fun = dchisq, args = list(df = 3)) +
+  xlim(0, 10) +
+  labs(x = "Value", y = "Density",
+       title = "Chi-squared Distribution (df = 3)")
+```
+
 :::
 
-::: {#hw7-1-autocheck .autocheck}
+```{r}
+set.seed(333)
+sim1 <- matrix(rchisq(1000 * 100, 3), ncol = 1000)
+```
+
+::: {#hw7-1-autocheck .autocheck hidden="true"}
 ::: {#hw7-1-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -59,12 +87,22 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <img id="hw7-2-level" class="level"/>
 
 ::: {#hw7-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+На практике мы посмотрели, что центральная предельная теорема (ЦПТ) выполняется в случае с симметричным распределением, а именно с нормальным. Однако сама по себе ЦПТ не оговаривает какие-либо специальные требования к форме исходного распределения. Покажите с помощью симуляции, что распределение выборочных средних большого числа ассиметричных случайных величин будет стремиться к нормальному распределению.
+
+Используйте матрицу `sim1`.
+
 :::
 
-::: {#hw7-2-autocheck .autocheck}
+```{r}
+sim1 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram()
+```
+
+::: {#hw7-2-autocheck .autocheck hidden="true"}
 ::: {#hw7-2-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -108,10 +146,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-3-level" class="level"/>
 
 ::: {#hw7-3-task .task}
-Текст задания.
+
+Мы также увидели на практике, что среднее арифметическое является несмещенной оценкой математического ожидания. Ну, в какой-то мере это был ожидаемый результат --- распределение всё-таки у нас было симметричное. Не вполне ясно, будет ли сохранться несмещенность оценки, если наше распределение в генеральной совокупности теперь асимметрично.
+
+Покажите, что среднее арифметическое является несмещенной оценкой математического ожидания и в случае асимметричного распределения. Математическое ожидание распределения $\chi^2(3)$ равно 3: $\mathbb E \big( \chi^2(3) \big) = 3$. Используйте матрицу `sim1`.
+
 :::
 
-::: {#hw7-3-autocheck .autocheck}
+```{r}
+sim1 %>% 
+  apply(2, mean) %>% 
+  tibble(x = .) %>% 
+  ggplot(aes(x)) +
+  geom_histogram() +
+  geom_vline(xintercept = 3, color = "red") +
+  geom_vline(aes(xintercept = mean(x)))
+```
+
+::: {#hw7-3-autocheck .autocheck hidden="true"}
 ::: {#hw7-3-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -155,10 +207,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-4-level" class="level"/>
 
 ::: {#hw7-4-task .task}
-Текст задания.
+
+Вопрос про состоятельность также возникает в случае асимметричного распределения. Потребуется другая структура данных, чтобы проверить сохранение этого свойства оценки.
+
+Сгенерируйте 1000 выборок, объемом от 1 до 1000 наблюдений, из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (`rchisq()`) с параметром 3 (`df = 3`) --- $X \sim \chi^2(3)$. Результаты генерации сохраните в список `sim2`.
+
 :::
 
-::: {#hw7-4-autocheck .autocheck}
+```{r}
+set.seed(555)
+sim2 <- list()
+
+for (i in 1:1000) {
+  sim2[[i]] <- rchisq(i, 3)
+}
+
+```
+
+::: {#hw7-4-autocheck .autocheck hidden="true"}
 ::: {#hw7-4-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -202,10 +268,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-5-level" class="level"/>
 
 ::: {#hw7-5-task .task}
-Текст задания.
+
+На сгенерированных в предыдущем задании данных проверьте, является ли выборочная дисперсия `s^2` (`var()`) состоятельной оценкой дисперсии генеральной совокупности в случае асимметричного распределения. Дисперсия распределения $\chi^2(3)$ равна 6 --- $\mathbb D \big( \chi^2 (3) \big) = 6$.
+
 :::
 
-::: {#hw7-5-autocheck .autocheck}
+```{r}
+sim2 %>% 
+  map(var) %>% 
+  unlist() %>% 
+  tibble(x = 1:1000,
+         y = .) %>% 
+  ggplot(aes(x, y)) +
+  geom_line() +
+  geom_hline(yintercept = 2 * 3, color = "red")
+```
+
+::: {#hw7-5-autocheck .autocheck hidden="true"}
 ::: {#hw7-5-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -244,15 +323,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #6
+### #6 {#hw7-6-title}
 
 <img id="hw7-6-level" class="level"/>
 
 ::: {#hw7-6-task .task}
-Текст задания.
+
+Напишите функцию `ci` для вычисления 90% доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).
+
+Пороговыми значениями стандартного нормального распределения считайте следующие: $z_{0.05} = -1.64$, $z_{0.95} = 1.64$.
+
 :::
 
-::: {#hw7-6-autocheck .autocheck}
+```{r}
+ci <- function(x) {se <- sd(x) / sqrt(length(x)); return(c(lower = mean(x) - 1.64 * se, 
+                                                           mean = mean(x), 
+                                                           upper = mean(x) + 1.64 * se))}
+ci(sim1[, 1])
+```
+
+::: {#hw7-6-autocheck .autocheck hidden="true"}
 ::: {#hw7-6-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -296,10 +386,30 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-7-level" class="level"/>
 
 ::: {#hw7-7-task .task}
-Текст задания.
+
+a. Постройте визуализацию, выражающую статистически корректную интерпретацию 90% доверительного интервала для среднего. Используйте матрицу `sim1`.
+a. Рассчитайте долю доверительных интервалов симуляции `sim1`, в границы которых попало значение параметра генеральной совокупности.
+
 :::
 
-::: {#hw7-7-autocheck .autocheck}
+```{r}
+sim1 %>% 
+  apply(2, ci) %>% 
+  t() %>% 
+  as_tibble() %>% 
+  mutate(sample = 1:1000,
+         contains = ifelse(3 > lower & 3 < upper, TRUE, FALSE)) %>% # pull(contains) %>% mean()
+  ggplot(aes(x = sample,
+             y = mean,
+             ymin = lower,
+             ymax = upper,
+             color = contains)) +
+  geom_pointrange() +
+  geom_hline(yintercept = 3) +
+  coord_flip()
+```
+
+::: {#hw7-7-autocheck .autocheck hidden="true"}
 ::: {#hw7-7-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -343,10 +453,30 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-8-level" class="level"/>
 
 ::: {#hw7-8-task .task}
-Текст задания.
+
+a. Постройте визуализацию, показывающую это графически смысл _capture percentage_. Считайте, что мы работаем с 1000-ой выборкой из симуляции `sim1` --- capture percentage именно для этого доверительного интервала нас интересует.
+a. Рассчитайте capture percentage для этого доверительного интервала.
+
 :::
 
-::: {#hw7-8-autocheck .autocheck}
+```{r}
+sim1 %>% 
+  apply(2, ci) %>% 
+  t() %>% 
+  as_tibble() %>% 
+  mutate(sample = 1:1000,
+         capture = ifelse(mean > lower[1000] & mean < upper[1000], TRUE, FALSE)) %>% 
+  ggplot(aes(x = sample,
+             y = mean,
+             ymin = lower,
+             ymax = upper,
+             color = capture)) +
+  geom_pointrange() +
+  geom_hline(yintercept = 3) +
+  coord_flip()
+```
+
+::: {#hw7-8-autocheck .autocheck hidden="true"}
 ::: {#hw7-8-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -390,10 +520,44 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-9-level" class="level"/>
 
 ::: {#hw7-9-task .task}
-Текст задания.
+
+Согласно формуле расчета стандартной ошибки среднего $\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}$, стандартная ошибка должна уменьшаться с ростом объема выборки. Соответственно, границы доверительных интервалов также должны становиться более узкими.
+
+Используя симуляцию `sim2` покажите, что:
+
+a. стандартная ошибка среднего уменьшается с ростом объема выборки
+a. доверительные интервалы становятся более узкими с ростом объема выборки
+
+_Для расчета доверительного интервала используйте функцию `ci`, написанную в [задании 6](#hw7-6-title). Для визуализации доверительных интервало в этом задании лучше подойдет `geom_errorbar()`._
+
 :::
 
-::: {#hw7-9-autocheck .autocheck}
+```{r}
+sim2 %>% 
+  map(function(x) sd(x)/sqrt(length(x))) %>% 
+  unlist() %>% 
+  tibble(x = 1:1000,
+         y = .) %>% 
+  ggplot(aes(x = x,
+             y = y)) +
+  geom_point()
+
+sim2 %>% 
+  map(ci) %>% 
+  as_tibble(.name_repair = "minimal") %>% 
+  set_names(1:1000) %>% 
+  mutate(a = c("lower", "mean", "upper")) %>% 
+  pivot_longer(cols = -a) %>% 
+  pivot_wider(names_from = a, values_from = value) %>% 
+  mutate(name = as.numeric(name)) %>% 
+  ggplot(aes(x = name,
+             y = mean,
+             ymin = lower,
+             ymax = upper)) +
+  geom_errorbar()
+```
+
+::: {#hw7-9-autocheck .autocheck hidden="true"}
 ::: {#hw7-9-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -437,10 +601,57 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw7-10-level" class="level"/>
 
 ::: {#hw7-10-task .task}
-Текст задания.
+
+Согласно всё той же формуле расчета стандартной ошибки среднего $\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}$, она должна расти с увеличением дисперсии. Соответственно, границы доверительных интервалов также должны становиться более широкими.
+
+a. Сгенерируйте 200 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (`rchisq(n, df = k)`) $X \sim \chi^2(k)$, а параметр $k$ меняется от 1 до 200. Сохраните результаты в список `sim3`.
+
+Используя полученную симуляцию `sim3` покажите, что:
+
+
+b. стандартная ошибка растет с увеличением дисперсии выборки
+c. доверительные интервалы становятся более широкими с увеличением дисперсии выборки
+
+_Для расчета доверительного интервала используйте функцию `ci`, написанную в [задании 6](#hw7-6-title). Для визуализации доверительных интервало в этом задании лучше подойдет `geom_errorbar()`._
+
 :::
 
-::: {#hw7-10-autocheck .autocheck}
+```{r}
+
+set.seed(555)
+sim3 <- list()
+
+for (i in 1:200) {
+  sim3[[i]] <- rchisq(100, i)
+}
+
+
+sim3 %>% 
+  map(function(x) sd(x)/sqrt(length(x))) %>% 
+  unlist() %>% 
+  tibble(x = 1:200,
+         y = .) %>% 
+  ggplot(aes(x = x,
+             y = y)) +
+  geom_point()
+
+sim3 %>% 
+  map(ci) %>% 
+  as_tibble(.name_repair = "minimal") %>% 
+  set_names(1:200) %>% 
+  mutate(a = c("lower", "mean", "upper")) %>% 
+  pivot_longer(cols = -a) %>% 
+  pivot_wider(names_from = a, values_from = value) %>% 
+  mutate(name = as.numeric(name)) %>% 
+  ggplot(aes(x = name,
+             y = mean,
+             ymin = lower,
+             ymax = upper)) +
+  geom_errorbar()
+
+```
+
+::: {#hw7-10-autocheck .autocheck hidden="true"}
 ::: {#hw7-10-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -479,242 +690,6 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-## Дополнительные задания {#hw7_add}
-
-### #1
-
-<img id="hw7-11-level" class="level"/>
-
-::: {#hw7-11-task .task}
-Текст задания.
-:::
-
-::: {#hw7-11-autocheck .autocheck}
-::: {#hw7-11-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="hw7-11" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-11')">
-
-::: {#hw7-11-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="hw7-11-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #2
-
-<img id="hw7-12-level" class="level"/>
-
-::: {#hw7-12-task .task}
-Текст задания.
-:::
-
-::: {#hw7-12-autocheck .autocheck}
-::: {#hw7-12-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="hw7-12" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-12')">
-
-::: {#hw7-12-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="hw7-12-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #3
-
-<img id="hw7-13-level" class="level"/>
-
-::: {#hw7-13-task .task}
-Текст задания.
-:::
-
-::: {#hw7-13-autocheck .autocheck}
-::: {#hw7-13-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="hw7-13" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-13')">
-
-::: {#hw7-13-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="hw7-13-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #4
-
-<img id="hw7-14-level" class="level"/>
-
-::: {#hw7-14-task .task}
-Текст задания.
-:::
-
-::: {#hw7-14-autocheck .autocheck}
-::: {#hw7-14-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="hw7-14" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-14')">
-
-::: {#hw7-14-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="hw7-14-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
-
-### #5
-
-<img id="hw7-15-level" class="level"/>
-
-::: {#hw7-15-task .task}
-Текст задания.
-:::
-
-::: {#hw7-15-autocheck .autocheck}
-::: {#hw7-15-ir .input-requirements}
-Описание формата инпута.
-:::
-
-<input class="autocheck-input" type="text" id="hw7-15" placeholder="Введите ответ…">
-
-<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-15')">
-
-::: {#hw7-15-fb .autocheck-feedback}
-:::
-:::
-
-::: hints-wrapper
-<details class="hints" id="hw7-15-hints">
-
-<summary>Подсказки</summary>
-
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
-:::
 
 ```{=html}
 <!--- CHANGE hw7 TO hw<n> IN THE LINES BELOW--->
