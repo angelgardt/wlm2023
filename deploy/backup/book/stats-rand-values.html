@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,7 +65,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -80,33 +79,6 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -942,12 +914,12 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{x - \mu}{\sigma}\bi
 \]</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-norm" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-norm" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="stats-rand-values_files/figure-html/fig-norm-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Рисунок&nbsp;23.1: Нормальное распределение
 </figcaption>
 </figure>
@@ -957,12 +929,12 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{x - \mu}{\sigma}\bi
 <p>Задавая различные параметры распределения (математическое ожидание и дисперсию), мы можем получать разные нормальные распределения (<a href="#fig-norms" class="quarto-xref">Рисунок&nbsp;<span>23.2</span></a>).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-norms" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-norms" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-norms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="stats-rand-values_files/figure-html/fig-norms-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-norms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-norms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Рисунок&nbsp;23.2: Нормальное распределение c разными параметрами
 </figcaption>
 </figure>
@@ -973,12 +945,12 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{x - \mu}{\sigma}\bi
 <h4 data-number="23.4.6.1" class="anchored" data-anchor-id="stats-rand-values-stnorm"><span class="header-section-number">23.4.6.1</span> Стандартное нормальное распределение</h4>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-stnorm" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-stnorm" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-stnorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="stats-rand-values_files/figure-html/fig-stnorm-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stnorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-stnorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Рисунок&nbsp;23.3: Стандартное нормальное распределение
 </figcaption>
 </figure>
@@ -1270,6 +1242,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1284,14 +1277,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
+        typesetMath(container);
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1300,15 +1289,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      typesetMath(note);
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {

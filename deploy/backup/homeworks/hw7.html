@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.510">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,7 +65,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -80,33 +79,6 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -340,8 +312,8 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <p><img id="hw7-1-level" class="level"></p>
 <div id="hw7-1-task" class="task">
 <p>Нам вновь потребуются сгенерированные данные.</p>
-<p>Сгенерируйте 1000 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>.</p>
-<p>В качестве зерна датчика случайных чисел используйте 333 <code>set.seed(333)</code>.</p>
+<p>Сгенерируйте 1000 независимых выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>.</p>
+<p>В качестве зерна датчика случайных чисел используйте 333 (<code>set.seed(333)</code>).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -367,21 +339,13 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Требуется сгенерировать матрицу, размером 100×1000, в каждой колонке которой будут содержаться наблюдения одной выборки.</li>
+<li>Так как выборки независимы, сгенерировать 1000 выборок по 100 наблюдений это то же самое, что сгенерировать одну большую выборку из 100&nbsp;000 наблюдений, а затем сложить в матрицу по колонкам.</li>
+<li>Сгенерировать выборку поможет функция <code>rchisq()</code>, которая работает аналогично хорошо знакомой <code>rnorm()</code>, только принимает в себя один параметр <code>df</code> (помимо количества наблюдений, которые нужно сгенерировать).</li>
+<li>По заданию <code>df = 3</code>, именно такое значение параметра и нужно передать в функцию.</li>
+<li>Сложить сгенерированный вектор в матрицу поможет функция <code>matrix()</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -407,21 +371,11 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Сгенерированная в предыдущем задании матрица содержит 1000 выборок, на каждой из которых необходимо рассчитать среднее значение.</li>
+<li>Для того, чтобы выполнить какую-либо функцию на каждой из колонок, можно воспользоваться функцией <code>apply()</code>.</li>
+<li>Функция <code>apply()</code> вернет вектор из средних значений, который дальше необходимо визуализировать средствами пакета <code>ggplot2</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -430,7 +384,8 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <p><img id="hw7-3-level" class="level"></p>
 <div id="hw7-3-task" class="task">
 <p>Мы также увидели на практике, что среднее арифметическое является несмещенной оценкой математического ожидания. Ну, в какой-то мере это был ожидаемый результат — распределение всё-таки у нас было симметричное. Не вполне ясно, будет ли сохранться несмещенность оценки, если наше распределение в генеральной совокупности теперь асимметрично.</p>
-<p>Покажите, что среднее арифметическое является несмещенной оценкой математического ожидания и в случае асимметричного распределения. Математическое ожидание распределения <span class="math inline">\(\chi^2(3)\)</span> равно 3: <span class="math inline">\(\mathbb E \big( \chi^2(3) \big) = 3\)</span>. Используйте матрицу <code>sim1</code>.</p>
+<p>Проверьте, является ли среднее арифметическое несмещенной оценкой математического ожидания в случае асимметричного распределения. Математическое ожидание распределения <span class="math inline">\(\chi^2(3)\)</span> равно 3: <span class="math inline">\(\mathbb E \big( \chi^2(3) \big) = 3\)</span>. Используйте матрицу <code>sim1</code>.</p>
+<p>Сделайте вывод о (не)смещенности оценки.</p>
 </div>
 <div id="hw7-3-autocheck" class="autocheck" hidden="true">
 <div id="hw7-3-ir" class="input-requirements">
@@ -447,21 +402,13 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>За основу возьмите график из предыдущего задания — ровно он нам и нужен.</li>
+<li>На график необходимо добавить две линии: одна будет обозначать генеральное среднее, другая — среднее выборочных средних.</li>
+<li>Обе линии визализируются с помощью <code>geom_vline()</code>, однако в первом случае функция <code>aes()</code> не используется, а во втором — используется, так как среднее средних рассчитается на основе данных.</li>
+<li>Генеральное среднее в случае распределение хи-квадрат будет совпадать с параметром <code>df</code>.</li>
+<li>Если линии находятся близко друг к другу, то оценку можно считать несмещенной. Если оценка значительно отклоняется от параметра генеральной совокупности, то оценка является смещенной.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -487,21 +434,11 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>В случае проверки оценки на состоятельность необходимы выборки разного объема, поэтому сложить их в матрицу будет сложнее — проще использовать список.</li>
+<li>Создайте пустой список <code>sim2</code>, а затем с помощью цикла сложите в него выборки, объемом от 1 до 1000 наблюдений, из того же распределения, что и в первом задании.</li>
+<li>В функции <code>rchisq()</code> один из параметров теперь будет меняться — в качестве этого параметра необходимо передать итератор (обычно <code>i</code>) из условия цикла.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -526,21 +463,13 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>На каждом элементе списка <code>sim2</code> необходимо рассчитать дисперсию с помощью функции <code>var()</code>.</li>
+<li>Прогнать функцию по всем элементам списка поможет функция <code>map()</code>.</li>
+<li>Результатом функции <code>map()</code> является список, который необходимо прекратить в вектор, чтобы с ним дальше было удобно работать на визуализации. Здесь пригодится функция <code>unlist()</code>.</li>
+<li>При построении визуализации нужно отобразить, как меняется оценка дисперсии с ростом выборки, а также добавить горзионтальную линию, обозначающую дисперсию генеральной совокупности, чтобы из графика было видно, куда сходится оценка.</li>
+<li>Дисперсия генеральной совокупности в случае распределения хи-квадрат равна <span class="math inline">\(2 \times \text{df}\)</span>, то есть в нашем случае 6.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -551,9 +480,9 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <p>Напишите функцию <code>ci</code> для вычисления 90% доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
 <p>Пороговыми значениями стандартного нормального распределения считайте следующие: <span class="math inline">\(z_{0.05} = -1.64\)</span>, <span class="math inline">\(z_{0.95} = 1.64\)</span>.</p>
 </div>
-<div id="hw7-6-autocheck" class="autocheck" hidden="true">
+<div id="hw7-6-autocheck" class="autocheck">
 <div id="hw7-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите доверительный интервал для среднего первой выборки из симуляции <code>sim1</code> в формате <code>lower,upper</code>. Значения округлите <em>до сотых</em>. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw7-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-6')"></p>
@@ -566,21 +495,12 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Логика расчета границ доверительного интервала всегда одна и та же — <span class="math inline">\([\text{se}_X \cdot z_q + \bar X, \text{se}_X \cdot z_{1-q} + \bar X]\)</span>.</li>
+<li>Если в случае 95% доверительного интервала <span class="math inline">\(z_q = -1.96\)</span>, а <span class="math inline">\(z_{1-q} = 1.96\)</span>, то в случае 90% доверительного интервала — <span class="math inline">\(z_q = -1.64\)</span>, а <span class="math inline">\(z_{1-q} = 1.64\)</span>.</li>
+<li>Таким образом, можно просто изменить значения, умножаемые на стандартрую ошибку, в коде из практики.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до сотых) и формат ввода (значения разделяются запятой, десятичный разделитель — точка).</li>
+</ul>
 </details>
 </div>
 </section>
@@ -593,9 +513,9 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <li>Рассчитайте долю доверительных интервалов симуляции <code>sim1</code>, в границы которых попало значение параметра генеральной совокупности.</li>
 </ol>
 </div>
-<div id="hw7-7-autocheck" class="autocheck" hidden="true">
+<div id="hw7-7-autocheck" class="autocheck">
 <div id="hw7-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите значение, получившееся в пункте <em>b</em>. Значение округлите до <em>тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw7-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-7')"></p>
@@ -608,21 +528,15 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы визуализировать статистически корректную интерпретацию доверительного интервала, необходимо отобразить все доверительные интервалы, полученные в симуляции (1000 штук), и генеральное среднее (удобнее всего в виде линии).</li>
+<li>Цветом необходимо обозначить, попало ли генеральное среднее в конкретный доверительный интервал, или нет. Для этого в данных нужно создать колонку (например, логического типа), в которой для каждого доверительного интервала будет указано, принадлежит ли ему значение среднего генеральной совокупности, или не принадлежит.</li>
+<li>По этой колонке можно рассчитать и долю доверительных интервалов, содержащих генеральное среднее, с помощью функции <code>mean()</code> (если колонка была типа <code>logical</code>).</li>
+<li>Сами данные для визуализации получаются применением функции <code>ci</code>, созданной в предыдущем задании, к матрице <code>sim1</code> с помощью функции <code>apply()</code>.</li>
+<li>Результатом работы функции <code>apply()</code> будет матрица 3×1000, которую необходимо привести к датафрейму (тибблу), предварительно транспонировав фунцией <code>t()</code> — так будет удобнее с ней работать.</li>
+<li>Также для удобства визуализации можно создать в получившемся тиббле колонку с номером выборки в симуляции.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до тысячных) и формат ввода (десятичный разделитель — точка).</li>
+</ul>
 </details>
 </div>
 </section>
@@ -631,13 +545,13 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <p><img id="hw7-8-level" class="level"></p>
 <div id="hw7-8-task" class="task">
 <ol type="a">
-<li>Постройте визуализацию, показывающую это графически смысл <em>capture percentage</em>. Считайте, что мы работаем с 1000-ой выборкой из симуляции <code>sim1</code> — capture percentage именно для этого доверительного интервала нас интересует.</li>
+<li>Постройте визуализацию, показывающую графически смысл <em>capture percentage</em>. Считайте, что мы работаем с 1000-ой выборкой из симуляции <code>sim1</code> — capture percentage именно для этого доверительного интервала нас интересует.</li>
 <li>Рассчитайте capture percentage для этого доверительного интервала.</li>
 </ol>
 </div>
-<div id="hw7-8-autocheck" class="autocheck" hidden="true">
+<div id="hw7-8-autocheck" class="autocheck">
 <div id="hw7-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите значение, получившееся в пункте <em>b</em>. Значение округлите до <em>тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw7-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-8')"></p>
@@ -650,21 +564,16 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы визуализировать capture percentage, аналогично предыдущему заданию, необходимо отобразить все доверительные интервалы, полученные в симуляции (1000 штук). Генеральное среднее также можно отобразить (удобнее всего в виде линии).</li>
+<li>Цветом необходимо обозначить те средние (с доверительными интервалами), которые попали в доверительный интервал для какого-либо отдельного среднего.</li>
+<li>АНалогично предыдущему заданию, необходимо создать колонку в данных визуализации. По заданию мы работаем с доверительным интервалом 1000-ой выборки симуляции, поэтому при создании колонки (например, логического типа) необходимо проверить, попадают ли средние все выборок в доверительных интервал среднего 1000-ой выборки.</li>
+<li>По этой колонке можно рассчитать и capture percentage рассматриваемого доверительного интервала, с помощью функции <code>mean()</code> (если колонка была типа <code>logical</code>).</li>
+<li>Сами данные для визуализации получаются применением функции <code>ci</code>, созданной в предыдущем задании, к матрице <code>sim1</code> с помощью функции <code>apply()</code>, то есть абсолютно аналогично предыдущему заданию.</li>
+<li>Результатом работы функции <code>apply()</code> будет матрица 3×1000, которую необходимо привести к датафрейму (тибблу), предварительно транспонировав фунцией <code>t()</code> — так будет удобнее с ней работать.</li>
+<li>Также для удобства визуализации можно создать в получившемся тиббле колонку с номером выборки в симуляции.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до тысячных) и формат ввода (десятичный разделитель — точка).</li>
+</ul>
 </details>
 </div>
 </section>
@@ -673,7 +582,7 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <p><img id="hw7-9-level" class="level"></p>
 <div id="hw7-9-task" class="task">
 <p>Согласно формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, стандартная ошибка должна уменьшаться с ростом объема выборки. Соответственно, границы доверительных интервалов также должны становиться более узкими.</p>
-<p>Используя симуляцию <code>sim2</code> покажите, что:</p>
+<p>Используя симуляцию <code>sim2</code> покажите графически, что:</p>
 <ol type="a">
 <li>стандартная ошибка среднего уменьшается с ростом объема выборки</li>
 <li>доверительные интервалы становятся более узкими с ростом объема выборки</li>
@@ -695,21 +604,13 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы отобразить искомые закономерности, нам необходимо построить графики, на которых по оси <code>x</code> будет располагаться объем выборки (он же будет её порядковым номером — такова структура списка <code>sim2</code>), а по оси <code>y</code> — стандартная ошибка или доверительный интервал.</li>
+<li>Аналогично симуляции для проверки состоятельности оценки, необходимо выполнить функции <code>se()</code> и <code>ci()</code> соответственно на элементах списка <code>sim2</code>. Вновь пригодится функция <code>map()</code>.</li>
+<li>В случае с функцией <code>se()</code> можно написать такую функцию отдельно, а можно воспользоваться анонимными функциями.</li>
+<li>Результат работы функции <code>map()</code> необходимо преобразовать к датафрейму (тибблу) — это будет данными для визуализации.</li>
+<li>Далее построить соответствующие графики — для стандартной ошибки подойдет <code>geom_point()</code>, а для доверительных интервалов — <code>geom_errorbar()</code>, так как он не отображает среднее и визуализация будет менее нагружена.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -719,9 +620,9 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <div id="hw7-10-task" class="task">
 <p>Согласно всё той же формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, она должна расти с увеличением дисперсии. Соответственно, границы доверительных интервалов также должны становиться более широкими.</p>
 <ol type="a">
-<li>Сгенерируйте 200 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq(n, df = k)</code>) <span class="math inline">\(X \sim \chi^2(k)\)</span>, а параметр <span class="math inline">\(k\)</span> меняется от 1 до 200. Сохраните результаты в список <code>sim3</code>.</li>
+<li>Сгенерируйте 200 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq(n, df = k)</code>) <span class="math inline">\(X \sim \chi^2(k)\)</span>, а параметр <span class="math inline">\(k\)</span> меняется от 1 до 200. Сохраните результаты в список <code>sim3</code>. В качестве зерна датчика случайных чисел используйте значение 555 (<code>set.seed(555)</code>).</li>
 </ol>
-<p>Используя полученную симуляцию <code>sim3</code> покажите, что:</p>
+<p>Используя полученную симуляцию <code>sim3</code> покажите графически, что:</p>
 <ol start="2" type="a">
 <li>стандартная ошибка растет с увеличением дисперсии выборки</li>
 <li>доверительные интервалы становятся более широкими с увеличением дисперсии выборки</li>
@@ -743,21 +644,14 @@ REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы отобразить искомые закономерности, нам необходимо построить графики, на которых по оси <code>x</code> будет располагаться значение параметра распределения хи-квадрат (он же будет её порядковым номером, а также будет связан с дисперсией — таково устройство распределения хи-квадрат), а по оси <code>y</code> — стандартная ошибка или доверительный интервал.</li>
+<li>Симуляция <code>sim3</code> для этого задания создается аналогично симуляции <code>sim2</code>, только теперь варьироваться будет не количество наблюдений, а параметр распределения (<code>df</code>) — именно ему нужно передать итератора (обычно <code>i</code>) из условия цикла.</li>
+<li>Далее необходимо выполнить функции <code>se()</code> и <code>ci()</code> соответственно на элементах списка <code>sim3</code>. Вновь пригодится функция <code>map()</code>.</li>
+<li>В случае с функцией <code>se()</code> можно написать такую функцию отдельно, а можно воспользоваться анонимными функциями.</li>
+<li>Результат работы функции <code>map()</code> необходимо преобразовать к датафрейму (тибблу) аналогично предыдущему заданию — это будет данными для визуализации.</li>
+<li>Далее построить соответствующие графики — для стандартной ошибки подойдет <code>geom_point()</code>, а для доверительных интервалов — <code>geom_errorbar()</code>, так как он не отображает среднее и визуализация будет менее нагружена.</li>
+</ul>
 </details>
 </div>
 <!--- CHANGE hw7 TO hw<n> IN THE LINES BELOW--->
@@ -1041,6 +935,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1055,14 +970,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
+        typesetMath(container);
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1071,15 +982,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      typesetMath(note);
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
