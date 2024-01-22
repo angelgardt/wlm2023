@@ -46,7 +46,6 @@
 
 <!--- Distributions --->
 \newcommand{\norm}{\mathcal{N}}
-\newcommand{\iid}{\overset{\text{iid}}{\thicksim}}
 
 <!--- Other --->
 \newcommand{\def}{\overset{\text{def}}{=}}
@@ -55,3 +54,9 @@
 <!--- Trig --->
 \usepackage{amsmath}
 \DeclareMathOperator\artanh{artanh}
+
+<!--- Stats --->
+\newcommand{\median}{\text{median}}
+\newcommand{\mean}{\mathbb{M}}
+\newcommand{\skew}{\mathrm{skew}}
+\newcommand{\kurt}{\mathrm{kurt}}
