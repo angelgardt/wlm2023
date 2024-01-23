@@ -135,10 +135,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../book/index.html"> 
-<span class="menu-text">Книга</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./../lectures/index.html"> 
 <span class="menu-text">Лекции</span></a>
   </li>  
@@ -814,8 +810,8 @@ cond1 cond2 cond3
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.3     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
 ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
 ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
 ✔ purrr     1.0.2     
@@ -1899,8 +1895,8 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb194"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "cZshv" "5ijhp" "oHueG" "1e5Fd" "nP4K9" "CvqtQ" "TtrYc" "4SlDj" "23FBw"
-[10] "QdP19"</code></pre>
+<pre><code> [1] "dFGJt" "OHg01" "AwwSv" "nib6P" "2GZoL" "pzs4C" "bjal1" "Mrdf2" "5R5IC"
+[10] "sWu1q"</code></pre>
 </div>
 </div>
 </section>
@@ -1956,16 +1952,16 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 4
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
- 1     1 A         1     3
- 2     1 A         2     4
+ 1     1 A         1     2
+ 2     1 A         2     1
  3     1 A         3     2
- 4     1 A         4     5
+ 4     1 A         4     2
  5     1 A         5     3
- 6     1 B         1     5
- 7     1 B         2     2
- 8     1 B         3     2
- 9     1 B         4     5
-10     1 B         5     1
+ 6     1 B         1     2
+ 7     1 B         2     1
+ 8     1 B         3     3
+ 9     1 B         4     2
+10     1 B         5     5
 # ℹ 140 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb212"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb212-1"><a href="#cb212-1" aria-hidden="true" tabindex="-1"></a>ds_1 <span class="sc">%&gt;%</span> </span>
@@ -1975,16 +1971,16 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
- 1     1 A_1            3
- 2     1 A_2            4
+ 1     1 A_1            2
+ 2     1 A_2            1
  3     1 A_3            2
- 4     1 A_4            5
+ 4     1 A_4            2
  5     1 A_5            3
- 6     1 B_1            5
- 7     1 B_2            2
- 8     1 B_3            2
- 9     1 B_4            5
-10     1 B_5            1
+ 6     1 B_1            2
+ 7     1 B_2            1
+ 8     1 B_3            3
+ 9     1 B_4            2
+10     1 B_5            5
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -2008,16 +2004,16 @@ lgl (1): var3
 <pre><code># A tibble: 150 × 4
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1     1 A     1         3
- 2     1 A     2         4
+ 1     1 A     1         2
+ 2     1 A     2         1
  3     1 A     3         2
- 4     1 A     4         5
+ 4     1 A     4         2
  5     1 A     5         3
- 6     1 B     1         5
- 7     1 B     2         2
- 8     1 B     3         2
- 9     1 B     4         5
-10     1 B     5         1
+ 6     1 B     1         2
+ 7     1 B     2         1
+ 8     1 B     3         3
+ 9     1 B     4         2
+10     1 B     5         5
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -2131,8 +2127,8 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb242"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb242-1"><a href="#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_view_all</span>(dates, <span class="at">pattern =</span> <span class="st">"."</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: `str_view()` was deprecated in stringr 1.5.0.
-ℹ Please use `str_view_all()` instead.</code></pre>
+<pre><code>Warning: `str_view_all()` was deprecated in stringr 1.5.0.
+ℹ Please use `str_view()` instead.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] │ &lt;2&gt;&lt;1&gt;&lt;.&gt;&lt;9&gt;&lt;2&gt;&lt;.&gt;&lt;2&gt;&lt;0&gt;&lt;0&gt;&lt;1&gt;
@@ -2252,13 +2248,13 @@ lgl (1): var3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb265"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb265-1"><a href="#cb265-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-20"</code></pre>
+<pre><code>[1] "2024-01-24"</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb267"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb267-1"><a href="#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-01-20 00:07:43 MSK"</code></pre>
+<pre><code>[1] "2024-01-24 01:20:06 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2281,7 +2277,7 @@ lgl (1): var3
 <div class="sourceCode cell-code" id="cb269"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb269-1"><a href="#cb269-1" aria-hidden="true" tabindex="-1"></a><span class="do">## текущий timestamp</span></span>
 <span id="cb269-2"><a href="#cb269-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1705698463</code></pre>
+<pre><code>[1] 1706048407</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -2295,19 +2291,19 @@ lgl (1): var3
 </div>
 <div class="sourceCode cell-code" id="cb275"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb275-1"><a href="#cb275-1" aria-hidden="true" tabindex="-1"></a><span class="fu">day</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20</code></pre>
+<pre><code>[1] 24</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb277"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb277-1"><a href="#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
+<pre><code>[1] 1</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb279"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb279-1"><a href="#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7</code></pre>
+<pre><code>[1] 20</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb281"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb281-1"><a href="#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 43.38211</code></pre>
+<pre><code>[1] 6.578378</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb283"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb283-1"><a href="#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2534,6 +2530,11 @@ dbl (2): x, y
 <section id="violin-plot" class="level3" data-number="2.44.9">
 <h3 data-number="2.44.9" class="anchored" data-anchor-id="violin-plot"><span class="header-section-number">2.44.9</span> Violin plot</h3>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Computation failed in `stat_summary()`
+Caused by error in `fun.data()`:
+! The package "Hmisc" is required.</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2546,6 +2547,11 @@ dbl (2): x, y
 <section id="график-интервальных-оценок-error-bar" class="level3" data-number="2.44.10">
 <h3 data-number="2.44.10" class="anchored" data-anchor-id="график-интервальных-оценок-error-bar"><span class="header-section-number">2.44.10</span> График интервальных оценок (Error bar)</h3>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Computation failed in `stat_summary()`
+Caused by error in `fun.data()`:
+! The package "Hmisc" is required.</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

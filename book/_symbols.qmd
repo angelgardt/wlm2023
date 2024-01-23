@@ -1,0 +1,62 @@
+<!--- {{< include _symbols.qmd >}} --->
+
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{amsmath, amsfonts}
+
+
+\newcommand{\const}{\text{const}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+<!--- Logic --->
+\newcommand{\xor}{\,\text{XOR}\,}
+
+<!--- Number sets--->
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\setNo}{\mathbb{N}_{0}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setC}{\mathbb{C}}
+
+<!--- Linear Algebra --->
+\newcommand{\vm}[1]{\mathbf{#1}} <!--- vectors and matrices --->
+
+<!--- Probability, Random Vars --->
+\newcommand{\Falg}{\mathcal{F}}
+\newcommand{\prob}{\mathbb{P}}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\disp}{\mathbb{D}}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\cor}{\text{cor}}
+\newcommand{\se}{\text{se}}
+\newcommand{\sd}{\text{sd}}
+\newcommand{\iid}{\text{i.i.d}}
+
+\newsavebox{\MBox}
+\newcommand{\Cline}[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
+
+<!--- Distributions --->
+\newcommand{\norm}{\mathcal{N}}
+
+<!--- Other --->
+\newcommand{\def}{\overset{\text{def}}{=}}
+\newcommand{\sgn}{\text{sgn}}
+
+<!--- Trig --->
+\usepackage{amsmath}
+\DeclareMathOperator\artanh{artanh}
+
+<!--- Stats --->
+\newcommand{\median}{\text{median}}
+\newcommand{\mean}{\mathbb{M}}
+\newcommand{\skew}{\mathrm{skew}}
+\newcommand{\kurt}{\mathrm{kurt}}
