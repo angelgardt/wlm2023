@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.510">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>L // WLM 2023 - 6&nbsp; L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part-andan.html" rel="next">
+<link href="./l5.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#оценивание-параметров" id="toc-оценивание-параметров" class="nav-link active" data-scroll-target="#оценивание-параметров"><span class="header-section-number">6.1</span> Оценивание параметров</a>
+  <ul class="collapse">
+  <li><a href="#точечные-оценки" id="toc-точечные-оценки" class="nav-link" data-scroll-target="#точечные-оценки"><span class="header-section-number">6.1.1</span> Точечные оценки</a></li>
+  <li><a href="#свойства-точечных-оценок" id="toc-свойства-точечных-оценок" class="nav-link" data-scroll-target="#свойства-точечных-оценок"><span class="header-section-number">6.1.2</span> Свойства точечных оценок</a></li>
+  <li><a href="#интервальные-оценки" id="toc-интервальные-оценки" class="nav-link" data-scroll-target="#интервальные-оценки"><span class="header-section-number">6.1.3</span> Интервальные оценки</a></li>
+  </ul></li>
+  <li><a href="#тестирование-гипотез" id="toc-тестирование-гипотез" class="nav-link" data-scroll-target="#тестирование-гипотез"><span class="header-section-number">6.2</span> Тестирование гипотез</a>
+  <ul class="collapse">
+  <li><a href="#stats-testing-hyotheses" id="toc-stats-testing-hyotheses" class="nav-link" data-scroll-target="#stats-testing-hyotheses"><span class="header-section-number">6.2.1</span> Нулевая и альтернативная гипотезы</a></li>
+  <li><a href="#stats-testing-approaches" id="toc-stats-testing-approaches" class="nav-link" data-scroll-target="#stats-testing-approaches"><span class="header-section-number">6.2.2</span> Подходы к тестированию статистических гипотез</a></li>
+  <li><a href="#stats-testing-results" id="toc-stats-testing-results" class="nav-link" data-scroll-target="#stats-testing-results"><span class="header-section-number">6.2.3</span> Возможные результаты проверки гипотез</a></li>
+  <li><a href="#stats-testing-algorithm" id="toc-stats-testing-algorithm" class="nav-link" data-scroll-target="#stats-testing-algorithm"><span class="header-section-number">6.2.4</span> Агоритм тестирования статистических гипотез</a></li>
+  <li><a href="#размер-эффекта-и-статистическая-мощность" id="toc-размер-эффекта-и-статистическая-мощность" class="nav-link" data-scroll-target="#размер-эффекта-и-статистическая-мощность"><span class="header-section-number">6.2.5</span> Размер эффекта и статистическая мощность</a></li>
+  <li><a href="#stats-testing-false-positive" id="toc-stats-testing-false-positive" class="nav-link" data-scroll-target="#stats-testing-false-positive"><span class="header-section-number">6.2.6</span> Ложноположительный вывод</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<section id="оценивание-параметров" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="оценивание-параметров"><span class="header-section-number">6.1</span> Оценивание параметров</h2>
+<p>Напомним себе весьма малоприятную ситуацию, в которой мы находимся, когда решаем провести некоторое исследование. Мы заинтересованы в изучении <strong>генеральной совокупности</strong>. Объекты интересующей нас генеральной совокупности обладают определенными <strong>признаками</strong>, которые мы, собственно, хотели бы изучать. Признаки <em>количественно выражены</em> в определенных <strong>показателях</strong>.</p>
+<p>Признаки могут быть очень разными и измеряться могут с помощью разных показателей. Независимо от того, как измеряется признак, генеральная совокупность характеризуется <em>параметром</em>.</p>
+<p><strong>Параметр</strong> (<span class="math inline">\(\theta\)</span>) — относительно постоянная [от одной совокупности к другой] величина, харакретизующая генеральную совокупность по некоторому показателю.</p>
+<p>Проблема в том, что <strong>величина параметра, который мы изучаем, неизвестна</strong>. И никогда не будет известна. Потому что</p>
+<ul>
+<li>мы никогда не можем изучать всю генеральную совокупность, так как она содержит слишком много объектов</li>
+<li>наши измерения всегда содержат ошибку, из-за чего мы ничего не можем измерить точно</li>
+</ul>
+<p>Нам остаётся работать только с <em>выборочной совокупность (выборкой)</em> и опираться на статистические данные, которые мы собираем на ней. Измеряя что-либо на выборке, мы получаем <strong>выборочную характеристику, или оценку</strong> (<span class="math inline">\(\hat \theta\)</span>) — эмпирический (измеримый) аналог параметра.</p>
+<p>Выборка извлекается из генеральной совокупности случайным образом, поэтому что там именно — с точки зрения данных — в нашей выборке будет нам также неизвестно. Отсюда происходят два ключевых свойства статистических данных — <em>неопредлённость</em> и <em>вариативность</em>.</p>
+<p><strong>Неопределённость</strong> нам говорит о том, что мы не знаем, что именно мы получим в результате наших измерений для конкретной выборки. В том числе потому, что мы работаем на просторах случайных величин.</p>
+<p><strong>Вариативность</strong> означает, что наши данные будут различатся ещё и от респондента к респонденту. И между выборками тоже. Здесь и ошибка измерения, и различные смешения и ещё куча всего.</p>
+<p>В итоге что мы имеем: так как нам не доступны <em>истинные</em> значения параметров, придётся использовать <em>оценки</em> этих параметров. Возникает вопрос: как нам получить эти оценки? и какими свойствами они должны обладать, чтобы хорошо отражать параметры генеральной совокупности?</p>
+<section id="точечные-оценки" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="точечные-оценки"><span class="header-section-number">6.1.1</span> Точечные оценки</h3>
+<p>Пусть у нас есть некоторый параметр генеральной совокупности <span class="math inline">\(\theta\)</span>. Его аналогом на выборочной совокупности является его <em>точечная оценка</em> <span class="math inline">\(\hat \theta\)</span>. Точечная она, потому что представляет собой некоторое одно число. Таким образом, это наиболее компактный способ составить представление о значении параметра. По своей сути она, на самом деле, является функцией — по факту, случайной величиной —- от результатов наблюдений:</p>
+<p><span class="math display">\[
+\hat \theta = \hat \theta (\mathbf{x}), \; \mathbf{x} = \pmatrix{ x_1 &amp; x_2 &amp; \dots &amp; x_n}
+\]</span></p>
+<p>Это всё замечательно, но что это значит для нас как для практиков? Значение оценки зависит от наблюдений, поэтому на разных выборках мы будем получать разные значения оценки. Возьмем для примера такой параметр как <em>среднее значение</em>. Пусть мы изучаем интеллект — это наш признак — который мы измеряем как коэффициент IQ — это наш показатель (<span class="math inline">\(X\)</span>). Известно, что в генеральной совокупности этот признак распределен нормально с математическим ожиданием 100 и стандартным отклонением 15, то есть <span class="math inline">\(X \thicksim \mathcal N(100, 225)\)</span>:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Тут нам, конечно, повезло, потому что мы знаем, как устроена шкала IQ<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, поэтому мы знаем значение нашего параметра — <span class="math inline">\(\mu = 100\)</span>. В общем случае, конечно, значение параметра, как мы отмечали выше, неизвестно.</p>
+<p>Теперь попробуем наизвлекать выборок человек по 50 и посчитать <em>оценки среднего (выборочные средние)</em> <span class="math inline">\(\hat \mu\)</span> на них:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Наблюдаем, что иногда мы при подсчёте оценке параметра попадаем близко к истинному его значению, иногда промахиваемся. Собственно, как раз об этом <em>неопределённость и вариация</em>.</p>
+<section id="метод-моментов" class="level4" data-number="6.1.1.1">
+<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="метод-моментов"><span class="header-section-number">6.1.1.1</span> Метод моментов</h4>
+<p>Чтобы получить точечные оценки параметров, используются разные методы. Метод зависит от того, какой параметр мы хотим оценить, а также с какой моделью мы сейчас работаем. Сейчас мы познакомимся с самым простым — <strong>методом моментов</strong>.</p>
+<p>Слово «момент» обычно вызывает странные ощущения — какой момент? момент чего? что в этот момент случается? Тут надо отпустить привычное понимание слово «момент» как некоторого момента времени и принять тот факт, что «момент случайной величины» — а именно о нём мы говорим — это просто характеристика распределения случайной величины. То есть математическое ожидание — это момент распределения случайной величины, дисперсия — это момент распределения случайной величины.</p>
+<p>В методе моментов есть три этапа:</p>
+<ol type="1">
+<li>устанавливается связь между оцениваемым параметром и моментом распределения случайной величины</li>
+</ol>
+<p><span class="math display">\[
+\quad \theta = \xi(\mu_k),
+\]</span></p>
+<p>где <span class="math inline">\(\mu_k\)</span> — это момент случайной величины.</p>
+<ol start="2" type="1">
+<li>находятся выборочные моменты</li>
+</ol>
+<p><span class="math display">\[
+\hat \theta = \xi(\mu_k^*)
+\]</span></p>
+<ol start="3" type="1">
+<li>истинный момент заменяется на выборочный — получается оценка.</li>
+</ol>
+<p>Вернемся к IQ. Эквивален среднего значения в случае генерально совокупности является математическое ожидание, поэтому значение параметра <span class="math inline">\(\mu\)</span> определяется как</p>
+<p><span class="math display">\[
+\mu = \mathbb{E}X
+\]</span></p>
+<p>Выборочным аналогом математического ожидания является выборочное среднее:</p>
+<p><span class="math display">\[
+\hat \mu = \frac{1}{n} \sum_{i=1}^n x_i = \bar x
+\]</span></p>
+<p>И это, собственно, всё. Если вы хотя бы раз анализировали данные, вы имплицитно пользовались этим знанием. Просто, скорее всего, не задумывались, что это так работает.</p>
+</section>
+</section>
+<section id="свойства-точечных-оценок" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="свойства-точечных-оценок"><span class="header-section-number">6.1.2</span> Свойства точечных оценок</h3>
+<p>Так как точечные оценки всё же оценки, мы можем и промахнуться мимо истинного среднего — это мы наблюдали на гистограмме. Поэтому нам надо предъявить определённые требования к точечным оценкам, которые будут отражать «хорошесть» точечной оценки. Таких требования три: <em>несмещённость</em>, <em>состоятельность</em> и <em>эффективность</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Свойства матемаческого ожидания
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>При обсуждении свойств точечных оценок нам потребуются два свойства математического ожидания:</p>
+<ol type="1">
+<li>Математическое ожидание суммы независимых случайных величины равно сумме их математических ожиданий</li>
+</ol>
+<p><span class="math display">\[
+\mathbb{E}(X_1 + X_2) = \mathbb{E}X_1 + \mathbb{E}X_2
+\]</span></p>
+<ol start="2" type="1">
+<li>Константу можно выносить за знак математического ожидания</li>
+</ol>
+<p><span class="math display">\[
+\mathbb{E}(cX) = c \mathbb{E}X
+\]</span></p>
+</div>
+</div>
+<section id="несмещенность" class="level4" data-number="6.1.2.1">
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="несмещенность"><span class="header-section-number">6.1.2.1</span> Несмещенность</h4>
+<p><strong>Несмещённость</strong> выражает следующую идею: когда мы постоянно используем выборочную оценку нашего параметра на выборках некоторого объема, мы <em>в среднем</em> не ошибаемся в оценке параметра.</p>
+<p>То есть, конечно, при каждой конкретной оценке нашего параметра на отдельной выборке мы будем совершать ошибку, однако <em>в среднем</em> при многократном повторении измерений и получения оценки мы будем попадать точно в цель — в параметр генеральной совокупности.</p>
+<p><span class="math display">\[
+\forall n \; \mathbb{E} \hat \theta = \theta
+\]</span> где <span class="math inline">\(n\)</span> — объём выборок.</p>
+<p>Выше мы рассматривали выборочное среднее как оценку математического ожидания генеральной совокупности. Давайте проверим, является ли такая оценка несмещнной. Для этого нам надо проверить, что выполняется следующее соотношение:</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar x) = \mu
+\]</span></p>
+<p>Пусть у нас есть <span class="math inline">\(n\)</span> выборок, на которых измерена переменная <span class="math inline">\(X\)</span> — <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(X_n\)</span>. Эти выборки пришли из одной генеральной совокупности, то есть <span class="math inline">\(X_1, X_2, \dots ,X_n \overset{\text{i.i.d}}{\thicksim} (\mu, \sigma^2)\)</span>. Запись <span class="math inline">\(\text{i.i.d.}\)</span> означает «независимые одинаково распределенные» (independent identically distributed).</p>
+<p>Тогда получается следующее:</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar X) = \mathbb{E}\Big( \frac{1}{n} (X_1 + X_2 + \dots + X_n) \Big) = \frac{1}{n} \Big( \mathbb{E}(X_1) + \mathbb{E}(X_2) + \dots + \mathbb{E}(X_n) \Big)
+\]</span></p>
+<p>Поскольку все <span class="math inline">\(X_i\)</span> пришли из одного и того же распределения <span class="math inline">\((\mu, \sigma^2)\)</span>, то <span class="math inline">\(\forall i \, \mathbb{E}(x_i) = \mu\)</span>. Тогда</p>
+<p><span class="math display">\[
+\mathbb{E}(\bar X) = \frac{1}{n} \cdot n \cdot \mu = \mu
+\]</span></p>
+<p>А это ровно то, что утверждается в качестве несмещенности. Таким образом, среднее является несмещенной оценкой математического ожидания.</p>
+<p>Кроме среднего, у нас есть еще дисперсия, и мы её тоже всегда оцениванием в ходе анализа данных. На практике мы говорили, что дисперсия случайной величины определяется как <span class="math inline">\(\text{var}(X) = \mathbb{E}(X^2) - \big( \mathbb{E}X\big)^2\)</span>. Эта формула удобна для расчетов, однако дисперсию можно определить и иначе:</p>
+<p><span class="math display">\[
+\text{var}(X) = \mathbb{E}(X - \mathbb{E}X)^2 = \frac{\sum_{i=1}^n(\mu - x_i)^2}{n}
+\]</span></p>
+<p>Две формулы, кстати, эквивалентны друг другу и одна выводится из другой:</p>
+<p><span class="math display">\[
+\begin{split}
+\text{var}(x) &amp;= \mathbb{E}\big( (X - \mathbb{E}X )^2 \big) = \mathbb{E}\big( X^2 - 2 X \mathbb{E}X + (\mathbb{E}X)^2 \big) = \\
+&amp; = \mathbb{E}(X^2) - 2 \mathbb{E}X \mathbb{E}X + (\mathbb{E}X)^2 = \mathbb{E}(X^2) - 2 (\mathbb{E}X^2) + (\mathbb{E}X)^2 = \\
+&amp; = \mathbb{E}(X^2) - (\mathbb{E}X^2)
+\end{split}
+\]</span></p>
+<p>Итак, в качестве оценки дисперсии, кажется, можно использоваться <span class="math inline">\(\text{var}(X) = \frac{\sum_{i=1}^n(\mu - x_i)^2}{n}\)</span>, однако из столкновения с реальностью мы знаем, что в знаменателе формулы, которую мы реально используем стоит <span class="math inline">\(n-1\)</span>. Почему?</p>
+<p>Проверим оценку дисперсии на несмещенность. Нам нужно показать, что <span class="math inline">\(\mathbb{E}(\hat \sigma^2) = \sigma^2\)</span>, тогда мы сможем сказать, что оценка является несмещенной. По формуле получается, что</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2) &amp; = \mathbb{E}\Big( \mathbb{E}(X^2) - (\mathbb{E}X)^2 \Big) = \\
+&amp; = \mathbb{E}\Big( \overline{X^2} - \bar X^2\Big) = \mathbb{E}(\overline{X^2}) - \mathbb{E}(\bar X^2)
+\end{split}
+\]</span></p>
+<p>Рассмотрим сначала <span class="math inline">\(\mathbb{E}(\overline{X^2})\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{E}(\overline{X^2}) = \mathbb{E}\Big( \frac{X_1^2 + X_2^2 + \dots + X_n^2}{n} \Big) = \frac{1}{n} \Big( \mathbb{E}X_1^2 + \mathbb{E}X_2^2 + \dots + \mathbb{E}X_n^2\Big)
+\]</span></p>
+<p>Так как все наблюдения приходят из одного и того же распределения, то все математические ожидания будут равны, поэтому:</p>
+<p><span class="math display">\[
+\mathbb{E}(\overline{X^2}) = \frac{1}{n} \cdot n \cdot \mathbb{E}(X_i^2) = \mathbb{E}(X_i^2)
+\]</span></p>
+<p>Теперь <span class="math inline">\(\mathbb{E}(\bar X^2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\bar X^2) &amp;= \mathbb{E}\Big( \frac{X_1 + X_2 + \dots + X_n}{n} \Big)^2 = \\
+&amp; = \frac{1}{n^2} \mathbb{E}(X_1 + X_2 + \dots + X_n)^2 = \\
+&amp; = \frac{1}{n^2} \mathbb{E}(X_1^2 + X_2^2 + \dots X_n^2 + 2X_1X_2 + \dots + 2X_{n-1}X_n) = \\
+&amp; = \frac{1}{n^2} \mathbb{E}\Big( (X_1^2 + X_2^2 + \dots X_n^2) + (2X_1X_2 + \dots + 2X_{n-1}X_n) \Big)
+\end{split}
+\]</span></p>
+<p>Внутри скобок получается два слагаемых: если с <span class="math inline">\(X_i^2\)</span> все понятно — выше мы уже с ним сталкивались, то со вторым надо разбираться, а именно, подсчитать, сколько попарных произведений случайных величин у нас будет. Их будет <span class="math inline">\(C_n^2 = \frac{n(n-1)}{2}\)</span>. Поэтому если мы будем раскрывать скобки, то получим слоедующее:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\bar X^2) &amp; = \frac{1}{n^2} \cdot n \cdot \mathbb{E}(X_i^2) + \frac{1}{n^2} \cdot \frac{n(n-1)}{2} \cdot 2 \mathbb{E}(X_iX_j) = \\
+&amp; = \frac{1}{n} \mathbb{E}(X_i^2) + \frac{n-1}{n} (\mathbb{E}X_i)^2
+\end{split}
+\]</span></p>
+<p>Теперь соберем две части вместе:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{E}(\hat \sigma^2) &amp; = \mathbb{E}(\overline{X^2}) - \mathbb{E}(\bar X^2) = \\
+&amp; = \mathbb{E}(X_i^2) - \frac{1}{n} \mathbb{E}(X_i^2) - \frac{n-1}{n} (\mathbb{E}X_i)^2 = \\
+&amp; = \frac{n}{n} \mathbb{E}(X_i^2) - \frac{1}{n} \mathbb{E}(X_i^2) - \frac{n-1}{n} (\mathbb{E}X_i)^2 = \\
+&amp; = \frac{n-1}{n} \Big ( \mathbb{E}(X_i^2) - (\mathbb{E}X_i)^2 \Big) = \\
+&amp; = \frac{n-1}{n} \sigma^2
+\end{split}
+\]</span></p>
+<p>Получается, что математическое ожидание нашей оценки оказывается равно не самому значению интересующего нас параметра, а значению параметра, умноженному на некоторое число <span class="math inline">\(\frac{n-1}{b}\)</span>, то есть оценка является смещенной. Именно поэтому для расчета дисперсии на выборке используется <em>выборочная, или исправленная, дисперсия</em>.</p>
+<p>Как она исправляется? Если у нас оценка дисперсии отличается от значения параметра в <span class="math inline">\(\frac{n-1}{n}\)</span> раз, то надо домножить оценку на <span class="math inline">\(\frac{n}{n-1}\)</span>:</p>
+<p><span class="math display">\[
+s^2 = \frac{n}{n-1} \cdot \hat \sigma^2 = \frac{n}{n-1} \cdot \frac{1}{n} \sum (x_i - \bar x)^2 = \frac{1}{n-1} \sum (x_i - \bar x)^2
+\]</span></p>
+<p>И вот мы получили знакомую нам формулу для расчета выборочной дисперсии. Такая оценка является несмещенной.</p>
+<p>Иногда несмещенность от оценки бывает потребовать сложно, тогда можно ограничиться <strong>ассимптотической несмещенностью</strong>:</p>
+<p><span class="math display">\[
+(\mathbb{E}\hat \theta - \theta) \underset{n \rightarrow \infty}{\rightarrow} 0,
+\]</span></p>
+<p>где <span class="math inline">\((\mathbb{E}\hat \theta - \theta)\)</span> — смещение. Ассимптотическая несмещенность требует, чтобы математическое ожидание нашей оценки приближалось к значению параметра с ростом объема выборки.</p>
+</section>
+<section id="состоятельность" class="level4" data-number="6.1.2.2">
+<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="состоятельность"><span class="header-section-number">6.1.2.2</span> Состоятельность</h4>
+<p>Математически <strong>состоятельность</strong> определяется следующим образом:</p>
+<p><span class="math display">\[
+\lim_{n \rightarrow \infty} \mathrm{P}(|\hat \theta - \theta| &lt; \varepsilon) = 1, \, \varepsilon &gt; 0
+\]</span></p>
+<p>Содержательно эта запись нам говорит следующее, что при неограниченном росте мощности выборки наша оценка стремится к истинному значению параметра. Или, проще, с ростом выборки значение нашей оценки все реже выпадает из некоторого достаточно узкого интервала <span class="math inline">\((\theta - \varepsilon, \theta + \varepsilon)\)</span>. Может быть, такая формулировка не совсем точна математически, но позволяет представить, что происходит.</p>
+<p>Давайте посмотрим на это на картинке. Нже изображено поведение состоятеной оценки с ростом выборки:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>А так ведет себя несостоятельная оценка:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="эффективность" class="level4" data-number="6.1.2.3">
+<h4 data-number="6.1.2.3" class="anchored" data-anchor-id="эффективность"><span class="header-section-number">6.1.2.3</span> Эффективность</h4>
+<p>Эффективность точечной оценки определяется достаточно просто. Так как оценка параметра — это случайная величина, но у неё есть <em>дисперсия</em>. Чтобы оценка была <strong>эффективна</strong>, её дисперсия должна быть минимальной:</p>
+<p><span class="math display">\[
+\sigma^2_{\hat \theta} = \min
+\]</span></p>
+<p>Опять же попробуем посмотреть на это на картинке:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="интервальные-оценки" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="интервальные-оценки"><span class="header-section-number">6.1.3</span> Интервальные оценки</h3>
+<p>Кроме самого значения оценки, необходимо определить качество этой оценки, иначе говоря — её точность. Для этого используется такая величина как <strong>надёжность</strong>:</p>
+<p><span class="math display">\[
+\gamma = \mathbb{P}(\theta_\min &lt; \theta &lt; \theta_\max)
+\]</span></p>
+<p>Такая форма оценки называется <strong>интервальной оценкой параметра</strong>, так как мы указываем <em>интервал</em>, в котором находится истинное значение с определённой вероятностью.</p>
+<p>Такая форма оценки даёт исчерпывающую информацию о параметре: мы знаем (1) интервал, в котором находится значение параметра генеральной совокупности, а также (2) надёжность, с которой выбранный интервал накрывает это значение.</p>
+<p>Значение надежности <span class="math inline">\(\gamma\)</span> может быть выбрано произвольно, но обычно оно близко к единице. Однако необходимо помнить, что чем выше надёжность, тем шире границы интервальной оценки.</p>
+<section id="стандартная-ошибка" class="level4" data-number="6.1.3.1">
+<h4 data-number="6.1.3.1" class="anchored" data-anchor-id="стандартная-ошибка"><span class="header-section-number">6.1.3.1</span> Стандартная ошибка</h4>
+<p>Для того, что получить интервальную оценку нашего параметра, нам нужно изучить, как ведет себя наша выборочная оценка в случае, когда мы много раз извлекаем выборку из генеральной совокупности. Рассмотрим на примере среднего значения.</p>
+<p>Пусть мы в том же примере с IQ, который обсуждали выше. Мы знаем, что распределение параметра в генеральной совокупности такое:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Вновь извлечем несколько выборок из нашей генеральной совокупности:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Мы уже отмечали, что на отдельной выборке мы будем получать оценку среднего, которая будет отличаться от значения параметра в генеральной совокупности. Однако если мы извлечем много выборок — скажем, 1000 выборок по 100 наблюдений — посчитаем на каждой среднее и построим распределение выборочных средних, то получим нечто такое:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Наши средние будут как-то распределены, при это <em>среднее средних</em> будет оказываться очень близко с значению нашего параметра. При этом данное распределение крайне похоже на нормальное и может быть описано как <span class="math inline">\(\mathcal N(\overline{\bar x}, \sigma_{\bar x}^2)\)</span>, то есть как и любое нормальное распределение получившееся распределение будет описываться некоторой дисперсией. Стандартное отклонение этого распределения называется <strong>стандартной ошибкой среднего (standard error of mean)</strong>:</p>
+<p><span class="math display">\[
+\text{se}(\bar x) = \sqrt{\sigma^2_{\overline x}} = \sigma_{\overline x}
+\]</span></p>
+<p>В нашем случае оно будет равно 1.43.</p>
+<p>Стандартная ошибка среднего является одной из интервальных оценок среднего значения. Однако выше мы сказали, что для интервальной оценки нам надо указать надежность, то есть вероятность, с которой значение изучаемого параметра находится в интервале, задаваемом интервальной оценкой. Можем ли мы это сделать в случае стандартной ошибки? Да, поскольку мы значем как устроено нормальное распределение. Так как стандартная ошибка является стандартным отклонением распределения выборочных средних, а в пределах отдного стандартного отклонения от среднего лежит 68.2% значений нормально распределенной случайной величины, то мы можем записать:</p>
+<p><span class="math display">\[
+\begin{split}
+0.682 &amp; = \mathbb{P}(\overline{\bar x}-\sigma^2_{\overline x} &lt; \mu &lt; \overline{\bar x}+\sigma^2_{\overline x}) \\
+&amp; = \mathbb{P}(98.57 &lt; \mu &lt; 101.43)
+\end{split}
+\]</span></p>
+<p>То, что мы проделали выше легитимизировано <strong>цетральной предельной теоремой</strong>. Визуализацию можно найти <a href="https://gallery.shinyapps.io/CLT_mean/">здесь</a>.</p>
+<p>Это конечно хорошо, но мы же не можем каждый раз извлекать по 1000 выборок, чтобы рассчитать стандартную ошибку среднего. Нам необходим способ её расчета по одной выборки, чтобы мы могли производить интервальную оценку нашего параметра в одном отдельной исследовании. Такой способ подсчета есть, и он выглядит так:</p>
+<p><span class="math display">\[
+\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}} = \frac{\hat \sigma^2_X}{\sqrt{n}}
+\]</span></p>
+<p>Вообще-то такое равенство совершенно неочевидно, поэтому попробуем понять, почему оно справедливо.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Свойства дисперсии
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Для того, чтобы вывести эту формулу нам потребуются два свойства дисперсии:</p>
+<ol type="1">
+<li>Дисперсия суммы двух независимых случайных величины равна сумме их дисперсий</li>
+</ol>
+<p><span class="math display">\[
+\text{var}(X + Y) = \text{var}(X) + \text{var}(Y)
+\]</span></p>
+<ol start="2" type="1">
+<li>Константа выносится из-под знака дисперсии с возведением в квадрат:</li>
+</ol>
+<p><span class="math display">\[
+\text{var}(aX) = a^2 \text{var}(X)
+\]</span></p>
+</div>
+</div>
+<p>Так как наблюдения извлекаются из независимых одинаково распределенных величин (independent identically distributed, iid), то они независимы. Получается что дисперсия распределения выбборочных средних будет равна:</p>
+<p><span class="math display">\[
+\text{var}\bar X_i = \text{var}\Big( \frac{1}{n} \sum X_i \Big)
+\]</span></p>
+<p>По свойствам дисперсии:</p>
+<p><span class="math display">\[
+\begin{split}
+\text{var}\bar X_i &amp; = \text{var}\Big( \frac{1}{n} \sum X_i \Big) \\
+&amp; = \frac{1}{n^2} \sum \text{var}(X_i) = \frac{1}{n^2} \sum \sigma^2 = \frac{n}{n^2} \sigma^2 = \frac{\sigma^2}{n}
+\end{split}
+\]</span></p>
+<p>Так как стандартная ошибка это старндартное отклонение распределения выборочных средних, то:</p>
+<p><span class="math display">\[
+\text{se}_X = \sqrt{ \text{var}\Big( \frac{1}{n} \sum X_i \Big)} = \sqrt{\frac{\sigma^2}{n}} = \frac{\sigma}{\sqrt{n}}
+\]</span></p>
+<p>Вот и получается формула для расчета стандартной ошибки на одной выборке.</p>
+</section>
+<section id="доверительный-интервал" class="level4" data-number="6.1.3.2">
+<h4 data-number="6.1.3.2" class="anchored" data-anchor-id="доверительный-интервал"><span class="header-section-number">6.1.3.2</span> Доверительный интервал</h4>
+<p>Другим вариантом интервальной оценки является <strong>доверительный интервал (confidence interval)</strong>. На практике он используется гораздо чаще стандартной ошибки, но оказывается тесно с ней связан. Итак, ещё раз:</p>
+<p><span class="math display">\[
+\mathrm{P}(\theta_\min &lt; \theta &lt; \theta_\max) = \gamma, \; \gamma \rightarrow 1
+\]</span></p>
+<p><span class="math inline">\(theta_\min\)</span> и <span class="math inline">\(\theta_\max\)</span> — границы доверительного интервала, <span class="math inline">\(\gamma\)</span> — доверительная вероятность. На практике её значение чаще всего принимается равным <span class="math inline">\(0.95\)</span>.</p>
+<p>Что нам нужно, чтобы определить границы, в которых значение параметра лежит с вероятностью <span class="math inline">\(0.95\)</span>, если мы значем, про наша оценка распределена нормально?</p>
+<p>Мы знаем особое нормальное распределение <span class="math inline">\(z \thicksim \mathcal N(0, 1)\)</span>, которое называется <em>стандартным нормальным</em> распределением. Можно рассчитать границы следующего интервала:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Оказывается, что <span class="math inline">\(z\)</span>-значение с вероятностью 0.95 попадается в интервал <span class="math inline">\([z_{\min}, z_{\max}] = [-1.96, 1.96]\)</span>. Зная эти точки и воспользовавшись принципом стандартизации, мы можем записать следующее:</p>
+<p><span class="math display">\[
+\mathbb{P}\Big( \bar x - z_\min \text{se}_X &lt; \mu &lt;
+\bar x + z_\max \text{se}_X \Big) = \gamma
+\]</span></p>
+<p>Или конкретнее:</p>
+<p><span class="math display">\[
+\mathbb{P}\Big( \bar x - -1.96 \text{se}_X &lt; \mu &lt;
+\bar x + 1.96 \text{se}_X \Big) = 0.95
+\]</span></p>
+<p>То есть, зная стандартную ошибку мы можем рассчитать доверительный интервал. В общем случае, любой — 95%, 90%, 99% и др. — подставляя разные <span class="math inline">\(z_\min\)</span> и <span class="math inline">\(z_\max\)</span>.</p>
+</section>
+<section id="интерпретация-доверительного-интервала" class="level4" data-number="6.1.3.3">
+<h4 data-number="6.1.3.3" class="anchored" data-anchor-id="интерпретация-доверительного-интервала"><span class="header-section-number">6.1.3.3</span> Интерпретация доверительного интервала</h4>
+<p>С учетом расчета нам очень хочется сказать, что границы доверительного инетрвала задают диапазон, в котором значение нашего параметра — математического ожидания в генеральной совокупности — лежат с вероятностью 0.95. <strong>Однако это не верно!</strong></p>
+<p>Здесь в игру вступает фреквентистский подход (см. далее), в котором мы с вами живем. <strong>Корректная интерпретация границ доверительного интервала звуит так:</strong></p>
+<blockquote class="blockquote">
+<p>Если мы будет бесконечно извлекать новые выборки из генеральной совокупности, рассчитывать на них средние и 95% доверительные интервалы к ним, то генеральное среднее попадёт в границы 95% таких доверительных интервалов.</p>
+</blockquote>
+<p>То есть, если мы извлечем 100 выборок, посчитаем на каждой из них среднее и построим 95% доверительный интервал к каждому из 100 средних, то 95 доверительных интервалов из 100 будут содержать генеральное среднее — а 5 интервалов содержать его не будут.</p>
+<p>Визуализацию этого можно наблюдать <a href="https://rpsychologist.com/d3/ci/">здесь</a>.</p>
+<p>Реальная вероятность, что значение параметра генеральной совокупности попадет в пределы конкретного доверительного, рассчитанного в данном исследовании, оказывается меньше — около 84.3%.</p>
+</section>
+</section>
+</section>
+<section id="тестирование-гипотез" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="тестирование-гипотез"><span class="header-section-number">6.2</span> Тестирование гипотез</h2>
+<p>В ходе статистического анализа мы, главным образом, заняты тем, что тестируем статистические гипотезы. Ведь на какого рода вопросы мы отвечаем с помощью анализа?</p>
+<ul>
+<li>Различаются ли группы между собой?</li>
+<li>Значимо ли влияние какого-либо фактора? → Различаются ли группы между собой?</li>
+<li>Хороша ли та модель, которую мы построили? → Отличается ли она от нулевой модели?</li>
+</ul>
+<p>И так далее. Так или иначе, всё сводится в тому, что мы ищем какие-то различия. Но силу того, что у нас неопределённость и вариация в данных, мы просто так «в лоб» сказать о различиях по оценкам параметров не можем. Приходится тестировать статистические гипотезы.</p>
+<section id="stats-testing-hyotheses" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="stats-testing-hyotheses"><span class="header-section-number">6.2.1</span> Нулевая и альтернативная гипотезы</h3>
+<p>Что такое гипотеза и какие они вообще бывают?</p>
+<ul>
+<li><strong>Гипотеза</strong> (<span class="math inline">\(H\)</span>) — это предположение, которое подлежит проверке на основе результатов наблюдений.</li>
+<li>Гипотезы бывают:
+<ul>
+<li><strong>теоретические</strong> — про конструкты</li>
+<li><strong>эмпирические</strong> — про переменные</li>
+<li><strong>статистические</strong> — про параметры [генеральной совокупности] и данные</li>
+</ul></li>
+</ul>
+<p>Статистические гипотезы бывают простыми и сложными:</p>
+<ul>
+<li><strong>Простая гипотеза</strong> — это такое предположение, которое включает в себя какое-либо однозначно определеяемое утверждение. Например, истинная величина параметра соответствует некоторому строго заданному значению: <span class="math inline">\(H : \theta = \theta_0\)</span>. Другой вариант — две генеральные совокупности имеют одно и то же значение одной и той же характеристики: <span class="math inline">\(H : \theta_1 = \theta_2\)</span>.</li>
+<li><strong>Сложная гипотеза</strong> предполагает множественность вариантов для параметра, которые укладываются в рамки проверяемого предположения. Например, <span class="math inline">\(H : \theta &gt; \theta_0\)</span> или <span class="math inline">\(H : \theta_1 \neq \theta_2\)</span>.</li>
+</ul>
+<p>В рамках самого хода тестирования гипотез существует <strong>проверяемая (нулевая) гипотеза</strong> (<span class="math inline">\(H_0\)</span>). Её обычно стараются предельно упростить, поэтому она формулируется как простая гипотеза. В противовес ей выдвигается <strong>альтернативная гипотеза</strong> (<span class="math inline">\(H_1\)</span>), которая будет иметь вид сложной гипотезы.</p>
+<p>Для проверки гипотезы необходимы две вещи:</p>
+<ul>
+<li>результаты наблюдений и</li>
+<li>критерий.</li>
+</ul>
+<p>Результаты наблюдений, полученные на выборке, сами по себе, как правило, не используются. Однако на их основе рассчитываются выборочные статистики (показатели), которые непосредственно участвуют в проверке гипотезы.</p>
+</section>
+<section id="stats-testing-approaches" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="stats-testing-approaches"><span class="header-section-number">6.2.2</span> Подходы к тестированию статистических гипотез</h3>
+<section id="stats-testing-nhst" class="level4" data-number="6.2.2.1">
+<h4 data-number="6.2.2.1" class="anchored" data-anchor-id="stats-testing-nhst"><span class="header-section-number">6.2.2.1</span> Фреквентистский подход</h4>
+<p>Фреквентистский подход, широко распространенный в тестировании статистических гипотез, задается следующим вопросом:</p>
+<blockquote class="blockquote">
+<p>Какова вероятность получить <em>такие</em> данные, если допустить, что нулевая гипотеза верна?</p>
+</blockquote>
+<p>То есть в этой логике мы собираем какие-то данные в ходе исследования, формулируем некоторую статистическую гипотезу <span class="math inline">\(H_0\)</span> об отсутствии закономерности в генеральной совокупности, и далее определяем, насколько вероятно было бы получить вот эти данные, которые у нас сейчас есть, в случае, когда закономерности нет.</p>
+<p>Далее, если эта вероятность мала, то мы делаем вывод, что в генеральной совокупности закономерность всё-такие есть — поэтому мы получили данные, которые не характерны для случая, когда верна нулевая гипотеза. Если же мы получаем, что такая вероятность велика, то мы остаемся с нулевой гипотезой, которую не удалось отклонить.</p>
+<p>Этот подход требует возможности много раз повторять наше исследование, чтобы проверять, действительно ли мы из ра-а в раз будем получать схожие результаты — то есть, фреквентистский подход хорошо работает в долгосрочной перспективе и именно когда у нас есть возможность повторять наше исследование, в которых мы тестируем одни и те же гипотезы, мы можем получать достаточно однозначные выводы об изучаемых закономерностях.</p>
+</section>
+<section id="stats-testing-bayes" class="level4" data-number="6.2.2.2">
+<h4 data-number="6.2.2.2" class="anchored" data-anchor-id="stats-testing-bayes"><span class="header-section-number">6.2.2.2</span> Байесовский подход</h4>
+<p>Если мы внимательно вдумаемся в тот вопрос, которым задается фреквентистская статистика, мы поймем, что он достаточно тупой: нам вообще-то не интересует вероятность получить вот эти данные, если нулевая гипотеза верна. Почему? Потому что мы эти данные уже получили. Гораздо более интересным является вопрос о том,</p>
+<blockquote class="blockquote">
+<p>насколько вероятная справедливость нулевой или альтернативной гипотезы при условии, что мы получили такие данные.</p>
+</blockquote>
+<p>Этим вопросом задается байесовская статистика, которая постепенно набирает свое влияние среди исследователей. Сложно сказать, какой из двух подходов лучше — у каждого есть свои плюсы, у каждого есть свои минусы, и каждый обладает своими особенностями. В целом, они хорошо дополняют друг друга, и одни и те же данные могут быть проанализированы как с помощью байесовского, так и с помощью фреквентистского подхода.</p>
+<p>Однако в нашем курсе мы будем идти классическим путем и рассматривать тестирование статистических гипотез во фреквентистском подходе.</p>
+</section>
+</section>
+<section id="stats-testing-results" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="stats-testing-results"><span class="header-section-number">6.2.3</span> Возможные результаты проверки гипотез</h3>
+<p>В результате проверки статистических гипотез могут возникнуть четыре ситуации.</p>
+<p>Мы изучаем в исследовании какую-либо закономерность, которая в реальном мире может существовать, а может и не существовать. В силу неопределённости и вариативности наших данных мы может либо обнаружить интересующую нас закономерность, либо не обнаружить.</p>
+<p>В качестве нулевой гипотезы мы выдвигаем предположение о том, что закономерность отсутствует — так мы упрощаем нашу нулевую гипотезу. Пусть <span class="math inline">\(H_0\)</span> обозначает, что предположение, которое мы проверяем справедливо, а <span class="math inline">\(H_1\)</span> — не справедливо. На основании данных мы можем либо не отклонить наше предположение (<span class="math inline">\(\hat H_0\)</span>), либо отклонить (<span class="math inline">\(\hat H_1\)</span>).</p>
+<p>Тогда имеем следующую ситуацию:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(H_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(H_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat H_0\)</span></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">Ошибка II рода</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\hat H_1\)</span></td>
+<td style="text-align: center;">Ошибка I рода</td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Ошибка I рода</strong> возникает, когда в генеральной совокупности <em>искомой закономерности нет</em>, но мы в силу случайных флуктуаций в данных <em>её нашли</em>.</li>
+<li><strong>Ошибка II рода</strong> возникает, когда в генеральной совокупности <em>искомая закономерность есть</em>, но мы в силу каких-либо причин её <em>не нашли</em>.</li>
+</ul>
+<p>Ошибки — это нехорошо, они нас не устраивают. Надо каким-то образом их контролировать.</p>
+<ul>
+<li><strong>Ошибка I рода</strong> контролируется достаточно просто. Так как мы <em>нашли</em> закономерность, которую искали, мы можем посчитать вероятность, с которой потенциально ошиблись. А собственно контролировать ошибку мы будем с помощью <strong>уровня значимости</strong> <span class="math inline">\(\alpha\)</span>, который <em>выбирается до начала процедуры тестирования гипотезы</em>. Он и задает вероятность, с который мы позволяем себе ошибиться — отклонить нулевую гипотезу, при условии, что она верна.</li>
+<li><strong>Ошибку II рода</strong> контролировать сложнее, так как мы <em>не нашли</em> закономерность, которую искали. Нам нужна какая-то метрика, которая позволит сказать, что мы сделали всё возможное для того, чтобы обнаружить искомую закономерность. Вероятность ошибки II рода обозначается <span class="math inline">\(\beta\)</span> — тогда вероятность того, что мы не совершили ошибку II рода будет <span class="math inline">\(1 - \beta\)</span>. Эта величина называется <strong>статистической мощностью</strong>, и она связана с <em>размером эффекта</em> и <em>объемом выборки</em>. Статистическую мощность рассчитывают до проведения статистического анализа — она помогает определить требуемый объема выборки.</li>
+</ul>
+<p>Соберем все обозначения в единую табличку<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 54%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(H_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(H_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\hat H_0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_0 | H_0)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_0 | H_1) = \beta\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\hat H_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_1 | H_0) = \alpha\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mathrm P (\hat H_1 | H_1) = 1 - \beta\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Уровень значимости <span class="math inline">\(\alpha\)</span> <strong>выбирается близким к нулю</strong> — всем знакомо конвенциональное значение <span class="math inline">\(0.05\)</span>. Вообще <span class="math inline">\(\alpha\)</span> можно выбрать сколь угодно малым, однако при выборе уровня значимости руководствуются принципом разумной достаточности, так как если устремить <span class="math inline">\(\alpha\)</span> к нулю, то устремиться к нулю и вероятность отклонения нулевой гипотезы.</p>
+<p><span class="math display">\[
+\mathrm P (\hat H_1) = \mathrm P (\hat H_1 | H_0) \cdot \mathrm P (H_0) = \alpha \cdot \mathrm P(H_0)
+\]</span></p>
+<p>Достаточной статистической мощностью считается <span class="math inline">\(0.8\)</span>. Аналогично, устремляя мощность к единице (<span class="math inline">\((1 - \beta) \rightarrow 1 \Rightarrow \beta \rightarrow 0\)</span>), мы устремляем вероятность не отклонения нулевой гипотезы к нулю:</p>
+<p><span class="math display">\[
+\mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_1) \cdot \mathrm P (H_1) = \beta \cdot \mathrm P (H_1)
+\]</span></p>
+<section id="stats-testing-asymmetry" class="level4" data-number="6.2.3.1">
+<h4 data-number="6.2.3.1" class="anchored" data-anchor-id="stats-testing-asymmetry"><span class="header-section-number">6.2.3.1</span> Асимметрия статистического вывода</h4>
+<p>Выше мы сказали, что для проверки гипотезы нужны две вещи:</p>
+<ul>
+<li>результаты наблюдений и</li>
+<li>критерий.</li>
+</ul>
+<p>С результатами наблюдений более-менее очевидно.</p>
+<p><strong>Критерий</strong> — это правило, согласно которому гипотезу либо принимают, либо отклоняют. Однако перед тем как проверять гипотезу, её так-то нужно сформулировать, и сделать это правильно, поскольку от формулировки гипотезы зависит интерпретация результатов проверки и дальнейшее использование полученной информации.</p>
+<p>Используемая статистика сама по себе является [непрерывной] случайной величиной, а значит может быть построено её распределение. Критерий будет разделять это распределение на непересекающиеся области. В результате чего возникает <strong>критическая область</strong> — область отклонения гипотезы. Дополнением к ней является область неотклонения гипотезы.</p>
+<p>Критическая область может быть односторонней (при <span class="math inline">\(H_1:\theta &gt; \theta_0\)</span> или <span class="math inline">\(H_1: \theta &lt; \theta_0\)</span>) и двусторонней (при <span class="math inline">\(H_1:\theta \neq \theta_0\)</span>). «Размер» критической области определяется <strong>уровнем значимости</strong>.</p>
+<p>Статистический вывод — заключение о том, получили ли мы подтверждение альтернативной гипотезы — по структуре представляет собой <em>импликацию</em> и звучит так:</p>
+<blockquote class="blockquote">
+<p>Если значение статистики критерия попало в критическую область, то у нас есть основания отклонить нулевую гипотезу в пользу альтернативной</p>
+</blockquote>
+<p>К чему приводит факт, что это утверждение является имликацией:</p>
+<ul>
+<li>Если значение нашей статистики, которое мы рассчитали на выборке, <em>попало в критическую область</em>, то мы говорим о том, что <em>нулевая гипотеза отклоняется</em>.</li>
+<li>Если значение нашей статистики, которое мы рассчитали на выборке, <em>не попало в критическую область</em>, то мы <em>не получаем оснований для того, чтобы отклонить нулевую гипотезу</em>. Однако <em>мы также не получаем оснований, чтобы её «принять»</em>. Мы остаёмся в некотором неведении: мы не нашли различий, а есть они там или нет — хто ж их знает… Итого, мы не можем сделать никакого вывода.</li>
+</ul>
+<p>В этом и заключается асимметрия статистического вывода. Как раз для того, чтобы с ней как-то жить, мы работаем со статистической мощностью.</p>
+</section>
+<section id="stats-testing-errors-connection" class="level4" data-number="6.2.3.2">
+<h4 data-number="6.2.3.2" class="anchored" data-anchor-id="stats-testing-errors-connection"><span class="header-section-number">6.2.3.2</span> Связь ошибки первого и второго рода</h4>
+<p>Необходимо также помнить, что ошибки первого и второго рода связаны между собой так, что</p>
+<p><span class="math display">\[
+\alpha \rightarrow 0 \Rightarrow \beta \rightarrow 1
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+\beta \cdot \mathrm P (H_1) &amp; = \mathrm P (\hat H_0) = \mathrm P (\hat H_0 | H_0) \cdot \mathrm P (H_0) \Rightarrow \\
+\beta &amp; = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot \mathrm P(\hat H_0 | H_0) \\
+\beta &amp; = \frac{1}{\mathrm P (H_1)} \cdot \big (1 - \mathrm P (H_1 | H_0)\big) = \frac{1}{\mathrm P (H_1)} \cdot \mathrm P (H_0) \cdot (1 - \alpha)
+\end{split}
+\]</span></p>
+</section>
+</section>
+<section id="stats-testing-algorithm" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="stats-testing-algorithm"><span class="header-section-number">6.2.4</span> Агоритм тестирования статистических гипотез</h3>
+<p>Для тестирования гипотез есть два сценария: <em>первый</em> и <em>тот, которым мы будем пользоваться</em>. Первый вариант чуть более классический, второй — более гибкий.</p>
+<p><strong>Сценарий номер раз</strong></p>
+<ol type="1">
+<li>Формулировка гипотезы</li>
+<li>Выбор статистического критерия</li>
+<li>Выбор уровня значимости <span class="math inline">\(\alpha\)</span></li>
+<li>Построение закона распредления статистики критерия при условии, что нулевая гипотеза верна</li>
+<li>Определение границ критической области</li>
+<li>Расчёт выборочной статистики</li>
+<li>Определение, попадает ли наблюдемое значение статистики в критическую область и вынесение решения</li>
+</ol>
+<p><strong>Сценарий номер два</strong></p>
+<ol type="1">
+<li>Формулировка гипотезы</li>
+<li>Выбор статистического критерия</li>
+<li>Выбор уровня значимости <span class="math inline">\(\alpha\)</span></li>
+<li>Построение закона распредлеения статистики критерия при условии, что нулевая гипотеза верна</li>
+<li>Расчёт выборочной статистики</li>
+<li>Расчёт достигнутого уровня значимости <em>p-value</em></li>
+<li>Сопоставление <span class="math inline">\(\alpha\)</span> и <em>p-value</em> и вынесение решения</li>
+</ol>
+<p>Почему второй вариант более гибкий? Представим, что мы захотели понизить уровень значимости с <span class="math inline">\(0.05\)</span> до <span class="math inline">\(0.01\)</span> — такие уровни значимости всречаются, например, в медицине. Если мы идем по первому сценарию, то нам надо заново пересчитать критические значения и вновь проанализировать, попадает ли наблюдаемое значение в критическую область. Если мы адепты второго сценария, то нам надо только выполнить одно новое сравнение нашего <em>p-value</em> с новым уровнем значимости.</p>
+</section>
+<section id="размер-эффекта-и-статистическая-мощность" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="размер-эффекта-и-статистическая-мощность"><span class="header-section-number">6.2.5</span> Размер эффекта и статистическая мощность</h3>
+<p>Ошибку второго рода контролировать сложнее, чем ошибку первого рода, так как мы не обнаруживаем закономерность. Собственно, ошибка второго рода соответствует ситуации, когда мы <em>не обнаружили закономерность</em> при условии, что <em>закономерность в генеральной совокупности присутствует</em>. На эту вероятность влияет «размер» той закономерности, её «сила», в генеральной совокупности. Это велична называется размером эффекта. Численным выражением силы взаимосвязи в генеральной совокупности является <strong>размер эффекта (effect size)</strong>.</p>
+<p>Из-за того, что в случае ошибки второго рода мы не можем работать с её вероятностью <span class="math inline">\(\beta\)</span> — опят же, так как мы не обнаруживаем в этом случае закономерность — мы работает с вероятностью <span class="math inline">\(1-\beta = \mathbb{P}(\hat H_1|H_1)\)</span>. Это вероятность, с которой мы обнаружим закономерность при условии, что в генеральной совокупности закономерность есть. Эта величина называется <strong>статистическая мощность (statistical power)</strong> исследования.</p>
+<p>Статистическая мощность зависит от размера эффекта и объема выборки. Вопрос: как размер эффекта, статистическая мощность и объем выборки соотносятся между собой?</p>
+<ul>
+<li>Чем больше размер эффекта, тем меньшую по объему выборку нам необходимо набрать, чтобы достигнуть требуемой статистической мощности.</li>
+<li>Чем больше выборка, тем выше статистическая мощность исследования.</li>
+</ul>
+<hr>
+<p>Посмотреть, как все эти штуки друг с другом соотносятся можно <a href="https://rpsychologist.com/d3/nhst/">тут</a>.</p>
+<hr>
+</section>
+<section id="stats-testing-false-positive" class="level3" data-number="6.2.6">
+<h3 data-number="6.2.6" class="anchored" data-anchor-id="stats-testing-false-positive"><span class="header-section-number">6.2.6</span> Ложноположительный вывод</h3>
+<section id="stats-testing-multiple-comparisons" class="level4" data-number="6.2.6.1">
+<h4 data-number="6.2.6.1" class="anchored" data-anchor-id="stats-testing-multiple-comparisons"><span class="header-section-number">6.2.6.1</span> Проблема множественных сравнений</h4>
+<p>Итак, мы сравниваем попарно все группы наблюдений между собой. В каждом сравнении мы фиксируем вероятность ошибки первого рода с помощью уровня значимости на уровне <span class="math inline">\(0.05\)</span>. А какова будет вероятность ошибки, если мы проводим несколько сравнений?</p>
+<p>Считаем, что наши сравнения независимы, поэтому вероятности будут перемножаться1. Если верояность ошибиться в одном сравнении равна <span class="math inline">\(\alpha\)</span>, то вероятность сделать правильный вывод — <span class="math inline">\(1 - \alpha\)</span>. Тогда вероятность сделать правильный вывод в <span class="math inline">\(m\)</span> сравнениях — <span class="math inline">\((1 - \alpha)^m\)</span>. Отсюда мы можем вывести вероятность ошибиться хотя бы в одном сравнении:</p>
+<p><span class="math display">\[
+\mathbb{P}^′ = 1 - (1 - \alpha)^m
+\]</span></p>
+<p>Пусть у нас есть три группы, которые нам надо сравнить друг с другом — получается необходимо провести три сравнения. Итого вероятность ошибиться получается:</p>
+<p><span class="math display">\[
+\mathbb{P}^′ = 1 - (1 - 0.05)^3 \approx 0.143
+\]</span></p>
+<p>Значительно больше, чем <span class="math inline">\(0.05\)</span>, что нехорошо. И дальше только хуже. Поэтому нам надо либо корректировать уровень значимости, либо использовать мощные методы типа дисперсионного анализа.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l6_files/figure-html/alpha-raise-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="stats-testing-correction" class="level5" data-number="6.2.6.1.1">
+<h5 data-number="6.2.6.1.1" class="anchored" data-anchor-id="stats-testing-correction"><span class="header-section-number">6.2.6.1.1</span> Корректировка уровня значимости</h5>
+<p>Корректировать уровень значимости можно по-разному. Например, можно разделить <span class="math inline">\(\alpha\)</span> на количество попарных сравнений — такой способ называется поправкой Бонферрони (Bonferroni):</p>
+<p><span class="math display">\[
+\alpha’ = \frac{\alpha}{n},
+\]</span></p>
+<p>где <span class="math inline">\(n\)</span> — число попарных сравнений.</p>
+<p>Поправка Бонферрони считается самой консервативной поправкой — она достаточно сильно уменьшает уровень значимости, и мы можем не поймать искомую закономерность, то есть совершить ошибку второго рода2. Поэтому придумали более либеральные поправки, например, поправку Холма (Холма–Бонферрони, Holm) или поправку Тьюки (Tukey’s HSD test).</p>
+<p>На практике в силу того, что в статистических пакетах мы работаем с p-value, корректируется именно его значение.</p>
+<p>По достаточно незамысловатой логике Здесь: вариант для поправки Бонферрони.</p>
+<p><span class="math display">\[
+p &lt; \frac{\alpha}{n} \Rightarrow np &lt; \alpha
+\]</span></p>
+<p>Таким образом, мы просто сравниваем уже скорретированное p-value, которое нам считает программа, с тем же самым <span class="math inline">\(\alpha = 0.05\)</span>. Жизнь становится значительно проще и приятнее.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Шкала IQ устроена так, что её среднее значение равно 100, а стандартное отклонение 15.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Здесь использовано обозначение условной вероятности <span class="math inline">\(\mathrm P(A|B)\)</span>, то есть это вероятность того, что случилось событие <span class="math inline">\(A\)</span> при условии, что случилось событие <span class="math inline">\(B\)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./l5.html" class="pagination-link  aria-label=" &lt;span="" введение="" в="" статистику.="" случайный="" эксперимент="" и="" случайные="" величины&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part-andan.html" class="pagination-link" aria-label="Анализ данных">
+        <span class="nav-page-text">Анализ данных</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

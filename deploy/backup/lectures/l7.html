@@ -1,0 +1,2454 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.510">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>L // WLM 2023 - 7&nbsp; L7 // Описательные статистики. Корреляционный анализ</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./l8.html" rel="next">
+<link href="./part-andan.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#andan-descriptives" id="toc-andan-descriptives" class="nav-link active" data-scroll-target="#andan-descriptives"><span class="header-section-number">7.1</span> Описательные статистики</a>
+  <ul class="collapse">
+  <li><a href="#andan-descriptives-kinds-of-stats" id="toc-andan-descriptives-kinds-of-stats" class="nav-link" data-scroll-target="#andan-descriptives-kinds-of-stats"><span class="header-section-number">7.1.1</span> Виды статистики</a></li>
+  <li><a href="#andan-descriptives-central-tendency" id="toc-andan-descriptives-central-tendency" class="nav-link" data-scroll-target="#andan-descriptives-central-tendency"><span class="header-section-number">7.1.2</span> Меры центральной тенденции</a></li>
+  <li><a href="#andan-descriptives-variability" id="toc-andan-descriptives-variability" class="nav-link" data-scroll-target="#andan-descriptives-variability"><span class="header-section-number">7.1.3</span> Меры разброса</a></li>
+  <li><a href="#quantiles" id="toc-quantiles" class="nav-link" data-scroll-target="#quantiles"><span class="header-section-number">7.1.4</span> Квантили</a></li>
+  <li><a href="#andan-descriptives_variation_comparison" id="toc-andan-descriptives_variation_comparison" class="nav-link" data-scroll-target="#andan-descriptives_variation_comparison"><span class="header-section-number">7.1.5</span> Сравнение мер разброса</a></li>
+  <li><a href="#andan-descriptives-skewness" id="toc-andan-descriptives-skewness" class="nav-link" data-scroll-target="#andan-descriptives-skewness"><span class="header-section-number">7.1.6</span> Асимметрия</a></li>
+  <li><a href="#andan-descriptives-kurtosis" id="toc-andan-descriptives-kurtosis" class="nav-link" data-scroll-target="#andan-descriptives-kurtosis"><span class="header-section-number">7.1.7</span> Эксцесс</a></li>
+  </ul></li>
+  <li><a href="#корреляционный-анализ" id="toc-корреляционный-анализ" class="nav-link" data-scroll-target="#корреляционный-анализ"><span class="header-section-number">7.2</span> Корреляционный анализ</a>
+  <ul class="collapse">
+  <li><a href="#andan-corr-cov" id="toc-andan-corr-cov" class="nav-link" data-scroll-target="#andan-corr-cov"><span class="header-section-number">7.2.1</span> Ковариация</a></li>
+  <li><a href="#andan-corr-cor" id="toc-andan-corr-cor" class="nav-link" data-scroll-target="#andan-corr-cor"><span class="header-section-number">7.2.2</span> Корреляция</a></li>
+  <li><a href="#andan-corr-scales" id="toc-andan-corr-scales" class="nav-link" data-scroll-target="#andan-corr-scales"><span class="header-section-number">7.2.3</span> Коэффициенты корреляции для разных шкал</a></li>
+  </ul></li>
+  <li><a href="#частный-и-множественный-коэффициент-корреляции" id="toc-частный-и-множественный-коэффициент-корреляции" class="nav-link" data-scroll-target="#частный-и-множественный-коэффициент-корреляции"><span class="header-section-number">7.3</span> Частный и множественный коэффициент корреляции</a></li>
+  <li><a href="#другие-корреляции" id="toc-другие-корреляции" class="nav-link" data-scroll-target="#другие-корреляции"><span class="header-section-number">7.4</span> Другие корреляции</a>
+  <ul class="collapse">
+  <li><a href="#phi-коэффициент" id="toc-phi-коэффициент" class="nav-link" data-scroll-target="#phi-коэффициент"><span class="header-section-number">7.4.1</span> <span class="math inline">\(\phi\)</span>-коэффициент</a></li>
+  <li><a href="#бисериальный-коэффициент-корреляции" id="toc-бисериальный-коэффициент-корреляции" class="nav-link" data-scroll-target="#бисериальный-коэффициент-корреляции"><span class="header-section-number">7.4.2</span> Бисериальный коэффициент корреляции</a></li>
+  <li><a href="#рангово-бисериальный-коэффициент-корреляции" id="toc-рангово-бисериальный-коэффициент-корреляции" class="nav-link" data-scroll-target="#рангово-бисериальный-коэффициент-корреляции"><span class="header-section-number">7.4.3</span> Рангово-бисериальный коэффициент корреляции</a></li>
+  </ul></li>
+  <li><a href="#andan-cor-fisher-transform" id="toc-andan-cor-fisher-transform" class="nav-link" data-scroll-target="#andan-cor-fisher-transform"><span class="header-section-number">7.5</span> Преобразование Фишера</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<section id="andan-descriptives" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="andan-descriptives"><span class="header-section-number">7.1</span> Описательные статистики</h2>
+<section id="andan-descriptives-kinds-of-stats" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="andan-descriptives-kinds-of-stats"><span class="header-section-number">7.1.1</span> Виды статистики</h3>
+<p>Статистика [как набор методов и инструментов] делится на два вида — описательная статистика и статистика вывода.</p>
+<ul>
+<li><strong>Описательная статистика (descriptive statistics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)</strong> занимается обработкой статистических данных, их наглядным представлением, и собственно описанием через некоторые характеристики.
+<ul>
+<li>Эти характеристики, количественно описывающие особенности имеющихся данных, называются <strong>описательными статистиками (descriptive statistics<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>)</strong>.</li>
+<li><em>Задача описательной статистики</em> — ёмко описать имеющиеся данные и составить на основе этих описаний общее представление о них, а также обнаружить особенности, которые могут повлиять на дальнейший анализ.</li>
+</ul></li>
+<li><strong>Статистика вывода (inferential statistics)</strong> занимается поиском ответов на содержательные вопросы, которые мы задаем данным в ходе их анализа в рамках научных и практических исследований.
+<ul>
+<li>Состоит из двух компонентов — <em>тестирования статистических гипотез</em> и <em>статистических методов</em>.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Замечание о машинном обучении">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Замечание о машинном обучении
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>В названии курса упомянуто «машинное обучение». Иногда его причисляют к статистике, иногда рассматривают отдельно. На самом же деле, статистические методы лежат где-то между статистикой вывода и машинным обучением.</p>
+<p>Почему?</p>
+<p>Дело в том, что на статистические методы можно смотреть по-разному.</p>
+<ul>
+<li>Если нашей задачей является поиск ответов на <strong>исследовательские</strong> вопросы о закономерностях, о связи каких-либо факторов или влиянии переменных друг на друга, то мы будем смотреть на статистические модели с точки зрения статистики вывода. Это позволит нам находить ответы на интересующие нас вопросы — причем не важно, говорим мы о научных исследованиях или об исследованиях в индустрии.</li>
+<li>Если перед нами стоит задача хорошо <strong>предсказывать</strong> одни переменные на основании значений других — например, выдавать рекомендации на Яндекс.Музыке или в Яндекс.Лавке&nbsp;— то мы будем смотреть на те же статистические модели с точки зрения машинного обучения.</li>
+</ul>
+<p>То есть, модели в анализе данных и машинном обучении одни и те же, но то, какую модель мы назовем хорошей и как мы эту «хорошесть» определим, будет отличаться в зависимости от задачи&nbsp;— <em>исследовательская</em> или <em>предиктивная</em>&nbsp;— которая перед нами стоит.</p>
+</div>
+</div>
+</section>
+<section id="andan-descriptives-central-tendency" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="andan-descriptives-central-tendency"><span class="header-section-number">7.1.2</span> Меры центральной тенденции</h3>
+<p>Итак, мы хотим описать наши данные. Точнее, распределения переменных, которые у нас в данных есть. Хотим сделать это просто и ёмко. Насколько просто и ёмко? Ну, допустим максимально — одним числом. Для этого неплохо подойдет значение переменной, которое лежит <em>в центре</em> распределения.</p>
+<p>Как мы будем искать, что там в центре распределения? Зависит от шкалы, в которой измерена конкретная переменная.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Шкала</strong></th>
+<th style="text-align: left;"><strong>Мера центральной тенденции</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>Номинальная</em></td>
+<td style="text-align: left;">Мода</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Порядковая</em></td>
+<td style="text-align: left;">Медиана</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Интервальная</em></td>
+<td style="text-align: left;">Среднее арифметическое</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Абсолютная</em></td>
+<td style="text-align: left;">Среднее арифметическое, геометрическое и др.</td>
+</tr>
+</tbody>
+</table>
+<p>Однако есть некоторые нюансы.</p>
+<section id="andan-descriptives-mode" class="level4" data-number="7.1.2.1">
+<h4 data-number="7.1.2.1" class="anchored" data-anchor-id="andan-descriptives-mode"><span class="header-section-number">7.1.2.1</span> Мода</h4>
+<p>Самый простой вариант найти центральную тенденцию — это определить наиболее часто встречающееся значение переменной. Это значение называется <em>модой (mode)</em>.</p>
+<div id="def-mode-discrete" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 7.1 </strong></span><strong>Мода</strong> [дискретной переменной] — наиболее часто встречающееся значение данной переменной.</p>
+</div>
+<p>Например, у нас есть следующий ряд наблюдений по какой-то переменной:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 3 &amp; 4 &amp; 6 &amp; 3 &amp; 2 &amp; 3 &amp; 3 &amp; 2 &amp; 4 &amp; 1
+\end{bmatrix}
+\]</span></p>
+<p>Если мы посчитаем, сколько раз встретилась каждое значение переменной и составим таблицу частот, то получим следующее:</p>
+<p><span class="math display">\[
+\begin{matrix}
+\text{Значение} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 6 \\
+\text{Частота}  &amp; 2 &amp; 2 &amp; 4 &amp; 2 &amp; 1
+\end{matrix}
+\]</span></p>
+<p>Очевидно, что <span class="math inline">\(3\)</span> встречается чаще других значений — это и есть мода.</p>
+<p>Понятно, что если на нашей шкале нет чисел, а есть текстовые лейблы, это ничего не меняет. Пусть у нас есть переменная с кодами аэропортов:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+\text{DME} &amp; \text{LED} &amp; \text{IST} &amp; \text{AER} &amp; \text{IST} &amp;\text{SVO} &amp; \text{LED} &amp; \text{VKO} &amp; \text{LED} &amp; \text{IST} &amp; \text{IST} &amp; \text{VKO} &amp; \text{AER} &amp; \text{DME}
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{matrix}
+\text{Значение} &amp; \text{DME} &amp; \text{LED} &amp; \text{IST} &amp; \text{AER} &amp; \text{SVO} &amp; \text{VKO}\\
+\text{Частота}  &amp; 2 &amp; 3 &amp; 4 &amp; 2 &amp; 1 &amp; 2
+\end{matrix}
+\]</span></p>
+<p>Мода — <span class="math inline">\(\text{IST}\)</span> (Международный аэропорт Стамбула, İstanbul Havalimanı).</p>
+<p>Так мы действуем в случае с эмпирическим распределением. Если нам известна функция вероятности переменной (probability mass function, PMF), то мы можем определить моду, основываясь на ней:</p>
+<div id="def-mode-discrete-pmf" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 7.2 </strong></span><strong>Мода</strong> [дискретной переменной] — это значение переменной, при котором её функция вероятности принимает своё максимальное значение.</p>
+</div>
+<p><span id="eq-mode-pmf"><span class="math display">\[
+\text{mode}(X) = \arg \max(\text{PMF}(X)) = \arg \max_{x_i}(\mathbb{P}(X = x_i)),
+\tag{7.1}\]</span></span></p>
+<p>где <span class="math inline">\(X\)</span> — дискретная случайная величина, <span class="math inline">\(x_i\)</span> — значение этой случайной величины.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mode-pmf" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-pmf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-mode-pmf-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-pmf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.1: Определение моды с помощью функции вероятности
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Окей, мы видим, что <em>мода отлично считается на дискретных переменных</em>. А как же быть с непрерывными?</p>
+<p>Напомним себе, что вероятность того, что непрерывная случайная величина примет своё конкретное значение, равна нулю. Из этого следует, что все значения непрерывной случайное величины уникальны — каждое повторяется только один раз. Получается, что строить частотную таблицу бессмысленно…</p>
+<p>По этой причине <strong>для непрерывных переменных моду не считают</strong>.</p>
+<section id="andan-descriptives-mode-contunious" class="level5" data-number="7.1.2.1.1">
+<h5 data-number="7.1.2.1.1" class="anchored" data-anchor-id="andan-descriptives-mode-contunious"><span class="header-section-number">7.1.2.1.1</span> Мода для непрерывной переменной</h5>
+<p>Да, это так. Действительно, посчитать моду для непрерывной переменной способом, аналогичным тому, что мы увидели выше, не получится. Однако математиков это не остановило.</p>
+<p>Если мы посмотрим на график плотности вероятности (probability density function, PDF), который является аналогом PMF для дискретных переменных, мы увидим, что какие-то значения встречаются чаще, а какие-то реже. Что в общем-то логично. Напомним себе, как это выглядит, например, для любимого [стандартного] нормального распределения:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-continuous-freqs" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-freqs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-continuous-freqs-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-continuous-freqs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.2: Частоты интервалов значений непрерывной случайной величины на функции плотности распределения
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>То есть, самые часто встречающиеся значения — это <strong>пик распределения</strong>. Там и должна быть мода. Визуально это выглядит достаточно справедливо.</p>
+<p>Математики так и решили:</p>
+<div id="def-mode-continuous" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 7.3 </strong></span><strong>Мода</strong> [непрерывной переменной] — это значение переменной, при котором её функция плотности вероятности достигает локального<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> максимума.</p>
+</div>
+<p><span id="eq-mode-pdf"><span class="math display">\[
+\text{mode}(X) = \arg \max(\text{PDF}(X)) = \arg \max_{x \in S}f(x),
+\tag{7.2}\]</span></span></p>
+<p>гдe <span class="math inline">\(X\)</span> — непрерывная случайная величина, <span class="math inline">\(x\)</span> — значение этой случайной величины, <span class="math inline">\(S\)</span> — имеющаяся выборка значений переменной.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-continuous-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-continuous-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-continuous-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.3: Положение моды на функции плотности [стандартного] нормального распределения
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Хотя моду для непрерывной переменной вычислить можно, обычно этого не делают, так как достаточно других мер центральной тенденции для описания распределения.</p>
+</section>
+</section>
+<section id="andan-descriptives-unimodal-bimodal" class="level4" data-number="7.1.2.2">
+<h4 data-number="7.1.2.2" class="anchored" data-anchor-id="andan-descriptives-unimodal-bimodal"><span class="header-section-number">7.1.2.2</span> Унимодальные и полимодальные распределения</h4>
+<p>Нормальное распределение, как и ряд других — биномиальное, отрицательное биномиальное, пуассоновское — относятся к <em>унимодальным</em>. Такие распределения имеют только <em>одну моду</em> (см. <a href="#fig-norm-mode" class="quarto-xref">Рисунок&nbsp;<span>7.4</span></a>, <a href="#fig-binom-mode" class="quarto-xref">Рисунок&nbsp;<span>7.5</span></a>, <a href="#fig-poiss-mode" class="quarto-xref">Рисунок&nbsp;<span>7.6</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-norm-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-norm-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-norm-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-norm-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.4: Нормальное распределение (μ&nbsp;=&nbsp;2$, σ&nbsp;=&nbsp;0.5). Пунктирной линией обозначено положение моды.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-binom-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-binom-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-binom-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.5: Биномиальное распределение (n&nbsp;=&nbsp;50, p&nbsp;=&nbsp;0.3). Пунктирной линией обозначено положение моды.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-poiss-mode" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poiss-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-poiss-mode-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-poiss-mode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.6: Распределение Пуассона (λ&nbsp;=&nbsp;5.5). Пунктирной линией обозначено положение моды.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Это теоретические распределения. С эмпирическими распределениями дело обстоит так же, хотя они обычно менее гладенькие и красивые (см. <a href="#fig-mode-norm-sample" class="quarto-xref">Рисунок&nbsp;<span>7.7</span></a> и <a href="#fig-mode-nbinom-sample" class="quarto-xref">Рисунок&nbsp;<span>7.8</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mode-norm-sample" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-norm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-mode-norm-sample-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-norm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.7: Эмпирическое распределение, сгенерированное из нормального распределения (μ&nbsp;=&nbsp;8, σ&nbsp;=&nbsp;4, n&nbsp;=&nbsp;100). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mode-nbinom-sample" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mode-nbinom-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-mode-nbinom-sample-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-mode-nbinom-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.8: Эмпирическое распределение, сгенерированное из логнормального распределения (μ&nbsp;=&nbsp;1.1, σ&nbsp;=&nbsp;1.39, n&nbsp;=&nbsp;30). <code>set.seed(314)</code>. Пунктирной линией обозначено положение моды.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Однако на практике возможны и другие ситуации. Например, такие (<a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>7.9</span></a>, <a href="#fig-polymodal" class="quarto-xref">Рисунок&nbsp;<span>7.10</span></a>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-bimodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.9: Бимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.4, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-polymodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-polymodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-polymodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-polymodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.10: Полимодальное распределение. Сгенерировано из двух нормальных распределений (μ<sub>1</sub>&nbsp;=&nbsp;1.5, σ<sub>1</sub>&nbsp;=&nbsp;0.3, n<sub>1</sub>&nbsp;=&nbsp;80; μ<sub>2</sub>&nbsp;=&nbsp;3.4, σ<sub>2</sub>&nbsp;=&nbsp;0.5, n<sub>2</sub>&nbsp;=&nbsp;40) и бета-распределения (α&nbsp;=&nbsp;2, β&nbsp;=&nbsp;4, n&nbsp;=&nbsp;50). <code>set.seed(65)</code>. Пунктирными линиями обозначены положения мод.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>В первом случае (<a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>7.9</span></a>) мы видим <em>два локальных максимума</em> функции плотности вероятности — такое распределение называется <strong>бимодальным</strong>. Во втором случае (<a href="#fig-polymodal" class="quarto-xref">Рисунок&nbsp;<span>7.10</span></a>) функция плотности вероятности имеет <em>три локальных максимума</em> — такое распределение называется <strong>полимодальным</strong>. Бимональное распределение является частным случаем полимодального распределения.</p>
+<p>В прицнипе, пиков может быть и больше, однако при работе с реальными данными чаще всего мы сталкиваемся с бимодальными распределениями.</p>
+<p><strong>Что это значит и что с этим делать?</strong></p>
+<p>Бимодальное распределение сигнализирует нам о <strong>гетерогенности выборки</strong>. Если мы видим два выделяющихся пика, стоит подумать о том, что наша выборка неоднородна и в ней выделяются две подвыборки. Посмотрим на структуру выборки из примера выше (<a href="#fig-bimodal-struct" class="quarto-xref">Рисунок&nbsp;<span>7.11</span></a>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-struct" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bimodal-struct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-bimodal-struct-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bimodal-struct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.11: Структура бимодального распределения из <a href="#fig-bimodal" class="quarto-xref">Рисунок&nbsp;<span>7.9</span></a>. Для удобства сопоставления графиков плотностей вероятности по оси ординат отложены частоты.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Действительно, наше распределение состоит из двух других распределений, у каждого из которого есть своя мода — поэтому итоговое распределение получается бимодальным. Конечно, сейчас нам это очень удобно показать, потому что мы знаем, как это распределение генерировалось. Когда же у нас есть реальные данные и мы там наблюдаем такого «верблюда», бывает достаточно сложно сказать, что «пошло не так».</p>
+<p>Само по себе распределение не даст нам ответ на вопрос, почему оно бимодальное — чтобы выяснить причины такого поведения переменной нам потребуются другие данные. Обычно у вас в данных есть «соцдем» — пол, возраст, сфера и место работы, уровень обрвазования и др. Попробуйте построить распределение с разбиением исследуемой бимодальной переменной по переменным «соцдема». Это, к сожалению, не является рецептом успеха, поскольку причина гетерогенности выборки может и не содержаться в ваших данных, но такое изучение данных станет хорошим показателем того, что вы не просто «забили» на странное распределение своей переменной, а поисследователи возможные его причины.</p>
+<p>Если вам удалось найти причины гетерогенности выборки — допустим, у вас выделяются подвыборки «бакалавры» и «магистры» — стоит подумать о том, как обойтись с этой переменной в планируемом анализе, так как игнорировать её, по-видимому, нельзя, поскольку она влияет на вариатиность данных.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Соцдем лишним не бывает">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Соцдем лишним не бывает
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>На этапе планирования исследования подумайте о том, чем могут отличаться ваши респонденты или испытуемые между собой, помимо индивидуальных различий.</p>
+<ul>
+<li>Если в эксперименте используете задачу мысленного вращения (mental rotation), вполне возможно, испытуемые, работающие в сфере 3D-моделирования или дизайна интерьеров, могут сформировать подвыборку.</li>
+<li>В случае HR-исследования, где фиксируется доход респондента, необходимо записать город, в котором он проживает и/или работает.</li>
+<li>При изучении удовлетворенности городским пространством важными пунктами станут беременность, наличие/отсутствие детей, наличие/отсутствие автомобиля и др.</li>
+</ul>
+<p>И так далее. Примеров для каждого случая можно подобрать много.</p>
+<p>Стоит ли, скажем, в первом случае сразу исключить из выборки 3D-моделлеров? Зависит. От количества времени и денег на проведение исследования. Однако <em>как минимум эту информацию надо зафиксировать в данных</em>. А решить, исключать ли этих респондентов из выборки или нет, можно и позже. Главно об этом написать в отчете/статье, когда будете описывать предобработку данных.</p>
+</div>
+</div>
+</section>
+<section id="andan-descriptives-median" class="level4" data-number="7.1.2.3">
+<h4 data-number="7.1.2.3" class="anchored" data-anchor-id="andan-descriptives-median"><span class="header-section-number">7.1.2.3</span> Медиана</h4>
+<p>Для номинальной шкалы мода — это единственно возможная мера центральной тенденции, потому что на этой шкале отсутствует порядок элементов. На других шкалах наблюдения уже можно сортировать по возрастнию или убыванию, поскольку начиная с ранговой (порядковой) шкалы на всех них определена операция сравнения на «больше-меньше».</p>
+<p>Возьмем тот же ряд наблюдений, что и в предыдущем разделе:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 3 &amp; 4 &amp; 6 &amp; 3 &amp; 2 &amp; 3 &amp; 3 &amp; 2 &amp; 4 &amp; 1
+\end{bmatrix}
+\]</span></p>
+<p>Отсортируем наблюдения по возрастанию:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1  &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 &amp; 3 &amp; 4 &amp; 4 &amp; 6
+\end{bmatrix}
+\]</span></p>
+<p>Наша задача — определить центральную тенденцию. Давайте посмотрим, что оказалось в середине отсортированного ряда:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; \mathbf{3} &amp; 3 &amp; 3 &amp; 4 &amp; 4 &amp; 6
+\end{bmatrix}
+\]</span></p>
+<p>Это медиана. В данном случае она равна <span class="math inline">\(3\)</span>.</p>
+<div id="def-median" class="theorem definition">
+<p><span class="theorem-title"><strong>Определение 7.4 </strong></span><strong>Медиана (median)</strong> — это значение, которое располагается на середине отсортированного ряда значений переменной.</p>
+</div>
+<p>Медиана делит все наблюдения переменной ровно пополам и половина наблюдений оказывается по одну сторону от медианы, а половина — по другую.</p>
+<p>Если число наблюдений нечётное, то всё ясно — в середине отсортированного ряда будет какое-то значение. А если число наблюдений чётное? Тогда мы попадаем между значениями.</p>
+<p>Возьмем для примера такой вектор наблюдений:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+14 &amp; 10 &amp; 9 &amp; 16 &amp; 30 &amp; 3 &amp; 25 &amp; 8 &amp; 18 &amp; 7
+\end{bmatrix}
+\]</span></p>
+<p>Отсортируем:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+3 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 14 &amp; 16 &amp; 18 &amp; 25 &amp; 30
+\end{bmatrix}
+\]</span></p>
+<p>Найдем середину:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+3 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; | &amp; 14 &amp; 16 &amp; 18 &amp; 25 &amp; 30
+\end{bmatrix}
+\]</span></p>
+<p>В таком случае в качестве медианы берется среднее между двумя срединными значениями:</p>
+<p><span class="math display">\[
+\text{median} = \frac{10 + 14}{2} = 12
+\]</span></p>
+<p>Итого, формализовать вычисление медианы можно следующим образом:</p>
+<p><span id="eq-median-formula"><span class="math display">\[
+\text{median}(X) = X(a) =
+\cases{
+X\left(\frac{n+1}{2}\right), &amp; if  2&nbsp;|&nbsp;n \\
+\dfrac{X(\frac{n}{2}) + X(\frac{n}{2} + 1)}{2}, &amp; otherwise
+}
+\tag{7.3}\]</span></span></p>
+<p>где <span class="math inline">\(X\)</span> — ряд наблюдений случайной величины, <span class="math inline">\(n\)</span> — число наблюдений, <span class="math inline">\(X(a)\)</span> — наблюдение с индексом <span class="math inline">\(a\)</span> в отсортированном векторе <span class="math inline">\(X\)</span>.</p>
+<p>Если мы будем смотреть на медиану с позиции описания распределения, то она будет той самой линией, которая разделит площадь под графиком функции плотности вероятности пополам:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-norm" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-median-norm-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.12: Медиана нормального распределения
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>При этом форма распределения не имеет значения — площадь под графиком всегда будет делиться пополам:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-left-skew" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-left-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-median-left-skew-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-left-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.13: Медиана распределения с отрицательной асимметрией.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-right-skew" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-right-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-median-right-skew-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-right-skew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.14: Медиана распределения с положительной асимметрией.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-median-bimodal" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-median-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="l7_files/figure-html/fig-median-bimodal-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-median-bimodal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Рисунок&nbsp;7.15: Медиана бимодального распределения.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="andan-descriptives-mean" class="level4" data-number="7.1.2.4">
+<h4 data-number="7.1.2.4" class="anchored" data-anchor-id="andan-descriptives-mean"><span class="header-section-number">7.1.2.4</span> Среднее</h4>
+<p>Если наша переменная измерена в самых мощных шкалах — интервальной или абсолютной — то нам доступна ещё одна мера центральной тенденции.</p>
+<section id="andan-descriptives-arithmetic-mean" class="level5" data-number="7.1.2.4.1">
+<h5 data-number="7.1.2.4.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean"><span class="header-section-number">7.1.2.4.1</span> Арифметическое среднее</h5>
+<p>С этим существом все знакомы еще со школы. <strong>Арифметическое среднее (arithmetic mean, mean, average)</strong> считается так:</p>
+<p><span class="math display">\[
+\mathbb{M}_X = \bar X = \dfrac{\sum_{i=1}^{n}x_i}{n},
+\]</span></p>
+<p>где <span class="math inline">\(\bar X\)</span> — среднее арифметическое, <span class="math inline">\(x_i\)</span> — наблюдение в векторе <span class="math inline">\(X\)</span>, <span class="math inline">\(n\)</span> — количество наблюдений.</p>
+<p>Ну, то есть всё сложить и поделить на количество того, чего сложили. Изи.</p>
+<section id="andan-descriptives-arithmetic-mean-features" class="level6" data-number="7.1.2.4.1.1">
+<h6 data-number="7.1.2.4.1.1" class="anchored" data-anchor-id="andan-descriptives-arithmetic-mean-features"><span class="header-section-number">7.1.2.4.1.1</span> Свойства среднего арифметического</h6>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то среднее увеличится на это же константу.</strong></li>
+</ul>
+<p><span class="math display">\[
+\mathbb{M}_{X+c} = \mathbb{M}_X + c
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+\mathbb{M}_{X+c} = \frac{\sum_{i=1}^n (x_i + c)}{n} = \frac{\sum_{i=1}^n x_i + nc}{n} = \frac{\sum_{i=1}^n x_i}{n} + c = \mathbb{M}_X + c
+\]</span></p>
+<p>Иначе говоря, распределение просто сдвинется. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/mean_feature_1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то среднее увеличится во столько же раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+\mathbb{M}_{X \times c} = \mathbb{M}_X \times c
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+\mathbb{M}_{X \times c} = \frac{\sum_{i=1}^n (x_i \times c)}{n} = \frac{c \times \sum_{i=1}^n x_i}{n} = \frac{\sum_{i=1}^n x_i}{n} \times c = \mathbb{M}_X \times c
+\]</span></p>
+<p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/mean_feature_2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Тут, правда, явно <a href="#var_features">что-то ещё</a> произошло, но мы пока этого не знаем. Однако, отметит этот факт.</p>
+<ul>
+<li><strong>Сумма отклонений от среднего значения равна нулю.</strong></li>
+</ul>
+<p><span class="math display">\[
+\sum_{i=1}^n(x_i - \bar X) = 0
+\]</span></p>
+<p>Элегантное доказательство:</p>
+<p><span class="math display">\[
+\begin{split}
+\sum_{i=1}^n(x_i - \bar X) &amp; = \sum_{i=1}^n x_i - \sum_{i=1}^n \bar X = \sum_{i=1}^n x_i - n \bar X = \\
+&amp; = \sum_{i=1}^n x_i - n \times \frac{1}{n} \sum_{i=1}^n x_i = \sum_{i=1}^n x_i - \sum_{i=1}^n x_i = 0
+\end{split}
+\]</span></p>
+<p>Но можно это осмыслить и более просто графически.</p>
+<p><strong>Отклонение</strong> — это разность между средним и конкретным значением переменной. И, действительно, так как среднее находится в центре распределения, то часть значений лежит справа, а часть слева. Значит, будут как положительные, так и отрицательные отклонения — и их сумма в итоге будет равна нулю.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/zero_deviation_sum-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Среднее арифметическое не одиноко — есть и другие. Встретяться они вам примерно нигде — то есть о-о-о-очень редко и, скорее всего, в каком-то изощрённом виде. Но упомянуть их, пожалуй, стоит.</p>
+</section>
+</section>
+<section id="andan-descriptives-geometric-mean" class="level5" data-number="7.1.2.4.2">
+<h5 data-number="7.1.2.4.2" class="anchored" data-anchor-id="andan-descriptives-geometric-mean"><span class="header-section-number">7.1.2.4.2</span> Геометрическое среднее</h5>
+<p>Редко встречается в научных работах, но заради общего представления пусть будет. Поскольку оно считается через умножение, то может быть рассчитано только на абсолютной шкале.</p>
+<p><span class="math display">\[
+G_{X} = \sqrt[n]{\prod_{i=1}^n x_i} = \Big(\prod_{i=1}^n x_i\Big)^{\tfrac{1}{n}}
+\]</span></p>
+</section>
+<section id="andan-descriptives-quandratic-mean" class="level5" data-number="7.1.2.4.3">
+<h5 data-number="7.1.2.4.3" class="anchored" data-anchor-id="andan-descriptives-quandratic-mean"><span class="header-section-number">7.1.2.4.3</span> Квадратичное среднее</h5>
+<blockquote class="blockquote">
+<p>А вот это уже более полезная история. Мы с ним столкнёмся далее, правда под разными масками.</p>
+</blockquote>
+<p><strong>Квадратичное среднее (quadratic mean, root mean square, RMS)</strong> — это квадратный корень из среднего квадрата наблюдений. Ничего не понятно, поэтому по порядку.</p>
+<ul>
+<li>есть наблюдение <span class="math inline">\(x_i\)</span></li>
+<li>значит есть и его квадрат <span class="math inline">\(x_i^2\)</span></li>
+<li>мы умеем считать обычно среднее арифметическое, но ведь <span class="math inline">\(x_i^2\)</span> — это тоже наблюдение, просто в квадрате, так?</li>
+<li>значит можем посчитать среднее арифметическое квадратов наблюдений — <em>средний квадрат</em></li>
+</ul>
+<p><span class="math display">\[
+\frac{\sum_{i=1}^n x_i^2}{n}
+\]</span></p>
+<ul>
+<li>норм, а теперь извлечём из этого дела корень — получим то, что там надо</li>
+</ul>
+<p><span class="math display">\[
+S_X = \sqrt{\frac{\sum_{i=1}^n x_i^2}{n}}
+\]</span></p>
+<p>Per se<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> мы его вряд ли ещё когда-то увидим, но пару раз оно внезапно всплывет.</p>
+</section>
+<section id="andan-descriptives-harmonic-mean" class="level5" data-number="7.1.2.4.4">
+<h5 data-number="7.1.2.4.4" class="anchored" data-anchor-id="andan-descriptives-harmonic-mean"><span class="header-section-number">7.1.2.4.4</span> Гармоническое среднее</h5>
+<blockquote class="blockquote">
+<p>Суперэкзотичный покемон.</p>
+</blockquote>
+<p><span class="math display">\[
+H_X = \frac{n \prod_{i=1}^n x_i}{\sum_{i=1}^n (\tfrac{1}{x} \prod_{j=1}^n x_j)} = \frac{n}{\sum_{i=1}^n \tfrac{1}{x_i}}
+\]</span></p>
+</section>
+<section id="andan-descriptives-weighted-mean" class="level5" data-number="7.1.2.4.5">
+<h5 data-number="7.1.2.4.5" class="anchored" data-anchor-id="andan-descriptives-weighted-mean"><span class="header-section-number">7.1.2.4.5</span> Взвешенное среднее</h5>
+<p>Часто бывает такая ситуация, что нас нужно посчитать среднее по каким-либо имеющимся параметрам, но одни параметры для нас важнее, чем другие. Например, мы хотим вычислить суммарный балл обучающегося за курс на основе ряда работ, выполненных в течение курса, однако мы понимаем, что тест из десяти вопросов с множественном выбором явно менее показателен, чем, например, аналитическое эссе или экзаменационная оценка. Что делать? Взвесить параметры!</p>
+<p>Что значит взвесить? Умножить на некоторое число. На самом деле, любое. Пусть мы посчитали, что написать эссе в три абстрактных раза тяжелее, чем написать тест, а сдать экзамен в два раза тяжелее, чем написать эссе. Тогда мы можем присвоить баллу за тест вес <span class="math inline">\(1\)</span>, баллу за аналитическое эссе вес <span class="math inline">\(3\)</span>, а экзамену — вес <span class="math inline">\(6\)</span>. Тогда итоговая оценка за курс будет рассчитываться следующим образом:</p>
+<p><span class="math display">\[
+\text{final score } = 1 \cdot \text{test} + 3 \cdot \text{essay} + 6 \cdot \text{exam}
+\]</span></p>
+<p>Суперкласс. Однако! Весьма вероятно, что в учебном заведении принята единая система оценки для всех видов работ (ну, скажем, некая абстрактная десятибалльная система в сферическом вакууме). Получается, если и за тест, и за эссе, и за экзамен у студента по 10 баллов, то суммарный балл 100, что, кажется, больше, чем 10. Чтобы вернуться к изначальным границам баллов, нужно моделить суммарный балл на сумму весов параметров:</p>
+<p><span class="math display">\[
+\text{final score } = \frac{1 \cdot \text{test} + 3 \cdot \text{essay} + 6 \cdot \text{exam}}{1 + 3 + 6}
+\]</span></p>
+<p>Кайф! Собственно, это и есть взвешенное среднее. Коэффициенты, на которые мы умножаем значение парамернов, называются <em>весами параметров</em>. И в общем виде формула принимает следующий вид.</p>
+<p><span class="math display">\[
+\bar X = \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i} = \sum_{i=1}^n w_i' x_i,
+\]</span></p>
+<p>где <span class="math inline">\(x_i\)</span> — значения конкретных параметров, <span class="math inline">\(w_i\)</span> — веса конкретных параметров, <span class="math inline">\(w_i'\)</span> — нормированные веса параметров.</p>
+<p>Вторая часть формулы показывается нам, что можно облегчить себе вычислительную жизнь, если заранее нормировать веса, то есть разделить каждый коэффициент на сумму коэффициентов:</p>
+<p><span class="math display">\[
+w_i' = \frac{w_i}{\sum_{i=1}^n w_i}
+\]</span></p>
+<p>Тогда сумма коэффициентов будет равна единице. Так чаще всего и поступают, так как тогда коэффициент будет представлять долю, которую весит данный параметр в суммарной оценке. Удобно, практично, красиво.</p>
+<p>Взвещенное среднее часто применяется именно во всякого рода ассессментах, и не только образовательных. Например, вы HR-аналитик и оцениваете персонал. Вы аналитически вычисляете веса коэффициентов (допустим, с помощью линейной регрессии), а далее на их основе высчитаете интегральный балл, по которому будете оценивать сотрудников. Это как один из индустриальных примеров.</p>
+<p>Также оно применяется, когда в наших данных есть какая-то группировка (например, когорты), при этом группы неравномерны.</p>
+</section>
+</section>
+<section id="andan-descriptives-mean-vs-median" class="level4" data-number="7.1.2.5">
+<h4 data-number="7.1.2.5" class="anchored" data-anchor-id="andan-descriptives-mean-vs-median"><span class="header-section-number">7.1.2.5</span> Среднее vs медиана</h4>
+<p>Помимо того, что среднее и медиана информативны сами по себе, полезно смотреть на их взаимное расположение.</p>
+<blockquote class="blockquote">
+<p>Сравнивать будем моду, медиану и среднее [арифметическое].</p>
+</blockquote>
+<p>Итак, все три статистики — мода, медиана и среднее — описывают центральную тенденцию — некоторое значение изучаемой нами переменной, вокруг которого собираются другие значения. Но если их три и все они используются, значит между ними должны быть какие-то различия. Посмотрим, какие.</p>
+<p>Во-первых, <em>моду невозможно посчитать для непрерывной переменной</em>.</p>
+<p>Так как вероятность того, что непрерывная случайная величина принимает своё конкретное значение, равна нулю, каждое наблюдение в нашей выборке будет уникально — встретится ровно <em>один раз</em>. Вспомните [посмотрите] пример из предыдущей главы, где мы набирали числа из отрезка. Получается, что мода теряет свой смысл.</p>
+<p>Во-вторых, <em>медиану нельзя посчитать на номинальной шкале</em>.</p>
+<p>На номинальной шкале нет отношения порядка между элементами. Помните, на ней нельзя сравнивать на больше-меньше. Поэтому невозможно отсортировать наблюдения, а значит, и найти медиану.</p>
+<p>В-третьих, <em>среднее тоже нельзя посчитать на номинальной шкале</em>.</p>
+<p>Вообще, конечно, да — нельзя, потому что на номинальной шкале не определена операция сложения, входящая в вычисление среднего. Однако если на номинальной шкале есть только <em>две категории</em>, которые закодированы <code>0</code> и <code>1</code>, то посчитать среднее можно. Но что оно будет значить?</p>
+<p>Исходный математический смысл среднего явно утерян. Посмотрим на это по-другому: посчитать сумму единиц это всё равно, что посчитать <em>количество</em> единиц. То есть, если мы сложим все нули и единицы, то получим количество единиц среди всех наших наблюдений. А разделив количество единиц на количество наблюдений, мы получим <em>долю единиц</em> — то есть долю наблюдений с лейблом <code>1</code>.</p>
+<p>В-четвертых, <em>для дискретной переменной значение среднего арифметического будет не особо осмысленно.</em> Ну, скажем, странно сказать, что в аудитории в среднем стоят 15.86 столов или в российских семьях в среднем 1.5 ребенка. Конечно, в ряде случаев можно это как-то более-менее содержательно интерпретировать, но это требует усилий, а мы ленивые, поэтому лучше использовать медиану.</p>
+<p><strong>Итого, делаем следующие выводы</strong>:</p>
+<ul>
+<li>для номинальной шкалы пригодна только мода</li>
+<li>для дискретных переменных подходят мода и медиана
+<ul>
+<li>мода иногда лучше, так как точно всегда будет целым числом</li>
+</ul></li>
+<li>для непрерывных переменных подходят медиана и среднее</li>
+</ul>
+<p>Теперь нам надо разобраться, как будут себя вести меры центральной тенденции в зависимости от <em>формы распределения</em>.</p>
+<p><strong>На симметричном распределении мода, медиана и среднее совпадают</strong> [или, по крайней мере, находятся очень близко друг к другу]. Здесь и далее: красная линия — среднее, синяя — медиана, зелёная — мода.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/central_tendency_symm-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>На асимметричном распределении мода [практически] в пике.</strong> Практически, потому что функция плотности вероятности [черная линия на графике] на всегда точно аппроксимирует (в данном случае то же, что и сглаживает) эмпирическое распределение. На картинке ниже мы видим, что на гистограмме мода — самый высокий столбик, что и показывает нам зелёная линия, которой обозначена мода. Однако при сглаживании гистограммы пик немного съехал, и мода оказалась не совсем в вершине графика функции плотности вероятности.</p>
+<p>Вообще-то это нормально, потому что мода для непрерывной величины, которую мы и визуализируем с помощью графика плотности, либо не может быть посчитана вовсе, либо — если так получилось, и у нас все же есть повторяющиеся значения — не слишком хорошая мера центральной тенденции. В целом, и на симметричном распределении мода тоже может находиться немного в стороне от пика.</p>
+<p><strong>На асимметричном распределении медиана и среднее смещены в сторону хвоста. Среднее смещено сильнее медианы.</strong> Это связано с тем, что медиана зависит только от количества наблюдений, а среднее ещё и от самих значений. На картинке ниже пример для распределения с <em>правосторонней</em> асимметрии (потому что хвост справа) — среднее (красная линия) <em>правее</em> медианы (синяя линия).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/central_tendency_asymm_right-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>А это пример для распределения с <em>левосторонней</em> асимметрией (так как хвост слева) — среднее (красная линия) <em>левее</em> медианы (синяя линия).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/central_tendency_asymm_left-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Для того, чтобы лучше разобраться с тем, как большие и малые значения влияют на моду и медиану посмотрим такой пример. Пусть у нас есть оценки за выпускную квалификационную работу. Например, такие:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6 7 7 8 8</code></pre>
+</div>
+</div>
+<p>Посчитаем медиану и среднее:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.2</code></pre>
+</div>
+</div>
+<p>Среднее <span class="math inline">\(7.2\)</span> округлиться до <span class="math inline">\(7\)</span>, то есть можно считать, что среднее и медиана совпали. Ну, ок.</p>
+<p>Но в комиссии сидят два требовательных доктора наук, которые поставили оценки, сильно отличающиеся от остальных:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6 7 7 8 8 3 4</code></pre>
+</div>
+</div>
+<p>Посчитаем медиану и среднее теперь:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.142857</code></pre>
+</div>
+</div>
+<p>Медиана осталась на месте — всё ещё <span class="math inline">\(7\)</span>. А вот среднее <span class="math inline">\(6.1\)</span> округлится до <span class="math inline">\(6\)</span>. Казалось бы, это немного, но в смысле оценок — это прилично, и может сильно повлиять на GPA.</p>
+<p>Итого, среднее более чувствительно к нетипичным значениям (очень большим или очень малым).</p>
+<p>Есть ещё один интересный вариант распределений — <strong>бимодальные</strong>. Значит ли, что у этого распределения две моды? Не всегда. Посмотрим пример ниже:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/central_tendency_bimodal-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Мы видим, что на графике есть два пика, однако строго математически мода одна (зеленая линия) — и она в более высоком пике. Это логично, ибо там самые часто встречающиеся значения.</p>
+<p>Со средним и медианой происходит примерно то же, что и в случае асимметричного распределения. Второй пик смещает к себе обе меры центральной тенденции, причем среднее вновь сильнее, чем медиану.</p>
+</section>
+</section>
+<section id="andan-descriptives-variability" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="andan-descriptives-variability"><span class="header-section-number">7.1.3</span> Меры разброса</h3>
+<p>Итак, мы разобрались с мерами центральной тенденции. Однако для описания распределения их оказвается недостаточно. Почему?</p>
+<section id="why_we_need_variation" class="level4" data-number="7.1.3.1">
+<h4 data-number="7.1.3.1" class="anchored" data-anchor-id="why_we_need_variation"><span class="header-section-number">7.1.3.1</span> Зачем нужны меры разброса</h4>
+<p>Посмотрим на несколько распределений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/distributions_with_the_same_means_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Методом пристального взгляда можно установить, что у всех распределений одинаковые средние:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/distributions_with_the_same_means_mean-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Однако мы видим, что значения по-разному группируются вокруг среднего. Как они группируются — плотно, как на третьем рисунке, или не особо, как на втором — можно описать с помощью <strong>мер разброса</strong>, или <strong>мер вариативности</strong>.</p>
+</section>
+<section id="andan-descriptives-range" class="level4" data-number="7.1.3.2">
+<h4 data-number="7.1.3.2" class="anchored" data-anchor-id="andan-descriptives-range"><span class="header-section-number">7.1.3.2</span> Минимум, максимум, размах</h4>
+<p>Начнем с самого простого. Как наиболее просто описать вариативность? Мы работаем с выборкой, а в выборке, как известно, ограниченное число наблюдений. А если оно ограниченое, значит среди них точно есть наибольшее — <em>максимальное</em> — и наименьшее — <em>минимальное</em>.</p>
+<p>Допустим, мы открыли ведомость по «Анатомии и физиологии ЦНС» некоторой академической группы и пронаблюли следующее:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  7  4  6  9 10  5  6  9  6  6  3  6  8  8  5 10  7  5  7  3  9  4  8  3  8
+[26]  4  6  8  7  5</code></pre>
+</div>
+</div>
+<p>Мы можем посчитать минимальное и максимальне значение по этому ряду наблюдений:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p>Получается, что оценки варьируются от <span class="math inline">\(3\)</span> до <span class="math inline">\(10\)</span>. Ну, приемлемо. Разница между максимальным и минимальным значением называется <strong>размах (range)</strong>:</p>
+<p><span class="math display">\[
+\mathrm{range}(X) = \max(X) - \min(X)
+\]</span></p>
+<p>И вот мы преисполнившиеся идёт описывать вариативность переменной с помощью размаха, но обнаруживаем в другой ведомости этой же группы (по «Введению в психологию») вот что:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  6  8  4  6  7  5  7 10  4  6  7  8  7  6  8 10  8  7  7  6  8  7  6  8  6
+[26]  3  8  6  6  4</code></pre>
+</div>
+</div>
+<p>Размах вроде как такой же:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 10</code></pre>
+</div>
+</div>
+<p>Значит ли это, что вариативность одинаковая?</p>
+<p>Нарисуем.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/range_problem-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Кажется, что вариативность различна. Распределение оценок по «Анатомии и физиологии ЦНС» более равномерное, в то время как оценки по «Введению в психологию» активнее группируются где-то в середине.</p>
+<p>Штош, размах хоть и дает нам некоторую информацию о вариативности, нам этого маловато. Будем искать другие меры разброса.</p>
+</section>
+<section id="andan-descriptives-variance" class="level4" data-number="7.1.3.3">
+<h4 data-number="7.1.3.3" class="anchored" data-anchor-id="andan-descriptives-variance"><span class="header-section-number">7.1.3.3</span> Дисперсия</h4>
+<p>Хотя описание разброса переменных с помощью квантилей (в частности, квартилей) может дать нам много полезной информации, все же у них есть существенный недостаток: они никак не взаимодействуют с самими значениями нашей переменной.</p>
+<p>Действительно, мы делим нашу сортированную выборку на равные части, и смотрим, что в эти части попало. Но хотелось бы как-то учесть ещё и сами значения переменной в некотрой числовой мере разброса.</p>
+<p>Ну, хорошо. Поступим следующим образом. Мы все ещё хотим узнать, как наши значения группируются вокруг среднего. В предыдущей главе мы уже видели, что наши наблюдения отклоняются от среднего значения — значит мы можем посчитать отклонение для каждого наблюдения:</p>
+<p><span class="math display">\[
+d_i = \bar X - x_i
+\]</span></p>
+<p>Окей. Если мы сложим все отклоненияи и поделим на их количество (которое равно количеству наблюдений), то мы получим среднее отклонение, да?</p>
+<p><span class="math display">\[
+\bar d = \frac{1}{n} \sum_{i=1}^n \bar X - x_i
+\]</span></p>
+<p>Да. Однако есть одна проблема. Ранее мы выяснили, что сумма отклонений от среднего равна нулю, а значит и среднее отклонение также будет равно нулю.</p>
+<p>Хорошо. Но отрицательные значения ведь можно победить! Есть два пути:</p>
+<ul>
+<li><strong>Модуль.</strong> Преимущество первого в том, что размерность величины разброса остается той же, что и у измеряемой переменной.</li>
+<li><strong>Квадрат.</strong> Преимущество второго в том, что сильные отклонения будут оказывать более сильное влияние на окончательное значение статистики, в то время как для первого малые и большие отклонения равноценны.</li>
+</ul>
+<p>Второй путь на практике оказывается полезнее, так как мы хотим, чтобы сильно отличающиеся наблюдения вносили вклад в меру разброса.</p>
+<p>Возведя отклонения в квадрат, получим формулу <strong>дисперсии (вариации, variation)</strong>:</p>
+<p><span class="math display">\[
+\mathbb{D}_X = \text{var}(X) = \sigma^2 = \frac{1}{n} \sum_{i=1}^n (\bar X - x_i)^2
+\]</span></p>
+<p>Гениально.</p>
+<p>Не совсем. Формула, которую мы получили, пригодна для расчета <strong>дисперсии генеральной совокупности</strong> — на выборке же она будет давать смещенную оценку. Это мы выводили математически и проверяли на симуляциях в предыдущем блоке.</p>
+<p>Чтобы получить точную (несмещенную) оценку <strong>дисперсии по выборке</strong>, нам нужно исправить знаменатель дроби — вместо <span class="math inline">\(n\)</span> использовать <span class="math inline">\(n-1\)</span>:</p>
+<p><span class="math display">\[
+s^2 = \frac{1}{n-1} \sum_{i=1}^n (\bar X - x_i)^2
+\]</span></p>
+<p>Но почему?</p>
+<section id="andan-descriptives-df" class="level5" data-number="7.1.3.3.1">
+<h5 data-number="7.1.3.3.1" class="anchored" data-anchor-id="andan-descriptives-df"><span class="header-section-number">7.1.3.3.1</span> Степени свободы</h5>
+<p>Во всём виновата выборка.</p>
+<p>Взглянем на формулу дисперсии: в неё входит среднее арифметическое. То есть для того, чтобы рассчитать дисперсию на выборке, <em>сначала</em> нам необходимо <em>на этой же выборке</em> рассчитать среднее. Тем самым, мы как бы «фиксируем» нашу выборку этим средним значением — у значений нашего распределения становится меньше свободы для варьирования. Теперь свободно варьироваться могут <span class="math inline">\(n-1\)</span> наблюдение, так как последнее всегда будет возможно высчитать, исходя из среднего значения. По этой причине нам необходимо корректировать исходную формулу расчета дисперсии.</p>
+</section>
+</section>
+<section id="andan-descriptives-standard-deviation" class="level4" data-number="7.1.3.4">
+<h4 data-number="7.1.3.4" class="anchored" data-anchor-id="andan-descriptives-standard-deviation"><span class="header-section-number">7.1.3.4</span> Стандартное отклонение</h4>
+<p>И вот мы получили невероятное! У нас есть формула расчета меры разброса, которая позволяет учесть сами значения переменной! Ну не чудо ли!</p>
+<p>Чудо, конечно, однако есть некоторая проблема. Мы возводили отклонения в квадрат. Представим, что мы хотим посчитатить дисперсию роста студентов психфака. Пусть мы измеряли рост в метрах. Отклонения тоже будут в метрах (потому что среднее — это тоже метры, а если из метров вычитать метры, то мы получим метры). А при возведении метров в квадрат получаются метры в квадрате. Очевидно, что если мы модели квадратные метры на некоторое число (<span class="math inline">\(n\)</span>), они все еще останутся метрами в квадрате.</p>
+<p>О, нет! А счастье было так близко, так возможно! Получается, мы не можем интерпретировать эту меру разброса? Не сможем даже нарисовать?</p>
+<p>Да, но это не очень большая беда. Для того, чтобы вернуться обратно к единицам измерения нашей переменной, нам всего лишь нужно извлечь корень из дисперсии:</p>
+<p><span class="math display">\[
+\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n (\bar X - x_i)^2}
+\]</span></p>
+<p>Мы получили величину, называемую <strong>стандартным отклонением (standard deviation)</strong>. Чем она хороша? Тем, что её размерность совпадает с размерностью нашей переменной. Стандартное отклонение уже может быть достаточно интерпретабельно и хорошо визуализируемо.</p>
+<p>Кстати, формула выше, которая <a href="#quadratic_mean">что-то очень напоминает</a>, — это <strong>стандартное отклонение генеральной совокупности</strong>, потому что под корнем стоит дисперсия генеральной совокупности.</p>
+<p>Чтобы посчитать <strong>стандартное отклонение по выборке</strong>, нам надо извлечь корень из выборочной дисперсии:</p>
+<p><span class="math display">\[
+s = \sqrt{s^2} = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (\bar X - x_i)^2}
+\]</span></p>
+</section>
+<section id="andan_descriptives_var_features" class="level4" data-number="7.1.3.5">
+<h4 data-number="7.1.3.5" class="anchored" data-anchor-id="andan_descriptives_var_features"><span class="header-section-number">7.1.3.5</span> Свойства дисперсии и стандартного отклонения</h4>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то дисперсия не изменится.</strong></li>
+</ul>
+<p><span class="math display">\[
+\mathbb{D}_{X+c} = \mathbb{D}_{X}
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbb{D}_{X+c} &amp;= \frac{\sum_{i=1}^n \big((\bar X + c) - (x_i + c)\big)^2}{n-1} = \\
+&amp;= \frac{\sum_{i=1}^n \big(\bar X + c - x_i - c\big)^2}{n-1} \\
+&amp; = \frac{\sum_{i=1}^n \big(\bar X - x_i\big)^2}{n-1} = \mathbb{D}_X
+\end{split}
+\]</span></p>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то дисперсия увеличится в</strong> <span class="math inline">\(c^2\)</span> <strong>раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+\mathbb{D}_{X \cdot c} = c^2\mathbb{D}_{X}
+\]</span></p>
+<p>Вот почему:</p>
+<p><span class="math display">\[
+\mathbb{D}_{X \cdot c} = \frac{\sum_{i=1}^n (c\bar X - cx_i)^2}{n-1} = \frac{\sum_{i=1}^n c^2(\bar X - x_i)^2}{n-1} = \frac{c^2 \sum_{i=1}^n (\bar X - x_i)^2}{n-1} = c^2\mathbb{D}_X
+\]</span></p>
+<ul>
+<li><strong>Если к каждому значению распределения прибавить некоторое число (константу), то стандартное отклонение не изменится.</strong></li>
+</ul>
+<p><span class="math display">\[
+s_{X+c} = s_X
+\]</span></p>
+<p>Это следует из свойства дисперсии:</p>
+<p><span class="math display">\[
+s_{X+c} = \sqrt{s^2_{x+c}} = \sqrt{s^2_x} = s_x
+\]</span></p>
+<p>Как мы уже видели, распределение просто сдвигается на константу. Например, если к каждому значению синего распределения прибавить <span class="math inline">\(2\)</span>, получится красное — разброс у обоих распределений одинаковый:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/sd_feature_1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Если каждое значение распределение умножить на некоторое число (константу), то стандартное отклонение увеличится во столько же раз.</strong></li>
+</ul>
+<p><span class="math display">\[
+s_{X \cdot c} = c\cdot s_X
+\]</span></p>
+<p>Это также следует из свойства дисперсии:</p>
+<p><span class="math display">\[
+s_{X \cdot c} = \sqrt{s^2_{X \cdot c}} = \sqrt{s_X \cdot c^2} = c \cdot s_x
+\]</span></p>
+<p>Например, здесь каждое значение синего распределения умножили на <span class="math inline">\(3\)</span> и получили красное — разброс также увеличился в три раза, поэтому распределение более плоское:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/sd_feature_2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="quantiles" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="quantiles"><span class="header-section-number">7.1.4</span> Квантили</h3>
+<p>Возьмем распределение суммарного балла по шкале «Доверие к техническим интеллектуальным системам». Выглядит оно как-то так:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/taia_score_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Теперь нам понадобится определение квантиля распределения.</p>
+<p><strong>Квантиль</strong> — это значение переменной, которое <em>не превышается</em> с определенной вероятностью (обозначим её <span class="math inline">\(p\)</span>). Иначе говоря, <em>слева</em> от значения квантиля лежит <span class="math inline">\(p\%\)</span> наблюдений.</p>
+<p>Посмотрим на картинки.</p>
+<p><em>Слева</em> относительно квантиля-0.05 (<span class="math inline">\(x_{0.05}\)</span>) лежит 5% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/fifth_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Слева</em> относительно квантиля-0.68 (<span class="math inline">\(x_{0.68}\)</span>) лежит 68% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/68_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Слева</em> относительно квантиля-0.99 (<span class="math inline">\(x_{0.99}\)</span>) лежит 99% наблюдений:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/99_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Итак, мы поняли, а также приняли и осознали, что такое квантиль. Неясно только, как он нам поможет описать вариативность данных.</p>
+<section id="quartiles" class="level4" data-number="7.1.4.1">
+<h4 data-number="7.1.4.1" class="anchored" data-anchor-id="quartiles"><span class="header-section-number">7.1.4.1</span> Квартили</h4>
+<p>Для этого нам пригодятся специально обученные квантили. Оказалось достаточно удобно поделить все наблюдение на <em>четыре</em> равные части — вот так:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/quartiles_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Значения переменной, которые делят выборку на <em>четыре</em> равные части называются <strong>квартили</strong>. Получается, что</p>
+<ul>
+<li>слева от <strong>первого (нижнего) квартиля</strong> (<span class="math inline">\(Q_1\)</span>, <span class="math inline">\(x_{0.25}\)</span>) лежит 25% наблюдений</li>
+<li>слева от <strong>второго (среднего) квартиля</strong> (<span class="math inline">\(Q_2\)</span>, <span class="math inline">\(x_{0.50}\)</span>) лежит 50% наблюдений
+<ul>
+<li>а значит и справа 50% — получается второй квартиль делит выборку пополам — это <strong>медиана</strong></li>
+</ul></li>
+<li>слева от <strong>третьего (верхнего) квартиля</strong> (<span class="math inline">\(Q_3\)</span>, <span class="math inline">\(x_{0.75}\)</span>) лежит 75% наблюдений</li>
+</ul>
+<p>Четвертый квартиль не используется, потому что это максимальное значение — слева от него лежит 100% наблюдений.</p>
+<p>Кстати, можно также отметить, что первый квартиль — это медиана нижней (меньшей) половины наблюдений, а третий — медиана верней (большей) половины наблюдений.</p>
+<p>Вот такая вот прикольная история.</p>
+</section>
+<section id="deciles" class="level4" data-number="7.1.4.2">
+<h4 data-number="7.1.4.2" class="anchored" data-anchor-id="deciles"><span class="header-section-number">7.1.4.2</span> Децили</h4>
+<p>К слову, делить выборку можно не только на четверти — можно поделить, скажем, на 10 частей и получить <strong>децили</strong>. Так, слева от <em>первого дециля</em> (<span class="math inline">\(x_{0.10}\)</span>) лежит 10% наблюдений, а слева от <em>третьего</em> (<span class="math inline">\(x_{0.30}\)</span>) — 30%.</p>
+<p>Децили встречаются редко (в основном в психометрике), но знать о них полезно.</p>
+</section>
+<section id="percentiles" class="level4" data-number="7.1.4.3">
+<h4 data-number="7.1.4.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">7.1.4.3</span> Перцентили</h4>
+<p>Гораздо чаще встречаются <strong>перцентили</strong> — значения переменной, которые делят выборку на 100 равных частей. Например, так устроен ваш рейтинг. Только стоит помнить, что в рейтинге отсчет ведется от максимального среднего балла, поэтому если у вас <em>нулевой перцентиль</em> (<span class="math inline">\(x_{0.00}\)</span>) по программе, значит <em>выше</em> вас в рейтинге никого нет. А если ваш перцентиль, скажем, 36-ой (<span class="math inline">\(x_{0.36}\)</span>), то выше вас в рейтинге 36% ваших однокурсников, то есть вы все ещё в первой половине рейтинга, что очень неплохо!</p>
+</section>
+<section id="iqr" class="level4" data-number="7.1.4.4">
+<h4 data-number="7.1.4.4" class="anchored" data-anchor-id="iqr"><span class="header-section-number">7.1.4.4</span> Интерквартильный размах</h4>
+<p>И — о, ура! — мы наконец-то добрались до того, ради чего тут собрались! Зная первый и третий квартили распределения, можно рассчитать <strong>интерквартильный (межквартильный) размах (interquartile range, IQR)</strong>.</p>
+<p><span class="math display">\[
+\mathrm{IQR}(X) = Q_3(X) - Q_1(X)
+\]</span></p>
+<p>Интерквартильный размах — это разница между третьим и первым квартилем распределения. Эта величина описывает интервал значений признака, в котором лежит 50% наблюдений.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/iqr_vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>В данном случае он равен 40 — то есть 50% наблюдений лежит в пределах 40 единиц шкалы.</p>
+</section>
+<section id="boxplot" class="level4" data-number="7.1.4.5">
+<h4 data-number="7.1.4.5" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">7.1.4.5</span> Визуализация квартилей. Боксплот</h4>
+<p>Отображать квартили на гистограмме, во-первых, совершенно неудобно, а во-вторых, не то чтобы график получается информативный. Для визуализации квартилей придумали специальный тип графика — <strong>ящик с усами, или боксплот (boxplot)</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/boxplot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Прикольная ерунда. Научимся его читать.</p>
+<p>Значения переменной идут по вертикальной оси (оси ординат). По горизонтальной оси (оси абсцисс) здесь ничего не идет<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Жирная линия по середине ящика — медиана (второй квартиль). Нижняя граница ящика — первый квартиль, верхняя — третий. Получается, что границы ящика показывают нам значения, в пределах которых лежит половина наблюдений.</p>
+<p>Нижний ус — первый квартиль минус полтора межквартильных размаха. Верхний ус — третий квартиль плюс полтора мехквартильных размаха.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/boxplot_annotated-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="advanced">
+<details>
+<summary>
+<em>Замечание</em>
+</summary>
+Ящик может быть асимметричным — то есть верхняя его часть (расстояние между медианой и третьим квартилем) и нижняя его часть (расстояние между медианой и первым квартилем) могут быть разными. Это нам говорит об асимметричности распределения. Усы также могут быть неравными, если один из них упирается в максимум / минимум — тоже по причине асимметричности распределения.
+</details>
+</div>
+<p>Ну, допустим. А что тогда точки?</p>
+<section id="andan-descriptives-XX-iqr_outliers" class="level5" data-number="7.1.4.5.1">
+<h5 data-number="7.1.4.5.1" class="anchored" data-anchor-id="andan-descriptives-XX-iqr_outliers"><span class="header-section-number">7.1.4.5.1</span> Выбросы</h5>
+<p>Вообще справедливо было бы задаться вопросом, а зачем нам вообще усы на этом графике? И почему мы прибавляем полтора межквартильных размаха?</p>
+<p>Это <em>один из подходов</em> к определению нехарактерных значений — выбросов. При исследовании данных мы часто задаемся вопросом, если ли в наших данных такие значения, которые сильно отличаются от распределения той или иной переменной. Но как определить это самое «сильно»?</p>
+<p>Вот один из подходов. Будем считать, что значения, которые укладываются в интервал <span class="math inline">\((Q_1 - 1.5 \times \mathrm{IQR}, \, Q_3 + 1.5 \times \mathrm{IQR})\)</span>, нас устраивают. Все что попадает в этот интервал — это «нормальные», типичные значения нашей переменной. Те же, которые будут находиться за пределами этого интервала, мы назовем нетипичными, аномальными значениями, или <strong>выбросами</strong>. Эти значения и будут отмечены точками на графике boxplot.</p>
+<p>Что с ними делать? Во-первых, содержательной анализировать. Выбросы могут возникнуть по разным причинам. Может быть испытуемый отвлекся на прилетевшего в окно голубя, и у нас в данных появилось время реакции 200 секунд. Такие выбросы мы можем исключить из данных. А возможно в нашу выборку попали какие-то люди, которые, скажем, очень сильно или очень слабо доверяют искусственному интеллекту (как в примере на рисунке). Эти наблюдения необходимо дополнительно проанализировать — возможно, это представители специфических групп нашей генеральной совокупности (например, программисты-разработчики или люди пенсионного возраста). Анализ принесет нам дополнительную информацию, которую мы могли не учесть при планировании исследования. Крч, думать надо. И собирать побольше данных, чтобы можно было найти содержательную интерпретацию происходящему.</p>
+</section>
+</section>
+</section>
+<section id="andan-descriptives_variation_comparison" class="level3" data-number="7.1.5">
+<h3 data-number="7.1.5" class="anchored" data-anchor-id="andan-descriptives_variation_comparison"><span class="header-section-number">7.1.5</span> Сравнение мер разброса</h3>
+<p>Как и разные меры центральной тенденции, разные меры разброса по-своему хороши. Более того, они дружат с мерами центральной тенденции. Так, <em>с медианой используется мехквартильных размах</em>, а <em>со средним арифметическим — стандартное отклонение</em>.</p>
+<p>Размах подходит для всего сразу. Его стоит рассчитать, чтобы составить самое первое представление в разбросе, о границах измерения изучаемого признака [на нашей выборке].</p>
+<p>Стоит также отметить, что все, что мы тут обсуждали, совершенно не годиться для номинативных переменных. Однако у них тоже есть вариативность. Согласитель, что выборка из Питера, Москвы, и Казани более вариативна, чем выборка из Москвы. Аналогом меры разброса для номинальной переменной можно назвать количество уникальных значений этой переменной.</p>
+</section>
+<section id="andan-descriptives-skewness" class="level3" data-number="7.1.6">
+<h3 data-number="7.1.6" class="anchored" data-anchor-id="andan-descriptives-skewness"><span class="header-section-number">7.1.6</span> Асимметрия</h3>
+<p>Выше мы видели, что распределения бывают асимметричными, и нам бы хотелось каким-то образом — желательно, числовым — эту асимметричность описывать. Для этого среди описательнрых статистик существует коэффициент асимметрии. Приведем его формулу, но запоминать не будем, потому что она в целом не особо нужна — всё-таки мы доверяем R считать всякие вычисления.</p>
+<p><span class="math display">\[
+\mathrm{skew}(X) = \frac{\frac{1}{n}\sum_{i=1}^n (\bar X - x_i)^3}{\left(\frac{1}{n-1} \sum_{i=1}^n (\bar X - x_i)^2 \right)^{3/2}}
+\]</span></p>
+<p>Ознакомимся прежде всего в интерпретацией значений коэффицинета асимметрии:</p>
+<ul>
+<li><strong>положительный коэффициент асимметрии (positive skew)</strong> указывает на наличие <em>длинного правого хвоста</em> распределения, соответственно всё распределение будет скошено влево (<em>то есть преобладают низкие значения</em>)</li>
+<li><strong>отрицательный коэфффициент асимметрии (negative skew)</strong> указывает на наличие <em>длинного левого хвоста</em> распределения, соответственно всё распределения будет скошено вправо (то есть <em>преобладают высокие значения</em>)</li>
+<li>значения коэффициента асимметрии, близкие к нулю, говорят о симметричности распределения</li>
+</ul>
+<p>Посмотрим на картинках:</p>
+<ul>
+<li>симметричное распределение, коэффициент асимметрии равен нулю:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><em>левосторонняя асимметрия</em>, коэффициент асимметрии <em>отрицательный</em>:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><em>правосторонняя асимметрия</em>, коэффициент асимметрии <em>положительный</em>:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Содержательная интерпретация асимметрии очень сильно зависит от исследовательской области — когда-то мы вполне ожидаем асимметричность (например, для времени реакции), а когда-то это может свидетельствовать о проблемах с выборкой или, в случае психометрики, о проблемах формулировок вопросов.</p>
+</section>
+<section id="andan-descriptives-kurtosis" class="level3" data-number="7.1.7">
+<h3 data-number="7.1.7" class="anchored" data-anchor-id="andan-descriptives-kurtosis"><span class="header-section-number">7.1.7</span> Эксцесс</h3>
+<p>Помимо симметричности эмпирического распределения нас часто интересует, насколько наше распределение растянулось по горизонтальной оси. Это определяется коэффициентом эксцесса. Вновь приведем формулу, но не будем на ней останавливаться.</p>
+<p><span class="math display">\[
+\mathrm{kurt}(X) = \frac{\frac{1}{n}\sum_{i=1}^n (\bar X - x_i)^4}{\left(\frac{1}{n-1} \sum_{i=1}^n (\bar X - x_i)^2 \right)^{2}} - 3
+\]</span></p>
+<p>Опять же остановимся, прежде всего, на интерпретации значений коэффициента эксцесса:</p>
+<ul>
+<li><strong>нулевой коэффициент эксцесса</strong> обозначает такой же эксцесс, как у стандартного нормального распределения (то есть, «нормальный»)</li>
+<li><strong>положительный коэффициент эксцесса</strong> обозначает, что распределение имеет более острую вершину (то есть у нас очень много средних значений, но тонкие «хвосты» — мало низких и высоких значений)</li>
+<li><strong>отрицательный коэффициент эксцесса</strong> обозначает, что распределение имеет более пологую вершину (то есть у нас меньше средних значений и толстые «хвосты» — много низких и высоких значений)</li>
+</ul>
+<p>И также посмотрим на картинки:</p>
+<ul>
+<li>[стандартное] нормальное распределение, коэффициент эксцесса равен нулю</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>высокий пик распределения, коэффициент эксцесса положительный</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>низкий пик распределения, коэффициент эксцесса отрицательный</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="корреляционный-анализ" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="корреляционный-анализ"><span class="header-section-number">7.2</span> Корреляционный анализ</h2>
+<p>До этого момента мы рассматривали только отдельные переменные и их характерики, однако в практике мы редко работаем только с одной переменной. Как правило, у нас есть многомерное пространство признаков, и нас интересуют взаимосвязи между ними.</p>
+<section id="andan-corr-cov" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="andan-corr-cov"><span class="header-section-number">7.2.1</span> Ковариация</h3>
+<p>Мы хотим описать имеющиеся взаимосвязи как можно проще и опираясь на то, что у нас уже есть. Мы говорили, что дисперсия, или вариация, заключает в себе информацию об изменчивости признака. Если мы хотим исследовать взаимосвязь между признаками, то логично будет посмотреть, как изменяется один из признаков при изменении другого — иначе говоря, рассчитать <em>совместную изменчивость признаков</em>, или <strong>ко-вариацию (covariance)</strong>.</p>
+<p>Как мы её будем считать? Подумаем графически. Расположим две переменные на осях и сопоставим каждому имеющемуся наблюдению точку на плоскости.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Отметим средние значения по обеим переменным.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Заметим, что если наши наблюдения по переменной <span class="math inline">\(X_1\)</span> отклоняются в большую сторону от среднего, то они отклоняются в большую сторону от среднего и по переменной <span class="math inline">\(X_2\)</span>. Аналогично, если они будут отклоняться от среднего в меньшую сторону по <span class="math inline">\(X_1\)</span>, то в меньшую же сторону от среднего они будут отклоняться и по <span class="math inline">\(X_2\)</span>. Обозначим сонаправленные отклонения синим, а разнонаправленные — красным.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Если же у нас обратная ситуация — наблюдения по переменной <span class="math inline">\(X_1\)</span> отклоняются в большую сторону от среднего и вместе с этим они отклоняются в меньшую сторону от среднего и по переменной <span class="math inline">\(X_2\)</span>, и наоборот — то мы получим следующую картину:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Если же отклонения от среднего никак не связаны у двух переменны, то это будет выглядеть так:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l7_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Получается, мы можем на основании согласованности отклонений уже заключить о направлении связи. <em>Произведение отклонений по обеим величинам будет положительно, если отклонения сонаправленны</em>. Запишем это математически.</p>
+<p><span class="math display">\[
+(\bar x_1 - x_{i1}) (\bar x_2 - x_{i2}) &gt; 0 \Leftarrow \big( (\bar x_1 - x_{i1}) &gt; 0 \wedge (\bar x_2 - x_{i2}) &gt; 0 \big) \vee \big( (\bar x_1 - x_{i1}) &lt; 0 \wedge (\bar x_2 - x_{i2}) &lt; 0 \big)
+\]</span></p>
+<p>Соответственно, если отклонения будут направлены в разные стороны, из произведение будет отрицательным. Ну, осталось только понять, как совместные отклонения организованы в среднем — это и будет ковариацией двух величин:</p>
+<p><span class="math display">\[
+\mathrm{cov}(X_1, X_2) = \frac{1}{n} \sum_{i=1}^n (\bar X_1 - x_{i1}) (\bar X_2 - x_{i2})
+\]</span></p>
+<p>Важно отметить, что ковариация улавливает только <em>линейную составляющую</em> взаимосвязи между признаками, поэтому если <span class="math inline">\(\mathrm{cov}(X_1,X_2) = 0\)</span>, то мы можем сказать, что между переменными нет <em>линейной</em> взаимосвязи, однако это не значит, что между этими переменными нет никакой другой зависимости.</p>
+<center>
+<figure class="figure">
+<img src="pics/Correlation_examples.png" class="figure-img">
+<figcaption>
+На рисунке приведены стандартизированные значения ковариации.
+</figcaption>
+</figure>
+</center>
+<p>У ковариации есть два важных недостатка:</p>
+<ul>
+<li>это размерная величина, поэтому её значение зависит от единиц измерения признаков,</li>
+<li>она зависит от дисперсий признаков, поэтому по её значению можно определить только направление связи (прямая или обратная), однако ничего нельзая сказать о силе связи.</li>
+</ul>
+<p>Поэтому нам нужно как-то модицифировать эту статистику, чтобы мы могли больше вытащить из её значения.</p>
+</section>
+<section id="andan-corr-cor" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="andan-corr-cor"><span class="header-section-number">7.2.2</span> Корреляция</h3>
+<p>Раз ковариация зависит от дисперсии, то можно сделать некоторые математические преобразования, чтобы привести эмпирические распределения к какому-то одному виду — сделать так, чтобы они имели одинакое математическое ожидание (среднее) и одинаковую дисперсию. С этой задачей прекрасно справляется <a href="#standartization">стандартизация</a>. Напоминаю формулу:</p>
+<p><span class="math display">\[
+x_i^* = \frac{x_i - \bar x}{s}
+\]</span></p>
+<p>После такого преобразования математическое ожидание нашего распределения будет равно нуля, а стандартное отклонение — единице. Это избавит нас от влияния дисперсии на значение ковариации. Ковариация двух стандартно нормально распределенных величин называется <strong>корреляцией (correlation)</strong>.</p>
+<p><span class="math display">\[
+\mathrm{cov}(X_1^*, X_2^*) = \frac{1}{n-1} \sum_{i=1}^n x_{i1}^* x_{i2}^* = \mathrm{corr}(X_1, X_2),
+\]</span> где <span class="math inline">\(X_1^*\)</span> и <span class="math inline">\(X_2^*\)</span> — стандартизированные величины <span class="math inline">\(X_1\)</span> и <span class="math inline">\(X_2\)</span> соответственно.</p>
+<p>Корреляцию можно выразить через ковариацию:</p>
+<p><span class="math display">\[
+\mathrm{corr}(X_1, X_2) = \frac{1}{n-1} \sum_{i=1}^n \Big( \frac{\bar x_1 - x_{i1}}{s_1} \Big) \Big( \frac{\bar x_2 - x_{i2}}{s_2} \Big) =
+\frac{1}{s_1 s_2} \Big( \frac{1}{n-1} \sum_{i=1}^n (\bar x_1 - x_{i1})(\bar x_2 - x_{i2}) \Big) = \frac{\mathrm{cov}(X_1, X_2)}{s_1 s_2}
+\]</span></p>
+<p>Если внимательно всмотреться в формуле, то можно обнаружить, что корреляция это не что иное, как стандартизированное значение ковариации.</p>
+<p>Коэффициент корреляции имеет четкие пределы изменения: <span class="math inline">\([-1; \,1]\)</span>. Крайнее левое значение говорит о том, что присутствует полная обратная линейная взаимосвязь, крайнее правое — что присутствует полная прямая линейная взаимосвязь. Как и ковариация, корреляция ловит <em>только линейную составляющую</em> связи, поэтому нулевое значение корреляци показывает, что между переменными отсутствует <em>линейная взаимосвязь</em>. Это всё еще не значит, что связи нет вовсе.</p>
+<section id="интерпретация-коэффициента-корреляции" class="level4" data-number="7.2.2.1">
+<h4 data-number="7.2.2.1" class="anchored" data-anchor-id="интерпретация-коэффициента-корреляции"><span class="header-section-number">7.2.2.1</span> Интерпретация коэффициента корреляции</h4>
+<p>Преимущество корреляции над ковариацией в том, что она отражает не только направление, но и силу связи:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Значение коэффициента</th>
+<th style="text-align: center;">Интерпретация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-1.0\)</span> – <span class="math inline">\(-0.9\)</span></td>
+<td style="text-align: center;">очень сильная обратная связь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-0.9\)</span> – <span class="math inline">\(-0.7\)</span></td>
+<td style="text-align: center;">сильная обратная связь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-0.7\)</span> – <span class="math inline">\(-0.5\)</span></td>
+<td style="text-align: center;">средняя обратная связь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-0.5\)</span> – <span class="math inline">\(-0.3\)</span></td>
+<td style="text-align: center;">слабая обратная связь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-0.3\)</span> – <span class="math inline">\(0.0\)</span></td>
+<td style="text-align: center;">очень слабая обратная связь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(0.0\)</span> – <span class="math inline">\(0.3\)</span></td>
+<td style="text-align: center;">очень слабая прямая связь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0.3\)</span> – <span class="math inline">\(0.5\)</span></td>
+<td style="text-align: center;">слабая прямая связь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(0.5\)</span> – <span class="math inline">\(0.7\)</span></td>
+<td style="text-align: center;">средняя прямая связь</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0.7\)</span> – <span class="math inline">\(0.9\)</span></td>
+<td style="text-align: center;">сильная прямая связь</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(0.9\)</span> – <span class="math inline">\(1.0\)</span></td>
+<td style="text-align: center;">очень сильная прямая связь</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="andan-corr-test" class="level4" data-number="7.2.2.2">
+<h4 data-number="7.2.2.2" class="anchored" data-anchor-id="andan-corr-test"><span class="header-section-number">7.2.2.2</span> Тестирование статистической значимости коэффициента корреляции</h4>
+<p>Оценку коэффициента корреляции мы получаем методом моментов, заменяя истинный момент <span class="math inline">\(\rho_{ij}\)</span> выборочным <span class="math inline">\(r_{ij}\)</span>:</p>
+<p><span class="math display">\[
+\hat \rho_{ij} = \overline{\big( (X_{ki} - \bar X_i) (X_{kj} - \bar X_j) \big)} = r_{ij}
+\]</span></p>
+<p>Если в генеральной совокупности связь между признаками отсутствует, то есть <span class="math inline">\(\rho_{ij} = 0\)</span>, будет ли равен нулю <span class="math inline">\(r_{ij}\)</span>? Можно с уверенностью сказать, что не будет, так как выборочный коэффициент корреляции — случайная величина. А мы помним, что вероятность принятия случайной величиной своего конкретного значения равна нулю.</p>
+<p>Тогда необходимо протестировать статистическую гипотезу:</p>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \rho_{ij} = 0 \; \text{(линейной связи нет)} \\
+H_1&amp;: \rho_{ij} \neq 0 \; \text{(наиболее частый вариант альтернативы)}
+\end{split}
+\]</span></p>
+<p>Для проверки нулевой гипотезы используется следующая статистика:</p>
+<p><span class="math display">\[
+t = \frac{r_{ij}}{\sqrt{\frac{1 - r^2_{ij}}{n-2}}} \overset{H_0}{\thicksim} t(\nu = n-2)
+\]</span></p>
+<p>Вывод о статистической значимости коэффициента корреляции делается согласно алгоритму тестировния статистических гипотез.</p>
+</section>
+<section id="размер-эффекта-в-корреляционном-анализе" class="level4" data-number="7.2.2.3">
+<h4 data-number="7.2.2.3" class="anchored" data-anchor-id="размер-эффекта-в-корреляционном-анализе"><span class="header-section-number">7.2.2.3</span> Размер эффекта в корреляционном анализе</h4>
+<p>Еще одна статистика, которая нам необходима — это размер эффекта. Напомним себе, что размер эффекта — это численное выражение силы взаимосвязи между переменными в генеральной совокупности. Здесь нам необходимо призадуматься, и осознать, что вообще-то корреляция сама по себе выражает силу взаимосвязи между переменными. И, да, это правда — размером эффекта для коэффициента корреляции является сам коэффициент корреляции. Удобненько.</p>
+<p>Так, к сожалению, будет не всегда, но вот с корреляцией это так. Ну, и хорошо.</p>
+<p>Рекомендации по интерпретации [абсолютного значения] коэффициента корреляции с точки зрения размера эффекта для социальных наук такие:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Значение коэффициента</th>
+<th style="text-align: center;">Размер эффекта</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
+<td style="text-align: center;">Малый (small)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(0.3\)</span></td>
+<td style="text-align: center;">Средний (medium)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0.7\)</span></td>
+<td style="text-align: center;">Большой (large)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="доверительный-интервал-для-коэффициента-корреляции" class="level4" data-number="7.2.2.4">
+<h4 data-number="7.2.2.4" class="anchored" data-anchor-id="доверительный-интервал-для-коэффициента-корреляции"><span class="header-section-number">7.2.2.4</span> Доверительный интервал для коэффициента корреляции</h4>
+<p>С построением интервальной оценки коэффциента корреляции возникают некоторые сложности. Наша задача состоит в том, чтобы определить в каких границах будет лежать значение истинного коэффициента корреляции с заданной вероятностью:</p>
+<p><span class="math display">\[
+\mathbb{P}(\rho_{ij,\min} &lt; \rho_{ij} &lt; \rho_{ij,\max}) = \gamma
+\]</span></p>
+<p>Нам необходимо найти статистику, закон распределения корой известен, однако ранее упомянутся статистика не подходит, так как она имеет распределение Стьюдента, когда верна нулевая гипотеза об отсутствии связи. Если же мы строим интервальную оценку, нас интересует случай наличия связи.</p>
+<p>Такую статистику искали долго, и её удалось найти, когда ввели определённое преобразование выборочного критерия корреляции — <em>z-преобразования Фишера</em>:</p>
+<p><span class="math display">\[
+z(r_{ij}) = \frac{1}{2} \ln \frac{1 + r_{ij}}{1 - r_{ij}} \thicksim \mathcal{N}(\bar z_{ij}, \tfrac{1}{n-3}),
+\]</span> где <span class="math inline">\(n\)</span> — объём выборки, а <span class="math inline">\(\bar z_{ij}\)</span> получается расчётом по указанной формуле после подставления точечной оценки коэффициента корреляции.</p>
+<p>Тогда интервальная оценка для величины <span class="math inline">\(z_{ij, \mathrm{true}}\)</span> приобретает такой вид:</p>
+<p><span class="math display">\[
+\mathbb{P}\Big( \bar z_{ij} - t_\gamma \sqrt{\tfrac{1}{n-3}} &lt; z_{ij, \mathrm{true}} &lt; \bar z_{ij} + t_\gamma \sqrt{\tfrac{1}{n-3}}  \Big) = \gamma
+\]</span></p>
+<p>Далее путём обратного преобразования получаются значения границ интервала <span class="math inline">\((\rho_{ij,\min}, \; \rho_{ij,\max})\)</span>.</p>
+</section>
+</section>
+<section id="andan-corr-scales" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="andan-corr-scales"><span class="header-section-number">7.2.3</span> Коэффициенты корреляции для разных шкал</h3>
+<p>Дла разных шкал разработаны разные коэффициенты корреляции. Оценки коэффициентов будут рассчитываться по-разному, но логика тестирования статистических гипотез остаётся одинаковой.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Переменная <span class="math inline">\(X\)</span></th>
+<th style="text-align: center;">Переменная <span class="math inline">\(Y\)</span></th>
+<th style="text-align: center;">Мера связи</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Коэффициент Пирсона</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ранговая, интервальная или отношений</td>
+<td style="text-align: center;">Ранговая, интервальная или отношений</td>
+<td style="text-align: center;">Коэффициент Спирмена</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Коэффициент Кенделла</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="частный-и-множественный-коэффициент-корреляции" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="частный-и-множественный-коэффициент-корреляции"><span class="header-section-number">7.3</span> Частный и множественный коэффициент корреляции</h2>
+<p>Если у нас два признака, то с ними всё достаточно понятно. А если признаком много? Тогда у нас могут быть сложные взаимосвязи, и возможен такой случай, что некоторый признак оказывает связан как с одним, так и с другим из интересующих нас. Таким образом, мы можем наблюдать <em>ложную корреляцию</em>. Чтобы избавиться от влияния сторонних признаков, используюся частные коэффициенты корреляции.</p>
+<p>В случае нескольких переменных удобно представить результаты вычисления коэффициентов корреляции в виде <strong>корреляционной матрицы</strong>, отображающей связи всех признаков со всеми:</p>
+<p><span class="math display">\[
+R =
+\begin{pmatrix}
+1 &amp; r_{12} &amp; \dots &amp; r_{1p} \\
+r_{12} &amp; 1 &amp; \dots &amp; r_{2p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+r_{p1} &amp; r_{p2} &amp; \dots &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p>В корреляционной матрице на главной диагонали стоят единицы, отражающай связь переменной в самой собой — разумеется, она будет абсолютно линейная.</p>
+<p>Матрица, как можно заметить, симметрична относительно главной диагонали, так как <span class="math inline">\(r_{ij} = r_{ji}\)</span>.</p>
+<p>Итак, возвращается к частному коэффициенту корреляции. Посмотрим пример для случая трех переменных:</p>
+<p><span class="math display">\[
+R =
+\begin{pmatrix}
+1 &amp; r_{12} &amp; r_{13} \\
+r_{21} &amp; 1 &amp; r_{23} \\
+r_{31} &amp; r_{32} &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+r_{12,3} = \frac{r_{12} - r_{13} \cdot r_{23}}{\sqrt{(1 - r^2_{23})(1-r^2_{13})}}
+\]</span></p>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \rho_{12,3} = 0 \\
+H_1&amp;: \rho_{12,3} \neq 0 \\
+t &amp;= \frac{r_{12,3} \sqrt{n-3}}{\sqrt{1 - r^2_{12,3}}} \overset{H_0}{\thicksim} t(\nu = n-3)
+\end{split}
+\]</span></p>
+<p>Хорошо, а если нас интересует связь одного признака с несколькими сразу? Тогда нам нужен множественный коэффициент корреляции. Он также вычисляется на основе корреляционной матрицы и определяется следующим образом. Пусть нас интересует связь первого признака со всеми остальными:</p>
+<p><span class="math display">\[
+R_1 = \sqrt{1 - \frac{\det R}{A_{11}}}
+\]</span></p>
+<p>Квадрат множественного коэффициента корреляции называется <em>коэффициентом детерминации</em><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Он показывает, во-первых, степень тесноты связи данного признака со всеми остальными, но, кроме того, ещё и долю дисперсии данного признака, определяемую вариацией все остальных признаков, включенных в данную корреляционную модель.</p>
+<p>Мы подробнее его изучим в следуюшей теме, а также увидим, где нам его найти, чтобы не считать руками.</p>
+</section>
+<section id="другие-корреляции" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="другие-корреляции"><span class="header-section-number">7.4</span> Другие корреляции</h2>
+<p>Можно коррелировать не только количественные и ранговые шкалы между собой, но и качественные тоже:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Переменная <span class="math inline">\(X\)</span></th>
+<th style="text-align: center;">Переменная <span class="math inline">\(Y\)</span></th>
+<th style="text-align: center;">Мера связи</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;"><span class="math inline">\(\phi\)</span>-коэффициент</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Ранговая</td>
+<td style="text-align: center;">Рангово-бисериальный коэффициент</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Дихотомическая</td>
+<td style="text-align: center;">Интервальная или отношений</td>
+<td style="text-align: center;">Бисериальный коэффициент</td>
+</tr>
+</tbody>
+</table>
+<section id="phi-коэффициент" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="phi-коэффициент"><span class="header-section-number">7.4.1</span> <span class="math inline">\(\phi\)</span>-коэффициент</h3>
+<p>Этот коэффициент позволяет рассчитать корреляцию между двумы дихотомическими шкалами. Он основан на расчёте статистики <span class="math inline">\(\chi^2\)</span>.</p>
+<section id="критерий-независимости-пирсона" class="level4" data-number="7.4.1.1">
+<h4 data-number="7.4.1.1" class="anchored" data-anchor-id="критерий-независимости-пирсона"><span class="header-section-number">7.4.1.1</span> Критерий независимости Пирсона</h4>
+<p>По двум дихотомическим переменным можно построить таблицы сопряженности. Сам хи-квадрат тестирует гипотезу о том, что между двумя категориальными переменными нет связи. Он это делает путём сравнения теоретической и эмпирической таблицы частот.</p>
+<p>Эмпирическую таблицу [частот] мы получаем по результатам наблюдений:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(X_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(Y_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_1,Y_1} = a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_2,Y_1} = b\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Y_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_1,Y_2} = c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{X_2,Y_2} = d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Далее вычисляются теоретические частоты:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(X_1^*\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X_2^*\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(Y_1^*\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(a+b) \times (a+c)}{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(b+a) \times (b+d)}{N}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(Y_2^*\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(c+d) \times (a+c)}{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{(d+c) \times (b + d)}{N}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>где <span class="math inline">\(N = a + b + c + d\)</span>.</p>
+<p>Затем считаются расхождения частот, которые суммируются и получается статистика <span class="math inline">\(\chi^2\)</span>:</p>
+<p><span class="math display">\[
+\chi^2 = \sum_{i,j} \frac{p_{X_i,Y_j} - p_{X_i^*,Y_j^*}}{p_{X_i^*,Y_j^*}}
+\]</span></p>
+<p>Статистика подчиняется распределению <span class="math inline">\(\chi^2\)</span>, и чем больше значение этой статистики, тем сильнее связаны признаки. Статистические гипотезы для критерии независимости Пирсона формулируются так:</p>
+<p><span class="math display">\[
+\begin{split}
+H_0 &amp;: p_{X_{i_1}, Y_{j_1}} = p_{X_{i_2}, Y_{j_2}}, \, i_1 \neq i_2, \, j_1 \neq j_2 \\
+H_1 &amp;: \exists i_1, i_2, j_1, j_2: p_{X_{i_1}, Y_{j_1}} \neq p_{X_{i_2}, Y_{j_2}}
+\end{split}
+\]</span></p>
+<hr>
+<p>По значению <span class="math inline">\(\chi^2\)</span> сложно что-то сказать о силе связи, поэтому его нормируют следующим образом, чтобы получить значения от 0 до 1, которые можно интерпретироват аналогично коэффициенту корреляции:</p>
+<p><span class="math display">\[
+\phi = \sqrt{\frac{\chi^2}{N}}
+\]</span></p>
+</section>
+</section>
+<section id="бисериальный-коэффициент-корреляции" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="бисериальный-коэффициент-корреляции"><span class="header-section-number">7.4.2</span> Бисериальный коэффициент корреляции</h3>
+<p>Этот коэффициент используется для вычисления корреляции между количественной (<span class="math inline">\(y\)</span>) и категориальной (<span class="math inline">\(x\)</span>) шкалой и рассчитывается следующим образом:</p>
+<p><span class="math display">\[
+r = \frac{\bar x_1 - \bar x_2}{s_Y} \sqrt{\frac{n_1 n_2}{N(N-1)}},
+\]</span></p>
+<p>где <span class="math inline">\(\bar x_1\)</span> — среднее по элементам переменной <span class="math inline">\(y\)</span> из группы <span class="math inline">\(x_1\)</span>, <span class="math inline">\(\bar x_2\)</span> — среднее по элементам <span class="math inline">\(y\)</span> из группы <span class="math inline">\(x_2\)</span>, <span class="math inline">\(s_y\)</span> — стандартное отклонение по переменной <span class="math inline">\(y\)</span>, <span class="math inline">\(n_1\)</span> — число элементов в группе <span class="math inline">\(x_1\)</span>, <span class="math inline">\(n_2\)</span> — число элементов в группе <span class="math inline">\(x_2\)</span>, <span class="math inline">\(N\)</span> — общее число элементов.</p>
+<p>Важно отметить, что несмотря на то, что значение коэффициента может быть как положительным, так и отрицательным, это <em>не влияет на интерпретацию</em>. Это одно из исключений из общего правила.</p>
+</section>
+<section id="рангово-бисериальный-коэффициент-корреляции" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="рангово-бисериальный-коэффициент-корреляции"><span class="header-section-number">7.4.3</span> Рангово-бисериальный коэффициент корреляции</h3>
+<p>Если у нас не количественная, а ранговая шкала, то применяется рангово-бисериальный коэффициент:</p>
+<p><span class="math display">\[
+r = \frac{2(\bar x_1 - \bar x_2)}{N},
+\]</span></p>
+<p>где <span class="math inline">\(\bar x_1\)</span> — средний ранг в группе <span class="math inline">\(x_1\)</span>, <span class="math inline">\(\bar x_2\)</span> — средний ранг в группе <span class="math inline">\(x_2\)</span>, <span class="math inline">\(N\)</span> — общее количество наблюдений.</p>
+</section>
+</section>
+<section id="andan-cor-fisher-transform" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="andan-cor-fisher-transform"><span class="header-section-number">7.5</span> Преобразование Фишера</h2>
+<p>Упомянутое ранее преобразование Фишера используется не только для вычисления доверительного интервала для коэффициента корреляции. Его применяют для нахождения так называемой pooled correlation — усредненной корреляции по нескольки отдельным коэффициентам. Для этого первоначально приводят коэффициенты корреляции к <span class="math inline">\(z\)</span>-значениям по формуле:</p>
+<p><span class="math display">\[
+z_i = \frac{1}{2} \ln \frac{1 + r_i}{1 - r_i} = \mathop{\mathrm{artanh}}(r_i)
+\]</span></p>
+<p>Далее усредняют каким-либо из способов — зависит от переменных, характеристик выборки и решаемой задачи — а затем возвращаются к исходной «размерности» корреляции через обратное преобразование:</p>
+<p><span class="math display">\[
+r_P = \dfrac{e^{2z_P} - 1}{e^{2z_P} + 1} = \tanh(z_P)
+\]</span></p>
+
+
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Mass (uncountable) noun<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Countable noun, plural in this case<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Здесь в примере локальный максимум функции плотности вероятности на интервале <span class="math inline">\((-4, \, 4)\)</span> совпадает с глобальным максимумом — мы об этом знаем, потому что форма распределения нам известна. В случае эмпрического распределения корректнее говорить именно о локальном максимуме, так как глобальный максимум нам не доступен ввиду того, что мы работаем с выборкой.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Per se (лат.) — «само по себе», «как таковое», «в чистом виде».<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Но если мы рисуем несколько боксплотов рядом, то на оси <code>x</code> будет категориальная переменная.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Вы точно видели это словосочетание, когда сталкивались с линейной регресией.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./part-andan.html" class="pagination-link  aria-label=" анализ="" данных"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Анализ данных</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./l8.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>L8 // Общие линейные модели. Простая и множественная линейная регрессия</span>">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

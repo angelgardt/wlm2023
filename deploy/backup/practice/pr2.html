@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.510">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>P // WLM 2023 - P2 // Матрицы и списки. Функции</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./pr3.html" rel="next">
+<link href="./pr1.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr2.html">P2 // Матрицы и списки. Функции</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">P2 // Матрицы и списки. Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P4 // Предобработка данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P5 // Визуализация данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P14 // Смешанные линейные модели</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P15 // Кластерный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#pr2_main" id="toc-pr2_main" class="nav-link active" data-scroll-target="#pr2_main">Основные задания</a>
+  <ul class="collapse">
+  <li><a href="#pr2-1" id="toc-pr2-1" class="nav-link" data-scroll-target="#pr2-1">#1</a></li>
+  <li><a href="#pr2-2" id="toc-pr2-2" class="nav-link" data-scroll-target="#pr2-2">#2</a></li>
+  <li><a href="#pr2-3" id="toc-pr2-3" class="nav-link" data-scroll-target="#pr2-3">#3</a></li>
+  <li><a href="#pr2-4" id="toc-pr2-4" class="nav-link" data-scroll-target="#pr2-4">#4</a></li>
+  <li><a href="#pr2-5" id="toc-pr2-5" class="nav-link" data-scroll-target="#pr2-5">#5</a></li>
+  <li><a href="#pr2-6" id="toc-pr2-6" class="nav-link" data-scroll-target="#pr2-6">#6</a></li>
+  <li><a href="#pr2-7" id="toc-pr2-7" class="nav-link" data-scroll-target="#pr2-7">#7</a></li>
+  <li><a href="#pr2-8" id="toc-pr2-8" class="nav-link" data-scroll-target="#pr2-8">#8</a></li>
+  <li><a href="#pr2-9" id="toc-pr2-9" class="nav-link" data-scroll-target="#pr2-9">#9</a></li>
+  <li><a href="#pr2-10" id="toc-pr2-10" class="nav-link" data-scroll-target="#pr2-10">#10</a></li>
+  <li><a href="#pr2-11" id="toc-pr2-11" class="nav-link" data-scroll-target="#pr2-11">#11</a></li>
+  <li><a href="#pr2-12" id="toc-pr2-12" class="nav-link" data-scroll-target="#pr2-12">#12</a></li>
+  <li><a href="#pr2-13" id="toc-pr2-13" class="nav-link" data-scroll-target="#pr2-13">#13</a></li>
+  <li><a href="#pr2-14" id="toc-pr2-14" class="nav-link" data-scroll-target="#pr2-14">#14</a></li>
+  <li><a href="#pr2-15" id="toc-pr2-15" class="nav-link" data-scroll-target="#pr2-15">#15</a></li>
+  <li><a href="#pr2-16" id="toc-pr2-16" class="nav-link" data-scroll-target="#pr2-16">#16</a></li>
+  <li><a href="#pr2-17" id="toc-pr2-17" class="nav-link" data-scroll-target="#pr2-17">#17</a></li>
+  <li><a href="#pr2-18" id="toc-pr2-18" class="nav-link" data-scroll-target="#pr2-18">#18</a></li>
+  <li><a href="#pr2-19" id="toc-pr2-19" class="nav-link" data-scroll-target="#pr2-19">#19</a></li>
+  <li><a href="#pr2-20" id="toc-pr2-20" class="nav-link" data-scroll-target="#pr2-20">#20</a></li>
+  </ul></li>
+  <li><a href="#pr2_add" id="toc-pr2_add" class="nav-link" data-scroll-target="#pr2_add">Дополнительные задания</a>
+  <ul class="collapse">
+  <li><a href="#pr2-21" id="toc-pr2-21" class="nav-link" data-scroll-target="#pr2-21">#1</a></li>
+  <li><a href="#pr2-22" id="toc-pr2-22" class="nav-link" data-scroll-target="#pr2-22">#2</a></li>
+  <li><a href="#pr2-23" id="toc-pr2-23" class="nav-link" data-scroll-target="#pr2-23">#3</a></li>
+  <li><a href="#pr2-24" id="toc-pr2-24" class="nav-link" data-scroll-target="#pr2-24">#4</a></li>
+  <li><a href="#pr2-25" id="toc-pr2-25" class="nav-link" data-scroll-target="#pr2-25">#5</a></li>
+  <li><a href="#pr2-26" id="toc-pr2-26" class="nav-link" data-scroll-target="#pr2-26">#6</a></li>
+  <li><a href="#pr2-27" id="toc-pr2-27" class="nav-link" data-scroll-target="#pr2-27">#7</a></li>
+  <li><a href="#pr2-28" id="toc-pr2-28" class="nav-link" data-scroll-target="#pr2-28">#8</a></li>
+  <li><a href="#pr2-29" id="toc-pr2-29" class="nav-link" data-scroll-target="#pr2-29">#9</a></li>
+  <li><a href="#pr2-30" id="toc-pr2-30" class="nav-link" data-scroll-target="#pr2-30">#10</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="pr2" class="quarto-section-identifier">P2 // Матрицы и списки. Функции</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<!--
+REPLACE ALL pr2 TO pr<n> WITH MATCH CASE
+-->
+<section id="pr2_main" class="level2">
+<h2 class="anchored" data-anchor-id="pr2_main">Основные задания</h2>
+<section id="pr2-1" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-1">#1</h3>
+<p><img id="pr2-1-level" class="level"></p>
+<div id="pr2-1-task" class="task">
+<p>Создайте матрицу, размером 5×5, из единиц. Сохраните её в переменную <code>m</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    1    1    1    1
+[2,]    1    1    1    1    1
+[3,]    1    1    1    1    1
+[4,]    1    1    1    1    1
+[5,]    1    1    1    1    1</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-2" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-2">#2</h3>
+<p><img id="pr2-2-level" class="level"></p>
+<div id="pr2-2-task" class="task">
+<p>Замените все некрайние значения на нули. Перезапишите переменную <code>m</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    1    1    1    1
+[2,]    1    0    0    0    1
+[3,]    1    0    0    0    1
+[4,]    1    0    0    0    1
+[5,]    1    1    1    1    1</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-2-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr2-3" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-3">#3</h3>
+<p><img id="pr2-3-level" class="level"></p>
+<div id="pr2-3-task" class="task">
+<p>Выделите из матрицы <code>m</code>:</p>
+<ol type="a">
+<li>вторую строку</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 0 0 0 1</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>первый столбец</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 1 1 1 1</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>строки с третьей по пятую</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    0    0    0    1
+[2,]    1    0    0    0    1
+[3,]    1    1    1    1    1</code></pre>
+</div>
+</div>
+<ol start="4" type="a">
+<li>второй и третий столбы</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    1
+[2,]    0    0
+[3,]    0    0
+[4,]    0    0
+[5,]    1    1</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="pr2-4" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-4">#4</h3>
+<p><img id="pr2-4-level" class="level"></p>
+<div id="pr2-4-task" class="task">
+<p>Сравните вторую строку и третий столбец матрицы <code>m</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-5" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-5">#5</h3>
+<p><img id="pr2-5-level" class="level"></p>
+<div id="pr2-5-task" class="task">
+<p>Создайте таблицу умножения. Это должна быть матрица, размером 9×9, в которой на пересечении <span class="math inline">\(i\)</span>-ой строки и <span class="math inline">\(j\)</span>-го столбца находится произведение <span class="math inline">\(i \times j\)</span>. Сохраните результат в переменную <code>multab</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]    1    2    3    4    5    6    7    8    9
+ [2,]    2    4    6    8   10   12   14   16   18
+ [3,]    3    6    9   12   15   18   21   24   27
+ [4,]    4    8   12   16   20   24   28   32   36
+ [5,]    5   10   15   20   25   30   35   40   45
+ [6,]    6   12   18   24   30   36   42   48   54
+ [7,]    7   14   21   28   35   42   49   56   63
+ [8,]    8   16   24   32   40   48   56   64   72
+ [9,]    9   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-6" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-6">#6</h3>
+<p><img id="pr2-6-level" class="level"></p>
+<div id="pr2-6-task" class="task">
+<p>Поработайте с переменной <code>multab</code>.</p>
+<ol type="a">
+<li>выделите 71-ый элемент матрицы</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 64</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>замените все значения, меньшие 10, на пропуски (<code>NA</code>)</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="pr2-7" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-7">#7</h3>
+<p><img id="pr2-7-level" class="level"></p>
+<div id="pr2-7-task" class="task">
+<p>Примените к матрице <code>multab</code> функции <code>sum()</code>, <code>mean()</code>, <code>median()</code>, которые мы применяли к векторам. Учтите, что в данных есть пропуски — ведь мы их туда своими руками добавили.</p>
+<p>Что получилось? Почему так?</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1895</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32.67241</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-8" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-8">#8</h3>
+<p><img id="pr2-8-level" class="level"></p>
+<div id="pr2-8-task" class="task">
+<p><strong>8.1</strong> Для матрицы <code>m</code> посчитайте сумму:</p>
+<ol type="a">
+<li>по каждой строке</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 2 2 2 5</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>по каждому столбцу</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 2 2 2 5</code></pre>
+</div>
+</div>
+<p><strong>8.2</strong> Для матрицы <code>multab</code> посчитайте сумму по каждому столбцу.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   0  70 117 168 220 264 308 352 396</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-8-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>apply()</code></p>
+</details>
+</div>
+</section>
+<section id="pr2-9" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-9">#9</h3>
+<p><img id="pr2-9-level" class="level"></p>
+<div id="pr2-9-task" class="task">
+<p>Создайте список, который будет содержать следующие элементы:</p>
+<ul>
+<li>вектор <code>letters</code> под названием <code>alphabet</code></li>
+<li>значение <code>TRUE</code> под названием <code>logic</code></li>
+<li>матрицу <code>multab</code> под названием <code>multab</code></li>
+</ul>
+<p>Сохраните список в переменную <code>first_list</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$alphabet
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+[20] "t" "u" "v" "w" "x" "y" "z"
+
+$logic
+[1] TRUE
+
+$multab
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-10" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-10">#10</h3>
+<p><img id="pr2-10-level" class="level"></p>
+<div id="pr2-10-task" class="task">
+<p>Выделите из списка <code>first_list</code>:</p>
+<ol type="a">
+<li>первый элемент (по номеру) — должен вернуться список</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$alphabet
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+[20] "t" "u" "v" "w" "x" "y" "z"</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>матрицу <code>multab</code> (по названию) — должен вернуться список</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$multab
+      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>матрицу <code>multab</code> — должна вернуться матрица</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+ [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA
+ [2,]   NA   NA   NA   NA   10   12   14   16   18
+ [3,]   NA   NA   NA   12   15   18   21   24   27
+ [4,]   NA   NA   12   16   20   24   28   32   36
+ [5,]   NA   10   15   20   25   30   35   40   45
+ [6,]   NA   12   18   24   30   36   42   48   54
+ [7,]   NA   14   21   28   35   42   49   56   63
+ [8,]   NA   16   24   32   40   48   56   64   72
+ [9,]   NA   18   27   36   45   54   63   72   81</code></pre>
+</div>
+</div>
+<ol start="4" type="a">
+<li>логический элемент <code>logic</code> — должен вернуться вектор</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="pr2-11" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-11">#11</h3>
+<p><img id="pr2-11-level" class="level"></p>
+<div id="pr2-11-task" class="task">
+<p>Выделите из списка <code>first_list</code>:</p>
+<ol type="a">
+<li>первые 5 элементов вектора <code>alphabet</code></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "b" "c" "d" "e"</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>два последних столбца матрицы <code>multab</code></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      [,1] [,2]
+ [1,]   NA   NA
+ [2,]   16   18
+ [3,]   24   27
+ [4,]   32   36
+ [5,]   40   45
+ [6,]   48   54
+ [7,]   56   63
+ [8,]   64   72
+ [9,]   72   81</code></pre>
+</div>
+</div>
+<p>с. третий элемент логического вектора <code>logic</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="pr2-12" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-12">#12</h3>
+<p><img class="level"></p>
+<div id="pr2-12-task" class="task">
+<ol type="a">
+<li>Напишите функцию <code>mul(x, y)</code>, которая будет перемножать два своих аргумента.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="sc">-</span><span class="dv">8</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mul</span>(<span class="fl">0.5</span>, <span class="dv">6</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li>Напишите функцию <code>sqrtn(x, n)</code>, которая будет извлекать корень любой степени из любого числа.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-8-hints">
+<summary>
+Подсказка
+</summary>
+<p><span class="math display">\[
+\sqrt[n]{x} = x^{\frac{1}{n}}
+\]</span></p>
+</details>
+</div>
+</section>
+<section id="pr2-13" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-13">#13</h3>
+<p><img id="pr2-13-level" class="level"></p>
+<div class="task">
+<p>Модифицируйте функцию из <a href="#pr2-12">предыдущего задания</a>, чтобы она могла обрабатывать отрицательный <code>x</code> при любом <code>n</code> — то есть функция не должна возвращать <code>NaN</code>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.5+2.598076i</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-13-hints">
+<summary>
+Подсказка
+</summary>
+<p>Чтобы извлечь корень из отрицательного числа, необходимо привести его типу <code>complex</code>.</p>
+</details>
+</div>
+</section>
+<section id="pr2-14" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-14">#14</h3>
+<p><img id="pr2-14-level" class="level"></p>
+<div id="pr2-14-task" class="task">
+<p>Поведением функции мы часто хотим управлять. Допустим, мы не хотим, чтобы наша функция по умолчанию приводила отрицательный аргумент к комплексному типу данных. Мы хотим, чтобы дефолтно она работала в вещественных числах, привычных нам, а уж если нам очень понадобиться, мы сами скажем ей, чтобы она использовала всю свою комплексную мощь.</p>
+<p>Модифицируйте функцию из <a href="#pr2-13">предыдущего задания</a> так, чтобы по умолчанию она возвращала <code>NaN</code>, если <code>x</code> отрицательный, но могла вычислить значение при необходимости.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-14-hints">
+<summary>
+Подсказка
+</summary>
+<p>Нужен дополнительный аргумент (в примерах он назван <code>complex</code>), который по умолчанию будет равен <code>FALSE</code>.</p>
+</details>
+</div>
+</section>
+<section id="pr2-15" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-15">#15</h3>
+<p><img id="pr2-15-level" class="level"></p>
+<div id="pr2-15-task" class="task">
+<p>Напишите функцию, которая реализует следующую математическую функцию:</p>
+<p><span class="math display">\[
+f(x) = \cases{
+0,  \quad x &lt; 0 \\
+x^2,  \quad 0 \leq x \leq 1 \\
+x^3,  \quad x &gt; 1}
+\]</span></p>
+<p>Сохраните её в переменную <code>quad_cube</code> и выполните на векторе <span class="math inline">\(\pmatrix{-5.0 &amp; -4.9 &amp; -4.8 &amp; \dots -0.9 &amp; 0.0 &amp; 0.1 &amp; \dots &amp; 4.8 &amp; 4.9 &amp; 5.0}\)</span>.</p>
+<p>Сохраните результат в переменную <code>qcres</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>qcres</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ [10]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ [19]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ [28]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ [37]   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ [46]   0.000   0.000   0.000   0.000   0.000   0.000   0.010   0.040   0.090
+ [55]   0.160   0.250   0.360   0.490   0.640   0.810   1.000   1.331   1.728
+ [64]   2.197   2.744   3.375   4.096   4.913   5.832   6.859   8.000   9.261
+ [73]  10.648  12.167  13.824  15.625  17.576  19.683  21.952  24.389  27.000
+ [82]  29.791  32.768  35.937  39.304  42.875  46.656  50.653  54.872  59.319
+ [91]  64.000  68.921  74.088  79.507  85.184  91.125  97.336 103.823 110.592
+[100] 117.649 125.000</code></pre>
+</div>
+</div>
+<p>Воспользуйтесь командой ниже, чтобы визуализировать вектор и сравнить результат с ожидаемым.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(qcres, <span class="at">type =</span> <span class="st">"l"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr2_files/figure-html/15-vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-14-hints">
+<summary>
+Подсказка
+</summary>
+<p>Может быть два решения:</p>
+<ul>
+<li>для одного понадобиться</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>для другого</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>, vector)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-16" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-16">#16</h3>
+<p><img id="pr2-16-level" class="level"></p>
+<div id="pr2-16-task" class="task">
+<p>В <a href="#pr2-8">задании 8</a> мы считали сумму по столбцам матрицы. Но что делать, если нам нужно посчитать несколько статистик по столбцам?</p>
+<p>Напишите функцию <code>mat_desc(m)</code>, которая будет считать сумму, среднее и медиану по столбцам матрицы.</p>
+<p>Фунция должна:</p>
+<ul>
+<li>принимать на вход матрицу произвольного размера</li>
+<li>возвращать матрицу с числом столбцов, равным числу столбцов входной матрицы, в которой в первой строке будут суммы, во второй — средние, в третьей — медианы, рассчитанные по столбцам входной матрицы</li>
+<li>строки матрицы должны быть подписаны <code>sum</code>, <code>mean</code> и <code>median</code> соответственно</li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1] [,2] [,3] [,4] [,5]
+sum       5  2.0  2.0  2.0    5
+mean      1  0.4  0.4  0.4    1
+median    1  0.0  0.0  0.0    1</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-16-hints">
+<summary>
+Подсказки
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>()</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>()</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-17" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-17">#17</h3>
+<p><img id="pr2-17-level" class="level"></p>
+<div id="pr2-17-task" class="task">
+<p>Создадим список с результатами статистических тестов. Вот такой:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>ttests <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">test1 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">1.33</span>,</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.1</span>),</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">test2 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">2.306</span>,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.025</span>),</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">test3 =</span> <span class="fu">list</span>(<span class="at">t =</span> <span class="fl">3.527</span>,</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">p =</span> <span class="fl">0.001</span>))</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>ttests</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$test1
+$test1$t
+[1] 1.33
+
+$test1$p
+[1] 0.1
+
+
+$test2
+$test2$t
+[1] 2.306
+
+$test2$p
+[1] 0.025
+
+
+$test3
+$test3$t
+[1] 3.527
+
+$test3$p
+[1] 0.001</code></pre>
+</div>
+</div>
+<p>Этот список состоит из результатов неких трёх t-тестов — <code>test1</code>, <code>test2</code>, <code>test3</code> — которые являются его элементами. В свою очередь каждый результат также является списком и состоит из двух значений — <code>t</code> и <code>p</code>.</p>
+<p>Вытащите из списка <code>ttests</code> p-значения. Результатом должен быть вектор из трех значений.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.100 0.025 0.001</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-17-hints">
+<summary>
+Подсказка
+</summary>
+<p>Надо пройтись по элементами списка и вытащить из них нужный элемент. Подойдет</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-18" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-18">#18</h3>
+<p><img id="pr2-18-level" class="level"></p>
+<div id="pr2-18-task" class="task">
+<p>Функции, которые внутри себя содержат цикл — это что-то сложное. Можно вынести его из функции и использовать функцию внутри цикла. Но и то, и другое выглядит громоздко и работает медленно. Есть более красивый вариант.</p>
+<p>Ниже представлена функция из <a href="#pr2-15">задания 15</a>, из которой удален цикл — теперь она может работать только с одним значением <code>x</code> (вектором, длины 1). Согласитель, читаться стало проще:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>quad_cube2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="dv">0</span>)</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="fu">return</span>(x<span class="sc">^</span><span class="dv">3</span>)</span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="fu">return</span>(x<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>C помощью функции <code>Map()</code> выполните её на векторе <span class="math inline">\(\pmatrix{-5.0 &amp; -4.9 &amp; -4.8 &amp; \dots -0.9 &amp; 0.0 &amp; 0.1 &amp; \dots &amp; 4.8 &amp; 4.9 &amp; 5.0}\)</span>.</p>
+<p>Изучите результат. При необходимости, переведите его в вектор.</p>
+<p>Сохраните результат в переменную <code>qcres2</code>.</p>
+<p>Воспользуйтесь командой ниже, чтобы убедиться, что мы получили тот же самый результат.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(qcres2, <span class="at">type =</span> <span class="st">"l"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr2_files/figure-html/18-vis-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-18-hints">
+<summary>
+Подсказки
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>, vector)</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-19" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-19">#19</h3>
+<p><img id="pr2-19-level" class="level"></p>
+<div id="pr2-19-task" class="task">
+<p>Давайте аналогичным способом возведем каждый элемент вектора в квадрат. Возьмите вектор <span class="math inline">\(\pmatrix{1 &amp; 2 &amp; 3 &amp; 4 &amp; 5}\)</span> и возведите каждый его элемент в квадрат с помощью функции <code>Map()</code>.</p>
+<p>Можно написать для этого функцию, но она будет очень короткая и простая и лишь займет место в скрипте. Пропишите функцию прямо в функции <code>Map()</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  4  9 16 25</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-19-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>(x) ..., vector)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-20" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-20">#20</h3>
+<p><img id="pr2-20-level" class="level"></p>
+<div id="pr2-20-task" class="task">
+<p>Вытащите p-значения из списка <code>ttests</code> из <a href="#pr2-17">задания 17</a> без использования цикла и создания функций. Результат должен быть вектором.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>test1 test2 test3 
+0.100 0.025 0.001 </code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-20-hints">
+<summary>
+Подсказки
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>, list)</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Map</span>(<span class="cf">function</span>(x) ..., list)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="pr2_add" class="level2">
+<h2 class="anchored" data-anchor-id="pr2_add">Дополнительные задания</h2>
+<section id="pr2-21" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-21">#1</h3>
+<p><img id="pr2-21-level" class="level"></p>
+<div id="pr2-21-task" class="task">
+<p>Сгенерируйте 5 [независимых] выборок по 30 наблюдений из генеральной совокупности с нормальным распределением <code>rnorm(..., mean = 10, sd = 20)</code>. Результат генерации должен быть представлен в виде матрицы 30×5, где каждый столбец — это одна выборка. Сохраните результат генерации в переменной <code>sim</code>.</p>
+<p>Пример сгенерирован при <code>set.seed(24)</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]        [,2]       [,3]        [,4]        [,5]
+ [1,]  -0.9176152   9.3252415  39.041504   5.3446569  30.2567252
+ [2,]  20.7317061  -1.7085511  18.164031 -18.4072626  10.5068688
+ [3,]  18.3924630  22.2570273   1.193319  -6.2664546  -0.1430004
+ [4,]  -1.6725440  40.3424499  36.371324  19.2213861  -0.1388647
+ [5,]  26.9492003  23.1476087  21.427732   5.7021278  15.2997753
+ [6,]  15.3204396 -11.4836267 -15.599744  12.7789050  21.8336348
+ [7,]  18.8917054 -79.3912882 -14.777592  26.8846072   4.2331858
+ [8,]   0.6700975  17.3809004  -8.451822 -16.1690067  -0.5814076
+ [9,]  -6.9674009  13.3845338  36.992241  30.9033732   6.4026923
+[10,]  10.0462388 -26.4438064 -21.352332  34.2034785  -8.6087539
+[11,] -16.3381625  11.3471540  12.875999  11.6628735 -39.3491209
+[12,]  21.9653823  10.3421192  -7.722200  65.6989406   8.9918515
+[13,]  -5.2442874   3.1268126   9.488516  21.9056464  14.9287636
+[14,] -18.5818061  -3.3578439   3.445292  11.5533270  40.6272574
+[15,]  16.6448890   4.8851086   8.480780  -1.1739321  21.8327574
+[16,]   0.6187862   0.7758408 -17.093273  -6.1353535 -22.3708390
+[17,]   3.3002641  39.4328316  -9.216176  -0.2141812  -2.6986435
+[18,]  40.7250431   8.1607937  14.499087  -1.1297424  37.1350898
+[19,]  22.1998907  16.7038860   7.536791  14.8225033  -5.1605424
+[20,]  20.3267140   5.3627081  10.020820  -1.5067405  17.5072807
+[21,]   8.5138288  20.5330512  -1.424865  49.7113946  23.3432774
+[22,]  -2.1031389 -11.4725213  18.452436  19.2640549   9.8284752
+[23,] -24.1929037  25.3936375 -23.467716  15.8486882  11.8488091
+[24,]   4.6261379  45.4181075 -12.720519  -0.2796531  16.4056528
+[25,]  -2.9718301   6.0763562  17.224250 -14.7147764  13.3018250
+[26,]   8.1177975  14.0949947  31.137284 -40.0246250 -11.0641347
+[27,]   8.2891810  -1.9319614 -29.858409 -17.9325648  18.9478935
+[28,]  12.3906214  33.5649550  25.287701  -7.9827048  31.1427365
+[29,]   7.6740721  30.9884244  10.143307 -16.5459271 -19.5031466
+[30,]  -8.8765447  21.2196233  12.039487  14.0573286  14.0146572</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-22" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-22">#2</h3>
+<p><img id="pr2-22-level" class="level"></p>
+<div id="pr2-22-task" class="task">
+<p>Посчитайте среднее (<code>mean()</code>) и стандартное отклонение (<code>sd()</code>) по каждой сгенерированной выборке.</p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.617608 9.582486 5.737908 7.036012 8.625692</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14.40673 23.38371 18.80144 21.72927 17.70765</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-23" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-23">#3</h3>
+<p><img id="pr2-23-level" class="level"></p>
+<div id="pr2-23-task" class="task">
+<p>Продолжим работу над функцией из <a href="#pr2-14">задания 14</a>.</p>
+<p>Модифицируйте её так, чтобы она выводила предупреждение (warning) с содержанием <code>Warning: x has negative value</code>, если в качестве аргумента <code>x</code> передано отрицательное число и аргумент <code>complex</code> равен <code>FALSE</code>.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-23-hints">
+<summary>
+Подсказки
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">warning</span>()</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="st">"</span><span class="sc">\n</span><span class="st">"</span> <span class="co"># new line</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-24" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-24">#4</h3>
+<p><img id="pr2-24-level" class="level"></p>
+<div id="pr2-24-task" class="task">
+<p>Продолжим работу над функцией из <a href="#pr2-23">предыдущего задания</a>.</p>
+<p>Модифицируйте её так, чтобы она выводила сообщение (message) с содержанием <code>x coerced to complex</code>, если в качестве аргумента <code>x</code> передано отрицательное число и аргумент <code>complex</code> равен <code>TRUE</code>, чтобы пользователь был проинформирован о том, что происходит.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x coerced to complex</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-24-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-25" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-25">#5</h3>
+<p><img id="pr2-25-level" class="level"></p>
+<div id="pr2-25-task" class="task">
+<p>Продолжим работу над функцией из <a href="#pr2-24">предыдущего задания</a> и доведем её до совершенства.</p>
+<p>Модифицируйте её так, чтобы она заканчивала работу с ошибкой (error) с содержанием <code>argument `complex` must be a logical constant</code>, если в качестве аргумента <code>complex</code> передано какое-либо значение, кроме логического.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">4</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">27</span>, <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5064957</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in sqrtn(-2, 2): x has negative value</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x coerced to complex</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0+1.414214i</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrtn</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">complex =</span> <span class="st">"no"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in sqrtn(-2, 2, complex = "no"): argument `complex` must be a logical constant</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-25-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stop</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-26" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-26">#6</h3>
+<p><img id="pr2-26-level" class="level"></p>
+<div id="pr2-26-task" class="task">
+<p>В <a href="#pr2-16">задании 16</a> мы сделали функцию, которая считает сумму, среднее и медиану по столбцам матрицы.</p>
+<p>а. Попробуйте вызвать её на матрице <code>multab</code>. Каков результат? Почему так?</p>
+<ol start="2" type="a">
+<li>Модифицируйте функцию так, чтобы она могла принимать на вход аргументы, необходимые для её внутренних функций, и пробрасывать их им. Функция должна корректно обрабатывать любые необходимые аргументы.</li>
+</ol>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(multab)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+sum      NA   NA   NA   NA   NA   NA   NA   NA   NA
+mean     NA   NA   NA   NA   NA   NA   NA   NA   NA
+median   NA   NA   NA   NA   NA   NA   NA   NA   NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(multab, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       [,1] [,2]  [,3] [,4]  [,5] [,6]  [,7] [,8]  [,9]
+sum       0   70 117.0  168 220.0  264 308.0  352 396.0
+mean    NaN   14  19.5   24  27.5   33  38.5   44  49.5
+median   NA   14  19.5   24  27.5   33  38.5   44  49.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(sim)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]       [,2]       [,3]       [,4]       [,5]
+sum    198.528225 287.474567 172.137252 211.080367 258.770756
+mean     6.617608   9.582486   5.737908   7.036012   8.625692
+median   7.895935  10.844637   8.984648   5.523392  11.177839</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mat_desc</span>(sim, <span class="at">trim =</span> .<span class="dv">5</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]      [,2]       [,3]       [,4]      [,5]
+sum    199.028225 287.97457 172.637252 211.580367 259.27076
+mean     7.895935  10.84464   8.984648   5.523392  11.17784
+median   7.895935  10.84464   8.984648   5.523392  11.17784</code></pre>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-26-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"..."</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-27" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-27">#7</h3>
+<p><img id="pr2-27-level" class="level"></p>
+<div id="pr2-27-task" class="task">
+<p>До этого мы генерировали случайные вектора только из нормального распределения (<code>rnorm()</code>), однако мир распределений одним нормальным не ограничивается.</p>
+<p>Напишите функцию, которая генерирует [независимые] выборки из любого заданного распределения.</p>
+<p>Функция — назовем её <code>gen_dist</code> — должна:</p>
+<ul>
+<li>принимать на вход следующие параметры:
+<ul>
+<li>количество выборок, которые необходимо сгенерировать — <code>n_samples</code></li>
+<li>количество наблюдений в одной выборке — <code>n_obs</code></li>
+<li>функцию распределения, из которого необходимо выполнить генерацию — <code>fun</code>
+<ul>
+<li>по умолчанию функция должна генерировать выборки из нормального распределения</li>
+</ul></li>
+<li>другие аргументы, необходимые для работы функции распределения</li>
+</ul></li>
+<li>возвращать матрицу, размером <code>n_obs</code>×<code>n_samples</code>, содержащую сгенерированные значения</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">5</span>, <span class="dv">10</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             [,1]        [,2]       [,3]       [,4]       [,5]
+ [1,] -0.07045269 -0.28676782  1.3595626 -0.2782413  0.3287331
+ [2,] -0.75031916 -0.52928746  1.3923633  1.1369704  1.2029108
+ [3,] -0.09401376 -0.55704503 -1.6319603  0.9784894 -1.1780358
+ [4,]  0.41274946 -0.54843891  0.9944335  1.6473931  0.9161471
+ [5,] -1.25747896  0.06374339  1.5975855 -1.5064649 -0.3907390
+ [6,]  0.19706349 -1.17805997 -0.6759391 -1.7938317 -0.3312926
+ [7,] -1.89231492 -1.37490185  0.5056523 -1.3929986 -0.8074692
+ [8,]  0.25217616  0.33334974  0.8613147  0.4638977  0.1419368
+ [9,] -0.64785092  0.55974467  0.7455506  0.7481314  0.3662677
+[10,] -0.26605768 -1.15775671  0.9483999  1.2235673 -2.0921697</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">5</span>, <span class="dv">3</span>, <span class="at">mean =</span> <span class="dv">8</span>, <span class="at">sd =</span> <span class="dv">12</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]      [,2]        [,3]       [,4]       [,5]
+[1,]  7.752419 14.334106 13.17928270  27.391833 -0.7910348
+[2,] -2.844010 -5.938432 22.74866106 -26.272741 28.1433925
+[3,] 33.761001 11.920114 -0.07093902   1.166308 12.6606099</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gen_dist</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="at">fun =</span> rbeta, <span class="at">shape1 =</span> <span class="dv">2</span>, <span class="at">shape2 =</span> <span class="dv">3</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]      [,2]      [,3]
+[1,] 0.3045953 0.4159781 0.5546832
+[2,] 0.1453501 0.3029234 0.1187707
+[3,] 0.5764221 0.4637129 0.1048004
+[4,] 0.6585448 0.3387338 0.2995576
+[5,] 0.2085483 0.1863473 0.3125800</code></pre>
+</div>
+</div>
+</section>
+<section id="pr2-28" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-28">#8</h3>
+<p><img id="pr2-28-level" class="level"></p>
+<div id="pr2-28-task" class="task">
+<p>Вычислите:</p>
+<ol type="a">
+<li><span class="math inline">\(\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{1 + j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 81138.45</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li><span class="math inline">\(\sum_{i=1}^{30}\sum_{j=1}^{10} \frac{i^4}{i + j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 837.1427</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-26-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">outer</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-29" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-29">#9</h3>
+<p><img id="pr2-29-level" class="level"></p>
+<div id="pr2-29-task" class="task">
+<p>Вычислите:</p>
+<ol type="a">
+<li><span class="math inline">\(\sum_{i=1}^{10}\sum_{j=2}^8\sum_{k=3}^6 \frac{i^k}{i-j}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28.28571</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li><span class="math inline">\(\sum_{i=1}^{10}\sum_{j=1}^i \frac{i^4}{3 + ij}\)</span></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6944.743</code></pre>
+</div>
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr2-26-hints">
+<summary>
+Подсказка
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">outer</span>(..., ..., <span class="cf">function</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</div>
+</section>
+<section id="pr2-30" class="level3">
+<h3 class="anchored" data-anchor-id="pr2-30">#10</h3>
+<p><img id="pr2-30-level" class="level"></p>
+<div id="pr2-30-task" class="task">
+<p>Вычислите первые 20 чисел Фибоначчи. Первым числом считайте <span class="math inline">\(F_0 = 0\)</span>.</p>
+<p>Числа Фибоначчи задаются следующей последовательностью:</p>
+<p><span class="math display">\[
+F_0 = 0, \quad F_1 = 1, F_n = F_{n-1} + F_{n-2}
+\]</span></p>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]    0    1    1    2    3    5    8   13   21   34   55   89  144  233  377
+[16]  610  987 1597 2584 4181</code></pre>
+</div>
+</div>
+<hr>
+<p>Некоторые задания, а также форматы заданий, подсмотрены у <span class="citation" data-cites="moroz-dh4dl">Мороз (<a href="references.html#ref-moroz-dh4dl" role="doc-biblioref">2022</a>)</span> и <span class="citation" data-cites="grinberg-rexercises">Grinberg and Reed (<a href="references.html#ref-grinberg-rexercises" role="doc-biblioref">2016</a>)</span>.</p>
+<!-- *** -->
+<!--- CHANGE pr2 TO pr<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/pr2.json"></script>
+<script type="text/javascript" src="./js/pr.js"></script>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-grinberg-rexercises" class="csl-entry" role="listitem">
+Grinberg, Nastasiya, and Robin Reed. 2016. <em>Programming Exercises for r</em>. <a href="https://doi.org/10.13140/RG.2.1.1530.7281">https://doi.org/10.13140/RG.2.1.1530.7281</a>.
+</div>
+<div id="ref-moroz-dh4dl" class="csl-entry" role="listitem">
+Мороз, Г. 2022. <em>Наука о Данных в r Для Программы Цифровых Гуманитарных Исследований</em>. <a href="https://agricolamz.github.io/DS_for_DH/">https://agricolamz.github.io/DS_for_DH/</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./pr1.html" class="pagination-link  aria-label=" p1="" введение="" в="" r.="" типы="" данных.="" векторы"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P1 // Введение в R. Типы данных. Векторы</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./pr3.html" class="pagination-link" aria-label="P3 // Датафреймы. Исследование данных">
+        <span class="nav-page-text">P3 // Датафреймы. Исследование данных</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

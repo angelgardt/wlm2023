@@ -1,6 +1,6 @@
 # Last deployment info
 
-**Date:** Wed 2024-01-24 00:51
+**Date:** Wed 2024-01-24 01:24
 
 **Mode:** render
 
@@ -8,10 +8,4581 @@
 
 ```
 docs:
+total 44
+drwxrwxr-x  9 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 20 nglgrdt nglgrdt 4096 Jan 24 01:19 ..
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 analytics
+drwxrwxr-x  8 nglgrdt nglgrdt 4096 Jan 24 01:24 homeworks
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 hub
+-rw-rw-r--  1 nglgrdt nglgrdt  268 Jan 24 01:24 index.html
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 lectures
+drwxrwxr-x  9 nglgrdt nglgrdt 4096 Jan 24 01:24 practice
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 projects
+-rw-rw-r--  1 nglgrdt nglgrdt   99 Jan 24 01:24 README.md
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 slides
+
+docs/analytics:
+total 568
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 index_files
+-rw-rw-r-- 1 nglgrdt nglgrdt 561564 Jan 24 01:24 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+
+docs/analytics/index_files:
 total 12
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 00:46 .
-drwxrwxr-x 20 nglgrdt nglgrdt 4096 Jan 24 00:46 ..
--rw-rw-r--  1 nglgrdt nglgrdt   99 Jan 24 00:51 README.md
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/analytics/index_files/libs:
+total 52
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-dashboard
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 typedarray-0.1
+
+docs/analytics/index_files/libs/bootstrap:
+total 772
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r--  1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r--  1 nglgrdt nglgrdt 418625 Jan 24 01:24 bootstrap.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+
+docs/analytics/index_files/libs/clipboard:
+total 20
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/analytics/index_files/libs/crosstalk-1.2.1:
+total 20
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 scss
+
+docs/analytics/index_files/libs/crosstalk-1.2.1/css:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 Jan 24 01:24 crosstalk.min.css
+
+docs/analytics/index_files/libs/crosstalk-1.2.1/js:
+total 184
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 Jan 24 01:24 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 Jan 24 01:24 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 Jan 24 01:24 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 Jan 24 01:24 crosstalk.min.js.map
+
+docs/analytics/index_files/libs/crosstalk-1.2.1/scss:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 Jan 24 01:24 crosstalk.scss
+
+docs/analytics/index_files/libs/htmlwidgets-1.6.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 Jan 24 01:24 htmlwidgets.js
+
+docs/analytics/index_files/libs/jquery-3.5.1:
+total 532
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 Jan 24 01:24 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 Jan 24 01:24 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 Jan 24 01:24 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 Jan 24 01:24 jquery.min.map
+
+docs/analytics/index_files/libs/plotly-binding-4.10.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 Jan 24 01:24 plotly.js
+
+docs/analytics/index_files/libs/plotly-htmlwidgets-css-2.11.1:
+total 12
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 Jan 24 01:24 plotly-htmlwidgets.css
+
+docs/analytics/index_files/libs/plotly-main-2.11.1:
+total 3588
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt    4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 Jan 24 01:24 plotly-latest.min.js
+
+docs/analytics/index_files/libs/quarto-dashboard:
+total 2536
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt    4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   33318 Jan 24 01:24 components.js
+-rw-r--r--  1 nglgrdt nglgrdt   25538 Jan 24 01:24 datatables.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  272464 Jan 24 01:24 datatables.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 1357654 Jan 24 01:24 pdfmake.min.js
+-rw-r--r--  1 nglgrdt nglgrdt    7273 Jan 24 01:24 quarto-dashboard.js
+-rw-r--r--  1 nglgrdt nglgrdt    8282 Jan 24 01:24 stickythead.js
+-rw-r--r--  1 nglgrdt nglgrdt  798324 Jan 24 01:24 vfs_fonts.js
+-rw-r--r--  1 nglgrdt nglgrdt   65780 Jan 24 01:24 web-components.js
+
+docs/analytics/index_files/libs/quarto-html:
+total 96
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r--  1 nglgrdt nglgrdt  3135 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-r--r--  1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/analytics/index_files/libs/typedarray-0.1:
+total 32
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 Jan 24 01:24 typedarray.min.js
+
+docs/analytics/pics:
+total 24
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 6204 Jan 24 01:24 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 4805 Jan 24 01:24 logo.png
+
+docs/homeworks:
+total 1308
+drwxrwxr-x 8 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  51141 Jan 24 01:24 hw10.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  51155 Jan 24 01:24 hw11.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  51102 Jan 24 01:24 hw12.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  50928 Jan 24 01:24 hw13.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  50909 Jan 24 01:24 hw14.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  51005 Jan 24 01:24 hw15.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  50935 Jan 24 01:24 hw16.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  69278 Jan 24 01:24 hw1.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  77418 Jan 24 01:24 hw2.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  64038 Jan 24 01:24 hw3.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 108119 Jan 24 01:24 hw4.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 hw5_files
+-rw-rw-r-- 1 nglgrdt nglgrdt  66296 Jan 24 01:24 hw5.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 hw6_files
+-rw-rw-r-- 1 nglgrdt nglgrdt  78603 Jan 24 01:24 hw6.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 hw7_files
+-rw-rw-r-- 1 nglgrdt nglgrdt  68203 Jan 24 01:24 hw7.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  51216 Jan 24 01:24 hw8.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  51041 Jan 24 01:24 hw9.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  34039 Jan 24 01:24 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt  32077 Jan 24 01:24 references.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 208942 Jan 24 01:24 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 site_libs
+
+docs/homeworks/hw5_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/homeworks/hw5_files/figure-html:
+total 472
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  78433 Jan 24 01:24 12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  95651 Jan 24 01:24 13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 246724 Jan 24 01:24 15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42453 Jan 24 01:24 final-graph-1.png
+
+docs/homeworks/hw6_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/homeworks/hw6_files/figure-html:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 24426 Jan 24 01:24 hw6-9-plot-1.png
+
+docs/homeworks/hw7_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/homeworks/hw7_files/figure-html:
+total 44
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 33951 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/homeworks/js:
+total 76
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw10.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw11.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw12.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw13.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw14.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw15.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  736 Jan 24 01:24 hw16.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  872 Jan 24 01:24 hw1.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  828 Jan 24 01:24 hw2.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  792 Jan 24 01:24 hw3.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  825 Jan 24 01:24 hw4.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  769 Jan 24 01:24 hw5.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  816 Jan 24 01:24 hw6.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  754 Jan 24 01:24 hw7.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  690 Jan 24 01:24 hw8.json
+-rw-rw-r-- 1 nglgrdt nglgrdt  690 Jan 24 01:24 hw9.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1533 Jan 24 01:24 hw.js
+
+docs/homeworks/pics:
+total 884
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt   6204 Jan 24 01:24 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 282249 Jan 24 01:24 hw-cover.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   4805 Jan 24 01:24 logo.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 206157 Jan 24 01:24 vs-grid-2.jpg
+-rw-rw-r-- 1 nglgrdt nglgrdt 227082 Jan 24 01:24 vs-grid-3.jpg
+-rw-rw-r-- 1 nglgrdt nglgrdt 158120 Jan 24 01:24 vs-grid.jpg
+
+docs/homeworks/site_libs:
+total 28
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 8 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-search
+
+docs/homeworks/site_libs/bootstrap:
+total 1292
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 472441 Jan 24 01:24 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 472614 Jan 24 01:24 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+
+docs/homeworks/site_libs/bootstrap/pics:
+total 108
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 Jan 24 01:24 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 Jan 24 01:24 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 Jan 24 01:24 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 Jan 24 01:24 lab_medium.png
+
+docs/homeworks/site_libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/homeworks/site_libs/quarto-html:
+total 100
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/homeworks/site_libs/quarto-nav:
+total 28
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 Jan 24 01:24 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 Jan 24 01:24 quarto-nav.js
+
+docs/homeworks/site_libs/quarto-search:
+total 160
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 Jan 24 01:24 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 Jan 24 01:24 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 Jan 24 01:24 quarto-search.js
+
+docs/hub:
+total 176
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27745 Jan 24 01:24 how-is-it-made.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 29419 Jan 24 01:24 how-to-support.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 42084 Jan 24 01:24 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt 16528 Jan 24 01:24 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 site_libs
+-rw-rw-r-- 1 nglgrdt nglgrdt    17 Jan 24 01:24 styles.css
+-rw-rw-r-- 1 nglgrdt nglgrdt 30439 Jan 24 01:24 what-is-it.html
+
+docs/hub/pics:
+total 24
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 6204 Jan 24 01:24 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 4805 Jan 24 01:24 logo.png
+
+docs/hub/site_libs:
+total 28
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-search
+
+docs/hub/site_libs/bootstrap:
+total 1288
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 471320 Jan 24 01:24 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 471505 Jan 24 01:24 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+
+docs/hub/site_libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/hub/site_libs/quarto-html:
+total 100
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/hub/site_libs/quarto-nav:
+total 28
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 Jan 24 01:24 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 Jan 24 01:24 quarto-nav.js
+
+docs/hub/site_libs/quarto-search:
+total 160
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 Jan 24 01:24 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 Jan 24 01:24 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 Jan 24 01:24 quarto-search.js
+
+docs/lectures:
+total 2152
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  34722 Jan 24 01:24 index.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34764 Jan 24 01:24 l10.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34718 Jan 24 01:24 l11.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34463 Jan 24 01:24 l12.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34440 Jan 24 01:24 l13.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34586 Jan 24 01:24 l14.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34414 Jan 24 01:24 l15.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l1_files
+-rw-rw-r--  1 nglgrdt nglgrdt 156847 Jan 24 01:24 l1.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l2_files
+-rw-rw-r--  1 nglgrdt nglgrdt 216482 Jan 24 01:24 l2.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l3_files
+-rw-rw-r--  1 nglgrdt nglgrdt 283791 Jan 24 01:24 l3.html
+-rw-rw-r--  1 nglgrdt nglgrdt 102003 Jan 24 01:24 l4.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l5_files
+-rw-rw-r--  1 nglgrdt nglgrdt 126098 Jan 24 01:24 l5.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l6_files
+-rw-rw-r--  1 nglgrdt nglgrdt 117450 Jan 24 01:24 l6.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 l7_files
+-rw-rw-r--  1 nglgrdt nglgrdt 190595 Jan 24 01:24 l7.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34659 Jan 24 01:24 l8.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34749 Jan 24 01:24 l9.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34456 Jan 24 01:24 part-andan.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34285 Jan 24 01:24 part-math.html
+-rw-rw-r--  1 nglgrdt nglgrdt  33995 Jan 24 01:24 part-r.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+-rw-rw-r--  1 nglgrdt nglgrdt  34768 Jan 24 01:24 references.html
+-rw-rw-r--  1 nglgrdt nglgrdt 479189 Jan 24 01:24 search.json
+drwxrwxr-x 14 nglgrdt nglgrdt   4096 Jan 24 01:24 site_libs
+
+docs/lectures/l1_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l1_files/figure-html:
+total 92
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 17236 Jan 24 01:24 vec-classic-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16511 Jan 24 01:24 vec-free-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 14305 Jan 24 01:24 vec-remove-vector-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26161 Jan 24 01:24 vec-same-1.png
+
+docs/lectures/l2_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l2_files/figure-html:
+total 768
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 86830 Jan 24 01:24 unnamed-chunk-103-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18202 Jan 24 01:24 unnamed-chunk-104-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38884 Jan 24 01:24 unnamed-chunk-105-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51359 Jan 24 01:24 unnamed-chunk-106-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 82086 Jan 24 01:24 unnamed-chunk-107-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16401 Jan 24 01:24 unnamed-chunk-108-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 83619 Jan 24 01:24 unnamed-chunk-109-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18527 Jan 24 01:24 unnamed-chunk-110-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18229 Jan 24 01:24 unnamed-chunk-111-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 52369 Jan 24 01:24 unnamed-chunk-112-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18449 Jan 24 01:24 unnamed-chunk-113-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33207 Jan 24 01:24 unnamed-chunk-114-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 87312 Jan 24 01:24 unnamed-chunk-115-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 79446 Jan 24 01:24 unnamed-chunk-116-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 54725 Jan 24 01:24 unnamed-chunk-99-1.png
+
+docs/lectures/l3_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l3_files/figure-html:
+total 424
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 22680 Jan 24 01:24 deriv1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24497 Jan 24 01:24 deriv2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27121 Jan 24 01:24 deriv3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 55981 Jan 24 01:24 deriv4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 54366 Jan 24 01:24 deriv-graph-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17509 Jan 24 01:24 func-graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 75842 Jan 24 01:24 func_graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36381 Jan 24 01:24 integral-plot005-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35789 Jan 24 01:24 integral-plot01-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34423 Jan 24 01:24 integral-plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21846 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/lectures/l5_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l5_files/figure-html:
+total 1928
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  13987 Jan 24 01:24 cfd-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  60638 Jan 24 01:24 cluster-clusters-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  63221 Jan 24 01:24 cluster-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  75647 Jan 24 01:24 cluster-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31430 Jan 24 01:24 geomprob-dots-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 104149 Jan 24 01:24 geomprob-incircle-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26093 Jan 24 01:24 geomprob-square-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  88113 Jan 24 01:24 norm-dist-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  49677 Jan 24 01:24 pdf-inetrvals-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  15470 Jan 24 01:24 pdf-segment-nolabs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17374 Jan 24 01:24 pmf-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17374 Jan 24 01:24 pmf-dice-repeat-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  37328 Jan 24 01:24 pmf-vs-pdf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 138669 Jan 24 01:24 simple-random-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 131715 Jan 24 01:24 simple-random-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 334335 Jan 24 01:24 strat-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 329261 Jan 24 01:24 strat-pop-strata-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 307110 Jan 24 01:24 strat-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  83338 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/lectures/l6_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l6_files/figure-html:
+total 544
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  52095 Jan 24 01:24 alpha-raise-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26308 Jan 24 01:24 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  40914 Jan 24 01:24 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  63829 Jan 24 01:24 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 145276 Jan 24 01:24 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55309 Jan 24 01:24 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26308 Jan 24 01:24 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  38448 Jan 24 01:24 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17295 Jan 24 01:24 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  64165 Jan 24 01:24 unnamed-chunk-9-1.png
+
+docs/lectures/l7_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/lectures/l7_files/figure-html:
+total 1832
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 22157 Jan 24 01:24 68_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21700 Jan 24 01:24 99_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 14199 Jan 24 01:24 boxplot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18209 Jan 24 01:24 boxplot_annotated-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43492 Jan 24 01:24 central_tendency_asymm_left-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49601 Jan 24 01:24 central_tendency_asymm_right-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49545 Jan 24 01:24 central_tendency_bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 47256 Jan 24 01:24 central_tendency_symm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22199 Jan 24 01:24 distributions_with_the_same_means_mean-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21921 Jan 24 01:24 distributions_with_the_same_means_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22128 Jan 24 01:24 fifth_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30056 Jan 24 01:24 fig-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 78415 Jan 24 01:24 fig-bimodal-struct-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21217 Jan 24 01:24 fig-binom-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 69643 Jan 24 01:24 fig-continuous-freqs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57881 Jan 24 01:24 fig-continuous-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 52904 Jan 24 01:24 fig-median-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50140 Jan 24 01:24 fig-median-left-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 66684 Jan 24 01:24 fig-median-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51883 Jan 24 01:24 fig-median-right-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22432 Jan 24 01:24 fig-mode-nbinom-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28212 Jan 24 01:24 fig-mode-norm-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41372 Jan 24 01:24 fig-mode-pmf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29832 Jan 24 01:24 fig-norm-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19594 Jan 24 01:24 fig-poiss-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30817 Jan 24 01:24 fig-polymodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22608 Jan 24 01:24 iqr_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 76179 Jan 24 01:24 mean_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 59943 Jan 24 01:24 mean_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25146 Jan 24 01:24 quartiles_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24575 Jan 24 01:24 range_problem-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 76179 Jan 24 01:24 sd_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 59943 Jan 24 01:24 sd_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17773 Jan 24 01:24 taia_score_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24420 Jan 24 01:24 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25818 Jan 24 01:24 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41433 Jan 24 01:24 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43303 Jan 24 01:24 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 42234 Jan 24 01:24 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28932 Jan 24 01:24 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27492 Jan 24 01:24 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28844 Jan 24 01:24 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26532 Jan 24 01:24 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 32944 Jan 24 01:24 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 32594 Jan 24 01:24 unnamed-chunk-9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60893 Jan 24 01:24 zero_deviation_sum-1.png
+
+docs/lectures/pics:
+total 4592
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  38737 Jan 24 01:24 and.png
+-rw-rw-r--  1 nglgrdt nglgrdt 543353 Jan 24 01:24 antideriv.gif
+-rw-rw-r--  1 nglgrdt nglgrdt  42344 Jan 24 01:24 anti-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  32845 Jan 24 01:24 complement.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331356 Jan 24 01:24 Correlation_examples.png
+-rw-rw-r--  1 nglgrdt nglgrdt  50113 Jan 24 01:24 decart-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  34012 Jan 24 01:24 difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt 105040 Jan 24 01:24 duplicate-keys.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38980 Jan 24 01:24 equivalence.png
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 Jan 24 01:24 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt  51111 Jan 24 01:24 full-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36104 Jan 24 01:24 implication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38427 Jan 24 01:24 inner-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  34287 Jan 24 01:24 intersection.png
+-rw-rw-r--  1 nglgrdt nglgrdt  76558 Jan 24 01:24 joins-venn.png
+-rw-rw-r--  1 nglgrdt nglgrdt  59113 Jan 24 01:24 kubik.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt 283630 Jan 24 01:24 lec-cover.png
+-rw-rw-r--  1 nglgrdt nglgrdt  44309 Jan 24 01:24 left-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  52815 Jan 24 01:24 list-structure.png
+-rw-rw-r--  1 nglgrdt nglgrdt  94074 Jan 24 01:24 list-vs-df.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 Jan 24 01:24 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt  27076 Jan 24 01:24 matrix-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt 405334 Jan 24 01:24 native-pipe.png
+-rw-rw-r--  1 nglgrdt nglgrdt  25101 Jan 24 01:24 negation.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37329 Jan 24 01:24 or.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36407 Jan 24 01:24 replication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  45798 Jan 24 01:24 right-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt 280720 Jan 24 01:24 rproject-1.png
+-rw-rw-r--  1 nglgrdt nglgrdt 319323 Jan 24 01:24 rproject-2.png
+-rw-rw-r--  1 nglgrdt nglgrdt 287481 Jan 24 01:24 rproject-3.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331627 Jan 24 01:24 rproject-4.png
+-rw-rw-r--  1 nglgrdt nglgrdt 281473 Jan 24 01:24 rproject-5.png
+-rw-rw-r--  1 nglgrdt nglgrdt  41642 Jan 24 01:24 semi-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36335 Jan 24 01:24 set-a1.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29765 Jan 24 01:24 set-a.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37643 Jan 24 01:24 set-func.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36804 Jan 24 01:24 symm-difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt  53638 Jan 24 01:24 tidy-2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  99582 Jan 24 01:24 tidy.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32449 Jan 24 01:24 union.png
+-rw-rw-r--  1 nglgrdt nglgrdt  62016 Jan 24 01:24 vec-to-mat.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35775 Jan 24 01:24 wide-long.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42537 Jan 24 01:24 xor.png
+-rw-rw-r--  1 nglgrdt nglgrdt  22992 Jan 24 01:24 xy.png
+
+docs/lectures/site_libs:
+total 56
+drwxrwxr-x 14 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-nav
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 typedarray-0.1
+
+docs/lectures/site_libs/bootstrap:
+total 1288
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 471373 Jan 24 01:24 bootstrap-dark.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r--  1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r--  1 nglgrdt nglgrdt 471407 Jan 24 01:24 bootstrap.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+
+docs/lectures/site_libs/clipboard:
+total 20
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/lectures/site_libs/crosstalk-1.2.1:
+total 20
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 scss
+
+docs/lectures/site_libs/crosstalk-1.2.1/css:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 Jan 24 01:24 crosstalk.min.css
+
+docs/lectures/site_libs/crosstalk-1.2.1/js:
+total 184
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 Jan 24 01:24 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 Jan 24 01:24 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 Jan 24 01:24 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 Jan 24 01:24 crosstalk.min.js.map
+
+docs/lectures/site_libs/crosstalk-1.2.1/scss:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 Jan 24 01:24 crosstalk.scss
+
+docs/lectures/site_libs/htmlwidgets-1.6.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 Jan 24 01:24 htmlwidgets.js
+
+docs/lectures/site_libs/jquery-3.5.1:
+total 532
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 Jan 24 01:24 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 Jan 24 01:24 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 Jan 24 01:24 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 Jan 24 01:24 jquery.min.map
+
+docs/lectures/site_libs/plotly-binding-4.10.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 Jan 24 01:24 plotly.js
+
+docs/lectures/site_libs/plotly-htmlwidgets-css-2.11.1:
+total 12
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 Jan 24 01:24 plotly-htmlwidgets.css
+
+docs/lectures/site_libs/plotly-main-2.11.1:
+total 3588
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt    4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 Jan 24 01:24 plotly-latest.min.js
+
+docs/lectures/site_libs/quarto-html:
+total 100
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r--  1 nglgrdt nglgrdt  3135 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-rw-r--  1 nglgrdt nglgrdt  2770 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/lectures/site_libs/quarto-nav:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 4570 Jan 24 01:24 headroom.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 8617 Jan 24 01:24 quarto-nav.js
+
+docs/lectures/site_libs/quarto-search:
+total 160
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 92971 Jan 24 01:24 autocomplete.umd.js
+-rw-r--r--  1 nglgrdt nglgrdt 23539 Jan 24 01:24 fuse.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 35638 Jan 24 01:24 quarto-search.js
+
+docs/lectures/site_libs/typedarray-0.1:
+total 32
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 14 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 Jan 24 01:24 typedarray.min.js
+
+docs/practice:
+total 1540
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  33485 Jan 24 01:24 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt  68662 Jan 24 01:24 pr10.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68628 Jan 24 01:24 pr11.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68638 Jan 24 01:24 pr12.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68585 Jan 24 01:24 pr13.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68411 Jan 24 01:24 pr14.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68392 Jan 24 01:24 pr15.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68489 Jan 24 01:24 pr16.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68420 Jan 24 01:24 pr17.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  84698 Jan 24 01:24 pr1.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 pr2_files
+-rw-rw-r-- 1 nglgrdt nglgrdt 106680 Jan 24 01:24 pr2.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  65921 Jan 24 01:24 pr3.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  85802 Jan 24 01:24 pr4.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 pr5_files
+-rw-rw-r-- 1 nglgrdt nglgrdt 106876 Jan 24 01:24 pr5.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 pr7_files
+-rw-rw-r-- 1 nglgrdt nglgrdt  72080 Jan 24 01:24 pr7.html
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 pr8_files
+-rw-rw-r-- 1 nglgrdt nglgrdt  64183 Jan 24 01:24 pr8.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  68585 Jan 24 01:24 pr9.html
+-rw-rw-r-- 1 nglgrdt nglgrdt  32683 Jan 24 01:24 references.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 239974 Jan 24 01:24 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 site_libs
+
+docs/practice/js:
+total 76
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr10.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr11.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr12.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr13.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr14.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr15.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr16.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1516 Jan 24 01:24 pr17.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1454 Jan 24 01:24 pr1.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1456 Jan 24 01:24 pr2.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1443 Jan 24 01:24 pr3.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1450 Jan 24 01:24 pr4.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1459 Jan 24 01:24 pr5.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1445 Jan 24 01:24 pr7.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1425 Jan 24 01:24 pr8.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1425 Jan 24 01:24 pr9.json
+-rw-rw-r-- 1 nglgrdt nglgrdt 1508 Jan 24 01:24 pr.js
+
+docs/practice/pics:
+total 300
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt   6204 Jan 24 01:24 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   4805 Jan 24 01:24 logo.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 282143 Jan 24 01:24 pr-cover.png
+
+docs/practice/pr2_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/practice/pr2_files/figure-html:
+total 48
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 16568 Jan 24 01:24 15-vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16810 Jan 24 01:24 18-vis-1.png
+
+docs/practice/pr5_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/practice/pr5_files/figure-html:
+total 1876
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  15371 Jan 24 01:24 12a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  16407 Jan 24 01:24 12b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  23083 Jan 24 01:24 12c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  27314 Jan 24 01:24 13a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  65440 Jan 24 01:24 13b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  24131 Jan 24 01:24 15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  41711 Jan 24 01:24 16a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55443 Jan 24 01:24 16b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  88398 Jan 24 01:24 16c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  47650 Jan 24 01:24 17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 104446 Jan 24 01:24 18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  38894 Jan 24 01:24 19b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  41742 Jan 24 01:24 20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  52168 Jan 24 01:24 21-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  53607 Jan 24 01:24 22-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  57216 Jan 24 01:24 23-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  37595 Jan 24 01:24 24-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  18250 Jan 24 01:24 25-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  24690 Jan 24 01:24 26-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  93315 Jan 24 01:24 27-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 128388 Jan 24 01:24 28-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 131061 Jan 24 01:24 29-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   3250 Jan 24 01:24 2a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  12265 Jan 24 01:24 2b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 131185 Jan 24 01:24 30-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  27251 Jan 24 01:24 3a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  64811 Jan 24 01:24 3b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  97966 Jan 24 01:24 4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17464 Jan 24 01:24 5a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17464 Jan 24 01:24 5b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  35950 Jan 24 01:24 6a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  36156 Jan 24 01:24 6b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  36156 Jan 24 01:24 6c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  35700 Jan 24 01:24 7a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  35546 Jan 24 01:24 7b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  35051 Jan 24 01:24 8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55147 Jan 24 01:24 9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  19532 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/practice/pr7_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/practice/pr7_files/figure-html:
+total 196
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 64052 Jan 24 01:24 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49900 Jan 24 01:24 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16088 Jan 24 01:24 unnamed-chunk-15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27565 Jan 24 01:24 unnamed-chunk-15-2.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25592 Jan 24 01:24 unnamed-chunk-6-1.png
+
+docs/practice/pr8_files:
+total 12
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-html
+
+docs/practice/pr8_files/figure-html:
+total 44
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 35113 Jan 24 01:24 p8-1-dists-1.png
+
+docs/practice/site_libs:
+total 28
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-search
+
+docs/practice/site_libs/bootstrap:
+total 1292
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 472465 Jan 24 01:24 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 472638 Jan 24 01:24 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+
+docs/practice/site_libs/bootstrap/pics:
+total 108
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 Jan 24 01:24 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 Jan 24 01:24 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 Jan 24 01:24 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 Jan 24 01:24 lab_medium.png
+
+docs/practice/site_libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/practice/site_libs/quarto-html:
+total 100
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/practice/site_libs/quarto-nav:
+total 28
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 Jan 24 01:24 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 Jan 24 01:24 quarto-nav.js
+
+docs/practice/site_libs/quarto-search:
+total 160
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 Jan 24 01:24 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 Jan 24 01:24 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 Jan 24 01:24 quarto-search.js
+
+docs/projects:
+total 172
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 9 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 28891 Jan 24 01:24 f.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 29149 Jan 24 01:24 index.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 48021 Jan 24 01:24 j.html
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt 28636 Jan 24 01:24 references.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 13639 Jan 24 01:24 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 site_libs
+
+docs/projects/pics:
+total 656
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt   6204 Jan 24 01:24 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   4805 Jan 24 01:24 logo.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 364337 Jan 24 01:24 mr-shepard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 282293 Jan 24 01:24 proj-cover.png
+
+docs/projects/site_libs:
+total 28
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-search
+
+docs/projects/site_libs/bootstrap:
+total 1292
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 472461 Jan 24 01:24 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 Jan 24 01:24 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 Jan 24 01:24 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 472634 Jan 24 01:24 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 Jan 24 01:24 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+
+docs/projects/site_libs/bootstrap/pics:
+total 108
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 Jan 24 01:24 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 Jan 24 01:24 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 Jan 24 01:24 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 Jan 24 01:24 lab_medium.png
+
+docs/projects/site_libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/projects/site_libs/quarto-html:
+total 100
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 Jan 24 01:24 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 Jan 24 01:24 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 Jan 24 01:24 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/projects/site_libs/quarto-nav:
+total 28
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 Jan 24 01:24 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 Jan 24 01:24 quarto-nav.js
+
+docs/projects/site_libs/quarto-search:
+total 160
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 Jan 24 01:24 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 Jan 24 01:24 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 Jan 24 01:24 quarto-search.js
+
+docs/slides:
+total 1248
+drwxrwxr-x 19 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 pics
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s10_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38699 Jan 24 01:24 s10.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s11_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38570 Jan 24 01:24 s11.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s12_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38489 Jan 24 01:24 s12.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s13_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38366 Jan 24 01:24 s13.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s14_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38591 Jan 24 01:24 s14.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s15_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38423 Jan 24 01:24 s15.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s1_files
+-rw-rw-r--  1 nglgrdt nglgrdt 120091 Jan 24 01:24 s1.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s2_files
+-rw-rw-r--  1 nglgrdt nglgrdt 163318 Jan 24 01:24 s2.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s3_files
+-rw-rw-r--  1 nglgrdt nglgrdt 239041 Jan 24 01:24 s3.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 Jan 24 01:24 s4_files
+-rw-rw-r--  1 nglgrdt nglgrdt  66551 Jan 24 01:24 s4.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s5_files
+-rw-rw-r--  1 nglgrdt nglgrdt  70617 Jan 24 01:24 s5.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s6_files
+-rw-rw-r--  1 nglgrdt nglgrdt  70223 Jan 24 01:24 s6.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s7_files
+-rw-rw-r--  1 nglgrdt nglgrdt  85859 Jan 24 01:24 s7.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s8_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38604 Jan 24 01:24 s8.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 s9_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38484 Jan 24 01:24 s9.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 Jan 24 01:24 template_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38505 Jan 24 01:24 template.html
+
+docs/slides/pics:
+total 3428
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  38737 Jan 24 01:24 and.png
+-rw-rw-r--  1 nglgrdt nglgrdt  74403 Jan 24 01:24 anscombe.png
+-rw-rw-r--  1 nglgrdt nglgrdt 543353 Jan 24 01:24 antideriv.gif
+-rw-rw-r--  1 nglgrdt nglgrdt  96881 Jan 24 01:24 antideriv.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42344 Jan 24 01:24 anti-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  32845 Jan 24 01:24 complement.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331356 Jan 24 01:24 Correlation_examples.png
+-rw-rw-r--  1 nglgrdt nglgrdt 344139 Jan 24 01:24 datasaurus.png
+-rw-rw-r--  1 nglgrdt nglgrdt  50113 Jan 24 01:24 decart-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  34012 Jan 24 01:24 difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt 105040 Jan 24 01:24 duplicate-keys.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38980 Jan 24 01:24 equivalence.png
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 Jan 24 01:24 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt  51111 Jan 24 01:24 full-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36104 Jan 24 01:24 implication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38427 Jan 24 01:24 inner-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  34287 Jan 24 01:24 intersection.png
+-rw-rw-r--  1 nglgrdt nglgrdt  76558 Jan 24 01:24 joins-venn.png
+-rw-rw-r--  1 nglgrdt nglgrdt  59113 Jan 24 01:24 kubik.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  44309 Jan 24 01:24 left-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt 123999 Jan 24 01:24 likertscale.png
+-rw-rw-r--  1 nglgrdt nglgrdt  52815 Jan 24 01:24 list-structure.png
+-rw-rw-r--  1 nglgrdt nglgrdt  94074 Jan 24 01:24 list-vs-df.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 Jan 24 01:24 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt  27076 Jan 24 01:24 matrix-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  25101 Jan 24 01:24 negation.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37329 Jan 24 01:24 or.png
+-rw-rw-r--  1 nglgrdt nglgrdt 140378 Jan 24 01:24 painscale.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  36407 Jan 24 01:24 replication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  45798 Jan 24 01:24 right-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt 211766 Jan 24 01:24 rstudio-interface.png
+-rw-rw-r--  1 nglgrdt nglgrdt  41642 Jan 24 01:24 semi-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36335 Jan 24 01:24 set-a1.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29765 Jan 24 01:24 set-a.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37643 Jan 24 01:24 set-func.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36804 Jan 24 01:24 symm-difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt  53638 Jan 24 01:24 tidy-2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  99582 Jan 24 01:24 tidy.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32449 Jan 24 01:24 union.png
+-rw-rw-r--  1 nglgrdt nglgrdt  62016 Jan 24 01:24 vec-to-mat.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35775 Jan 24 01:24 wide-long.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42537 Jan 24 01:24 xor.png
+-rw-rw-r--  1 nglgrdt nglgrdt  22992 Jan 24 01:24 xy.png
+
+docs/slides/s10_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s10_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21156 Jan 24 01:24 plot-1.png
+
+docs/slides/s10_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s10_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s10_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s10_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s10_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s10_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s10_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s10_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s10_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s10_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s10_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s10_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s10_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s10_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s10_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s10_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s10_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s10_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s10_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s10_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s11_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s11_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21165 Jan 24 01:24 plot-1.png
+
+docs/slides/s11_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s11_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s11_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s11_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s11_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s11_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s11_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s11_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s11_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s11_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s11_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s11_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s11_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s11_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s11_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s11_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s11_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s11_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s11_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s11_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s12_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s12_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21146 Jan 24 01:24 plot-1.png
+
+docs/slides/s12_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s12_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s12_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s12_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s12_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s12_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s12_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s12_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s12_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s12_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s12_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s12_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s12_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s12_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s12_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s12_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s12_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s12_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s12_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s12_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s13_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s13_files/figure-revealjs:
+total 28
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20408 Jan 24 01:24 plot-1.png
+
+docs/slides/s13_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s13_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s13_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s13_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s13_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s13_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s13_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s13_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s13_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s13_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s13_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s13_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s13_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s13_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s13_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s13_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s13_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s13_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s13_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s13_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s14_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s14_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20765 Jan 24 01:24 plot-1.png
+
+docs/slides/s14_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s14_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s14_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s14_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s14_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s14_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s14_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s14_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s14_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s14_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s14_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s14_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s14_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s14_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s14_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s14_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s14_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s14_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s14_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s14_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s15_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s15_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21190 Jan 24 01:24 plot-1.png
+
+docs/slides/s15_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s15_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s15_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s15_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s15_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s15_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s15_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s15_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s15_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s15_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s15_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s15_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s15_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s15_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s15_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s15_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s15_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s15_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s15_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s15_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s1_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s1_files/figure-revealjs:
+total 100
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 19675 Jan 24 01:24 vec-classic-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18862 Jan 24 01:24 vec-free-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16829 Jan 24 01:24 vec-remove-vector-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30539 Jan 24 01:24 vec-same-1.png
+
+docs/slides/s1_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s1_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s1_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s1_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s1_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s1_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s1_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s1_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s1_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s1_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s1_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s1_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s1_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s1_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s1_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s1_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s1_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s1_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s1_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s1_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s2_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s2_files/figure-revealjs:
+total 844
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 106257 Jan 24 01:24 unnamed-chunk-103-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  20462 Jan 24 01:24 unnamed-chunk-105-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42551 Jan 24 01:24 unnamed-chunk-106-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55542 Jan 24 01:24 unnamed-chunk-107-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  93093 Jan 24 01:24 unnamed-chunk-108-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  18340 Jan 24 01:24 unnamed-chunk-109-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 101907 Jan 24 01:24 unnamed-chunk-110-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  23121 Jan 24 01:24 unnamed-chunk-111-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  20296 Jan 24 01:24 unnamed-chunk-112-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  57995 Jan 24 01:24 unnamed-chunk-113-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  20092 Jan 24 01:24 unnamed-chunk-114-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  35266 Jan 24 01:24 unnamed-chunk-115-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  96249 Jan 24 01:24 unnamed-chunk-116-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  82980 Jan 24 01:24 unnamed-chunk-117-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  59582 Jan 24 01:24 unnamed-chunk-99-1.png
+
+docs/slides/s2_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s2_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s2_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s2_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s2_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s2_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s2_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s2_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s2_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s2_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s2_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s2_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s2_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s2_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s2_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s2_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s2_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s2_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s2_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s2_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s3_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s3_files/figure-revealjs:
+total 476
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 25638 Jan 24 01:24 deriv1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28121 Jan 24 01:24 deriv2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30985 Jan 24 01:24 deriv3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 63367 Jan 24 01:24 deriv4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 62245 Jan 24 01:24 deriv-graph-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19562 Jan 24 01:24 discrete-func-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 85231 Jan 24 01:24 func-graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 40038 Jan 24 01:24 integral-plot005-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38706 Jan 24 01:24 integral-plot01-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36943 Jan 24 01:24 integral-plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26068 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/slides/s3_files/libs:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 typedarray-0.1
+
+docs/slides/s3_files/libs/clipboard:
+total 20
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s3_files/libs/crosstalk-1.2.1:
+total 20
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 scss
+
+docs/slides/s3_files/libs/crosstalk-1.2.1/css:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 Jan 24 01:24 crosstalk.min.css
+
+docs/slides/s3_files/libs/crosstalk-1.2.1/js:
+total 184
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 Jan 24 01:24 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 Jan 24 01:24 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 Jan 24 01:24 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 Jan 24 01:24 crosstalk.min.js.map
+
+docs/slides/s3_files/libs/crosstalk-1.2.1/scss:
+total 12
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 Jan 24 01:24 crosstalk.scss
+
+docs/slides/s3_files/libs/htmlwidgets-1.6.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 Jan 24 01:24 htmlwidgets.js
+
+docs/slides/s3_files/libs/jquery-3.5.1:
+total 532
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 Jan 24 01:24 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 Jan 24 01:24 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 Jan 24 01:24 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 Jan 24 01:24 jquery.min.map
+
+docs/slides/s3_files/libs/plotly-binding-4.10.4:
+total 44
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 Jan 24 01:24 plotly.js
+
+docs/slides/s3_files/libs/plotly-htmlwidgets-css-2.11.1:
+total 12
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 Jan 24 01:24 plotly-htmlwidgets.css
+
+docs/slides/s3_files/libs/plotly-main-2.11.1:
+total 3588
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt    4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 Jan 24 01:24 plotly-latest.min.js
+
+docs/slides/s3_files/libs/quarto-html:
+total 80
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r--  1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r--  1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r--  1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s3_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s3_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s3_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s3_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s3_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s3_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s3_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s3_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s3_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s3_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s3_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s3_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s3_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s3_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s3_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s3_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s3_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s3_files/libs/typedarray-0.1:
+total 32
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 Jan 24 01:24 typedarray.min.js
+
+docs/slides/s4_files:
+total 12
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s4_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s4_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s4_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s4_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s4_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s4_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s4_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s4_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s4_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s4_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s4_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s4_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s4_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s4_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s4_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s4_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s4_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s4_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s4_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s4_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s5_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s5_files/figure-revealjs:
+total 2124
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  19274 Jan 24 01:24 cfd-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  70367 Jan 24 01:24 cluster-clusters-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  72826 Jan 24 01:24 cluster-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  84275 Jan 24 01:24 cluster-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  33944 Jan 24 01:24 geomprob-dots-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 109895 Jan 24 01:24 geomprob-incircle-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  28410 Jan 24 01:24 geomprob-square-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 102425 Jan 24 01:24 norm-dist-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  59602 Jan 24 01:24 pdf-inetrvals-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17895 Jan 24 01:24 pdf-segment-nolabs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  21110 Jan 24 01:24 pmf-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  21110 Jan 24 01:24 pmf-dice-repeat-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  43905 Jan 24 01:24 pmf-vs-pdf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 152673 Jan 24 01:24 simple-random-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 143021 Jan 24 01:24 simple-random-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 359604 Jan 24 01:24 strat-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 351810 Jan 24 01:24 strat-pop-strata-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 340517 Jan 24 01:24 strat-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  96547 Jan 24 01:24 unnamed-chunk-1-1.png
+
+docs/slides/s5_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s5_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s5_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s5_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s5_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s5_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s5_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s5_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s5_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s5_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s5_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s5_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s5_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s5_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s5_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s5_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s5_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s5_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s5_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s5_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s6_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s6_files/figure-revealjs:
+total 680
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  57524 Jan 24 01:24 alpha-raise-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31792 Jan 24 01:24 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42634 Jan 24 01:24 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  89456 Jan 24 01:24 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 213644 Jan 24 01:24 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  63997 Jan 24 01:24 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31792 Jan 24 01:24 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  43015 Jan 24 01:24 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  22074 Jan 24 01:24 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  72821 Jan 24 01:24 unnamed-chunk-9-1.png
+
+docs/slides/s6_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s6_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s6_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s6_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s6_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s6_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s6_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s6_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s6_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s6_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s6_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s6_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s6_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s6_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s6_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s6_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s6_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s6_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s6_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s6_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s7_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s7_files/figure-revealjs:
+total 2120
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 23962 Jan 24 01:24 68_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23592 Jan 24 01:24 99_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 15977 Jan 24 01:24 boxplot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 20353 Jan 24 01:24 boxplot_annotated-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50618 Jan 24 01:24 central_tendency_asymm_left-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58695 Jan 24 01:24 central_tendency_asymm_right-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57437 Jan 24 01:24 central_tendency_bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 55471 Jan 24 01:24 central_tendency_symm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29254 Jan 24 01:24 distributions_with_the_same_means_mean-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29071 Jan 24 01:24 distributions_with_the_same_means_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23923 Jan 24 01:24 fifth_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24772 Jan 24 01:24 iqr_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 90350 Jan 24 01:24 mean_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70191 Jan 24 01:24 mean_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60626 Jan 24 01:24 median-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58245 Jan 24 01:24 median-left-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 75903 Jan 24 01:24 median-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60080 Jan 24 01:24 median-right-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35447 Jan 24 01:24 mode-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 89900 Jan 24 01:24 mode-bimodal-struct-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23688 Jan 24 01:24 mode-binom-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 77914 Jan 24 01:24 mode-continuous-freqs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 66654 Jan 24 01:24 mode-continuous-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25623 Jan 24 01:24 mode-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35628 Jan 24 01:24 mode-norm-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33049 Jan 24 01:24 mode-norm-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 44014 Jan 24 01:24 mode-pmf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21645 Jan 24 01:24 mode-poiss-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35939 Jan 24 01:24 mode-polymodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27358 Jan 24 01:24 quartiles_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29964 Jan 24 01:24 range_problem-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 90350 Jan 24 01:24 sd_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70191 Jan 24 01:24 sd_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22872 Jan 24 01:24 taia_score_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 31066 Jan 24 01:24 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49240 Jan 24 01:24 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51980 Jan 24 01:24 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49741 Jan 24 01:24 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34227 Jan 24 01:24 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29748 Jan 24 01:24 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34759 Jan 24 01:24 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33907 Jan 24 01:24 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 39346 Jan 24 01:24 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41082 Jan 24 01:24 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29411 Jan 24 01:24 unnamed-chunk-9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70258 Jan 24 01:24 zero_deviation_sum-1.png
+
+docs/slides/s7_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s7_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s7_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s7_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s7_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s7_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s7_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s7_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s7_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s7_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s7_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s7_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s7_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s7_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s7_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s7_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s7_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s7_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s7_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s7_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s8_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s8_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21157 Jan 24 01:24 plot-1.png
+
+docs/slides/s8_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s8_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s8_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s8_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s8_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s8_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s8_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s8_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s8_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s8_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s8_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s8_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s8_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s8_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s8_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s8_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s8_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s8_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s8_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s8_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/s9_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/s9_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21066 Jan 24 01:24 plot-1.png
+
+docs/slides/s9_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/s9_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/s9_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/s9_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/s9_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/s9_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/s9_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/s9_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/s9_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/s9_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/s9_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/s9_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/s9_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/s9_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/s9_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/s9_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/s9_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/s9_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/s9_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/s9_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
+
+docs/slides/template_files:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 libs
+
+docs/slides/template_files/figure-revealjs:
+total 32
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21122 Jan 24 01:24 plot-1.png
+
+docs/slides/template_files/libs:
+total 20
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 revealjs
+
+docs/slides/template_files/libs/clipboard:
+total 20
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 Jan 24 01:24 clipboard.min.js
+
+docs/slides/template_files/libs/quarto-html:
+total 80
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 Jan 24 01:24 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 Jan 24 01:24 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 Jan 24 01:24 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 Jan 24 01:24 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 Jan 24 01:24 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 Jan 24 01:24 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 Jan 24 01:24 tippy.umd.min.js
+
+docs/slides/template_files/libs/revealjs:
+total 16
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 Jan 24 01:24 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 plugin
+
+docs/slides/template_files/libs/revealjs/dist:
+total 1240
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 Jan 24 01:24 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 Jan 24 01:24 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 Jan 24 01:24 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 Jan 24 01:24 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 Jan 24 01:24 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 Jan 24 01:24 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 Jan 24 01:24 theme
+
+docs/slides/template_files/libs/revealjs/dist/theme:
+total 44
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 Jan 24 01:24 quarto.css
+
+docs/slides/template_files/libs/revealjs/dist/theme/fonts:
+total 16
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 Jan 24 01:24 source-sans-pro
+
+docs/slides/template_files/libs/revealjs/dist/theme/fonts/league-gothic:
+total 140
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 Jan 24 01:24 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 Jan 24 01:24 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 Jan 24 01:24 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 Jan 24 01:24 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 Jan 24 01:24 LICENSE
+
+docs/slides/template_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
+total 1812
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 Jan 24 01:24 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 Jan 24 01:24 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 Jan 24 01:24 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 Jan 24 01:24 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 Jan 24 01:24 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 Jan 24 01:24 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 Jan 24 01:24 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 Jan 24 01:24 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 Jan 24 01:24 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 Jan 24 01:24 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 Jan 24 01:24 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 Jan 24 01:24 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 Jan 24 01:24 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 Jan 24 01:24 source-sans-pro-semibold.woff
+
+docs/slides/template_files/libs/revealjs/plugin:
+total 48
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 zoom
+
+docs/slides/template_files/libs/revealjs/plugin/highlight:
+total 1872
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 Jan 24 01:24 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 Jan 24 01:24 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 Jan 24 01:24 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 Jan 24 01:24 zenburn.css
+
+docs/slides/template_files/libs/revealjs/plugin/markdown:
+total 208
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 Jan 24 01:24 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 Jan 24 01:24 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 Jan 24 01:24 plugin.js
+
+docs/slides/template_files/libs/revealjs/plugin/math:
+total 88
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 Jan 24 01:24 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 Jan 24 01:24 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 Jan 24 01:24 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 Jan 24 01:24 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 Jan 24 01:24 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 Jan 24 01:24 plugin.js
+
+docs/slides/template_files/libs/revealjs/plugin/notes:
+total 248
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 Jan 24 01:24 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 Jan 24 01:24 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 Jan 24 01:24 speaker-view.html
+
+docs/slides/template_files/libs/revealjs/plugin/pdf-export:
+total 16
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 Jan 24 01:24 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 Jan 24 01:24 plugin.yml
+
+docs/slides/template_files/libs/revealjs/plugin/quarto-line-highlight:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 Jan 24 01:24 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 Jan 24 01:24 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 Jan 24 01:24 plugin.yml
+
+docs/slides/template_files/libs/revealjs/plugin/quarto-support:
+total 28
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 Jan 24 01:24 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 Jan 24 01:24 support.js
+
+docs/slides/template_files/libs/revealjs/plugin/reveal-menu:
+total 68
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 Jan 24 01:24 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 Jan 24 01:24 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 Jan 24 01:24 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 Jan 24 01:24 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 Jan 24 01:24 quarto-menu.js
+
+docs/slides/template_files/libs/revealjs/plugin/search:
+total 56
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 Jan 24 01:24 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 Jan 24 01:24 search.js
+
+docs/slides/template_files/libs/revealjs/plugin/zoom:
+total 24
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 Jan 24 01:24 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 Jan 24 01:24 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 Jan 24 01:24 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 Jan 24 01:24 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 Jan 24 01:24 zoom.js
 ```
 ## Log
 
@@ -2975,22 +7546,177 @@ processing file: index.qmd
 8/87 [auth]                         
 9/87                                
 10/87 [load-data]                    
+11/87                                
+12/87 [lectures-views-by-day]        
+13/87                                
+14/87 [lectures-graph-cumsum-views]  
+15/87                                
+16/87 [lectures-ave-view-dur-by-day] 
+17/87                                
+18/87 [lectures-ave-view-perc-by-day]
+19/87                                
+20/87 [pr-graph-visits]              
+21/87                                
+22/87 [practice-views-by-day]        
+23/87                                
+24/87 [practice-views-cumsum]        
+25/87                                
+26/87 [practice-ave-view-dur-by-day] 
+27/87                                
+28/87 [practice-ave-view-perc-by-day]
+29/87                                
+30/87 [q1-ts]                        
+31/87                                
+32/87 [hws-ns]                       
+33/87                                
+34/87 [hws-mean-scores]              
+35/87                                
+36/87 [hws-scores]                   
+37/87                                
+38/87 [hw1-tab]                      
+39/87                                
+40/87 [hw2-tab]                      
+41/87                                
+42/87 [hw3-tab]                      
+43/87                                
+44/87 [hw4-tab]                      
+45/87                                
+46/87 [hw5-tab]                      
+47/87                                
+48/87 [hw6-tab]                      
+49/87                                
+50/87 [hw7-tab]                      
+51/87                                
+52/87 [hw8-tab]                      
+53/87                                
+54/87 [hw9-tab]                      
+55/87                                
+56/87 [hw10-tab]                     
+57/87                                
+58/87 [hw11-tab]                     
+59/87                                
+60/87 [hw12-tab]                     
+61/87                                
+62/87 [hw13-tab]                     
+63/87                                
+64/87 [hw14-tab]                     
+65/87                                
+66/87 [hw15-tab]                     
+67/87                                
+68/87 [hw16-tab]                     
+69/87                                
+70/87 [c-graph-presence]             
+71/87                                
+72/87 [cons-views-by-day]            
+73/87                                
+74/87 [cons-views-cumsum]            
+75/87                                
+76/87 [cons-ave-view-dur-by-day]     
+77/87                                
+78/87 [cons-ave-view-perc-by-day]    
+79/87                                
+80/87 [a-views-by-day]               
+81/87                                
+82/87 [a-views-cumsum]               
+83/87                                
+84/87 [a-ave-view-dur-by-day]        
+85/87                                
+86/87 [a-ave-view-perc-by-day]       
+87/87                                
+output file: index.knit.md
+
+pandoc 
+  to: html
+  output-file: index.html
+  template: /opt/quarto/share/formats/dashboard/template.html
+  standalone: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  page-layout: custom
+  title: Analytics // WLM 2023
+  author: A. Angelgardt
+  scrolling: true
+  logo: pics/logo.png
+  
+Output created: index.html
 
 
+=====
+ANALYTICS RENDER COMPLETED
+=====
 
-Quitting from lines 62-68 [load-data] (index.qmd)
-Error in `UseMethod()`:
-! no applicable method for 'filter' applied to an object of class "list"
-Backtrace:
- 1. ... %>% .$id
- 2. dplyr::filter(., name == "WLM 2023 // HSE UX LAB")
-Execution halted
 
 =====
+RUN BOOKS UPDATER
 =====
-DEPLOYMENT NOT COMPLETED
-Analytics render error
+
+redirecting index.html copied
+
+Directories to be deployed:
+    lec
+    pr
+    hw
+    proj
+    hub
+
+docs/lectures created
+lec copied
+docs/practice created
+pr copied
+docs/homeworks created
+hw copied
+docs/projects created
+proj copied
+docs/hub created
+hub copied
+
 =====
+BOOKS UPDATE COMPLETED
 =====
+
+
+=====
+RUN SLIDES UPDATER
+=====
+
+docs/slides created
+html files copied
+_files folders copied
+pics folder copied
+
+=====
+SLIDES UPDATE COMPLETED
+=====
+
+
+=====
+RUN ANALYTICS UPDATER
+=====
+
+docs/analytics created
+index.html copied
+_files folder copied
+pics folder copied
+
+=====
+ANALYTICS UPDATE COMPLETED
+=====
+
+
+==========
+==========
+DEPLOYMENT COMPLETED
+==========
+==========
+Commit and push changes to remote
+
 
 ```
