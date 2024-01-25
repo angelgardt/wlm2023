@@ -3,6 +3,11 @@
 
 # MAIN
 
+library(tidyverse)
+theme_set(theme_bw())
+library(ggcorrplot)
+library(ggmosaic)
+
 # 1
 taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/taia.csv")
 str(taia)
