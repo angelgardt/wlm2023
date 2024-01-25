@@ -5,15 +5,93 @@
 REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs, eval=TRUE}
+library(tidyverse)
+theme_set(theme_bw())
+library(ggcorrplot)
+library(ggmosaic)
+```
+
+```{r}
+taia <- read_csv("https://github.com/angelgardt/taia/raw/master/data/taia.csv")
+taia %>% 
+  select(id, freqvk, freqfb, freqtw, freqin, freqtt, freqyt) %>% 
+  pivot_longer(cols = -id) %>% 
+  summarise(f_socnet = median(value, na.rm = TRUE),
+            .by = id) %>% 
+  pull(f_socnet) -> taia$f_socnet
+```
+
 ## Основные задания {#pr9_main}
+
+::: {.callout-note}
+
+### Пакеты
+
+Сегодня нам понадобится несколько новых пакетов.
+
+* `psych`
+* `ggcorrplot`
+* `ggmosaic`
+* `pwr`
+* `qgraph`
+* `report`
+* `apaTables`
+
+Проверить, установлен ли пакет, можно с помощью команды:
+
+```{r, echo=TRUE}
+"psych" %in% installed.packages()
+```
+
+Если какие-то пакеты отсутствуют, то необходимо их установить с помощью функции `install.packages()`.
+
+:::
 
 ### #1
 
 <img id="pr9-1-level" class="level"/>
 
 ::: {#pr9-1-task .task}
-Текст задания `переменная`.
+
+Мы начнем работать сегодня с психометрическими данными. По [ссылке](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/taia.csv) лежат данные количественной апробации опросника на доверие к искусственому интеллекту (Trust in Artificial Intelligent Agents, TAIA).
+
+::: {.callout-note}
+
+#### Структура опросника
+
+Опросник состоит из шести шкал:
+
+- предсказуемость (predictability, PR)
+- последовательность (consistency, CO)
+- полезность (utility, UT)
+- вера (faith, FA)
+- надежность (dependability, DE)
+- понимание (understanding, UN)
+
+Баллы по шкалам опросника рассчитываются прямой суммой баллов по всем пунктам шкалы. Также в операционализации был выделен общий фактор доверия, выражающийся через сумму баллов по всем шкалам опросника.
+
+В опросник использовалась шестибалльная шкала Ликерта.
+
 :::
+
+a. Загрузите данные.
+b. Изучите их структуру, при необходимости скорректируйте типы переменных.
+
+:::
+
+```{r pr9-1-1, eval=TRUE}
+taia <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/taia.csv")
+```
+
+```{r pr9-1-2}
+str(taia)
+```
 
 ::: {#pr9-1-autocheck .autocheck}
 ::: {#pr9-1-ir .input-requirements}
@@ -28,7 +106,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-1-hints">
 
 <summary>Подсказки</summary>
@@ -59,10 +137,28 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <img id="pr9-2-level" class="level"/>
 
 ::: {#pr9-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Посмотрим, что происходит на отдельных шкалах опросника --- исследуем шкалы Predictability (PR) и Utility (UT). Визуализируйте распределения баллов по каждому пункту шкал.
+
 :::
+
+```{r pr9-2-1}
+taia %>% 
+  select(starts_with("pr")) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(as_factor(value))) +
+  geom_bar() +
+  facet_wrap(~ name)
+```
+
+```{r pr9-2-2}
+taia %>% 
+  select(starts_with("ut")) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(as_factor(value))) +
+  geom_bar() +
+  facet_wrap(~ name)
+```
 
 ::: {#pr9-2-autocheck .autocheck}
 ::: {#pr9-2-ir .input-requirements}
@@ -82,23 +178,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Так как в операционализации подразумевается, что шкалы относительно независимы друг от друга, разумно построить два графика --- один для пунктов шкалы PR, другой для пунктов шкалы UT.
+* Для визуации распределения баллов по каждому пункту хорошо подойдет фасетизация.
+* Возможно, гистограмма в данном случае не лучший вариант. Попробуйте преобразовать переменную с баллами в коде построения графика, чтобы визуализация выглядела красивее.
 
 </details>
 :::
@@ -108,8 +190,46 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-3-level" class="level"/>
 
 ::: {#pr9-3-task .task}
-Текст задания.
+
+Рассчитайте описательные статистики для каждого пункта шкал PR и UT. Итоговая таблица должна включать следуюшие описательные статистики:
+
+* среднее [арифметическое]
+* стандартное отклонение
+* медиану
+* усеченное среднее
+* минимум
+* максимум
+* размах
+* коэффициент асимметрии
+* коэффициент эксцесса
+
+Воспользуйтесь средствами пакета `tidyverse`.
+
 :::
+
+```{r pr9-3}
+desc_stats <- function(data, scale) {
+  data %>% 
+    select(starts_with(scale)) %>% 
+    pivot_longer(cols = everything()) %>% 
+    summarise(mean = mean(value),
+              sd = sd(value),
+              median = median(value),
+              trimmed = mean(value, trim = 2.5),
+              min = min(value),
+              max = max(value),
+              range = max - min,
+              skew = psych::skew(value),
+              kurt = psych::kurtosi(value),
+              .by = name)
+}
+
+taia %>% 
+  desc_stats("pr")
+
+taia %>% 
+  desc_stats("ut")
+```
 
 ::: {#pr9-3-autocheck .autocheck}
 ::: {#pr9-3-ir .input-requirements}
@@ -129,23 +249,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Так как нам нужно два раза выполнять одни и те же расчеты --- а в реальной жизни пришлось бы повторять их шесть раз, так как в опроснике шесть шкал --- логично написать функцию, которая будет вычислять необходимые статистики.
+* В функцию можно сразу включить и необходимые преобразования датасета, чтобы мы могли ей передавать исходный датасет не заботясь об извлечении нужный переменных и приведению данных  нужному формату.
 
 </details>
 :::
@@ -155,8 +260,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-4-level" class="level"/>
 
 ::: {#pr9-4-task .task}
-Текст задания.
+
+`tidyverse`, безусловно, мощь и сила, но так как мы сегодня немножко психометрики, то можно воспользоваться и специальными пакетами. Для психометриков написан пакет `psych`, в котором есть много всего полезного, в том числе функции `describe()` и `describeBy()`.
+
+a. Изучите, как работают эти функции.
+b. Рассчитайте описательные статистики для пунктов шкал с их помощью.
+
 :::
+
+```{r pr9-4}
+taia %>% 
+  select(starts_with("pr")) %>% 
+  psych::describe()
+
+taia %>% 
+  select(starts_with("ut")) %>% 
+  psych::describe()
+```
+
 
 ::: {#pr9-4-autocheck .autocheck}
 ::: {#pr9-4-ir .input-requirements}
@@ -171,7 +292,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-4-hints">
 
 <summary>Подсказки</summary>
@@ -202,8 +323,32 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-5-level" class="level"/>
 
 ::: {#pr9-5-task .task}
-Текст задания.
+
+Отлично, общую ситуацию в шкалах мы осознали. Давайте посмотрим на отношения пунктов друг с дргуом внутри шкал. Для этого хорошо подойдет корреляционная матрица.
+
+a. Рассчитайте корреляцинные матрицы для пунктов шкал PR и UT. Сохраните результаты в объекты `pr_cor` и `ut_cor`.
+b. Рассчитайте корреяционные матрицы для пунктов шкал DE и UN. Сохраните результаты в объекты `de_cor` и `un_cor`.
+
 :::
+
+```{r pr8-5}
+taia %>% 
+  select(starts_with("pr")) %>% 
+  cor() -> pr_cor
+
+taia %>% 
+  select(starts_with("ut")) %>% 
+  cor() -> ut_cor
+
+taia %>% 
+  select(starts_with("de")) %>% 
+  cor() -> de_cor
+
+taia %>% 
+  select(starts_with("un")) %>% 
+  cor() -> un_cor
+
+```
 
 ::: {#pr9-5-autocheck .autocheck}
 ::: {#pr9-5-ir .input-requirements}
@@ -218,7 +363,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-5-hints">
 
 <summary>Подсказки</summary>
@@ -249,8 +394,44 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-6-level" class="level"/>
 
 ::: {#pr9-6-task .task}
-Текст задания.
+
+Визуализируйте корреляционные матрицы из предыдущего задания.
+
 :::
+
+```{r pr9-6}
+pr_cor %>% 
+  ggcorrplot(
+    type = "lower", lab = TRUE, lab_size = 3,
+    colors = c("indianred1", "white", "royalblue1"),
+    title = "Predictability. Interitems correlations",
+    show.legend = FALSE
+  )
+
+de_cor %>% 
+  ggcorrplot(
+    type = "lower", lab = TRUE, lab_size = 3,
+    colors = c("indianred1", "white", "royalblue1"),
+    title = "Dependability. Interitems correlations",
+    show.legend = FALSE
+  )
+
+ut_cor %>% 
+  ggcorrplot(
+    type = "lower", lab = TRUE, lab_size = 3,
+    colors = c("indianred1", "white", "royalblue1"),
+    title = "Utility. Interitems correlations",
+    show.legend = FALSE
+  )
+
+un_cor %>% 
+  ggcorrplot(
+    type = "lower", lab = TRUE, lab_size = 3,
+    colors = c("indianred1", "white", "royalblue1"),
+    title = "Understanding. Interitems correlations",
+    show.legend = FALSE
+  )
+```
 
 ::: {#pr9-6-autocheck .autocheck}
 ::: {#pr9-6-ir .input-requirements}
@@ -268,25 +449,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-6-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`ggcorrplot()`
 
 </details>
 :::
@@ -296,8 +461,30 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-7-level" class="level"/>
 
 ::: {#pr9-7-task .task}
-Текст задания.
+
+Проведем конвергентную валидизацию методики. Для этого нам необходимо рассчитать корреляцию между баллами по опросникам TAIA и General Trust Scale. Однако сначала необходимо аггрегировать имеющиеся данные.
+
+a. **Рассчитайте суммарный балл по опроснику для каждого респондента.** В ходе количественной апробации было обнаружено, что пункты `co07`, `ut10`, и `de04` обладают плохими психометрическими характеристиками, а пункты `pr03`, `pr04`, `fa03`, `fa07`, `de11` плохо вписываются в конфирматорную модель. Исключите эти пункты из расчета суммарного балла.
+b. **Рассчитайте средний балл по пунктам опросника General Trust Scale.** Пункты записаны как `gt01`, `gt02`, `gt03`, `gt04`, `gt05`, `gt06`.
+с. Объедините результаты подсчета суммарного балла для TAIA со средними баллами по шкале General Trust Scale по идентификатору респондента (`id`).
+
 :::
+
+```{r pr9-7}
+taia %>% 
+  select(id, matches("^[[:alpha:]]{2}\\d{2}$")) %>% # colnames()
+  select(-c(co07, ut10, de04, pr03, pr04, fa03, fa07, de11, gt01, gt02, gt03, gt04, gt05, gt06)) %>% # colnames()
+  pivot_longer(cols = -id) %>% # print()
+  summarise(DT = sum(value),
+            .by = id) %>% 
+  full_join(
+    taia %>% 
+      select(id, gt01, gt02, gt03, gt04, gt05, gt06) %>% 
+      pivot_longer(cols = -id) %>% 
+      summarise(GT = mean(value),
+                .by = id)
+  ) -> valid
+```
 
 ::: {#pr9-7-autocheck .autocheck}
 ::: {#pr9-7-ir .input-requirements}
@@ -312,7 +499,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-7-hints">
 
 <summary>Подсказки</summary>
@@ -343,8 +530,17 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-8-level" class="level"/>
 
 ::: {#pr9-8-task .task}
-Текст задания.
+
+Визуализируйте связь между интегральными баллами TAIA Scale и General Trust Scale с помощью диаграммы рассеяния.
+
 :::
+
+```{r pr9-8}
+valid %>% 
+  ggplot(aes(DT, GT)) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm", color = "black")
+```
 
 ::: {#pr9-8-autocheck .autocheck}
 ::: {#pr9-8-ir .input-requirements}
@@ -359,7 +555,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-8-hints">
 
 <summary>Подсказки</summary>
@@ -385,13 +581,19 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#pr9-9-title}
 
 <img id="pr9-9-level" class="level"/>
 
 ::: {#pr9-9-task .task}
-Текст задания.
+
+Протестируйте гипотезу об отсутствии связи между баллами TAIA Scale и General Trust Scale.
+
 :::
+
+```{r pr9-9}
+cor.test(valid$DT, valid$GT)
+```
 
 ::: {#pr9-9-autocheck .autocheck}
 ::: {#pr9-9-ir .input-requirements}
@@ -406,7 +608,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-9-hints">
 
 <summary>Подсказки</summary>
@@ -437,8 +639,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-10-level" class="level"/>
 
 ::: {#pr9-10-task .task}
-Текст задания.
+
+В ходе апробации также были собраны данные о частоте использования социальных сетей (переменная `f_socnet`). В качестве еще одного свидетельства валидности уместно было бы посмотреть, коррелирует ли частота использования социальных сетей с баллом по опроснику TAIA.
+
+a. Исследуйте переменную `f_socnet`.
+b. Каким коэффициентом корреляции было бы корректнее здесь воспользоваться?
+с. Рассчитайте корреляцию между интегральным баллом по опроснику и частотой использования социальных сетей. Протестируйте гипотезу об отсутствии искомой связи.
+
 :::
+
+```{r}
+taia %>% 
+  select(id, f_socnet) %>% 
+  full_join(valid) -> valid
+
+taia$f_socnet %>% unique()
+
+cor.test(valid$DT, valid$f_socnet, method = "pearson")
+cor.test(valid$DT, valid$f_socnet, method = "spearman")
+```
+
 
 ::: {#pr9-10-autocheck .autocheck}
 ::: {#pr9-10-ir .input-requirements}
@@ -456,25 +676,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-10-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Частота использования социальных сетей измерялась по данным самоотчета. Ответ на соответствующие вопросы давался с помощью шкалы Ликерта. Агрегировались данные через расчет медианы.
 
 </details>
 :::
@@ -484,8 +688,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-11-level" class="level"/>
 
 ::: {#pr9-11-task .task}
-Текст задания.
+
+Визуализируйте связь между частотой использования социальных сетей и интегральным баллом по опроснику TAIA.
+
 :::
+
+```{r pr9-11}
+
+valid %>% 
+  ggplot(aes(DT, f_socnet)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+valid %>% 
+  ggplot(aes(as_factor(f_socnet), DT)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = .2), alpha = .3)
+```
+
 
 ::: {#pr9-11-autocheck .autocheck}
 ::: {#pr9-11-ir .input-requirements}
@@ -500,10 +720,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-11-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
 <details class="hint">
 
@@ -528,11 +748,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ### #12
 
-<img class="level"/>
+<img id="pr9-12-level" class="level"/>
 
 ::: {#pr9-12-task .task}
-Текст задания.
+
+Поработаем с корреляционными матрицами. Для этого нам понадобятся [результаты апробации опросника NASA-TLX](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/nasatlx_score.csv).
+
+Загрузите данные. Изучите их структуру. При необходимости скорректируйте типы переменных.
+
 :::
+
+```{r}
+nasa <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/nasatlx_score.csv")
+str(nasa)
+```
+
 
 ::: {#pr9-12-autocheck .autocheck}
 ::: {#pr9-12-ir .input-requirements}
@@ -547,7 +777,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-12-hints">
 
 <summary>Подсказки</summary>
@@ -577,9 +807,49 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <img id="pr9-13-level" class="level"/>
 
-::: task
-Текст задания.
+::: {#pr9-13-task .task}
+
+Постройте корреляционные матрицы по шкалам опросника (`ME`, `PH`, `TI`, `PE`, `EF`, `FR`) для разных уровней сложности (`level`) задачи мысленного вращения (`task`, `MR`). Сохраните их в объекты `mr_easy_cor`, `mr_medium_cor`, `mr_hard_cor`.
+
 :::
+
+```{r}
+nasa %>% 
+  filter(task == "MR" & level == "easy") %>% 
+  select(ME, PH, TI, PE, EF, FR, OW) %>% 
+  cor() -> mr_easy_cor
+
+nasa %>% 
+  filter(task == "MR" & level == "medium") %>% 
+  select(ME, PH, TI, PE, EF, FR, OW) %>% 
+  cor() -> mr_medium_cor
+
+nasa %>% 
+  filter(task == "MR" & level == "hard") %>% 
+  select(ME, PH, TI, PE, EF, FR, OW) %>% 
+  cor() -> mr_hard_cor
+
+mr_easy_cor %>% 
+  ggcorrplot(type = "lower", 
+             lab = TRUE,
+             lab_size = 3,
+             colors = c("indianred1", "white", "royalblue1"),
+             show.legend = FALSE)
+
+mr_medium_cor %>% 
+  ggcorrplot(type = "lower", 
+             lab = TRUE,
+             lab_size = 3,
+             colors = c("indianred1", "white", "royalblue1"),
+             show.legend = FALSE)
+
+mr_hard_cor %>% 
+  ggcorrplot(type = "lower", 
+             lab = TRUE,
+             lab_size = 3,
+             colors = c("indianred1", "white", "royalblue1"),
+             show.legend = FALSE)
+```
 
 ::: {#pr9-13-autocheck .autocheck}
 ::: {#pr9-13-ir .input-requirements}
@@ -594,7 +864,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-13-hints">
 
 <summary>Подсказки</summary>
@@ -625,8 +895,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-14-level" class="level"/>
 
 ::: {#pr9-14-task .task}
-Текст задания.
+
+Сейчас у нас есть данные в том, как коррелируют шкалы друг с другом в разных уровнях сложности задачи мысленного вращения. Однако нам хотелось бы получить обобщенную информацию о том, как ведут себя шкалы в задаче мысленного вращения. Для этого необходимо усреднить три полученные матрицы.
+
+Конечно, велик соблазн взять и просто усреднить все три матрицы через среднее арифметическое, однако это далеко не лучший способ. Сначала воспользуемся z-преобразованием Фишера.
+
+Приведите рассчитанные корреляции к z-оценкам с помощью преобразования Фишера. Сохраните результаты в объекты `mr_easy_cor_`, `mr_medium_cor_`, `mr_hard_cor_` соответственно.
+
 :::
+
+```{r pr9-14}
+mr_easy_cor %>% 
+  atanh() -> mr_easy_cor_
+mr_medium_cor %>% 
+  atanh() -> mr_medium_cor_
+mr_hard_cor %>% 
+  atanh() -> mr_hard_cor_
+```
 
 ::: {#pr9-14-autocheck .autocheck}
 ::: {#pr9-14-ir .input-requirements}
@@ -644,25 +929,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-14-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`atanh()`
 
 </details>
 :::
@@ -672,8 +941,20 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-15-level" class="level"/>
 
 ::: {#pr9-15-task .task}
-Текст задания.
+
+Теперь все готово к усреднению корреляций.
+
+a. Рассчитайте средние z-оценки корреляций по полученным матрицам.
+b. Выполните обратное преобразование, чтобы вернуться к исходным диапазонам значения корреляций.
+
+Сохраните результат в объект `mr_pooled_cor`.
+
 :::
+
+```{r pr9-15}
+((mr_easy_cor_ + mr_hard_cor_ + mr_medium_cor_) / 3) %>% 
+  tanh() -> mr_pooled_cor
+```
 
 ::: {#pr9-15-autocheck .autocheck}
 ::: {#pr9-15-ir .input-requirements}
@@ -691,25 +972,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-15-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`tanh()`
 
 </details>
 :::
@@ -719,8 +984,20 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-16-level" class="level"/>
 
 ::: {#pr9-16-task .task}
-Текст задания.
+
+Окей, мы насчитали много всякого. Хотелось бы теперь это каким-то образом экспортировать, что можно было использовать при написании отчетов, статей и т.д.
+
+Самый простой вариант --- это перенаправить консольный вывод в файл. Для этого есть функция `sink()`.
+
+Сохраните аутпут функции `cor.test` из [задания 9](#pr9-9-title) в файл `converg_valid_results.txt`.
+
 :::
+
+```{r pr9-16}
+sink("converg_valid_results.txt")
+cor.test(valid$DT, valid$GT)
+sink()
+```
 
 ::: {#pr9-16-autocheck .autocheck}
 ::: {#pr9-16-ir .input-requirements}
@@ -735,7 +1012,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-16-hints">
 
 <summary>Подсказки</summary>
@@ -766,8 +1043,18 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-17-level" class="level"/>
 
 ::: {#pr9-17-task .task}
-Текст задания.
+
+Вариант экспорта результатов из предыдущего задания в целом весьма рабочий, однако далеко не оптимальный. Скажем, если мы выгрузим в таком варианте корреляционную матрицу, нам все равно придется перебивать её в док статьи руками. Не хлтелось бы так.
+
+Пакет `apaTables` облегчает нам жизнь и позволяет экспортировать уже отформатированные в APA-формате таблицы корреляций.
+
+Выгрузите корреляцию матрицу `mr_pooled_cor` в формате APA.
+
 :::
+
+```{r pr9-17}
+apaTables::apa.cor.table(mr_pooled_cor, filename = "MR-pooled-cor.docx")
+```
 
 ::: {#pr9-17-autocheck .autocheck}
 ::: {#pr9-17-ir .input-requirements}
@@ -785,25 +1072,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-17-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`apaTables::apa.cor.table(corr_matrix, filename = "...")`
 
 </details>
 :::
@@ -813,8 +1084,17 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-18-level" class="level"/>
 
 ::: {#pr9-18-task .task}
-Текст задания.
+
+Корреляционная матрица это хорошо, но для описания результатов нам также пригодится какой-то способ форматировать аутпут функции `cor.test()` в текстовое описание результатов корреляционного анализа. Здесь нам поможет пакет `report`.
+
+Возьмите аутпут функции `cor.test()` из [задания 9](#pr9-9-title) и отформатируйте его в текстовое описание результатов корреляционного анализа.
+
 :::
+
+```{r pr9-18}
+cor_res <- cor.test(valid$DT, valid$GT)
+report::report(cor_res)
+```
 
 ::: {#pr9-18-autocheck .autocheck}
 ::: {#pr9-18-ir .input-requirements}
@@ -832,25 +1112,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 ::: hints-wrapper
 <details class="hints" id="pr9-18-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`report::report()`
 
 </details>
 :::
@@ -860,8 +1124,18 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-19-level" class="level"/>
 
 ::: {#pr9-19-task .task}
-Текст задания.
+
+Отлично, результаты в красивом оформлении у нас есть. Но что делать, есть мы только в начале исследовательского пути, и нам нужно рассчитать объем выборки, необходимой для проведения корреляционного анализа? Тут нам пригодится пакет `pwr`.
+
+Рассчитайте объем выборки, необходимый для достижения достаточной статистической мощности, если ожидаемый размер эффекта средний.
+
 :::
+
+```{r pr9-19}
+pwr::pwr.r.test(r = .3,
+                sig.level = .05,
+                power = .8)
+```
 
 ::: {#pr9-19-autocheck .autocheck}
 ::: {#pr9-19-ir .input-requirements}
@@ -876,7 +1150,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-19-hints">
 
 <summary>Подсказки</summary>
@@ -907,8 +1181,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr9-20-level" class="level"/>
 
 ::: {#pr9-20-task .task}
-Текст задания.
+
+Напоследок посмотрим ещё на один интересный способ визуализации корреляционной матрицы в виде графа. На таком графике корреляции отображаются линиями между переменными --- чем толще линия, тем сильнее корреляция. Цвет обозначает направление корреляции. Кроме того, переменные группируются в зависимости от силы связей между ними.
+
+Постройне такой граф с помощью функции `qgraph()` из пакета `qgraph` на данных TAIA.
+
 :::
+
+```{r pr9-20, eval=TRUE}
+taia %>% 
+  select(matches("^[[:alpha:]]{2}\\d{2}$")) %>% # colnames()
+  select(-c(gt01, gt02, gt03, gt04, gt05, gt06)) %>% 
+  cor() %>% 
+  qgraph::qgraph(
+    layout = "spring",
+    posCol = "royalblue",
+    negCol = "indianred"
+  )
+```
 
 ::: {#pr9-20-autocheck .autocheck}
 ::: {#pr9-20-ir .input-requirements}

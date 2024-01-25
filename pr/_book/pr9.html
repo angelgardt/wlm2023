@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -77,8 +111,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -270,31 +302,31 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
   <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
   <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#11</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#12</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#13</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#14</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#15</a></li>
-  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">#16</a></li>
-  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#17</a></li>
-  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#18</a></li>
-  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
-  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
+  <li><a href="#pr9-9-title" id="toc-pr9-9-title" class="nav-link" data-scroll-target="#pr9-9-title">#9</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#10</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#11</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#12</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#13</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#14</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#15</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#16</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">#17</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#18</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#19</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#20</a></li>
   </ul></li>
   <li><a href="#pr9_add" id="toc-pr9_add" class="nav-link" data-scroll-target="#pr9_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
-  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
-  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
-  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
-  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
-  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#1</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#2</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#3</a></li>
+  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#4</a></li>
+  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#5</a></li>
+  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#6</a></li>
+  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#7</a></li>
+  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#8</a></li>
+  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#9</a></li>
+  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -326,11 +358,65 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 -->
 <section id="pr9_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr9_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Пакеты
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня нам понадобится несколько новых пакетов.</p>
+<ul>
+<li><code>psych</code></li>
+<li><code>ggcorrplot</code></li>
+<li><code>ggmosaic</code></li>
+<li><code>pwr</code></li>
+<li><code>qgraph</code></li>
+<li><code>report</code></li>
+<li><code>apaTables</code></li>
+</ul>
+<p>Проверить, установлен ли пакет, можно с помощью команды:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"psych"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Если какие-то пакеты отсутствуют, то необходимо их установить с помощью функции <code>install.packages()</code>.</p>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr9-1-level" class="level"></p>
 <div id="pr9-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Мы начнем работать сегодня с психометрическими данными. По <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/taia.csv">ссылке</a> лежат данные количественной апробации опросника на доверие к искусственому интеллекту (Trust in Artificial Intelligent Agents, TAIA).</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Структура опросника
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Опросник состоит из шести шкал:</p>
+<ul>
+<li>предсказуемость (predictability, PR)</li>
+<li>последовательность (consistency, CO)</li>
+<li>полезность (utility, UT)</li>
+<li>вера (faith, FA)</li>
+<li>надежность (dependability, DE)</li>
+<li>понимание (understanding, UN)</li>
+</ul>
+<p>Баллы по шкалам опросника рассчитываются прямой суммой баллов по всем пунктам шкалы. Также в операционализации был выделен общий фактор доверия, выражающийся через сумму баллов по всем шкалам опросника.</p>
+<p>В опросник использовалась шестибалльная шкала Ликерта.</p>
+</div>
+</div>
+<ol type="a">
+<li>Загрузите данные.</li>
+<li>Изучите их структуру, при необходимости скорректируйте типы переменных.</li>
+</ol>
 </div>
 <div id="pr9-1-autocheck" class="autocheck">
 <div id="pr9-1-ir" class="input-requirements">
@@ -342,7 +428,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-1-hints">
 <summary>
 Подсказки
@@ -369,8 +455,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr9-2-level" class="level"></p>
 <div id="pr9-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Посмотрим, что происходит на отдельных шкалах опросника — исследуем шкалы Predictability (PR) и Utility (UT). Визуализируйте распределения баллов по каждому пункту шкал.</p>
 </div>
 <div id="pr9-2-autocheck" class="autocheck">
 <div id="pr9-2-ir" class="input-requirements">
@@ -387,21 +472,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Так как в операционализации подразумевается, что шкалы относительно независимы друг от друга, разумно построить два графика — один для пунктов шкалы PR, другой для пунктов шкалы UT.</li>
+<li>Для визуации распределения баллов по каждому пункту хорошо подойдет фасетизация.</li>
+<li>Возможно, гистограмма в данном случае не лучший вариант. Попробуйте преобразовать переменную с баллами в коде построения графика, чтобы визуализация выглядела красивее.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -409,7 +484,19 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="pr9-3-level" class="level"></p>
 <div id="pr9-3-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте описательные статистики для каждого пункта шкал PR и UT. Итоговая таблица должна включать следуюшие описательные статистики:</p>
+<ul>
+<li>среднее [арифметическое]</li>
+<li>стандартное отклонение</li>
+<li>медиану</li>
+<li>усеченное среднее</li>
+<li>минимум</li>
+<li>максимум</li>
+<li>размах</li>
+<li>коэффициент асимметрии</li>
+<li>коэффициент эксцесса</li>
+</ul>
+<p>Воспользуйтесь средствами пакета <code>tidyverse</code>.</p>
 </div>
 <div id="pr9-3-autocheck" class="autocheck">
 <div id="pr9-3-ir" class="input-requirements">
@@ -426,21 +513,10 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Так как нам нужно два раза выполнять одни и те же расчеты — а в реальной жизни пришлось бы повторять их шесть раз, так как в опроснике шесть шкал — логично написать функцию, которая будет вычислять необходимые статистики.</li>
+<li>В функцию можно сразу включить и необходимые преобразования датасета, чтобы мы могли ей передавать исходный датасет не заботясь об извлечении нужный переменных и приведению данных нужному формату.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -448,7 +524,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="pr9-4-level" class="level"></p>
 <div id="pr9-4-task" class="task">
-<p>Текст задания.</p>
+<p><code>tidyverse</code>, безусловно, мощь и сила, но так как мы сегодня немножко психометрики, то можно воспользоваться и специальными пакетами. Для психометриков написан пакет <code>psych</code>, в котором есть много всего полезного, в том числе функции <code>describe()</code> и <code>describeBy()</code>.</p>
+<ol type="a">
+<li>Изучите, как работают эти функции.</li>
+<li>Рассчитайте описательные статистики для пунктов шкал с их помощью.</li>
+</ol>
 </div>
 <div id="pr9-4-autocheck" class="autocheck">
 <div id="pr9-4-ir" class="input-requirements">
@@ -460,7 +540,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-4-hints">
 <summary>
 Подсказки
@@ -487,7 +567,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="pr9-5-level" class="level"></p>
 <div id="pr9-5-task" class="task">
-<p>Текст задания.</p>
+<p>Отлично, общую ситуацию в шкалах мы осознали. Давайте посмотрим на отношения пунктов друг с дргуом внутри шкал. Для этого хорошо подойдет корреляционная матрица.</p>
+<ol type="a">
+<li>Рассчитайте корреляцинные матрицы для пунктов шкал PR и UT. Сохраните результаты в объекты <code>pr_cor</code> и <code>ut_cor</code>.</li>
+<li>Рассчитайте корреяционные матрицы для пунктов шкал DE и UN. Сохраните результаты в объекты <code>de_cor</code> и <code>un_cor</code>.</li>
+</ol>
 </div>
 <div id="pr9-5-autocheck" class="autocheck">
 <div id="pr9-5-ir" class="input-requirements">
@@ -499,7 +583,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-5-hints">
 <summary>
 Подсказки
@@ -526,7 +610,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr9-6-level" class="level"></p>
 <div id="pr9-6-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте корреляционные матрицы из предыдущего задания.</p>
 </div>
 <div id="pr9-6-autocheck" class="autocheck">
 <div id="pr9-6-ir" class="input-requirements">
@@ -541,23 +625,9 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-6-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>ggcorrplot()</code></p>
 </details>
 </div>
 </section>
@@ -565,7 +635,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr9-7-level" class="level"></p>
 <div id="pr9-7-task" class="task">
-<p>Текст задания.</p>
+<p>Проведем конвергентную валидизацию методики. Для этого нам необходимо рассчитать корреляцию между баллами по опросникам TAIA и General Trust Scale. Однако сначала необходимо аггрегировать имеющиеся данные.</p>
+<ol type="a">
+<li><strong>Рассчитайте суммарный балл по опроснику для каждого респондента.</strong> В ходе количественной апробации было обнаружено, что пункты <code>co07</code>, <code>ut10</code>, и <code>de04</code> обладают плохими психометрическими характеристиками, а пункты <code>pr03</code>, <code>pr04</code>, <code>fa03</code>, <code>fa07</code>, <code>de11</code> плохо вписываются в конфирматорную модель. Исключите эти пункты из расчета суммарного балла.</li>
+<li><strong>Рассчитайте средний балл по пунктам опросника General Trust Scale.</strong> Пункты записаны как <code>gt01</code>, <code>gt02</code>, <code>gt03</code>, <code>gt04</code>, <code>gt05</code>, <code>gt06</code>. с. Объедините результаты подсчета суммарного балла для TAIA со средними баллами по шкале General Trust Scale по идентификатору респондента (<code>id</code>).</li>
+</ol>
 </div>
 <div id="pr9-7-autocheck" class="autocheck">
 <div id="pr9-7-ir" class="input-requirements">
@@ -577,7 +651,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-7-hints">
 <summary>
 Подсказки
@@ -604,7 +678,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr9-8-level" class="level"></p>
 <div id="pr9-8-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте связь между интегральными баллами TAIA Scale и General Trust Scale с помощью диаграммы рассеяния.</p>
 </div>
 <div id="pr9-8-autocheck" class="autocheck">
 <div id="pr9-8-ir" class="input-requirements">
@@ -616,7 +690,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-8-hints">
 <summary>
 Подсказки
@@ -639,11 +713,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="pr9-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr9-9-title">#9</h3>
 <p><img id="pr9-9-level" class="level"></p>
 <div id="pr9-9-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезу об отсутствии связи между баллами TAIA Scale и General Trust Scale.</p>
 </div>
 <div id="pr9-9-autocheck" class="autocheck">
 <div id="pr9-9-ir" class="input-requirements">
@@ -655,7 +729,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-9-hints">
 <summary>
 Подсказки
@@ -678,11 +752,15 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#10</h3>
 <p><img id="pr9-10-level" class="level"></p>
 <div id="pr9-10-task" class="task">
-<p>Текст задания.</p>
+<p>В ходе апробации также были собраны данные о частоте использования социальных сетей (переменная <code>f_socnet</code>). В качестве еще одного свидетельства валидности уместно было бы посмотреть, коррелирует ли частота использования социальных сетей с баллом по опроснику TAIA.</p>
+<ol type="a">
+<li>Исследуйте переменную <code>f_socnet</code>.</li>
+<li>Каким коэффициентом корреляции было бы корректнее здесь воспользоваться? с. Рассчитайте корреляцию между интегральным баллом по опроснику и частотой использования социальных сетей. Протестируйте гипотезу об отсутствии искомой связи.</li>
+</ol>
 </div>
 <div id="pr9-10-autocheck" class="autocheck">
 <div id="pr9-10-ir" class="input-requirements">
@@ -697,7 +775,32 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-10-hints">
 <summary>
-Подсказки
+Подсказка
+</summary>
+<p>Частота использования социальных сетей измерялась по данным самоотчета. Ответ на соответствующие вопросы давался с помощью шкалы Ликерта. Агрегировались данные через расчет медианы.</p>
+</details>
+</div>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">#11</h3>
+<p><img id="pr9-11-level" class="level"></p>
+<div id="pr9-11-task" class="task">
+<p>Визуализируйте связь между частотой использования социальных сетей и интегральным баллом по опроснику TAIA.</p>
+</div>
+<div id="pr9-11-autocheck" class="autocheck">
+<div id="pr9-11-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr9-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr9-11')"></p>
+<div id="pr9-11-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr9-11-hints">
+<summary>
+Подсказка
 </summary>
 <details class="hint">
 <summary>
@@ -718,49 +821,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </div>
 </section>
 <section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#11</h3>
-<p><img id="pr9-11-level" class="level"></p>
-<div id="pr9-11-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr9-11-autocheck" class="autocheck">
-<div id="pr9-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr9-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr9-11')"></p>
-<div id="pr9-11-fb" class="autocheck-feedback">
-
-</div>
-</div>
-<div class="hints-wrapper">
-<details class="hints" id="pr9-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#12</h3>
-<p><img class="level"></p>
+<h3 class="anchored" data-anchor-id="section-10">#12</h3>
+<p><img id="pr9-12-level" class="level"></p>
 <div id="pr9-12-task" class="task">
-<p>Текст задания.</p>
+<p>Поработаем с корреляционными матрицами. Для этого нам понадобятся <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/nasatlx_score.csv">результаты апробации опросника NASA-TLX</a>.</p>
+<p>Загрузите данные. Изучите их структуру. При необходимости скорректируйте типы переменных.</p>
 </div>
 <div id="pr9-12-autocheck" class="autocheck">
 <div id="pr9-12-ir" class="input-requirements">
@@ -772,7 +837,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-12-hints">
 <summary>
 Подсказки
@@ -795,11 +860,11 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#13</h3>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">#13</h3>
 <p><img id="pr9-13-level" class="level"></p>
-<div class="task">
-<p>Текст задания.</p>
+<div id="pr9-13-task" class="task">
+<p>Постройте корреляционные матрицы по шкалам опросника (<code>ME</code>, <code>PH</code>, <code>TI</code>, <code>PE</code>, <code>EF</code>, <code>FR</code>) для разных уровней сложности (<code>level</code>) задачи мысленного вращения (<code>task</code>, <code>MR</code>). Сохраните их в объекты <code>mr_easy_cor</code>, <code>mr_medium_cor</code>, <code>mr_hard_cor</code>.</p>
 </div>
 <div id="pr9-13-autocheck" class="autocheck">
 <div id="pr9-13-ir" class="input-requirements">
@@ -811,7 +876,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-13-hints">
 <summary>
 Подсказки
@@ -834,11 +899,13 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#14</h3>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">#14</h3>
 <p><img id="pr9-14-level" class="level"></p>
 <div id="pr9-14-task" class="task">
-<p>Текст задания.</p>
+<p>Сейчас у нас есть данные в том, как коррелируют шкалы друг с другом в разных уровнях сложности задачи мысленного вращения. Однако нам хотелось бы получить обобщенную информацию о том, как ведут себя шкалы в задаче мысленного вращения. Для этого необходимо усреднить три полученные матрицы.</p>
+<p>Конечно, велик соблазн взять и просто усреднить все три матрицы через среднее арифметическое, однако это далеко не лучший способ. Сначала воспользуемся z-преобразованием Фишера.</p>
+<p>Приведите рассчитанные корреляции к z-оценкам с помощью преобразования Фишера. Сохраните результаты в объекты <code>mr_easy_cor_</code>, <code>mr_medium_cor_</code>, <code>mr_hard_cor_</code> соответственно.</p>
 </div>
 <div id="pr9-14-autocheck" class="autocheck">
 <div id="pr9-14-ir" class="input-requirements">
@@ -853,31 +920,22 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-14-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>atanh()</code></p>
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#15</h3>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">#15</h3>
 <p><img id="pr9-15-level" class="level"></p>
 <div id="pr9-15-task" class="task">
-<p>Текст задания.</p>
+<p>Теперь все готово к усреднению корреляций.</p>
+<ol type="a">
+<li>Рассчитайте средние z-оценки корреляций по полученным матрицам.</li>
+<li>Выполните обратное преобразование, чтобы вернуться к исходным диапазонам значения корреляций.</li>
+</ol>
+<p>Сохраните результат в объект <code>mr_pooled_cor</code>.</p>
 </div>
 <div id="pr9-15-autocheck" class="autocheck">
 <div id="pr9-15-ir" class="input-requirements">
@@ -892,31 +950,19 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-15-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>tanh()</code></p>
 </details>
 </div>
 </section>
-<section id="section-15" class="level3">
-<h3 class="anchored" data-anchor-id="section-15">#16</h3>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">#16</h3>
 <p><img id="pr9-16-level" class="level"></p>
 <div id="pr9-16-task" class="task">
-<p>Текст задания.</p>
+<p>Окей, мы насчитали много всякого. Хотелось бы теперь это каким-то образом экспортировать, что можно было использовать при написании отчетов, статей и т.д.</p>
+<p>Самый простой вариант — это перенаправить консольный вывод в файл. Для этого есть функция <code>sink()</code>.</p>
+<p>Сохраните аутпут функции <code>cor.test</code> из <a href="#pr9-9-title">задания 9</a> в файл <code>converg_valid_results.txt</code>.</p>
 </div>
 <div id="pr9-16-autocheck" class="autocheck">
 <div id="pr9-16-ir" class="input-requirements">
@@ -928,7 +974,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-16-hints">
 <summary>
 Подсказки
@@ -951,11 +997,13 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-16" class="level3">
-<h3 class="anchored" data-anchor-id="section-16">#17</h3>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">#17</h3>
 <p><img id="pr9-17-level" class="level"></p>
 <div id="pr9-17-task" class="task">
-<p>Текст задания.</p>
+<p>Вариант экспорта результатов из предыдущего задания в целом весьма рабочий, однако далеко не оптимальный. Скажем, если мы выгрузим в таком варианте корреляционную матрицу, нам все равно придется перебивать её в док статьи руками. Не хлтелось бы так.</p>
+<p>Пакет <code>apaTables</code> облегчает нам жизнь и позволяет экспортировать уже отформатированные в APA-формате таблицы корреляций.</p>
+<p>Выгрузите корреляцию матрицу <code>mr_pooled_cor</code> в формате APA.</p>
 </div>
 <div id="pr9-17-autocheck" class="autocheck">
 <div id="pr9-17-ir" class="input-requirements">
@@ -970,31 +1018,18 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-17-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>apaTables::apa.cor.table(corr_matrix, filename = "...")</code></p>
 </details>
 </div>
 </section>
-<section id="section-17" class="level3">
-<h3 class="anchored" data-anchor-id="section-17">#18</h3>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">#18</h3>
 <p><img id="pr9-18-level" class="level"></p>
 <div id="pr9-18-task" class="task">
-<p>Текст задания.</p>
+<p>Корреляционная матрица это хорошо, но для описания результатов нам также пригодится какой-то способ форматировать аутпут функции <code>cor.test()</code> в текстовое описание результатов корреляционного анализа. Здесь нам поможет пакет <code>report</code>.</p>
+<p>Возьмите аутпут функции <code>cor.test()</code> из <a href="#pr9-9-title">задания 9</a> и отформатируйте его в текстовое описание результатов корреляционного анализа.</p>
 </div>
 <div id="pr9-18-autocheck" class="autocheck">
 <div id="pr9-18-ir" class="input-requirements">
@@ -1009,31 +1044,18 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="pr9-18-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p><code>report::report()</code></p>
 </details>
 </div>
 </section>
-<section id="section-18" class="level3">
-<h3 class="anchored" data-anchor-id="section-18">#19</h3>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">#19</h3>
 <p><img id="pr9-19-level" class="level"></p>
 <div id="pr9-19-task" class="task">
-<p>Текст задания.</p>
+<p>Отлично, результаты в красивом оформлении у нас есть. Но что делать, есть мы только в начале исследовательского пути, и нам нужно рассчитать объем выборки, необходимой для проведения корреляционного анализа? Тут нам пригодится пакет <code>pwr</code>.</p>
+<p>Рассчитайте объем выборки, необходимый для достижения достаточной статистической мощности, если ожидаемый размер эффекта средний.</p>
 </div>
 <div id="pr9-19-autocheck" class="autocheck">
 <div id="pr9-19-ir" class="input-requirements">
@@ -1045,7 +1067,7 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr9-19-hints">
 <summary>
 Подсказки
@@ -1068,11 +1090,21 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-19" class="level3">
-<h3 class="anchored" data-anchor-id="section-19">#20</h3>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">#20</h3>
 <p><img id="pr9-20-level" class="level"></p>
 <div id="pr9-20-task" class="task">
-<p>Текст задания.</p>
+<p>Напоследок посмотрим ещё на один интересный способ визуализации корреляционной матрицы в виде графа. На таком графике корреляции отображаются линиями между переменными — чем толще линия, тем сильнее корреляция. Цвет обозначает направление корреляции. Кроме того, переменные группируются в зависимости от силы связей между ними.</p>
+<p>Постройне такой граф с помощью функции <code>qgraph()</code> из пакета <code>qgraph</code> на данных TAIA.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pr9_files/figure-html/pr9-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div id="pr9-20-autocheck" class="autocheck">
 <div id="pr9-20-ir" class="input-requirements">
@@ -1110,8 +1142,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </section>
 <section id="pr9_add" class="level2">
 <h2 class="anchored" data-anchor-id="pr9_add">Дополнительные задания</h2>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">#1</h3>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">#1</h3>
 <p><img id="pr9-21-level" class="level"></p>
 <div id="pr9-21-task" class="task">
 <p>Текст задания.</p>
@@ -1149,8 +1181,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">#2</h3>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">#2</h3>
 <p><img id="pr9-22-level" class="level"></p>
 <div id="pr9-22-task" class="task">
 <p>Текст задания.</p>
@@ -1188,8 +1220,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">#3</h3>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">#3</h3>
 <p><img id="pr9-23-level" class="level"></p>
 <div id="pr9-23-task" class="task">
 <p>Текст задания.</p>
@@ -1227,8 +1259,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">#4</h3>
+<section id="section-22" class="level3">
+<h3 class="anchored" data-anchor-id="section-22">#4</h3>
 <p><img id="pr9-24-level" class="level"></p>
 <div id="pr9-24-task" class="task">
 <p>Текст задания.</p>
@@ -1266,8 +1298,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">#5</h3>
+<section id="section-23" class="level3">
+<h3 class="anchored" data-anchor-id="section-23">#5</h3>
 <p><img id="pr9-25-level" class="level"></p>
 <div id="pr9-25-task" class="task">
 <p>Текст задания.</p>
@@ -1305,8 +1337,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-25" class="level3">
-<h3 class="anchored" data-anchor-id="section-25">#6</h3>
+<section id="section-24" class="level3">
+<h3 class="anchored" data-anchor-id="section-24">#6</h3>
 <p><img id="pr9-26-level" class="level"></p>
 <div id="pr9-26-task" class="task">
 <p>Текст задания.</p>
@@ -1344,8 +1376,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-26" class="level3">
-<h3 class="anchored" data-anchor-id="section-26">#7</h3>
+<section id="section-25" class="level3">
+<h3 class="anchored" data-anchor-id="section-25">#7</h3>
 <p><img id="pr9-27-level" class="level"></p>
 <div id="pr9-27-task" class="task">
 <p>Текст задания.</p>
@@ -1383,8 +1415,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-27" class="level3">
-<h3 class="anchored" data-anchor-id="section-27">#8</h3>
+<section id="section-26" class="level3">
+<h3 class="anchored" data-anchor-id="section-26">#8</h3>
 <p><img id="pr9-28-level" class="level"></p>
 <div id="pr9-28-task" class="task">
 <p>Текст задания.</p>
@@ -1422,8 +1454,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-28" class="level3">
-<h3 class="anchored" data-anchor-id="section-28">#9</h3>
+<section id="section-27" class="level3">
+<h3 class="anchored" data-anchor-id="section-27">#9</h3>
 <p><img id="pr9-29-level" class="level"></p>
 <div id="pr9-29-task" class="task">
 <p>Текст задания.</p>
@@ -1461,8 +1493,8 @@ REPLACE ALL pr9 TO pr<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-29" class="level3">
-<h3 class="anchored" data-anchor-id="section-29">#10</h3>
+<section id="section-28" class="level3">
+<h3 class="anchored" data-anchor-id="section-28">#10</h3>
 <p><img id="pr9-30-level" class="level"></p>
 <div id="pr9-30-task" class="task">
 <p>Текст задания.</p>
