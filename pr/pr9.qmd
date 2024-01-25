@@ -49,9 +49,40 @@ taia %>%
   mutate(jobfield = tolower(jobfield),
          dig_job = ifelse(jobfield %in% jobs, TRUE, FALSE)) -> taia
 
+specs <- c(
+  "программист",
+  "информатик-экономист",
+  "информатика и вычислительная техника",
+  "оператор пк",
+  "программирование",
+  "бизнес-информатика",
+  "информатик- экономист",
+  "информатика и икт",
+  "информационная безопасность",
+  "информационные системы",
+  "информационные системы в экономике",
+  "информационные системы и технологии",
+  "информационные технологии и системы",
+  "кибернетика",
+  "компьютерная инженерия",
+  "компьютерные системы управления",
+  "прикладная информатика в экономике",
+  "программист в компьютерных сетях",
+  "программное обеспечение вычислительных систем",
+  "сис админ",
+  "системный администратор",
+  "техник по информационным системам",
+  "техник программист"
+)
+
+taia %>% 
+  mutate(spec1 = tolower(spec1),
+         spec2 = tolower(spec2),
+         dig_spec = ifelse(spec1 %in% specs | spec2 %in% specs, TRUE, FALSE)) -> taia
+
 taia %>% 
   select(id, matches("[[:alpha:]]{2}\\d{2}"),
-         n_dighelp, f_socnet, dig_job) %>% 
+         n_dighelp, f_socnet, dig_job, dig_spec) %>% 
   write_csv("../data/pr9/taia.csv")
 ```
 
@@ -70,6 +101,7 @@ taia %>%
 * `qgraph`
 * `report`
 * `apaTables`
+* `ltm`
 
 Проверить, установлен ли пакет, можно с помощью команды:
 
@@ -1274,8 +1306,21 @@ taia %>%
 <img id="pr9-21-level" class="level"/>
 
 ::: {#pr9-21-task .task}
-Текст задания.
+
+Исследуйте корреляцию между частотой использования социальных сетей (`f_socnet`) и количеством цифровых ассистентов, используемых респондентом (`n_dighelp`).
+
+a. Исследуйте переменные.
+b. Какой коэффициент корреляции здесь лучше всего использовать?
+c. Проведите статистический тест и проинтерпретируйте результаты.
+
 :::
+
+```{r}
+cor.test(taia$f_socnet, taia$n_dighelp,
+         method = "sp")
+cor.test(taia$f_socnet, taia$n_dighelp,
+         method = "kendall")
+```
 
 ::: {#pr9-21-autocheck .autocheck}
 ::: {#pr9-21-ir .input-requirements}
@@ -1290,7 +1335,7 @@ taia %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-21-hints">
 
 <summary>Подсказки</summary>
@@ -1321,8 +1366,21 @@ taia %>%
 <img id="pr9-22-level" class="level"/>
 
 ::: {#pr9-22-task .task}
-Текст задания.
+
+Визуализируйте результаты корреляционного анализа из предыдущего задания.
+
 :::
+
+```{r}
+taia %>% 
+  select(f_socnet, n_dighelp) %>% 
+  drop_na() %>% 
+  mutate(f_socnet = as_factor(f_socnet),
+         n_dighelp = as_factor(n_dighelp)) %>% 
+  ggplot() + 
+  geom_mosaic(aes(x=product(f_socnet, n_dighelp), fill = f_socnet),
+              conds = product(n_dighelp))
+```
 
 ::: {#pr9-22-autocheck .autocheck}
 ::: {#pr9-22-ir .input-requirements}
@@ -1340,25 +1398,11 @@ taia %>%
 ::: hints-wrapper
 <details class="hints" id="pr9-22-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
+`ggmosaic`
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`geom_mosaic()`
 
 </details>
 :::
@@ -1368,8 +1412,21 @@ taia %>%
 <img id="pr9-23-level" class="level"/>
 
 ::: {#pr9-23-task .task}
-Текст задания.
+
+Ещё один свидительством валидности может стать связь между областью работы респондента --- связанная с цифровыми технологиями или не связанная --- и баллом по опроснику. В данных апробации TAIA есть переменная `dig_job`, которая равна `TRUE`, если область работы респондентна связана с цифровыми технологиями, и `FALSE`, если не связана.
+
+Протестируйте гипотезу о связи тестового балла с областью работы респондента.
+
 :::
+
+```{r pr9-23}
+taia %>% 
+  select(id, dig_job) %>% 
+  full_join(valid) -> valid
+
+ltm::biserial.cor(valid$DT, valid$dig_job)
+t.test(valid$DT ~ valid$dig_job)
+```
 
 ::: {#pr9-23-autocheck .autocheck}
 ::: {#pr9-23-ir .input-requirements}
@@ -1387,25 +1444,9 @@ taia %>%
 ::: hints-wrapper
 <details class="hints" id="pr9-23-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказкa</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+`ltm::biserial.cor()`
 
 </details>
 :::
@@ -1415,8 +1456,17 @@ taia %>%
 <img id="pr9-24-level" class="level"/>
 
 ::: {#pr9-24-task .task}
-Текст задания.
+
+Кроме области работы (`dig_job`), в данных есть еще переменная `dig_spec`, которая равна `TRUE`, если респондент получил специальность, связанную с цифровыми технологиями, и `FALSE`, если его специальность не была связана с цифрой.
+
+Проверьте, если ли связь между тем, какую специальность респондент получил, и в какой области он работает.
+
 :::
+
+```{r}
+table(taia$dig_job, taia$dig_spec)
+chisq.test(taia$dig_job, taia$dig_spec)
+```
 
 ::: {#pr9-24-autocheck .autocheck}
 ::: {#pr9-24-ir .input-requirements}
@@ -1431,7 +1481,7 @@ taia %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr9-24-hints">
 
 <summary>Подсказки</summary>
@@ -1462,8 +1512,14 @@ taia %>%
 <img id="pr9-25-level" class="level"/>
 
 ::: {#pr9-25-task .task}
-Текст задания.
+
+На основе результата, полученного в предыдущем задании, рассчитайте $\phi$-коэффициент для оценки корреляции между переменными `dig_job` и `dig_spec`.
+
 :::
+
+```{r}
+sqrt(chisq.test(taia$dig_job, taia$dig_spec)$statistic / length(taia$dig_job))
+```
 
 ::: {#pr9-25-autocheck .autocheck}
 ::: {#pr9-25-ir .input-requirements}
@@ -1478,7 +1534,7 @@ taia %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hiddem="true"}
 <details class="hints" id="pr9-25-hints">
 
 <summary>Подсказки</summary>
@@ -1509,8 +1565,18 @@ taia %>%
 <img id="pr9-26-level" class="level"/>
 
 ::: {#pr9-26-task .task}
-Текст задания.
+
+Напишите функцию для вычисления стандартной ошибки коэффициента корреляции.
+
 :::
+
+```{r pr9-26}
+se_r <- function(r, n) {
+  sqrt(
+    (1 - r^2) / (n-2)
+  )
+}
+```
 
 ::: {#pr9-26-autocheck .autocheck}
 ::: {#pr9-26-ir .input-requirements}
@@ -1556,8 +1622,26 @@ taia %>%
 <img id="pr9-27-level" class="level"/>
 
 ::: {#pr9-27-task .task}
-Текст задания.
+
+Напишите функцию, которая рассчитывает доверительный интервал для коэффициента корреляции на основе стандартной ошибки.
+
 :::
+
+```{r pr9-27}
+r_ci <- function(r, se) {
+  r_ = atanh(r)
+  lower_ = r_ - 1.96 * se
+  upper_ = r_ + 1.96 * se
+  lower = tanh(lower_)
+  upper = tanh(upper_)
+  cover_zero = ifelse(sign(lower) == sign(upper), FALSE, TRUE)
+  return(tibble(r = r,
+              se = se,
+              lower = lower,
+              upper = upper,
+              cover_zero = cover_zero))
+}
+```
 
 ::: {#pr9-27-autocheck .autocheck}
 ::: {#pr9-27-ir .input-requirements}
@@ -1603,8 +1687,23 @@ taia %>%
 <img id="pr9-28-level" class="level"/>
 
 ::: {#pr9-28-task .task}
-Текст задания.
+
+Напишите функцию, которая рассчитывает требуемый объем выборки для корреляционного анализа на основе стандартной ошибки.
+
 :::
+
+```{r pr9-28}
+r_n_se <- function(se) {
+  return(tibble(se = se,
+         n = (1 / se)^2 + 3))
+}
+
+r_n_se_lazy <- function(r, se) {
+  return(tibble(r = r,
+                se = se,
+                n = ((1-r^2) / se^2) + 2))
+}
+```
 
 ::: {#pr9-28-autocheck .autocheck}
 ::: {#pr9-28-ir .input-requirements}
@@ -1650,8 +1749,18 @@ taia %>%
 <img id="pr9-29-level" class="level"/>
 
 ::: {#pr9-29-task .task}
-Текст задания.
+
+Напишите функцию для вычисления моды дискретной переменной.
+
 :::
+
+```{r}
+mode <- function(x) {
+  values <- sort(unique(x))
+  freqs <- tabulate(x)
+  which(freqs == max(freqs))
+}
+```
 
 ::: {#pr9-29-autocheck .autocheck}
 ::: {#pr9-29-ir .input-requirements}
@@ -1697,8 +1806,41 @@ taia %>%
 <img id="pr9-30-level" class="level"/>
 
 ::: {#pr9-30-task .task}
-Текст задания.
+
+```{r}
+tibble(
+  ME = c(1, .57, .58, .36, .76, .54, .84),
+  PH = c(.57, 1, .5, .27, .58, .44, .70),
+  TI = c(.58, .50, 1, .32, .66, .52, .67),
+  PE = c(.36, .27, .32, 1, .4, .57, .46),
+  EF = c(.76, .58, .66, .40, 1, .69, .84),
+  FR = c(.54, .44, .52, .57, .69, 1, .70),
+  OW = c(.84, .70, .67, .46, .84, .70, 1)
+) -> original
+original$scale <- colnames(original)
+original %>% write_csv("../data/pr9/original_cormat.csv")
+```
+
+Иногда в ходе исследования возникает задача сравнить две корреляционный матрицы. Например, у нас есть результаты оригинальной апробации психометрической методики, где представлены матрица корреляций пунктов и/или шкал, и в ходе адаптации мы также получает аналогичную корреляционную матрицу. Собственно, возникает вопрос: похожи ли те корреляции, котоыре мы получили, на корреляции оригинальной статьи?
+
+Для того, чтобы ответить на этот вопрос, можно воспользоваться функцией `cortest()` из пакета `psych`.
+
+Проверьте, отличается ли матрица `mr_pooled_cor` от [корреляционной матрицы оригинального исследования](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/original_cormat.csv).
+
+**Функция `cortest` в качестве аргументов просит две матрицы `R1` и `R2` и соответствующие объемы выборок `n1` и `n2`, на которых эти корреляции были посчитаны. Объем выборки оригинального исследования составил 6 человек, объем выборки адаптации --- 69 человек.**
+
 :::
+
+```{r pr9-30}
+original <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr9/original_cormat.csv") %>% 
+  select(-scale) %>% 
+  as.matrix()
+rownames(original) <- colnames(original)
+psych::cortest(R1 = original, 
+               R2 = mr_pooled_cor,
+               n1 = 6,
+               n2 = 69)
+```
 
 ::: {#pr9-30-autocheck .autocheck}
 ::: {#pr9-30-ir .input-requirements}
