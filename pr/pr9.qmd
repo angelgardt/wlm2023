@@ -19,12 +19,40 @@ library(ggmosaic)
 
 ```{r}
 taia <- read_csv("https://github.com/angelgardt/taia/raw/master/data/taia.csv")
+
 taia %>% 
   select(id, freqvk, freqfb, freqtw, freqin, freqtt, freqyt) %>% 
   pivot_longer(cols = -id) %>% 
   summarise(f_socnet = median(value, na.rm = TRUE),
             .by = id) %>% 
   pull(f_socnet) -> taia$f_socnet
+
+jobs <- c(
+  "it",
+  "информационные технологии",
+  "ит",
+  "it (1c)",
+  "it-сфера",
+  "it-технологии",
+  "it, коммуникации",
+  "информатика",
+  "информационная безопасность",
+  "информационные технологии в медицине",
+  "программист",
+  "самозанятый it специалист",
+  "я работаю в сфере it",
+  "юзабилити",
+  "техника",
+  "технологии"
+)
+taia %>% 
+  mutate(jobfield = tolower(jobfield),
+         dig_job = ifelse(jobfield %in% jobs, TRUE, FALSE)) -> taia
+
+taia %>% 
+  select(id, matches("[[:alpha:]]{2}\\d{2}"),
+         n_dighelp, f_socnet, dig_job) %>% 
+  write_csv("../data/pr9/taia.csv")
 ```
 
 ## Основные задания {#pr9_main}
