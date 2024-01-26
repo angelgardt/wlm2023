@@ -61,7 +61,7 @@ str(stud)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw8-1-hints">
 
 <summary>Подсказки</summary>
@@ -128,23 +128,8 @@ stud$`test preparation course` %>% table()
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Проверить наличие пропущенных значений можно с помощью функций `apply()`, `is.na()` и `sum()`.
+* Проверить сбалансированность выборки по категориальным переменным можно построив таблицу частот с помощью функции `table()`.
 
 </details>
 :::
@@ -196,23 +181,9 @@ stud %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для визуализации распределения в пункте _a_ достаточно построить гистограммы по указанным переменным.
+* Чтобы упростить выполнение пункта _b_, стоит расположить гистограммы на одном графике.
+* Чтобы разбить добавить разбиение распределений по переменной, необходимо фасетировать график по этой переменной.
 
 </details>
 :::
@@ -256,23 +227,8 @@ stud %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Рассчитать описательные статистики можно с помощью функции `summarise()` или использовать функцию `describe()` из пакета `psych`.
+* Добавить к подсчету описательных статистик разбиение по какой-либо переменной можно с помощью функции `group_by()` или с помощью аргумента `.by` функции `summarise()`, однако можно использовать и функцию `describeBy()` из пакета `psych`.
 
 </details>
 :::
@@ -306,7 +262,7 @@ stud %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw8-5-hints">
 
 <summary>Подсказки</summary>
@@ -364,23 +320,7 @@ stud %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Для экcпорта красивых форматированных таблиц написан пакет `apaTables`. В ней есть функция `apa.cor.table()`, которая позволяет форматировать и экспортировать корреляционную матрицу.
 
 </details>
 :::
@@ -424,23 +364,8 @@ stud_cor %>%
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Корреляционную матрицу легко визуализировать с помощью функции `ggcorrplot()` из пакета `ggcorrplot`.
+* Так как `ggcorrplot` является расширением `ggplot2`, то экспортировать графика можно с помощью функции `ggsave()`.
 
 </details>
 :::
@@ -474,7 +399,7 @@ cor.test(stud$`reading score`, stud$`writing score`)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw8-8-hints">
 
 <summary>Подсказки</summary>
@@ -533,23 +458,7 @@ report::report(cor_res)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Чтобы форматировать результаты корреляционного анализа в APA-формате, написан пакет `report`, в котором живет функция `report()`. В неё необходимо передать объект с результатам корреляционного анализа.
 
 </details>
 :::
@@ -588,23 +497,7 @@ pwr::pwr.r.test(r = .2,
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Рассчетом объема выборки занимается пакет `pwr`, в котором есть функция `pwr.r.test()`.
 
 </details>
 :::
@@ -645,23 +538,7 @@ chisq.test(stud$lunch, stud$`test preparation course`)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Для того, чтобы проверить гипотезу о связи между двумя категориальными переменными, необходимо использовать критерий независимости Пирсона $\chi^2$. Реализовать этот статистический тест можно с помощью функции `chisq.test()`.
 
 </details>
 :::
@@ -698,23 +575,7 @@ sqrt(chisq.test(stud$lunch, stud$`test preparation course`)$statistic / nrow(stu
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Привести статистику $\chi^2$ к значению корреляции можно по формуле $\varphi = \sqrt{\frac{\chi^2}{N}}$. Полученное значение будет $\phi$-коэффициентом, который является коэффициентом корреляции для категориальных переменных.
 
 </details>
 :::
@@ -752,23 +613,7 @@ ggplot(data = stud) +
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Для визуализации связи между двумя категориальными переменными используется тип графика mosaic plot. Построить его можно с помощью функции `geom_mosaic()`. Для этого необходимо установить и полдключить пакет `ggmosaic`.
 
 </details>
 :::
@@ -804,7 +649,7 @@ ltm::biserial.cor(stud$`math score`, stud$`test preparation course`)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw8-14-hints">
 
 <summary>Подсказки</summary>
@@ -859,7 +704,7 @@ stud %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw8-15-hints">
 
 <summary>Подсказки</summary>
