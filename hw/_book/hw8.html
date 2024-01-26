@@ -78,35 +78,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -294,20 +265,20 @@ window.Quarto = {
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw8-5-title" id="toc-hw8-5-title" class="nav-link" data-scroll-target="#hw8-5-title">#5</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#6</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#7</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#8</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#9</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#10</a></li>
   </ul></li>
   <li><a href="#hw8_add" id="toc-hw8_add" class="nav-link" data-scroll-target="#hw8_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw8-11" id="toc-hw8-11" class="nav-link" data-scroll-target="#hw8-11">#1</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#2</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#3</a></li>
+  <li><a href="#hw8-14" id="toc-hw8-14" class="nav-link" data-scroll-target="#hw8-14">#4</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -337,13 +308,36 @@ window.Quarto = {
 <!--
 REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня поработаем с данными об успеваемости учеников младших классов. Датасет содержит следующие переменные:</p>
+<ul>
+<li><code>gender</code> — пол ученика</li>
+<li><code>race/ethnicity</code> — этническая принадлежность ученика</li>
+<li><code>parental level of education</code> — уровень образования родителей</li>
+<li><code>lunch</code> — рацион ученика в школе</li>
+<li><code>test preparation course</code> — завершил ли ученик курс подготовки к тестированию</li>
+<li><code>math score</code> — балл по математике</li>
+<li><code>reading score</code> — балл по чтению</li>
+<li><code>writing score</code> — балл по правописанию</li>
+</ul>
+</div>
+</div>
 <section id="hw8_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw8_main">Основные задания</h2>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw8-1-level" class="level"></p>
 <div id="hw8-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw8/StudentsPerformance.csv">данные</a>. Проверьте их структуру. При необходимости скорректируйте типы и названия переменных.</p>
 </div>
 <div id="hw8-1-autocheck" class="autocheck">
 <div id="hw8-1-ir" class="input-requirements">
@@ -382,8 +376,13 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw8-2-level" class="level"></p>
 <div id="hw8-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Исследуйте данные.</p>
+<ol type="a">
+<li>Проверьте, есть ли в данных пропущенные значения.</li>
+<li>Посмотрите, сбалансирована ли выборка по полу.</li>
+<li>Посмотрите, сбалансирована ли выборка по рациону.</li>
+<li>Посмотрите, сбалансирована ли выборка по прохождению подготовительного теста.</li>
+</ol>
 </div>
 <div id="hw8-2-autocheck" class="autocheck">
 <div id="hw8-2-ir" class="input-requirements">
@@ -422,7 +421,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw8-3-level" class="level"></p>
 <div id="hw8-3-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте разведочные визуализации для переменных <code>math score</code>, <code>reading score</code> и <code>writing score</code>.</p>
+<ol type="a">
+<li>Визуализируйте распределения этих переменных.</li>
+<li>Добавьте на график с распределениям разбиение по прохождению курса подготовки к тестированию (<code>test preparation course</code>).</li>
+</ol>
 </div>
 <div id="hw8-3-autocheck" class="autocheck">
 <div id="hw8-3-ir" class="input-requirements">
@@ -461,7 +464,10 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="hw8-4-level" class="level"></p>
 <div id="hw8-4-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Рассчитайте описательные статистики по переменным <code>math score</code>, <code>reading score</code>, <code>writing score</code>.</li>
+<li>Добавьте к расчету описательных статистик разбиение по переменной <code>test preparation course</code>.</li>
+</ol>
 </div>
 <div id="hw8-4-autocheck" class="autocheck">
 <div id="hw8-4-ir" class="input-requirements">
@@ -496,11 +502,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="hw8-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw8-5-title">#5</h3>
 <p><img id="hw8-5-level" class="level"></p>
 <div id="hw8-5-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте корреляционную матрицу по переменным <code>math score</code>, <code>reading score</code>, <code>writing score</code>.</p>
 </div>
 <div id="hw8-5-autocheck" class="autocheck">
 <div id="hw8-5-ir" class="input-requirements">
@@ -535,11 +541,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">#6</h3>
 <p><img id="hw8-6-level" class="level"></p>
 <div id="hw8-6-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте получившуюся <a href="#hw8-5-title">в предыдущем задании</a> матрицу как таблицу, оформленную по стандартам APA.</p>
 </div>
 <div id="hw8-6-autocheck" class="autocheck">
 <div id="hw8-6-ir" class="input-requirements">
@@ -574,11 +580,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">#7</h3>
 <p><img id="hw8-7-level" class="level"></p>
 <div id="hw8-7-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте корреляционную матрицу, получившуюся в <a href="#hw8-5-title">задании 5</a>.</p>
 </div>
 <div id="hw8-7-autocheck" class="autocheck">
 <div id="hw8-7-ir" class="input-requirements">
@@ -613,11 +619,12 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">#8</h3>
 <p><img id="hw8-8-level" class="level"></p>
 <div id="hw8-8-task" class="task">
-<p>Текст задания.</p>
+<p>В корреляционной матрице мы наблюдаем крайне высокую корреляцию между баллами по чтению и правописанию, что вполне логично. Давайте удостоверимся в том, что корреляция статистически значима.</p>
+<p>Протестируйте гипотезу о статистической значимости коэффициента корреляции между баллами по чтению и правописанию.</p>
 </div>
 <div id="hw8-8-autocheck" class="autocheck">
 <div id="hw8-8-ir" class="input-requirements">
@@ -652,11 +659,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">#9</h3>
 <p><img id="hw8-9-level" class="level"></p>
 <div id="hw8-9-task" class="task">
-<p>Текст задания.</p>
+<p>Оформите результаты корреляционного анализа в формате APA.</p>
 </div>
 <div id="hw8-9-autocheck" class="autocheck">
 <div id="hw8-9-ir" class="input-requirements">
@@ -691,11 +698,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#10</h3>
 <p><img id="hw8-10-level" class="level"></p>
 <div id="hw8-10-task" class="task">
-<p>Текст задания.</p>
+<p>В данном случае мы столкнулись с очень высокой корреляцией, однако, увы, это не всегда так. Рассчитайте объем выборки, требуемый для достижения достаточной статистической мощности, если мы ожидаем в исследовании корреляцию порядка 0.2.</p>
 </div>
 <div id="hw8-10-autocheck" class="autocheck">
 <div id="hw8-10-ir" class="input-requirements">
@@ -733,11 +740,12 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw8_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw8_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="hw8-11" class="level3">
+<h3 class="anchored" data-anchor-id="hw8-11">#1</h3>
 <p><img id="hw8-11-level" class="level"></p>
 <div id="hw8-11-task" class="task">
-<p>Текст задания.</p>
+<p>Выше мы проверяли достаточно очевидные гипотезы. Однако данные позволяют протестировать и более веселые.</p>
+<p>Проверьте, если ли связь между тем, какой рацион у учащегося, и тем, завершил ли он курс по подготовке к тестированию или нет.</p>
 </div>
 <div id="hw8-11-autocheck" class="autocheck">
 <div id="hw8-11-ir" class="input-requirements">
@@ -772,11 +780,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">#2</h3>
 <p><img id="hw8-12-level" class="level"></p>
 <div id="hw8-12-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте корреляцию между переменными из <a href="#hw8-11">предыдущего задания</a>.</p>
 </div>
 <div id="hw8-12-autocheck" class="autocheck">
 <div id="hw8-12-ir" class="input-requirements">
@@ -811,11 +819,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">#3</h3>
 <p><img id="hw8-13-level" class="level"></p>
 <div id="hw8-13-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте результат, получившися в <a href="#hw8-11">первом дополнительном задании</a>.</p>
 </div>
 <div id="hw8-13-autocheck" class="autocheck">
 <div id="hw8-13-ir" class="input-requirements">
@@ -850,11 +858,12 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="hw8-14" class="level3">
+<h3 class="anchored" data-anchor-id="hw8-14">#4</h3>
 <p><img id="hw8-14-level" class="level"></p>
 <div id="hw8-14-task" class="task">
-<p>Текст задания.</p>
+<p>Интересно было бы посмотреть, есть ли связь между завершением подготовительного курса и баллом по математике.</p>
+<p>Протестируйте гипотезу об отсутствии связи между переменными <code>math score</code> и <code>test preparation course</code>.</p>
 </div>
 <div id="hw8-14-autocheck" class="autocheck">
 <div id="hw8-14-ir" class="input-requirements">
@@ -889,11 +898,11 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">#5</h3>
 <p><img id="hw8-15-level" class="level"></p>
 <div id="hw8-15-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте результат, получившися в <a href="#hw8-14">предыдущем задании</a>.</p>
 </div>
 <div id="hw8-15-autocheck" class="autocheck">
 <div id="hw8-15-ir" class="input-requirements">

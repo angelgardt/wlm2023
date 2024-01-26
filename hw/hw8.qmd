@@ -5,6 +5,28 @@
 REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+::: {.callout-note}
+
+# Данные
+
+Сегодня поработаем с данными об успеваемости учеников младших классов. Датасет содержит следующие переменные:
+
+* `gender` --- пол ученика
+* `race/ethnicity` --- этническая принадлежность ученика
+* `parental level of education` --- уровень образования родителей
+* `lunch` --- рацион ученика в школе
+* `test preparation course` --- завершил ли ученик курс подготовки к тестированию
+* `math score` --- балл по математике
+* `reading score` --- балл по чтению
+* `writing score` --- балл по правописанию
+
+:::
+
 ## Основные задания {#hw8_main}
 
 ### #1
@@ -12,8 +34,19 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 <img id="hw8-1-level" class="level"/>
 
 ::: {#hw8-1-task .task}
-Текст задания `переменная`.
+
+Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw8/StudentsPerformance.csv). Проверьте их структуру. При необходимости скорректируйте типы и названия переменных.
+
 :::
+
+```{r hw9-1}
+library(tidyverse)
+theme_set(theme_bw())
+library(ggmosaic)
+
+stud <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw8/StudentsPerformance.csv")
+str(stud)
+```
 
 ::: {#hw8-1-autocheck .autocheck}
 ::: {#hw8-1-ir .input-requirements}
@@ -59,10 +92,23 @@ REPLACE ALL hw8 TO hw<n> WITH MATCH CASE
 <img id="hw8-2-level" class="level"/>
 
 ::: {#hw8-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Исследуйте данные.
+
+a. Проверьте, есть ли в данных пропущенные значения.
+b. Посмотрите, сбалансирована ли выборка по полу.
+c. Посмотрите, сбалансирована ли выборка по рациону.
+d. Посмотрите, сбалансирована ли выборка по прохождению подготовительного теста.
+
 :::
+
+```{r hw8-2}
+stud %>% apply(2, is.na) %>% apply(2, sum)
+stud$gender %>% table()
+stud$`parental level of education` %>% table()
+stud$lunch %>% table()
+stud$`test preparation course` %>% table()
+```
 
 ::: {#hw8-2-autocheck .autocheck}
 ::: {#hw8-2-ir .input-requirements}
@@ -108,8 +154,29 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-3-level" class="level"/>
 
 ::: {#hw8-3-task .task}
-Текст задания.
+
+Постройте разведочные визуализации для переменных `math score`, `reading score` и `writing score`.
+
+a. Визуализируйте распределения этих переменных.
+b. Добавьте на график с распределениям разбиение по прохождению курса подготовки к тестированию (`test preparation course`).
+
 :::
+
+```{r hw8-3}
+stud %>% 
+  select(`math score`, `reading score`, `writing score`) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(value)) + 
+  geom_histogram() +
+  facet_wrap(~name)
+
+stud %>% 
+  select(`math score`, `reading score`, `writing score`, `test preparation course`) %>% 
+  pivot_longer(cols = -`test preparation course`) %>% 
+  ggplot(aes(value)) + 
+  geom_histogram() +
+  facet_grid(`test preparation course` ~ name)
+```
 
 ::: {#hw8-3-autocheck .autocheck}
 ::: {#hw8-3-ir .input-requirements}
@@ -155,8 +222,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-4-level" class="level"/>
 
 ::: {#hw8-4-task .task}
-Текст задания.
+
+a. Рассчитайте описательные статистики по переменным `math score`, `reading score`, `writing score`.
+b. Добавьте к расчету описательных статистик разбиение по переменной `test preparation course`.
+
 :::
+
+```{r hw8-4}
+stud %>% 
+  select(`reading score`, `writing score`, `math score`) %>% 
+  psych::describe()
+
+stud %>% 
+  select(`reading score`, `writing score`, `math score`) %>% 
+  psych::describeBy(group = stud$`test preparation course`)
+```
 
 ::: {#hw8-4-autocheck .autocheck}
 ::: {#hw8-4-ir .input-requirements}
@@ -197,13 +277,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #5
+### #5 {#hw8-5-title}
 
 <img id="hw8-5-level" class="level"/>
 
 ::: {#hw8-5-task .task}
-Текст задания.
+
+Постройте корреляционную матрицу по переменным `math score`, `reading score`, `writing score`.
+
 :::
+
+```{r hw8-5}
+stud %>% 
+  select(`math score`, `reading score`, `writing score`) %>% 
+  cor() -> stud_cor
+```
 
 ::: {#hw8-5-autocheck .autocheck}
 ::: {#hw8-5-ir .input-requirements}
@@ -249,8 +337,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-6-level" class="level"/>
 
 ::: {#hw8-6-task .task}
-Текст задания.
+
+Экспортируйте получившуюся [в предыдущем задании](#hw8-5-title) матрицу как таблицу, оформленную по стандартам APA.
+
 :::
+
+```{r hw8-6}
+# apaTables::apa.cor.table(stud_cor, filename = "stud_cor.doc")
+```
 
 ::: {#hw8-6-autocheck .autocheck}
 ::: {#hw8-6-ir .input-requirements}
@@ -296,8 +390,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-7-level" class="level"/>
 
 ::: {#hw8-7-task .task}
-Текст задания.
+
+Визуализируйте корреляционную матрицу, получившуюся в [задании 5](#hw8-5-title).
+
 :::
+
+```{r hw8-7}
+stud_cor %>% 
+  ggcorrplot::ggcorrplot(
+    show.legend = FALSE,
+    lab = TRUE,
+    colors = c("red", "white", "blue")
+  )
+
+# ggsave("cor_graph.png")
+```
 
 ::: {#hw8-7-autocheck .autocheck}
 ::: {#hw8-7-ir .input-requirements}
@@ -343,8 +450,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-8-level" class="level"/>
 
 ::: {#hw8-8-task .task}
-Текст задания.
+
+В корреляционной матрице мы наблюдаем крайне высокую корреляцию между баллами по чтению и правописанию, что вполне логично. Давайте удостоверимся в том, что корреляция статистически значима.
+
+Протестируйте гипотезу о статистической значимости коэффициента корреляции между баллами по чтению и правописанию.
+
 :::
+
+```{r hw8-8}
+cor.test(stud$`reading score`, stud$`writing score`)
+```
 
 ::: {#hw8-8-autocheck .autocheck}
 ::: {#hw8-8-ir .input-requirements}
@@ -390,8 +505,15 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-9-level" class="level"/>
 
 ::: {#hw8-9-task .task}
-Текст задания.
+
+Оформите результаты корреляционного анализа в формате APA.
+
 :::
+
+```{r hw8-9}
+cor_res <- cor.test(stud$`reading score`, stud$`writing score`)
+report::report(cor_res)
+```
 
 ::: {#hw8-9-autocheck .autocheck}
 ::: {#hw8-9-ir .input-requirements}
@@ -437,8 +559,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-10-level" class="level"/>
 
 ::: {#hw8-10-task .task}
-Текст задания.
+
+В данном случае мы столкнулись с очень высокой корреляцией, однако, увы, это не всегда так. Рассчитайте объем выборки, требуемый для достижения достаточной статистической мощности, если мы ожидаем в исследовании корреляцию порядка 0.2.
+
 :::
+
+```{r hw8-10}
+pwr::pwr.r.test(r = .2,
+                sig.level = .05,
+                power = .8)
+```
 
 ::: {#hw8-10-autocheck .autocheck}
 ::: {#hw8-10-ir .input-requirements}
@@ -481,13 +611,21 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ## Дополнительные задания {#hw8_add}
 
-### #1
+### #1 {#hw8-11}
 
 <img id="hw8-11-level" class="level"/>
 
 ::: {#hw8-11-task .task}
-Текст задания.
+
+Выше мы проверяли достаточно очевидные гипотезы. Однако данные позволяют протестировать и более веселые.
+
+Проверьте, если ли связь между тем, какой рацион у учащегося, и тем, завершил ли он курс по подготовке к тестированию или нет.
+
 :::
+
+```{r hw8-11}
+chisq.test(stud$lunch, stud$`test preparation course`)
+```
 
 ::: {#hw8-11-autocheck .autocheck}
 ::: {#hw8-11-ir .input-requirements}
@@ -533,8 +671,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-12-level" class="level"/>
 
 ::: {#hw8-12-task .task}
-Текст задания.
+
+Рассчитайте корреляцию между переменными из [предыдущего задания](#hw8-11).
+
 :::
+
+```{r hw8-12}
+sqrt(chisq.test(stud$lunch, stud$`test preparation course`)$statistic / nrow(stud))
+```
 
 ::: {#hw8-12-autocheck .autocheck}
 ::: {#hw8-12-ir .input-requirements}
@@ -580,8 +724,15 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-13-level" class="level"/>
 
 ::: {#hw8-13-task .task}
-Текст задания.
+
+Визуализируйте результат, получившися в [первом дополнительном задании](#hw8-11).
+
 :::
+
+```{r hw8-13}
+ggplot(data = stud) +
+  geom_mosaic(aes(x = product(gender, lunch)))
+```
 
 ::: {#hw8-13-autocheck .autocheck}
 ::: {#hw8-13-ir .input-requirements}
@@ -622,13 +773,23 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+### #4 {#hw8-14}
 
 <img id="hw8-14-level" class="level"/>
 
 ::: {#hw8-14-task .task}
-Текст задания.
+
+Интересно было бы посмотреть, есть ли связь между завершением подготовительного курса и баллом по математике.
+
+Протестируйте гипотезу об отсутствии связи между переменными `math score` и `test preparation course`.
+
 :::
+
+```{r hw8-14}
+stud %>% mutate(test = ifelse(`test preparation course` == "completed", 1, 0)) -> s_
+cor.test(s_$`math score`, s_$test)
+ltm::biserial.cor(stud$`math score`, stud$`test preparation course`)
+```
 
 ::: {#hw8-14-autocheck .autocheck}
 ::: {#hw8-14-ir .input-requirements}
@@ -674,8 +835,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw8-15-level" class="level"/>
 
 ::: {#hw8-15-task .task}
-Текст задания.
+
+Визуализируйте результат, получившися в [предыдущем задании](#hw8-14).
+
 :::
+
+```{r}
+stud %>% 
+  ggplot(aes(lunch, `math score`)) +
+  geom_boxplot()
+```
 
 ::: {#hw8-15-autocheck .autocheck}
 ::: {#hw8-15-ir .input-requirements}
