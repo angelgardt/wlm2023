@@ -566,40 +566,268 @@ b_0 + b_1 x_n + e_n = y_n \\
 </section>
 <section id="тестирование-качества-модели" class="level3" data-number="8.1.5">
 <h3 data-number="8.1.5" class="anchored" data-anchor-id="тестирование-качества-модели"><span class="header-section-number">8.1.5</span> Тестирование качества модели</h3>
-<section id="f-статистика" class="level4" data-number="8.1.5.1">
-<h4 data-number="8.1.5.1" class="anchored" data-anchor-id="f-статистика"><span class="header-section-number">8.1.5.1</span> F-статистика</h4>
+<p>Окей, коэффициенты модели мы посчитали, а значит и модель теперь подобрана. Хотелось бы понять, насколько она получилась хорошей с точки зрения описания закономерностей данных.</p>
+<section id="коэффициент-детерминации" class="level4" data-number="8.1.5.1">
+<h4 data-number="8.1.5.1" class="anchored" data-anchor-id="коэффициент-детерминации"><span class="header-section-number">8.1.5.1</span> Коэффициент детерминации</h4>
+<p>Первое, что хочется понять — насколько наша модель информативна. Поскольку у нас есть вариативность как одна из основных характеристик данных, подойдем к вопросу через неё. Иначе говоря, нам интересно, сколько дисперсии наших данных модель смогла объяснить. На практике работают не с дисперсией, а с <em>суммой квадратов</em>, что почти то же самое.</p>
+<p>Вся изменчивость наших данных называется <strong>общая сумма квадратов (total sum of squares, TSS)</strong> и определяется так:</p>
+<p><span class="math display">\[
+\text{TSS} = \sum_{i=1}^n (\bar y - y_i)^2
+\]</span></p>
+<p>Если мы попробуем изобразить это графически, то получим вот что:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Одну часть этой изменчивости объясняет модель — это <strong>объясненная сумма квадратов (explained sum of squares, ESS)</strong>:</p>
+<p><span class="math display">\[
+\text{ESS} = \sum_{i=1}^n (\bar y - \hat y)^2
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Другую часть этой изменчивости модель не улавливает, и она остаётся <strong>необъяснённой (остаточной) (residual sum of squares, RSS)</strong>:</p>
+<p><span class="math display">\[
+\text{RSS} = \sum_{i=1}^n (y_i - \hat y_i)^2
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Если объединить все три извенчивости на одной картинке, то получится следующее:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Явно видно, что</p>
+<p><span class="math display">\[
+\text{TSS} = \text{ESS} + \text{RSS}
+\]</span></p>
+<details>
+<summary>
+Вообще это бы хорошо доказать
+</summary>
+<p>Так как в расчете сумм квадратов у нас используются, собственно, квадраты, напрямую из визуализации это равенство не следует, однако тем не менее, выполняется.</p>
+<p><span class="math display">\[
+\begin{split}
+\text{TSS} &amp; = \sum (y_i - \bar y)^2 = \\
+&amp; =\sum (y_i - \hat y + \hat y - \bar y)^2 = \\
+&amp; =\sum \big( (y_i - \hat y_i) + (\hat y_i - \bar y) \big)^2 = \\
+&amp; = \sum (y_i - \hat y_i) = \sum (\hat y_i - \bar y) + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = \\
+&amp; = \text{RSS} + \text{ESS} + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y)
+\end{split}
+\]</span></p>
+<p>Окей, осталось доказать, что <span class="math inline">\(2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = 0\)</span>, и все будет найс.</p>
+<p>Так как <span class="math inline">\(b_0 = \bar y - b_1 x\)</span>,</p>
+<p><span class="math display">\[
+\begin{split}
+\sum (y_i - \hat y_i)(\hat y_i - \bar y) &amp; = \sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \bar y) = \\
+&amp; = \sum (y_i - \bar y + b_1 \bar x - b_1x_i) (\bar y - b_1 \bar x + b_1 x_i - \bar y) = \\
+&amp; = \sum \big( (y_i - \bar y) - b_1(x_i - \bar x) \big) \times b_1 (x_i - \bar x) = \\
+&amp; = \sum \big( b_1 (x_i - \bar x) (y_i - \bar y) - b_1^2 (x_i - \bar x)^2 \big) = \\
+&amp; = b_1 \sum (x_i - \bar x) (y_i - \bar y) - b_1^2 \sum (x_i - \bar x)
+\end{split}
+\]</span></p>
+<p>Так как <span class="math inline">\(b_1 = \frac{\sum(x_i - \bar x)(y_i - \bar y)}{\sum (x_i - \bar x)^2}\)</span>, получается, что:</p>
+<p><span class="math display">\[
+\begin{split}
+\frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2 \times \sum (x_i - \bar x)^2}{\Big( \sum (x_i - \bar x)^2\Big)^2} = \\
+= \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} = 0
+\end{split}
+\]</span></p>
+</details>
+<p>В качестве метрики информативности модели используется доля объясненной дисперсии — эта метрика называется <strong>коэффициент детерминации</strong> <span class="math inline">\(R^2\)</span> и вычисляется по формуле:</p>
+<p><span class="math display">\[
+R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}
+\]</span></p>
+<p>Из формулы следует, что <span class="math inline">\(0 \leq R^2 \leq 1\)</span>. Считается, что если модель объясняется 0.8 и более дисперсии данных, то она хороша, хотя этот порог очень сильно зависит от конкретной задачи и исследовательской области.</p>
+<p>Кроме того, отметим, что коэффициент детерминации равен квадрату коэффициента корреляции между целевой переменной и предиктором:</p>
+<p><span class="math display">\[
+R^2 = r^2
+\]</span></p>
 </section>
-<section id="коэффициент-детерминации" class="level4" data-number="8.1.5.2">
-<h4 data-number="8.1.5.2" class="anchored" data-anchor-id="коэффициент-детерминации"><span class="header-section-number">8.1.5.2</span> Коэффициент детерминации</h4>
+<section id="f-статистика" class="level4" data-number="8.1.5.2">
+<h4 data-number="8.1.5.2" class="anchored" data-anchor-id="f-статистика"><span class="header-section-number">8.1.5.2</span> F-статистика</h4>
+<p>На основе всё тех же сумм квадратов мы можем сделать вывод о том, насколько наша модель статистически значима. Здесь мы говорим о значимости модели в целом — не о значимости отдельных предикторов, это будет позже. Для этого нам надо заняться тестированием статистической гипотезы. Она формулируется так:</p>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \beta_0 = \beta_1 = 0 \\
+H_1&amp;: \beta_0 \neq 0 \vee \beta_1 \neq 0
+\end{split}
+\]</span></p>
+<p>Для тестирования данной гипотезы используется следующая статистика:</p>
+<p><span class="math display">\[
+F_{\text{df}_e, \text{df}_r} = \frac{\text{MS}_e}{\text{MS}_r} = \frac{\text{ESS}/\text{df}_e}{\text{RSS}/\text{df}_r} \overset{H_0}{\thicksim} F(\text{df}_e, \text{df}_r)
+\]</span></p>
+<p>Здесь <span class="math inline">\(\text{MS}_e\)</span> — это «средний объясненный квадрат», <span class="math inline">\(\text{MS}_r\)</span> — «средний остаточный квадрат», а <span class="math inline">\(\text{df}_e = p - 1\)</span> и <span class="math inline">\(\text{df}_e = n - p - 1\)</span> — степени свободы для объясненной и остаточной изменчивости, <span class="math inline">\(p\)</span> — количество предикторов в модели, <span class="math inline">\(n\)</span> — число наблюдений. По сути, эта статистика показывает, во сколько раз объясненная дисперсия больше остаточной.</p>
+<p>Эта статистика подчиняется F-распределению (распределению Фишера), которое выглядит так (изображен случай <span class="math inline">\(\text{df}_e = 3\)</span>, <span class="math inline">\(\text{df}_e = 50\)</span>):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Как и всегда, для наблюдаемой <span class="math inline">\(F\)</span>-статистики рассчитывается <em>p-value</em>, на основе значения которого мы делаем вывод о статистической значимости модели в целом.</p>
 </section>
 <section id="метрики-качества-модели" class="level4" data-number="8.1.5.3">
 <h4 data-number="8.1.5.3" class="anchored" data-anchor-id="метрики-качества-модели"><span class="header-section-number">8.1.5.3</span> Метрики качества модели</h4>
+<p>Кроме статистического критерия, мы можем использовать и другие показатели качества модели, называемыми метриками качества. В принципе, и коэффициент детерминации является метрикой качества, однако нам часто интересно, насколько ошибается наша модель в своих предсказаниях, поэтому появляются разные способы рассчитать эту ошибку.</p>
 <section id="mse" class="level5" data-number="8.1.5.3.1">
 <h5 data-number="8.1.5.3.1" class="anchored" data-anchor-id="mse"><span class="header-section-number">8.1.5.3.1</span> MSE</h5>
+<p>Первый вариант — вычислить средний квадрат ошибки модели (mean squared error):</p>
+<p><span class="math display">\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2
+\]</span></p>
 </section>
-<section id="mae" class="level5" data-number="8.1.5.3.2">
-<h5 data-number="8.1.5.3.2" class="anchored" data-anchor-id="mae"><span class="header-section-number">8.1.5.3.2</span> MAE</h5>
+<section id="rmse" class="level5" data-number="8.1.5.3.2">
+<h5 data-number="8.1.5.3.2" class="anchored" data-anchor-id="rmse"><span class="header-section-number">8.1.5.3.2</span> RMSE</h5>
+<p>Для сравнения двух моделей это полезная метрика, однако для интерпретации она не очень удобна, так как выражена в квадрате единиц целевой переменной. Однако если извлечь квадратный корень из неё, то она превращается в среднеквадратичную ошибку (root mean squared error) и становится гораздо более интерпретабельной:</p>
+<p><span class="math display">\[
+\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2}
+\]</span></p>
 </section>
-<section id="rmse" class="level5" data-number="8.1.5.3.3">
-<h5 data-number="8.1.5.3.3" class="anchored" data-anchor-id="rmse"><span class="header-section-number">8.1.5.3.3</span> RMSE</h5>
+<section id="mae" class="level5" data-number="8.1.5.3.3">
+<h5 data-number="8.1.5.3.3" class="anchored" data-anchor-id="mae"><span class="header-section-number">8.1.5.3.3</span> MAE</h5>
+<p>Существует и другой способ измерения ошибки модели — если заменить квадрат на модуль, то получим среднюю абсолютную ошибку (mean absolute error):</p>
+<p><span class="math display">\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat y_i|
+\]</span></p>
 </section>
 <section id="mape" class="level5" data-number="8.1.5.3.4">
 <h5 data-number="8.1.5.3.4" class="anchored" data-anchor-id="mape"><span class="header-section-number">8.1.5.3.4</span> MAPE</h5>
+<p>Более того, мы можем оценить точность предсказаний и в относительных значениях — перед суммированием разделим абсолютные отклонения на модуль значения целевой переменной:</p>
+<p><span class="math display">\[
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^n \Bigg |\frac{y_i - \hat y_i}{y_i} \Bigg|
+\]</span></p>
 </section>
 </section>
 </section>
 <section id="тестирование-значимости-предикторов" class="level3" data-number="8.1.6">
 <h3 data-number="8.1.6" class="anchored" data-anchor-id="тестирование-значимости-предикторов"><span class="header-section-number">8.1.6</span> Тестирование значимости предикторов</h3>
+<p>Если модель значима в целом, значит среди её коэффициентов есть те, которые статистически отличны от нуля. Иначе говоря, есть такие предикторы, которые значимо влияют на нашу целевую переменную. В случае простой линейной регрессии предиктора всего два — intercept и slope. Intercept не всегда интерпретабелен, поэтому основное внимание уделают угловому коэффициенту. Формулы для интерсепта будут аналогичны.</p>
+<p>Статистические гипотезы для тестирования значимости углового коэффициента будут стандартны:</p>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \beta_1 = 0 \\
+H_1&amp;: \beta_1 \neq 0
+\end{split}
+\]</span></p>
+<p>Тестирование гипотез осуществляется с помощью одновыборочного t-теста:</p>
+<p><span class="math display">\[
+t = \frac{b_1 - \beta_1}{\text{se}_{b_1}} = \frac{b_1}{\text{se}_{b_1}} \overset{H_0}{\thicksim} t(\text{df}_t),
+\]</span></p>
+<p>где <span class="math inline">\(\text{df}_t = n-p-1\)</span>, <span class="math inline">\(\text{se}_{b_1} = \frac{s_r}{\sum_{i=1}^n (x_i - \bar x)^2}\)</span>, <span class="math inline">\(s_r = \sqrt{\frac{\sum_{i=1}^n (y_i - \hat y_i)^2}{n-2}}\)</span>.</p>
+<p>Статистический вывод осуществляется по стандартному алгоритму.</p>
 </section>
 <section id="допущения-линейной-регрессии" class="level3" data-number="8.1.7">
 <h3 data-number="8.1.7" class="anchored" data-anchor-id="допущения-линейной-регрессии"><span class="header-section-number">8.1.7</span> Допущения линейной регрессии</h3>
+<p>Модель линейной регрессии обладает рядом допущений, которые необходимо проверить. При построении модели мы, на самом деле, исходили из нескольких предположений:</p>
 <ul>
-<li>Линейность связи</li>
-<li>Независимость наблюдений</li>
-<li>Нормальное распределение остатков</li>
+<li>Во-первых, мы считали, что связь между предикторами и зависимой переменной <strong>линейная</strong>.</li>
+<li>Во-вторых, мы предположили, что наша модель полностью улавливает тренд закономерности, а значит <strong>остатки (ошибки) модели случайны</strong>.
+<ul>
+<li>их <strong>среднее при любых значениях предиктора равно нулю</strong>: <span class="math inline">\(\bar \varepsilon_i = 0\)</span>,</li>
+<li>и <strong>они не зависят друг от друга</strong>: <span class="math inline">\(\text{cor}\underset{i \neq j}{(\varepsilon_i, \varepsilon_j)} = 0\)</span></li>
+</ul></li>
+<li>Кроме того, раз <strong>остатки</strong> заключают в себе случайный компонент модели, то они <strong>должны быть распределены нормально</strong>: <span class="math inline">\(\varepsilon \thicksim \mathcal N(0, \sigma^2_\varepsilon)\)</span>
+<ul>
+<li>причём их дисперсия должна быть <strong>одинакова при любых значениях предиктора</strong>: <span class="math inline">\(\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \text{const}\)</span></li>
+</ul></li>
+</ul>
+<section id="линейность-связи" class="level4" data-number="8.1.7.1">
+<h4 data-number="8.1.7.1" class="anchored" data-anchor-id="линейность-связи"><span class="header-section-number">8.1.7.1</span> Линейность связи</h4>
+<p>К сожалению, специального способа проверить это допущение не существует. В случае простой линейной регрессии нас спасает то, что у нас только один предиктор, а значит мы можем изобразить диаграмму рассеяния и визуально проверить, выполняется ли допущение линейности связи.</p>
+</section>
+<section id="независимость-остатков-друг-от-друга" class="level4" data-number="8.1.7.2">
+<h4 data-number="8.1.7.2" class="anchored" data-anchor-id="независимость-остатков-друг-от-друга"><span class="header-section-number">8.1.7.2</span> Независимость остатков друг от друга</h4>
+<p>И вновь мы в ситуации, когда у нас нет возможности с помощью статистики проверить данное допущение. Независимость остатков следует из независимости наблюдений, что можно проконтролировать только с помощью дизайна исследования, в том числе дизайна сэмплинга (сбора) выборки.</p>
+</section>
+<section id="нормальное-распределение-остатков" class="level4" data-number="8.1.7.3">
+<h4 data-number="8.1.7.3" class="anchored" data-anchor-id="нормальное-распределение-остатков"><span class="header-section-number">8.1.7.3</span> Нормальное распределение остатков</h4>
+<p>А вот это уже проверяемое эмпирически предположение. Здесь существует несколько подходов: можно воспользоваться статистическим тестом (например, тестом Шапиро-Уилка), однако можно обойтись и графической диагностикой. Во-первых, можно построить гистограмму, а во-вторых, есть особы график QQ-plot, который также позволяет проверить допущение о нормальном распределении.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="независимость-остатков-от-предсказанных-значений" class="level4" data-number="8.1.7.4">
+<h4 data-number="8.1.7.4" class="anchored" data-anchor-id="независимость-остатков-от-предсказанных-значений"><span class="header-section-number">8.1.7.4</span> Независимость остатков от предсказанных значений</h4>
+<p>В случае, если наша модель хорошо схватывает закономерность, представленную в данных, остатки не должны зависеть от предсказанных значений. Это значит два свойства:</p>
+<ul>
+<li>их <strong>среднее при любых значениях предиктора равно нулю</strong>: <span class="math inline">\(\bar \varepsilon_i = 0\)</span></li>
+<li>их дисперсия должна быть <strong>одинакова при любых значениях предиктора</strong>: <span class="math inline">\(\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \text{const}\)</span></li>
+</ul>
+<p>Допущение о равенстве дисперсии остатков при любых значениях предиктора называется по-умному <strong>гомоскедастичностью</strong>. Для проверки этого допущения также существуют статистические тесты, однако оба допущения можно проверить графически на одном и том же графике. Для этого нам необходимо построить диаграмму рассеяния, где по оси x будут идти предсказанные моделью значения, и по оси y остатки модели.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l8_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
 <li>Гомоскедастичность остатков</li>
 <li>Влиятельные наблюдения и выбросы</li>
 </ul>
+</section>
 </section>
 <section id="предсказания-на-основе-модели" class="level3" data-number="8.1.8">
 <h3 data-number="8.1.8" class="anchored" data-anchor-id="предсказания-на-основе-модели"><span class="header-section-number">8.1.8</span> Предсказания на основе модели</h3>

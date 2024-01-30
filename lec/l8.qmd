@@ -336,27 +336,386 @@ $$
 
 ### Тестирование качества модели
 
-#### F-статистика
+Окей, коэффициенты модели мы посчитали, а значит и модель теперь подобрана. Хотелось бы понять, насколько она получилась хорошей с точки зрения описания закономерностей данных.
 
 #### Коэффициент детерминации
 
+Первое, что хочется понять --- насколько наша модель информативна. Поскольку у нас есть вариативность как одна из основных характеристик данных, подойдем к вопросу через неё. Иначе говоря, нам интересно, сколько дисперсии наших данных модель смогла объяснить. На практике работают не с дисперсией, а с _суммой квадратов_, что почти то же самое.
+
+Вся изменчивость наших данных называется **общая сумма квадратов (total sum of squares, TSS)** и определяется так:
+
+$$
+\text{TSS} = \sum_{i=1}^n (\bar y - y_i)^2
+$$
+
+Если мы попробуем изобразить это графически, то получим вот что:
+
+```{r}
+set.seed(123)
+tibble(x = rnorm(50),
+       y = 2.5 * x + 2 + rnorm(50)) -> r2
+
+model2 <- lm(y ~ x, r2)
+
+r2 %>% filter(y > 6 & x < 1.5) -> r2_point
+r2_point %>% mutate(y_ = predict(model2, r2_point),
+                    y_bar = mean(r2$y)) -> r2_point
+
+r2 %>% 
+  ggplot(aes(x, y)) +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_bar,
+               color = "green3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  annotate(geom = "text", label = TeX("TSS"),
+           x = 1.5, y = 3, color = "green3")
+```
+
+Одну часть этой изменчивости объясняет модель --- это **объясненная сумма квадратов (explained sum of squares, ESS)**:
+
+$$
+\text{ESS} = \sum_{i=1}^n (\bar y - \hat y)^2
+$$
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y, yend = r2_point$y_bar,
+  #              color = "green3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y_, yend = r2_point$y_bar,
+               color = "orange3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  # annotate(geom = "text", label = TeX("TSS"),
+  #          x = 1.5, y = 3, color = "green3") +
+  annotate(geom = "text", label = TeX("ESS"),
+           x = 1.5, y = 3, color = "orange3")
+```
+
+Другую часть этой изменчивости модель не улавливает, и она остаётся **необъяснённой (остаточной) (residual sum of squares, RSS)**:
+
+$$
+\text{RSS} = \sum_{i=1}^n (y_i - \hat y_i)^2
+$$
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y, yend = r2_point$y_bar,
+  #              color = "green3", linetype = "dashed") +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y_, yend = r2_point$y_bar,
+  #              color = "orange3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_,
+               color = "purple3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  # annotate(geom = "text", label = TeX("TSS"),
+  #          x = 1.5, y = 3, color = "green3") +
+  # annotate(geom = "text", label = TeX("ESS"),
+  #          x = 1.5, y = 3, color = "orange3") +
+  annotate(geom = "text", label = TeX("RSS"),
+           x = 1, y = 6, color = "purple3")
+```
+
+
+Если объединить все три извенчивости на одной картинке, то получится следующее:
+
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_bar,
+               color = "green3", linetype = "solid") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y_, yend = r2_point$y_bar,
+               color = "orange3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_,
+               color = "purple3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  annotate(geom = "text", label = TeX("TSS"),
+           x = 1.5, y = 4.5, color = "green3") +
+  annotate(geom = "text", label = TeX("ESS"),
+           x = 1.5, y = 3, color = "orange3") +
+  annotate(geom = "text", label = TeX("RSS"),
+           x = 1, y = 6, color = "purple3")
+```
+
+
+Явно видно, что
+
+$$
+\text{TSS} = \text{ESS} + \text{RSS}
+$$
+
+<details>
+<summary> Вообще это бы хорошо доказать </summary>
+
+Так как в расчете сумм квадратов у нас используются, собственно, квадраты, напрямую из визуализации это равенство не следует, однако тем не менее, выполняется.
+
+$$
+\begin{split}
+\text{TSS} & = \sum (y_i - \bar y)^2 = \\
+& =\sum (y_i - \hat y + \hat y - \bar y)^2 = \\
+& =\sum \big( (y_i - \hat y_i) + (\hat y_i - \bar y) \big)^2 = \\
+& = \sum (y_i - \hat y_i) = \sum (\hat y_i - \bar y) + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = \\
+& = \text{RSS} + \text{ESS} + 2 \sum (y_i - \hat y_i)(\hat y_i - \bar y)
+\end{split}
+$$
+
+Окей, осталось доказать, что $2 \sum (y_i - \hat y_i)(\hat y_i - \bar y) = 0$, и все будет найс.
+
+Так как $b_0 = \bar y - b_1 x$,
+
+$$
+\begin{split}
+\sum (y_i - \hat y_i)(\hat y_i - \bar y) & = \sum (y_i - b_0 - b_1 x_i) (b_0 + b_1 x_i - \bar y) = \\
+& = \sum (y_i - \bar y + b_1 \bar x - b_1x_i) (\bar y - b_1 \bar x + b_1 x_i - \bar y) = \\
+& = \sum \big( (y_i - \bar y) - b_1(x_i - \bar x) \big) \times b_1 (x_i - \bar x) = \\
+& = \sum \big( b_1 (x_i - \bar x) (y_i - \bar y) - b_1^2 (x_i - \bar x)^2 \big) = \\
+& = b_1 \sum (x_i - \bar x) (y_i - \bar y) - b_1^2 \sum (x_i - \bar x)
+\end{split}
+$$
+
+Так как $b_1 = \frac{\sum(x_i - \bar x)(y_i - \bar y)}{\sum (x_i - \bar x)^2}$, получается, что:
+
+$$
+\begin{split}
+\frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2 \times \sum (x_i - \bar x)^2}{\Big( \sum (x_i - \bar x)^2\Big)^2} = \\
+= \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} - \frac{\Big( \sum (x_i - \bar x) (y_i - \bar y) \Big)^2}{\sum (x_i - \bar x)^2} = 0
+\end{split}
+$$
+
+</details>
+
+В качестве метрики информативности модели используется доля объясненной дисперсии --- эта метрика называется **коэффициент детерминации** $R^2$ и вычисляется по формуле:
+
+$$
+R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}
+$$
+
+Из формулы следует, что $0 \leq R^2 \leq 1$. Считается, что если модель объясняется 0.8 и более дисперсии данных, то она хороша, хотя этот порог очень сильно зависит от конкретной задачи и исследовательской области.
+
+Кроме того, отметим, что коэффициент детерминации равен квадрату коэффициента корреляции между целевой переменной и предиктором:
+
+$$
+R^2 = r^2
+$$
+
+
+#### F-статистика
+
+На основе всё тех же сумм квадратов мы можем сделать вывод о том, насколько наша модель статистически значима. Здесь мы говорим о значимости модели в целом --- не о значимости отдельных предикторов, это будет позже. Для этого нам надо заняться тестированием статистической гипотезы. Она формулируется так:
+
+$$
+\begin{split}
+H_0&: \beta_0 = \beta_1 = 0 \\
+H_1&: \beta_0 \neq 0 \vee \beta_1 \neq 0
+\end{split}
+$$
+
+Для тестирования данной гипотезы используется следующая статистика:
+
+$$
+F_{\text{df}_e, \text{df}_r} = \frac{\text{MS}_e}{\text{MS}_r} = \frac{\text{ESS}/\text{df}_e}{\text{RSS}/\text{df}_r} \overset{H_0}{\thicksim} F(\text{df}_e, \text{df}_r)
+$$
+
+Здесь $\text{MS}_e$ --- это «средний объясненный квадрат», $\text{MS}_r$ --- «средний остаточный квадрат», а $\text{df}_e = p - 1$ и $\text{df}_e = n - p - 1$ --- степени свободы для объясненной и остаточной изменчивости, $p$ --- количество предикторов в модели, $n$ --- число наблюдений. По сути, эта статистика показывает, во сколько раз объясненная дисперсия больше остаточной.
+
+Эта статистика подчиняется F-распределению (распределению Фишера), которое выглядит так (изображен случай $\text{df}_e = 3$, $\text{df}_e = 50$):
+
+```{r}
+ggplot() +
+  geom_function(fun = df, args = list(df1 = 3, df2 = 50)) +
+  xlim(0, 5)
+```
+
+Как и всегда, для наблюдаемой $F$-статистики рассчитывается *p-value*, на основе значения которого мы делаем вывод о статистической значимости модели в целом.
+
+
 #### Метрики качества модели
+
+Кроме статистического критерия, мы можем использовать и другие показатели качества модели, называемыми метриками качества. В принципе, и коэффициент детерминации является метрикой качества, однако нам часто интересно, насколько ошибается наша модель в своих предсказаниях, поэтому появляются разные способы рассчитать эту ошибку.
 
 ##### MSE
 
-##### MAE
+Первый вариант --- вычислить средний квадрат ошибки модели (mean squared error):
+
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2
+$$
 
 ##### RMSE
 
+Для сравнения двух моделей это полезная метрика, однако для интерпретации она не очень удобна, так как выражена в квадрате единиц целевой переменной. Однако если извлечь квадратный корень из неё, то она превращается в среднеквадратичную ошибку (root mean squared error) и становится гораздо более интерпретабельной:
+
+$$
+\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2}
+$$
+
+
+##### MAE
+
+Существует и другой способ измерения ошибки модели --- если заменить квадрат на модуль, то получим среднюю абсолютную ошибку (mean absolute error):
+
+$$
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat y_i|
+$$
+
 ##### MAPE
+
+Более того, мы можем оценить точность предсказаний и в относительных значениях --- перед суммированием разделим абсолютные отклонения на модуль значения целевой переменной:
+
+$$
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^n \Bigg |\frac{y_i - \hat y_i}{y_i} \Bigg|
+$$
 
 ### Тестирование значимости предикторов
 
+Если модель значима в целом, значит среди её коэффициентов есть те, которые статистически отличны от нуля. Иначе говоря, есть такие предикторы, которые значимо влияют на нашу целевую переменную. В случае простой линейной регрессии предиктора всего два --- intercept и slope. Intercept не всегда интерпретабелен, поэтому основное внимание уделают угловому коэффициенту. Формулы для интерсепта будут аналогичны.
+
+Статистические гипотезы для тестирования значимости углового коэффициента будут стандартны:
+
+
+$$
+\begin{split}
+H_0&: \beta_1 = 0 \\
+H_1&: \beta_1 \neq 0
+\end{split}
+$$
+
+Тестирование гипотез осуществляется с помощью одновыборочного t-теста:
+
+$$
+t = \frac{b_1 - \beta_1}{\se_{b_1}} = \frac{b_1}{\se_{b_1}} \overset{H_0}{\thicksim} t(\text{df}_t),
+$$
+
+где $\text{df}_t = n-p-1$, $\se_{b_1} = \frac{s_r}{\sum_{i=1}^n (x_i - \bar x)^2}$, $s_r = \sqrt{\frac{\sum_{i=1}^n (y_i - \hat y_i)^2}{n-2}}$.
+
+Статистический вывод осуществляется по стандартному алгоритму.
+
+
 ### Допущения линейной регрессии
 
-* Линейность связи
-* Независимость наблюдений
-* Нормальное распределение остатков
+Модель линейной регрессии обладает рядом допущений, которые необходимо проверить. При построении модели мы, на самом деле, исходили из нескольких предположений:
+
+* Во-первых, мы считали, что связь между предикторами и зависимой переменной **линейная**.
+* Во-вторых, мы предположили, что наша модель полностью улавливает тренд закономерности, а значит **остатки (ошибки) модели случайны**.
+    * их **среднее при любых значениях предиктора равно нулю**: $\bar \varepsilon_i = 0$,
+    * и **они не зависят друг от друга**: $\cor\underset{i \neq j}{(\varepsilon_i, \varepsilon_j)} = 0$
+* Кроме того, раз **остатки** заключают в себе случайный компонент модели, то они **должны быть распределены нормально**: $\varepsilon \thicksim \mathcal N(0, \sigma^2_\varepsilon)$
+    * причём их дисперсия должна быть **одинакова при любых значениях предиктора**: $\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \const$
+
+#### Линейность связи
+
+К сожалению, специального способа проверить это допущение не существует. В случае простой линейной регрессии нас спасает то, что у нас только один предиктор, а значит мы можем изобразить диаграмму рассеяния и визуально проверить, выполняется ли допущение линейности связи.
+
+#### Независимость остатков друг от друга
+
+И вновь мы в ситуации, когда у нас нет возможности с помощью статистики проверить данное допущение. Независимость остатков следует из независимости наблюдений, что можно проконтролировать только с помощью дизайна исследования, в том числе дизайна сэмплинга (сбора) выборки.
+
+#### Нормальное распределение остатков
+
+А вот это уже проверяемое эмпирически предположение. Здесь существует несколько подходов: можно воспользоваться статистическим тестом (например, тестом Шапиро-Уилка), однако можно обойтись и графической диагностикой. Во-первых, можно построить гистограмму, а во-вторых, есть особы график QQ-plot, который также позволяет проверить допущение о нормальном распределении.
+
+```{r}
+ggplot() +
+  geom_histogram(aes(x = model1$residuals), binwidth = .1)
+```
+
+```{r}
+ggplot(data = NULL,
+       aes(sample = model1$residuals)) +
+  stat_qq() + stat_qq_line() +
+  labs(x = "Theoretical Quantiles", y = "Empirical Quantiles")
+```
+
+#### Независимость остатков от предсказанных значений
+
+В случае, если наша модель хорошо схватывает закономерность, представленную в данных, остатки не должны зависеть от предсказанных значений. Это значит два свойства:
+
+* их **среднее при любых значениях предиктора равно нулю**: $\bar \varepsilon_i = 0$
+* их дисперсия должна быть **одинакова при любых значениях предиктора**: $\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \const$
+
+Допущение о равенстве дисперсии остатков при любых значениях предиктора называется по-умному **гомоскедастичностью**. Для проверки этого допущения также существуют статистические тесты, однако оба допущения можно проверить графически на одном и том же графике. Для этого нам необходимо построить диаграмму рассеяния, где по оси x будут идти предсказанные моделью значения, и по оси y остатки модели.
+
+
+```{r}
+set.seed(333)
+tibble(x = rnorm(100, 5, 12),
+       y = rnorm(100)) %>% 
+  ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+```{r}
+set.seed(333)
+tibble(x = rnorm(150, 5, 12),
+       y = 0.03 * x + 0.3 + rnorm(150)) %>% 
+  ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+```{r}
+set.seed(568)  # this makes the example exactly reproducible
+
+n      = rep(1:100,2)
+a      = 0
+b      = 1
+sigma2 = n^1.3
+eps    = rnorm(n,mean=0,sd=sqrt(sigma2))
+y      = a+b*n + eps
+mod    = lm(y ~ n)
+res    = residuals(mod)
+
+ggplot(data = NULL,
+       aes(n, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+
+
+
+
 * Гомоскедастичность остатков
 * Влиятельные наблюдения и выбросы
 
