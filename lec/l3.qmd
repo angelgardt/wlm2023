@@ -1,6 +1,6 @@
 # L3 // Математика для анализа данных
 
-{{< include ../book/_symbols.qmd >}}
+{{< include ../other/_symbols.qmd >}}
 
 ```{r opts, eval=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE)
@@ -755,8 +755,6 @@ ggplot() +
   labs(x = "x",
        y = "f(x)")
 ```
-
-Производные основных элементарных функций можно найти [тут](../book/appendix-formulas.html#formulas_deriv).
 
 
 ### Частная производная
