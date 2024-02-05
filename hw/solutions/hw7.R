@@ -3,6 +3,9 @@
 
 # MAIN
 
+library(tidyverse)
+theme_set(theme_bw())
+
 # 1
 set.seed(333)
 sim1 <- matrix(rchisq(1000 * 100, 3), ncol = 1000)
@@ -153,4 +156,21 @@ sim3 %>%
              y = mean,
              ymin = lower,
              ymax = upper)) +
+  geom_errorbar()
+
+
+sim3 %>% 
+  map(ci) %>% 
+  as_tibble(.name_repair = "minimal") %>% 
+  set_names(1:200) %>% 
+  mutate(a = c("lower", "mean", "upper")) %>% 
+  pivot_longer(cols = -a) %>% 
+  pivot_wider(names_from = a, values_from = value) %>% 
+  mutate(name = as.numeric(name),
+         lower_ = lower - mean,
+         upper_ = upper - mean) %>% 
+  ggplot(aes(x = name,
+             # y = mean,
+             ymin = lower_,
+             ymax = upper_)) +
   geom_errorbar()

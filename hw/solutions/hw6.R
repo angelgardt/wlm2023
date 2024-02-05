@@ -3,12 +3,16 @@
 
 # MAIN
 
+library(tidyverse)
+
 # 1
 load(url("https://github.com/angelgardt/wlm2023/raw/master/data/hw6/dice.RData"))
 
-dice1(10000) %>% table() %>% `/`(10000) #%>% sum()
+1/8
+
+dice1(10000) %>% table() %>% `/`(10000) %>% sum()
 dice2(10000) %>% table() %>% `/`(10000) #%>% sum()
-dice3(10000) %>% table() %>% `/`(10000) #%>% sum()
+dice3(10000) %>% table() %>% `/`(10000) %>% sum()
 
 
 # 2
