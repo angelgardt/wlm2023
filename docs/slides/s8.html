@@ -8,7 +8,7 @@
 <link href="s8_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s8_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s8_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.510">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Антон Ангельгардт">
   <title>L8 // Общие линейные модели. Простая и множественная линейная регрессия</title>
@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #e1e4e8; background-color: #24292e; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #e1e4e8; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #f97583; } /* Attribute */
-    code span.bn { color: #79b8ff; } /* BaseN */
-    code span.bu { color: #f97583; } /* BuiltIn */
-    code span.cf { color: #f97583; } /* ControlFlow */
-    code span.ch { color: #9ecbff; } /* Char */
-    code span.cn { color: #79b8ff; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #f97583; } /* DataType */
-    code span.dv { color: #79b8ff; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
-    code span.fl { color: #79b8ff; } /* Float */
-    code span.fu { color: #b392f0; } /* Function */
-    code span.im { color: #9ecbff; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #f97583; } /* Keyword */
-    code span.op { color: #e1e4e8; } /* Operator */
-    code span.ot { color: #b392f0; } /* Other */
-    code span.pp { color: #f97583; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #79b8ff; } /* SpecialChar */
-    code span.ss { color: #9ecbff; } /* SpecialString */
-    code span.st { color: #9ecbff; } /* String */
-    code span.va { color: #ffab70; } /* Variable */
-    code span.vs { color: #9ecbff; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="s8_files/libs/revealjs/dist/theme/quarto.css">
   <link href="s8_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -403,8 +338,8 @@
 </div>
 
 </section>
-<section id="зачем" class="slide level2">
-<h2>Зачем?</h2>
+<section id="что-будет" class="slide level2">
+<h2>Что будет?</h2>
 <div class="cell">
 <script>
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
@@ -416,89 +351,595 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 </script>
 </div>
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- transposed matrix --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
 <ul>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
-<li>Пункт плана</li>
+<li>Зачем нужна линейная регрессия</li>
+<li>Модель простой линейной регрессии</li>
+<li>Идентификация модели</li>
+<li>Тестирование статистических гипотез</li>
+<li>Модели множественной линейной регресии</li>
 </ul>
-</section>
-<section id="текст" class="slide level2">
-<h2>Текст</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
 </section>
 <section>
-<section id="раздел" class="title-slide slide level1 center">
-<h1>Раздел</h1>
+<section id="l8.1-простая-линейная-регрессия" class="title-slide slide level1 center">
+<h1>L8.1 // Простая линейная регрессия</h1>
 
 </section>
-<section id="списки" class="slide level2">
-<h2>Списки</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="ограничения-корреляционного-анализа" class="slide level2">
+<h2>Ограничения корреляционного анализа</h2>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li><strong>позволяет</strong> оценить силу и направление линейной связи</li>
+<li><strong>не позволяет</strong> предсказывать значения одной переменной на основе значений другой</li>
 </ul>
 </section>
-<section id="код" class="slide level2">
-<h2>Код</h2>
-<p>When you click the <code>Render</code> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-</section>
-<section id="формулы" class="slide level2">
-<h2>Формулы</h2>
-<p><span class="math display">\[
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
-\]</span></p>
-<p><span class="math display">\[
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-\]</span></p>
-</section>
-<section id="колонки" class="slide level2">
-<h2>Колонки</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p>Текст правой колонки</p>
-</div>
-</div>
-</section>
-<section id="колонки-с-картинкой-справа" class="slide level2">
-<h2>Колонки с картинкой справа</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Текст левой колонки</p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div>
-</div>
-</section>
-<section id="колонки-с-картинкой-слева" class="slide level2">
-<h2>Колонки с картинкой слева</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="pics/test-pic.png"></p>
-</div><div class="column" style="width:40%;">
-<p>Текст</p>
-</div>
-</div>
-</section>
-<section id="график" class="slide level2">
-<h2>График</h2>
+<section id="идея-регрессионной-модели" class="slide level2">
+<h2>Идея регрессионной модели</h2>
 
-<img data-src="s8_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="уравнение-прямой" class="slide level2">
+<h2>Уравнение прямой</h2>
+<p><span class="math display">\[
+y = kx + b,
+\]</span></p>
+<ul>
+<li><span class="math inline">\(k\)</span> — угловой коэффициент (slope) <span class="math inline">\(b\)</span> — свободный член (intercept)</li>
+</ul>
+<center>
+<figure>
+<img src="pics/line.jpg">
+</figure>
+</center>
+</section>
+<section id="формализация-модели" class="slide level2">
+<h2>Формализация модели</h2>
+<p><span class="math display">\[
+y = b_0 + b_1 x
+\]</span></p>
+<ul>
+<li>переменная <span class="math inline">\(y\)</span> называется <em>зависимая</em>, <em>предсказываемая</em>, <em>целевая</em> переменная или <em>регрессант</em></li>
+<li>переменная <span class="math inline">\(x\)</span> носит названия <em>независимая</em> переменная, <em>предиктор</em> или <em>регрессор</em></li>
+<li>числа <span class="math inline">\(b_0\)</span> и <span class="math inline">\(b_1\)</span> называются <em>коэффициентами</em> или <em>параметрами</em> модели</li>
+</ul>
+</section>
+<section id="параметры-модели-и-парамеры-генеральной-совокупности" class="slide level2">
+<h2>Параметры модели и парамеры генеральной совокупности</h2>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1x,
+\]</span></p>
+<p><span class="math inline">\(\beta_0\)</span> и <span class="math inline">\(\beta_1\)</span> — параметры генеральной совокупности.</p>
+<p><span class="math display">\[
+y_i = \beta_0 + \beta_1 x + \varepsilon_i,
+\]</span></p>
+<p><span class="math inline">\(\varepsilon_i\)</span> — случайная изменчивость целевой переменной.</p>
+<p><span class="math display">\[
+y_i = b_0 + b_1 x_i + e_i,
+\]</span></p>
+<p><span class="math inline">\(b_0 = \hat \beta_0\)</span> и <span class="math inline">\(b_1 = \hat \beta_1\)</span> — оценки параметров генеральной совокупности, <span class="math inline">\(e_i\)</span> — ошибки (или остатки, residuals) модели.</p>
+</section>
+<section id="идентификация-модели" class="slide level2">
+<h2>Идентификация модели</h2>
+<p><span class="math display">\[
+y_i = b_0 + b_1 x_i + e_i,
+\]</span></p>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="уравнение-модели" class="slide level2">
+<h2>Уравнение модели</h2>
+<p><span class="math display">\[
+\hat y_i = b_0 + b_1 x_i,
+\]</span></p>
+<p><span class="math inline">\(\hat y_i\)</span> — модельное значение целевой переменной</p>
+</section>
+<section id="ошибки-модели" class="slide level2">
+<h2>Ошибки модели</h2>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="минимизация-ошибки-модели" class="slide level2">
+<h2>Минимизация ошибки модели</h2>
+<p><span class="math display">\[
+Q_{\text{res}} = \sum_{i=1}^n e_i^2 \to \min_{b_0, b_1}
+\]</span></p>
+<p><span class="math display">\[
+Q_{\text{res}} = \sum_{i=1}^n e_i^2 = \sum_{i=1}^n (y_i - \hat y_i)^2 = \sum_{i=1}^n \big( y_i - (b_0 + b_1 x_i) \big)^2
+\]</span></p>
+<p><span class="math display">\[
+Q_{\text{res}} = f(b_0, b_1) = \sum (y_i - \hat y_i)^2 = \sum (y_i - b_0 - b_1x_i)^2 \to \min_{b_0, b_1}
+\]</span></p>
+</section>
+<section id="метод-наименьших-квадратов" class="slide level2">
+<h2>Метод наименьших квадратов</h2>
+<p><span class="math display">\[
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i)^2
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) =
+\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)
+\]</span></p>
+<p><span class="math display">\[
+f(b_0, b_1) =
+\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)
+\]</span></p>
+<p><span class="math display">\[
+\frac{f(b_0, b_1)}{\partial b_0} = \sum (-2y_i + 2b_0 + 2x_ib_1) =
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big)
+\]</span></p>
+<p><span class="math display">\[
+\frac{f(b_0, b_1)}{\partial b_1} = \sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i
+\]</span></p>
+<p><span class="math display">\[
+\cases {
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+\sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum y_i - \sum b_0 + \sum b_1 x_i = 0 \\
+\sum y_i x_i - \sum b_0 x_i + \sum b_1 x^2_i = 0
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+\sum b_0 + \sum b_1 x_i = \sum y_i \\
+\sum b_0 x_i + \sum b_1 x_i^2 = \sum y_i x_i
+}
+\]</span></p>
+<p><span class="math display">\[
+\cases{
+b1 \sum x_i + n b_0 = \sum y_i \\
+b1 \sum x^2_i + b_0 \sum x_i = \sum y_i x_i
+}
+\]</span></p>
+<p><span class="math display">\[
+b_0 = \frac{\sum y_i}{n} - b_1 \frac{\sum x_i}{n} = \bar y - b_1 \bar x
+\]</span></p>
+<p><span class="math display">\[
+b1 \sum x_i^2 + (\bar y - b_1 \bar x) \sum x_i = \sum x_i y_i
+\]</span></p>
+<p><span class="math display">\[
+\underline{b_1 \sum x_i^2} + \bar y \sum x_i - \underline{b_1 \bar x \sum x_i} = \sum x_i y_i
+\]</span></p>
+<p><span class="math display">\[
+b_1 \Big( \sum x_i^2 - \bar x \sum x_i \Big) =
+\sum x_i y_i - \bar y \sum x_i
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\sum x_i y_i - \bar y \sum x_i}{\sum x_i^2 - \bar x \sum x_i} =
+\frac{(\sum x_i y_i - \bar y \sum x_i) \times n}{(\sum x_i^2 - \bar x \sum x_i) \times n}
+\]</span></p>
+<p><span class="math display">\[
+b_1 = \frac{\overline{xy} - \bar x \cdot \bar y}{\overline{x^2} - \bar x^2} =
+\frac{\overline{xy} - \bar x \bar y}{s_X^2}
+\]</span></p>
+</section>
+<section id="формулы-коэффициентов" class="slide level2">
+<h2>Формулы коэффициентов</h2>
+<p><span class="math display">\[
+\cases{
+b_0 = \bar y - b_1 \bar x \\
+b_1 = \frac{\overline{xy} - \bar x \cdot \bar y}{\overline{x^2} - \bar x^2} =
+\frac{\overline{xy} - \bar x \bar y}{s_X^2}
+}
+\]</span></p>
+</section>
+<section id="матричное-вычисление-коэффициентов" class="slide level2">
+<h2>Матричное вычисление коэффициентов</h2>
+<p><span class="math display">\[
+\cases{
+b_0 + b_1 x_1 + e_1 = y_1 \\
+b_0 + b_1 x_2 + e_2 = y_2 \\
+\dots \\
+b_0 + b_1 x_n + e_n = y_n \\
+}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{X} \mathbf{b} + \mathbf{e} = \mathbf{y},
+\]</span></p>
+<p><span class="math inline">\(\mathbf{y}\)</span> — вектор нашей целевой переменной, <span class="math inline">\(\mathbf{X}\)</span> — матрица предикторов, <span class="math inline">\(\mathbf{b}\)</span> — вектор коэффициентов модели, <span class="math inline">\(\mathbf{e}\)</span> — вектор ошибок (остатков) модели.</p>
+<p><span class="math display">\[
+\mathbf{X} = \pmatrix{1 &amp; x_1 \\ 1 &amp; x_2 \\ \vdots &amp; \vdots \\ 1 &amp; x_n}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{b} = (\mathbf{X}^\top\mathbf{X})^{-1} \mathbf{X}^\top\mathbf{y}
+\]</span></p>
+</section>
+<section id="общая-изменчивость" class="slide level2">
+<h2>Общая изменчивость</h2>
+<p><strong>Общая сумма квадратов (total sum of squares, TSS)</strong></p>
+<p><span class="math display">\[
+\text{TSS} = \sum_{i=1}^n (\bar y - y_i)^2
+\]</span></p>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="объясненная-изменчивость" class="slide level2">
+<h2>Объясненная изменчивость</h2>
+<p><strong>Объясненная сумма квадратов (explained sum of squares, ESS)</strong></p>
+<p><span class="math display">\[
+\text{ESS} = \sum_{i=1}^n (\bar y - \hat y)^2
+\]</span></p>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="остаточная-изменчивость" class="slide level2">
+<h2>Остаточная изменчивость</h2>
+<p><strong>Необъяснённая (остаточная) сумма квадратов (residual sum of squares, RSS)</strong></p>
+<p><span class="math display">\[
+\text{RSS} = \sum_{i=1}^n (y_i - \hat y_i)^2
+\]</span></p>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="изменчивость-данных-с-точки-зрения-регрессионнной-модели" class="slide level2">
+<h2>Изменчивость данных с точки зрения регрессионнной модели</h2>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><p><span class="math display">\[
+\text{TSS} = \text{ESS} + \text{RSS}
+\]</span></p>
+</section>
+<section id="коэффициент-детерминации" class="slide level2">
+<h2>Коэффициент детерминации</h2>
+<p><span class="math display">\[
+R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}
+\]</span></p>
+<p><span class="math display">\[
+R^2 = r^2
+\]</span></p>
+</section>
+<section id="f-статистика" class="slide level2">
+<h2>F-статистика</h2>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \beta_0 = \beta_1 = 0 \\
+H_1&amp;: \beta_0 \neq 0 \vee \beta_1 \neq 0
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+F_{\text{df}_e, \text{df}_r} = \frac{\text{MS}_e}{\text{MS}_r} = \frac{\text{ESS}/\text{df}_e}{\text{RSS}/\text{df}_r} \overset{H_0}{\thicksim} F(\text{df}_e, \text{df}_r)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{MS}_e\)</span> — это «средний объясненный квадрат»,</li>
+<li><span class="math inline">\(\text{MS}_r\)</span> — «средний остаточный квадрат»,</li>
+<li><span class="math inline">\(\text{df}_e = p - 1\)</span> и <span class="math inline">\(\text{df}_r = n - p - 1\)</span> — степени свободы для объясненной и остаточной изменчивости,</li>
+<li><span class="math inline">\(p\)</span> — количество предикторов в модели,</li>
+<li><span class="math inline">\(n\)</span> — число наблюдений.</li>
+</ul>
+</section>
+<section id="f-распределение" class="slide level2">
+<h2>F-распределение</h2>
+<p>F-распределение, распределение Фишера (<span class="math inline">\(\text{df}_e = 3\)</span>, <span class="math inline">\(\text{df}_e = 50\)</span>)</p>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="метрики-качества-модели" class="slide level2">
+<h2>Метрики качества модели</h2>
+<h3 id="mse">MSE</h3>
+<p><span class="math display">\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2
+\]</span></p>
+<h3 id="rmse">RMSE</h3>
+<p><span class="math display">\[
+\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2}
+\]</span></p>
+<h3 id="mae">MAE</h3>
+<p><span class="math display">\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat y_i|
+\]</span></p>
+<h5 id="mape">MAPE</h5>
+<p><span class="math display">\[
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^n \Bigg |\frac{y_i - \hat y_i}{y_i} \Bigg|
+\]</span></p>
+</section>
+<section id="тестирование-значимости-предикторов" class="slide level2">
+<h2>Тестирование значимости предикторов</h2>
+<p><span class="math display">\[
+\begin{split}
+H_0&amp;: \beta_1 = 0 \\
+H_1&amp;: \beta_1 \neq 0
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+t = \frac{b_1 - \beta_1}{\text{se}_{b_1}} = \frac{b_1}{\text{se}_{b_1}} \overset{H_0}{\thicksim} t(\text{df}_t),
+\]</span></p>
+<p><span class="math display">\[
+\text{df}_t = n-p-1
+\]</span></p>
+<p><span class="math display">\[
+\text{se}_{b_1} = \frac{s_r}{\sum_{i=1}^n (x_i - \bar x)^2}
+\]</span></p>
+<p><span class="math display">\[
+s_r = \sqrt{\frac{\sum_{i=1}^n (y_i - \hat y_i)^2}{n-2}}
+\]</span></p>
+</section>
+<section id="допущения-линейной-регрессии" class="slide level2">
+<h2>Допущения линейной регрессии</h2>
+<ul>
+<li>связь между предикторами и зависимой переменной <strong>линейная</strong></li>
+<li><strong>остатки (ошибки) модели случайны</strong>
+<ul>
+<li><strong>среднее при любых значениях предиктора равно нулю</strong>: <span class="math inline">\(\bar \varepsilon_i = 0\)</span>,</li>
+<li><strong>они не зависят друг от друга</strong>: <span class="math inline">\(\text{cor}\underset{i \neq j}{(\varepsilon_i, \varepsilon_j)} = 0\)</span></li>
+</ul></li>
+<li><strong>остатки распределены нормально</strong>: <span class="math inline">\(\varepsilon \thicksim \mathcal N(0, \sigma^2_\varepsilon)\)</span>
+<ul>
+<li>дисперсия <strong>одинакова при любых значениях предиктора</strong>: <span class="math inline">\(\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \text{const}\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="нормальное-распределение-остатков" class="slide level2">
+<h2>Нормальное распределение остатков</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="независимость-остатков-от-предсказанных-значений" class="slide level2">
+<h2>Независимость остатков от предсказанных значений</h2>
+<ul>
+<li><strong>среднее при любых значениях предиктора равно нулю</strong>: <span class="math inline">\(\bar \varepsilon_i = 0\)</span></li>
+<li>дисперсия <strong>одинакова при любых значениях предиктора</strong>: <span class="math inline">\(\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \text{const}\)</span> — <strong>гомоскедастичность</strong></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="влиятельные-наблюдения" class="slide level2">
+<h2>Влиятельные наблюдения</h2>
+<p>Красная точка — <strong>влиятельное наблюдение (influential point)</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="предсказания-на-основе-модели" class="slide level2">
+<h2>Предсказания на основе модели</h2>
+<ul>
+<li><strong>Интерполяция</strong> — предсказания значений целевой переменной <strong>внутри</strong> заданного диапазона значений предиктора.</li>
+<li><strong>Экстраполяция</strong> — предсказания значений целевой переменной <strong>вне</strong> заданного диапазона значений предиктора.</li>
+</ul>
+
+<img data-src="s8_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="l8.2-множественная-линейная-регрессия" class="title-slide slide level1 center">
+<h1>L8.2 // Множественная линейная регрессия</h1>
+
+</section>
+<section id="множественная-линейная-регрессия-с-количественными-предикторами-без-взаимодействия" class="slide level2">
+<h2>Множественная линейная регрессия с количественными предикторами без взаимодействия</h2>
+<p><span class="math display">\[
+y_i = b_0 + b_1 x_{i1} + b_2 x_{i2} + \ldots + b_p x_{ip} + e_i
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{X} \mathbf{b} + \mathbf{e} = \mathbf{y}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{X} = \pmatrix{
+1 &amp; x_{11} &amp; x_{12} &amp; \dots &amp; x_{1p} \\
+1 &amp; x_{21} &amp; x_{22} &amp; \dots &amp; x_{2p} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+1 &amp; x_{n1} &amp; x_{n2} &amp; \dots &amp; x_{np}}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{b} = \pmatrix{ b_0 &amp; b_1 &amp; b_2 &amp; \dots &amp; b_p}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{b} = (\mathbf{X}^\top\mathbf{X})^{-1} \mathbf{X}^\top\mathbf{y}
+\]</span></p>
+</section>
+<section id="проблема-мультиколлинеарности" class="slide level2">
+<h2>Проблема мультиколлинеарности</h2>
+<p><span class="math display">\[
+\mathbf{b} = (\mathbf{X}^\top\mathbf{X})^{-1} \mathbf{X}^\top\mathbf{y}
+\]</span></p>
+<p>Если наши предикторы сильно коррелируют друг с другом (≥ 0.8), то в нашей матрице возникают линейно зависимые столбцы, а значит обратная матрица не будет существовать.</p>
+</section>
+<section id="коэффициент-вздутия-дисперсии" class="slide level2">
+<h2>Коэффициент вздутия дисперсии</h2>
+<p>Проверкой на мультиколлинеарность для модели является <strong>коэффициент вздутия дисперсии (variance inflation factor, VIF)</strong></p>
+<ul>
+<li>пусть у нас есть модель</li>
+</ul>
+<p><span class="math display">\[
+y = b_0 + b_1 x_1 + b_2 x_2 + \ldots + b_p x_p + e
+\]</span></p>
+<ul>
+<li>построим линейную регрессию, в которой один из предикторов будет регрессироваться по всем другим:</li>
+</ul>
+<p><span class="math display">\[
+x_1 = \alpha_0 + \alpha_2 x_2 + \ldots + \alpha_m x_m + e
+\]</span></p>
+<ul>
+<li>вычислим коэффициент детерминации данной модели <span class="math inline">\(R^2_j\)</span></li>
+<li>для коэффициента <span class="math inline">\(b_j\)</span> VIF будет определяться так:</li>
+</ul>
+<p><span class="math display">\[
+\text{VIF}_j = \frac{1}{1 - R^2_j}
+\]</span></p>
+<p>Пороговым значением для вынесение вердикта о наличии мультиколлинеарности считается 3 (иногда 2).</p>
+</section>
+<section id="множественная-линейная-регрессия-с-количественными-и-категориальными-предикторами-без-взаимодействия" class="slide level2">
+<h2>Множественная линейная регрессия с количественными и категориальными предикторами без взаимодействия</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + e_i
+\]</span></p>
+<p><span class="math inline">\(I\)</span> — это индикаторная переменная:</p>
+<ul>
+<li><span class="math inline">\(I_{i1} = 0\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 1</code>,</li>
+<li><span class="math inline">\(I_{i1} = 1\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 2</code>.</li>
+</ul>
+<p>Две модели в одной:</p>
+<ul>
+<li><code>Group 1</code> (<span class="math inline">\(I_{i1} = 0\)</span>): <span class="math inline">\(\hat y_i = b_0 + b_2 x_{i2}\)</span></li>
+<li><code>Group 2</code> (<span class="math inline">\(I_{i1} = 1\)</span>): <span class="math inline">\(\hat y_i = (b_0 + b_1) + b_2 x_{i2}\)</span></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="множественная-линейная-регрессия-с-количественными-и-категориальными-предикторами-со-взаимодействием" class="slide level2">
+<h2>Множественная линейная регрессия с количественными и категориальными предикторами со взаимодействием</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + b_3 I_{i1} x_2
+\]</span></p>
+<p><span class="math inline">\(I\)</span> — индикатор:</p>
+<ul>
+<li><span class="math inline">\(I_{i1} = 0\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 1</code>,</li>
+<li><span class="math inline">\(I_{i1} = 1\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 2</code>.</li>
+</ul>
+<p>Две модели в одной:</p>
+<ul>
+<li><code>Group 1</code> (<span class="math inline">\(I_{i1} = 0\)</span>): <span class="math inline">\(\hat y_i = b_0 + b_2 x_{i2}\)</span></li>
+<li><code>Group 2</code> (<span class="math inline">\(I_{i1} = 1\)</span>): <span class="math inline">\(\hat y_i = (b_0 + b_1) + (b_2 + b_3) x_{i2}\)</span></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="s8_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="множественная-линейная-регрессия-со-взаимодействием-количественных-предикторов" class="slide level2">
+<h2>Множественная линейная регрессия со взаимодействием количественных предикторов</h2>
+<p><span class="math display">\[
+y_i = b_0 + b_1 x_{i1} + b_2 x_{i2} + b_3 x_{i1}x_{i2} + e_i
+\]</span></p>
+<ul>
+<li><p>если <span class="math inline">\(x_1 = 0\)</span>, то модель приобретает следующий вид: <span class="math inline">\(\hat y_i = b_2 x_{i2}\)</span>,</p></li>
+<li><p>если <span class="math inline">\(x_2 = 0\)</span>, то такой вид: <span class="math inline">\(\hat y_i = b_1 x_{i1}\)</span>.</p></li>
+<li><p><span class="math inline">\(b_1\)</span> и <span class="math inline">\(b_2\)</span> показывают так называемые «условные» связи</p></li>
+<li><p><span class="math inline">\(b_3\)</span> показывает сонаправленность связи предикторов с целевой переменной</p></li>
+</ul>
+</section>
+<section id="скорректированный-коэффициент-детерминации" class="slide level2">
+<h2>Скорректированный коэффициент детерминации</h2>
+<p><span class="math display">\[
+R^2_{\text{adj}} = 1 - (1 - R^2) \frac{n-1}{n-p}
+\]</span></p>
+</section>
+<section id="частный-f-критерий" class="slide level2">
+<h2>Частный F-критерий</h2>
+<p>Пусть у нас есть две модели — (1) полная (full) и (2) сокращенная (reduced):</p>
+<p><span class="math display">\[
+\begin{split}
+(1) &amp;: y_i = b_0 + b_1 x_1 + b_2 x_2 + b_3 x_3 + b_4 x_4 + e \\
+(2) &amp;: y_i = b_0 + b_1 x_1 + b_2 x_2 + e
+\end{split}
+\]</span></p>
+<p>Различаются ли статистически данные модели?</p>
+<p><span class="math display">\[
+\begin{split}
+H_0 &amp;: \beta_3 = \beta_4 = 0 \\
+H_1 &amp;: \beta_3 \neq 0 \vee \beta_4 \neq 0
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+F = \frac{(\text{RSS}_\text{reduced} - \text{RSS}_\text{full})/k}{\text{RSS}_\text{full} / (n-p)},
+\]</span></p>
+<p><span class="math inline">\(\text{RSS}_\text{reduced}\)</span> — остаточная сумма квадратов сокращенной модели, <span class="math inline">\(\text{RSS}_\text{full}\)</span> — остаточная сумма квадратов полной модели, <span class="math inline">\(n\)</span> — количество наблюдений, <span class="math inline">\(p\)</span> — количество предикторов полной модели, <span class="math inline">\(k\)</span> — количество предикторов, исключенных из полной модели.</p>
+</section>
 <section id="итоги" class="slide level2">
 <h2>Итоги</h2>
 <ul>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
-<li>Пункт итогов</li>
+<li>Модель простой линейной регрессии</li>
+<li>Метод наименьших квадратов</li>
+<li>Множественная линейная регрессия с количественными предикторами</li>
+<li>Множественная линейная регрессия с категориальными предикторами</li>
+<li>Взаимодействие предикторов</li>
+<li>Проблема мультиколлинеарности</li>
 </ul>
 </section></section>
 <section id="end" class="title-slide slide level1 center">
@@ -508,9 +949,11 @@ x \thicksim \mathcal{N}(0, 1)
 <p>Антон Ангельгардт</p>
 </div>
 </div>
-
-<img src="pics/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="pics/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>WLM 2023</p>
+</div>
 </div>
 </section>
     </div>

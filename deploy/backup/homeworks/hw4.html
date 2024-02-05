@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.510">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HW // WLM 2023 - HW4 // Предобработка данных</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./hw5.html" rel="next">
+<link href="./hw3.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw4.html">HW4 // Предобработка данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW2 // Матрицы и списки. Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">HW4 // Предобработка данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW5 // Визуализация данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#hw4_main" id="toc-hw4_main" class="nav-link active" data-scroll-target="#hw4_main">Основные задания</a>
+  <ul class="collapse">
+  <li><a href="#hw4-1-title" id="toc-hw4-1-title" class="nav-link" data-scroll-target="#hw4-1-title">#1</a></li>
+  <li><a href="#hw4-2-title" id="toc-hw4-2-title" class="nav-link" data-scroll-target="#hw4-2-title">#2</a></li>
+  <li><a href="#hw4-3-title" id="toc-hw4-3-title" class="nav-link" data-scroll-target="#hw4-3-title">#3</a></li>
+  <li><a href="#hw4-4-title" id="toc-hw4-4-title" class="nav-link" data-scroll-target="#hw4-4-title">#4</a></li>
+  <li><a href="#hw4-5-title" id="toc-hw4-5-title" class="nav-link" data-scroll-target="#hw4-5-title">#5</a></li>
+  <li><a href="#hw4-6-title" id="toc-hw4-6-title" class="nav-link" data-scroll-target="#hw4-6-title">#6</a></li>
+  <li><a href="#hw4-7-title" id="toc-hw4-7-title" class="nav-link" data-scroll-target="#hw4-7-title">#7</a></li>
+  <li><a href="#hw4-8-title" id="toc-hw4-8-title" class="nav-link" data-scroll-target="#hw4-8-title">#8</a></li>
+  <li><a href="#hw4-9-title" id="toc-hw4-9-title" class="nav-link" data-scroll-target="#hw4-9-title">#9</a></li>
+  <li><a href="#hw4-10-title" id="toc-hw4-10-title" class="nav-link" data-scroll-target="#hw4-10-title">#10</a></li>
+  </ul></li>
+  <li><a href="#hw4_add" id="toc-hw4_add" class="nav-link" data-scroll-target="#hw4_add">Дополнительные задания</a>
+  <ul class="collapse">
+  <li><a href="#hw4-11-title" id="toc-hw4-11-title" class="nav-link" data-scroll-target="#hw4-11-title">#1</a></li>
+  <li><a href="#hw4-12-title" id="toc-hw4-12-title" class="nav-link" data-scroll-target="#hw4-12-title">#2</a></li>
+  <li><a href="#hw4-13-title" id="toc-hw4-13-title" class="nav-link" data-scroll-target="#hw4-13-title">#3</a></li>
+  <li><a href="#hw4-14-title" id="toc-hw4-14-title" class="nav-link" data-scroll-target="#hw4-14-title">#4</a></li>
+  <li><a href="#hw4-15-title" id="toc-hw4-15-title" class="nav-link" data-scroll-target="#hw4-15-title">#5</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="hw4" class="quarto-section-identifier">HW4 // Предобработка данных</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+REPLACE ALL hw4 TO hw<n> WITH MATCH CASE
+-->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Пакет с пакетами
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Для выполнения заданий этой домашки используйте <code>tidyverse</code>.</p>
+</div>
+</div>
+<section id="hw4_main" class="level2">
+<h2 class="anchored" data-anchor-id="hw4_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание данных
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы работаем с данными одного экспериментального исследования.</p>
+<p>Эксперимент был направлен на изучение гибридного зрительного поиска. Испытуемому было необходимо искать объекты из определенной категории. В качестве независимых переменных варьировались так называемые <em>visual setsize</em> и <em>memory setsize</em>, то есть количество стимулов, предъявляемых на экране монитора, и количество категорий, которые нужно было запомнить. Кроме того, использовались категории двух уровней — базовые (яблоки, кружки) и суперординатные (фрукты, посуда).</p>
+<p>Данные располагаются в двух файлах. В файле <code>base.xlsx</code> содержаться данные из группы испутыемых, которым предлагались базовые категории, в файле <code>super.xlsx</code> — данные из группы испутыемых, которым предлагались суперординатные категории.</p>
+<p>На листе <code>cor_answ</code> в каждом файле есть данные по точности для каждого сочетания условий. Сочетания условий кодируются следующим образом: например, <code>1_stim_8</code> обозначает, что <em>memory setsize</em> был равен 1, а <em>visual setsize</em> был равен 8. То есть первое число задаёт <em>memory setsize</em>, второе — <em>visual setsize</em>. На этом же листе с правого края есть соцдем респондентов — пол и возраст. На листе <code>Time</code> располагаются аналогичным образом организованные данные по времени реакции (от момента начала предъявления стимулов до нажатия на клавишу).</p>
+<p>Хотя данные, с которыми мы работаем, были частично предобработаны коллегой — это не сырые аутпуты PsychoPy — нам все равно придется с ними поработать, чтобы привести их к удобному для работы виду.</p>
+</div>
+</div>
+<section id="hw4-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-1-title">#1</h3>
+<p><img id="hw4-1-level" class="level"></p>
+<div id="hw4-1-task" class="task">
+<p>Скачайте <a href="https://drive.google.com/uc?export=download&amp;id=1KH8bI3CHaZbRf3VfUMPJ4-81qeZewR92">архив с данными</a>. Разархивируйте файлы в проект курса. Импортируйте данные в R. У вас должно получиться 4 датасета с данными с 4-х листов Excel-файлов. Назовите их <code>base_time</code>, <code>base_acc</code>, <code>super_time</code> и <code>suoer_acc</code> для времени реакции и точности и условиях с базовыми и суперординатными категориями соответственно.</p>
+<p>Возникли ли какие-то странности?</p>
+</div>
+<div id="hw4-1-autocheck" class="autocheck">
+<div id="hw4-1-ir" class="input-requirements">
+<p>В качестве ответа введите число строк, которые необходимо пропустить при импорте данных, чтобы они прочитались корректно.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-1')"></p>
+<div id="hw4-1-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-1-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Необходимо скачать архив с данными и разархивировать его в проект курса.</li>
+<li>Далее нужно загрузить четыре датасета в четыре разных объекта, прочитав данные из Excel-файлов.</li>
+<li>После загрузки проверьте, корректно ли загрузились данные. При необходимости воспользуйтесь документацией в функций чтения данных.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<ul>
+<li>Скачайте архив с данными и разархивируйте его в проект курса.</li>
+<li>Загрузите датасеты из Excel-файлов с помощью функции <code>read_xlsx()</code> из пакета <code>readxl</code>.</li>
+<li>Обратите внимание, как прочитались заголовки колонок. Откройте справку по функции <code>read_xlsx()</code> — <code>?read_xlsx</code> — и ознакомьтесь в работой аргeмента <code>skip</code>.</li>
+<li>Скорректируйте код загрузки данных.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-2-title">#2</h3>
+<p><img id="hw4-2-level" class="level"></p>
+<div id="hw4-2-task" class="task">
+<p>Проверьте, совпадает ли количество строк в получившихся датасетах.</p>
+</div>
+<div id="hw4-2-autocheck" class="autocheck">
+<div id="hw4-2-ir" class="input-requirements">
+<p>Для самопроверки введите число строк, если оно совпадает во всех датасетах, и <code>нет</code>, если оно отличается хотя бы в одном.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-2')"></p>
+<div id="hw4-2-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw4-2-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-3-title">#3</h3>
+<p><img id="hw4-3-level" class="level"></p>
+<div id="hw4-3-task" class="task">
+<p>Выгрузите соцдем, содержащийся в данных, в отдельный датасет. Соедините обе его части в один объект.</p>
+</div>
+<div id="hw4-3-autocheck" class="autocheck">
+<div id="hw4-3-ir" class="input-requirements">
+<p>В качестве ответа введите число пропущенных значений в получившемся датасете. Если их нет, введите 0.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-3')"></p>
+<div id="hw4-3-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-3-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Определите, в каких датасетах и колонках содержится соцдем в представленных данных.</li>
+<li>Отберите необходимые колонки из данных.</li>
+<li>Если соцдем находится в нескольких датасетах, объедините все имеющиеся части в один объект.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<ul>
+<li>Посмотрите в описании, как организованы данные и в какую их часть записан соцдем.</li>
+<li>Извлеките необходимые колонки с помощью <code>select()</code>.</li>
+<li>При необходимости объедините части соцдема в один объект с помощью <code>bind_rows()</code>.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-4-title">#4</h3>
+<p><img id="hw4-4-level" class="level"></p>
+<div id="hw4-4-task" class="task">
+<p>Удалите пропущенные значения из данных соцдема, если они есть, и задайте имена колонок — <code>sex</code> и <code>age</code> соответственно.</p>
+</div>
+<div id="hw4-4-autocheck" class="autocheck">
+<div id="hw4-4-ir" class="input-requirements">
+<p>Для самопроверки введите общее количество испытуемых в выборке эксперимента.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-4')"></p>
+<div id="hw4-4-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw4-4-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-5-title">#5</h3>
+<p><img id="hw4-5-level" class="level"></p>
+<div id="hw4-5-task" class="task">
+<p>Удалите из данных эксперимента лишние строки и столбцы. В объектах должно остаться только то, что относится к экспериментальным данным. Лишними считайте те столбцы, которые не имеют названия, и те строки, в которых не указан идентификатор респондента. Перезапишите имеющиеся объекты.</p>
+</div>
+<div id="hw4-5-autocheck" class="autocheck">
+<div id="hw4-5-ir" class="input-requirements">
+
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-5')"></p>
+<div id="hw4-5-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-5-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Изучите структуру датасетов с экспериментальными данными. Найдите в ней общие паттерны.</li>
+<li>В данном случае из-за сходной структуры данных уместно написать короткую функцию, которая будет отбирать из датасетов только те строки и столбцы, в которых содержатся экспериментальные данные.</li>
+<li>Примените функцию на имеющихся датасетах и перезапишите имеющиеся объекты, сохранив в них только экспериментальные данные.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<ul>
+<li>Изучите структуру датасетов с экспериментальными данными и определите номера колонок и строк, которые нобходимо отобрать.</li>
+<li>Напишите функцию, которая будет принимать на вход датасет и отбирать из него необходимые колонки и строки — подойдут <code>select()</code> и <code>slice()</code>.</li>
+<li>Примените функцию на имеющихся датасетах и перезапишите имеющиеся объекты, сохранив в них только экспериментальные данные.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-6-title">#6</h3>
+<p><img id="hw4-6-level" class="level"></p>
+<div id="hw4-6-task" class="task">
+<p>Создайте в датасетах эксперимента новую переменную <code>group</code>, содержащую информацию об уровне категории — базовая (<code>base</code>) или суперординатная (<code>super</code>).</p>
+</div>
+<div id="hw4-6-autocheck" class="autocheck">
+<div id="hw4-6-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-6')"></p>
+<div id="hw4-6-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw4-6-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-7-title">#7</h3>
+<p><img id="hw4-7-level" class="level"></p>
+<div id="hw4-7-task" class="task">
+<p>Соедините датасеты с данными о точности и времени реакции друг с другом — <code>base_acc</code> с <code>super_acc</code> и <code>base_time</code> с <code>super_time</code>. Назовите новые датасеты <code>acc</code> и <code>time</code> соответственно.</p>
+</div>
+<div id="hw4-7-autocheck" class="autocheck">
+<div id="hw4-7-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-7')"></p>
+<div id="hw4-7-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-7-hints">
+<summary>
+Подсказка
+</summary>
+<p>Исходя из структуры имеющихся данных, выберите подходящий способ объединения датасетов и необходимую для этого функцию. В обоих случаях датасеты объдиняются одинаково.</p>
+</details>
+</div>
+</section>
+<section id="hw4-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-8-title">#8</h3>
+<p><img id="hw4-8-level" class="level"></p>
+<div id="hw4-8-task" class="task">
+<p>Сейчас получившиеся датасеты пребывают в широком формате. Переведите их в длинный формат и разделите колонку с сочетанием экспериментальных условий на две.</p>
+<p>В датасете должны содержаться следующие колонки:</p>
+<ul>
+<li><code>id</code> — идентификатор испытуемого</li>
+<li><code>visual_setsize</code> — количество стимулов в пробе</li>
+<li><code>memory_setsize</code> — количество категорий для запоминания</li>
+<li><code>reaction_time/accuracy</code> — время реакции / точность (в зависимости от датасета)</li>
+</ul>
+<p>При необходимости переименуйте столбцы.</p>
+</div>
+<div id="hw4-8-autocheck" class="autocheck">
+<div id="hw4-8-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-8')"></p>
+<div id="hw4-8-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-8-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Для корректного приведения к длинному формату, определите колонки, которые не должны участвовать в преобразовании.</li>
+<li>Разделяя колонку с сочетанием экспериментальных условий, задайте разделитель, наиболее подходящий для значений, которые в ней содержатся.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="hw4-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-9-title">#9</h3>
+<p><img id="hw4-9-level" class="level"></p>
+<div id="hw4-9-task" class="task">
+<p>Объедините все данные в один датасет, который будет содержать следующие колонки:</p>
+<ul>
+<li><code>id</code> — идентификатор испытуемого</li>
+<li><code>group</code> — уровень категории</li>
+<li><code>visual_setsize</code> — количество стимулов в пробе</li>
+<li><code>memory_setsize</code> — количество категорий для запоминания</li>
+<li><code>reaction_time</code> — время реакции</li>
+<li><code>accuracy</code> — точность</li>
+</ul>
+<p>Сохраните результат в переменную <code>hybrid</code>.</p>
+</div>
+<div id="hw4-9-autocheck" class="autocheck">
+<div id="hw4-9-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-9')"></p>
+<div id="hw4-9-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-9-hints">
+<summary>
+Подсказка
+</summary>
+<p>Исходя из структуры имеющихся данных, выберите подходящий способ объединения датасетов и необходимую для этого функцию.</p>
+</details>
+</div>
+</section>
+<section id="hw4-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-10-title">#10</h3>
+<p><img id="hw4-10-level" class="level"></p>
+<div id="hw4-10-task" class="task">
+<p>На получившемся датасете рассчитайте среднее, минимальное и максимальное время реакции, а также его стандартное отклонение, по всем сочетаниям независимых переменных.</p>
+</div>
+<div id="hw4-10-autocheck" class="autocheck">
+<div id="hw4-10-ir" class="input-requirements">
+<p>Для самопроверки в поле ниже введите среднее время реакции в группе <code>base</code> при <code>visual_setsize</code> 12 и <code>memory_sesize</code> 4, округленное до третьего знака после запятой.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-10')"></p>
+<div id="hw4-10-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw4-10-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+</section>
+<section id="hw4_add" class="level2">
+<h2 class="anchored" data-anchor-id="hw4_add">Дополнительные задания</h2>
+<section id="hw4-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-11-title">#1</h3>
+<p><img id="hw4-11-level" class="level"></p>
+<div id="hw4-11-task" class="task">
+<p>В нашем случае названия файлов данных, которые у нас есть, содержат названия экспериментальных условий (<code>base.xlsx</code> и <code>super.xlsx</code>). Нам повезло, что эти название короткие, простые и их всего два — мы можем задать их вручную. Однако так случается не всегда, и хорошо автоматизировать этот процесс, чтобы не допустить лишних опечаток.</p>
+<p>Напишите код, с помощью которого можно вытащить вектор с экспериментальными условиями из названий файлов.</p>
+</div>
+<div id="hw4-11-autocheck" class="autocheck">
+<div id="hw4-11-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-11')"></p>
+<div id="hw4-11-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-11-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-12-title">#2</h3>
+<p><img id="hw4-12-level" class="level"></p>
+<div id="hw4-12-task" class="task">
+<p>В ходе выполнения заданий вы могли заметить, что часто мы выполняли одни и те же преобразования с разными датасетами. Так как входные датасеты имеют схожую структуру, можно оптимизировать усилия.</p>
+<p>Напишите функцию, которая будет:</p>
+<ul>
+<li>принимать на вход путь к файлу, в котором лежат данные
+<ul>
+<li>а также другие необходимые для предобработки аргументы</li>
+</ul></li>
+<li>предобрабатывать их</li>
+<li>возвращаемое задание может различаться в зависимости от способа реализации функции</li>
+</ul>
+<p>Тело функции соберите из кода, который вы написали в ходе выполнения задания основной части.</p>
+<p>При необходимости можете использовать написанную функцию в какой-либо другой последовательности предобработки. По итогам предобработки должен получиться датасет, идентичный датасету <code>hybrid</code>, полученному в <a href="#hw4-9-title">задании 9</a>.</p>
+</div>
+<div id="hw4-12-autocheck" class="autocheck">
+<div id="hw4-12-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-12')"></p>
+<div id="hw4-12-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-12-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Генерируем координаты
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Следующие три задания посвящены написанию кода для генерации координатной сетки для стимулов в зрительном поиске.</p>
+<p>Общий вид координатной сетки выглядит так:</p>
+<center>
+<figure class="figure">
+<img src="pics/vs-grid.jpg" width="100%" class="figure-img">
+<figcaption>
+Общая схема координатной сетки. Разрешение экрана — 1920×1080 пикселей. Координаты центра экрана — [0, 0]. Отступ от края экрана 100 пикселей с каждой стороны.
+</figcaption>
+</figure>
+</center>
+<p>В данном случае мы будем генерировать сетку для 21 стимула — в 3 ряда по 7 в каждом. На пересечении черных линий располагаются центры стимулов.</p>
+<center>
+<figure class="figure">
+<img src="pics/vs-grid-2.jpg" width="100%" class="figure-img">
+<figcaption>
+Общая схема координатной сетки с расположением центров стимулов.
+</figcaption>
+</figure>
+</center>
+<p>Поскольку стимулы не могут отображаться на одном и том же месте в каждой пробе, задается область, в которой стимул может свободно колебаться от пробы к пробе. Однако чтобы они на сталкивались друг с другом, предусматривается зазор между областями их свободного колебания.</p>
+<center>
+<figure class="figure">
+<img src="pics/vs-grid-3.jpg" width="100%" class="figure-img">
+<figcaption>
+Общая схема координатной сетки с расположением центром стимулов. Синим обозначены области, в которых стимулы могут свободно колебаться. Красным обозначен зазор, препятствующий столкновению стимулов.
+</figcaption>
+</figure>
+</center>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Исходные параметры для генерации координатной сетки
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Разрешение (размер) экрана (<code>res_x</code>×<code>res_y</code>): 1920×1080</li>
+<li>Зазор между областями колебания стимулов (<code>gap</code>): 10</li>
+<li>Количество стимулов по ширине экрана (<code>n_x</code>): 7</li>
+<li>Количество стимулов по высоте экрана (<code>n_y</code>): 3</li>
+<li>Горизонтальный отступ от края экрана (<code>margin_x</code>): 100</li>
+<li>Вертикальный отступ от края экрана (<code>margin_y</code>): 100</li>
+<li>Горизонтальный размер стимула (<code>stim_size_x</code>): 100</li>
+<li>Вертикальный размер стимула (<code>stim_size_y</code>): 100</li>
+<li>Количество проб, для которых надо сгенерировать координаты (<code>n_trials</code>): 30</li>
+</ul>
+<p>Все значения указаны в пикселях, кроме количества проб.</p>
+</div>
+</div>
+</section>
+<section id="hw4-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-13-title">#3</h3>
+<p><img id="hw4-13-level" class="level"></p>
+<div id="hw4-13-task" class="task">
+<p>Рассчитайте координаты центров стимулов.</p>
+<p>Необходимо получить два вектора — <code>centers_x</code> и <code>centers_y</code> — которые будут содержать координаты центров стимулов по <code>x</code> и по <code>y</code> соответственно. Количество значений в векторах должно совпадать с количетвом стимулов по ширине и высоте экрана соответственно.</p>
+<p>Исходными параметрами, необходимым для расчета координат центра являются <code>res_x</code>, <code>res_y</code>, <code>margin_x</code>, <code>margin_y</code>, <code>n_x</code>, <code>n_y</code>.</p>
+</div>
+<div id="hw4-13-autocheck" class="autocheck">
+<div id="hw4-13-ir" class="input-requirements">
+<p>Для самопроверки в поле ниже введите через запятую значения координат центров по <code>x</code>, затем точку с запятой, а далее — значения координат центров по <code>y</code>. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-13" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-13')"></p>
+<div id="hw4-13-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-13-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Используя данные о разрешении экрана, рассчитайте расстояния между центрами стимулов по <code>x</code> и <code>y</code> с учетом отступов от краёв экрана.</li>
+<li>Создайте две последовательности от самого левого (нижнего) положения стимула до самого правого (верхнего) положения стимула с шагом, равным расстоянию между центрами стимулов.</li>
+<li>Скорректируйте координаты с учетом позиции начала координат в центре экрана.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+<ul>
+<li>Рассчитайте расстояния между центрами стимулов.
+<ul>
+<li>Вычтите из разрешения экрана отступы, чтобы получить размеры поля, где могут располагаться стимулы.</li>
+<li>Разделите соответствующие размеры на количество необходимых расстояний.</li>
+<li>Расстояний между стимулами на одно больше, чем самих стимулов (см. рисунки выше).</li>
+</ul></li>
+<li>Сгенерируйте последовательности соответствующих координат центров стимулов:
+<ul>
+<li>Для <code>x</code> от самого левого до самого правого положения стимула с шагом, равным расстоянию между центрами по <code>x</code>.</li>
+<li>Для <code>y</code> от самого нижнего до самого верхнего положения стимула с шагом, равным расстоянию между центрами по <code>y</code>.</li>
+</ul></li>
+<li>Скорректируйте координаты с учетом позиции начала координат в центре экрана: из полученных координат вычтите половину разрешения экрана по горизонтали и вертикали соответственно.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте, правильно ли заданы входные параметры для расчета координат.</li>
+<li>Проверьте, разделили ли вы значения в векторах запятыми.</li>
+<li>Проверьте, отделили ли вы вектора друг от друга точкой с запятой.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-14-title">#4</h3>
+<p><img id="hw4-14-level" class="level"></p>
+<div id="hw4-14-task" class="task">
+<p>Рассчитайте, на сколько максимально стимул может отклоняться по вертикали и горизонтали от координат центра, чтобы не сталкиваться с другими стимулами (<code>jitter_x</code> и <code>jitter_y</code>). Так как отклонения будут симметричны, учтите только одну сторону отклонения по одной оси — влево и вниз или вправо и вверх.</p>
+<p>Исходными параметрами, необходимым для расчета максимального отклонения являются <code>gap</code>, <code>stim_size_x</code>, <code>stim_size_y</code>, а также расстояние между центрами стимулов.</p>
+<p>Если в ходе вычислений получаются нецелые значения, округлите их до ближайшего целого вниз.</p>
+</div>
+<div id="hw4-14-autocheck" class="autocheck">
+<div id="hw4-14-ir" class="input-requirements">
+<p>Для самопроверки введите через запятую значения <code>jitter_x</code> и <code>jitter_y</code>. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-14" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-14')"></p>
+<div id="hw4-14-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw4-14-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw4-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw4-15-title">#5</h3>
+<p><img id="hw4-15-level" class="level"></p>
+<div id="hw4-15-task" class="task">
+<p>Сгенерируйте координаты стимулов для нескольких экспериментальных проб.</p>
+<ul>
+<li>Количество проб задано параметров <code>n_trials</code>.</li>
+<li>Итоговый датасет должен содержать колонку <code>trial</code>, которая будет задавать номер пробы, и колонки <code>pos1</code>…<code>posN</code>, где <code>N</code> — общее количество стимулов на экране. Таким образом, в каждой колонке должны быть заданы координаты для отдельного стимула на экране. Количество стимулов на экране определяется параметрами <code>n_x</code> и <code>n_y</code>.</li>
+<li>Координаты в колонках <code>pos1</code>…<code>posN</code> должны быть представлены в формате <code>[x,y]</code>. Между символами не должно быть пробелов.</li>
+<li>Для каждого стимула в каждой пробе должны быть сгенерированы уникальные координаты с учетом возможного колебания стимула вокруг координат его центра. Диапазон колебаний по обеим осям задается значениями <code>jitter_x</code> и <code>jitter_y</code>.</li>
+</ul>
+<p>Ниже представлен вариант итогового датасета.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">trial</th>
+<th style="text-align: left;">pos1</th>
+<th style="text-align: left;">pos2</th>
+<th style="text-align: left;">pos3</th>
+<th style="text-align: left;">pos4</th>
+<th style="text-align: left;">pos5</th>
+<th style="text-align: left;">pos6</th>
+<th style="text-align: left;">pos7</th>
+<th style="text-align: left;">pos8</th>
+<th style="text-align: left;">pos9</th>
+<th style="text-align: left;">pos10</th>
+<th style="text-align: left;">pos11</th>
+<th style="text-align: left;">pos12</th>
+<th style="text-align: left;">pos13</th>
+<th style="text-align: left;">pos14</th>
+<th style="text-align: left;">pos15</th>
+<th style="text-align: left;">pos16</th>
+<th style="text-align: left;">pos17</th>
+<th style="text-align: left;">pos18</th>
+<th style="text-align: left;">pos19</th>
+<th style="text-align: left;">pos20</th>
+<th style="text-align: left;">pos21</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">[-667,-268]</td>
+<td style="text-align: left;">[-404,-219]</td>
+<td style="text-align: left;">[-217,-203]</td>
+<td style="text-align: left;">[-39,-224]</td>
+<td style="text-align: left;">[229,-179]</td>
+<td style="text-align: left;">[419,-209]</td>
+<td style="text-align: left;">[642,-236]</td>
+<td style="text-align: left;">[-655,-54]</td>
+<td style="text-align: left;">[-382,9]</td>
+<td style="text-align: left;">[-254,17]</td>
+<td style="text-align: left;">[-28,-49]</td>
+<td style="text-align: left;">[252,21]</td>
+<td style="text-align: left;">[468,-27]</td>
+<td style="text-align: left;">[661,-36]</td>
+<td style="text-align: left;">[-607,242]</td>
+<td style="text-align: left;">[-426,244]</td>
+<td style="text-align: left;">[-176,171]</td>
+<td style="text-align: left;">[-44,264]</td>
+<td style="text-align: left;">[255,209]</td>
+<td style="text-align: left;">[476,240]</td>
+<td style="text-align: left;">[664,189]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">[-672,-185]</td>
+<td style="text-align: left;">[-476,-263]</td>
+<td style="text-align: left;">[-226,-192]</td>
+<td style="text-align: left;">[-44,-266]</td>
+<td style="text-align: left;">[245,-182]</td>
+<td style="text-align: left;">[413,-235]</td>
+<td style="text-align: left;">[670,-264]</td>
+<td style="text-align: left;">[-617,-48]</td>
+<td style="text-align: left;">[-440,15]</td>
+<td style="text-align: left;">[-165,-41]</td>
+<td style="text-align: left;">[23,27]</td>
+<td style="text-align: left;">[177,-7]</td>
+<td style="text-align: left;">[409,51]</td>
+<td style="text-align: left;">[599,-17]</td>
+<td style="text-align: left;">[-689,251]</td>
+<td style="text-align: left;">[-442,199]</td>
+<td style="text-align: left;">[-194,170]</td>
+<td style="text-align: left;">[-30,235]</td>
+<td style="text-align: left;">[189,168]</td>
+<td style="text-align: left;">[437,238]</td>
+<td style="text-align: left;">[645,245]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">[-691,-228]</td>
+<td style="text-align: left;">[-430,-268]</td>
+<td style="text-align: left;">[-241,-223]</td>
+<td style="text-align: left;">[43,-209]</td>
+<td style="text-align: left;">[200,-168]</td>
+<td style="text-align: left;">[466,-223]</td>
+<td style="text-align: left;">[626,-166]</td>
+<td style="text-align: left;">[-605,45]</td>
+<td style="text-align: left;">[-414,-42]</td>
+<td style="text-align: left;">[-196,-28]</td>
+<td style="text-align: left;">[23,-50]</td>
+<td style="text-align: left;">[225,-47]</td>
+<td style="text-align: left;">[390,-23]</td>
+<td style="text-align: left;">[674,-10]</td>
+<td style="text-align: left;">[-601,228]</td>
+<td style="text-align: left;">[-392,183]</td>
+<td style="text-align: left;">[-243,265]</td>
+<td style="text-align: left;">[-15,262]</td>
+<td style="text-align: left;">[183,165]</td>
+<td style="text-align: left;">[456,256]</td>
+<td style="text-align: left;">[633,216]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">[-651,-182]</td>
+<td style="text-align: left;">[-393,-208]</td>
+<td style="text-align: left;">[-208,-186]</td>
+<td style="text-align: left;">[42,-201]</td>
+<td style="text-align: left;">[178,-271]</td>
+<td style="text-align: left;">[471,-176]</td>
+<td style="text-align: left;">[598,-257]</td>
+<td style="text-align: left;">[-626,-21]</td>
+<td style="text-align: left;">[-397,-23]</td>
+<td style="text-align: left;">[-182,47]</td>
+<td style="text-align: left;">[-14,13]</td>
+<td style="text-align: left;">[193,5]</td>
+<td style="text-align: left;">[458,-33]</td>
+<td style="text-align: left;">[642,-15]</td>
+<td style="text-align: left;">[-664,253]</td>
+<td style="text-align: left;">[-479,227]</td>
+<td style="text-align: left;">[-255,213]</td>
+<td style="text-align: left;">[16,249]</td>
+<td style="text-align: left;">[187,233]</td>
+<td style="text-align: left;">[429,228]</td>
+<td style="text-align: left;">[614,240]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">[-609,-274]</td>
+<td style="text-align: left;">[-451,-258]</td>
+<td style="text-align: left;">[-243,-272]</td>
+<td style="text-align: left;">[34,-170]</td>
+<td style="text-align: left;">[197,-165]</td>
+<td style="text-align: left;">[417,-189]</td>
+<td style="text-align: left;">[622,-204]</td>
+<td style="text-align: left;">[-686,9]</td>
+<td style="text-align: left;">[-452,19]</td>
+<td style="text-align: left;">[-238,45]</td>
+<td style="text-align: left;">[11,-45]</td>
+<td style="text-align: left;">[261,23]</td>
+<td style="text-align: left;">[391,23]</td>
+<td style="text-align: left;">[685,1]</td>
+<td style="text-align: left;">[-602,220]</td>
+<td style="text-align: left;">[-412,270]</td>
+<td style="text-align: left;">[-201,179]</td>
+<td style="text-align: left;">[-30,243]</td>
+<td style="text-align: left;">[241,216]</td>
+<td style="text-align: left;">[462,272]</td>
+<td style="text-align: left;">[629,269]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">[-690,-215]</td>
+<td style="text-align: left;">[-432,-187]</td>
+<td style="text-align: left;">[-194,-240]</td>
+<td style="text-align: left;">[-3,-273]</td>
+<td style="text-align: left;">[260,-269]</td>
+<td style="text-align: left;">[451,-208]</td>
+<td style="text-align: left;">[678,-172]</td>
+<td style="text-align: left;">[-622,-3]</td>
+<td style="text-align: left;">[-399,45]</td>
+<td style="text-align: left;">[-222,-32]</td>
+<td style="text-align: left;">[-36,46]</td>
+<td style="text-align: left;">[224,12]</td>
+<td style="text-align: left;">[423,11]</td>
+<td style="text-align: left;">[646,-45]</td>
+<td style="text-align: left;">[-663,238]</td>
+<td style="text-align: left;">[-379,257]</td>
+<td style="text-align: left;">[-174,251]</td>
+<td style="text-align: left;">[26,169]</td>
+<td style="text-align: left;">[186,252]</td>
+<td style="text-align: left;">[464,196]</td>
+<td style="text-align: left;">[599,253]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">[-605,-265]</td>
+<td style="text-align: left;">[-404,-202]</td>
+<td style="text-align: left;">[-245,-197]</td>
+<td style="text-align: left;">[-27,-216]</td>
+<td style="text-align: left;">[264,-245]</td>
+<td style="text-align: left;">[409,-202]</td>
+<td style="text-align: left;">[599,-231]</td>
+<td style="text-align: left;">[-671,3]</td>
+<td style="text-align: left;">[-441,-32]</td>
+<td style="text-align: left;">[-263,-21]</td>
+<td style="text-align: left;">[17,-46]</td>
+<td style="text-align: left;">[178,8]</td>
+<td style="text-align: left;">[401,16]</td>
+<td style="text-align: left;">[624,-12]</td>
+<td style="text-align: left;">[-677,206]</td>
+<td style="text-align: left;">[-428,196]</td>
+<td style="text-align: left;">[-193,203]</td>
+<td style="text-align: left;">[-17,171]</td>
+<td style="text-align: left;">[245,202]</td>
+<td style="text-align: left;">[466,181]</td>
+<td style="text-align: left;">[631,248]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">[-644,-243]</td>
+<td style="text-align: left;">[-393,-175]</td>
+<td style="text-align: left;">[-259,-202]</td>
+<td style="text-align: left;">[18,-167]</td>
+<td style="text-align: left;">[260,-202]</td>
+<td style="text-align: left;">[425,-274]</td>
+<td style="text-align: left;">[669,-197]</td>
+<td style="text-align: left;">[-615,31]</td>
+<td style="text-align: left;">[-427,55]</td>
+<td style="text-align: left;">[-229,48]</td>
+<td style="text-align: left;">[15,43]</td>
+<td style="text-align: left;">[163,10]</td>
+<td style="text-align: left;">[417,14]</td>
+<td style="text-align: left;">[622,54]</td>
+<td style="text-align: left;">[-604,223]</td>
+<td style="text-align: left;">[-394,211]</td>
+<td style="text-align: left;">[-252,173]</td>
+<td style="text-align: left;">[35,187]</td>
+<td style="text-align: left;">[216,189]</td>
+<td style="text-align: left;">[452,179]</td>
+<td style="text-align: left;">[640,250]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">[-678,-204]</td>
+<td style="text-align: left;">[-379,-183]</td>
+<td style="text-align: left;">[-201,-171]</td>
+<td style="text-align: left;">[40,-255]</td>
+<td style="text-align: left;">[198,-228]</td>
+<td style="text-align: left;">[429,-203]</td>
+<td style="text-align: left;">[614,-178]</td>
+<td style="text-align: left;">[-649,49]</td>
+<td style="text-align: left;">[-441,-13]</td>
+<td style="text-align: left;">[-209,0]</td>
+<td style="text-align: left;">[31,19]</td>
+<td style="text-align: left;">[173,-52]</td>
+<td style="text-align: left;">[432,15]</td>
+<td style="text-align: left;">[600,0]</td>
+<td style="text-align: left;">[-652,214]</td>
+<td style="text-align: left;">[-398,175]</td>
+<td style="text-align: left;">[-202,261]</td>
+<td style="text-align: left;">[24,239]</td>
+<td style="text-align: left;">[208,224]</td>
+<td style="text-align: left;">[447,266]</td>
+<td style="text-align: left;">[664,249]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">[-654,-202]</td>
+<td style="text-align: left;">[-451,-209]</td>
+<td style="text-align: left;">[-232,-177]</td>
+<td style="text-align: left;">[-8,-178]</td>
+<td style="text-align: left;">[176,-218]</td>
+<td style="text-align: left;">[393,-236]</td>
+<td style="text-align: left;">[679,-184]</td>
+<td style="text-align: left;">[-665,-43]</td>
+<td style="text-align: left;">[-443,-48]</td>
+<td style="text-align: left;">[-228,-54]</td>
+<td style="text-align: left;">[-43,-50]</td>
+<td style="text-align: left;">[251,31]</td>
+<td style="text-align: left;">[449,-39]</td>
+<td style="text-align: left;">[674,-24]</td>
+<td style="text-align: left;">[-689,242]</td>
+<td style="text-align: left;">[-476,235]</td>
+<td style="text-align: left;">[-261,241]</td>
+<td style="text-align: left;">[5,236]</td>
+<td style="text-align: left;">[223,266]</td>
+<td style="text-align: left;">[451,239]</td>
+<td style="text-align: left;">[616,270]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">[-635,-259]</td>
+<td style="text-align: left;">[-429,-205]</td>
+<td style="text-align: left;">[-245,-221]</td>
+<td style="text-align: left;">[-27,-168]</td>
+<td style="text-align: left;">[195,-257]</td>
+<td style="text-align: left;">[434,-172]</td>
+<td style="text-align: left;">[621,-261]</td>
+<td style="text-align: left;">[-688,-10]</td>
+<td style="text-align: left;">[-430,-42]</td>
+<td style="text-align: left;">[-214,34]</td>
+<td style="text-align: left;">[24,-29]</td>
+<td style="text-align: left;">[173,25]</td>
+<td style="text-align: left;">[402,-23]</td>
+<td style="text-align: left;">[644,-6]</td>
+<td style="text-align: left;">[-672,182]</td>
+<td style="text-align: left;">[-476,184]</td>
+<td style="text-align: left;">[-243,255]</td>
+<td style="text-align: left;">[34,206]</td>
+<td style="text-align: left;">[252,238]</td>
+<td style="text-align: left;">[409,217]</td>
+<td style="text-align: left;">[676,227]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">[-674,-203]</td>
+<td style="text-align: left;">[-426,-245]</td>
+<td style="text-align: left;">[-195,-193]</td>
+<td style="text-align: left;">[52,-221]</td>
+<td style="text-align: left;">[263,-258]</td>
+<td style="text-align: left;">[400,-168]</td>
+<td style="text-align: left;">[606,-232]</td>
+<td style="text-align: left;">[-692,36]</td>
+<td style="text-align: left;">[-392,-35]</td>
+<td style="text-align: left;">[-267,-27]</td>
+<td style="text-align: left;">[37,-20]</td>
+<td style="text-align: left;">[220,28]</td>
+<td style="text-align: left;">[458,-33]</td>
+<td style="text-align: left;">[621,-14]</td>
+<td style="text-align: left;">[-672,233]</td>
+<td style="text-align: left;">[-456,230]</td>
+<td style="text-align: left;">[-183,246]</td>
+<td style="text-align: left;">[-46,240]</td>
+<td style="text-align: left;">[222,226]</td>
+<td style="text-align: left;">[403,228]</td>
+<td style="text-align: left;">[633,241]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">[-614,-169]</td>
+<td style="text-align: left;">[-477,-225]</td>
+<td style="text-align: left;">[-174,-174]</td>
+<td style="text-align: left;">[-22,-258]</td>
+<td style="text-align: left;">[255,-266]</td>
+<td style="text-align: left;">[394,-203]</td>
+<td style="text-align: left;">[656,-177]</td>
+<td style="text-align: left;">[-661,37]</td>
+<td style="text-align: left;">[-426,30]</td>
+<td style="text-align: left;">[-248,27]</td>
+<td style="text-align: left;">[-18,16]</td>
+<td style="text-align: left;">[251,53]</td>
+<td style="text-align: left;">[410,41]</td>
+<td style="text-align: left;">[658,-54]</td>
+<td style="text-align: left;">[-694,207]</td>
+<td style="text-align: left;">[-409,169]</td>
+<td style="text-align: left;">[-171,249]</td>
+<td style="text-align: left;">[-48,259]</td>
+<td style="text-align: left;">[187,264]</td>
+<td style="text-align: left;">[385,191]</td>
+<td style="text-align: left;">[647,187]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">[-609,-273]</td>
+<td style="text-align: left;">[-398,-261]</td>
+<td style="text-align: left;">[-223,-170]</td>
+<td style="text-align: left;">[-35,-173]</td>
+<td style="text-align: left;">[204,-218]</td>
+<td style="text-align: left;">[408,-269]</td>
+<td style="text-align: left;">[598,-242]</td>
+<td style="text-align: left;">[-627,-25]</td>
+<td style="text-align: left;">[-422,26]</td>
+<td style="text-align: left;">[-163,-38]</td>
+<td style="text-align: left;">[-5,43]</td>
+<td style="text-align: left;">[179,48]</td>
+<td style="text-align: left;">[422,-10]</td>
+<td style="text-align: left;">[684,-47]</td>
+<td style="text-align: left;">[-635,243]</td>
+<td style="text-align: left;">[-430,181]</td>
+<td style="text-align: left;">[-164,171]</td>
+<td style="text-align: left;">[0,258]</td>
+<td style="text-align: left;">[225,172]</td>
+<td style="text-align: left;">[448,229]</td>
+<td style="text-align: left;">[676,173]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">[-616,-177]</td>
+<td style="text-align: left;">[-390,-251]</td>
+<td style="text-align: left;">[-251,-274]</td>
+<td style="text-align: left;">[44,-265]</td>
+<td style="text-align: left;">[164,-208]</td>
+<td style="text-align: left;">[426,-236]</td>
+<td style="text-align: left;">[594,-256]</td>
+<td style="text-align: left;">[-685,-45]</td>
+<td style="text-align: left;">[-459,-38]</td>
+<td style="text-align: left;">[-219,-2]</td>
+<td style="text-align: left;">[14,-42]</td>
+<td style="text-align: left;">[244,11]</td>
+<td style="text-align: left;">[379,36]</td>
+<td style="text-align: left;">[629,11]</td>
+<td style="text-align: left;">[-635,274]</td>
+<td style="text-align: left;">[-407,256]</td>
+<td style="text-align: left;">[-255,257]</td>
+<td style="text-align: left;">[-11,203]</td>
+<td style="text-align: left;">[223,187]</td>
+<td style="text-align: left;">[447,243]</td>
+<td style="text-align: left;">[630,251]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">[-634,-188]</td>
+<td style="text-align: left;">[-403,-236]</td>
+<td style="text-align: left;">[-169,-243]</td>
+<td style="text-align: left;">[-17,-239]</td>
+<td style="text-align: left;">[253,-216]</td>
+<td style="text-align: left;">[468,-247]</td>
+<td style="text-align: left;">[627,-206]</td>
+<td style="text-align: left;">[-611,-31]</td>
+<td style="text-align: left;">[-416,-14]</td>
+<td style="text-align: left;">[-173,-30]</td>
+<td style="text-align: left;">[-5,32]</td>
+<td style="text-align: left;">[228,-12]</td>
+<td style="text-align: left;">[400,40]</td>
+<td style="text-align: left;">[659,-48]</td>
+<td style="text-align: left;">[-689,180]</td>
+<td style="text-align: left;">[-422,203]</td>
+<td style="text-align: left;">[-229,260]</td>
+<td style="text-align: left;">[41,267]</td>
+<td style="text-align: left;">[193,229]</td>
+<td style="text-align: left;">[471,258]</td>
+<td style="text-align: left;">[665,222]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">[-662,-187]</td>
+<td style="text-align: left;">[-385,-220]</td>
+<td style="text-align: left;">[-246,-233]</td>
+<td style="text-align: left;">[-9,-209]</td>
+<td style="text-align: left;">[203,-220]</td>
+<td style="text-align: left;">[469,-254]</td>
+<td style="text-align: left;">[685,-259]</td>
+<td style="text-align: left;">[-655,28]</td>
+<td style="text-align: left;">[-444,43]</td>
+<td style="text-align: left;">[-231,-42]</td>
+<td style="text-align: left;">[-20,45]</td>
+<td style="text-align: left;">[245,8]</td>
+<td style="text-align: left;">[389,-32]</td>
+<td style="text-align: left;">[690,38]</td>
+<td style="text-align: left;">[-677,172]</td>
+<td style="text-align: left;">[-402,184]</td>
+<td style="text-align: left;">[-192,238]</td>
+<td style="text-align: left;">[41,250]</td>
+<td style="text-align: left;">[197,214]</td>
+<td style="text-align: left;">[407,181]</td>
+<td style="text-align: left;">[681,173]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">[-648,-241]</td>
+<td style="text-align: left;">[-436,-175]</td>
+<td style="text-align: left;">[-201,-191]</td>
+<td style="text-align: left;">[29,-213]</td>
+<td style="text-align: left;">[258,-219]</td>
+<td style="text-align: left;">[458,-260]</td>
+<td style="text-align: left;">[694,-224]</td>
+<td style="text-align: left;">[-656,34]</td>
+<td style="text-align: left;">[-443,43]</td>
+<td style="text-align: left;">[-226,-21]</td>
+<td style="text-align: left;">[43,-2]</td>
+<td style="text-align: left;">[188,-30]</td>
+<td style="text-align: left;">[390,-43]</td>
+<td style="text-align: left;">[612,-20]</td>
+<td style="text-align: left;">[-596,211]</td>
+<td style="text-align: left;">[-463,189]</td>
+<td style="text-align: left;">[-175,192]</td>
+<td style="text-align: left;">[31,193]</td>
+<td style="text-align: left;">[256,241]</td>
+<td style="text-align: left;">[418,208]</td>
+<td style="text-align: left;">[600,218]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">[-659,-191]</td>
+<td style="text-align: left;">[-409,-251]</td>
+<td style="text-align: left;">[-187,-247]</td>
+<td style="text-align: left;">[10,-256]</td>
+<td style="text-align: left;">[244,-183]</td>
+<td style="text-align: left;">[481,-263]</td>
+<td style="text-align: left;">[603,-199]</td>
+<td style="text-align: left;">[-696,-21]</td>
+<td style="text-align: left;">[-464,-1]</td>
+<td style="text-align: left;">[-191,-51]</td>
+<td style="text-align: left;">[-40,0]</td>
+<td style="text-align: left;">[193,21]</td>
+<td style="text-align: left;">[407,31]</td>
+<td style="text-align: left;">[614,36]</td>
+<td style="text-align: left;">[-604,208]</td>
+<td style="text-align: left;">[-409,236]</td>
+<td style="text-align: left;">[-252,202]</td>
+<td style="text-align: left;">[16,188]</td>
+<td style="text-align: left;">[198,244]</td>
+<td style="text-align: left;">[427,239]</td>
+<td style="text-align: left;">[625,251]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">[-618,-182]</td>
+<td style="text-align: left;">[-455,-180]</td>
+<td style="text-align: left;">[-219,-185]</td>
+<td style="text-align: left;">[-41,-168]</td>
+<td style="text-align: left;">[215,-228]</td>
+<td style="text-align: left;">[405,-261]</td>
+<td style="text-align: left;">[658,-211]</td>
+<td style="text-align: left;">[-648,-2]</td>
+<td style="text-align: left;">[-407,52]</td>
+<td style="text-align: left;">[-221,-46]</td>
+<td style="text-align: left;">[-2,30]</td>
+<td style="text-align: left;">[168,-14]</td>
+<td style="text-align: left;">[457,44]</td>
+<td style="text-align: left;">[607,-15]</td>
+<td style="text-align: left;">[-679,189]</td>
+<td style="text-align: left;">[-424,258]</td>
+<td style="text-align: left;">[-265,216]</td>
+<td style="text-align: left;">[44,201]</td>
+<td style="text-align: left;">[195,191]</td>
+<td style="text-align: left;">[425,237]</td>
+<td style="text-align: left;">[667,247]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">[-598,-241]</td>
+<td style="text-align: left;">[-438,-242]</td>
+<td style="text-align: left;">[-258,-213]</td>
+<td style="text-align: left;">[-11,-189]</td>
+<td style="text-align: left;">[186,-200]</td>
+<td style="text-align: left;">[469,-197]</td>
+<td style="text-align: left;">[695,-227]</td>
+<td style="text-align: left;">[-680,-21]</td>
+<td style="text-align: left;">[-402,-27]</td>
+<td style="text-align: left;">[-184,15]</td>
+<td style="text-align: left;">[6,37]</td>
+<td style="text-align: left;">[171,-11]</td>
+<td style="text-align: left;">[430,54]</td>
+<td style="text-align: left;">[603,-22]</td>
+<td style="text-align: left;">[-690,237]</td>
+<td style="text-align: left;">[-478,211]</td>
+<td style="text-align: left;">[-239,165]</td>
+<td style="text-align: left;">[-3,174]</td>
+<td style="text-align: left;">[232,205]</td>
+<td style="text-align: left;">[451,205]</td>
+<td style="text-align: left;">[618,203]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">[-625,-168]</td>
+<td style="text-align: left;">[-472,-189]</td>
+<td style="text-align: left;">[-262,-270]</td>
+<td style="text-align: left;">[43,-244]</td>
+<td style="text-align: left;">[238,-173]</td>
+<td style="text-align: left;">[460,-215]</td>
+<td style="text-align: left;">[683,-196]</td>
+<td style="text-align: left;">[-642,34]</td>
+<td style="text-align: left;">[-387,-40]</td>
+<td style="text-align: left;">[-241,-54]</td>
+<td style="text-align: left;">[41,-22]</td>
+<td style="text-align: left;">[230,22]</td>
+<td style="text-align: left;">[465,-26]</td>
+<td style="text-align: left;">[620,-28]</td>
+<td style="text-align: left;">[-631,249]</td>
+<td style="text-align: left;">[-443,251]</td>
+<td style="text-align: left;">[-262,222]</td>
+<td style="text-align: left;">[-17,194]</td>
+<td style="text-align: left;">[217,253]</td>
+<td style="text-align: left;">[471,203]</td>
+<td style="text-align: left;">[640,234]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">[-688,-208]</td>
+<td style="text-align: left;">[-458,-209]</td>
+<td style="text-align: left;">[-230,-230]</td>
+<td style="text-align: left;">[47,-217]</td>
+<td style="text-align: left;">[267,-166]</td>
+<td style="text-align: left;">[402,-228]</td>
+<td style="text-align: left;">[596,-266]</td>
+<td style="text-align: left;">[-619,-28]</td>
+<td style="text-align: left;">[-431,20]</td>
+<td style="text-align: left;">[-246,11]</td>
+<td style="text-align: left;">[-29,-55]</td>
+<td style="text-align: left;">[201,-12]</td>
+<td style="text-align: left;">[424,-7]</td>
+<td style="text-align: left;">[652,-23]</td>
+<td style="text-align: left;">[-635,200]</td>
+<td style="text-align: left;">[-446,177]</td>
+<td style="text-align: left;">[-222,243]</td>
+<td style="text-align: left;">[1,241]</td>
+<td style="text-align: left;">[209,210]</td>
+<td style="text-align: left;">[456,258]</td>
+<td style="text-align: left;">[608,182]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">[-679,-168]</td>
+<td style="text-align: left;">[-411,-226]</td>
+<td style="text-align: left;">[-237,-173]</td>
+<td style="text-align: left;">[-16,-250]</td>
+<td style="text-align: left;">[265,-240]</td>
+<td style="text-align: left;">[425,-240]</td>
+<td style="text-align: left;">[652,-220]</td>
+<td style="text-align: left;">[-636,1]</td>
+<td style="text-align: left;">[-403,-53]</td>
+<td style="text-align: left;">[-259,33]</td>
+<td style="text-align: left;">[-42,-45]</td>
+<td style="text-align: left;">[205,-5]</td>
+<td style="text-align: left;">[407,-26]</td>
+<td style="text-align: left;">[653,-40]</td>
+<td style="text-align: left;">[-624,275]</td>
+<td style="text-align: left;">[-428,175]</td>
+<td style="text-align: left;">[-207,266]</td>
+<td style="text-align: left;">[-19,260]</td>
+<td style="text-align: left;">[219,259]</td>
+<td style="text-align: left;">[415,265]</td>
+<td style="text-align: left;">[676,230]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">[-635,-254]</td>
+<td style="text-align: left;">[-437,-259]</td>
+<td style="text-align: left;">[-190,-271]</td>
+<td style="text-align: left;">[17,-197]</td>
+<td style="text-align: left;">[180,-180]</td>
+<td style="text-align: left;">[379,-214]</td>
+<td style="text-align: left;">[664,-241]</td>
+<td style="text-align: left;">[-623,35]</td>
+<td style="text-align: left;">[-462,-34]</td>
+<td style="text-align: left;">[-211,7]</td>
+<td style="text-align: left;">[18,33]</td>
+<td style="text-align: left;">[249,-41]</td>
+<td style="text-align: left;">[449,-21]</td>
+<td style="text-align: left;">[651,-26]</td>
+<td style="text-align: left;">[-624,198]</td>
+<td style="text-align: left;">[-446,233]</td>
+<td style="text-align: left;">[-187,233]</td>
+<td style="text-align: left;">[2,235]</td>
+<td style="text-align: left;">[168,166]</td>
+<td style="text-align: left;">[417,244]</td>
+<td style="text-align: left;">[598,268]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">[-670,-253]</td>
+<td style="text-align: left;">[-451,-189]</td>
+<td style="text-align: left;">[-219,-188]</td>
+<td style="text-align: left;">[46,-255]</td>
+<td style="text-align: left;">[254,-194]</td>
+<td style="text-align: left;">[461,-257]</td>
+<td style="text-align: left;">[657,-267]</td>
+<td style="text-align: left;">[-629,27]</td>
+<td style="text-align: left;">[-408,6]</td>
+<td style="text-align: left;">[-221,54]</td>
+<td style="text-align: left;">[-33,27]</td>
+<td style="text-align: left;">[164,13]</td>
+<td style="text-align: left;">[439,-11]</td>
+<td style="text-align: left;">[655,24]</td>
+<td style="text-align: left;">[-636,267]</td>
+<td style="text-align: left;">[-473,268]</td>
+<td style="text-align: left;">[-209,196]</td>
+<td style="text-align: left;">[-4,212]</td>
+<td style="text-align: left;">[169,179]</td>
+<td style="text-align: left;">[438,190]</td>
+<td style="text-align: left;">[630,184]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td style="text-align: left;">[-662,-241]</td>
+<td style="text-align: left;">[-460,-221]</td>
+<td style="text-align: left;">[-234,-245]</td>
+<td style="text-align: left;">[35,-252]</td>
+<td style="text-align: left;">[166,-259]</td>
+<td style="text-align: left;">[431,-205]</td>
+<td style="text-align: left;">[621,-219]</td>
+<td style="text-align: left;">[-640,21]</td>
+<td style="text-align: left;">[-396,-21]</td>
+<td style="text-align: left;">[-193,2]</td>
+<td style="text-align: left;">[44,-2]</td>
+<td style="text-align: left;">[218,-43]</td>
+<td style="text-align: left;">[428,22]</td>
+<td style="text-align: left;">[642,12]</td>
+<td style="text-align: left;">[-650,189]</td>
+<td style="text-align: left;">[-480,193]</td>
+<td style="text-align: left;">[-235,217]</td>
+<td style="text-align: left;">[41,180]</td>
+<td style="text-align: left;">[196,205]</td>
+<td style="text-align: left;">[443,173]</td>
+<td style="text-align: left;">[656,201]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">[-658,-222]</td>
+<td style="text-align: left;">[-425,-190]</td>
+<td style="text-align: left;">[-248,-166]</td>
+<td style="text-align: left;">[25,-168]</td>
+<td style="text-align: left;">[187,-190]</td>
+<td style="text-align: left;">[448,-252]</td>
+<td style="text-align: left;">[632,-262]</td>
+<td style="text-align: left;">[-637,-26]</td>
+<td style="text-align: left;">[-384,53]</td>
+<td style="text-align: left;">[-173,6]</td>
+<td style="text-align: left;">[-31,55]</td>
+<td style="text-align: left;">[242,-16]</td>
+<td style="text-align: left;">[463,53]</td>
+<td style="text-align: left;">[685,39]</td>
+<td style="text-align: left;">[-642,203]</td>
+<td style="text-align: left;">[-450,265]</td>
+<td style="text-align: left;">[-204,236]</td>
+<td style="text-align: left;">[0,275]</td>
+<td style="text-align: left;">[193,178]</td>
+<td style="text-align: left;">[423,212]</td>
+<td style="text-align: left;">[664,229]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">[-674,-253]</td>
+<td style="text-align: left;">[-423,-250]</td>
+<td style="text-align: left;">[-238,-230]</td>
+<td style="text-align: left;">[-30,-253]</td>
+<td style="text-align: left;">[263,-181]</td>
+<td style="text-align: left;">[473,-213]</td>
+<td style="text-align: left;">[609,-255]</td>
+<td style="text-align: left;">[-608,25]</td>
+<td style="text-align: left;">[-424,-17]</td>
+<td style="text-align: left;">[-211,15]</td>
+<td style="text-align: left;">[-10,-11]</td>
+<td style="text-align: left;">[185,-9]</td>
+<td style="text-align: left;">[467,20]</td>
+<td style="text-align: left;">[692,40]</td>
+<td style="text-align: left;">[-653,210]</td>
+<td style="text-align: left;">[-475,247]</td>
+<td style="text-align: left;">[-189,224]</td>
+<td style="text-align: left;">[-17,247]</td>
+<td style="text-align: left;">[229,253]</td>
+<td style="text-align: left;">[416,181]</td>
+<td style="text-align: left;">[625,173]</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">[-660,-167]</td>
+<td style="text-align: left;">[-393,-166]</td>
+<td style="text-align: left;">[-240,-253]</td>
+<td style="text-align: left;">[37,-245]</td>
+<td style="text-align: left;">[243,-238]</td>
+<td style="text-align: left;">[464,-243]</td>
+<td style="text-align: left;">[645,-196]</td>
+<td style="text-align: left;">[-596,4]</td>
+<td style="text-align: left;">[-473,16]</td>
+<td style="text-align: left;">[-166,-51]</td>
+<td style="text-align: left;">[-12,7]</td>
+<td style="text-align: left;">[170,18]</td>
+<td style="text-align: left;">[378,-15]</td>
+<td style="text-align: left;">[672,36]</td>
+<td style="text-align: left;">[-632,201]</td>
+<td style="text-align: left;">[-379,210]</td>
+<td style="text-align: left;">[-190,247]</td>
+<td style="text-align: left;">[-41,261]</td>
+<td style="text-align: left;">[252,180]</td>
+<td style="text-align: left;">[449,170]</td>
+<td style="text-align: left;">[633,216]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="hw4-15-autocheck" class="autocheck">
+<div id="hw4-15-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw4-15" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw4-15')"></p>
+<div id="hw4-15-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw4-15-hints">
+<summary>
+Подсказки
+</summary>
+<p>Полезные функции:</p>
+<ul>
+<li><code>outer()</code></li>
+<li><code>as.vector()</code></li>
+<li><code>rep()</code></li>
+<li><code>separate()</code>, <code>unite()</code></li>
+<li><code>sample()</code></li>
+<li><code>mutate()</code></li>
+<li><code>paste()</code>, <code>str_c()</code></li>
+<li><code>pivot_wider()</code></li>
+</ul>
+</details>
+</div>
+<!--- CHANGE hw4 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw4.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./hw3.html" class="pagination-link  aria-label=" hw3="" датафреймы.="" исследование="" данных"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW3 // Датафреймы. Исследование данных</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./hw5.html" class="pagination-link" aria-label="HW5 // Визуализация данных">
+        <span class="nav-page-text">HW5 // Визуализация данных</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

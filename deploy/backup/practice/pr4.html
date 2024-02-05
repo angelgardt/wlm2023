@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.510">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>P // WLM 2023 - P4 // Предобработка данных</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./pr5.html" rel="next">
+<link href="./pr3.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pr4.html">P4 // Предобработка данных</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P1 // Введение в R. Типы данных. Векторы</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P2 // Матрицы и списки. Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P3 // Датафреймы. Исследование данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">P4 // Предобработка данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P5 // Визуализация данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P7 // Случайный эксперимент. Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P8 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P9 // Описательные статистики. Корреляционный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P10 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P11 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P12 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P13 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P14 // Смешанные линейные модели</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P15 // Кластерный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P16 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pr17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">P17 // Конфирматорный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#pr4_main" id="toc-pr4_main" class="nav-link active" data-scroll-target="#pr4_main">Основные задания</a>
+  <ul class="collapse">
+  <li><a href="#pr4-1-title" id="toc-pr4-1-title" class="nav-link" data-scroll-target="#pr4-1-title">#1</a></li>
+  <li><a href="#pr4-2-title" id="toc-pr4-2-title" class="nav-link" data-scroll-target="#pr4-2-title">#2</a></li>
+  <li><a href="#pr4-3-title" id="toc-pr4-3-title" class="nav-link" data-scroll-target="#pr4-3-title">#3</a></li>
+  <li><a href="#pr4-4-title" id="toc-pr4-4-title" class="nav-link" data-scroll-target="#pr4-4-title">#4</a></li>
+  <li><a href="#pr4-5-title" id="toc-pr4-5-title" class="nav-link" data-scroll-target="#pr4-5-title">#5</a></li>
+  <li><a href="#pr4-6-title" id="toc-pr4-6-title" class="nav-link" data-scroll-target="#pr4-6-title">#6</a></li>
+  <li><a href="#pr4-7-title" id="toc-pr4-7-title" class="nav-link" data-scroll-target="#pr4-7-title">#7</a></li>
+  <li><a href="#pr4-8-title" id="toc-pr4-8-title" class="nav-link" data-scroll-target="#pr4-8-title">#8</a></li>
+  <li><a href="#pr4-9-title" id="toc-pr4-9-title" class="nav-link" data-scroll-target="#pr4-9-title">#9</a></li>
+  <li><a href="#pr4-10-title" id="toc-pr4-10-title" class="nav-link" data-scroll-target="#pr4-10-title">#10</a></li>
+  <li><a href="#pr4-11-title" id="toc-pr4-11-title" class="nav-link" data-scroll-target="#pr4-11-title">#11</a></li>
+  <li><a href="#pr4-12-title" id="toc-pr4-12-title" class="nav-link" data-scroll-target="#pr4-12-title">#12</a></li>
+  <li><a href="#pr4-13-title" id="toc-pr4-13-title" class="nav-link" data-scroll-target="#pr4-13-title">#13</a></li>
+  <li><a href="#pr4-14-title" id="toc-pr4-14-title" class="nav-link" data-scroll-target="#pr4-14-title">#14</a></li>
+  <li><a href="#pr4-15-title" id="toc-pr4-15-title" class="nav-link" data-scroll-target="#pr4-15-title">#15</a></li>
+  <li><a href="#pr4-16-title" id="toc-pr4-16-title" class="nav-link" data-scroll-target="#pr4-16-title">#16</a></li>
+  <li><a href="#pr4-17-title" id="toc-pr4-17-title" class="nav-link" data-scroll-target="#pr4-17-title">#17</a></li>
+  <li><a href="#pr4-18-title" id="toc-pr4-18-title" class="nav-link" data-scroll-target="#pr4-18-title">#18</a></li>
+  <li><a href="#pr4-19-title" id="toc-pr4-19-title" class="nav-link" data-scroll-target="#pr4-19-title">#19</a></li>
+  <li><a href="#pr4-20-title" id="toc-pr4-20-title" class="nav-link" data-scroll-target="#pr4-20-title">#20</a></li>
+  </ul></li>
+  <li><a href="#pr4_add" id="toc-pr4_add" class="nav-link" data-scroll-target="#pr4_add">Дополнительные задания</a>
+  <ul class="collapse">
+  <li><a href="#pr4-21-title" id="toc-pr4-21-title" class="nav-link" data-scroll-target="#pr4-21-title">#1</a></li>
+  <li><a href="#pr4-22-title" id="toc-pr4-22-title" class="nav-link" data-scroll-target="#pr4-22-title">#2</a></li>
+  <li><a href="#pr4-23-title" id="toc-pr4-23-title" class="nav-link" data-scroll-target="#pr4-23-title">#3</a></li>
+  <li><a href="#pr4-24-title" id="toc-pr4-24-title" class="nav-link" data-scroll-target="#pr4-24-title">#4</a></li>
+  <li><a href="#pr4-25-title" id="toc-pr4-25-title" class="nav-link" data-scroll-target="#pr4-25-title">#5</a></li>
+  <li><a href="#pr4-26-title" id="toc-pr4-26-title" class="nav-link" data-scroll-target="#pr4-26-title">#6</a></li>
+  <li><a href="#pr4-27-title" id="toc-pr4-27-title" class="nav-link" data-scroll-target="#pr4-27-title">#7</a></li>
+  <li><a href="#pr4-28-title" id="toc-pr4-28-title" class="nav-link" data-scroll-target="#pr4-28-title">#8</a></li>
+  <li><a href="#pr4-29-title" id="toc-pr4-29-title" class="nav-link" data-scroll-target="#pr4-29-title">#9</a></li>
+  <li><a href="#pr4-30-title" id="toc-pr4-30-title" class="nav-link" data-scroll-target="#pr4-30-title">#10</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="pr4" class="quarto-section-identifier">P4 // Предобработка данных</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+REPLACE ALL pr4 TO pr<n> WITH MATCH CASE
+-->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Пакет с пакетами
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Для выполнения заданий этой практики потребуется <code>tidyverse</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Сегодня на ужин экспериментальные данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов — других иконок, которые для обеих платформ отрисованы одинаково. Целевой стимул мог быть один — два условия: иконка iOS (Outgoing Tray) и иконка Android (Three Dots) — или их могло быть два — и тот, и другой. Дополнительно варьировалось количество стимулов в пробе — 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) — от начала пробы до клика испытуемого — а также координаты клика. Дополнительно были записаны данные об используемой платформе смартфона — iOS или Android.</p>
+</div>
+</div>
+<section id="pr4_main" class="level2">
+<h2 class="anchored" data-anchor-id="pr4_main">Основные задания</h2>
+<section id="pr4-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-1-title">#1</h3>
+<p><img id="pr4-1-level" class="level"></p>
+<div id="pr4-1-task" class="task">
+<p>Скачайте <a href="https://drive.google.com/uc?export=download&amp;id=1QylwW2EtwpEr_dJSOKYJIRoKm1epkQbJ">архив с данными</a> и разархивируйте его в проект курса.</p>
+<p>Сколько файлов данных есть в нашем распоряжении?</p>
+</div>
+<div id="pr4-1-autocheck" class="autocheck">
+<div id="pr4-1-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-1')"></p>
+<div id="pr4-1-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-1-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>dir()</code> + <code>length()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-2-title">#2</h3>
+<p><img id="pr4-2-level" class="level"></p>
+<div id="pr4-2-task" class="task">
+<p>Поскольку все данные собирались на одном и том же ПО, справедливо предположить, что структура всех файлов одинакова. Поработаем сначала с одним из них. Например, с первым.</p>
+<p>Загрузите данные из файла <code>01.xlsx</code> в R. Изучите их структуру.</p>
+</div>
+<div id="pr4-2-autocheck" class="autocheck">
+<div id="pr4-2-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-2')"></p>
+<div id="pr4-2-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-2-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Формат файла данных — таблица Excel. Для её чтения есть специальные функции. Например, <code>read_xlsx()</code> из пакета <code>readxl</code>.</li>
+<li>У файлов Excel есть одна особенность организации — в них может быть несколько датасетов одновременно. Изучите документацию функции <code>read_xlsx</code>, чтобы выяснить, как справиться с этой ситуацией.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="pr4-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-3-title">#3</h3>
+<p><img id="pr4-3-level" class="level"></p>
+<div id="pr4-3-task" class="task">
+<p>Для анализа данных нам нужны не все колонки, которые записал PsychoPy, а только следующие:</p>
+<ul>
+<li>независимые переменные:
+<ul>
+<li><code>trialtype</code> — тип пробы (какой был целевой стимул) (<code>tray</code> — Outgoing Tray, <code>dots</code> — Three Dots, <code>both</code> — оба)</li>
+<li><code>setsize</code> — количество стимулов в пробе (<code>8</code>, <code>12</code>, <code>16</code>)</li>
+</ul></li>
+<li>зависимые переменные (или те переменные, на основе которых мы их посчитаем):
+<ul>
+<li><code>mouse_main1.time_raw</code> — время до первого клика (s)</li>
+<li><code>mouse_main1.x_raw</code> — координата <code>x</code> первого клика (px)</li>
+<li><code>mouse_main1.y_raw</code> — координата <code>y</code> первого клика (px)</li>
+<li><code>mouse_main2.time_raw</code> — время до второго клика (s)</li>
+<li><code>mouse_main2.x_raw</code> — координата <code>x</code> второго клика (px)</li>
+<li><code>mouse_main2.y_raw</code> — координата <code>y</code> второго клика (px)</li>
+</ul></li>
+<li><code>numtrial</code> —- номер пробы в исходном файле с координатами</li>
+</ul>
+<p>Отфильтруйте из данных необходимые переменные.</p>
+</div>
+<div id="pr4-3-autocheck" class="autocheck">
+<div id="pr4-3-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-3')"></p>
+<div id="pr4-3-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-3-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>select()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-4-title">#4</h3>
+<p><img id="pr4-4-level" class="level"></p>
+<div id="pr4-4-task" class="task">
+<p>Поскольку работая с тибблом удобно обращаться к переменным по имени, полезно будет их переименовать, ибо обращаться по дефолтным именам совершенно неудобно.</p>
+<p>Переименуйте отобранный колонки так, чтобы они назывались:</p>
+<ul>
+<li><code>time1</code> — время до первого клика (s)</li>
+<li><code>click1x</code> — координата <code>x</code> первого клика (px)</li>
+<li><code>click1y</code> — координата <code>y</code> первого клика (px)</li>
+<li><code>time2</code> — время до второго клика (s)</li>
+<li><code>click2x</code> — координата <code>x</code> второго клика (px)</li>
+<li><code>click2y</code> — координата <code>y</code> второго клика (px)</li>
+</ul>
+</div>
+<div id="pr4-4-autocheck" class="autocheck">
+<div id="pr4-4-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-4')"></p>
+<div id="pr4-4-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-4-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>rename()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-5-title">#5</h3>
+<p><img id="pr4-5-level" class="level"></p>
+<div id="pr4-5-task" class="task">
+<p>Выясните, есть ли в данных строки с пропущенными значениями. Посчитайте количество пропущенных значений в каждом столбце.</p>
+</div>
+<div id="pr4-5-autocheck" class="autocheck">
+<div id="pr4-5-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-5')"></p>
+<div id="pr4-5-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-5-hints">
+<summary>
+Подсказкa
+</summary>
+<p><code>sapply(is.na) %&gt;% apply(2, sum)</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-6-title">#6</h3>
+<p><img id="pr4-6-level" class="level"></p>
+<div id="pr4-6-task" class="task">
+<p>Так как в эксперименте не было ограничения времени на ответ, обнаруженные пропуски имеют исключительно техническое происхождение и связаны с тем, как PsychoPy записывает данные в Excel-формат. После основного датасета он пропускает строчку и дописывает 8 строк служебной информации.</p>
+<p>Так как в отобранных колонках этой информации нет, мы можем смело отрезать последние 9 строк датасета. Известно, что в эксперименте было всего 450 проб, а в аутпуте PsychoPy пишет в каждой строке одну пробу. Таким образом из данных нам нужны первы 450 строк.</p>
+<p>Отберите необходимые строки из данных.</p>
+</div>
+<div id="pr4-6-autocheck" class="autocheck">
+<div id="pr4-6-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-6')"></p>
+<div id="pr4-6-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-6-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>slice()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-7-title">#7</h3>
+<p><img id="pr4-7-level" class="level"></p>
+<div id="pr4-7-task" class="task">
+<p>Для анализа нам будут нужны не все пробы, а только те, в которых экспериментальное условие было <code>tray</code> или <code>dots</code>. Это связано с тем, что пробы <code>both</code> содержали два целевых стимула, и их анализ будет отличаться от остальных.</p>
+<p>Отберите необходимые строки из данных.</p>
+</div>
+<div id="pr4-7-autocheck" class="autocheck">
+<div id="pr4-7-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-7')"></p>
+<div id="pr4-7-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-7-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>filter()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-8-title">#8</h3>
+<p><img id="pr4-8-level" class="level"></p>
+<div id="pr4-8-task" class="task">
+<p>Мы почти привели наши данные к опрятному виду — осталось добавить индентификатор, чтобы мы могли различить данные разных испытуемых.</p>
+<p>Добавьте в датасет столбец <code>id</code>, в котором будет содержаться значение <code>1</code> во всех строках, так как это данные первого испытуемого.</p>
+</div>
+<div id="pr4-8-autocheck" class="autocheck">
+<div id="pr4-8-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-8')"></p>
+<div id="pr4-8-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-8-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>mutate()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-9-title">#9</h3>
+<p><img id="pr4-9-level" class="level"></p>
+<div id="pr4-9-task" class="task">
+<p>Отлично! Мы причесали наши данные. Теперь нам надо провернуть всё то же самые с остальными файлами. Чтобы оптимизировать этот процесс, давайте обрнем написанный нами код в функцию.</p>
+<p>Напишите функцию, которая будет осуществлять предобработку данных. Функция должна принимать на вход два аргумента:</p>
+<ul>
+<li>путь к файлу данных</li>
+<li><code>id</code> испытуемого</li>
+</ul>
+<p>Функция должна загружать данные и производить их предобработку аналогично тому, что мы делали в заданиях выше.</p>
+<p>Функция должна возвращать предобработанный датасет, соответствующий виду, который мы получили в <a href="#pr4-8-title">предыдущем задании</a>.</p>
+<p>Проверьте, как отбработает функция на файле <code>02.xlsx</code>.</p>
+</div>
+<div id="pr4-9-autocheck" class="autocheck">
+<div id="pr4-9-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-9')"></p>
+<div id="pr4-9-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-9-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-10-title">#10</h3>
+<p><img id="pr4-10-level" class="level"></p>
+<div id="pr4-10-task" class="task">
+<p>Наша конечная цель — получить единый датасет из всех данных, которые у нас в наличии. Мы уже добились того, что наша функция возвращает нам ровный и красивый tibble. Осталось лишь поставить их тибблы друг на друга, чтобы получить то, что нам нужно.</p>
+<p>Объедините резльтаты предобработки данных <code>01.xlsx</code> и <code>02.xlsx</code> в один объект.</p>
+</div>
+<div id="pr4-10-autocheck" class="autocheck">
+<div id="pr4-10-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-10')"></p>
+<div id="pr4-10-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-10-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>bind_rows()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-11-title">#11</h3>
+<p><img id="pr4-11-level" class="level"></p>
+<div id="pr4-11-task" class="task">
+<p>Всё готово для того, чтобы собрать итоговый датасет.</p>
+<p>Напишите цикл, в котором данные будут загружаться, предобрабатываться и объединяться в объект <code>share</code>.</p>
+</div>
+<div id="pr4-11-autocheck" class="autocheck">
+<div id="pr4-11-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-11')"></p>
+<div id="pr4-11-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-11-hints">
+<summary>
+Подсказка
+</summary>
+<p>Ошибка? Посмотрите, что за файлы лежат в папке с данными.</p>
+</details>
+</div>
+</section>
+<section id="pr4-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-12-title">#12</h3>
+<p><img id="pr4-12-level" class="level"></p>
+<div id="pr4-12-task" class="task">
+<p>Изучите структуру получившихся данных. Проверьте, совпадает ли число индентификаторов с количеством данных.</p>
+</div>
+<div id="pr4-12-autocheck" class="autocheck">
+<div id="pr4-12-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-12')"></p>
+<div id="pr4-12-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-12-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-13-title">#13</h3>
+<p><img id="pr4-13-level" class="level"></p>
+<div class="task">
+<ul>
+<li>Отсортируйте датасет по номеру пробы (<code>numtrial</code>) от первого до последнего.</li>
+<li>Отсортируйте датасет по номеру пробы (<code>numtrial</code>) и идентификатору испытуемого (<code>id</code>).</li>
+</ul>
+</div>
+<div id="pr4-13-autocheck" class="autocheck">
+<div id="pr4-13-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-13" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-13')"></p>
+<div id="pr4-13-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-13-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>arrange()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-14-title">#14</h3>
+<p><img id="pr4-14-level" class="level"></p>
+<div id="pr4-14-task" class="task">
+<p>Проверьте, все ли сочетания экспериментальных условий — <code>trialtype</code> и <code>setsize</code> — представлены в датасете.</p>
+</div>
+<div id="pr4-14-autocheck" class="autocheck">
+<div id="pr4-14-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-14" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-14')"></p>
+<div id="pr4-14-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-14-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>distinct()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-15-title">#15</h3>
+<p><img id="pr4-15-level" class="level"></p>
+<div id="pr4-15-task" class="task">
+<p>В описании данных в начале страницы упоминалось, что в ходе исследования собирались данные об используемой платформе. Их можно найти по <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/share_platform.csv">ссылке</a>.</p>
+<p>Загрузите данные о платформе в объект <code>platform</code>.</p>
+</div>
+<div id="pr4-15-autocheck" class="autocheck">
+<div id="pr4-15-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-15" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-15')"></p>
+<div id="pr4-15-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-15-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-16-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-16-title">#16</h3>
+<p><img id="pr4-16-level" class="level"></p>
+<div id="pr4-16-task" class="task">
+<p>Чтобы наши данные содержали все переменные, которые фиксировались в эксперименте, нам необходимо объединить датасеты <code>share</code> и <code>platfrom</code>. При этом объединение необходимо произвести так, чтобы совпали <code>id</code> между датасетами, так как строки с одним и тем же индентификатором относятся к одному и тому же испытуемому.</p>
+<p>Объедините датасеты <code>share</code> и <code>platform</code> по переменной <code>id</code>. Перезапишите объект <code>share</code>.</p>
+</div>
+<div id="pr4-16-autocheck" class="autocheck">
+<div id="pr4-16-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-16" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-16')"></p>
+<div id="pr4-16-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-16-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>..._join()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-17-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-17-title">#17</h3>
+<p><img id="pr4-17-level" class="level"></p>
+<div id="pr4-17-task" class="task">
+<p>Супер! Наши данные готовы к тому, чтобы мы что-нибудь на них посчитали.</p>
+<p>Для анализа нам необходимо аггрегироваь данные — посчитать среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента. Для этого нам понадобится группировка. Разберемся сначала с ней отдельно.</p>
+<p>Сгруппируйте датасет <code>share</code> по идентификатору испытуемого.</p>
+<p>Что изменилось в датасете?</p>
+</div>
+<div id="pr4-17-autocheck" class="autocheck">
+<div id="pr4-17-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-17" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-17')"></p>
+<div id="pr4-17-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-17-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>group_by()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-18-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-18-title">#18</h3>
+<p><img id="pr4-18-level" class="level"></p>
+<div id="pr4-18-task" class="task">
+<p>Рассчитайте среднее время реакции и его стандартное отклонение по всем сочетаниям условий для каждого респондента на данных <code>share</code>. Результат сохраните в объект <code>share_agg</code>.</p>
+</div>
+<div id="pr4-18-autocheck" class="autocheck">
+<div id="pr4-18-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-18" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-18')"></p>
+<div id="pr4-18-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-18-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>group_by() %&gt;% summarise()</code>, <code>summarise(..., .by = ...)</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-19-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-19-title">#19</h3>
+<p><img id="pr4-19-level" class="level"></p>
+<div id="pr4-19-task" class="task">
+<ol type="a">
+<li>Переведите данные <code>share_agg</code> в длинный формат.</li>
+<li>Переведите данные <code>share_agg</code> в широкий формат так, чтобы в каждой колонке было среднее время реакции для одного из условий переменной <code>setsize</code>.</li>
+</ol>
+</div>
+<div id="pr4-19-autocheck" class="autocheck">
+<div id="pr4-19-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-19" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-19')"></p>
+<div id="pr4-19-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-19-hints">
+<summary>
+Подсказки
+</summary>
+<p><code>pivot_longer()</code>, <code>pivot_wider()</code></p>
+</details>
+</div>
+</section>
+<section id="pr4-20-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-20-title">#20</h3>
+<p><img id="pr4-20-level" class="level"></p>
+<div id="pr4-20-task" class="task">
+<p>Экспортируйте результат аггрегации данных в <a href="#pr4-18-title">задания 18</a> в формате CSV.</p>
+</div>
+<div id="pr4-20-autocheck" class="autocheck">
+<div id="pr4-20-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-20" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-20')"></p>
+<div id="pr4-20-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="pr4-20-hints">
+<summary>
+Подсказка
+</summary>
+<p><code>write_csv()</code></p>
+</details>
+</div>
+</section>
+</section>
+<section id="pr4_add" class="level2">
+<h2 class="anchored" data-anchor-id="pr4_add">Дополнительные задания</h2>
+<section id="pr4-21-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-21-title">#1</h3>
+<p><img id="pr4-21-level" class="level"></p>
+<div id="pr4-21-task" class="task">
+<p>Поработаем с регулярным выражениями. У нас есть вектор с датами, которые указаны в совершенно разных форматах. Кроме того, некоторые из них явно содержать ошибки. Напишем регулярку, которая позволить отобрать корректные даты.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'21.92.2001'</span>, <span class="st">'19.11.12'</span>, <span class="st">'16.o1.2001'</span>, <span class="st">'01.04.1994'</span>, <span class="st">'5-3-2011'</span>, <span class="st">'6/04/1999'</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>В заданиях 1–5 будем работать с форматом даты <code>dd.mm.yyyy</code>. Проверять работу регулярный выражений будем с помощью функции <code>str_detect()</code>.</p>
+<p>Создайте вектор <code>dates</code> с помощью кода выше.</p>
+</div>
+<div id="pr4-21-autocheck" class="autocheck">
+<div id="pr4-21-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-21" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-21')"></p>
+<div id="pr4-21-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-21-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-22-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-22-title">#2</h3>
+<p><img id="pr4-22-level" class="level"></p>
+<div id="pr4-22-task" class="task">
+<p>Напишите регулярное выражение, которое будет отбирать даты с точками. Проверьте корректность её работы.</p>
+</div>
+<div id="pr4-22-autocheck" class="autocheck">
+<div id="pr4-22-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-22" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-22')"></p>
+<div id="pr4-22-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-22-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-23-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-23-title">#3</h3>
+<p><img id="pr4-23-level" class="level"></p>
+<div id="pr4-23-task" class="task">
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками содержатся только цифры. Проверьте корректность её работы.</p>
+</div>
+<div id="pr4-23-autocheck" class="autocheck">
+<div id="pr4-23-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-23" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-23')"></p>
+<div id="pr4-23-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-23-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-24-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-24-title">#4</h3>
+<p><img id="pr4-24-level" class="level"></p>
+<div id="pr4-24-task" class="task">
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками будет содержатся только определенное количество цифр — две в дне, две в месяце и четыре в году. Проверьте корректность её работы.</p>
+</div>
+<div id="pr4-24-autocheck" class="autocheck">
+<div id="pr4-24-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-24" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-24')"></p>
+<div id="pr4-24-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-24-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-25-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-25-title">#5</h3>
+<p><img id="pr4-25-level" class="level"></p>
+<div id="pr4-25-task" class="task">
+<p>Напишите регулярное выражение, которое будет отбирать даты, в которых между точками будет содержатся только определенное количество цифр — две в дне, две в месяце и четыре в году — при этом в первой цифре дня и месяца могуть встречаться только допустимые цифры. Проверьте корректность её работы.</p>
+</div>
+<div id="pr4-25-autocheck" class="autocheck">
+<div id="pr4-25-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-25" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-25')"></p>
+<div id="pr4-25-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-25-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-26-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-26-title">#6</h3>
+<p><img id="pr4-26-level" class="level"></p>
+<div id="pr4-26-task" class="task">
+<p>Отлично! С регулярками понакомились. Теперь задачка посерьезнее.</p>
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr4/p4-files.csv">По ссылке</a> лежит файл CSV, в котором перечислены названия файлов данных некоторого эксперимента. Названия имеют следующую структуру:</p>
+<pre><code>000AAAA_entire_exp_2022-06-01_15h12.27.341.csv</code></pre>
+<ul>
+<li><code>000AAAA</code> — идентификатор респондента</li>
+<li><code>entire_exp</code> — название файла эксперимента</li>
+<li><code>2022-06-01</code> — дата прохождения эксперимента</li>
+<li><code>15h12.27.341</code> — время начала эксперимента (с точностью до миллисекунд).</li>
+</ul>
+<p>Загрузите данные в объект <code>fls</code>. Добавьте к имеющейся колонке <code>file</code>:</p>
+<ul>
+<li>колонку <code>id</code>, в которой будет содержаться идентификатор респондента, извлеченный из названия файла</li>
+<li>колонку <code>datetime</code>, в которой будут содержаться дата и время прохождения эксперимента (без миллисекунд), извлеченные из названия файла (формат оставьте без изменения).</li>
+</ul>
+<p>Перезапишите объект <code>fls</code>.</p>
+</div>
+<div id="pr4-26-autocheck" class="autocheck">
+<div id="pr4-26-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-26" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-26')"></p>
+<div id="pr4-26-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-26-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-27-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-27-title">#7</h3>
+<p><img id="pr4-27-level" class="level"></p>
+<div id="pr4-27-task" class="task">
+<p>Приведите содержимое колонки <code>datetime</code> к формату <code>yyyy-mm-dd hh:mm:ss</code>. Перезапишите объект <code>fls</code>.</p>
+</div>
+<div id="pr4-27-autocheck" class="autocheck">
+<div id="pr4-27-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-27" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-27')"></p>
+<div id="pr4-27-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-27-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-28-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-28-title">#8</h3>
+<p><img id="pr4-28-level" class="level"></p>
+<div id="pr4-28-task" class="task">
+<p>Экспортируйте получившийся датасет <code>fls</code> в формате CSV.</p>
+</div>
+<div id="pr4-28-autocheck" class="autocheck">
+<div id="pr4-28-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-28" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-28')"></p>
+<div id="pr4-28-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-28-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-29-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-29-title">#9</h3>
+<p><img id="pr4-29-level" class="level"></p>
+<div id="pr4-29-task" class="task">
+<p>Возьмите датасет <code>share</code> из <a href="#pr4-16-title">задания 16</a> и объедините его с данными из файла <code>targetpositions.xlsx</code>, с которым мы сталкивались, когда запускали цикл.</p>
+<p>Перезапишите объект <code>share</code>.</p>
+</div>
+<div id="pr4-29-autocheck" class="autocheck">
+<div id="pr4-29-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-29" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-29')"></p>
+<div id="pr4-29-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-29-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="pr4-30-title" class="level3">
+<h3 class="anchored" data-anchor-id="pr4-30-title">#10</h3>
+<p><img id="pr4-30-level" class="level"></p>
+<div id="pr4-30-task" class="task">
+<p>В этом файле <code>targetpositions.xlsx</code> содержатся координаты, в которые должен был попасть испытуемый при клике на целевой стимул. Нам интересуют столбцы <code>posxmin1</code>, <code>posixmax1</code>, <code>posymin1</code> и <code>posymax1</code>.</p>
+<p>Первые два задают границы клика по горизонтали, а вторые два — по вертикали. Если координаты клика испытуемого попадают вэти диапазоны, то клик считается верным. Если не попадают, то клик ошибочен.</p>
+<ol type="a">
+<li>Добавьте в датасет <code>share</code> колонку <code>correct</code>, в которой будет обозначено с помощью логического значения, является ли клик в данной пробе верным.</li>
+<li>Рассчитайте точность кликов каждого респондента в каждом из сочетаний экспериментальных условий.</li>
+</ol>
+</div>
+<div id="pr4-30-autocheck" class="autocheck">
+<div id="pr4-30-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="pr4-30" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr4-30')"></p>
+<div id="pr4-30-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="pr4-30-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+<!--- CHANGE pr4 TO pr<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/pr4.json"></script>
+<script type="text/javascript" src="./js/pr.js"></script>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./pr3.html" class="pagination-link  aria-label=" p3="" датафреймы.="" исследование="" данных"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">P3 // Датафреймы. Исследование данных</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./pr5.html" class="pagination-link" aria-label="P5 // Визуализация данных">
+        <span class="nav-page-text">P5 // Визуализация данных</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
