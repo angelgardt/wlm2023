@@ -12,7 +12,7 @@ format:
 highlight-style: github
 ---
 
-## Зачем?
+## Что будет?
 ```{js favicon-loader}
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
@@ -23,100 +23,895 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
-- Пункт плана
-- Пункт плана
-- Пункт плана
+{{< include ../other/_symbols.qmd >}}
 
-## Текст
+```{r opts, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, warning = FALSE, message = FALSE)
+```
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+```{r andan-desc-pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(latex2exp)
+```
 
-# Раздел
+- Зачем нужна линейная регрессия
+- Модель простой линейной регрессии
+- Идентификация модели
+- Тестирование статистических гипотез
+- Модели множественной линейной регресии
 
-## Списки
 
-When you click the **Render** button a document will be generated that includes:
+# L8.1 // Простая линейная регрессия
 
--   Content authored with markdown
--   Output from executable code
+## Ограничения корреляционного анализа
 
-## Код
+* **позволяет** оценить силу и направление линейной связи
+* **не позволяет** предсказывать значения одной переменной на основе значений другой
 
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r, echo=TRUE}
-1 + 1
+## Идея регрессионной модели
+
+```{r}
+set.seed(123)
+
+tibble(x = rnorm(100),
+       y = 3.2 * x + 1 + rnorm(100)) -> pics_data 
+
+pics_data%>% 
+  ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+## Уравнение прямой
+
+$$
+y = kx + b,
+$$
+
+* $k$ --- угловой коэффициент (slope)
+$b$ --- свободный член (intercept)
+
+<center>
+<figure>
+<img src="pics/line.jpg">
+</figure>
+</center>
+
+
+## Формализация модели
+
+$$
+y = b_0 + b_1 x
+$$
+
+* переменная $y$ называется *зависимая*, *предсказываемая*, *целевая* переменная или *регрессант*
+* переменная $x$ носит названия *независимая* переменная, *предиктор* или *регрессор*
+* числа $b_0$ и $b_1$ называются *коэффициентами* или *параметрами* модели
+
+
+## Параметры модели и парамеры генеральной совокупности
+
+$$
+y = \beta_0 + \beta_1x,
+$$
+
+$\beta_0$ и $\beta_1$ --- параметры генеральной совокупности.
+
+$$
+y_i = \beta_0 + \beta_1 x + \varepsilon_i,
+$$
+
+$\varepsilon_i$ --- случайная изменчивость целевой переменной.
+
+$$
+y_i = b_0 + b_1 x_i + e_i,
+$$
+
+$b_0 = \hat \beta_0$ и $b_1 = \hat \beta_1$ --- оценки параметров генеральной совокупности, $e_i$ --- ошибки (или остатки, residuals) модели.
+
+
+
+## Идентификация модели
+
+$$
+y_i = b_0 + b_1 x_i + e_i,
+$$
+
+```{r}
+pics_data%>% 
+  ggplot() +
+  geom_point(aes(x, y)) +
+  geom_smooth(aes(x, y),
+              method = "lm", se = FALSE, size = 1) +
+  geom_abline(intercept = 0,
+              slope = 1.5,
+              color = "green3",
+              size = 1) +
+  geom_hline(aes(yintercept = mean(x)),
+             size = 1, color = "red3")
+```
+
+## Уравнение модели
+
+$$
+\hat y_i = b_0 + b_1 x_i,
+$$
+
+$\hat y_i$ --- модельное значение целевой переменной
+
+## Ошибки модели
+
+```{r}
+model1 <- lm(y ~ x, pics_data)
+pics_data %>% filter(x < -1 & y > 0) -> point1
+pics_data %>% filter(x < 1 & x > 0.8 & y < 2.5) -> point2
+point1 %>% mutate(y_ = predict(model1, point1)) -> point1
+point2 %>% mutate(y_ = predict(model1, point2)) -> point2
+
+pics_data %>% 
+  ggplot(aes(x, y)) +
+  geom_segment(x = point1$x, y = point1$y, xend = point1$x, yend = point1$y_,
+               color = "red3", size = 1) +
+  geom_segment(x = point2$x, y = point2$y, xend = point2$x, yend = point2$y_,
+               color = "red3", size = 1) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$e_i$"), 
+           x = -1.1, y = 0, color = "red3") +
+  annotate(geom = "text", label = TeX("$e_i$"), 
+           x = 0.9, y = 2.5, color = "red3")
 ```
 
 
-## Формулы
+## Минимизация ошибки модели
 
 $$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
+Q_{\text{res}} = \sum_{i=1}^n e_i^2 \to \min_{b_0, b_1}
 $$
 
 $$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
+Q_{\text{res}} = \sum_{i=1}^n e_i^2 = \sum_{i=1}^n (y_i - \hat y_i)^2 = \sum_{i=1}^n \big( y_i - (b_0 + b_1 x_i) \big)^2
+$$
+
+$$
+Q_{\text{res}} = f(b_0, b_1) = \sum (y_i - \hat y_i)^2 = \sum (y_i - b_0 - b_1x_i)^2 \to \min_{b_0, b_1}
 $$
 
 
-## Колонки
+## Метод наименьших квадратов
 
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-Текст правой колонки
-:::
-
-::::
+$$
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i)^2
+$$
 
 
-## Колонки с картинкой справа
+$$
+f(b_0, b_1) = \sum (y_i - b_0 - b_1x_i) (y_i - b_0 - b_1x_i)
+$$
 
-:::: {.columns}
+$$
+f(b_0, b_1) = 
+\sum (y_i^2 - b_0 y_i - b_1 x_i y_i - b_0 y_i - b_1 x_i y_i + b_0 b_1 x_i + b_1^2 x_i^2 + b_0^2 + b_0 b_1 x_i)
+$$
 
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
-
-
-## Колонки с картинкой слева
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
+$$
+f(b_0, b_1) = 
+\sum(y_i^2 - 2 b_1 x_i y_i - 2 y_i b_0 + x_i^2 b_1^2 + b_0^2 + 2 x_i b_1 b_0)
+$$
 
 
-## График
+$$
+\frac{f(b_0, b_1)}{\partial b_0} = \sum (-2y_i + 2b_0 + 2x_ib_1) = 
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big)
+$$
 
-```{r plot}
-plot(sample(1:100, 30))
+$$
+\frac{f(b_0, b_1)}{\partial b_1} = \sum (-2 x_i y_i + 2 x_i^2 b_1 + 2 x_i b_0) = -2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i
+$$
+
+$$
+\cases {
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+-2 \sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+$$
+
+$$
+\cases{
+\sum \big( y_i - (b_0 + b_1 x_i) \big) = 0 \\
+\sum \big( y_i - (b_0 + b_1 x_i) \big) x_i = 0
+}
+$$
+
+$$
+\cases{
+\sum y_i - \sum b_0 + \sum b_1 x_i = 0 \\
+\sum y_i x_i - \sum b_0 x_i + \sum b_1 x^2_i = 0
+}
+$$
+
+$$
+\cases{
+\sum b_0 + \sum b_1 x_i = \sum y_i \\
+\sum b_0 x_i + \sum b_1 x_i^2 = \sum y_i x_i
+}
+$$
+
+$$
+\cases{
+b1 \sum x_i + n b_0 = \sum y_i \\
+b1 \sum x^2_i + b_0 \sum x_i = \sum y_i x_i
+}
+$$
+
+$$
+b_0 = \frac{\sum y_i}{n} - b_1 \frac{\sum x_i}{n} = \bar y - b_1 \bar x
+$$
+
+$$
+b1 \sum x_i^2 + (\bar y - b_1 \bar x) \sum x_i = \sum x_i y_i
+$$
+
+$$
+\underline{b_1 \sum x_i^2} + \bar y \sum x_i - \underline{b_1 \bar x \sum x_i} = \sum x_i y_i
+$$
+
+$$
+b_1 \Big( \sum x_i^2 - \bar x \sum x_i \Big) = 
+\sum x_i y_i - \bar y \sum x_i
+$$
+
+$$
+b_1 = \frac{\sum x_i y_i - \bar y \sum x_i}{\sum x_i^2 - \bar x \sum x_i} = 
+\frac{(\sum x_i y_i - \bar y \sum x_i) \times n}{(\sum x_i^2 - \bar x \sum x_i) \times n}
+$$
+
+$$
+b_1 = \frac{\overline{xy} - \bar x \cdot \bar y}{\overline{x^2} - \bar x^2} = 
+\frac{\overline{xy} - \bar x \bar y}{s_X^2}
+$$
+
+## Формулы коэффициентов
+
+$$
+\cases{
+b_0 = \bar y - b_1 \bar x \\
+b_1 = \frac{\overline{xy} - \bar x \cdot \bar y}{\overline{x^2} - \bar x^2} = 
+\frac{\overline{xy} - \bar x \bar y}{s_X^2}
+}
+$$
+
+
+## Матричное вычисление коэффициентов
+
+$$
+\cases{
+b_0 + b_1 x_1 + e_1 = y_1 \\
+b_0 + b_1 x_2 + e_2 = y_2 \\
+\dots \\
+b_0 + b_1 x_n + e_n = y_n \\
+}
+$$
+
+$$
+\vm X \vm b + \vm e = \vm y,
+$$
+
+$\vm y$ --- вектор нашей целевой переменной, $\vm X$ --- матрица предикторов, $\vm b$ --- вектор коэффициентов модели, $\vm e$ --- вектор ошибок (остатков) модели.
+
+$$
+\vm X = \pmatrix{1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n}
+$$
+
+$$
+\vm b = (\vm X^\T \vm X)^{-1} \vm X^\T \vm y
+$$
+
+## Общая изменчивость
+
+**Общая сумма квадратов (total sum of squares, TSS)**
+
+$$
+\text{TSS} = \sum_{i=1}^n (\bar y - y_i)^2
+$$
+
+```{r}
+set.seed(123)
+tibble(x = rnorm(50),
+       y = 2.5 * x + 2 + rnorm(50)) -> r2
+
+model2 <- lm(y ~ x, r2)
+
+r2 %>% filter(y > 6 & x < 1.5) -> r2_point
+r2_point %>% mutate(y_ = predict(model2, r2_point),
+                    y_bar = mean(r2$y)) -> r2_point
+
+r2 %>% 
+  ggplot(aes(x, y)) +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_bar,
+               color = "green3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  annotate(geom = "text", label = TeX("TSS"),
+           x = 1.5, y = 3, color = "green3")
 ```
+
+## Объясненная изменчивость
+
+**Объясненная сумма квадратов (explained sum of squares, ESS)**
+
+$$
+\text{ESS} = \sum_{i=1}^n (\bar y - \hat y)^2
+$$
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y, yend = r2_point$y_bar,
+  #              color = "green3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y_, yend = r2_point$y_bar,
+               color = "orange3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  # annotate(geom = "text", label = TeX("TSS"),
+  #          x = 1.5, y = 3, color = "green3") +
+  annotate(geom = "text", label = TeX("ESS"),
+           x = 1.5, y = 3, color = "orange3")
+```
+
+## Остаточная изменчивость
+
+**Необъяснённая (остаточная) сумма квадратов (residual sum of squares, RSS)**
+
+$$
+\text{RSS} = \sum_{i=1}^n (y_i - \hat y_i)^2
+$$
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y, yend = r2_point$y_bar,
+  #              color = "green3", linetype = "dashed") +
+  # geom_segment(x = r2_point$x, xend = r2_point$x,
+  #              y = r2_point$y_, yend = r2_point$y_bar,
+  #              color = "orange3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_,
+               color = "purple3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  # annotate(geom = "text", label = TeX("TSS"),
+  #          x = 1.5, y = 3, color = "green3") +
+  # annotate(geom = "text", label = TeX("ESS"),
+  #          x = 1.5, y = 3, color = "orange3") +
+  annotate(geom = "text", label = TeX("RSS"),
+           x = 1, y = 6, color = "purple3")
+```
+
+
+## Изменчивость данных с точки зрения регрессионнной модели
+
+```{r}
+r2 %>% 
+  ggplot(aes(x, y)) +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_bar,
+               color = "green3", linetype = "solid") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y_, yend = r2_point$y_bar,
+               color = "orange3", linetype = "dashed") +
+  geom_segment(x = r2_point$x, xend = r2_point$x,
+               y = r2_point$y, yend = r2_point$y_,
+               color = "purple3", linetype = "dashed") +
+  geom_hline(aes(yintercept = mean(y)), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 2, y = 2.5, color = "red3") +
+  annotate(geom = "text", label = TeX("$\\hat{y}$"),
+           x = 2, y = 7.5, color = "blue") +
+  annotate(geom = "text", label = TeX("$y_{i}$"),
+           x = 1.3, y = 6.4, color = "black") +
+  annotate(geom = "text", label = TeX("TSS"),
+           x = 1.5, y = 4.5, color = "green3") +
+  annotate(geom = "text", label = TeX("ESS"),
+           x = 1.5, y = 3, color = "orange3") +
+  annotate(geom = "text", label = TeX("RSS"),
+           x = 1, y = 6, color = "purple3")
+```
+
+
+$$
+\text{TSS} = \text{ESS} + \text{RSS}
+$$
+
+## Коэффициент детерминации
+
+$$
+R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}
+$$
+
+$$
+R^2 = r^2
+$$
+
+
+## F-статистика
+
+$$
+\begin{split}
+H_0&: \beta_0 = \beta_1 = 0 \\
+H_1&: \beta_0 \neq 0 \vee \beta_1 \neq 0
+\end{split}
+$$
+
+$$
+F_{\text{df}_e, \text{df}_r} = \frac{\text{MS}_e}{\text{MS}_r} = \frac{\text{ESS}/\text{df}_e}{\text{RSS}/\text{df}_r} \overset{H_0}{\thicksim} F(\text{df}_e, \text{df}_r)
+$$
+
+* $\text{MS}_e$ --- это «средний объясненный квадрат», 
+* $\text{MS}_r$ --- «средний остаточный квадрат»,
+* $\text{df}_e = p - 1$ и $\text{df}_r = n - p - 1$ --- степени свободы для объясненной и остаточной изменчивости,
+* $p$ --- количество предикторов в модели,
+* $n$ --- число наблюдений.
+
+## F-распределение
+
+F-распределение, распределение Фишера ($\text{df}_e = 3$, $\text{df}_e = 50$)
+
+```{r}
+ggplot() +
+  geom_function(fun = df, args = list(df1 = 3, df2 = 50)) +
+  xlim(0, 5)
+```
+
+
+## Метрики качества модели
+
+### MSE
+
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2
+$$
+
+### RMSE
+
+$$
+\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\frac{1}{n} \sum_{i=1}^n \Big ( y_i - \hat y_i \Big)^2}
+$$
+
+### MAE
+
+$$
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat y_i|
+$$
+
+##### MAPE
+
+$$
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^n \Bigg |\frac{y_i - \hat y_i}{y_i} \Bigg|
+$$
+
+
+## Тестирование значимости предикторов
+
+$$
+\begin{split}
+H_0&: \beta_1 = 0 \\
+H_1&: \beta_1 \neq 0
+\end{split}
+$$
+
+$$
+t = \frac{b_1 - \beta_1}{\se_{b_1}} = \frac{b_1}{\se_{b_1}} \overset{H_0}{\thicksim} t(\text{df}_t),
+$$
+
+$$
+\text{df}_t = n-p-1
+$$
+
+$$
+\se_{b_1} = \frac{s_r}{\sum_{i=1}^n (x_i - \bar x)^2}
+$$
+
+$$
+s_r = \sqrt{\frac{\sum_{i=1}^n (y_i - \hat y_i)^2}{n-2}}
+$$
+
+
+## Допущения линейной регрессии
+
+* связь между предикторами и зависимой переменной **линейная**
+* **остатки (ошибки) модели случайны**
+    * **среднее при любых значениях предиктора равно нулю**: $\bar \varepsilon_i = 0$,
+    * **они не зависят друг от друга**: $\cor\underset{i \neq j}{(\varepsilon_i, \varepsilon_j)} = 0$
+* **остатки распределены нормально**: $\varepsilon \thicksim \mathcal N(0, \sigma^2_\varepsilon)$
+    * дисперсия **одинакова при любых значениях предиктора**: $\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \const$
+
+
+## Нормальное распределение остатков
+
+```{r}
+ggplot() +
+  geom_histogram(aes(x = model1$residuals), binwidth = .1)
+```
+
+```{r}
+ggplot(data = NULL,
+       aes(sample = model1$residuals)) +
+  stat_qq() + stat_qq_line() +
+  labs(x = "Theoretical Quantiles", y = "Empirical Quantiles")
+```
+
+## Независимость остатков от предсказанных значений
+
+* **среднее при любых значениях предиктора равно нулю**: $\bar \varepsilon_i = 0$
+* дисперсия **одинакова при любых значениях предиктора**: $\sigma^2_{\varepsilon_i} = \sigma^2_\varepsilon = \const$ --- **гомоскедастичность**
+
+```{r}
+set.seed(333)
+tibble(x = rnorm(100, 5, 12),
+       y = rnorm(100)) %>% 
+  ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+
+```{r}
+set.seed(333)
+tibble(x = rnorm(150, 5, 12),
+       y = 0.03 * x + 0.3 + rnorm(150)) %>% 
+  ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+```{r}
+set.seed(568)  # this makes the example exactly reproducible
+
+n      = rep(1:100,2)
+a      = 0
+b      = 1
+sigma2 = n^1.3
+eps    = rnorm(n,mean=0,sd=sqrt(sigma2))
+y      = a+b*n + eps
+mod    = lm(y ~ n)
+res    = residuals(mod)
+
+ggplot(data = NULL,
+       aes(n, y)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red3")
+```
+
+
+## Влиятельные наблюдения
+
+Красная точка --- **влиятельное наблюдение (influential point)**
+
+```{r}
+set.seed(434)
+tibble(x = rnorm(20),
+       y = 1.2 * x + rnorm(20)) -> lev_data
+lev_data %>% bind_rows(tibble(x = -1.5, y = 3)) -> lev_data2
+
+lev_data %>%
+  ggplot(aes(x, y)) +
+  geom_point(data = lev_data2,
+             aes(x, y), color = "red3") +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  geom_smooth(data = lev_data2,
+              method = "lm", se = FALSE, color = "red3")
+```
+
+```{r}
+ggplot(model1, aes(.hat, .stdresid)) + 
+  geom_point(aes(size=.cooksd), na.rm=TRUE) +
+  stat_smooth(method="loess", na.rm=TRUE) +
+  xlab("Leverage")+ylab("Standardized Residuals") +
+  ggtitle("Residual vs Leverage Plot") +
+  scale_size_continuous("Cook's Distance", range=c(1,5)) +
+  theme_bw() +
+  theme(legend.position="bottom")
+```
+
+
+
+## Предсказания на основе модели
+
+* **Интерполяция** --- предсказания значений целевой переменной **внутри** заданного диапазона значений предиктора.
+* **Экстраполяция** --- предсказания значений целевой переменной **вне** заданного диапазона значений предиктора.
+
+```{r}
+set.seed(599)
+
+tibble(x = runif(150, min = 0, max = 20),
+       y = sqrt(x) + rnorm(150, sd = .2)) %>%
+  mutate(sample = ifelse(x < 2 | (x > 5 & x < 7), TRUE, FALSE)) -> inter_data
+
+model_inter <- lm(y ~ x, inter_data %>% filter(sample))
+
+inter_data %>% 
+  ggplot(aes(x, y, color = sample)) +
+  annotate(geom = "rect",
+            xmin = 2 , xmax = 5, ymin = 0, ymax = Inf, 
+            fill = "green3",
+            alpha = .3,
+            color = "transparent") +
+  annotate(geom = "rect",
+            xmin = 7 , xmax = 20, ymin = 0, ymax = Inf, 
+            fill = "red3",
+            alpha = .3,
+            color = "transparent") +
+  annotate(geom = "text",
+           label = "INTERPOLATION",
+           x = 3.5, y = .5,
+           color = "green4") +
+  annotate(geom = "text",
+           label = "EXTRAPOLATION",
+           x = 13.5, y = .5,
+           color = "red4") +
+  geom_point() +
+  geom_abline(intercept = model_inter$coefficients[1],
+              slope = model_inter$coefficients[2],
+              color = "black", size = 1) +
+  scale_color_manual(values = c(`TRUE` = "black", `FALSE` = "gray70")) +
+  guides(color = "none")
+```
+
+
+
+# L8.2 // Множественная линейная регрессия
+
+## Множественная линейная регрессия с количественными предикторами без взаимодействия
+
+$$
+y_i = b_0 + b_1 x_{i1} + b_2 x_{i2} + \ldots + b_p x_{ip} + e_i
+$$
+
+$$
+\vm X \vm b + \vm e = \vm y
+$$
+
+$$
+\vm X = \pmatrix{
+1 & x_{11} & x_{12} & \dots & x_{1p} \\ 
+1 & x_{21} & x_{22} & \dots & x_{2p} \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+1 & x_{n1} & x_{n2} & \dots & x_{np}}
+$$
+
+$$
+\vm b = \pmatrix{ b_0 & b_1 & b_2 & \dots & b_p}
+$$
+
+$$
+\vm b = (\vm X^\T \vm X)^{-1} \vm X^\T \vm y
+$$
+
+
+## Проблема мультиколлинеарности
+
+$$
+\vm b = (\vm X^\T \vm X)^{-1} \vm X^\T \vm y
+$$
+
+Если наши предикторы сильно коррелируют друг с другом (≥ 0.8), то в нашей матрице возникают линейно зависимые столбцы, а значит обратная матрица не будет существовать.
+
+
+## Коэффициент вздутия дисперсии
+
+Проверкой на мультиколлинеарность для модели является **коэффициент вздутия дисперсии (variance inflation factor, VIF)**
+
+* пусть у нас есть модель 
+
+$$
+y = b_0 + b_1 x_1 + b_2 x_2 + \ldots + b_p x_p + e
+$$
+
+* построим линейную регрессию, в которой один из предикторов будет регрессироваться по всем другим: 
+
+$$
+x_1 = \alpha_0 + \alpha_2 x_2 + \ldots + \alpha_m x_m + e
+$$
+
+* вычислим коэффициент детерминации данной модели $R^2_j$
+* для коэффициента $b_j$ VIF будет определяться так:
+
+$$
+\text{VIF}_j = \frac{1}{1 - R^2_j}
+$$
+
+Пороговым значением для вынесение вердикта о наличии мультиколлинеарности считается 3 (иногда 2).
+
+
+## Множественная линейная регрессия с количественными и категориальными предикторами без взаимодействия
+
+```{r}
+set.seed(321)
+
+tibble(x1 = rnorm(100),
+       x2 = sample(0:1, 100, replace = TRUE),
+       y = 3.2 * x1 + 1 + 2 * x2 + rnorm(100)) -> pics_data2 
+
+pics_data2 %>% 
+  ggplot(aes(x1, y, color = as_factor(x2))) +
+  geom_point() +
+  # geom_smooth(method = "lm", se = FALSE) +
+  scale_color_discrete(labels = c("0" = "Group 1", "1" = "Group 2")) +
+  labs(color = "Group", x = "x")
+```
+
+
+$$
+y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + e_i
+$$
+
+$I$ --- это индикаторная переменная:
+
+* $I_{i1} = 0$, если наблюдение под номером $i$ принадлежит к группе `Group 1`,
+* $I_{i1} = 1$, если наблюдение под номером $i$ принадлежит к группе `Group 2`.
+
+Две модели в одной:
+
+* `Group 1` ($I_{i1} = 0$): $\hat y_i = b_0 + b_2 x_{i2}$
+* `Group 2` ($I_{i1} = 1$): $\hat y_i = (b_0 + b_1) + b_2 x_{i2}$
+
+
+```{r}
+pics_data2 %>% 
+  ggplot(aes(x1, y, color = as_factor(x2))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "gray") +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "#F8766D") +
+  geom_hline(yintercept = 3, linetype = "dashed", color = "#00BFC4") +
+  annotate(geom = "text", label = TeX("$b_{0}$"), 
+           x = -2.5, y = 1.5, color = "#F8766D") +
+  annotate(geom = "text", label = TeX("$b_{0} + b_{1}$"), 
+           x = -2.5, y = 3.5, color = "#00BFC4") +
+  scale_color_discrete(labels = c("0" = "Group 1", "1" = "Group 2")) +
+  labs(color = "Group", x = "x")
+```
+
+
+## Множественная линейная регрессия с количественными и категориальными предикторами со взаимодействием
+
+```{r}
+set.seed(321)
+
+tibble(x1 = rnorm(100),
+       x2 = sample(0:1, 100, replace = TRUE),
+       y = 3.2 * x1 + 1 + 2 * x2 - 1.6 * x2 * x1 + rnorm(100)) -> pics_data3
+
+pics_data3 %>% 
+  ggplot(aes(x1, y, color = as_factor(x2))) +
+  geom_point() +
+  # geom_smooth(method = "lm", se = FALSE) +
+  scale_color_discrete(labels = c("0" = "Group 1", "1" = "Group 2")) +
+  labs(color = "Group", x = "x")
+```
+
+
+$$
+y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + b_3 I_{i1} x_2
+$$
+
+$I$ --- индикатор:
+
+* $I_{i1} = 0$, если наблюдение под номером $i$ принадлежит к группе `Group 1`,
+* $I_{i1} = 1$, если наблюдение под номером $i$ принадлежит к группе `Group 2`.
+
+Две модели в одной:
+
+* `Group 1` ($I_{i1} = 0$): $\hat y_i = b_0 + b_2 x_{i2}$
+* `Group 2` ($I_{i1} = 1$): $\hat y_i = (b_0 + b_1) + (b_2 + b_3) x_{i2}$
+
+```{r}
+pics_data3 %>% 
+  ggplot(aes(x1, y, color = as_factor(x2))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "gray") +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "#F8766D") +
+  geom_hline(yintercept = 3, linetype = "dashed", color = "#00BFC4") +
+  annotate(geom = "text", label = TeX("$b_{0}$"), 
+           x = -2.5, y = 1.5, color = "#F8766D") +
+  annotate(geom = "text", label = TeX("$b_{0} + b_{1}$"), 
+           x = -2.5, y = 3.5, color = "#00BFC4") +
+  annotate(geom = "text", label = TeX("$\\tan \\, \\alpha_{Gr_1} = b_{2}$"), 
+           x = -1.5, y = -6, color = "#F8766D") +
+  annotate(geom = "text", label = TeX("$\\tan \\, \\alpha_{Gr_2} = b_{2} + b_{3}$"), 
+           x = -2, y = -2, color = "#00BFC4") +
+  scale_color_discrete(labels = c("0" = "Group 1", "1" = "Group 2")) +
+  labs(color = "Group", x = "x")
+```
+
+
+## Множественная линейная регрессия со взаимодействием количественных предикторов
+
+$$
+y_i = b_0 + b_1 x_{i1} + b_2 x_{i2} + b_3 x_{i1}x_{i2} + e_i
+$$
+
+* если $x_1 = 0$, то модель приобретает следующий вид: $\hat y_i = b_2 x_{i2}$,
+* если $x_2 = 0$, то такой вид: $\hat y_i = b_1 x_{i1}$.
+
+* $b_1$ и $b_2$ показывают так называемые «условные» связи
+* $b_3$ показывает сонаправленность связи предикторов с целевой переменной
+
+
+## Скорректированный коэффициент детерминации
+
+$$
+R^2_{\text{adj}} = 1 - (1 - R^2) \frac{n-1}{n-p}
+$$
+
+
+## Частный F-критерий
+
+Пусть у нас есть две модели --- (1) полная (full) и (2) сокращенная (reduced):
+
+$$
+\begin{split}
+(1) &: y_i = b_0 + b_1 x_1 + b_2 x_2 + b_3 x_3 + b_4 x_4 + e \\
+(2) &: y_i = b_0 + b_1 x_1 + b_2 x_2 + e
+\end{split}
+$$
+
+Различаются ли статистически данные модели?
+
+$$
+\begin{split}
+H_0 &: \beta_3 = \beta_4 = 0 \\
+H_1 &: \beta_3 \neq 0 \vee \beta_4 \neq 0
+\end{split}
+$$
+
+$$
+F = \frac{(\text{RSS}_\text{reduced} - \text{RSS}_\text{full})/k}{\text{RSS}_\text{full} / (n-p)},
+$$
+
+$\text{RSS}_\text{reduced}$ --- остаточная сумма квадратов сокращенной модели, $\text{RSS}_\text{full}$ --- остаточная сумма квадратов полной модели, $n$ --- количество наблюдений, $p$ --- количество предикторов полной модели, $k$ --- количество предикторов, исключенных из полной модели.
 
 ## Итоги
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+- Модель простой линейной регрессии
+- Метод наименьших квадратов
+- Множественная линейная регрессия с количественными предикторами
+- Множественная линейная регрессия с категориальными предикторами
+- Взаимодействие предикторов
+- Проблема мультиколлинеарности
 
 
 # L8 // Общие линейные модели. Простая и множественная линейная регрессия {#end}

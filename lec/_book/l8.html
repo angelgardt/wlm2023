@@ -706,7 +706,7 @@ H_1&amp;: \beta_0 \neq 0 \vee \beta_1 \neq 0
 <p><span class="math display">\[
 F_{\text{df}_e, \text{df}_r} = \frac{\text{MS}_e}{\text{MS}_r} = \frac{\text{ESS}/\text{df}_e}{\text{RSS}/\text{df}_r} \overset{H_0}{\thicksim} F(\text{df}_e, \text{df}_r)
 \]</span></p>
-<p>Здесь <span class="math inline">\(\text{MS}_e\)</span> — это «средний объясненный квадрат», <span class="math inline">\(\text{MS}_r\)</span> — «средний остаточный квадрат», а <span class="math inline">\(\text{df}_e = p - 1\)</span> и <span class="math inline">\(\text{df}_e = n - p - 1\)</span> — степени свободы для объясненной и остаточной изменчивости, <span class="math inline">\(p\)</span> — количество предикторов в модели, <span class="math inline">\(n\)</span> — число наблюдений. По сути, эта статистика показывает, во сколько раз объясненная дисперсия больше остаточной.</p>
+<p>Здесь <span class="math inline">\(\text{MS}_e\)</span> — это «средний объясненный квадрат», <span class="math inline">\(\text{MS}_r\)</span> — «средний остаточный квадрат», а <span class="math inline">\(\text{df}_e = p - 1\)</span> и <span class="math inline">\(\text{df}_r = n - p - 1\)</span> — степени свободы для объясненной и остаточной изменчивости, <span class="math inline">\(p\)</span> — количество предикторов в модели, <span class="math inline">\(n\)</span> — число наблюдений. По сути, эта статистика показывает, во сколько раз объясненная дисперсия больше остаточной.</p>
 <p>Эта статистика подчиняется F-распределению (распределению Фишера), которое выглядит так (изображен случай <span class="math inline">\(\text{df}_e = 3\)</span>, <span class="math inline">\(\text{df}_e = 50\)</span>):</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -989,7 +989,7 @@ y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + e_i
 <li><span class="math inline">\(I_{i1} = 0\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 1</code>,</li>
 <li><span class="math inline">\(I_{i1} = 1\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 2</code>.</li>
 </ul>
-<p>Таким образом, у нас получается как бы дву модели в одной:</p>
+<p>Таким образом, у нас получается как бы две модели в одной:</p>
 <ul>
 <li>для наблюдений из <code>Group 1</code> (<span class="math inline">\(I_{i1} = 0\)</span>) модель принимает вид: <span class="math inline">\(\hat y_i = b_0 + b_2 x_{i2}\)</span></li>
 <li>для наблюдений из <code>Group 2</code> (<span class="math inline">\(I_{i1} = 1\)</span>) — вид: <span class="math inline">\(\hat y_i = (b_0 + b_1) + b_2 x_{i2}\)</span></li>
@@ -1029,7 +1029,7 @@ y_i = b_0 + b_1 I_{i1} + b_2 x_{i2} + b_3 I_{i1} x_2
 <li><span class="math inline">\(I_{i1} = 0\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 1</code>,</li>
 <li><span class="math inline">\(I_{i1} = 1\)</span>, если наблюдение под номером <span class="math inline">\(i\)</span> принадлежит к группе <code>Group 2</code>.</li>
 </ul>
-<p>Таким образом, у нас опять получается как бы дву модели в одной, однако вторая модель теперь выглядит несколько иначе:</p>
+<p>Таким образом, у нас опять получается как бы две модели в одной, однако вторая модель теперь выглядит несколько иначе:</p>
 <ul>
 <li>для наблюдений из <code>Group 1</code> (<span class="math inline">\(I_{i1} = 0\)</span>) модель принимает вид: <span class="math inline">\(\hat y_i = b_0 + b_2 x_{i2}\)</span></li>
 <li>для наблюдений из <code>Group 2</code> (<span class="math inline">\(I_{i1} = 1\)</span>) — вид: <span class="math inline">\(\hat y_i = (b_0 + b_1) + (b_2 + b_3) x_{i2}\)</span></li>
