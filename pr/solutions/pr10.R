@@ -114,24 +114,61 @@ my_table_2 <- rempsyc::nice_table(stats.table.2)
 flextable::save_as_docx(my_table_2, path = "nice_table_mutlreg.docx")
 
 # 17
-
+car_price <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr10/CarPrice_Assignment.csv")
+str(car_price)
+summary(car_price)
+car_price %>% select_if(is.numeric) %>% cor() %>% ggcorrplot::ggcorrplot(colors = c("red", "white", "blue"), lab = TRUE)
+car_price %>% select_if(is.numeric) %>% select(-car_ID, -symboling) -> car_price_num
 
 # 18
+model4 <- lm(price ~ ., car_price_num)
+summary(model4)
 
 # 19
+car::vif(model4)
+model4.1 <- update(model4, . ~ . -highwaympg)
+summary(model4.1)
+car::vif(model4.1)
 
 # 20
-
-
+model4.2 <- update(model4.1, . ~ . -curbweight)
+summary(model4.2)
+car::vif(model4.2)
+model4.3 <- update(model4.2, . ~ . -boreratio)
+drop1(model4.3, test = "F")
+model4.4 <- update(model4.3, . ~ . -boreratio)
+drop1(model4.4, test = "F")
+model4.5 <- update(model4.4, . ~ . -wheelbase)
+drop1(model4.5, test = "F")
+model4.6 <- update(model4.5, . ~ . -carlength)
+drop1(model4.6, test = "F")
+model4.7 <- update(model4.6, . ~ . -carheight)
+drop1(model4.7, test = "F")
+model4.8 <- update(model4.7, . ~ . -citympg)
+drop1(model4.8, test = "F")
+car::vif(model4.8)
+plot(model4.8)
+summary(model4.8)
+anova(model4, model4.8)
 
 # ADDITIONAL
 
 # 1
-car::ncvTest(model1) # heteroscedasticity
+model5 <- lm(price ~ horsepower * citympg, car_price_num)
+summary(model5)
 
 # 2
+plot(model5)
+car::ncvTest(model5) # heteroscedasticity
 
 # 3
+car_price %>% 
+  ggplot(aes(horsepower, price, color = carbody)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+model6 <- lm(price ~ horsepower * carbody, car_price)
+summary(model6)
 
 # 4
 
