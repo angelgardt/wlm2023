@@ -3,6 +3,8 @@
 
 # MAIN
 
+install.packages(c("Metrics", "rempsyc", "flextable"))
+
 # 1
 library(tidyverse)
 managers <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr10/managers_reg.csv")
