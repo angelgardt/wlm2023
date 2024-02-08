@@ -3,10 +3,13 @@
 
 # MAIN
 
-install.packages(c("Metrics", "rempsyc", "flextable"))
+# install.packages(c("Metrics", "rempsyc", "flextable", "car))
 
 # 1
 library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+
 managers <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr10/managers_reg.csv")
 str(managers)
 
@@ -43,6 +46,8 @@ Metrics::mape(managers$fot, model1$fitted.values)
 # 8
 report::report(model1)
 apaTables::apa.reg.table(model1, filename = "simple_reg.doc")
+
+## from https://rempsyc.remi-theriault.com/articles/table
 # Gather summary statistics
 stats.table <- as.data.frame(summary(model1)$coefficients)
 # Get the confidence interval (CI) of the regression coefficient
@@ -52,25 +57,64 @@ stats.table <- cbind(row.names(stats.table), stats.table, CI)
 # Rename the columns appropriately
 names(stats.table) <- c("Term", "B", "SE", "t", "p", "CI_lower", "CI_upper")
 my_table <- rempsyc::nice_table(stats.table)
-flextable::save_as_docx(my_table, path = "nice_tablehere.docx")
+flextable::save_as_docx(my_table, path = "nice_table_reg.docx")
 
 # 9
+managers %>% 
+  ggplot(aes(grade_score, fot)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+managers %>% 
+  ggplot(aes(grade_score, fot, color = region)) +
+  geom_point() +
+  geom_smooth(method = "lm")
 
 # 10
+model2 <- lm(fot ~ grade_score + region, managers)
+summary(model2)
 
 # 11
+Metrics::mse(managers$fot, model1$fitted.values)
+Metrics::mse(managers$fot, model2$fitted.values)
+Metrics::mape(managers$fot, model1$fitted.values)
+Metrics::mape(managers$fot, model2$fitted.values)
 
 # 12
+par(mfrow = c(2,2))
+plot(model2)
 
 # 13
+model3 <- lm(fot ~ grade_score * region, managers)
+summary(model3)
 
 # 14
+par(mfrow = c(2,2))
+plot(model3)
 
 # 15
+Metrics::mse(managers$fot, model2$fitted.values)
+Metrics::mse(managers$fot, model3$fitted.values)
+Metrics::mape(managers$fot, model2$fitted.values)
+Metrics::mape(managers$fot, model3$fitted.values)
+anova(model2, model3)
 
 # 16
+report::report(model3)
+## from https://rempsyc.remi-theriault.com/articles/table
+# Gather summary statistics
+stats.table.2 <- as.data.frame(summary(model3)$coefficients)
+# Get the confidence interval (CI) of the regression coefficient
+CI2 <- confint(model3)
+# Add a row to join the variables names and CI to the stats
+stats.table.2 <- cbind(row.names(stats.table.2), stats.table.2, CI2)
+# Rename the columns appropriately
+names(stats.table.2) <- c("Term", "B", "SE", "t", "p", "CI_lower", "CI_upper")
+my_table_2 <- rempsyc::nice_table(stats.table.2)
+flextable::save_as_docx(my_table_2, path = "nice_table_mutlreg.docx")
 
 # 17
+
 
 # 18
 
