@@ -10,6 +10,8 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
 ```
 
+{{< include ../other/_symbols.qmd >}}
+
 ## Основные задания {#hw9_main}
 
 ### #1
@@ -19,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FAL
 ::: {#hw9-1-task .task}
 Сегодня в нашем распоряжении [данные о продаже домов](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/house_price.csv). В данных достаточно много переменных, кодбук можно найти [здесь](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/houses_description.txt).
 
-Загрузите данные, изучите их структуру. Проверьте наличие пропущенных значений в столбцах.
+Загрузите данные и сохраните их в объект `houses`. Изучите их структуру. Проверьте наличие пропущенных значений в столбцах.
 :::
 
 ```{r}
@@ -68,7 +70,7 @@ houses %>% sapply(is.na) %>% apply(2, sum)
 </details>
 :::
 
-### #2
+### #2 {#hw9-2-title}
 
 <img id="hw9-2-level" class="level"/>
 
@@ -248,7 +250,7 @@ nrow(houses_cond)
 </details>
 :::
 
-### #5
+### #5 {#hw9-5-title}
 
 <img id="hw9-5-level" class="level"/>
 
@@ -600,7 +602,12 @@ anova(model4, model4.1)
 <img id="hw9-11-level" class="level"/>
 
 ::: {#hw9-11-task .task}
-удалить влиятельные наблюдения
+В [задании 2]({#hw9-2-title) мы построили модель, в которой обнаружелись влиятельные наблюдения. Давайте посмотрим, что будет, если мы исключим эти наблюдения из выборки.
+
+a. Исключите влиятельные наблюдения из данных, воспользовавшись номером строки, которые представлен на диагностическом графике.
+b. Постройте регрессионную модель, аналогичную той, что была в задании 2, но на новых данных (без влиятельных наблюдений).
+c. Сравните две модели. Используйте коэффициент детерминации и среднюю квадратичную ошибку.
+
 :::
 
 ```{r}
@@ -612,9 +619,11 @@ houses %>%
 model1.1 <- lm(SalePrice ~ LotArea, houses_noinfluential)
 summary(model1.1)
 plot(model1.1)
+Metrics::rmse(houses$SalePrice, model1$fitted.values)
+Metrics::rmse(houses_noinfluential$SalePrice, model1.1$fitted.values)
 ```
 
-::: {#hw9-11-autocheck .autocheck}
+::: {#hw9-11-autocheck .autocheck hidden="true"}
 ::: {#hw9-11-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -627,7 +636,7 @@ plot(model1.1)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-11-hints">
 
 <summary>Подсказки</summary>
@@ -658,10 +667,23 @@ plot(model1.1)
 <img id="hw9-12-level" class="level"/>
 
 ::: {#hw9-12-task .task}
-визуализировать модель без взаимодействия
+В [задании 5](#hw9-5-title) была построена модель с количественным и категориальным предиктором без взаимодействия. Неплохо было бы её визуализировать, однако если мы воспользуемся стандартной функцией `geom_smooth(method = "lm")` из `ggplot2`, то получим визуализацию модели со взаимодействием. Для того, чтобы получить нужную визуализацию, надо немного поколдовать.
+
+а. Добавьте в датасет, на котором была построена модель из задания 5, колонку с предсказанными моделью значениями
+b. Визуализируйте связь между переменными модели с помошью диаграммы рассеяния
+с. Добавьте визуализацию предсказанных моделью значений с помощью линии
+
 :::
 
-::: {#hw9-12-autocheck .autocheck}
+```{r}
+houses_cond %>% 
+  mutate(fitted = model2$fitted.values) %>% 
+  ggplot(aes(LotArea, SalePrice, color = SaleCondition)) +
+  geom_point() +
+  geom_line(aes(y = fitted))
+```
+
+::: {#hw9-12-autocheck .autocheck hidden="true"}
 ::: {#hw9-12-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -674,7 +696,7 @@ plot(model1.1)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-12-hints">
 
 <summary>Подсказки</summary>
@@ -700,15 +722,18 @@ plot(model1.1)
 </details>
 :::
 
-### #3
+### #3 {#hw9-13-title}
 
 <img id="hw9-13-level" class="level"/>
 
 ::: {#hw9-13-task .task}
-Текст задания.
+Мы построили несколько моделей в заданиях выше. Давайте выберем ту, которая наиболее хорошо описывает наши данные.
+
+a. Выберите критерий (критерии) для сравнения моделей --- это может быть как статистический тест, так и какая-либо из метрик качества модели (её предсказательной силы).
+b. Используя выбранный критерий (критерии), из построенных моделей выберите ту, которая лучше всего описывает данные.
 :::
 
-::: {#hw9-13-autocheck .autocheck}
+::: {#hw9-13-autocheck .autocheck hidden="true"}
 ::: {#hw9-13-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -721,7 +746,7 @@ plot(model1.1)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-13-hints">
 
 <summary>Подсказки</summary>
@@ -752,10 +777,10 @@ plot(model1.1)
 <img id="hw9-14-level" class="level"/>
 
 ::: {#hw9-14-task .task}
-Текст задания.
+Для модели, выбранной [в предыдущем задании](#hw9-13-title), экспортируйте результаты моделирования: текстовое описание результатов и таблицу со статистиками для предикторов модели.
 :::
 
-::: {#hw9-14-autocheck .autocheck}
+::: {#hw9-14-autocheck .autocheck hidden="true"}
 ::: {#hw9-14-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -768,7 +793,7 @@ plot(model1.1)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-14-hints">
 
 <summary>Подсказки</summary>
@@ -799,7 +824,26 @@ plot(model1.1)
 <img id="hw9-15-level" class="level"/>
 
 ::: {#hw9-15-task .task}
-экспортировать результаты лучшей модели
+Мы знаем формулу для матричного вычисления коэффициент регрессионной модели:
+
+$$
+\vm b = ( \vm X^\T \vm X)^{-1} \vm X^\T \vm y
+$$
+
+Давайте проверим, что результаты вычисления по этой формуле совпадают с результатами работы функции `lm()`. Рассмотрим случай только с количественными предикторами.
+
+a. Напишите функцию `reg_coef()`, которая вычисляет коэффициенты модели множественной линейной регрессии с количественными предкиторами без взаимодействия. Функция должна:
+
+* принимать на вход:
+    * датасет, на котором будет строится модель (например, в аргумент `data`)
+    * название целевой переменной (например, в аргумент `y`)
+    * вектор названия количественных предикторов (например, в аргумент `X`)
+* вычислять вектор коэффициентов в соответствии с формулой
+* возвращать вектор коэффциентов
+
+Учтите, что интерсепт также должен быть включен в возвращаемый вектор.
+
+b. Проверьте, что команды `reg_coef()` и `lm()`
 :::
 
 ::: {#hw9-15-autocheck .autocheck}
