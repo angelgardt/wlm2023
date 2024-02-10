@@ -171,14 +171,26 @@ model6 <- lm(price ~ horsepower * carbody, car_price)
 summary(model6)
 
 # 4
+AIC(model4.8)
+AIC(model6)
+BIC(model4.8)
+BIC(model6)
 
 # 5
 
+## sexy diagnostic plots
+
 # 6
+
+## separate dataset
 
 # 7
 
+## prediction
+
 # 8
+
+
 
 # 9
 
