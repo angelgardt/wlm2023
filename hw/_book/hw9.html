@@ -264,21 +264,21 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#6</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
+  <li><a href="#hw9-4-title" id="toc-hw9-4-title" class="nav-link" data-scroll-target="#hw9-4-title">#4</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#5</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#6</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#7</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#8</a></li>
+  <li><a href="#hw9-9-title" id="toc-hw9-9-title" class="nav-link" data-scroll-target="#hw9-9-title">#9</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#10</a></li>
   </ul></li>
   <li><a href="#hw9_add" id="toc-hw9_add" class="nav-link" data-scroll-target="#hw9_add">Дополнительные задания</a>
   <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#1</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#2</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#3</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#4</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -314,11 +314,12 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw9-1-level" class="level"></p>
 <div id="hw9-1-task" class="task">
-<p>Загрузить данные</p>
+<p>Сегодня в нашем распоряжении <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/house_price.csv">данные о продаже домов</a>. В данных достаточно много переменных, кодбук можно найти <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/houses_description.txt">здесь</a>.</p>
+<p>Загрузите данные, изучите их структуру. Проверьте наличие пропущенных значений в столбцах.</p>
 </div>
 <div id="hw9-1-autocheck" class="autocheck">
 <div id="hw9-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите количество пропущенных значений в переменной <code>Alley</code>. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-1')"></p>
@@ -326,7 +327,7 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw9-1-hints">
 <summary>
 Подсказки
@@ -353,12 +354,16 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw9-2-level" class="level"></p>
 <div id="hw9-2-task" class="task">
-<p>lotArea vs price</p>
-<p>интерпретация</p>
+<p>В данных есть переменная <code>SalePrice</code> — цена участка. Поизучаем, какие характеристики участка оказывают влияние<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> на его цену.</p>
+<p>В данные также есть переменная <code>LotArea</code> — площадь участка. Кажется, разумно предположить, что площадь участка влияет на его стоимость. Проверим данную гипотезу.</p>
+<ol type="a">
+<li>Постройте регрессионную модель, в которой целевой переменной будет цена участка, а предиктором — его площадь.</li>
+<li>Проинтерпретируйте результаты моделирования.</li>
+</ol>
 </div>
 <div id="hw9-2-autocheck" class="autocheck">
 <div id="hw9-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите коэффициент детерминации (<code>Multiple R-squared</code>) построенной модели. Значение округлите до сотых. В качестве десятичного разделителя используйте точку. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-2')"></p>
@@ -373,18 +378,32 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как построить модель?
 </summary>
+<ul>
+<li>Для построение модели линейной регрессии используйте функцию <code>lm()</code></li>
+<li>Модель задается первым аргументом в формульном виде <code>y ~ x</code></li>
+<li>Вторым аргументом функции необходимо передать имеющиеся данные</li>
+<li>Сохраните модель в объект (например, <code>model1</code>).</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как проинтерпретировать результаты?
 </summary>
+<ul>
+<li>Вывести статистики модели можно с помощью функции <code>summary()</code>, в которую необходимо передать объект, содержащий регрессионную модель.</li>
+<li>Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что значение округлено до сотых.</li>
+<li>Проверьте, что в качестве десятичного разделителя используется точка.</li>
+</ul>
 </details>
 </details>
 </div>
@@ -393,11 +412,14 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw9-3-level" class="level"></p>
 <div id="hw9-3-task" class="task">
-<p>диагностика</p>
+<ol type="a">
+<li>Проведите графическую диагностику модели. Дайте интерпретацию полученных результатов.</li>
+<li>Визуализируйте модель.</li>
+</ol>
 </div>
 <div id="hw9-3-autocheck" class="autocheck">
 <div id="hw9-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите количество влиятельных наблюдений, обнаруженых в ходе диагностики. Если влиятельных наблюдений нет, введите 0. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-3')"></p>
@@ -412,31 +434,32 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как провести диагностику?
 </summary>
+<ul>
+<li>Для этого необходимо построить диагностически графики с помощью функции <code>plot()</code>.</li>
+<li>Необходимо проверить выполнение допущений о распределении остатков модели, их связи с предсказанными значениями целевой переменной и наличие влиятельных наблюдений.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как визуализировать модель?
 </summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<p>Для визуализации необходимо построить график, отображающий линейную связь между переменными модели.</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<section id="hw9-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw9-4-title">#4</h3>
 <p><img id="hw9-4-level" class="level"></p>
 <div id="hw9-4-task" class="task">
-<p>визуализация</p>
+<p>В данных есть интересная переменная <code>SalesCondition</code> — условия продажи участка. Выдвинем следующую гипотезу: в случае стандартных условий продажи (<code>Normal</code>) и продажи частично достроенного дома (<code>Partial</code>) цена будет выше, чем в случае нестандартной продажи (<code>Abnorml</code>).</p>
+<p>Отберите необходимые наблюдения для проверки данной гипотезы.</p>
 </div>
 <div id="hw9-4-autocheck" class="autocheck">
 <div id="hw9-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите количество строк в получившемся датасете.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-4')"></p>
@@ -444,7 +467,7 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw9-4-hints">
 <summary>
 Подсказки
@@ -467,16 +490,18 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">#5</h3>
 <p><img id="hw9-5-level" class="level"></p>
 <div id="hw9-5-task" class="task">
-<p>колич + кач</p>
-<p>интерпретация</p>
+<ol type="a">
+<li>Добавьте в имеющуюся модель еще один предиктор <code>SaleCondition</code> для проверки заявленной выше гипотезы. Постройте модель на отобранных в предыдущем задании данных.</li>
+<li>Проинтерпретируйте результаты моделирования.</li>
+</ol>
 </div>
 <div id="hw9-5-autocheck" class="autocheck">
 <div id="hw9-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите коэффициент детерминации (<code>Multiple R-squared</code>) построенной модели. Значение округлите до сотых. В качестве десятичного разделителя используйте точку. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-5')"></p>
@@ -491,27 +516,45 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как построить модель?
 </summary>
+<ul>
+<li>Для построение модели линейной регрессии используйте всё ту же функцию <code>lm()</code></li>
+<li>Модель задается первым аргументом в формульном виде <code>y ~ x1 + x2</code></li>
+<li>Вторым аргументом функции необходимо передать имеющиеся данные</li>
+<li>Сохраните модель в объект (например, <code>model2</code>).</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как проинтерпретировать результаты?
 </summary>
+<ul>
+<li>Вывести статистики модели можно с помощью функции <code>summary()</code>, в которую необходимо передать объект, содержащий регрессионную модель.</li>
+<li>Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).</li>
+<li>Обратите внимание на смысл коэффицинтов при переменных <code>SaleConditionNormal</code> и <code>SaleConditionPartial</code>.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте, что значение округлено до сотых.</li>
+<li>Проверьте, что в качестве десятичного разделителя используется точка.</li>
+</ul>
 </details>
 </details>
 </div>
 </section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">#6</h3>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">#6</h3>
 <p><img id="hw9-6-level" class="level"></p>
 <div id="hw9-6-task" class="task">
-<p>диагностика</p>
+<ol type="a">
+<li>Проведите графическую диагностику модели. Дайте интерпретацию полученных результатов.</li>
+<li>Сравните по результатам диагностики две построенные модели.</li>
+</ol>
 </div>
 <div id="hw9-6-autocheck" class="autocheck">
 <div id="hw9-6-ir" class="input-requirements">
@@ -523,7 +566,7 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw9-6-hints">
 <summary>
 Подсказки
@@ -546,15 +589,19 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">#7</h3>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">#7</h3>
 <p><img id="hw9-7-level" class="level"></p>
 <div id="hw9-7-task" class="task">
-<p>визуализация</p>
+<p>В данных есть еще один количественные предиктор, которые потенциально может влиять на целевую переменную — это <code>LotFrontage</code>, длина стороны участка, которая соединена с улицей города. Выдвинем предположение, что и площадь участка <code>LotArea</code>, и уличная сторона <code>LotFrontage</code> влияют на цену участка <code>SalePrice</code>.</p>
+<ol type="a">
+<li>Постройте модель, позволяющую проверить данную гипотезу.</li>
+<li>Проинтерпретируйте результаты моделирования.</li>
+</ol>
 </div>
 <div id="hw9-7-autocheck" class="autocheck">
 <div id="hw9-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите значение F-статистики модели (<code>F-statistic</code>). Значение округлите до целого. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-7')"></p>
@@ -569,31 +616,45 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как построить модель?
 </summary>
+<ul>
+<li>Для построение модели линейной регрессии используйте всё ту же функцию <code>lm()</code></li>
+<li>Согласно гипотезе, нас интересует модель без взаимодействия.</li>
+<li>Модель задается первым аргументом в формульном виде <code>y ~ x1 + x2</code></li>
+<li>Вторым аргументом функции необходимо передать имеющиеся данные</li>
+<li>Сохраните модель в объект (например, <code>model3</code>).</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как проинтерпретировать результаты?
 </summary>
+<ul>
+<li>Вывести статистики модели можно с помощью функции <code>summary()</code>, в которую необходимо передать объект, содержащий регрессионную модель.</li>
+<li>Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).</li>
+<li>Обратите внимание на смысл коэффицинтов при количественных предикторах.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<p>Проверьте, что значение округлено до целого</p>
 </details>
 </details>
 </div>
 </section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">#8</h3>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">#8</h3>
 <p><img id="hw9-8-level" class="level"></p>
 <div id="hw9-8-task" class="task">
-<p>2 колич</p>
+<p>В последнюю построенную модель включены два количественных предиктора. Мы не проводили подробный разведочный анализ данных, поэтому не знаем, была ли опасность мультиколлинеарности.</p>
+<p>Проверьте, есть ли в модели с двумя количественными предикторами проблема мультиколлинеарности.</p>
 </div>
 <div id="hw9-8-autocheck" class="autocheck">
 <div id="hw9-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите <code>да</code>, если проблема мультиколлинеарности есть, и <code>нет</code>, если такой проблемы нет.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-8')"></p>
@@ -606,33 +667,27 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для проверки наличия мультиколлинеарности необходимо рассчитать коэффициенты вздутия дисперсии (variance inflation factor, VIF) для предикторов модели.</li>
+<li>Для этого можно воспользоваться функцией <code>vif()</code> из пакета <code>car</code>.</li>
+</ul>
 </details>
 </div>
 </section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">#9</h3>
+<section id="hw9-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw9-9-title">#9</h3>
 <p><img id="hw9-9-level" class="level"></p>
 <div id="hw9-9-task" class="task">
-<p>2 колич + кач</p>
+<p>Давайте совместим построенные модели. У нас есть следующие предикторы: <code>LotArea</code>, <code>LotFrontage</code> и <code>SaleCondition</code> (изучаем три условия — <code>Normal</code>, <code>Partial</code> и <code>Abnorml</code>). Нам интересно изучить, как эти предикторы влияют на цену участка <code>SalePrice</code>.</p>
+<p>В качестве предикторов в модель должны быть включены основные эффекты предикторов <code>LotArea</code>, <code>LotFrontage</code> и <code>SaleCondition</code>, а также взаимодействие между <code>LotArea</code> и <code>SaleCondition</code>.</p>
+<ol type="a">
+<li>Постройте модель на данных, отобранных в <a href="#hw9-4-title">задании 4</a>.</li>
+<li>Проинтерпретируйте результаты моделирования. с. Проведите графическую диагностику модели.</li>
+</ol>
 </div>
 <div id="hw9-9-autocheck" class="autocheck">
 <div id="hw9-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите значение F-статистики модели (<code>F-statistic</code>). Значение округлите до целого. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-9')"></p>
@@ -663,15 +718,18 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">#10</h3>
 <p><img id="hw9-10-level" class="level"></p>
 <div id="hw9-10-task" class="task">
-<p>сравнить модели</p>
+<ol type="a">
+<li>По результатам, полученным в <a href="#hw9-9-title">задании 9</a>, предположите, можно ли исключить из последней построенной модели взаимодействие предикторов.</li>
+<li>«Обновите» модель из задания 9, исключив из неё взаимодействие предикторов. с. Сравните модель со взаимодействием и модель без взаимодействия с помощью статистического теста. Проинтерпретируйте результаты.</li>
+</ol>
 </div>
 <div id="hw9-10-autocheck" class="autocheck">
 <div id="hw9-10-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите значение F-статистики модели (<code>F-statistic</code>). Значение округлите до целого. Проверка игнорирует все пробелы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw9-10" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw9-10')"></p>
@@ -705,11 +763,11 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw9_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw9_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#1</h3>
 <p><img id="hw9-11-level" class="level"></p>
 <div id="hw9-11-task" class="task">
-<p>Текст задания.</p>
+<p>удалить влиятельные наблюдения</p>
 </div>
 <div id="hw9-11-autocheck" class="autocheck">
 <div id="hw9-11-ir" class="input-requirements">
@@ -744,11 +802,11 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">#2</h3>
 <p><img id="hw9-12-level" class="level"></p>
 <div id="hw9-12-task" class="task">
-<p>Текст задания.</p>
+<p>визуализировать модель без взаимодействия</p>
 </div>
 <div id="hw9-12-autocheck" class="autocheck">
 <div id="hw9-12-ir" class="input-requirements">
@@ -783,8 +841,8 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">#3</h3>
 <p><img id="hw9-13-level" class="level"></p>
 <div id="hw9-13-task" class="task">
 <p>Текст задания.</p>
@@ -822,8 +880,8 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">#4</h3>
 <p><img id="hw9-14-level" class="level"></p>
 <div id="hw9-14-task" class="task">
 <p>Текст задания.</p>
@@ -861,11 +919,11 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 </details>
 </div>
 </section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">#5</h3>
 <p><img id="hw9-15-level" class="level"></p>
 <div id="hw9-15-task" class="task">
-<p>Текст задания.</p>
+<p>экспортировать результаты лучшей модели</p>
 </div>
 <div id="hw9-15-autocheck" class="autocheck">
 <div id="hw9-15-ir" class="input-requirements">
@@ -905,6 +963,12 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 
 
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Будем говорить здесь о влиянии, исходя из простого здравосмысленного соображения: кажется, что сначала существует участок со своими характеристиками, а затем, когда владельцы решают его продать, они выставляют определенную цену.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

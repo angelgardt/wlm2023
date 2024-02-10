@@ -5,6 +5,11 @@
 REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 ## Основные задания {#hw9_main}
 
 ### #1
@@ -12,12 +17,21 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <img id="hw9-1-level" class="level"/>
 
 ::: {#hw9-1-task .task}
-Загрузить данные
+Сегодня в нашем распоряжении [данные о продаже домов](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/house_price.csv). В данных достаточно много переменных, кодбук можно найти [здесь](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/houses_description.txt).
+
+Загрузите данные, изучите их структуру. Проверьте наличие пропущенных значений в столбцах.
 :::
+
+```{r}
+library(tidyverse)
+houses <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/house_price.csv")
+str(houses)
+houses %>% sapply(is.na) %>% apply(2, sum)
+```
 
 ::: {#hw9-1-autocheck .autocheck}
 ::: {#hw9-1-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите количество пропущенных значений в переменной `Alley`.  Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-1" placeholder="Введите ответ…">
@@ -28,7 +42,7 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-1-hints">
 
 <summary>Подсказки</summary>
@@ -59,14 +73,24 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <img id="hw9-2-level" class="level"/>
 
 ::: {#hw9-2-task .task}
-lotArea vs price
+В данных есть переменная `SalePrice` --- цена участка. Поизучаем, какие характеристики участка оказывают влияние[^influence] на его цену.
 
-интерпретация
+[^influence]: Будем говорить здесь о влиянии, исходя из простого здравосмысленного соображения: кажется, что сначала существует участок со своими характеристиками, а затем, когда владельцы решают его продать, они выставляют определенную цену.
+
+В данные также есть переменная `LotArea` --- площадь участка. Кажется, разумно предположить, что площадь участка влияет на его стоимость. Проверим данную гипотезу.
+
+a. Постройте регрессионную модель, в которой целевой переменной будет цена участка, а предиктором --- его площадь.
+b. Проинтерпретируйте результаты моделирования.
 :::
+
+```{r}
+model1 <- lm(SalePrice ~ LotArea, houses)
+summary(model1)
+```
 
 ::: {#hw9-2-autocheck .autocheck}
 ::: {#hw9-2-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите коэффициент детерминации (`Multiple R-squared`) построенной модели. Значение округлите до сотых. В качестве десятичного разделителя используйте точку. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-2" placeholder="Введите ответ…">
@@ -84,19 +108,30 @@ lotArea vs price
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как построить модель?</summary>
+
+* Для построение модели линейной регрессии используйте функцию `lm()`
+* Модель задается первым аргументом в формульном виде `y ~ x`
+* Вторым аргументом функции необходимо передать имеющиеся данные
+* Сохраните модель в объект (например, `model1`).
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как проинтерпретировать результаты?</summary>
+
+* Вывести статистики модели можно с помощью функции `summary()`, в которую необходимо передать объект, содержащий регрессионную модель.
+* Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).
 
 </details>
 
 <details class="hint">
 
 <summary>Ответ неверный</summary>
+
+* Проверьте, что значение округлено до сотых.
+* Проверьте, что в качестве десятичного разделителя используется точка.
 
 </details>
 
@@ -108,12 +143,21 @@ lotArea vs price
 <img id="hw9-3-level" class="level"/>
 
 ::: {#hw9-3-task .task}
-диагностика
+a. Проведите графическую диагностику модели. Дайте интерпретацию полученных результатов.
+b. Визуализируйте модель.
 :::
 
+```{r}
+plot(model1)
+
+houses %>% 
+  ggplot(aes(LotArea, SalePrice)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
 ::: {#hw9-3-autocheck .autocheck}
 ::: {#hw9-3-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите количество влиятельных наблюдений, обнаруженых в ходе диагностики. Если влиятельных наблюдений нет, введите 0. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-3" placeholder="Введите ответ…">
@@ -131,36 +175,43 @@ lotArea vs price
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как провести диагностику?</summary>
+
+* Для этого необходимо построить диагностически графики с помощью функции `plot()`.
+* Необходимо проверить выполнение допущений о распределении остатков модели, их связи с предсказанными значениями целевой переменной и наличие влиятельных наблюдений.
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как визуализировать модель?</summary>
 
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
+Для визуализации необходимо построить график, отображающий линейную связь между переменными модели.
 
 </details>
 
 </details>
 :::
 
-### #4
+### #4 {#hw9-4-title}
 
 <img id="hw9-4-level" class="level"/>
 
 ::: {#hw9-4-task .task}
-визуализация
+В данных есть интересная переменная `SalesCondition` --- условия продажи участка. Выдвинем следующую гипотезу: в случае стандартных условий продажи (`Normal`) и продажи частично достроенного дома (`Partial`) цена будет выше, чем в случае нестандартной продажи (`Abnorml`).
+
+Отберите необходимые наблюдения для проверки данной гипотезы.
 :::
+
+```{r}
+houses %>% 
+  filter(SaleCondition == "Normal" | SaleCondition == "Partial" | SaleCondition == "Abnorml") -> houses_cond
+nrow(houses_cond)
+```
 
 ::: {#hw9-4-autocheck .autocheck}
 ::: {#hw9-4-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите количество строк в получившемся датасете.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-4" placeholder="Введите ответ…">
@@ -171,7 +222,7 @@ lotArea vs price
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-4-hints">
 
 <summary>Подсказки</summary>
@@ -202,14 +253,18 @@ lotArea vs price
 <img id="hw9-5-level" class="level"/>
 
 ::: {#hw9-5-task .task}
-колич + кач
-
-интерпретация
+a. Добавьте в имеющуюся модель еще один предиктор `SaleCondition` для проверки заявленной выше гипотезы. Постройте модель на отобранных в предыдущем задании данных.
+b. Проинтерпретируйте результаты моделирования.
 :::
+
+```{r}
+model2 <- lm(SalePrice ~ LotArea + SaleCondition, houses_cond)
+summary(model2)
+```
 
 ::: {#hw9-5-autocheck .autocheck}
 ::: {#hw9-5-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите коэффициент детерминации (`Multiple R-squared`) построенной модели. Значение округлите до сотых. В качестве десятичного разделителя используйте точку. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-5" placeholder="Введите ответ…">
@@ -227,19 +282,31 @@ lotArea vs price
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как построить модель?</summary>
+
+* Для построение модели линейной регрессии используйте всё ту же функцию `lm()`
+* Модель задается первым аргументом в формульном виде `y ~ x1 + x2`
+* Вторым аргументом функции необходимо передать имеющиеся данные
+* Сохраните модель в объект (например, `model2`).
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как проинтерпретировать результаты?</summary>
+
+* Вывести статистики модели можно с помощью функции `summary()`, в которую необходимо передать объект, содержащий регрессионную модель.
+* Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).
+* Обратите внимание на смысл коэффицинтов при переменных `SaleConditionNormal` и `SaleConditionPartial`.
 
 </details>
 
 <details class="hint">
 
 <summary>Ответ неверный</summary>
+
+* Проверьте, что значение округлено до сотых.
+* Проверьте, что в качестве десятичного разделителя используется точка.
 
 </details>
 
@@ -251,8 +318,19 @@ lotArea vs price
 <img id="hw9-6-level" class="level"/>
 
 ::: {#hw9-6-task .task}
-диагностика
+a. Проведите графическую диагностику модели. Дайте интерпретацию полученных результатов.
+b. Сравните по результатам диагностики две построенные модели.
 :::
+
+
+```{r}
+plot(model2)
+
+houses %>% 
+  ggplot(aes(LotArea, SalePrice)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
 
 ::: {#hw9-6-autocheck .autocheck}
 ::: {#hw9-6-ir .input-requirements}
@@ -267,7 +345,7 @@ lotArea vs price
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw9-6-hints">
 
 <summary>Подсказки</summary>
@@ -298,12 +376,21 @@ lotArea vs price
 <img id="hw9-7-level" class="level"/>
 
 ::: {#hw9-7-task .task}
-визуализация
+В данных есть еще один количественные предиктор, которые потенциально может влиять на целевую переменную --- это `LotFrontage`, длина стороны участка, которая соединена с улицей города. Выдвинем предположение, что и площадь участка `LotArea`, и уличная сторона `LotFrontage` влияют на цену участка `SalePrice`.
+
+a. Постройте модель, позволяющую проверить данную гипотезу.
+b. Проинтерпретируйте результаты моделирования.
+
 :::
+
+```{r}
+model3 <- lm(SalePrice ~ LotArea + LotFrontage, houses)
+summary(model3)
+```
 
 ::: {#hw9-7-autocheck .autocheck}
 ::: {#hw9-7-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите значение F-статистики модели (`F-statistic`). Значение округлите до целого. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-7" placeholder="Введите ответ…">
@@ -321,19 +408,31 @@ lotArea vs price
 
 <details class="hint">
 
-<summary>Как делать задание?</summary>
+<summary>Как построить модель?</summary>
+
+* Для построение модели линейной регрессии используйте всё ту же функцию `lm()`
+* Согласно гипотезе, нас интересует модель без взаимодействия.
+* Модель задается первым аргументом в формульном виде `y ~ x1 + x2`
+* Вторым аргументом функции необходимо передать имеющиеся данные
+* Сохраните модель в объект (например, `model3`).
 
 </details>
 
 <details class="hint">
 
-<summary>Что надо сделать?</summary>
+<summary>Как проинтерпретировать результаты?</summary>
+
+* Вывести статистики модели можно с помощью функции `summary()`, в которую необходимо передать объект, содержащий регрессионную модель.
+* Интерпретируются прежде всего следующие показатели: F-статистика (и её p-value), коэффициент детерминации и t-статистики (и их p-value).
+* Обратите внимание на смысл коэффицинтов при количественных предикторах.
 
 </details>
 
 <details class="hint">
 
 <summary>Ответ неверный</summary>
+
+Проверьте, что значение округлено до целого
 
 </details>
 
@@ -345,12 +444,20 @@ lotArea vs price
 <img id="hw9-8-level" class="level"/>
 
 ::: {#hw9-8-task .task}
-2 колич
+
+В последнюю построенную модель включены два количественных предиктора. Мы не проводили подробный разведочный анализ данных, поэтому не знаем, была ли опасность мультиколлинеарности.
+
+Проверьте, есть ли в модели с двумя количественными предикторами проблема мультиколлинеарности.
+
 :::
+
+```{r}
+car::vif(model3)
+```
 
 ::: {#hw9-8-autocheck .autocheck}
 ::: {#hw9-8-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите `да`, если проблема мультиколлинеарности есть, и `нет`, если такой проблемы нет.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-8" placeholder="Введите ответ…">
@@ -366,38 +473,35 @@ lotArea vs price
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для проверки наличия мультиколлинеарности необходимо рассчитать коэффициенты вздутия дисперсии (variance inflation factor, VIF) для предикторов модели.
+* Для этого можно воспользоваться функцией `vif()` из пакета `car`.
 
 </details>
 :::
 
-### #9
+### #9 {#hw9-9-title}
 
 <img id="hw9-9-level" class="level"/>
 
 ::: {#hw9-9-task .task}
-2 колич + кач
+Давайте совместим построенные модели. У нас есть следующие предикторы: `LotArea`, `LotFrontage` и `SaleCondition` (изучаем три условия --- `Normal`, `Partial` и `Abnorml`). Нам интересно изучить, как эти предикторы влияют на цену участка `SalePrice`.
+
+В качестве предикторов в модель должны быть включены основные эффекты предикторов `LotArea`, `LotFrontage` и `SaleCondition`, а также взаимодействие между `LotArea` и `SaleCondition`.
+
+a. Постройте модель на данных, отобранных в [задании 4](#hw9-4-title).
+b. Проинтерпретируйте результаты моделирования.
+с. Проведите графическую диагностику модели.
 :::
+
+```{r}
+model4 <- lm(SalePrice ~ LotFrontage + LotArea * SaleCondition, houses_cond)
+summary(model4)
+plot(model4)
+```
 
 ::: {#hw9-9-autocheck .autocheck}
 ::: {#hw9-9-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите значение F-статистики модели (`F-statistic`). Значение округлите до целого. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-9" placeholder="Введите ответ…">
@@ -439,12 +543,20 @@ lotArea vs price
 <img id="hw9-10-level" class="level"/>
 
 ::: {#hw9-10-task .task}
-сравнить модели
+a. По результатам, полученным в [задании 9](#hw9-9-title), предположите, можно ли исключить из последней построенной модели взаимодействие предикторов.
+b. «Обновите» модель из задания 9, исключив из неё взаимодействие предикторов.
+с. Сравните модель со взаимодействием и модель без взаимодействия с помощью статистического теста. Проинтерпретируйте результаты.
+
 :::
+
+```{r}
+model4.1 <- update(model4, . ~ . -LotArea : SaleCondition)
+anova(model4, model4.1)
+```
 
 ::: {#hw9-10-autocheck .autocheck}
 ::: {#hw9-10-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите значение F-статистики модели (`F-statistic`). Значение округлите до целого. Проверка игнорирует все пробелы.
 :::
 
 <input class="autocheck-input" type="text" id="hw9-10" placeholder="Введите ответ…">
@@ -488,8 +600,19 @@ lotArea vs price
 <img id="hw9-11-level" class="level"/>
 
 ::: {#hw9-11-task .task}
-Текст задания.
+удалить влиятельные наблюдения
 :::
+
+```{r}
+# 250, 336, 314
+
+houses %>% 
+  slice(-c(250, 336, 314)) -> houses_noinfluential
+
+model1.1 <- lm(SalePrice ~ LotArea, houses_noinfluential)
+summary(model1.1)
+plot(model1.1)
+```
 
 ::: {#hw9-11-autocheck .autocheck}
 ::: {#hw9-11-ir .input-requirements}
@@ -535,7 +658,7 @@ lotArea vs price
 <img id="hw9-12-level" class="level"/>
 
 ::: {#hw9-12-task .task}
-Текст задания.
+визуализировать модель без взаимодействия
 :::
 
 ::: {#hw9-12-autocheck .autocheck}
@@ -676,7 +799,7 @@ lotArea vs price
 <img id="hw9-15-level" class="level"/>
 
 ::: {#hw9-15-task .task}
-Текст задания.
+экспортировать результаты лучшей модели
 :::
 
 ::: {#hw9-15-autocheck .autocheck}
