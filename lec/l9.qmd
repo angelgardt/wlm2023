@@ -1,18 +1,299 @@
 # L9 // Дисперсионный анализ. Ковариационный анализ
 
+{{< include ../other/_symbols.qmd >}}
+
+```{r opts, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, warning = FALSE, message = FALSE)
+```
+
+```{r andan-desc-pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(latex2exp)
+```
+
+Мы знаем, что в регрессионную модель можно включать как количественные, так и категориальные предикторы. Более того, мы знаем, как при включении категориальных предикторов изменяется модель и что значат коэффициенты при этих предикторах. Теперь рассмотрим случай, когда в модели останутся только категориальные предикторы.
+
 ## Регрессия только с категориальными предикторами
+
+Пусть у нас есть один категориальный предиктор с двумя уровнями, то есть у нас есть две группы наблюдений. Если из моделей, рассмотренных ранее, мы исключим количественные предикторы, то получим модель такого вида:
+
+$$
+\hat y_i = b_0 + b_1 I,
+$$
+
+где $I$ --- переменная-индикатор, обозначающая, к какой группе принадлежит наблюдение ($I = 0$, если наблюдение относится к первой группе 1, и $I = 1$, если наблюдение относится ко второй группе). Итого, получается, что в одной модели заключены как бы две сразу:
+
+$$
+\begin{cases}
+I = 0 &: \hat y_i = b_0 \\
+I = 1 &: \hat y_i = b_0 + b_1
+\end{cases}
+$$
+
+Что же будет, если у нас возникнет не две группы по какой-то категориальной переменной, а три? Тогда одной переменной-индикатором мы уже не обойдемся --- нам понадобится две индикаторные переменные. Получится следующая модель:
+
+$$
+\hat y_i = b_0 + b_1 I_{\text{Gr}_2} + b_2 I_{\text{Gr}_3},
+$$
+
+где 
+
+- $I_{\text{Gr}_2}$ --- переменная-индикатор, обозначающая принадлежность наблюдения ко второй группе ($I_{\text{Gr}_2} = 0$, если наблюдение не относится ко второй группе, и $I_{\text{Gr}_2} = 1$, если наблюдение относится ко второй группе)
+- $I_{\text{Gr}_3}$ --- переменная-индикатор, обозначающая принадлежность наблюдения ко второй группе ($I_{\text{Gr}_3} = 0$, если наблюдение не относится ко третьей группе, и $I_{\text{Gr}_3} = 1$, если наблюдение относится к третьей группе). Итого, получается, что в одной модели заключены целых три сразу:
+
+$$
+\begin{cases}
+I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 0 &: \hat y_i = b_0 & (\text{Group 1})\\
+I_{\text{Gr}_2} = 1 \wedge I_{\text{Gr}_3} = 0 &: \hat y_i = b_0 + b_1 & (\text{Group 2}) \\
+I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &: \hat y_i = b_0 + b_2 & (\text{Group 3})
+\end{cases}
+$$
+
+Мы вводили в модели переменные-индикаторы для того, чтобы обозначит категориальные переменные и понять, как они меняют модель. Теперь же, когда мы работаем только с категориальными предикторами, мы можем обозначить перемеренные-индикаторы как $x_j$, чтобы еще более наглядно увидеть, что модель с категориальными предикторами полностью совпадает с моделью обычной линейной регрессии. Значениями, которые принимают переменные-индикаторы, кодируются группы наблюдений. Мы можем составить следующую таблицу кодировки:
+
+|     Группа    | $I_1 = x_1$ | $I_2 = x_2$ |
+|:-------------:|:-----------:|:-----------:|
+| $\text{Gr}_1$ |      0      |      0      |
+| $\text{Gr}_2$ |      1      |      0      |
+| $\text{Gr}_3$ |      0      |      1      |
+
+Таким образом, мы можем записать модель следующим образом:
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2
+$$
+
+Обратим внимание, что сейчас мы рассматривает три группы и у нас две индикаторные переменные. В случае, если у нас $k$ групп, то индикаторных переменных будет $k-1$:
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_{k-1}x_{k-1}
+$$
+
+|       Группа      |   $x_1$  |   $x_2$  | $\dots$  | $x_{k-2}$ | $x_{k-1}$ |
+|:-----------------:|:--------:|:--------:|----------|-----------|-----------|
+|   $\text{Gr}_1$   |     0    |     0    | $\dots$  | 0         | 0         |
+|   $\text{Gr}_2$   |     1    |     0    | $\dots$  | 0         | 0         |
+|   $\text{Gr}_3$   |     0    |     1    | $\dots$  | 0         | 0         |
+| $\vdots$          | $\vdots$ | $\vdots$ | $\ddots$ | $\vdots$  | $\vdots$  |
+| $\text{Gr}_{k-1}$ | 0        | 0        | $\dots$  | 1         | 0         |
+| $\text{Gr}_k$     | 0        | 0        | $\dots$  | 0         | 1         |
+
+Однако вернемся к случаю трех групп, так как этот случай достаточно прост и удобен для рассмотрения имеющейся ситуации. Попробуем визуализировать связь между некоторой целевой каоличественной переменной и категориальным предиктором. Получится следующая картинка:
+
+```{r}
+set.seed(123)
+tibble(`Gr₁` = rnorm(30, mean = 1, sd = 1),
+       `Gr₂` = rnorm(30, mean = 6, sd = 1),
+       `Gr₃` = rnorm(30, mean = 3, sd = 1)) %>% 
+  pivot_longer(cols = everything()) -> three_group
+
+three_group %>% 
+  ggplot(aes(name, value)) +
+  geom_point(position = position_jitter(width = .1)) +
+  labs(x = "Predictor", y = "Y")
+```
+
+Мы видим, что у нас есть категориальный предиктор, которые разбивает наши наблюдения на три группы --- `Gr₁`, `Gr₂` и `Gr₃` --- в каждой из которых есть определенный разборс значений. Само же положение это группы на вертикальной оси определяется средним целевой переменной в данной группе. Таким образом, мы можем дополнить визуализацию этими средними значениями (цвет добавлен для лучшего визуального разделения групп):
+
+```{r}
+three_group %>% summarise(mean = mean(value),
+                          .by = name) -> three_group_means
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Мы видим, что с точки зрения линейной модели у нас есть три интерсепта, а с точки зрения данных эти три интерсепта являются среднии групп наблюдений. То есть,
+
+$$
+\cases{
+\bar y_{\text{Gr}_1} = b_0 \\ 
+\bar y_{\text{Gr}_2} = b_0 + b_1 \\ 
+\bar y_{\text{Gr}_3} = b_0 + b_2 \\ 
+}
+$$
+или на картинке:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 1.2, color = "red4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+           x = 0.6, y = 3.3, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
 
 ### Параметризация индикаторов
 
+Способ подбора коэффициентов модели, который мы только что рассмотрели, называется **параметризацией индикаторов (dummy coding, treatment parametrization, reference cell model)**. В это способе получается следующее:
+
+* одна из групп по категориальной переменной берется в качестве базовой --- её интерсепт будет обозначен как $b_0$
+* для остальных групп подбираются поправочные коэффициенты ($b_1$, $b_2$, $...$, $b_{k-1}$), которые определяют различия в интерсептах между этими группами и базовым уровнему
+
+Собственно, это ровно то, что и было у нас на предыдущих лекциях.
+
+
 ### Параметризация эффектов
 
-## Дизайн экспериментального исследования
+Однако на те же данные можно посмотреть и иным способом. Не всегда логично брать какую-то группу наблюдений в качестве базового уровня, к тому же в зависимости от того, какую из групп мы рассматриваем как базовую, меняются значения коэффициентов модели. Есть ли какой-то способ записать более «обобщённую» модель?
+
+Да, он есть. Давайте рассматривать в качестве базового уровня *среднее по всем наблюдениям*. Тогда коэффициентами при переменных в модели будут отклонения групповых средних от общего среднего. Вот картинка:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Сама математическая запись модели не изменится:
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2
+$$
+
+однако интерпретация коэффициент здесь будет иная: теперь коэффициенты показывают отклонения [средних] групп от общего среднего, то есть коэффициенты показывают *эффект* предиктора для конкретной группы. Данный способ подбора называется **параметризацией эффектов (effects coding, sum-to-zero parameterization)**. Отдельная интересность здесь в том, как считается интерсепт для третьей группы `Gr₃` --- он оказывает равен $b_0 - b_1 - b_2$. Это связано с таблицей кодировки, использующейся в данном способе подбора коэффициентов:
+
+|     Группа    | $x_1$ | $x_2$ |
+|:-------------:|:-----:|:-----:|
+| $\text{Gr}_1$ |   1   |   0   |
+| $\text{Gr}_2$ |   0   |   1   |
+| $\text{Gr}_3$ |   −1  |   −1  |
+
+Чтобы модель работала, сумма по колонкам в таблице кодировки должна быть равна нулю, поэтому возникают −1.
+
 
 ## Однофакторный дисперсионный анализ
 
+Задумаемся: 
+
+* у нас есть некоторая странная, но занимательная модель, получившаяся с использованием параметризации эффектов
+* у нас есть данные, которые неопределенны и вариативны
+* данные мы собирали для того, чтобы изучить связь между целевой переменной и предиктором
+
+Разумно предполагать, что если связь между целевой переменной и предиктором есть, то мы будем наблюдать какую-то такую картинку:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  # geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Если же связи нет, то будет наблюдатся что-то такое:
+
+```{r}
+set.seed(857)
+tibble(`Gr₁` = rnorm(30, mean = 2, sd = 1),
+       `Gr₂` = rnorm(30, mean = 2, sd = 1),
+       `Gr₃` = rnorm(30, mean = 2, sd = 1)) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  # geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4")) +
+  ylim(-0.5, 8)
+```
+
+Описать эти ситуации можно, изучив структуру изменчивости данных.
+
 ### Структура изменчивости данных
 
-### Многофакторный дисперсионный анализ
+При изучении линейной регрессии мы знакомились в такой метрикой изменчивости, как сумма квадратов --- используем её и здесь. В данных есть **общая изменчивость, или общая сумма квадратов (total sum of squares, TSS)**:
+
+```{r}
+# `Gr₁`, `Gr₂` `Gr₃`
+three_group %>% 
+  filter(name == "Gr₁" & value > 2 & value < 2.25) -> point1
+three_group %>% 
+  filter(name == "Gr₂" & value < 4.5) -> point2
+three_group %>% 
+  filter(name == "Gr₃" & value < 1) -> point3
+three_group_means$mean %>% mean() -> total_mean
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point1$value,
+               color = "black", size = 1) +
+  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point2$value,
+               color = "black", size = 1) +
+  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point3$value,
+               color = "black", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+
+## Многофакторный дисперсионный анализ
+
+## Дизайн экспериментального исследования
 
 ## Контрасты
 
