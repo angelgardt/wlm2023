@@ -487,7 +487,7 @@ three_group %>%
   geom_hline(yintercept = total_mean) +
   geom_hline(data = three_group_means,
              aes(yintercept = mean, color = name)) +
-  annotate(geom = "text", label = TeX("$SS_{e} = ESS$"),
+  annotate(geom = "text", label = TeX("$SS_{e} = RSS$"),
            x = 2, y = 2, color = "purple3", size = 8) +
   annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
            x = 0.7, y = 3.7, color = "black") +
