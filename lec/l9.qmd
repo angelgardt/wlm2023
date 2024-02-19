@@ -252,7 +252,7 @@ tibble(`Gr₁` = rnorm(30, mean = 2, sd = 1),
 
 ### Структура изменчивости данных
 
-При изучении линейной регрессии мы знакомились в такой метрикой изменчивости, как сумма квадратов --- используем её и здесь. В данных есть **общая изменчивость, или общая сумма квадратов (total sum of squares, TSS)**:
+При изучении линейной регрессии мы знакомились с такой метрикой изменчивости, как сумма квадратов --- используем её и здесь. В данных есть **общая изменчивость, или общая сумма квадратов (total sum of squares, $\text{SS}_t$)** --- отклонения наблюдений от общего среднего значения:
 
 ```{r}
 # `Gr₁`, `Gr₂` `Gr₃`
@@ -267,18 +267,118 @@ three_group_means$mean %>% mean() -> total_mean
 set.seed(999)
 three_group %>% 
   ggplot(aes(name, value, color = name)) +
-  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point1$value,
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = total_mean, 
+               yend = point1$value,
                color = "black", size = 1) +
-  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point2$value,
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = total_mean, 
+               yend = point2$value,
                color = "black", size = 1) +
-  geom_segment(x = 1.001, y = total_mean, xend = 1.001, yend = point3$value,
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = total_mean, 
+               yend = point3$value,
                color = "black", size = 1) +
   geom_point(position = position_jitter(width = .1)) +
-  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  geom_hline(yintercept = total_mean) +
   # geom_hline(data = three_group_means,
   #            aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{t}$"),
+           x = 2, y = 2, color = "black", size = 8) +
   annotate(geom = "text", label = TeX("$\\bar{y}$"),
            x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Есть в данных **факторная изменчивость, или объясненная сумма квадратов (explained sum of squares, $\text{SS}_X$)** --- отклонения групповых средних от общего среднего:
+
+```{r}
+# `Gr₁`, `Gr₂` `Gr₃`
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.3, 
+               xend = 1.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(1) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.3, 
+               xend = 2.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(2) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.7, 
+               xend = 2.7, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(3) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{X}$"),
+           x = 2, y = 2, color = "orange3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Эта изменчивость складывается из показателей того, насколько каждая группа *в среднем* отклоняется от общего среднего. Здесь надо сделать замечание, что термин *фактор* и *факторная изменчивость* возникает здесь по причине того, что часть изменчивости данных объясняется действием некоторого *фактора*, который в терминах математических моделей мы называем предиктором.
+
+И в данных также остается **случайная изменчивость, или сумма квадратов ошибок (error sum of squares, $\text{SS}_e$)** --- отклонения наблюдений от своих групповых средних:
+
+```{r}
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = three_group_means %>% slice(1) %>% pull(mean),
+               yend = point1$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = three_group_means %>% slice(2) %>% pull(mean), 
+               yend = point2$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = three_group_means %>% slice(3) %>% pull(mean), 
+               yend = point3$value,
+               color = "purple3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{e}$"),
+           x = 2, y = 2, color = "purple3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
   # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
   #          x = 0.6, y = 1.3, color = "red4") +
   # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
@@ -289,6 +389,296 @@ three_group %>%
   guides(color = "none") +
   scale_color_manual(values = c("red4", "green4", "blue4"))
 ```
+
+С точки зрения математической модели эти три изменчивости --- $\text{SS}_t$, $\text{SS}_X$ и $\text{SS}_e$ --- совпадают соответственно с $\text{TSS}$, $\text{ESS}$ и $\text{RSS}$. 
+
+```{r}
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = total_mean, 
+               yend = point1$value,
+               color = "black", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = total_mean, 
+               yend = point2$value,
+               color = "black", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = total_mean, 
+               yend = point3$value,
+               color = "black", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{t} = TSS$"),
+           x = 2, y = 2, color = "black", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.3, 
+               xend = 1.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(1) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.3, 
+               xend = 2.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(2) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.7, 
+               xend = 2.7, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(3) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{X} = ESS$"),
+           x = 2, y = 2, color = "orange3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.7, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}} = b_{0} + b_{1}$"),
+           x = 0.7, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}} = b_{0} + b_{2}$"),
+           x = 0.7, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}} = b_{0} - b_{1} - b_{2}$"),
+           x = 0.7, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = three_group_means %>% slice(1) %>% pull(mean),
+               yend = point1$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = three_group_means %>% slice(2) %>% pull(mean), 
+               yend = point2$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = three_group_means %>% slice(3) %>% pull(mean), 
+               yend = point3$value,
+               color = "purple3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{e} = ESS$"),
+           x = 2, y = 2, color = "purple3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.7, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}} = b_{0} + b_{1}$"),
+           x = 0.7, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}} = b_{0} + b_{2}$"),
+           x = 0.7, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}} = b_{0} - b_{1} - b_{2}$"),
+           x = 0.7, y = 2.7, color = "blue4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+Так как мы сосредоточены на изучений моделей, в дальнейшем будут использоваться именно вторые обозначения.
+
+Математически эти изменчивости записываются так:
+
+$$
+\begin{split}
+\text{TSS} &= \text{SS}_t = \displaystyle \sum_{i=1}^n (\bar y - y_i), \\
+\text{ESS} &= \text{SS}_X = \displaystyle n_j \cdot \sum_{j=1}^k (\bar y - \bar y_j), \\
+\text{RSS} &= \text{SS}_e = \displaystyle \sum_{j=1}^k \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji}),
+\end{split}
+$$
+
+где $n$ --- общее количество наблюдений, $n_j$ --- количество наблюдений в конкретной $j$-ой группе, $k$ --- количество групп.
+
+Окей, с самой структурой изменчивости разобрались. Теперь вернемся к двум ситуациям, которые мы хотели описать:
+
+(1) связь межде предиктором и целевой переменной есть:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+(2) связи между предиктором и целевой переменной нет:
+
+```{r}
+set.seed(857)
+tibble(`Gr₁` = rnorm(30, mean = 2, sd = 1),
+       `Gr₂` = rnorm(30, mean = 2, sd = 1),
+       `Gr₃` = rnorm(30, mean = 2, sd = 1)) %>% 
+  pivot_longer(cols = everything()) -> no_diff
+no_diff %>% 
+  summarise(mean = mean(value),
+            .by = name) -> no_diff_group_means
+no_diff %>% pull(value) %>% mean() -> no_diff_total_mean
+
+no_diff %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = no_diff_total_mean) +
+  geom_hline(data = no_diff_group_means,
+             aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4")) +
+  ylim(-0.5, 8)
+```
+
+Поскольку рассматривать общую изменчивость не слишком осмысленно, в том числе потому что выполяется соотношение $\text{TSS} = \text{ESS} + \text{RSS}$ или $\text{SS}_t = \text{SS}_X + \text{SS}_e$, рассмотрим, как в двух интересующих нас случаях соотносятся **объясненная (факторная)** и **случайная (остаточная) изменчивости**.
+
+* В первом случае, когда закономерность есть, мы получим ситуацию, когда факторная изменчивость будет больше, чем случайная, то есть $\text{SS}_X > \text{SS}_e$.
+* В втором случае, когда закономерности нет, мы получим ситуацию, когда факторная изменчивость будет меньше (или, по крайней мере, равна), чем случайная, то есть $\text{SS}_X \leq \text{SS}_e$.
+
+Получается, используя эти изменчивости мы можем изучать гипотезы о связи между количественной и категориальной переменной.
+
+
+### Тестирование гипотез в однофакторном дисперсионном анализе
+
+Чтобы перейти к тестированию гипотез, нам необходимо сами эти [статистические] гипотезы сформулировать. Исходя из внимательного рассмотрения картинок выше, мы можем получить следующие гипотезы для дисперсионного анализа:
+
+$$
+\begin{split}
+H_0&: \mu_0 = \mu_1 = \mu_2 = \ldots = \mu_k \\
+H_1&: \exists \, j_1, j_2: \mu_{j_1} \neq \mu_{j_2}
+\end{split}
+$$
+
+Нулевая гипотеза говорит, что средние всех групп в генеральной совокупности равны между собой. Альтернативная гипотеза говорит, что *существуют хотя бы две группы*, cредние которых различаются. Для тестирования этой гипотезы мы могли бы посмотреть на отношение между объясненной и остаточной изменчивостями (суммами квадратов), но количество наблюдений в разных группах имеет право на совпадать, поэтому используют средний квадраты --- иначе, дисперсии:
+
+$$
+\begin{split}
+\text{MS}_t &= \frac{\text{SS}_t}{n-1} = \frac{\text{TSS}}{n-1} = \frac{\sum_{i=1}^n (\bar y - y_i)}{n-1} \\
+\text{MS}_X &= \frac{\text{SS}_X}{k-1} = \frac{\text{ESS}}{k-1} = \frac{n_j \cdot \sum_{j=1}^k (\bar y - \bar y_j)}{k-1} \\
+\text{MS}_e &= \frac{\text{SS}_e}{n-k} = \frac{\text{RSS}}{n-k} = \frac{\sum_{j=1}^k \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji})}{n-k}
+\end{split}
+$$
+
+Собственно, поэтому анализ и называется дисперсионный. Статистика, используемая для тестирования заявленной гипотезы --- это F-статистика, значение которой рассчитывается так:
+
+$$
+F = \frac{\text{MS}_X}{\text{MS}_e} \overset{H_0}{\thicksim} F(\text{df}_{\text{MS}_X}, \text{df}_{\text{MS}_e})
+$$
+
+Эта статистика подчиняется F-распределению со степенями свободы $\text{df}_{\text{MS}_X} = k - 1$ и $\text{df}_{\text{MS}_e} = n - k$. Таким образом, если
+
+* не получено статистически значимого результата, то у нас нет оснований говорить, что между какими-либо группами есть различия, а если
+* получен статистически значимый результат, то мы можем говорить, что *между какими-либо двумя группами есть различия*.
+
+
+### Попарные сравнения
+
+Статистически значимый результат дисперсионного анализа приводит нас к интересному выводу: мы обнаружили различия между хотя бы двумя групами есть различия --- но между какими? Ответа на этот вопрос дисперсионный анализ не дает, а знать ответ критически хочется. Отсюда возникаются попарные сравнения.
+
+Задача попарных сравнений, которую можно нехитро вывести из их названия --- сравнить попарно все группы наблюдений друг с другом и выяснить, есть ли между ними различия. F-статистика для этой задачи уже не подходит, поэтому берется **t-статистика**. 
+
+Мы уже видели так называемый *одновыборочный t-тест* в корреляционном анализе (при тестировании статистической значимости коэффициента корреляции) и регрессии (при тестировании статистической значимости коэффициента регрессионной модели). Однако t-тест позволяет сравнить и две выборки друг с другом. Формула его расчета несколько изменится, но общая логика останется той же --- в числителе стоят сравниваемые средние, а в знаменателе расположена их стандартная ошибка:
+
+$$
+t = \frac{\bar X_1 - \bar X_2}{\displaystyle \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \overset{H_0}{\thicksim} t(\text{df}),
+$$
+
+где $\bar X_1$ и $\bar X_2$ --- средние сравниваемых групп, $s_1^2$ и $s_2^2$ --- дисперсии сравниваемых групп, $n_1$ и $n_2$ --- количество наблюдений в сравниваемых группах.
+
+Гипотезы для t-теста в этом случае будут формулироваться так:
+
+$$
+\begin{split}
+H_0 &: \mu_1 = \mu_2 \\
+H_1 &: \mu_1 \neq \mu_2
+\end{split}
+$$
+
+<details>
+<summary>Степени свободы вычисляются весьма хитро</summary>
+$$
+\text{df} = \frac{\lp \displaystyle \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \rp ^2}
+{\displaystyle \frac{1}{n_1 - 1} \lp \frac{s_1^2}{n_1} \rp ^2 + \frac{1}{n_2 - 1} \lp \frac{s_2^2}{n_2} \rp ^2}
+$$
+
+***
+
+</details>
+
+Получается, что мы может взять t-тест, сравнить попарно группы друг с другом и выяснить, между какими группами есть различия. Почти. Иначе нам бессмысленно было бы городить дисперсионный анализ.
+
+В силу проблемы множественных сравнений, которую мы обсуждали в теме тестирования статистических гипотез, необходимо скорректировать уровень значимости. Способы существуют разные --- поправки Бонферрони, Холма, Тьюки --- но суть одна: необходимо понизить уровень значимости, чтобы избежать увеличения вероятности ложноположительного вывода.
+
+Итого,
+
+* если мы **получили статистически значимый результат** дисперсионного анализа, **необходимо провести попарные сравнения** (другое название --- post hoc тесты), чтобы выяснить, между какими именно группами есть различия
+* если мы **не получили статистически значимый результат** дисперсионного анализа, проводить попарные сравнения не нужно, так как сама нулевая гипотеза дисперсионного анализа говорит о том, что различий между группами нет
+
+***
+
+Подведем промежуточные итоги. Всё, о чем мы говорили выше, относится к **однофакторному дисперсиионному анализу (One-way ANOVA)**, так как мы рассматривали ситуацию, когда нас интересует связь между количественной и **одной** категориальной переменной. В этом случае с точки зрения математической модели в ней будет **один** предиктор.
+
+Отдельно отметим случай, когда у нас категориальная переменная задаёт только **две группы**. Можно и нужно ли в этом случае использовать дисперсионный анализ или достаточно только t-теста? Есть утверждение, что для сравнения двух групп нужно использовать двухвыборочный t-тест, и это правда, так как t-тест позволяет сравнить средние в двух группах. Использовать дисперсиионный анализ для сравнения двух групп также можно, однако попарные сравнения в этом случае бессмысленны, так как у нас всего две группы. Более того, для случая двух групп выполняется следующее соотношение между F и t-статистиками:
+
+$$
+F = t^2
+$$
+
+Доказательство того факта можно найти [здесь](https://stats.stackexchange.com/questions/55236/prove-f-test-is-equal-to-t-test-squared).
+
+***
+
+Конечно, мы крайне редко в рамках своих исследований мы редко вводим в их дизайн только одну [независимую] переменную, поэтому далее мы рассмотрим более сложные модели. Без погружения в математику, так как логика остается аналогичной обсужденной выше.
+
 
 
 ## Многофакторный дисперсионный анализ
