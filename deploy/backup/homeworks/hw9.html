@@ -991,12 +991,16 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 <li>вычислять вектор коэффициентов в соответствии с формулой</li>
 <li>возвращать вектор коэффциентов</li>
 </ul>
-<p>Учтите, что интерсепт также должен быть включен в возвращаемый вектор.</p>
+<p>Учтите, что:</p>
+<ul>
+<li>интерсепт также должен быть включен в возвращаемый вектор</li>
+<li>данные могут содержать пропущенные значения</li>
+</ul>
 <ol start="2" type="a">
-<li>Проверьте, что команды <code>reg_coef()</code> и <code>lm()</code></li>
+<li>Проверьте, что команды <code>reg_coef(data = houses, y = "SalePrice", X = c("LotArea", "LotFrontage"))</code> и <code>lm(SalePrice ~ LotArea + LotFrontage, houses)</code> дают одинаковый результат.</li>
 </ol>
 </div>
-<div id="hw9-15-autocheck" class="autocheck">
+<div id="hw9-15-autocheck" class="autocheck" hidden="true">
 <div id="hw9-15-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -1006,7 +1010,7 @@ REPLACE ALL hw9 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw9-15-hints">
 <summary>
 Подсказки

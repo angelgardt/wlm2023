@@ -1,5 +1,5 @@
 ---
-title: "L9. Дисперсионный анализ. Ковариационный анализ"
+title: "L9 // Дисперсионный анализ. Ковариационный анализ"
 author: "Антон Ангельгардт"
 format: 
   revealjs:
@@ -12,7 +12,21 @@ format:
 highlight-style: github
 ---
 
-## Зачем?
+## Что будет?
+
+{{< include ../other/_symbols.qmd >}}
+
+```{r opts, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, warning = FALSE, message = FALSE)
+```
+
+```{r andan-desc-pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(latex2exp)
+```
+
 ```{js favicon-loader}
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
@@ -23,103 +37,1059 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
-- Пункт плана
-- Пункт плана
-- Пункт плана
+- Регрессия только с категориальными предикторами
+- Способы подбора коэффициентом линейной регрессии
+- Однофакторный дисперсионный анализ
+- Многофакторный дисперсионный анализ
+- Ковариационный анализ
+- Контрасты
 
-## Текст
+# L9.1 // Однофакторный дисперсионный анализ
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+## Регрессия только с категориальными предикторами
 
-# Раздел
+$$
+\hat y_i = b_0 + b_1 I,
+$$
 
-## Списки
+* $I$ --- переменная-индикатор:
+    * $I = 0$, если наблюдение относится к первой группе 1
+    * $I = 1$, если наблюдение относится ко второй группе)
 
-When you click the **Render** button a document will be generated that includes:
+$$
+\begin{cases}
+I = 0 &: \hat y_i = b_0 \\
+I = 1 &: \hat y_i = b_0 + b_1
+\end{cases}
+$$
 
--   Content authored with markdown
--   Output from executable code
+## Три группы по категориальной переменной
 
-## Код
+$$
+\hat y_i = b_0 + b_1 I_{\text{Gr}_2} + b_2 I_{\text{Gr}_3},
+$$
 
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+- $I_{\text{Gr}_2}$ --- принадлежность ко второй группе
+    - $I_{\text{Gr}_2} = 0$, если наблюдение не относится ко второй группе
+    - $I_{\text{Gr}_2} = 1$, если наблюдение относится ко второй группе
+- $I_{\text{Gr}_3}$ --- наблюдения к третьей группе
+    - $I_{\text{Gr}_3} = 0$, если наблюдение не относится к третьей группе
+    - $I_{\text{Gr}_3} = 1$, если наблюдение относится к третьей группе
 
-```{r, echo=TRUE}
-1 + 1
+$$
+\begin{cases}
+I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 0 &: \hat y_i = b_0 & (\text{Group 1})\\
+I_{\text{Gr}_2} = 1 \wedge I_{\text{Gr}_3} = 0 &: \hat y_i = b_0 + b_1 & (\text{Group 2}) \\
+I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &: \hat y_i = b_0 + b_2 & (\text{Group 3})
+\end{cases}
+$$
+
+
+## Таблица кодировки категориального предиктора
+
+|     Группа    | $I_1 = x_1$ | $I_2 = x_2$ |
+|:-------------:|:-----------:|:-----------:|
+| $\text{Gr}_1$ |      0      |      0      |
+| $\text{Gr}_2$ |      1      |      0      |
+| $\text{Gr}_3$ |      0      |      1      |
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2
+$$
+
+## Общий случай
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_{k-1}x_{k-1}
+$$
+
+|       Группа      |   $x_1$  |   $x_2$  | $\dots$  | $x_{k-2}$ | $x_{k-1}$ |
+|:-----------------:|:--------:|:--------:|----------|-----------|-----------|
+|   $\text{Gr}_1$   |     0    |     0    | $\dots$  | 0         | 0         |
+|   $\text{Gr}_2$   |     1    |     0    | $\dots$  | 0         | 0         |
+|   $\text{Gr}_3$   |     0    |     1    | $\dots$  | 0         | 0         |
+| $\vdots$          | $\vdots$ | $\vdots$ | $\ddots$ | $\vdots$  | $\vdots$  |
+| $\text{Gr}_{k-1}$ | 0        | 0        | $\dots$  | 1         | 0         |
+| $\text{Gr}_k$     | 0        | 0        | $\dots$  | 0         | 1         |
+
+
+
+## Что происходит в данных?
+
+```{r}
+set.seed(123)
+tibble(`Gr₁` = rnorm(30, mean = 1, sd = 1),
+       `Gr₂` = rnorm(30, mean = 6, sd = 1),
+       `Gr₃` = rnorm(30, mean = 3, sd = 1)) %>% 
+  pivot_longer(cols = everything()) -> three_group
+
+three_group %>% 
+  ggplot(aes(name, value)) +
+  geom_point(position = position_jitter(width = .1)) +
+  labs(x = "Predictor", y = "Y")
 ```
 
 
-## Формулы
+## Средние групп
 
-$$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
-$$
-
-$$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-$$
-
-
-## Колонки
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-Текст правой колонки
-:::
-
-::::
-
-
-## Колонки с картинкой справа
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
-
-
-## Колонки с картинкой слева
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
-
-
-## График
-
-```{r plot}
-plot(sample(1:100, 30))
+```{r}
+three_group %>% summarise(mean = mean(value),
+                          .by = name) -> three_group_means
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
 ```
+
+## Средние групп vs интерсепты модели
+
+$$
+\cases{
+\bar y_{\text{Gr}_1} = b_0 \\ 
+\bar y_{\text{Gr}_2} = b_0 + b_1 \\ 
+\bar y_{\text{Gr}_3} = b_0 + b_2 \\ 
+}
+$$
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 1.2, color = "red4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+           x = 0.6, y = 3.3, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+
+## Параметризация индикаторов
+
+* одна из групп по категориальной переменной берется в качестве базовой
+    * её интерсепт будет обозначен как $b_0$
+* для остальных групп подбираются поправочные коэффициенты ($b_1$, $b_2$, $...$, $b_{k-1}$)
+    * определяют различия в интерсептах между этими группами и базовым уровнем
+
+## Параметризация эффектов
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+
+## Запись модели в параметризации эффектов
+
+$$
+\hat y_i = b_0 + b_1 x_1 + b_2 x_2
+$$
+
+* коэффициенты показывают отклонения [средних] групп от общего среднего
+    * то есть *эффект* предиктора для конкретной группы
+* интерсепт для третьей группы `Gr₃` оказывает равен $b_0 - b_1 - b_2$
+
+## Таблица кодировки предикторов для параметризации эффектов
+
+|     Группа    | $x_1$ | $x_2$ |
+|:-------------:|:-----:|:-----:|
+| $\text{Gr}_1$ |   1   |   0   |
+| $\text{Gr}_2$ |   0   |   1   |
+| $\text{Gr}_3$ |   −1  |   −1  |
+
+
+## Чем полезна полученная модель?
+
+* если связь между целевой переменной и предиктором есть, то:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  # geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+* если же связи нет, то:
+
+```{r}
+set.seed(857)
+tibble(`Gr₁` = rnorm(30, mean = 2, sd = 1),
+       `Gr₂` = rnorm(30, mean = 2, sd = 1),
+       `Gr₃` = rnorm(30, mean = 2, sd = 1)) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  # geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4")) +
+  ylim(-0.5, 8)
+```
+
+
+## Структура изменчивости данных
+
+* **общая изменчивость, или общая сумма квадратов (total sum of squares, $\text{SS}_t$)**
+
+```{r}
+# `Gr₁`, `Gr₂` `Gr₃`
+three_group %>% 
+  filter(name == "Gr₁" & value > 2 & value < 2.25) -> point1
+three_group %>% 
+  filter(name == "Gr₂" & value < 4.5) -> point2
+three_group %>% 
+  filter(name == "Gr₃" & value < 1) -> point3
+three_group_means$mean %>% mean() -> total_mean
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = total_mean, 
+               yend = point1$value,
+               color = "black", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = total_mean, 
+               yend = point2$value,
+               color = "black", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = total_mean, 
+               yend = point3$value,
+               color = "black", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{t}$"),
+           x = 2, y = 2, color = "black", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+## Структура изменчивости данных
+
+**факторная изменчивость, или объясненная сумма квадратов (explained sum of squares, $\text{SS}_X$)**
+
+```{r}
+# `Gr₁`, `Gr₂` `Gr₃`
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.3, 
+               xend = 1.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(1) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.3, 
+               xend = 2.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(2) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.7, 
+               xend = 2.7, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(3) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{X}$"),
+           x = 2, y = 2, color = "orange3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+## Структура изменчивости данных
+
+* **случайная изменчивость, или сумма квадратов ошибок (error sum of squares, $\text{SS}_e$)**
+
+```{r}
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = three_group_means %>% slice(1) %>% pull(mean),
+               yend = point1$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = three_group_means %>% slice(2) %>% pull(mean), 
+               yend = point2$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = three_group_means %>% slice(3) %>% pull(mean), 
+               yend = point3$value,
+               color = "purple3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{e}$"),
+           x = 2, y = 2, color = "purple3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+## Изменчивость данных и регрессионная модель
+
+```{r}
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = total_mean, 
+               yend = point1$value,
+               color = "black", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = total_mean, 
+               yend = point2$value,
+               color = "black", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = total_mean, 
+               yend = point3$value,
+               color = "black", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  # geom_hline(data = three_group_means,
+  #            aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{t} = TSS$"),
+           x = 2, y = 2, color = "black", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.3, 
+               xend = 1.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(1) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.3, 
+               xend = 2.3, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(2) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_segment(x = 2.7, 
+               xend = 2.7, 
+               y = total_mean, 
+               yend = three_group_means %>% slice(3) %>% pull(mean),
+               color = "orange3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{X} = ESS$"),
+           x = 2, y = 2, color = "orange3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.7, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}} = b_{0} + b_{1}$"),
+           x = 0.7, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}} = b_{0} + b_{2}$"),
+           x = 0.7, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}} = b_{0} - b_{1} - b_{2}$"),
+           x = 0.7, y = 2.7, color = "blue4") +
+  labs(x = "Predictor (X)", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+
+set.seed(999)
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_segment(x = 1.005, 
+               xend = 1.005, 
+               y = three_group_means %>% slice(1) %>% pull(mean),
+               yend = point1$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 1.965, 
+               xend = 1.965, 
+               y = three_group_means %>% slice(2) %>% pull(mean), 
+               yend = point2$value,
+               color = "purple3", size = 1) +
+  geom_segment(x = 2.9, 
+               xend = 2.9, 
+               y = three_group_means %>% slice(3) %>% pull(mean), 
+               yend = point3$value,
+               color = "purple3", size = 1) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = total_mean) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$SS_{e} = RSS$"),
+           x = 2, y = 2, color = "purple3", size = 8) +
+  annotate(geom = "text", label = TeX("$\\bar{y} = b_{0}$"),
+           x = 0.7, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}} = b_{0} + b_{1}$"),
+           x = 0.7, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}} = b_{0} + b_{2}$"),
+           x = 0.7, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}} = b_{0} - b_{1} - b_{2}$"),
+           x = 0.7, y = 2.7, color = "blue4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+
+## Изменчивость данных в формулах
+
+$$
+\begin{split}
+\text{TSS} &= \text{SS}_t = \displaystyle \sum_{i=1}^n (\bar y - y_i)^2, \\
+\text{ESS} &= \text{SS}_X = \displaystyle \sum_{j=1}^k n_j \cdot (\bar y - \bar y_j)^2, \\
+\text{RSS} &= \text{SS}_e = \displaystyle \sum_{j=1}^k \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji})^2,
+\end{split}
+$$
+
+$n$ --- общее количество наблюдений, $n_j$ --- количество наблюдений в конкретной $j$-ой группе, $k$ --- количество групп.
+
+## Что мы пытаемся описать?
+
+(1) связь между предиктором и целевой переменной есть:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = three_group_means$mean %>% mean()) +
+  geom_hline(data = three_group_means,
+             aes(yintercept = mean, color = name)) +
+  annotate(geom = "text", label = TeX("$b_0$"),
+           x = 0.6, y = 3.7, color = "black") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{1}}$"),
+           x = 0.6, y = 1.3, color = "red4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{2}}$"),
+           x = 0.6, y = 6.5, color = "green4") +
+  annotate(geom = "text", label = TeX("$\\bar{y}_{Gr_{3}}$"),
+           x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4"))
+```
+
+(2) связи между предиктором и целевой переменной нет:
+
+```{r}
+set.seed(857)
+tibble(`Gr₁` = rnorm(30, mean = 2, sd = 1),
+       `Gr₂` = rnorm(30, mean = 2, sd = 1),
+       `Gr₃` = rnorm(30, mean = 2, sd = 1)) %>% 
+  pivot_longer(cols = everything()) -> no_diff
+no_diff %>% 
+  summarise(mean = mean(value),
+            .by = name) -> no_diff_group_means
+no_diff %>% pull(value) %>% mean() -> no_diff_total_mean
+
+no_diff %>% 
+  ggplot(aes(name, value, color = name)) +
+  geom_point(position = position_jitter(width = .1)) +
+  geom_hline(yintercept = no_diff_total_mean) +
+  geom_hline(data = no_diff_group_means,
+             aes(yintercept = mean, color = name)) +
+  # annotate(geom = "text", label = TeX("$b_0$"),
+  #          x = 0.6, y = 3.7, color = "black") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_1$"),
+  #          x = 0.6, y = 1.3, color = "red4") +
+  # annotate(geom = "text", label = TeX("$b_0 + b_2$"),
+  #          x = 0.6, y = 6.5, color = "green4") +
+  # annotate(geom = "text", label = TeX("$b_0 - b_1 - b_2$"),
+  #          x = 0.6, y = 2.7, color = "blue4") +
+  labs(x = "Predictor", y = "Y") +
+  guides(color = "none") +
+  scale_color_manual(values = c("red4", "green4", "blue4")) +
+  ylim(-0.5, 8)
+```
+
+
+## Факторная и случайная изменчивость
+
+* В первом случае, когда закономерность есть, мы получим ситуацию, когда факторная изменчивость будет больше, чем случайная, то есть $\text{SS}_X > \text{SS}_e$.
+* В втором случае, когда закономерности нет, мы получим ситуацию, когда факторная изменчивость будет меньше (или, по крайней мере, равна), чем случайная, то есть $\text{SS}_X \leq \text{SS}_e$.
+
+
+## Тестирование гипотез в однофакторном дисперсионном анализе
+
+$$
+\begin{split}
+H_0&: \mu_0 = \mu_1 = \mu_2 = \ldots = \mu_k \\
+H_1&: \exists \, j_1, j_2: \mu_{j_1} \neq \mu_{j_2}
+\end{split}
+$$
+
+$$
+\begin{split}
+\text{MS}_t &= \frac{\text{SS}_t}{n-1} = \frac{\text{TSS}}{n-1} = \frac{\sum_{i=1}^n (\bar y - y_i)}{n-1} \\
+\text{MS}_X &= \frac{\text{SS}_X}{k-1} = \frac{\text{ESS}}{k-1} = \frac{n_j \cdot \sum_{j=1}^k (\bar y - \bar y_j)}{k-1} \\
+\text{MS}_e &= \frac{\text{SS}_e}{n-k} = \frac{\text{RSS}}{n-k} = \frac{\sum_{j=1}^k \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji})}{n-k}
+\end{split}
+$$
+
+
+## F-статистика
+
+$$
+F = \frac{\text{MS}_X}{\text{MS}_e} \overset{H_0}{\thicksim} F(\text{df}_{\text{MS}_X}, \text{df}_{\text{MS}_e})
+$$
+
+Если
+
+* не получено статистически значимого результата, то у нас нет оснований говорить, что между какими-либо группами есть различия,
+
+а если
+
+* получен статистически значимый результат, то мы можем говорить, что *между какими-либо двумя группами есть различия*.
+
+## Размер эффекта
+
+**Размер эффекта --- это доля объясненной фактором дисперсии от всей дисперсии данных**
+
+$$
+\eta^2 = \frac{\text{ESS}}{\text{TSS}} = \frac{\text{SS}_X}{\text{SS}_e}
+$$
+
+|Значение $\eta^2$|Размер эффекта|
+|:---:|:---:|
+|$0.01$|Малый (small)|
+|$0.06$|Средний (medium)|
+|$0.14$|Большой (large)|
+
+
+## Попарные сравнения
+
+* Статистически значимый результат дисперсионного анализа --- хотя бы двумя групами есть различия
+    * но между какими?
+* Задача попарных сравнений --- сравнить попарно все группы друг с другом
+    * берется **t-статистика**
+
+$$
+\begin{split}
+H_0 &: \mu_1 = \mu_2 \\
+H_1 &: \mu_1 \neq \mu_2
+\end{split}
+$$
+
+$$
+t = \frac{\bar X_1 - \bar X_2}{\displaystyle \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \overset{H_0}{\thicksim} t(\text{df}),
+$$
+
+* $\bar X_1$ и $\bar X_2$ --- средние сравниваемых групп
+* $s_1^2$ и $s_2^2$ --- дисперсии сравниваемых групп
+* $n_1$ и $n_2$ --- количество наблюдений в сравниваемых группах.
+
+
+## Проблема множественных сравнений
+
+* необходимо скорректировать уровень значимости
+* поправки Бонферрони, Холма, Тьюки
+
+Итого,
+
+* если мы **получили статистически значимый результат** дисперсионного анализа, **необходимо провести попарные сравнения** (другое название --- post hoc тесты), чтобы выяснить, между какими именно группами есть различия
+* если мы **не получили статистически значимый результат** дисперсионного анализа, проводить попарные сравнения не нужно, так как сама нулевая гипотеза дисперсионного анализа говорит о том, что различий между группами нет
+
+
+## Допущения дисперсионного анализа
+
+* Количественная непрерывная зависимая переменная
+* Независимые между собой выборки
+    * А если зависимые, то надо это учесть в модели
+* Нормальное распределение признака в генеральных совокупностях, из которых извлечены выборки
+* Равенство (гомогенность) дисперсий изучаемого признака в генеральных совокупностях из которых извлечены выборки
+    * Проверяется с помощью теста Левина
+* Независимые наблюдения в каждой из выборок
+
+## Однофакторный дисперсионный анализ
+
+* мы рассматривали ситуацию, когда нас интересует связь между количественной и **одной** категориальной переменной
+* в этом случае с точки зрения математической модели в ней будет **один** предиктор
+
+## Две группы
+
+Если категориальная переменная задаёт только **две группы**, можно и нужно ли в этом случае использовать дисперсионный анализ или достаточно только t-теста? 
+
+* сравнения двух групп нужно использовать двухвыборочный t-тест
+* использовать дисперсиионный анализ также можно
+    * попарные сравнения в этом случае бессмысленны
+    
+Более того:
+
+$$
+F = t^2
+$$
+
+# L9.3 // Многофакторный дисперсионный анализ
+
+## Дизайн экспериментального исследования
+
+* **Межгрупповой план**
+    * две или более групп
+    * каждая проходит различные экспериментальные условия
+    * один испытуемый проходит одно экспериментальное условие
+    * разные испытуемые проходят разные экспериментальные условия
+* **Внутригрупповой план**
+    * одна группа испытуемых
+    * проходит все экспериментальные условия
+    * каждый испытуемый проходит все экспериментальные условия
+
+## Типы эффектов в дисперсионном анализе
+
+* **межгрупповые эффекты (between-subject effects)**
+    * эффекты межгрупповых переменных (межгрупповой план)
+* **внутригрупповые эффекты (within-subject effects)**
+    * эффекты внутригрупповых переменных (внутригрупповой план)
+
+**Смешанный экспериментальный план** --- и межгрупповые, и внутригрупповые переменные
+
+* в модели будут оба типа эффектов
+
+## Визуализация связи между категориальной и количественной переменными
+
+Связь есть:
+
+```{r}
+three_group %>% 
+  ggplot(aes(name, value)) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               size = 2) +
+  labs(x = "X", y = "Y")
+```
+
+Связи нет:
+
+```{r}
+no_diff %>% 
+  ggplot(aes(name, value)) +
+  stat_summary(fun.data = mean_cl_boot, geom = "errorbar",
+               width = .3) +
+  stat_summary(fun = mean, geom = "point",
+               size = 2) +
+  labs(x = "X", y = "Y")
+```
+
+
+## Два фактора
+
+* $A$ и $B$
+* оба фактора имеют по два уровня --- $A_1$, $A_2$ и $B_1$, $B_2$
+
+## Два фактора: нет эффектов
+
+```{r}
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(3.00, 2.99, 2.97, 2.98),
+       Ymin = c(2.90, 2.89, 2.87, 2.88),
+       Ymax = c(3.10, 3.09, 3.07, 3.08)) -> no_effects
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(2.00, 3.00, 1.95, 2.95),
+       Ymin = c(1.90, 3.10, 1.85, 2.85),
+       Ymax = c(2.10, 2.90, 2.05, 3.05)) -> A_effects
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(2.00, 2.01, 2.99, 3.00),
+       Ymin = c(1.90, 1.91, 2.89, 2.90),
+       Ymax = c(2.10, 2.11, 3.09, 3.10)) -> B_effects
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(2.00, 3.00, 2.50, 3.50),
+       Ymin = c(1.90, 2.90, 2.40, 3.60),
+       Ymax = c(2.10, 3.10, 2.60, 3.40)) -> both_effects
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(2.00, 2.49, 3.00, 2.51),
+       Ymin = c(1.90, 2.39, 2.90, 2.41),
+       Ymax = c(2.10, 2.59, 3.10, 2.61)) -> interaction_effects_1
+tibble(A =    c("A1", "A2", "A1", "A2"),
+       B =    c("B1", "B1", "B2", "B2"),
+       Y =    c(3.00, 2.20, 2.00, 2.70),
+       Ymin = c(2.90, 2.10, 1.90, 2.60),
+       Ymax = c(3.10, 2.30, 2.10, 2.80)) -> interaction_effects_2
+```
+
+```{r}
+no_effects %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3")) +
+  ylim(2.5, 3.5)
+```
+
+## Два фактора: эффект только одного
+
+```{r}
+A_effects %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3"))
+```
+
+```{r}
+B_effects %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3"))
+```
+
+## Два фактора: эффекты обоих
+
+```{r}
+both_effects %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3"))
+```
+
+## Два фактора: эффект взаимодействия
+
+```{r}
+interaction_effects_1 %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3"))
+```
+
+```{r}
+interaction_effects_2 %>% 
+  ggplot(aes(A, color = B, group = B)) +
+  geom_line(aes(y = Y),
+            linetype = "dashed", position = position_dodge(0.3)) +
+  geom_errorbar(aes(y = Y, ymin = Ymin, ymax = Ymax),
+                width = .25, position = position_dodge(0.3)) +
+  geom_point(aes(y = Y), size = 2,
+             position = position_dodge(0.3)) +
+  scale_color_manual(values = c("blue3", "red3"))
+```
+
+
+## Взаимодействие факторов
+
+**Взаимодействие факторов говорит о том, что один фактор влияет на целевую переменную по-разному в зависимости от уровня второго фактора.**
+
+* если мы будем смотреть только на основные эффекты, то можем потерять важные части закономерности:
+* значимое взаимодействие затрудняет интерпретацию основных эффектов
+
+<center>
+<figure>
+<img src="pics/interaction_main.jpg">
+</figure>
+</center>
+
+> При планировании исследования сразу подумайте, как вы будете анализировать данные --- что будет входить в модель в качестве основных предикторов, что в качестве ковариат, и какие взаимодействия в ней будут.
+
+## Partial $\eta^2$
+
+$$
+\eta^2_p = \frac{\text{SS}_X}{\text{SS}_X + \text{SS}_e}
+$$
+
+## Повторные измерения
+
+* внутригрупповые эффекты --- каждый респондент проходит все условия эксперимента
+* наблюдения связаны друг с другом
+* нарушается допущение о независимости наблюдений
+* возникает **дисперсионный анализ с повторными измерениями (repeated measures ANOVA, rm ANOVA)**
+
+## Сферичность
+
+* допущение о том, что дисперсии разностей между всеми парами уровней фактора равны
+* его нарушение приводит к увеличению вероятности ошибки I рода
+
+
+## Типы сумм квадратов
+
+* **Первый (I) тип** сумм квадратов
+    * последовательные тесты
+    * величина эффекта зависит от объёма выборки
+    * результат вычислений зависит от порядка включения факторов в модель
+    * не используется
+* **Второй (II)** тип сумм квадратов
+    * иерархические тесты
+    * результаты не зависят от порядка включения факторов в модель
+    * величина эффекта зависит от объема выборки
+    * хорошо работает на сбалансированных данных
+* **Третий (III) тип** сумм квадратов
+    * проводит частные тесты
+    * результаты не зависят от порядка включения факторов в модель
+    * результаты не зависят от объёма выборки.
+    * используют в случае несбалансированных данных
+
+## Когда какой тип использовать?
+
+* Если у нас экспериментальный дизайн исследования
+    * на уровне планирования сделано всё возможное, чтобы группы были уравнены
+    * у нас есть возможность добрать испытуемых
+    * по умолчанию используем II тип суммы квадратов
+* Если же у нас, например, опросниковое исследование или такой дизайн, где респонденты разбиваются на группы post factum
+    * мы не можем гарантировать, что эти группы окажутся равными по численности
+    * используем III типа суммы квадратов
+
+
+## Конкретные различия
+
+* даже при наличии нескольких групп наблюдений нас могут интересовать только конкретные различия
+
+Пусть есть ситуация исследования в области образования
+
+* Задача --- понять, как сказывается на качестве образования комбинация разных форматов обучения
+* Целевая переменная --- итоговый балл студента по курсу
+* Три академические группы студентов:
+    * в одной --- лекции ($\text{L}$)
+    * во второй --- групповая дискуссия ($\text{G}$)
+    * в третьей --- комбинированный формат (и лекции, и групповая дискуссия --- $\text{C}$).
+
+Нас не интересуют различия между группами $\text{L}$ и $\text{G}$ --- обе эти группы выступают как контрольные.
+
+Интересно различие между группами $\text{C}$ и $\text{L+G}$.
+
+## Контрасты
+
+* взять и соединить две группы $\text{L}$ и $\text{G}$ не очень правомерно
+    * могут различаться их средние
+    * необходимо учесть «истинную» (с учетом разделения на эти группы) случайную изменчивость.
+    
+Для этого существуют **контрасты**.
+
+
+## Тестирование гипотез в контрастах
+
+$$
+\begin{split}
+H_0 &: \mu_{\text{C}} = \mu_{\text{L+G}} \\
+H_0 &: \mu_{\text{C}} \neq \mu_{\text{L+G}}
+\end{split}
+$$
+
+$$
+F = \frac{\text{MS}_\text{cont}}{\text{MS}_e},
+$$
+
+* $\text{MS}_e$ --- это случайная изменчивость
+* $\text{MS}_\text{cont}$ --- «контрастная» изменчивость
+
+$$
+\text{SS}_e = \displaystyle \sum_{j = \text{\{L,G,C\}}} \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji}),
+$$
+
+## $\text{MS}_\text{cont}$
+
+$$
+\text{MS}_\text{cont} = \frac{\text{SS}_\text{cont}}{\text{df}_\text{cont}}
+$$
+
+$$
+\text{df}_\text{cont} = 2-1 = 1
+$$
+
+$$
+\begin{split}
+\text{SS}_\text{cont} & = \displaystyle \sum_{j=\{\text{C, L+G}\}} n_j \cdot (\bar y - \bar y_j)^2 = \\
+& = n_\text{C} \cdot (\bar y - \bar y_\text{C})^2 + n_\text{L+G} \cdot (\bar y - \bar y_\text{L+G})^2 = \\
+&= n_\text{C} \cdot (\bar y - \bar y_\text{C})^2 + (n_\text{L} + n_\text{G}) \cdot \lp \bar y - \frac{\bar y_\text{L} + \bar y_\text{G}}{2} \rp ^2
+\end{split}
+$$
+
+## Для групп $\text{C}$ и $\text{G}$
+
+$$
+\begin{split}
+H_0 &: \mu_{\text{C}} = \mu_{\text{G}} \\
+H_0 &: \mu_{\text{C}} \neq \mu_{\text{G}}
+\end{split}
+$$
+
+$$
+F = \frac{\text{MS}_\text{cont}}{\text{MS}_e},
+$$
+
+$$
+\text{SS}_e = \displaystyle \sum_{j = \text{\{L,G,C\}}} \sum_{i=1}^{n_j} (\bar y_j - \bar y_{ji}),
+$$
+
+$$
+\text{MS}_\text{cont} = \frac{\text{SS}_\text{cont}}{\text{df}_\text{cont}}
+$$
+
+$$
+\begin{split}
+\text{SS}_\text{cont} & = \displaystyle \sum_{j=\{\text{C,G}\}} n_j \cdot (\bar y - \bar y_j)^2 = \\
+& = n_\text{C} \cdot (\bar y - \bar y_\text{C})^2 + n_\text{G} \cdot (\bar y - \bar y_\text{G})^2
+\end{split}
+$$
+
+## Контрасты и попарные сравнения
+
+* в случае контрастов мы делаем конкретные сравнения либо группами наблюдений
+* делать попарные сравнения нам не нужно
+* результаты контрастов уже показывают интересующие нас различия
+
+
+# L9.3 // Ковариационный анализ
+
+## Модель ковариационного анализа
+
+* **analysis of covariance, ANCOVA**
+* модель множественной линейной регрессии без взаимодействия дискретных и непрерывных предикторов
+* модель дисперсионного анализа, в которую включён (включены) один или несколько непрерывных предикторов
+* непрерывный предиктор называется **ковариатой**
+
+$$
+\hat y_i = b_0 + b_1 I + b_2 x_2 = b_0 + b_1 x_1 + b_2 x_2
+$$
+
+* $x_1$ --- категориальный предиктор (принимает значения $0$ и $1$)
+* $x_2$ --- ковариата, или непрерывный предиктор
+
+## Зачем ковариационный анализ?
+
+* на целевую переменную могут влиять, помимо интересующих нас факторов, еще и другие
+* различия, обнаруживаемые нами в ходе дисперсионного анализа, могут быть связаны не с влиянием фактора, а с действием каких-либо сторонних переменных
+* введение ковариаты позволяет учесть действие таких переменных
+* ковариата объяснит часть дисперсии данных
+* возможно, значимость фактора пропадет
 
 ## Итоги
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+- Параметризация индикаторов и параметризация эффектов
+- Тестирование гипотез в однофакторной дисперсионной анализе
+- Попарные сравнения
+- Многофакторный дисперсионный анализ и взаимодействие факторов
+- Контрасты
+- Ковариаты и ковариационнный анализ
 
 
-# L9. Дисперсионный анализ. Ковариационный анализ {#end}
+# L9 // Дисперсионный анализ. Ковариационный анализ {#end}
 
 :::: {.quarto-title-authors}
 ::: {.quarto-title-author}
