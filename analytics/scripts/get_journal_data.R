@@ -53,7 +53,7 @@ c_journal %>%
 
 ## homeworks
 journal %>% 
-  select(ID, Stream, starts_with("HW")) -> hw_journal
+  select(ID, Stream, matches("^HW\\d+")) -> hw_journal
 
 ## homeworks not submitted
 hw_journal %>% 
