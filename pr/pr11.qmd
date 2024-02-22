@@ -5,6 +5,39 @@
 REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs, eval=TRUE}
+library(tidyverse)
+theme_set(theme_bw())
+library(ez)
+library(multcomp)
+library(car)
+```
+
+::: {.callout-note}
+## Основной датасет
+
+Сегодня мы вновь обратимся к данным [share](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/share.csv) --- это тот самый поведенческий эксперимент, с которым мы работали на четвертой практике и в пятой домашке.
+
+> В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов --- других иконок, которые для обеих платформ отрисованы одинаково. Целевой стимул (**внутригрупповая переменная**) мог быть один --- два условия: иконка iOS (Outgoing Tray, `tray`) и иконка Android (Three Dots, `dots`) --- или их могло быть два --- и тот, и другой. Дополнительно варьировалось количество стимулов в пробе (**внутригрупповая переменная**) --- 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) --- от начала пробы до клика испытуемого --- а также координаты клика для вычисления точности поиска. Дополнительно были записаны данные об используемой платформе смартфона (**межгрупповая переменная**) --- iOS или Android.
+
+**Переменные в датасете:**
+
+* `id` --- идентификатор испытуемого
+* `trialtype` --- тип пробы (`dots` / `tray` / `both`)
+* `setsize` --- количество стимулов в пробе (`8` / `12` / `16`)
+* `platform` --- платформа, которой пользуется испытуемый (`ios` / `android`)
+* `time1` --- время первого клика, с
+* `time2` --- время второго клика, с
+* `correct1` --- является ли первый клик верным
+* `correct2` --- является ли второй клик верным
+
+:::
+
 ## Основные задания {#pr11_main}
 
 ### #1
@@ -28,7 +61,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-1-hints">
 
 <summary>Подсказки</summary>
@@ -77,7 +110,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-2-hints">
 
 <summary>Подсказки</summary>
@@ -124,7 +157,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-3-hints">
 
 <summary>Подсказки</summary>
@@ -171,7 +204,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-4-hints">
 
 <summary>Подсказки</summary>
@@ -218,7 +251,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-5-hints">
 
 <summary>Подсказки</summary>
@@ -265,7 +298,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-6-hints">
 
 <summary>Подсказки</summary>
@@ -312,7 +345,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-7-hints">
 
 <summary>Подсказки</summary>
@@ -359,7 +392,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-8-hints">
 
 <summary>Подсказки</summary>
@@ -406,7 +439,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-9-hints">
 
 <summary>Подсказки</summary>
@@ -453,7 +486,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-10-hints">
 
 <summary>Подсказки</summary>
@@ -500,7 +533,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-11-hints">
 
 <summary>Подсказки</summary>
@@ -547,7 +580,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-12-hints">
 
 <summary>Подсказки</summary>
@@ -594,7 +627,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-13-hints">
 
 <summary>Подсказки</summary>
@@ -641,7 +674,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-14-hints">
 
 <summary>Подсказки</summary>
@@ -688,7 +721,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-15-hints">
 
 <summary>Подсказки</summary>
@@ -735,7 +768,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-16-hints">
 
 <summary>Подсказки</summary>
@@ -782,7 +815,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-17-hints">
 
 <summary>Подсказки</summary>
@@ -829,7 +862,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-18-hints">
 
 <summary>Подсказки</summary>
@@ -876,7 +909,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-19-hints">
 
 <summary>Подсказки</summary>
@@ -923,7 +956,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-20-hints">
 
 <summary>Подсказки</summary>
@@ -972,7 +1005,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-21-hints">
 
 <summary>Подсказки</summary>
@@ -1019,7 +1052,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-22-hints">
 
 <summary>Подсказки</summary>
@@ -1066,7 +1099,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-23-hints">
 
 <summary>Подсказки</summary>
@@ -1113,7 +1146,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-24-hints">
 
 <summary>Подсказки</summary>
@@ -1160,7 +1193,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-25-hints">
 
 <summary>Подсказки</summary>
@@ -1207,7 +1240,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-26-hints">
 
 <summary>Подсказки</summary>
@@ -1254,7 +1287,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-27-hints">
 
 <summary>Подсказки</summary>
@@ -1301,7 +1334,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-28-hints">
 
 <summary>Подсказки</summary>
@@ -1348,7 +1381,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-29-hints">
 
 <summary>Подсказки</summary>
@@ -1395,7 +1428,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr11-30-hints">
 
 <summary>Подсказки</summary>

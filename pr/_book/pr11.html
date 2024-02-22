@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -79,6 +80,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -324,6 +352,33 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Основной датасет
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы вновь обратимся к данным <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/share.csv">share</a> — это тот самый поведенческий эксперимент, с которым мы работали на четвертой практике и в пятой домашке.</p>
+<blockquote class="blockquote">
+<p>В исследовании изучался зрительный поиск иконок различных платформ смартфонов. Испытуемым надо было искать иконки поделиться (share) iOS и Android среди дисктракторов — других иконок, которые для обеих платформ отрисованы одинаково. Целевой стимул (<strong>внутригрупповая переменная</strong>) мог быть один — два условия: иконка iOS (Outgoing Tray, <code>tray</code>) и иконка Android (Three Dots, <code>dots</code>) — или их могло быть два — и тот, и другой. Дополнительно варьировалось количество стимулов в пробе (<strong>внутригрупповая переменная</strong>) — 8, 12, 16. Фиксировалось время поиска целевого стимула (время реакции) — от начала пробы до клика испытуемого — а также координаты клика для вычисления точности поиска. Дополнительно были записаны данные об используемой платформе смартфона (<strong>межгрупповая переменная</strong>) — iOS или Android.</p>
+</blockquote>
+<p><strong>Переменные в датасете:</strong></p>
+<ul>
+<li><code>id</code> — идентификатор испытуемого</li>
+<li><code>trialtype</code> — тип пробы (<code>dots</code> / <code>tray</code> / <code>both</code>)</li>
+<li><code>setsize</code> — количество стимулов в пробе (<code>8</code> / <code>12</code> / <code>16</code>)</li>
+<li><code>platform</code> — платформа, которой пользуется испытуемый (<code>ios</code> / <code>android</code>)</li>
+<li><code>time1</code> — время первого клика, с</li>
+<li><code>time2</code> — время второго клика, с</li>
+<li><code>correct1</code> — является ли первый клик верным</li>
+<li><code>correct2</code> — является ли второй клик верным</li>
+</ul>
+</div>
+</div>
 <section id="pr11_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr11_main">Основные задания</h2>
 <section id="section" class="level3">
@@ -342,7 +397,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-1-hints">
 <summary>
 Подсказки
@@ -382,7 +437,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-2-hints">
 <summary>
 Подсказки
@@ -421,7 +476,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-3-hints">
 <summary>
 Подсказки
@@ -460,7 +515,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-4-hints">
 <summary>
 Подсказки
@@ -499,7 +554,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-5-hints">
 <summary>
 Подсказки
@@ -538,7 +593,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-6-hints">
 <summary>
 Подсказки
@@ -577,7 +632,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-7-hints">
 <summary>
 Подсказки
@@ -616,7 +671,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-8-hints">
 <summary>
 Подсказки
@@ -655,7 +710,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-9-hints">
 <summary>
 Подсказки
@@ -694,7 +749,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-10-hints">
 <summary>
 Подсказки
@@ -733,7 +788,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-11-hints">
 <summary>
 Подсказки
@@ -772,7 +827,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-12-hints">
 <summary>
 Подсказки
@@ -811,7 +866,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-13-hints">
 <summary>
 Подсказки
@@ -850,7 +905,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-14-hints">
 <summary>
 Подсказки
@@ -889,7 +944,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-15-hints">
 <summary>
 Подсказки
@@ -928,7 +983,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-16-hints">
 <summary>
 Подсказки
@@ -967,7 +1022,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-17-hints">
 <summary>
 Подсказки
@@ -1006,7 +1061,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-18-hints">
 <summary>
 Подсказки
@@ -1045,7 +1100,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-19-hints">
 <summary>
 Подсказки
@@ -1084,7 +1139,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-20-hints">
 <summary>
 Подсказки
@@ -1126,7 +1181,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-21-hints">
 <summary>
 Подсказки
@@ -1165,7 +1220,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-22-hints">
 <summary>
 Подсказки
@@ -1204,7 +1259,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-23-hints">
 <summary>
 Подсказки
@@ -1243,7 +1298,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-24-hints">
 <summary>
 Подсказки
@@ -1282,7 +1337,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-25-hints">
 <summary>
 Подсказки
@@ -1321,7 +1376,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-26-hints">
 <summary>
 Подсказки
@@ -1360,7 +1415,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-27-hints">
 <summary>
 Подсказки
@@ -1399,7 +1454,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-28-hints">
 <summary>
 Подсказки
@@ -1438,7 +1493,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-29-hints">
 <summary>
 Подсказки
@@ -1477,7 +1532,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr11-30-hints">
 <summary>
 Подсказки
@@ -1780,27 +1835,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1815,10 +1849,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1827,8 +1865,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
