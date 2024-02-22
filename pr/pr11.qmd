@@ -994,10 +994,13 @@ d. Сравните результаты тестирования гипотез
 fev <- read_tsv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/fev.txt")
 str(fev)
 
+## b
 fev_ind <- lm(FEV ~ Smoker * Sex, fev)
 fev_eff <- lm(FEV ~ Smoker * Sex, fev,
               contrasts = list(Smoker = "contr.sum",
                                Sex = "contr.sum"))
+
+## d
 car::Anova(fev_ind, type = "II")
 car::Anova(fev_eff, type = "II")
 car::Anova(fev_ind, type = "III")
