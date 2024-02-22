@@ -85,7 +85,8 @@ ezANOVA(data = share_agg,
 # 11
 pairwise.t.test(x = share_agg$rt,
                 g = share_agg$setsize,
-                paired = TRUE)
+                paired = TRUE,
+                p.adjust.method = "bonf")
 
 
 # 12
