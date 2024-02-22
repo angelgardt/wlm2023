@@ -1160,7 +1160,10 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#19</h3>
 <p><img id="pr11-19-level" class="level"></p>
 <div id="pr11-19-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте модель, соотвутствующую получившейся в предыдущем задании визуализации.</li>
+<li>Проверьте, можно ли упростить эту модель. с. Если это возможно, упростите и проинтерпретируйте результаты.</li>
+</ol>
 </div>
 <div id="pr11-19-autocheck" class="autocheck">
 <div id="pr11-19-ir" class="input-requirements">
@@ -1241,18 +1244,50 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 </section>
 <section id="pr11_add" class="level2">
 <h2 class="anchored" data-anchor-id="pr11_add">Дополнительные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Новый датасет
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Пришло время уделить внимание контрастам!</p>
+<p>Для этого возьмем лингвистические данные. Если быть более точным, то это <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv">фонетические данные о гласных русского языка</a>.</p>
+<p>Нас будут интересовать следующие переменные:</p>
+<ul>
+<li><code>duration</code> — длительность гласного</li>
+<li><code>reduction</code> — степень редукции (<code>no</code> — нет редукции, <code>first</code> — первая ступень редукции, <code>second</code> — вторая ступень редукции)</li>
+<li><code>position</code> — позиция гласного (<code>S</code> — ударный гласный, <code>I</code> — абсолютное начало слова, <code>R</code> — предударный слог, <code>T</code> — заударный слог, <code>F</code> — абсолютный конце слова, <code>O</code> — остальные слоги).</li>
+</ul>
+<p>Минимальная теория, которую нужно знать, чтобы понимать происходящее в данных:</p>
+<ul>
+<li>в русском языке есть редукция гласных
+<ul>
+<li>если на гласный <em>падает ударение</em>, то он не редуцируется</li>
+<li>если он стоит в <em>абсолютном начале слова</em> или <em>в предударном слоге</em>, то наступает первая ступень редукции</li>
+<li>если он стоит в <em>любом другом месте</em>, то наступает вторая ступень редукции</li>
+</ul></li>
+<li>редукция гласного обозначает уменьшение его длительности<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+<ul>
+<li>нередуцированные гласные наиболее длительные</li>
+<li>гласные в первой ступени редукции короче нередуцированных</li>
+<li>гласные во второй ступени редукции короче гласных в первой ступени редукции</li>
+</ul></li>
+</ul>
+</div>
+</div>
 <section id="section-18" class="level3">
 <h3 class="anchored" data-anchor-id="section-18">#1</h3>
 <p><img id="pr11-21-level" class="level"></p>
 <div id="pr11-21-task" class="task">
-<p>Пришло время уделить внимание контрастам!</p>
-<p>Для этого возьмем лингвистические данные. Если быть более точным, то это фонетические данные о гласных русского языка.</p>
-<p>Нас будут интересовать следующие переменные:</p>
-<ul>
-<li><code>duration</code> — длительность гласного</li>
-<li><code>reduction</code> — степень редукции</li>
-<li><code>position</code> — позиция гласного (<code>S</code> — ударный гласный, <code>I</code> — абсолютное начало слова, <code>R</code> — предударный слог, <code>T</code> — заударный слог, <code>F</code> — абсолютный конце слова, <code>O</code> — остальные слоги)</li>
-</ul>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv">данные</a>.</li>
+<li>Посмотрите их структуру.</li>
+<li>Приведите переменные <code>reduction</code> и <code>position</code> к факторам — это необходимо для задания контрастов.</li>
+</ol>
 </div>
 <div id="pr11-21-autocheck" class="autocheck">
 <div id="pr11-21-ir" class="input-requirements">
@@ -1291,7 +1326,10 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-19">#2</h3>
 <p><img id="pr11-22-level" class="level"></p>
 <div id="pr11-22-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Визуализируйте зависимость длительности гласного (<code>duration</code>) от степени редукции (<code>reduction</code>).</li>
+<li>Если ли что-то странное на графике?</li>
+</ol>
 </div>
 <div id="pr11-22-autocheck" class="autocheck">
 <div id="pr11-22-ir" class="input-requirements">
@@ -1330,7 +1368,10 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-20">#3</h3>
 <p><img id="pr11-23-level" class="level"></p>
 <div id="pr11-23-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Визуализируйте зависимость длительности гласного (<code>duration</code>) от степени редукции (<code>reduction</code>) и позиции в слове (<code>position</code>).</li>
+<li>Почему наблюдалась такая ситуация на предыдущем графике?</li>
+</ol>
 </div>
 <div id="pr11-23-autocheck" class="autocheck">
 <div id="pr11-23-ir" class="input-requirements">
@@ -1369,7 +1410,8 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-21">#4</h3>
 <p><img id="pr11-24-level" class="level"></p>
 <div id="pr11-24-task" class="task">
-<p>Текст задания.</p>
+<p>Нас интересует следующей вопрос: <em>отличается ли длительность нередуцированных гласных от длительности всех остальных (редуцированных)?</em></p>
+<p>Задайте соответствующие контрасты для переменной <code>reduction</code>.</p>
 </div>
 <div id="pr11-24-autocheck" class="autocheck">
 <div id="pr11-24-ir" class="input-requirements">
@@ -1408,7 +1450,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-22">#5</h3>
 <p><img id="pr11-25-level" class="level"></p>
 <div id="pr11-25-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезу о различии длительности редуцированных и нередуцированных гласных с помощью заданных ранее контрастов.</p>
 </div>
 <div id="pr11-25-autocheck" class="autocheck">
 <div id="pr11-25-ir" class="input-requirements">
@@ -1447,7 +1489,8 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-23">#6</h3>
 <p><img id="pr11-26-level" class="level"></p>
 <div id="pr11-26-task" class="task">
-<p>Текст задания.</p>
+<p>Теперь нас заинтересовал следующей вопрос: <em>отличается ли длительность нередуцированных гласных от длительности гласных первой супени редукции?</em></p>
+<p>Добавьте соответствующие контрасты для переменной <code>reduction</code>.</p>
 </div>
 <div id="pr11-26-autocheck" class="autocheck">
 <div id="pr11-26-ir" class="input-requirements">
@@ -1486,7 +1529,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-24">#7</h3>
 <p><img id="pr11-27-level" class="level"></p>
 <div id="pr11-27-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезу о различии длительности нередуцированных гласных и гласных первой ступени редукции с помощью заданных выше контрастов.</p>
 </div>
 <div id="pr11-27-autocheck" class="autocheck">
 <div id="pr11-27-ir" class="input-requirements">
@@ -1525,7 +1568,9 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-25">#8</h3>
 <p><img id="pr11-28-level" class="level"></p>
 <div id="pr11-28-task" class="task">
-<p>Текст задания.</p>
+<p>В группе гласных второй ступени редукции выделяются гласные абсолютного конца слова — по графику они оказываются более длительными, чем другие гласные второй ступени редукции.</p>
+<p>Вопрос: отличается ли длительной гласных в абсолютном конце слова (<code>F</code>) от длительности других гласных второй ступени редукции (<code>T + O</code>)?</p>
+<p>Задайте соответствующие контрасты для переменной <code>position</code>.</p>
 </div>
 <div id="pr11-28-autocheck" class="autocheck">
 <div id="pr11-28-ir" class="input-requirements">
@@ -1564,7 +1609,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-26">#9</h3>
 <p><img id="pr11-29-level" class="level"></p>
 <div id="pr11-29-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезу об отличии длительности гласных абсолютного конца слова от длительности других гласных второй ступени редукции с помощью заданных выше контрастов.</p>
 </div>
 <div id="pr11-29-autocheck" class="autocheck">
 <div id="pr11-29-ir" class="input-requirements">
@@ -1603,7 +1648,11 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-27">#10</h3>
 <p><img id="pr11-30-level" class="level"></p>
 <div id="pr11-30-task" class="task">
-<p>Текст задания.</p>
+<p>Ну, и последний вопрос к конрастам: отличается ли длительность ударных гласных (<code>S</code>) от длительности предударных и заударных гласных (<code>R + T</code>)?</p>
+<ol type="a">
+<li>Задайте соответствующие контрасты для переменной <code>position</code>.</li>
+<li>Протестируйте гипотезу об отличии длительности ударных гласных от длительности предударных и заударных с помощью заданных контрастов.</li>
+</ol>
 </div>
 <div id="pr11-30-autocheck" class="autocheck">
 <div id="pr11-30-ir" class="input-requirements">
@@ -1648,6 +1697,7 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <hr>
 <ol>
 <li id="fn1"><p>Объём воздуха, выдыхаемого за первую секунду манёвра форсированного выдоха. Используется для расчёта индекса наличия/отсутствия ухудшения проходимости дыхательных путей.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>А также изменение спектрального состава, но здесь мы это рассматривать не будем.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

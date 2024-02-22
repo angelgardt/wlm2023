@@ -1108,7 +1108,9 @@ fev %>%
 <img id="pr11-19-level" class="level"/>
 
 ::: {#pr11-19-task .task}
-Текст задания.
+a. Постройте модель, соотвутствующую получившейся в предыдущем задании визуализации.
+b. Проверьте, можно ли упростить эту модель.
+с. Если это возможно, упростите и проинтерпретируйте результаты.
 :::
 
 ```{r}
@@ -1217,37 +1219,51 @@ ez_mix %>% psychReport::aovEffectSize() %>% .$ANOVA %>% write_excel_csv("ez_mix.
 
 ## Дополнительные задания {#pr11_add}
 
+:::{.callout-note}
+
+## Новый датасет
+
+Пришло время уделить внимание контрастам!
+
+Для этого возьмем лингвистические данные. Если быть более точным, то это [фонетические данные о гласных русского языка](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv).
+
+Нас будут интересовать следующие переменные:
+
+- `duration` --- длительность гласного
+- `reduction` --- степень редукции (`no` --- нет редукции, `first` --- первая ступень редукции, `second` --- вторая ступень редукции)
+- `position` --- позиция гласного (`S` --- ударный гласный, `I` --- абсолютное начало слова, `R` --- предударный слог, `T` --- заударный слог, `F` --- абсолютный конце слова, `O` --- остальные слоги).
+
+Минимальная теория, которую нужно знать, чтобы понимать происходящее в данных:
+
+- в русском языке есть редукция гласных
+    - если на гласный *падает ударение*, то он не редуцируется
+    - если он стоит в *абсолютном начале слова* или *в предударном слоге*, то наступает первая ступень редукции
+    - если он стоит в *любом другом месте*, то наступает вторая ступень редукции
+- редукция гласного обозначает уменьшение его длительности[^reduction]
+    - нередуцированные гласные наиболее длительные
+    - гласные в первой ступени редукции короче нередуцированных
+    - гласные во второй ступени редукции короче гласных в первой ступени редукции
+
+[^reduction]: А также изменение спектрального состава, но здесь мы это рассматривать не будем.
+
+:::
+
 ### #1
 
 <img id="pr11-21-level" class="level"/>
 
 ::: {#pr11-21-task .task}
-Пришло время уделить внимание контрастам!
-
-Для этого возьмем лингвистические данные. Если быть более точным, то это фонетические данные о гласных русского языка.
-
-Нас будут интересовать следующие переменные:
-
-- `duration` --- длительность гласного
-- `reduction` --- степень редукции 
-- `position` --- позиция гласного (`S` --- ударный гласный, `I` --- абсолютное начало слова, `R` --- предударный слог, `T` --- заударный слог, `F` --- абсолютный конце слова, `O` --- остальные слоги)
-
-
-
+a. Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv).
+b. Посмотрите их структуру.
+c. Приведите переменные `reduction` и `position` к факторам --- это необходимо для задания контрастов.
 :::
 
 ```{r}
 vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv")
-str(vowels)
-unique(vowels$reduction)
-unique(vowels$position)
 
 vowels %>% 
-  mutate(reduction = recode(reduction,
-                            "no" = "1",
-                            "first" = "2",
-                            "second" = "3"))
-
+  mutate(reduction = as_factor(reduction),
+         position = as_factor(position)) -> vowels
 ```
 
 ::: {#pr11-21-autocheck .autocheck}
@@ -1294,8 +1310,15 @@ vowels %>%
 <img id="pr11-22-level" class="level"/>
 
 ::: {#pr11-22-task .task}
-Текст задания.
+a. Визуализируйте зависимость длительности гласного (`duration`) от степени редукции (`reduction`).
+b. Если ли что-то странное на графике?
 :::
+
+```{r}
+vowels %>% 
+  ggplot(aes(reduction, duration)) +
+  stat_summary(geom = "pointrange", fun.data = mean_cl_boot)
+```
 
 ::: {#pr11-22-autocheck .autocheck}
 ::: {#pr11-22-ir .input-requirements}
@@ -1341,8 +1364,16 @@ vowels %>%
 <img id="pr11-23-level" class="level"/>
 
 ::: {#pr11-23-task .task}
-Текст задания.
+a. Визуализируйте зависимость длительности гласного (`duration`) от степени редукции (`reduction`) и позиции в слове (`position`).
+b. Почему наблюдалась такая ситуация на предыдущем графике?
 :::
+
+```{r}
+vowels %>% 
+  ggplot(aes(reduction, duration, color = position)) +
+  stat_summary(geom = "pointrange", fun.data = mean_cl_boot,
+               position = position_dodge(.3))
+```
 
 ::: {#pr11-23-autocheck .autocheck}
 ::: {#pr11-23-ir .input-requirements}
@@ -1388,8 +1419,15 @@ vowels %>%
 <img id="pr11-24-level" class="level"/>
 
 ::: {#pr11-24-task .task}
-Текст задания.
+Нас интересует следующей вопрос: *отличается ли длительность нередуцированных гласных от длительности всех остальных (редуцированных)?*
+
+Задайте соответствующие контрасты для переменной `reduction`.
 :::
+
+```{r}
+levels(vowels$reduction)
+contrasts(vowels$reduction) <- c(-.5, 1, -.5)
+```
 
 ::: {#pr11-24-autocheck .autocheck}
 ::: {#pr11-24-ir .input-requirements}
@@ -1435,8 +1473,15 @@ vowels %>%
 <img id="pr11-25-level" class="level"/>
 
 ::: {#pr11-25-task .task}
-Текст задания.
+Протестируйте гипотезу о различии длительности редуцированных и нередуцированных гласных с помощью заданных ранее контрастов.
 :::
+
+```{r}
+reduction_contr <- aov(duration ~ reduction, vowels)
+summary(reduction_conts)
+summary(reduction_conts,
+        split = list(reduction = list("no vs other" = 1)))
+```
 
 ::: {#pr11-25-autocheck .autocheck}
 ::: {#pr11-25-ir .input-requirements}
@@ -1482,8 +1527,18 @@ vowels %>%
 <img id="pr11-26-level" class="level"/>
 
 ::: {#pr11-26-task .task}
-Текст задания.
+Теперь нас заинтересовал следующей вопрос: *отличается ли длительность нередуцированных гласных от длительности гласных первой супени редукции?*
+
+Добавьте соответствующие контрасты для переменной `reduction`.
 :::
+
+```{r}
+levels(vowels$reduction)
+no_vs_other <- c(-.5, 1, -.5)
+no_vs_first <- c(-1, 1, 0)
+cont_mat <- cbind(no_vs_other, no_vs_first)
+contrasts(vowels$reduction) <- cont_mat
+```
 
 ::: {#pr11-26-autocheck .autocheck}
 ::: {#pr11-26-ir .input-requirements}
@@ -1529,8 +1584,16 @@ vowels %>%
 <img id="pr11-27-level" class="level"/>
 
 ::: {#pr11-27-task .task}
-Текст задания.
+Протестируйте гипотезу о различии длительности нередуцированных гласных и гласных первой ступени редукции с помощью заданных выше контрастов.
 :::
+
+```{r}
+reduction_contr2 <- aov(duration ~ reduction, vowels)
+summary(reduction_conts2)
+summary(reduction_conts2,
+        split = list(reduction = list("no vs other" = 1,
+                                      "no vs first" = 2)))
+```
 
 ::: {#pr11-27-autocheck .autocheck}
 ::: {#pr11-27-ir .input-requirements}
@@ -1576,8 +1639,17 @@ vowels %>%
 <img id="pr11-28-level" class="level"/>
 
 ::: {#pr11-28-task .task}
-Текст задания.
+В группе гласных второй ступени редукции выделяются гласные абсолютного конца слова --- по графику они оказываются более длительными, чем другие гласные второй ступени редукции.
+
+Вопрос: отличается ли длительной гласных в абсолютном конце слова (`F`) от длительности других гласных второй ступени редукции (`T + O`)?
+
+Задайте соответствующие контрасты для переменной `position`.
 :::
+
+```{r}
+levels(vowels$position)
+contrasts(vowels$position) <- c(0, 0, .5, -1, 0, .5)
+```
 
 ::: {#pr11-28-autocheck .autocheck}
 ::: {#pr11-28-ir .input-requirements}
@@ -1623,8 +1695,15 @@ vowels %>%
 <img id="pr11-29-level" class="level"/>
 
 ::: {#pr11-29-task .task}
-Текст задания.
+Протестируйте гипотезу об отличии длительности гласных абсолютного конца слова от длительности других гласных второй ступени редукции с помощью заданных выше контрастов.
 :::
+
+```{r}
+position_contr <- aov(duration ~ position, vowels)
+summary(position_contr)
+summary(position_contr,
+        split = list(position = list("F vs T+O" = 1)))
+```
 
 ::: {#pr11-29-autocheck .autocheck}
 ::: {#pr11-29-ir .input-requirements}
@@ -1670,8 +1749,21 @@ vowels %>%
 <img id="pr11-30-level" class="level"/>
 
 ::: {#pr11-30-task .task}
-Текст задания.
+
+Ну, и последний вопрос к конрастам: отличается ли длительность ударных гласных (`S`) от длительности предударных и заударных гласных (`R + T`)?
+
+a. Задайте соответствующие контрасты для переменной `position`.
+b. Протестируйте гипотезу об отличии длительности ударных гласных от длительности предударных и заударных с помощью заданных контрастов.
 :::
+
+```{r}
+levels(vowels$position)
+contrasts(vowels$position) <- c(0, -1, .5, 0, .5, 0)
+position_contr2 <- aov(duration ~ position, vowels)
+summary(position_contr)
+summary(position_contr,
+        split = list(position = list("S vs R+T" = 1)))
+```
 
 ::: {#pr11-30-autocheck .autocheck}
 ::: {#pr11-30-ir .input-requirements}
