@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -78,35 +112,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -377,6 +382,25 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <li><code>correct1</code> — является ли первый клик верным</li>
 <li><code>correct2</code> — является ли второй клик верным</li>
 </ul>
+<p>Мы будем изучать время реакции на первом клике, так как это наиболее соответствует гипотезам дисперсионного анализа.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Пакеты
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня нам понадобятся пакеты <code>car</code>, <code>ez</code> и <code>multcomp</code>. Проверьте, какие из них установлены на вашем компьютере, если какие-либо отсутствуют, установите их.</p>
+<p>Можно совместить проверку и установку c помощью следующего кода:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"car"</span>, <span class="st">"ez"</span>, <span class="st">"multcomp"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs[<span class="sc">!</span>(pkgs <span class="sc">%in%</span> <span class="fu">installed.packages</span>())])</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <section id="pr11_main" class="level2">
@@ -385,7 +409,14 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr11-1-level" class="level"></p>
 <div id="pr11-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/share.csv">данные</a> в объект <code>share</code>.</li>
+<li>Вспомните их структуру.</li>
+</ol>
+<p>Мы не будем анализировать пробы с двумя целевыми стимулами, а также стоит исключить из рассмотрения пробы, в которых первый клик был некорректен.</p>
+<ol start="3" type="a">
+<li>Отберите из данных корректные пробы с одним целевым стимулом. Перезапишите объект <code>share</code>.</li>
+</ol>
 </div>
 <div id="pr11-1-autocheck" class="autocheck">
 <div id="pr11-1-ir" class="input-requirements">
@@ -424,8 +455,8 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr11-2-level" class="level"></p>
 <div id="pr11-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Данные хоть и предобработаны, однако представлены в <em>неаггрегированным виде</em>: одна строка соответствует одной пробе в отдельном сочетании условий. Использовать такие данные в дисперсионном анализе некорректно, так как это будет приводить к завышению оценок эффектов факторов.</p>
+<p>Аггрегируйте данные по времени реакции (<code>time1</code>) с учетом всех (квази)экспериментальных условий, то есть всех переменных</p>
 </div>
 <div id="pr11-2-autocheck" class="autocheck">
 <div id="pr11-2-ir" class="input-requirements">
