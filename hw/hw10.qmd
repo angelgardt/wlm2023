@@ -10,7 +10,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
 ```
 
-```{r}
+```{r, eval=TRUE}
 library(tidyverse)
 theme_set(theme_bw())
 theme_update(legend.position = "bottom")
@@ -613,15 +613,65 @@ app %>%
 
 ## Дополнительные задания {#hw10_add}
 
+:::{.callout-note}
+
+## Продолжим погружать в фонетические данные
+
+На практике мы работали с [данными о гласных русского языка](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv).
+
+Мы изучали, как различается длительность гласных в зависимости от ступени редукции и позиции в слове. Однако редукция влияет не только длительность гласных но и на их спектральный (частотный) состав. Давайте посмотрим, различаются ли частотные характеристики отдельных гласных в зависимости от ступени редукции.
+
+Нас будут интересовать следующие переменные:
+
+```{r}
+vowels %>% distinct(reduction, phoneme) %>% filter(reduction == 3)
+```
+- `phoneme` --- обозначение фонемы
+    - к нередуцированным гласным относятся `o`, `i`, `a`, `u`, `e`, `ɨ`
+    - к первой ступении --- `ɐ`, `ɪ`, `ʊ`, `ɨ̞`
+    - ко второй ступении --- `ə̝`,`ə`, `əᶷ`
+- `f1` --- частота первой форманты
+- `f2` --- частота второй форманты
+
+Когда-то в домашке по визуализации в одном из дополнительных заданий надо было нарисовать такую картинку, которая отображает вокалической пространство русского языка:
+
+```{r, eval=TRUE}
+vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw5/vowels.csv")
+
+vowels %>% 
+  ggplot(aes(f2, f1,
+             label = phoneme, color = phoneme)) +
+  geom_text(alpha = .5) +
+  stat_ellipse(level = .8) +
+  scale_x_reverse(position = "top") +
+  scale_y_reverse(position="right") +
+  facet_grid(reduction ~ .,
+             labeller = labeller(reduction = c("1" = "Редукция\n отсутствует",
+                                               "2" = "Первая\n степень редукции",
+                                               "3" = "Вторая\n степень редукции"))) +
+  guides(color = "none") +
+  labs(x = "F2",
+       y = "F1")
+```
+
+Но будем решать задачу постепенно.
+
+:::
+
+
 ### #1
 
 <img id="hw10-11-level" class="level"/>
 
 ::: {#hw10-11-task .task}
-Текст задания.
+Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv), приведите переменную `phoneme` к факторному типу данных.
 :::
 
-::: {#hw10-11-autocheck .autocheck}
+```{r, eval=TRUE}
+vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv") %>% 
+  mutate(phoneme = as_factor(phoneme))
+```
+::: {#hw10-11-autocheck .autocheck hidden="true"}
 ::: {#hw10-11-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -634,7 +684,7 @@ app %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw10-11-hints">
 
 <summary>Подсказки</summary>
@@ -665,10 +715,34 @@ app %>%
 <img id="hw10-12-level" class="level"/>
 
 ::: {#hw10-12-task .task}
-Текст задания.
+Чтобы модели не были чрезмерно сложны, возьмем для сравнения только нередуцированные гласные и гласные первой ступени редукции. Нас будут интересовать следующие контрасты:
+
+- `i` vs `ɪ`
+- `e` vs `ɪ`
+- `a` vs `ɐ`
+- `o` vs `ɐ`
+- `u` vs `ʊ`
+
+Создайте матрицу кодировки для этих контрастов.
 :::
 
-::: {#hw10-12-autocheck .autocheck}
+```{r}
+levels(vowels$phoneme)
+# "ɐ"  "o"  "ə̝"  "ə"  "i"  "a"  "əᶷ" "u"  "e"  "ɪ"  "ʊ"  "ɨ"  "ɨ̞" 
+i_vs_ɪ <- c(0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0)
+e_vs_ɪ <- c(0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0, 0, 0)
+a_vs_ɐ <- c(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+o_vs_ɐ <- c(-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+u_vs_ʊ <- c(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0)
+
+contr_mat <- cbind(i_vs_ɪ,
+                   e_vs_ɪ,
+                   a_vs_ɐ,
+                   o_vs_ɐ,
+                   u_vs_ʊ)
+```
+
+::: {#hw10-12-autocheck .autocheck hidden="true"}
 ::: {#hw10-12-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -681,7 +755,7 @@ app %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw10-12-hints">
 
 <summary>Подсказки</summary>
@@ -712,10 +786,21 @@ app %>%
 <img id="hw10-13-level" class="level"/>
 
 ::: {#hw10-13-task .task}
-Текст задания.
+Протестируйте гипотезы о различии частотных характеристик первой форманты (`f1`) по заданным контрастам. Проинтерпретируйте полученные результаты.
 :::
 
-::: {#hw10-13-autocheck .autocheck}
+```{r}
+contrasts(vowels$phoneme) <- contr_mat
+f1_aov <- aov(f1 ~ phoneme, vowels)
+summary(f1_aov,
+        split = list(phoneme = list("i_vs_ɪ" = 1,
+                                    "e_vs_ɪ" = 2,
+                                    "a_vs_ɐ" = 3,
+                                    "o_vs_ɐ" = 4,
+                                    "u_vs_ʊ" = 5)))
+```
+
+::: {#hw10-13-autocheck .autocheck hidden="true"}
 ::: {#hw10-13-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -728,7 +813,7 @@ app %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw10-13-hints">
 
 <summary>Подсказки</summary>
@@ -759,10 +844,20 @@ app %>%
 <img id="hw10-14-level" class="level"/>
 
 ::: {#hw10-14-task .task}
-Текст задания.
+Протестируйте гипотезы о различии частотных характеристик второй форманты (`f2`) по заданным контрастам. Проинтерпретируйте полученные результаты.
 :::
 
-::: {#hw10-14-autocheck .autocheck}
+```{r}
+f2_aov <- aov(f2 ~ phoneme, vowels)
+summary(f2_aov,
+        split = list(phoneme = list("i_vs_ɪ" = 1,
+                                    "e_vs_ɪ" = 2,
+                                    "a_vs_ɐ" = 3,
+                                    "o_vs_ɐ" = 4,
+                                    "u_vs_ʊ" = 5)))
+```
+
+::: {#hw10-14-autocheck .autocheck hidden="true"}
 ::: {#hw10-14-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -775,7 +870,7 @@ app %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw10-14-hints">
 
 <summary>Подсказки</summary>
@@ -806,10 +901,39 @@ app %>%
 <img id="hw10-15-level" class="level"/>
 
 ::: {#hw10-15-task .task}
-Текст задания.
+Визуализируйте полученные результаты. Постройте график, представленный ниже.
 :::
 
-::: {#hw10-15-autocheck .autocheck}
+```{r, eval=TRUE}
+vowels %>% 
+  group_by(phoneme, reduction) %>% 
+  summarise(f1 = mean_cl_boot(f1),
+            f2 = mean_cl_boot(f2)) %>% 
+  unnest() %>% 
+  rename(f1mean = y,
+         f1min = ymin,
+         f1max = ymax,
+         f2mean = y1,
+         f2min = ymin1,
+         f2max = ymax1) %>% 
+  ggplot(aes(f2mean, f1mean, 
+             color = factor(reduction,
+                            ordered = TRUE,
+                            levels = c("no", "first", "second")))) +
+  geom_errorbar(aes(ymin = f1min, 
+                    ymax = f1max)) +
+  geom_errorbar(aes(xmin = f2min, 
+                    xmax = f2max)) +
+  geom_text(aes(label = phoneme), size = 5, color = "black") +
+  scale_x_reverse(position = "top") +
+  scale_y_reverse(position="right") +
+  scale_color_discrete(labels = c("no" = "нет", 
+                                  "first" = "первая",
+                                  "second" = "вторая")) +
+  labs(x = "F2", y = "F1", color = "Ступень редукции")
+```
+
+::: {#hw10-15-autocheck .autocheck hidden="true"}
 ::: {#hw10-15-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -822,7 +946,7 @@ app %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw10-15-hints">
 
 <summary>Подсказки</summary>

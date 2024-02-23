@@ -94,16 +94,67 @@ app %>%
 # ADDITIONAL
 
 # 1
-
+vowels <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv") %>% 
+  mutate(phoneme = as_factor(phoneme))
 
 # 2
+levels(vowels$phoneme)
+# "ɐ"  "o"  "ə̝"  "ə"  "i"  "a"  "əᶷ" "u"  "e"  "ɪ"  "ʊ"  "ɨ"  "ɨ̞" 
+i_vs_ɪ <- c(0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0)
+e_vs_ɪ <- c(0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0, 0, 0)
+a_vs_ɐ <- c(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+o_vs_ɐ <- c(-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+u_vs_ʊ <- c(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0)
 
+contr_mat <- cbind(i_vs_ɪ,
+                   e_vs_ɪ,
+                   a_vs_ɐ,
+                   o_vs_ɐ,
+                   u_vs_ʊ)
 
 # 3
-
+contrasts(vowels$phoneme) <- contr_mat
+f1_aov <- aov(f1 ~ phoneme, vowels)
+summary(f1_aov,
+        split = list(phoneme = list("i_vs_ɪ" = 1,
+                                    "e_vs_ɪ" = 2,
+                                    "a_vs_ɐ" = 3,
+                                    "o_vs_ɐ" = 4,
+                                    "u_vs_ʊ" = 5)))
 
 # 4
-
+f2_aov <- aov(f2 ~ phoneme, vowels)
+summary(f2_aov,
+        split = list(phoneme = list("i_vs_ɪ" = 1,
+                                    "e_vs_ɪ" = 2,
+                                    "a_vs_ɐ" = 3,
+                                    "o_vs_ɐ" = 4,
+                                    "u_vs_ʊ" = 5)))
 
 # 5
-
+vowels %>% 
+  group_by(phoneme, reduction) %>% 
+  summarise(f1 = mean_cl_boot(f1),
+            f2 = mean_cl_boot(f2)) %>% 
+  unnest() %>% 
+  rename(f1mean = y,
+         f1min = ymin,
+         f1max = ymax,
+         f2mean = y1,
+         f2min = ymin1,
+         f2max = ymax1) %>% 
+  ggplot(aes(f2mean, f1mean, 
+             color = factor(reduction,
+                            ordered = TRUE,
+                            levels = c("no", "first", "second")))) +
+  geom_errorbar(aes(ymin = f1min, 
+                    ymax = f1max)) +
+  geom_errorbar(aes(xmin = f2min, 
+                    xmax = f2max)) +
+  geom_text(aes(label = phoneme), size = 5, color = "black") +
+  scale_x_reverse(position = "top") +
+  scale_y_reverse(position="right") +
+  scale_color_discrete(labels = c("no" = "нет", 
+                                  "first" = "первая",
+                                  "second" = "вторая")) +
+  labs(x = "F2", y = "F1", color = "Ступень редукции")
