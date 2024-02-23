@@ -784,13 +784,49 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 </section>
 <section id="hw10_add" class="level2">
 <h2 class="anchored" data-anchor-id="hw10_add">Дополнительные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Продолжим погружать в фонетические данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>На практике мы работали с <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv">данными о гласных русского языка</a>.</p>
+<p>Мы изучали, как различается длительность гласных в зависимости от ступени редукции и позиции в слове. Однако редукция влияет не только длительность гласных но и на их спектральный (частотный) состав. Давайте посмотрим, различаются ли частотные характеристики отдельных гласных в зависимости от ступени редукции.</p>
+<p>Нас будут интересовать следующие переменные:</p>
+<ul>
+<li><code>phoneme</code> — обозначение фонемы
+<ul>
+<li>к нередуцированным гласным относятся <code>o</code>, <code>i</code>, <code>a</code>, <code>u</code>, <code>e</code>, <code>ɨ</code></li>
+<li>к первой ступении — <code>ɐ</code>, <code>ɪ</code>, <code>ʊ</code>, <code>ɨ̞</code></li>
+<li>ко второй ступении — <code>ə̝</code>,<code>ə</code>, <code>əᶷ</code></li>
+</ul></li>
+<li><code>f1</code> — частота первой форманты</li>
+<li><code>f2</code> — частота второй форманты</li>
+</ul>
+<p>Когда-то в домашке по визуализации в одном из дополнительных заданий надо было нарисовать такую картинку, которая отображает вокалической пространство русского языка:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw10_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Но будем решать задачу постепенно.</p>
+</div>
+</div>
 <section id="section-10" class="level3">
 <h3 class="anchored" data-anchor-id="section-10">#1</h3>
 <p><img id="hw10-11-level" class="level"></p>
 <div id="hw10-11-task" class="task">
-<p>Текст задания.</p>
+<p>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr11/vowels.csv">данные</a>, приведите переменную <code>phoneme</code> к факторному типу данных.</p>
 </div>
-<div id="hw10-11-autocheck" class="autocheck">
+<div id="hw10-11-autocheck" class="autocheck" hidden="true">
 <div id="hw10-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -800,7 +836,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-11-hints">
 <summary>
 Подсказки
@@ -827,9 +863,17 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-11">#2</h3>
 <p><img id="hw10-12-level" class="level"></p>
 <div id="hw10-12-task" class="task">
-<p>Текст задания.</p>
+<p>Чтобы модели не были чрезмерно сложны, возьмем для сравнения только нередуцированные гласные и гласные первой ступени редукции. Нас будут интересовать следующие контрасты:</p>
+<ul>
+<li><code>i</code> vs <code>ɪ</code></li>
+<li><code>e</code> vs <code>ɪ</code></li>
+<li><code>a</code> vs <code>ɐ</code></li>
+<li><code>o</code> vs <code>ɐ</code></li>
+<li><code>u</code> vs <code>ʊ</code></li>
+</ul>
+<p>Создайте матрицу кодировки для этих контрастов.</p>
 </div>
-<div id="hw10-12-autocheck" class="autocheck">
+<div id="hw10-12-autocheck" class="autocheck" hidden="true">
 <div id="hw10-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -839,7 +883,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-12-hints">
 <summary>
 Подсказки
@@ -866,9 +910,9 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-12">#3</h3>
 <p><img id="hw10-13-level" class="level"></p>
 <div id="hw10-13-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезы о различии частотных характеристик первой форманты (<code>f1</code>) по заданным контрастам. Проинтерпретируйте полученные результаты.</p>
 </div>
-<div id="hw10-13-autocheck" class="autocheck">
+<div id="hw10-13-autocheck" class="autocheck" hidden="true">
 <div id="hw10-13-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -878,7 +922,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-13-hints">
 <summary>
 Подсказки
@@ -905,9 +949,9 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-13">#4</h3>
 <p><img id="hw10-14-level" class="level"></p>
 <div id="hw10-14-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезы о различии частотных характеристик второй форманты (<code>f2</code>) по заданным контрастам. Проинтерпретируйте полученные результаты.</p>
 </div>
-<div id="hw10-14-autocheck" class="autocheck">
+<div id="hw10-14-autocheck" class="autocheck" hidden="true">
 <div id="hw10-14-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -917,7 +961,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-14-hints">
 <summary>
 Подсказки
@@ -944,9 +988,18 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-14">#5</h3>
 <p><img id="hw10-15-level" class="level"></p>
 <div id="hw10-15-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте полученные результаты. Постройте график, представленный ниже.</p>
 </div>
-<div id="hw10-15-autocheck" class="autocheck">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw10_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="hw10-15-autocheck" class="autocheck" hidden="true">
 <div id="hw10-15-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -956,7 +1009,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-15-hints">
 <summary>
 Подсказки
