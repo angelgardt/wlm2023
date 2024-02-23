@@ -395,10 +395,10 @@ REPLACE ALL pr11 TO pr<n> WITH MATCH CASE
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Сегодня нам понадобятся пакеты <code>car</code> и <code>ez</code>. Проверьте, какие из них установлены на вашем компьютере, если какие-либо отсутствуют, установите их.</p>
+<p>Сегодня нам понадобятся пакеты <code>car</code>, <code>ez</code> и <code>psychReport</code>. Проверьте, какие из них установлены на вашем компьютере, если какие-либо отсутствуют, установите их.</p>
 <p>Можно совместить проверку и установку c помощью следующего кода:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"car"</span>, <span class="st">"ez"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"car"</span>, <span class="st">"ez"</span>, <span class="st">"psychReport"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs[<span class="sc">!</span>(pkgs <span class="sc">%in%</span> <span class="fu">installed.packages</span>())])</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
