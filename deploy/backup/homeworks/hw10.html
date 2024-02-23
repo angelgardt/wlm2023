@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -77,8 +78,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -311,15 +310,39 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 -->
 <section id="hw10_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw10_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные поведенческого эксперимента
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня в нашем меню <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw10/fs.csv">данные эксперимента</a>, проведенного на благо юзабилити-индустрии.В исследовании изучалось влияние перцептивных характеристик иконок на эффективность их обнаружения. Да, снова зрительный поиск…</p>
+<p>В эксперименте варьировались следующие параметры стимулов:</p>
+<ul>
+<li>тип стимула (<code>type</code>): <code>flat</code> — плоский, <code>grad</code> — содержит градиент</li>
+<li>тень (<code>shadow</code>): <code>TRUE</code> — есть, <code>FALSE</code> — нет</li>
+</ul>
+<p>Также традиционно варьировалось число стимулов в пробе (<code>setsize</code>) — <code>3</code>, <code>6</code>, <code>9</code>. Перед каждой пробой испытуемому предъявлялась целевая иконка. Если испытуемый нашёл целевую иконку среди всех предложенных, он нажимал (<code>key</code>) стрелку вправо (<code>right</code>), если не обнаружил — стрелку слево (<code>left</code>). Так как ответ давался клавишами, в дизайне исследования были предусмотрены «пробы-ловушки» (<code>pres</code>), в которых не было целевого стимула. Пробы, в которых целевой стимул присутствовал, обозначены как <code>p</code>, а пробы, в которых целевой стимул отсутствовал — <code>a</code>.</p>
+<p>Все испытуемые проходили все экспериментальные условия. Зависимой переменной в эксперимента было время ответа испытуемого (время реакции, <code>time</code>).</p>
+<p>Глобальный вопрос к результатам эксперимента: какие факторы влияют на скорость поиска иконок?</p>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw10-1-level" class="level"></p>
 <div id="hw10-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw10/fs.csv">данные</a>, проверьте их структуру.</li>
+<li>Отберите только корректные пробы, в которых присутствует целевой стимул.</li>
+</ol>
 </div>
 <div id="hw10-1-autocheck" class="autocheck">
 <div id="hw10-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите число строк в получившемся после отбора необходимых проб датасете.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-1')"></p>
@@ -327,7 +350,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-1-hints">
 <summary>
 Подсказки
@@ -354,12 +377,14 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw10-2-level" class="level"></p>
 <div id="hw10-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<ol type="a">
+<li>Приведите переменную <code>setsize</code> к факторному типу данных и агрегируйте (усредните) данные по каждому респонденту с учетом всех экспериментальных условий.</li>
+<li>Проверьте, что данные эксперимента сбалансированы по количесву наблюдений в каждом сочетании условий.</li>
+</ol>
 </div>
 <div id="hw10-2-autocheck" class="autocheck">
 <div id="hw10-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки если данные сбалансированы, введите в поле ответа <code>да</code>, если не сбалансированы, введите <code>нет</code>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-2')"></p>
@@ -374,19 +399,33 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Как агрегировать данные?
 </summary>
 </details>
+<ul>
+<li>Чтобы получить агререгированные данные, необходимо посчитать среднее значение времени реакции каждого испытуемого в каждом сочетании экспериментальных условий.</li>
+<li>Для этого необходимо задать группировку датасета по экспериментальным переменным (<code>type</code>, <code>shadow</code>, <code>setsize</code>) и идентификатору испытуемого (<code>id</code>). Здесь пригодится либо функция <code>group_by()</code>, либо аргумент <code>.by</code> функции <code>summarise()</code>.</li>
+<li>Далее нужно вычислить среднее (<code>mean()</code>) по переменной <code>time</code>.</li>
+</ul>
 <details class="hint">
 <summary>
-Что надо сделать?
+Как проверить сбалансированность?
 </summary>
 </details>
+<ul>
+<li>Чтобы выяснить, сбаласированы ли данные, необходимо посчитать количество наблюдений в каждом сочетании экспериментальных условий в агрегированных данных.</li>
+<li>Для этого необходимо задать группировку датасета по экспериментальным переменным (<code>type</code>, <code>shadow</code>, <code>setsize</code>). Здесь пригодится либо функция <code>group_by()</code>, либо аргумент <code>.by</code> функции <code>summarise()</code>.</li>
+<li>Далее нужно вычислить количество наблюдений в группах (<code>n()</code>).</li>
+</ul>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
 </details>
+<ul>
+<li>Проверьте группировку в агрегации данных.</li>
+<li>Проверьте группировку в оценке сбалансированности данных.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -394,11 +433,11 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw10-3-level" class="level"></p>
 <div id="hw10-3-task" class="task">
-<p>Текст задания.</p>
+<p>Проведите дисперсионный анализ экспериментальных данных. В качестве факторов модели используйте переменные <code>setsize</code>, <code>type</code> и <code>shadow</code>. В качестве зависимой переменной используйте время реакции. Модель дисперсионного анализа должна быть согласована с экспериментальным дизайном. Проинтерпретируйте результаты. При необходимости проверите попарные сравнения (post hoc тесты).</p>
 </div>
 <div id="hw10-3-autocheck" class="autocheck">
 <div id="hw10-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качетсве ответа для самопроверки в поле ниже введите значение F-статистики, полученные для фактора <code>shadow</code>, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-3')"></p>
@@ -413,13 +452,36 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Какая должна быть модель?
 </summary>
+<ul>
+<li>В описании данных сказано, что все испытуемые проходили все экспериментальные условия.</li>
+<li>Значит, все экспериментальные переменные являются <em>внутригрупповыми</em>.</li>
+<li>Следовательно, в модели дисперсионного анализа эти переменные должны задачать <em>within-subject</em> эффекты.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
-Что надо сделать?
+Какие попарные сравнения нужны?
 </summary>
+<ul>
+<li>Какие группы наблюдений мы будем сравнивать в post hoc тестах зависит от того, что получилось в дисперсионном анализе:
+<ul>
+<li>если получилось значимое взаимодействие, то и в попарных сравнениях нас интересуют, прежде всего, различия между группами по сочетаниям условий.</li>
+<li>если значимым получились только основные эффекты, то и в попарных сравнениях мы будем изучать различия по группам, задаваемым отдельными факторами.</li>
+</ul></li>
+<li>Если результаты дисперсионного анализа показывают отсутствие значимости всех факторов, то попарные сравнения бессмысленны.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Какую поправку использовать?
+</summary>
+<ul>
+<li>Если вам всё же необходимы post hoc тесты, то нельзя обойтись без поправки на множественные сравнения.</li>
+<li>Основных варианта два — поправка Холма и поправко Бонферрони. Одна более мягкая, другая более жесткая.</li>
+<li>Какую нужно использовать, зависит от выполнения допущения о сферичности данных. Если допущение по фактору выполнено, то можно использовать более мягкую, если не выполнено — необходима более жесткая.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
@@ -433,9 +495,9 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="hw10-4-level" class="level"></p>
 <div id="hw10-4-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте результаты дисперсионного анализа.</p>
 </div>
-<div id="hw10-4-autocheck" class="autocheck">
+<div id="hw10-4-autocheck" class="autocheck" hidden="true">
 <div id="hw10-4-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -445,7 +507,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-4-hints">
 <summary>
 Подсказки
@@ -472,11 +534,11 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="hw10-5-level" class="level"></p>
 <div id="hw10-5-task" class="task">
-<p>Текст задания.</p>
+<p>Экспортируйте таблицу с результатами дисперсионного анализа.</p>
 </div>
-<div id="hw10-5-autocheck" class="autocheck">
+<div id="hw10-5-autocheck" class="autocheck" hidden="true">
 <div id="hw10-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Описание инпута.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-5')"></p>
@@ -490,32 +552,58 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 Подсказки
 </summary>
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
+<ul>
+<li>Способ экспорта таблицы в результатами зависит от того, с помошью какой функции вы проводили дисперсионный анализ:
+<ul>
+<li>если использовалась <code>aov()</code>, то необходима функция <code>apa.aov.table()</code> из пакета <code>apaTables</code></li>
+<li>если использовалась <code>ezANOVA()</code> из пакета <code>ez</code>, то необхоимо обратить к результатам работы функции, извлечь из них объект <code>ANOVA</code> и выгрузить его, например, с помощью функции <code>write_excel_csv()</code> (для более простого преобразования в Excel-формат далее).</li>
+</ul></li>
+</ul>
 </details>
 </details>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные приложения доставки
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Теперь немного коснемся индустрии. Из исследователя ученого мы резко преобразовались в исследователя-аналитика компании доставки продуктов. Разработчики сделали новый — по их мнению, более удобный — дизайн приложения для заказов и выкатили его для тестирования на части пользователей. Другая часть пользователей видела старый дизайн.</p>
+<p>У вас есть <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw10/app.csv">данные за период тестирования</a>:</p>
+<ul>
+<li><code>id</code> — идентификатор пользователя</li>
+<li><code>group</code> — группа пользователей:
+<ul>
+<li><code>test</code> — тестовая, которая видела новый дизайн</li>
+<li><code>control</code> — контрольная, которая видела старый дизайн</li>
+</ul></li>
+<li><code>segment</code> — сегмент пользователей:
+<ul>
+<li><code>low</code> — низкий, неактивные пользователя приложения, совершают мало заказов</li>
+<li><code>high</code> — высокий, активные пользователя приложения, совершают много заказов</li>
+</ul></li>
+<li><code>order</code> — количество заказов пользователя в течение периода тестирования</li>
+</ul>
+<p>Тимлид разработчиков пришел к вам со следующим вопросом: <strong>стоит ли выкатывать новый дизайн на всех пользователей?</strong> Ответьте на вопрос, опираясь на имеющиеся данные.</p>
+</div>
 </div>
 </section>
 <section id="section-5" class="level3">
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="hw10-6-level" class="level"></p>
 <div id="hw10-6-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw10/app.csv">данные</a>, проверьте их структуру.</li>
+<li>Проверьте сбалансированность данных по количеству наблюдений в каждом сочетании условий.</li>
+</ol>
 </div>
-<div id="hw10-6-autocheck" class="autocheck">
+<div id="hw10-6-autocheck" class="autocheck" hidden="true">
 <div id="hw10-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки если данные сбалансированы, введите в поле ответа <code>да</code>, если не сбалансированы, введите <code>нет</code>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-6')"></p>
@@ -523,7 +611,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-6-hints">
 <summary>
 Подсказки
@@ -550,9 +638,10 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="hw10-7-level" class="level"></p>
 <div id="hw10-7-task" class="task">
-<p>Текст задания.</p>
+<p>На основе результатов предыдущего задания определите, какой тип сумм квадратов необходимо использовать при проверки гипотез для ответов на вопросы заказчика.</p>
+<p><em>Задание не предполагает написание кода. В скрипте кратко изложите ход своего рассуждения и закомментируйте эти строки.</em></p>
 </div>
-<div id="hw10-7-autocheck" class="autocheck">
+<div id="hw10-7-autocheck" class="autocheck" hidden="true">
 <div id="hw10-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -562,65 +651,48 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+::: hints-wrapper
 <details class="hints" id="hw10-7-hints">
 <summary>
 Подсказки
 </summary>
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
+<ul>
+<li>Всего возможно три типа сумм квадратов — I, II и III.</li>
+<li>У первого типа сумм квадратов есть неприятная особенность.</li>
+<li>Использование второго и третьего сумм квадратов определяется сбалансированностью данных.</li>
+</ul>
 </details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
+<p>:::</p>
+</details></section>
 <section id="section-7" class="level3">
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="hw10-8-level" class="level"></p>
 <div id="hw10-8-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте линейную модель, которая позволит ответить на поставленный тимлидом разработчиков вопрос, в необходимой параметризации.</p>
 </div>
 <div id="hw10-8-autocheck" class="autocheck">
-<div id="hw10-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки в поле ниже введите значение интерсепта построенной модели, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-8')"></p>
 <div id="hw10-8-fb" class="autocheck-feedback">
 
 </div>
-</div>
+<p>:::</p>
 <div class="hints-wrapper">
 <details class="hints" id="hw10-8-hints">
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Способ параметризации модели зависит от выбранного типа сумм квадратов
+<ul>
+<li>в одном случае способ параметризации не имеет значения</li>
+<li>в другом необходим только определенный способ параметризации, иначе результаты тестирования гипотез будут некорректны</li>
+</ul></li>
+<li>Так как значение интерсепта модели будет зависеть от выбранного способа параметризации, ошибка при самопроверки может быть связана с неверно выбранной парамтеризацией модели.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -628,11 +700,11 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="hw10-9-level" class="level"></p>
 <div id="hw10-9-task" class="task">
-<p>Текст задания.</p>
+<p>Проведите дисперсионный анализ с помощью построенной в предыдущем задании модели. Проинтерпретируйте полученные результаты.</p>
 </div>
 <div id="hw10-9-autocheck" class="autocheck">
 <div id="hw10-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качетсве ответа для самопроверки в поле ниже введите значение F-статистики, полученное для фактора <code>group</code>, округленное до целого.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw10-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw10-9')"></p>
@@ -647,18 +719,22 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 </summary>
 <details class="hint">
 <summary>
-Как делать задание?
+Тестирование с помощью конкретного типа сумм квадратов
 </summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+<ul>
+<li>Большинство функций дисперсионного анализа работают со вторм типом сумм квадратов.</li>
+<li>Функция <code>Anova()</code> из пакета <code>car</code> позволяет прописать в аргумент <code>type</code>, какой именно тип сумм квадратов необходимо использовать.</li>
+</ul>
 </details>
 <details class="hint">
 <summary>
 Ответ неверный
 </summary>
+<ul>
+<li>Проверьте способ параметризации модели</li>
+<li>Проверье используемый тип сумм квадратов</li>
+<li>Проверьте округление — значение необходимо округлить до целого</li>
+</ul>
 </details>
 </details>
 </div>
@@ -667,9 +743,12 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="hw10-10-level" class="level"></p>
 <div id="hw10-10-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Визуализируйте результаты анализа.</li>
+<li>На основе визуализации дайте ответ на вопрос тимлида разработчиков.</li>
+</ol>
 </div>
-<div id="hw10-10-autocheck" class="autocheck">
+<div id="hw10-10-autocheck" class="autocheck" hidden="true">
 <div id="hw10-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -679,7 +758,7 @@ REPLACE ALL hw10 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw10-10-hints">
 <summary>
 Подсказки
@@ -1180,27 +1259,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1215,10 +1273,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1227,8 +1289,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
