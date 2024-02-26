@@ -493,7 +493,7 @@ y = \frac{e^x}{1 + e^x}
 <summary>
 Линеаризация логистической кривой через logit-преобразование
 </summary>
-<p>озьмем случай в одним предиктором, чтобы было попроще. Логистическая кривая, моделирующая вероятность, имеет такой вид:</p>
+<p>Возьмем случай в одним предиктором, чтобы было попроще. Логистическая кривая, моделирующая вероятность, имеет такой вид:</p>
 <p><span class="math display">\[
 p_i = \frac{e^{\beta_0 + \beta_1 x_{i1}}}
 {1 + e^{\beta_0 + \beta_1 x_{i1}}}
@@ -560,56 +560,437 @@ p_i = \frac{e^{\eta_i}}{1 + e^{\eta_i}}
 </section>
 <section id="идентификация-модели" class="level3" data-number="10.3.3">
 <h3 data-number="10.3.3" class="anchored" data-anchor-id="идентификация-модели"><span class="header-section-number">10.3.3</span> Идентификация модели</h3>
+<p>Все эти модификации модели приводят к тому, что задача индентификации модели логистической регрессии — то есть вычисления значений коэффициентов модели — <strong>не имеет аналитического решения</strong>. То есть мы не можем вычислить коэффциент просто имея значения целевой переменной и предикторов. По этой причине используются численные методы для получения оценок коэффициентов.</p>
 <section id="метод-максимального-правдоподобия" class="level4" data-number="10.3.3.1">
 <h4 data-number="10.3.3.1" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">10.3.3.1</span> Метод максимального правдоподобия</h4>
+<p>В частности, метод <strong>максимального правдоподобия (maximuum likelihood)</strong>, который позволяет получить несмешенные и состоятельные и эффективные оценки коэффициентов.</p>
+<p><strong>Правдоподобие (likelihood)</strong> — это способ измерить соответствие имеющихся данных тому, что можно получить при определенных значениях параметров модели.</p>
+<p>Вычисляется значение правдоподобия как произведение вероятностей получения каждой из точек данных:</p>
+<p><span class="math display">\[
+L(\theta|\text{data}) = \prod_{i=1}^n f(\text{data}|\theta),
+\]</span></p>
+<p>где <span class="math inline">\(f(\text{data}|\theta)\)</span> — функция распределения с параметрами <span class="math inline">\(\theta\)</span>.</p>
+<p>Задача метода максимального правдоподобия — найти наиболее правдоподобное решение, иначе говоря, максимизировать значение функции правдоподобия:</p>
+<p><span class="math display">\[
+L(\theta|\text{data}) \to \max_{\mathbf{b}}
+\]</span></p>
+<p>Так как правдоподобие — это произведение вероятностей, то функция правдоподобия принимает очень маленькие значение, поэтому работают с максимизацией логарифма правдоподобия (loglikelihood):</p>
+<p><span class="math display">\[
+\ln \big( L(\theta | \text{data}) \big) \to \max_{\mathbf{b}}
+\]</span></p>
 </section>
 </section>
 <section id="тестирование-качества-модели" class="level3" data-number="10.3.4">
 <h3 data-number="10.3.4" class="anchored" data-anchor-id="тестирование-качества-модели"><span class="header-section-number">10.3.4</span> Тестирование качества модели</h3>
+<p>Приколы, связанные с преобразованиями на этом не заканчиваются. При переходе к обобщенным линейным моделям у нас пропадают две важные статистики: <span class="math inline">\(F\)</span>-статистика и <span class="math inline">\(R^2\)</span> — их теперь невозможно рассчитать, так как мы моделируем вероятность получения «единиц», а не сами «единицы» и «нули».</p>
+<p>Что же делать?</p>
 <section id="девианса" class="level4" data-number="10.3.4.1">
 <h4 data-number="10.3.4.1" class="anchored" data-anchor-id="девианса"><span class="header-section-number">10.3.4.1</span> Девианса</h4>
+<p>Нам на помощь приходит <strong>девианса (deviance)</strong>. Чтобы попробовать понять, что это такое, введем две теоретические модели:</p>
+<ul>
+<li><strong>Насыщенная модель (saturated model)</strong> — модель, в которой каждое наблюдение (сочетание предикторов) описывается одним из <span class="math inline">\(n\)</span> параметров. Для такой модели справедливо:</li>
+</ul>
+<p><span class="math display">\[
+\begin{split}
+&amp; \ln L_\text{sat} = 0 \\
+&amp; \text{df}_\text{sat} = n - p_\text{sat} = n - n = 0
+\end{split}
+\]</span></p>
+<ul>
+<li><strong>Нулевая модель (null model)</strong> — модель, в которой все наблюдения описываются одним параметром (средним значением). Для такой модели справедливо:</li>
+</ul>
+<p><span class="math display">\[
+\begin{split}
+&amp; \eta_i = \beta_0 \\
+&amp; \ln L_\text{null} \neq 0, \; \ln L_\text{null} \to -\infty \\
+&amp; \text{df}_\text{null} = n - p_\text{null} = n - 1
+\end{split}
+\]</span></p>
+<p>Наша же <strong>[предложенная] модель</strong>, то есть та, с которой мы работаем, будем находится где-то между насыщенной и нулевой моделями:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \eta_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} \\
+&amp; \ln L_\text{model} \neq 0 \\
+&amp; \text{df}_\text{model} = n - p_\text{model}
+\end{split}
+\]</span></p>
+<p><strong>Девианса</strong> является мерой различия правдоподобий двух моделей (оценка разницы логарифмов правдоподобий)</p>
+<center>
+<figure class="figure">
+<img src="pics/deviance.jpg" class="figure-img">
+</figure>
+</center>
+<ul>
+<li><strong>Остаточная девианса</strong>: <span class="math inline">\(d_\text{resid} = 2(\ln L_\text{sat} - \ln L_\text{model}) = -2 \ln L_\text{model}\)</span></li>
+<li><strong>Нулевая девианса</strong>: <span class="math inline">\(d_\text{null} = 2(\ln L_\text{sat} - \ln L_\text{null}) = -2 \ln L_\text{null}\)</span></li>
+</ul>
 </section>
 <section id="анализ-девиансы" class="level4" data-number="10.3.4.2">
 <h4 data-number="10.3.4.2" class="anchored" data-anchor-id="анализ-девиансы"><span class="header-section-number">10.3.4.2</span> Анализ девиансы</h4>
+<p>Сравнение нулевой и остаточной девианс позволяет судить о статистической значимости модели в целом. Такое сравнение проводится с помощью <strong>теста отношения правдоподобий (likelihood ratio test, LRT).</strong></p>
+<p><span class="math display">\[
+\begin{split}
+d_\text{null} - d_\text{resid} &amp;= \\
+&amp;= -2 (\ln L_\text{null} - \ln L_\text{model}) = \\
+&amp;= 2 (\ln L_\text{model} - \ln L_\text{null}) = \\
+&amp;= 2 \ln \left(\frac{L_\text{model}}{L_\text{null}} \right)
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+\text{LRT} = 2 \ln \left(\frac{L_\text{M1}}{L_\text{M2}} \right)= 2 (\ln L_\text{M1} - \ln L_\text{M2}),
+\]</span></p>
+<p>где <span class="math inline">\(\text{M1}\)</span> и <span class="math inline">\(\text{M2}\)</span> — вложенные модели (<span class="math inline">\(\text{M1}\)</span> — более полная, <span class="math inline">\(\text{M2}\)</span> — сокращенная). Распределение разницы логарифмов правдоподобий аппроксимируется распределением <span class="math inline">\(\chi^2\)</span> со степенями свободы <span class="math inline">\(\text{df} = \text{df}_\text{M2} - \text{df}_\text{M1}\)</span>.</p>
+<p>То есть, в общем случае тест отношения правдоподобий позволяет статистически сравнить две модели друг с другом. В случае же тестирования значимости модели в целом получается следующее:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \text{LRT} = 2 \ln \left(\frac{L_\text{model}}{L_\text{null}} \right)= 2 (\ln L_\text{model} - \ln L_\text{null}) = d_\text{null} - d_\text{model} \\
+&amp; \text{df} = p_\text{model} - 1
+\end{split}
+\]</span></p>
+<p>Кроме того, поскольку мы можем исключить из модели только один предиктор, тест отношения правдоподобий может быть использован и для тестирования значимости отдельных предикторов:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \text{LRT} = 2 \ln \left(\frac{L_\text{model}}{L_\text{reduced}} \right)= 2 (\ln L_\text{model} - \ln L_\text{reduced}) \\
+&amp; \text{df} = p_\text{model} - p_\text{reduced}
+\end{split}
+\]</span></p>
+<p>Итак, тест отношения правдоподобий является аналогом F-статистики. Что же делать с отсутствием <span class="math inline">\(R^2\)</span>?</p>
+<p>Здесь также помогает девианса. Одним из вариантов оценки качества модели является расчет <strong>доли объясненной девиансы</strong>:</p>
+<p><span class="math display">\[
+\frac{d_\text{null} - d_\text{residual}}{d_\text{null}}
+\]</span></p>
+<p>Эта метрика — одна из разновидностей «псевдо-<span class="math inline">\(R^2\)</span>».</p>
 </section>
 <section id="информационные-критерии" class="level4" data-number="10.3.4.3">
 <h4 data-number="10.3.4.3" class="anchored" data-anchor-id="информационные-критерии"><span class="header-section-number">10.3.4.3</span> Информационные критерии</h4>
+<p>Помимо статистических критериев, сравнить модели можно также с использованием <em>информационных критериев</em>. Их два — баейсовский (Bayesian information criterion, BIC) и информационный критерий Акаике (Akaike information criterion, AIC). Чем ниже значение информационного критерия, тем лучше модель описывает имеющиеся данные.</p>
 </section>
-<section id="проверка-на-сверхдисперсию" class="level4" data-number="10.3.4.4">
-<h4 data-number="10.3.4.4" class="anchored" data-anchor-id="проверка-на-сверхдисперсию"><span class="header-section-number">10.3.4.4</span> Проверка на сверхдисперсию</h4>
+<section id="допущения-логистической-регрессии" class="level4" data-number="10.3.4.4">
+<h4 data-number="10.3.4.4" class="anchored" data-anchor-id="допущения-логистической-регрессии"><span class="header-section-number">10.3.4.4</span> Допущения логистической регрессии</h4>
+<p>Ряд допущений логистической регрессии совпадает с допущениями общих линейных моделей. В частности:</p>
+<ul>
+<li>независимость наблюдений</li>
+<li>линейность связи целевой переменной и предикторов (с учетом функции связи)</li>
+<li>отсутствие коллинеарности предикторов</li>
+</ul>
+<p>Однако появляется еще одно важное допущение — отсутствие сверхдисперсии.</p>
+</section>
+<section id="проверка-на-сверхдисперсию" class="level4" data-number="10.3.4.5">
+<h4 data-number="10.3.4.5" class="anchored" data-anchor-id="проверка-на-сверхдисперсию"><span class="header-section-number">10.3.4.5</span> Проверка на сверхдисперсию</h4>
+<p>Новое допущение связано с тем, что для биномиального распределения характерна связт между математическим ожиданием и дисперсией — этого не было у нормального распределения. Для биномиального распределения:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \mathbb{E}(X) = np \\
+&amp; \text{var}{X} = np(p-1)
+\end{split}
+\]</span></p>
+<p>где <span class="math inline">\(n\)</span> — количество испытаний, <span class="math inline">\(p\)</span> — вероятность «успеха» в одном испытании.</p>
+<p>Если в модели обнаруживается свердисперсия, то мы на может гарантировать, что искомая закономерность смоделирована точно. В детали расчета и проверки гипотезы мы прогружать не будет, на практике воспользуемся специальной функцией для проверки этого допущения.</p>
 </section>
 </section>
 <section id="тестирование-значимости-предикторов" class="level3" data-number="10.3.5">
 <h3 data-number="10.3.5" class="anchored" data-anchor-id="тестирование-значимости-предикторов"><span class="header-section-number">10.3.5</span> Тестирование значимости предикторов</h3>
+<p>С одним из способ тестирование статистической значимости предикторов мы уже познакомились — это тесты отношения правдоподобий. Однако существует и второй способ — в каком-то смысле более «базовый» — <strong>тесты Вальда</strong>.</p>
 <section id="тесты-вальда" class="level4" data-number="10.3.5.1">
 <h4 data-number="10.3.5.1" class="anchored" data-anchor-id="тесты-вальда"><span class="header-section-number">10.3.5.1</span> Тесты Вальда</h4>
-</section>
-<section id="тесты-отношения-правдоподобий" class="level4" data-number="10.3.5.2">
-<h4 data-number="10.3.5.2" class="anchored" data-anchor-id="тесты-отношения-правдоподобий"><span class="header-section-number">10.3.5.2</span> Тесты отношения правдоподобий</h4>
+<p>Эти тесты являются аналогом t-тестов для общих линейных моделей, однако являются менее точными, так как распределение их z-статистики только <em>ассимптотически</em> стремится к нормальному. Это значит, что на малых выборках эти тесты буду давать неточные результаты.</p>
+<p>Тем не менее, они автоматически выводятся в аутпуте функций в R, поэтому посмотрим на них — они критически похожи на t-тесты:</p>
+<p><span class="math display">\[
+\begin{split}
+H_0 &amp;: \beta_k = 0 \\
+H_1 &amp;: \beta_k \neq 0
+\end{split}
+\]</span></p>
+<p><span class="math display">\[
+z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksim \mathcal{N}(0, 1)
+\]</span></p>
 </section>
 </section>
 <section id="интерпретация-коэффициентов-модели" class="level3" data-number="10.3.6">
 <h3 data-number="10.3.6" class="anchored" data-anchor-id="интерпретация-коэффициентов-модели"><span class="header-section-number">10.3.6</span> Интерпретация коэффициентов модели</h3>
+<p>С интерпретацией значений коэффициентов тоже оказывается не все просто. Вспомним, коэффициенты какой модели мы в итоге получаем:</p>
+<p><span class="math display">\[
+\eta_i = \hat \beta_0 + \hat \beta_1 x_{i1} + \hat \beta_2 x_{i2} + \dots + \hat \beta_p x_{ip}
+\]</span></p>
+<p>Наша целевая переменная в модели, для которой мы получили значения предикторов — это логарифм отношения шансов. Довольно сложно понять, что это такой с содержательной стороны. Однако чисто технически получается следующее:</p>
+<ul>
+<li><span class="math inline">\(\hat  \beta_0\)</span>, интерсепт, показывает логарифм отношения шансов для случая, когда значения всех предикторов равны нулю</li>
+<li><span class="math inline">\(\hat \beta_k\)</span> показывает, на сколько изменится логарифм отношения шансов при изменении значения предиктора на единицу</li>
+</ul>
+<p>Корректно, но всё её непонятно…</p>
+<p>Давайте посмотрим, что получится, если расписать изменение логарифма отношения шансов. Пусть для простоты у нас есть модель с одним непрерывным предиктором:</p>
+<p><span class="math display">\[
+\eta = b_0 + b_1 x
+\]</span></p>
+<p>При этом</p>
+<p><span class="math display">\[
+\eta = \ln \left(\frac{p}{1-p} \right)= \ln (\text{odds})
+\]</span></p>
+<p>Как изменится предсказание модели при увеличении предиктора на единицу?</p>
+<p><span class="math display">\[
+\eta_{x+1} - \eta_x = \ln (\text{odds}_{x+1}) - \ln (\text{odds}_x) = \ln \left(\frac{\text{odds}_{x+1}}{\text{odds}_x} \right)
+\]</span></p>
+<p>С другой стороны:</p>
+<p><span class="math display">\[
+\begin{split}
+\eta_{x+1} - \eta_x &amp;= \big( b_0 + b_1(x+1) \big) - \big( b_0 + b_1 x \big) = \\
+&amp;= b_0 + b_1 x + b_1 - b_0 - b_1 x = b_1
+\end{split}
+\]</span></p>
+<p>Получается, что</p>
+<p><span class="math display">\[
+\begin{split}
+\ln \left(\frac{\text{odds}_{x+1}}{\text{odds}_x} \right)&amp;= b_1 \\
+\frac{\text{odds}_{x+1}}{\text{odds}_x} = e^{b_1}
+\end{split}
+\]</span></p>
+<p>Таким образом, <span class="math inline">\(e^{b_1}\)</span> показывает, во сколько раз изменится шанс того, что наблюдение принадлежит к группе «единиц» при увеличении предиктора на единицу. Для дискретных предикторов <span class="math inline">\(e^{b_1}\)</span> покажет, во сколько раз различается отношение шансов для данного уровня предиктора по сравнению с базовым.</p>
 </section>
 <section id="предсказательная-сила-модели" class="level3" data-number="10.3.7">
 <h3 data-number="10.3.7" class="anchored" data-anchor-id="предсказательная-сила-модели"><span class="header-section-number">10.3.7</span> Предсказательная сила модели</h3>
+<p>Оценить предсказательную силу общих линейных моделей не сложно — надо сравнить предсказанные значения с предскавленными в данных. С логистической моделью же есть некоторые тонкости.</p>
+<p>В данных у нас лежат нули и единицы, а модель нам возвращает вероятность того, что отдельное наблюдение является единицей. Для того, чтобы нам получить предсказанные значения, которые мы будем сопоставлять с имеющимися в данных, нам необходимо перевести непрерывные предсказания в дискретные.</p>
+<p>Для этого необходимо выбрать <strong>порог</strong> — если значение вероятности выше него, мы будем считать, что модель предсказала <span class="math inline">\(1\)</span>, если ниже, то <span class="math inline">\(0\)</span>. Значение порога зависит от многих факторов и будет влиять на качество модели. Прежде всего стоит ориентироваться на сферу деятельности, в которой вы проводите анализ. Если у вас качественные чистые данные и вам важна высокая точность, то и порог для предсказаний должен быть высокий — <span class="math inline">\(\geq 0.9\)</span>. Если же вы знаете, что вы работаете с зашумлёнными данными, и цена ошибки не так высока, то можете выбрать более либеральный критерий — <span class="math inline">\(0.7\)</span>–<span class="math inline">\(0.8\)</span>. Самый либеральный критерий из возможных — <span class="math inline">\(0.5\)</span>, что по сути есть вероятность случайного угадывания.</p>
 <section id="confusion-mattrix" class="level4" data-number="10.3.7.1">
 <h4 data-number="10.3.7.1" class="anchored" data-anchor-id="confusion-mattrix"><span class="header-section-number">10.3.7.1</span> Confusion mattrix</h4>
+<p>Когда мы перевели вероятности в нули и единицы, мы можем построить <strong>confusion matrix</strong> — — это таблица частот по модельным и реальным значениям нашей целевой переменной. Её общая структура выглядит так:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Предсказания: <span class="math inline">\(0\)</span></th>
+<th style="text-align: center;">Предсказания: <span class="math inline">\(1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Данные: <span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{TN}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{FP}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Данные: <span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{FN}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{TP}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>True Positive</em> (<span class="math inline">\(\text{TP}\)</span>) — верное предсказанные единицы</li>
+<li><em>True Negative</em> (<span class="math inline">\(\text{TN}\)</span>) — верно предсказанные нули</li>
+<li><em>False Positive</em> (<span class="math inline">\(\text{FP}\)</span>) — ложноположительные предсказания, ошибочно предсказанные единицы</li>
+<li><em>False Negative</em> ($ — ложноотрицательные предсказания, ошибочно предсказанные нули</li>
+</ul>
+<p>На основе данных значение можно расчитать несколько <strong>метрик качества модели</strong>.</p>
 <section id="accuracy" class="level5" data-number="10.3.7.1.1">
 <h5 data-number="10.3.7.1.1" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">10.3.7.1.1</span> Accuracy</h5>
+<p>Чаще всего эту метрику называют «точность». Она определяется по формуле</p>
+<p><span class="math display">\[
+\text{accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+\]</span></p>
+<p>Она показывает долю верно предказанных значений и хорошо работает на сбалансированных данных, когда у вас одинаковое количество нулей и единиц в исходном датасете. Однако в случае несбалансированных данных даже самая плохая модель может иметь высокий показатель accuracy. Например, в данных такие значения целевой переменной:</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1
+\end{pmatrix}
+\]</span></p>
+<p>Пусть у нас есть наиболее топорная модель, которая просто всегда предсказывает ноль — у такой модели accuracy окажется равной <span class="math inline">\(0.73\)</span>. Вроде бы высокий показатель, но совершенное неадекватно описывает качество модели.</p>
+<p>Поэтому были придуманы более точные метрики.</p>
 </section>
 <section id="precision" class="level5" data-number="10.3.7.1.2">
 <h5 data-number="10.3.7.1.2" class="anchored" data-anchor-id="precision"><span class="header-section-number">10.3.7.1.2</span> Precision</h5>
+<p>Presicion тоже переводится как «точность», поэтому лучше пользоваться английской терминологией во избежании путаницы. Эта метрика показывается <strong>долю верно предсказанных единиц</strong>, то есть сколько из предсказанных единиц предсказано верно:</p>
+<p><span class="math display">\[
+\text{precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
+\]</span></p>
 </section>
 <section id="recall" class="level5" data-number="10.3.7.1.3">
 <h5 data-number="10.3.7.1.3" class="anchored" data-anchor-id="recall"><span class="header-section-number">10.3.7.1.3</span> Recall</h5>
+<p>Recall можно перевести как «полнота», хотя по сути это снова «точность». Эта метрика показывается <strong>долю предсказанных единиц из всех единиц датасета</strong>, то есть сколько из всех единиц датасета модель предсказала верно:</p>
+<p><span class="math display">\[
+\text{recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+\]</span></p>
+<p>Очевидно, что чем ближе показатели всех метрик к единице, тем качество модели выше.</p>
 </section>
 <section id="f1-мера" class="level5" data-number="10.3.7.1.4">
 <h5 data-number="10.3.7.1.4" class="anchored" data-anchor-id="f1-мера"><span class="header-section-number">10.3.7.1.4</span> F1-мера</h5>
+<p>На основе precision и recall вычисляется ещё одна метрика качества, которая является гармоническим средним этих двух метрик.</p>
+<p><span class="math display">\[
+\text{F1} = 2 \cdot \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+\]</span></p>
 </section>
 </section>
 <section id="roc-auc" class="level4" data-number="10.3.7.2">
 <h4 data-number="10.3.7.2" class="anchored" data-anchor-id="roc-auc"><span class="header-section-number">10.3.7.2</span> ROC-AUC</h4>
+<p>Все описанные выше метрики качестве основывались на confusion matrix — их значения будут зависеть от выбранного порога при переводе непрерывных предсказаний в дискретные. А можно как-то без это зависимости?</p>
+<p>Можно. Напоследок ещё одна метрика качества модели. Однако логика её расчёта не такая простая.</p>
+<p>Чем хороша эта метрика? Тем, что она работает не с предсказанными значениями (0 и 1), а с предсказанными вероятностями. Таким образом, она избавляет нас от вмешательства <em>нас же</em> в предсказания, ведь когда мы выбираем порог, мы хотя и опираемся на какое-то содержательное основание, тем не менее, глобально выбираем его условно произвольно.</p>
+<p>Что рассчитать значение этой метрики нужно сделать следующее (разберём на некотором вымышленном примере):</p>
+<ol type="1">
+<li>Упорядочить объекты по убыванию значения предсказанной вероятности:</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">№ наблюдения</th>
+<th style="text-align: center;">Вероятность</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.15</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>Добавить столбец истинных значений (0 и 1)</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">№ наблюдения</th>
+<th style="text-align: center;">Вероятность</th>
+<th style="text-align: center;">Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.90</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.60</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.43</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.32</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Отметим, что если модель идеально справляется с предказаниями, то в упорядоченном по значению предсказанной вероятности наборе данных сначала будут идти все наблюдения с истинным значением <span class="math inline">\(1\)</span>, а потом с <span class="math inline">\(0\)</span>.</p>
+<ol start="3" type="1">
+<li>Построим кривую, которая будет описывать качество нашей модели:</li>
+</ol>
+<ul>
+<li>Стартуем из точки <span class="math inline">\((0,0)\)</span> и хотим прийти в точку <span class="math inline">\((1,1)\)</span>:</li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/auc1.jpg" class="figure-img">
+</figure>
+</center>
+<ul>
+<li>Ось <span class="math inline">\(y\)</span> делим на равные части, число которых равно количеству <span class="math inline">\(1\)</span> в датасете:</li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/auc2.jpg" class="figure-img">
+</figure>
+</center>
+<ul>
+<li>Ось <span class="math inline">\(x\)</span> делим на равные части, число которых равно количеству <span class="math inline">\(0\)</span> в датасете:</li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/auc3.jpg" class="figure-img">
+</figure>
+</center>
+<ul>
+<li>Идём по нашим данным сверху вниз, и когда встречаем наблюдение со значением <span class="math inline">\(1\)</span>, поднимаемся на графике на одно деление вверх; когда встречаем наблюдение со значением <span class="math inline">\(0\)</span>, сдвигаемся на одно деление вправо.</li>
+<li>В итоге получится такая кривая:</li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/auc4.jpg" class="figure-img">
+</figure>
+</center>
+<p>Каждая точка на этой кривой соответствует некоторому порогу вероятности отсечения объектов. Например, выделенная точка (рисунок ниже) соответствует порогу вероятности <span class="math inline">\(0.6\)</span> и имеет координаты <span class="math inline">\((\frac{1}{6}), \frac{3}{4})\)</span>. Это означает, что если при переходе к предсказаниями модели мы будем использовать порог <span class="math inline">\(0.6\)</span>, то доля True Positive, или True Positive Rate (TRP) окажется равной <span class="math inline">\(\frac{3}{4}\)</span>, а доля Falce Positive, или False Positive Rate (FPR) окажется равной <span class="math inline">\(\frac{1}{6}\)</span>.</p>
+<p>Построенная кривая называется <strong>ROC-кривой (receiver operating characteristic).</strong></p>
+<ol start="4" type="1">
+<li>Определяем площадь фигуры под ROC-кривой — это и будет <strong>значением метрики ROC-AUC</strong> (AUC — area under a curve).</li>
+</ol>
+<center>
+<figure class="figure">
+<img src="pics/auc5.jpg" class="figure-img">
+</figure>
+</center>
+<p>В случае идеального упорядочивания наблюдений по предсказанной вероятности площадь под кривой будет равна единице. Чем ближе значение ROC-AUC к единице, тем модель работает лучше. Значение <span class="math inline">\(0.5\)</span> указывает на то, что модель совсем не ухватывает закономерность и точность её предсказаний на уровне случайного угадывания — ROC-кривая в этом случае будет проходить близко к диагонали <span class="math inline">\([(0,0),(1,1)]\)</span>.</p>
 </section>
 </section>
 </section>
