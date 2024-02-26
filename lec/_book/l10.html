@@ -308,11 +308,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#пуассоновская-регрессия" id="toc-пуассоновская-регрессия" class="nav-link" data-scroll-target="#пуассоновская-регрессия"><span class="header-section-number">10.4</span> Пуассоновская регрессия</a>
   <ul class="collapse">
-  <li><a href="#счетные-данные.-распределение-пуассона" id="toc-счетные-данные.-распределение-пуассона" class="nav-link" data-scroll-target="#счетные-данные.-распределение-пуассона"><span class="header-section-number">10.4.1</span> Счетные данные. Распределение Пуассона</a></li>
-  <li><a href="#почему-общие-линейные-модели-плохо-работают" id="toc-почему-общие-линейные-модели-плохо-работают" class="nav-link" data-scroll-target="#почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.2</span> Почему общие линейные модели плохо работают?</a></li>
-  <li><a href="#математическая-модель-1" id="toc-математическая-модель-1" class="nav-link" data-scroll-target="#математическая-модель-1"><span class="header-section-number">10.4.3</span> Математическая модель</a></li>
-  <li><a href="#результаты-моделирования" id="toc-результаты-моделирования" class="nav-link" data-scroll-target="#результаты-моделирования"><span class="header-section-number">10.4.4</span> Результаты моделирования</a></li>
-  <li><a href="#квазипуассоновские-модели" id="toc-квазипуассоновские-модели" class="nav-link" data-scroll-target="#квазипуассоновские-модели"><span class="header-section-number">10.4.5</span> Квазипуассоновские модели</a></li>
+  <li><a href="#счетные-данные" id="toc-счетные-данные" class="nav-link" data-scroll-target="#счетные-данные"><span class="header-section-number">10.4.1</span> Счетные данные</a></li>
+  <li><a href="#распределение-пуассона" id="toc-распределение-пуассона" class="nav-link" data-scroll-target="#распределение-пуассона"><span class="header-section-number">10.4.2</span> Распределение Пуассона</a></li>
+  <li><a href="#почему-общие-линейные-модели-плохо-работают" id="toc-почему-общие-линейные-модели-плохо-работают" class="nav-link" data-scroll-target="#почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.3</span> Почему общие линейные модели плохо работают?</a></li>
+  <li><a href="#математическая-модель-1" id="toc-математическая-модель-1" class="nav-link" data-scroll-target="#математическая-модель-1"><span class="header-section-number">10.4.4</span> Математическая модель</a></li>
+  <li><a href="#результаты-моделирования" id="toc-результаты-моделирования" class="nav-link" data-scroll-target="#результаты-моделирования"><span class="header-section-number">10.4.5</span> Результаты моделирования</a></li>
+  <li><a href="#квазипуассоновские-модели" id="toc-квазипуассоновские-модели" class="nav-link" data-scroll-target="#квазипуассоновские-модели"><span class="header-section-number">10.4.6</span> Квазипуассоновские модели</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -798,7 +799,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 </section>
 <section id="precision" class="level5" data-number="10.3.7.1.2">
 <h5 data-number="10.3.7.1.2" class="anchored" data-anchor-id="precision"><span class="header-section-number">10.3.7.1.2</span> Precision</h5>
-<p>Presicion тоже переводится как «точность», поэтому лучше пользоваться английской терминологией во избежании путаницы. Эта метрика показывается <strong>долю верно предсказанных единиц</strong>, то есть сколько из предсказанных единиц предсказано верно:</p>
+<p>Precision тоже переводится как «точность», поэтому лучше пользоваться английской терминологией во избежании путаницы. Эта метрика показывается <strong>долю верно предсказанных единиц</strong>, то есть сколько из предсказанных единиц предсказано верно:</p>
 <p><span class="math display">\[
 \text{precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
 \]</span></p>
@@ -979,7 +980,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <img src="pics/auc4.jpg" class="figure-img">
 </figure>
 </center>
-<p>Каждая точка на этой кривой соответствует некоторому порогу вероятности отсечения объектов. Например, выделенная точка (рисунок ниже) соответствует порогу вероятности <span class="math inline">\(0.6\)</span> и имеет координаты <span class="math inline">\((\frac{1}{6}), \frac{3}{4})\)</span>. Это означает, что если при переходе к предсказаниями модели мы будем использовать порог <span class="math inline">\(0.6\)</span>, то доля True Positive, или True Positive Rate (TRP) окажется равной <span class="math inline">\(\frac{3}{4}\)</span>, а доля Falce Positive, или False Positive Rate (FPR) окажется равной <span class="math inline">\(\frac{1}{6}\)</span>.</p>
+<p>Каждая точка на этой кривой соответствует некоторому порогу вероятности отсечения объектов. Например, выделенная точка c координатами <span class="math inline">\((\frac{1}{6}), \frac{3}{4})\)</span> соответствует порогу вероятности <span class="math inline">\(0.6\)</span>. Это означает, что если при переходе к предсказаниями модели мы будем использовать порог <span class="math inline">\(0.6\)</span>, то доля True Positive, или True Positive Rate (TRP) окажется равной <span class="math inline">\(\frac{3}{4}\)</span>, а доля False Positive, или False Positive Rate (FPR) окажется равной <span class="math inline">\(\frac{1}{6}\)</span>.</p>
 <p>Построенная кривая называется <strong>ROC-кривой (receiver operating characteristic).</strong></p>
 <ol start="4" type="1">
 <li>Определяем площадь фигуры под ROC-кривой — это и будет <strong>значением метрики ROC-AUC</strong> (AUC — area under a curve).</li>
@@ -995,8 +996,8 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 </section>
 <section id="пуассоновская-регрессия" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="пуассоновская-регрессия"><span class="header-section-number">10.4</span> Пуассоновская регрессия</h2>
-<section id="счетные-данные.-распределение-пуассона" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="счетные-данные.-распределение-пуассона"><span class="header-section-number">10.4.1</span> Счетные данные. Распределение Пуассона</h3>
+<section id="счетные-данные" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="счетные-данные"><span class="header-section-number">10.4.1</span> Счетные данные</h3>
 <p>В жизни и практике мы часто сталкиваемся с так называемыми счётными величинами. Например, число комнат в квартире, количество детей в семье, число книг на полке, число людей, прошедших через турникет и т.д. Глобально — любые количества. Также как счётные величины можно рассмотреть шкалу Лайкерта или оценки по десятибалльной шкале — по сути, это количество набранных баллов<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Какими свойствами обладают такие величины?</p>
 <ul>
@@ -1006,8 +1007,9 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <p>Общие линейные модели, строго говоря, применимые только к непрерывным величинам1. Иногда свойства данных позволяют использовать такие методы для моделирования счётных величин, однако так бывает далеко не всегда.</p>
 <p>Здесь мы обсудим самый простой подход к моделированию счетных величин, а также одну его модификацию, которая может быть полезна.</p>
 <p>Модели для счётных данных базируются на распределении Пуассона.</p>
-<section id="распределение-пуассона" class="level4" data-number="10.4.1.1">
-<h4 data-number="10.4.1.1" class="anchored" data-anchor-id="распределение-пуассона"><span class="header-section-number">10.4.1.1</span> Распределение Пуассона</h4>
+</section>
+<section id="распределение-пуассона" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="распределение-пуассона"><span class="header-section-number">10.4.2</span> Распределение Пуассона</h3>
 <p>Определяется следующим образом:</p>
 <p><span class="math display">\[
 Y \thicksim \text{Poisson} (\mu)
@@ -1034,9 +1036,8 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 </div>
 <p>Необходимо отметить, что пуассоновское распределение предполагает, что дисперсия связана с математическим ожидание через <em>функцию идентичности</em>, то есть с увеличением математического ожидания дисперсия возрастает ровно так же, как и само математичекое ожидание. Это факт нам будет важен далее.</p>
 </section>
-</section>
-<section id="почему-общие-линейные-модели-плохо-работают" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.2</span> Почему общие линейные модели плохо работают?</h3>
+<section id="почему-общие-линейные-модели-плохо-работают" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.3</span> Почему общие линейные модели плохо работают?</h3>
 <p>Два свойства счетны случайных величин, оговоренные в самом начале раздела, объясняют, почему общие линейные модели плохо работают (или, по крайне мере, могут плохо работать) на счетных данных.</p>
 <p>Первое свойство нам говорит о том, что количество не может быть отрицательным, и это логично. Обчная линейнная регрессия не имеет подобных ограничений, поэтому в предсказаниях будут появляться отрицательные значения. Что с ними делать не очень понятно.</p>
 <p>Второе свойство говорит нам о том, что <em>изначально не будет выполнено допущение гомоскедастичности остатков</em>, так как чем выше математичекое ожидание, тем выше дисперсия. В итоге мы будем наблюдать воронкообразный паттер в распределении остатков.</p>
@@ -1044,8 +1045,8 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 <p>Что делать? Можно пойти простым путём — <em>логарифмировать целевую переменную</em> и построить модель для получившейся величины.</p>
 <p>Но более корректным вариантом будет построить модель, основанную на распределении, подходящем для счётных данных. В частности, пуассоновском распределении.</p>
 </section>
-<section id="математическая-модель-1" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="математическая-модель-1"><span class="header-section-number">10.4.3</span> Математическая модель</h3>
+<section id="математическая-модель-1" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="математическая-модель-1"><span class="header-section-number">10.4.4</span> Математическая модель</h3>
 <p>Так как мы находимся во фреймворке обобщенных линейных моделей, значит ключевой момент с формулировании модели — <strong>функция связи</strong>. У пуассоновской регрессии она очень проста — это всего лишь логарифм:</p>
 <p><span class="math display">\[
 \eta_i = \ln (y_i)
@@ -1055,8 +1056,8 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 \eta_i = \hat \beta_0 + \hat \beta_1 x_{i1} + \hat \beta_2 x_{i2} + \dots + \hat \beta_p x_{ip}
 \]</span></p>
 </section>
-<section id="результаты-моделирования" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="результаты-моделирования"><span class="header-section-number">10.4.4</span> Результаты моделирования</h3>
+<section id="результаты-моделирования" class="level3" data-number="10.4.5">
+<h3 data-number="10.4.5" class="anchored" data-anchor-id="результаты-моделирования"><span class="header-section-number">10.4.5</span> Результаты моделирования</h3>
 <p>Абсолютно аналогично биномиальной регрессии для пуассоновской будет:</p>
 <ul>
 <li>отсутствовать <span class="math inline">\(F\)</span>-статистика</li>
@@ -1067,8 +1068,8 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 </ul>
 <p>Так как в биномиальной регрессии мы обсудили это достаточно подробно, не будем на этом останавливаться.</p>
 </section>
-<section id="квазипуассоновские-модели" class="level3" data-number="10.4.5">
-<h3 data-number="10.4.5" class="anchored" data-anchor-id="квазипуассоновские-модели"><span class="header-section-number">10.4.5</span> Квазипуассоновские модели</h3>
+<section id="квазипуассоновские-модели" class="level3" data-number="10.4.6">
+<h3 data-number="10.4.6" class="anchored" data-anchor-id="квазипуассоновские-модели"><span class="header-section-number">10.4.6</span> Квазипуассоновские модели</h3>
 <p>Однако по сравнению с биномиальной регрессией у пуассоновской есть одна особенность — а именно, возможность работать со сверхдисперсией.</p>
 <p>Так как пуассоновская модель исходит из предположения равенства дисперсии и математического ожидания, если мы не обнаруживаем сверхдисперсии, то все хорошо. Если же это допущение не выполнено, то</p>
 <ul>
