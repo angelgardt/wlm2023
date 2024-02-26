@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -261,7 +290,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#ограничения-общих-линейных-моделей" id="toc-ограничения-общих-линейных-моделей" class="nav-link active" data-scroll-target="#ограничения-общих-линейных-моделей"><span class="header-section-number">10.1</span> Ограничения общих линейных моделей</a></li>
+  <li><a href="#идея-обобщенных-линейных-моделей" id="toc-идея-обобщенных-линейных-моделей" class="nav-link" data-scroll-target="#идея-обобщенных-линейных-моделей"><span class="header-section-number">10.2</span> Идея обобщенных линейных моделей</a></li>
+  <li><a href="#биноминальная-регрессия" id="toc-биноминальная-регрессия" class="nav-link" data-scroll-target="#биноминальная-регрессия"><span class="header-section-number">10.3</span> Биноминальная регрессия</a>
+  <ul class="collapse">
+  <li><a href="#бинарные-переменные-и-биномиальное-распределение" id="toc-бинарные-переменные-и-биномиальное-распределение" class="nav-link" data-scroll-target="#бинарные-переменные-и-биномиальное-распределение"><span class="header-section-number">10.3.1</span> Бинарные переменные и биномиальное распределение</a></li>
+  <li><a href="#математическая-модель" id="toc-математическая-модель" class="nav-link" data-scroll-target="#математическая-модель"><span class="header-section-number">10.3.2</span> Математическая модель</a></li>
+  <li><a href="#идентификация-модели" id="toc-идентификация-модели" class="nav-link" data-scroll-target="#идентификация-модели"><span class="header-section-number">10.3.3</span> Идентификация модели</a></li>
+  <li><a href="#тестирование-качества-модели" id="toc-тестирование-качества-модели" class="nav-link" data-scroll-target="#тестирование-качества-модели"><span class="header-section-number">10.3.4</span> Тестирование качества модели</a></li>
+  <li><a href="#тестирование-значимости-предикторов" id="toc-тестирование-значимости-предикторов" class="nav-link" data-scroll-target="#тестирование-значимости-предикторов"><span class="header-section-number">10.3.5</span> Тестирование значимости предикторов</a></li>
+  <li><a href="#интерпретация-коэффициентов-модели" id="toc-интерпретация-коэффициентов-модели" class="nav-link" data-scroll-target="#интерпретация-коэффициентов-модели"><span class="header-section-number">10.3.6</span> Интерпретация коэффициентов модели</a></li>
+  <li><a href="#предсказательная-сила-модели" id="toc-предсказательная-сила-модели" class="nav-link" data-scroll-target="#предсказательная-сила-модели"><span class="header-section-number">10.3.7</span> Предсказательная сила модели</a></li>
+  </ul></li>
+  <li><a href="#пуассоновская-регрессия" id="toc-пуассоновская-регрессия" class="nav-link" data-scroll-target="#пуассоновская-регрессия"><span class="header-section-number">10.4</span> Пуассоновская регрессия</a>
+  <ul class="collapse">
+  <li><a href="#счетные-данные.-распределение-пуассона" id="toc-счетные-данные.-распределение-пуассона" class="nav-link" data-scroll-target="#счетные-данные.-распределение-пуассона"><span class="header-section-number">10.4.1</span> Счетные данные. Распределение Пуассона</a></li>
+  <li><a href="#почему-общие-линейные-модели-плохо-работают" id="toc-почему-общие-линейные-модели-плохо-работают" class="nav-link" data-scroll-target="#почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.2</span> Почему общие линейные модели плохо работают?</a></li>
+  <li><a href="#математическая-модель-1" id="toc-математическая-модель-1" class="nav-link" data-scroll-target="#математическая-модель-1"><span class="header-section-number">10.4.3</span> Математическая модель</a></li>
+  <li><a href="#тестирование-качества-модели-1" id="toc-тестирование-качества-модели-1" class="nav-link" data-scroll-target="#тестирование-качества-модели-1"><span class="header-section-number">10.4.4</span> Тестирование качества модели</a></li>
+  <li><a href="#проверка-на-сверхдисперсию-1" id="toc-проверка-на-сверхдисперсию-1" class="nav-link" data-scroll-target="#проверка-на-сверхдисперсию-1"><span class="header-section-number">10.4.5</span> Проверка на сверхдисперсию</a></li>
+  <li><a href="#квазипуассоновские-модели" id="toc-квазипуассоновские-модели" class="nav-link" data-scroll-target="#квазипуассоновские-модели"><span class="header-section-number">10.4.6</span> Квазипуассоновские модели</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -285,8 +340,308 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- transposed matrix --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<section id="ограничения-общих-линейных-моделей" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="ограничения-общих-линейных-моделей"><span class="header-section-number">10.1</span> Ограничения общих линейных моделей</h2>
+<p>Модели, которые мы изучали на предыдущих занятиях носят название <strong>общих линейных моделей (general linear models)</strong>. Они достаточно просты и удобны в большинстве случаев, однако имеют существенное ограничений.</p>
+<p>Вспомним, как выглядит уравнение такой модели:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_p x_p + \varepsilon
+\]</span></p>
+<p>Предикторы в такой модели, как мы знаем, могут быть как дискретными, так и непрерывными. Однако ключевым допущением (и требованием) этой модели является распределение ошибки:</p>
+<p><span class="math display">\[
+\varepsilon \thicksim \mathcal{N}(0, \sigma^2)
+\]</span></p>
+<p>Поскольку ошибка модели должна быть распределена нормально, а моделируется среднее значение, то можно сформулировать более общее допущение/требование:</p>
+<p><span class="math display">\[
+y \thicksim \mathcal{N}(\mu, \sigma^2)
+\]</span></p>
+<p>Таким образом, общие линейные модели позволяют моделировать зависимости только для нормально-распределенных величин. Если же отклик модели (он же зависимая переменная) подчиняется другому распределению, эти модели не годятся.</p>
+</section>
+<section id="идея-обобщенных-линейных-моделей" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="идея-обобщенных-линейных-моделей"><span class="header-section-number">10.2</span> Идея обобщенных линейных моделей</h2>
+<p>Тем не менее, мы из своего опыта знаем, что существует много величин, распределение которых отличается от нормального. И дело даже не столько в асимметрии или эксцессе — здесь разговор о самой природе величин. Так, например, есть величина «поступление в вуз», у которой только два возможных значения — «поступил» и «не поступил». Или же, скажем, количество детей в семьей, варьирующееся в небольших пределах и принимающее только положительные целочисленые значения.</p>
+<p>Нам хочется моделировать связь таких величин с предикторами так же, как мы делали в случае общих линейных моделей, или хотя бы в той же логике, которая нам хороша знакома из линейной регрессии. Для того, чтобы этого достичь, в модель вводится новый компонент — <strong>функция связи (link function)</strong>.</p>
+<ul>
+<li>Пусть у нас есть некоторая переменная <span class="math inline">\(y\)</span>, которая подчиняется какому-то закону распределения <span class="math inline">\(f(y|\theta)\)</span>, где <span class="math inline">\(\theta\)</span> — параметр(ы) распределения, и этот закон отличается от нормального.</li>
+<li>Мы всё так же хотим моделировать «среднее» значение, а точнее, <em>математическое ожидание</em>, переменной <span class="math inline">\(\mathbb{E}(y)\)</span>.</li>
+<li>Давайте возьмем некоторое преобразование (функцию) <span class="math inline">\(g \big( \mathbb{E}(y) \big) = \eta\)</span>, которое будет преобразовывать математическое ожидание нашей целевой переменной, <em>линеаризуя его</em>. Она и будет называться <strong>функцией связи</strong>.</li>
+<li>Теперь у нас есть линейная величина <span class="math inline">\(\eta\)</span>, которую можно моделировать с помощью уже хорошо знакомой нам модели:</li>
+</ul>
+<p><span class="math display">\[
+\eta_i = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_p x_p + \varepsilon
+\]</span></p>
+<ul>
+<li>Однако нас всё же интересует с точки зрения изученя закономерностей не <span class="math inline">\(\eta\)</span>, а <span class="math inline">\(\mathbb{E}(y)\)</span>, но так как функция <span class="math inline">\(g \big( \mathbb{E}(y) \big)\)</span> известна, мы возьмем <em>обратную функцию</em> <span class="math inline">\(g^{-1} (\eta) = \mathbb{E}(y)\)</span> и получим интересующие нас значения.</li>
+</ul>
+<p>Такова общая логика <strong>обобщенных линейных моделей (generalized linear models, GLM)</strong>. Какая именно функция связи (и, соответственно, обратная функция) будет использоваться, зависит от распределения целевой переменной. Далее мы рассмотрим два конкретных примера. Но уже сейчас мы можем написать общее уравнения для таких моделей:</p>
+<p><span class="math display">\[
+g \big( \mathbb{E}(y_i) \big) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \varepsilon_i
+\]</span></p>
+<p>Один из особых случаев возникает, когда к целевой переменной не применяется никакого преобразования — то есть используется <span class="math inline">\(g \big( \mathbb{E}(y)) = \mu\)</span> при <span class="math inline">\(y \thicksim \mathcal{N}(\mu, \sigma^2)\)</span>. Такая функция связи называется <em>функцией индентичности (identity function)</em>. В этом случае получается следующее:</p>
+<p><span class="math display">\[
+g \big( \mathbb{E}(y_i) \big) = \mu_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \varepsilon_i
+\]</span></p>
+<p>То есть мы получили обычную хорошо нам знакомую линейную регрессию. В этом смысле <em>обобщенные</em> линейные модели действительно <em>обобщают</em> случай обычной линейной регрессии на другие случай распределения целевой переменной.</p>
+</section>
+<section id="биноминальная-регрессия" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="биноминальная-регрессия"><span class="header-section-number">10.3</span> Биноминальная регрессия</h2>
+<p>Рассмотрение фреймворка обобщенных линейных моделей мы начнем с биномиальной, или логистической, регрессии, которая позволяет моделировать бинарные переменные.</p>
+<section id="бинарные-переменные-и-биномиальное-распределение" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="бинарные-переменные-и-биномиальное-распределение"><span class="header-section-number">10.3.1</span> Бинарные переменные и биномиальное распределение</h3>
+<p>Бинарными называются переменные, которые могут принимать только два значения — вообще, любых, но так как нам нужнв такие обозначения, которые сможет переварить математика, используем <span class="math inline">\(0\)</span> и <span class="math inline">\(1\)</span>. Для нас это будут просто лейблы классов, так как мы, заменив обозначения, остались в рамках номинальной шкалы.</p>
+<p>В теме про случайные величины мы вычисляли вероятность случайного прохождения теста из <span class="math inline">\(n\)</span> вопросов, каждый из которых мог быть решен правильно («успех», <span class="math inline">\(1\)</span>) или неправильно («неудача», <span class="math inline">\(0\)</span>), и описывали вероятность получить <span class="math inline">\(k\)</span> «успехов» в <span class="math inline">\(n\)</span> испытаниях как</p>
+<p><span class="math display">\[
+\mathbb{P}(X = k) = C_n^k \, p^k \, q^{n-k}
+\]</span></p>
+<p>Эта формула и задает биномиальное распределение: <span class="math inline">\(\mathbb{P}(X = k) \thicksim \text{Bin}(n, p)\)</span>:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l10_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>От этого распределения и происходит название рассматриваемой регрессионной модели.</p>
+</section>
+<section id="математическая-модель" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="математическая-модель"><span class="header-section-number">10.3.2</span> Математическая модель</h3>
+<p>Тем не менее, хоть биномиальное распределения и существует, реализация <span class="math inline">\(0\)</span> и <span class="math inline">\(1\)</span> в отдельном наблюдении полчинается не ему<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, поэтому первым концептуальным шагом построения модели биномиальной регрессии является переход от моделирования <span class="math inline">\(0\)</span> и <span class="math inline">\(1\)</span> к моделированию вероятности получения <span class="math inline">\(1\)</span>.</p>
+<p>Рассмотрим картинку. Пусть мы пытаемся смоделировать связь между бинарной целевой переменной <span class="math inline">\(Y\)</span> и количественным предиктором <span class="math inline">\(X\)</span>. Тогда её визуализация будет схематично выглядеть так:</p>
+<center>
+<figure class="figure">
+<img src="pics/bin_y.jpg" class="figure-img">
+</figure>
+</center>
+<p>Тогда мы можем посчитать доли единиц в общем количестве исходов <em>при данном значении предиктора</em> <span class="math inline">\(p_{Y=1|x_i}\)</span> и использовать их как оценку вероятности <span class="math inline">\(\mathbb{P}(Y=1|x_i)\)</span>:</p>
+<center>
+<figure class="figure">
+<img src="pics/bin_prob.jpg" class="figure-img">
+</figure>
+</center>
+<p>Отлично, мы получили непрерывную переменную! В принципе, можно попытаться смоделировать её с помощью линейной регрессии, однако возникнет некоторая проблема:</p>
+<center>
+<figure class="figure">
+<img src="pics/bin_prob_line.jpg" class="figure-img">
+</figure>
+</center>
+<p>Переменная, которую мы получили, определяет <em>вероятность</em>, а значит она ограничена — <span class="math inline">\(0 \leq \mathbb{P}(Y=1|x_i) \leq 1\)</span>. К тому же, чисто визуально заметно, что эта вероятность изменяется нелинейной, а по некоторой кривой — примерно так:</p>
+<center>
+<figure class="figure">
+<img src="pics/bin_prob_curve.jpg" class="figure-img">
+</figure>
+</center>
+<p>Супер… Теперь еще и искать кривую…</p>
+<section id="логистическая-кривая" class="level4" data-number="10.3.2.1">
+<h4 data-number="10.3.2.1" class="anchored" data-anchor-id="логистическая-кривая"><span class="header-section-number">10.3.2.1</span> Логистическая кривая</h4>
+<p>К счаcтью, математики поработали за нас, и сообщили нам, что такая закономерность хорошо моделируется <strong>логистической кривой (logistic curve)</strong> — отсюда второй название рассматриваемой нами модели (логистическая регрессия):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l10_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Эта прямая как раз зажата по <span class="math inline">\(y\)</span> между нулем и единицей, а её изгибы хорошо подходят под связь вероятности <span class="math inline">\(\mathbb{P}(Y=1|x_i)\)</span> со значением предиктора <span class="math inline">\(X\)</span>.</p>
+<p>Её формула такова:</p>
+<p><span class="math display">\[
+y = \frac{e^x}{1 + e^x}
+\]</span></p>
+<p>Однако если мы хотим описывать зависимость вероятности от значения предиктора, то вместо <span class="math inline">\(x\)</span> нам необходимо подставить <span class="math inline">\(\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots \beta_p x_{ip}\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{P}(Y=1|x_i) = p_i = \frac{e^{
+\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots \beta_p x_{ip}}
+}
+{1 + e^{
+\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots \beta_p x_{ip}}
+}
+\]</span></p>
+<p>Выглядит, безусловно, страшно. Но наш путь еще не завершен…</p>
+</section>
+<section id="шансы-и-логиты" class="level4" data-number="10.3.2.2">
+<h4 data-number="10.3.2.2" class="anchored" data-anchor-id="шансы-и-логиты"><span class="header-section-number">10.3.2.2</span> Шансы и логиты</h4>
+<p>Мы победили дискретность целевой переменной <span class="math inline">\(y\)</span> и подобрали кривую, которая хорошо моделирует зависимость искомой вероятности от значений предиктора. Однако кривая всё ещё ограничена нулем и единицей, а значит смоделировать её м помощью линейной регрессии не получится.</p>
+<p>Для того, чтобы победить ограниченность логистической кривой, используются шансы.</p>
+<p><strong>Шанс (отношение шансов, odds, odds ratio)</strong> — это отношение вреоятности «успеха» (<span class="math inline">\(1\)</span>) к вероятности «неудачи» (<span class="math inline">\(0\)</span>). Эта величина хороша тем, что изменяется от <span class="math inline">\(0\)</span> до <span class="math inline">\(+\infty\)</span>. Получается,</p>
+<p><span class="math display">\[
+\text{odds}_i = \frac{\mathbb{P}(Y=1|x_i)}{1 - \mathbb{P}(Y=1|x_i)} = \frac{p_i}{1 - p_i}
+\]</span></p>
+<p>Отлично, мы побороли ограниченность логистической кривой сверху — движемся к успеху.</p>
+</section>
+<section id="logit-преобразование" class="level4" data-number="10.3.2.3">
+<h4 data-number="10.3.2.3" class="anchored" data-anchor-id="logit-преобразование"><span class="header-section-number">10.3.2.3</span> Logit-преобразование</h4>
+<p>Для того, чтобы победить ограниченность кривой снизу, возьмем логарифм от шанса. Получим следующее:</p>
+<p><span class="math display">\[
+\text{logit}(p_i) = \ln \left(\frac{p_i}{1 - p_i} \right)
+\]</span></p>
+<p>Такое преобразование вероятности разывается логит-преобразованием (logit-transformation). Значения логитов варьируются от <span class="math inline">\(-\infty\)</span> до <span class="math inline">\(+\infty\)</span>, симметричны относительно нуля, и их удобно брать в каечестве целевой переменной для построения линейной модели. Кроме того, логит-преобразование еще и <em>линеаризует логистическую кривую</em>! Очень хорошее преобразование! Просто замечательное.</p>
+<details>
+<summary>
+Линеаризация логистической кривой через logit-преобразование
+</summary>
+<p>озьмем случай в одним предиктором, чтобы было попроще. Логистическая кривая, моделирующая вероятность, имеет такой вид:</p>
+<p><span class="math display">\[
+p_i = \frac{e^{\beta_0 + \beta_1 x_{i1}}}
+{1 + e^{\beta_0 + \beta_1 x_{i1}}}
+\]</span></p>
+<p>Обозначим <span class="math inline">\(\beta_0 + \beta_1 x_{i1} = t\)</span>. Тогда необходимо показать, что логит-преобразование</p>
+<p><span class="math display">\[
+\text{logit} (p_i) = \ln \left(\frac{p_i}{1 - p_i} \right)
+\]</span></p>
+<p>делает логистическую функцию линейной, то есть обычной прямой. Иначе говоря, необходимо показать, что</p>
+<p><span class="math display">\[
+\ln \left(\frac{p_i}{1 - p_i} \right)= t_i
+\]</span></p>
+<p>Доказывается это через расписывание формулы и раскрытие всех скобок и логарифмов (индекс <span class="math inline">\(i\)</span> опущен для упрощения записи):</p>
+<p><span class="math display">\[
+\begin{split}
+\ln \left(\frac{p}{1-p} \right)&amp;= \\
+&amp;= \ln \left(\frac{\frac{e^t}{1 + e^t}}{1 - \frac{e^t}{1 + e^t}} \right)= \\
+&amp;= \ln \left(\frac{e^t}{1 + e^t} \right)- \ln \left(1 - \frac{e^t}{1 + e^t} \right)= \\
+&amp;= \ln \left(\frac{e^t}{1 + e^t} \right)- \ln \left(\frac{1 + e^t - e^t}{1 + e^t} \right)= \\
+&amp;= \ln \left(\frac{e^t}{1 + e^t} \right)- \ln \left(\frac{1}{1 + e^t} \right)= \\
+&amp;= \ln (e^t) - \ln (1 + e^t) - \big(\ln (1) - \ln (1+e^t)\big) = \\
+&amp;= \ln (e^t) - \ln (1) = \\
+&amp;= \ln (e^t) = t
+\end{split}
+\]</span></p>
+<hr>
+</details>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cаммари того, что происходило выше:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>От дискретной оценки событий (0 и 1) переходим к оценке вероятностей.</li>
+<li>Связь вероятностей с предиктором описывается логистической кривой.</li>
+<li>Если при помощи функции связи перейти от вероятностей к логитам, то связь будет описываться прямой линией.</li>
+<li>Параметры линейной модели для такой прямой можно оценить с помощью регрессионного анализа.</li>
+</ul>
+</div>
+</div>
+<p>В итоге мы получаем, что математическая модель логистической регрессии выглядит так:</p>
+<p><span class="math display">\[
+p_i = \frac{e^{\beta_0 + \beta_1 x_{i1}}}
+{1 + e^{\beta_0 + \beta_1 x_{i1}}}
+\]</span></p>
+<p>Функция связи — логит:</p>
+<p><span class="math display">\[
+\text{logit} (p_i) = \ln \left(\frac{p_i}{1 - p_i} \right)= \eta_i
+\]</span></p>
+<p><span class="math display">\[
+\eta_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip}
+\]</span></p>
+<p>А это ровно то, что нам было нужно!</p>
+<p>Для перехода от логитов к вероятностям используется обратная функция вида</p>
+<p><span class="math display">\[
+p_i = \frac{e^{\eta_i}}{1 + e^{\eta_i}}
+\]</span></p>
+</section>
+</section>
+<section id="идентификация-модели" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="идентификация-модели"><span class="header-section-number">10.3.3</span> Идентификация модели</h3>
+<section id="метод-максимального-правдоподобия" class="level4" data-number="10.3.3.1">
+<h4 data-number="10.3.3.1" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">10.3.3.1</span> Метод максимального правдоподобия</h4>
+</section>
+</section>
+<section id="тестирование-качества-модели" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="тестирование-качества-модели"><span class="header-section-number">10.3.4</span> Тестирование качества модели</h3>
+<section id="девианса" class="level4" data-number="10.3.4.1">
+<h4 data-number="10.3.4.1" class="anchored" data-anchor-id="девианса"><span class="header-section-number">10.3.4.1</span> Девианса</h4>
+</section>
+<section id="анализ-девиансы" class="level4" data-number="10.3.4.2">
+<h4 data-number="10.3.4.2" class="anchored" data-anchor-id="анализ-девиансы"><span class="header-section-number">10.3.4.2</span> Анализ девиансы</h4>
+</section>
+<section id="информационные-критерии" class="level4" data-number="10.3.4.3">
+<h4 data-number="10.3.4.3" class="anchored" data-anchor-id="информационные-критерии"><span class="header-section-number">10.3.4.3</span> Информационные критерии</h4>
+</section>
+<section id="проверка-на-сверхдисперсию" class="level4" data-number="10.3.4.4">
+<h4 data-number="10.3.4.4" class="anchored" data-anchor-id="проверка-на-сверхдисперсию"><span class="header-section-number">10.3.4.4</span> Проверка на сверхдисперсию</h4>
+</section>
+</section>
+<section id="тестирование-значимости-предикторов" class="level3" data-number="10.3.5">
+<h3 data-number="10.3.5" class="anchored" data-anchor-id="тестирование-значимости-предикторов"><span class="header-section-number">10.3.5</span> Тестирование значимости предикторов</h3>
+<section id="тесты-вальда" class="level4" data-number="10.3.5.1">
+<h4 data-number="10.3.5.1" class="anchored" data-anchor-id="тесты-вальда"><span class="header-section-number">10.3.5.1</span> Тесты Вальда</h4>
+</section>
+<section id="тесты-отношения-правдоподобий" class="level4" data-number="10.3.5.2">
+<h4 data-number="10.3.5.2" class="anchored" data-anchor-id="тесты-отношения-правдоподобий"><span class="header-section-number">10.3.5.2</span> Тесты отношения правдоподобий</h4>
+</section>
+</section>
+<section id="интерпретация-коэффициентов-модели" class="level3" data-number="10.3.6">
+<h3 data-number="10.3.6" class="anchored" data-anchor-id="интерпретация-коэффициентов-модели"><span class="header-section-number">10.3.6</span> Интерпретация коэффициентов модели</h3>
+</section>
+<section id="предсказательная-сила-модели" class="level3" data-number="10.3.7">
+<h3 data-number="10.3.7" class="anchored" data-anchor-id="предсказательная-сила-модели"><span class="header-section-number">10.3.7</span> Предсказательная сила модели</h3>
+<section id="confusion-mattrix" class="level4" data-number="10.3.7.1">
+<h4 data-number="10.3.7.1" class="anchored" data-anchor-id="confusion-mattrix"><span class="header-section-number">10.3.7.1</span> Confusion mattrix</h4>
+<section id="accuracy" class="level5" data-number="10.3.7.1.1">
+<h5 data-number="10.3.7.1.1" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">10.3.7.1.1</span> Accuracy</h5>
+</section>
+<section id="precision" class="level5" data-number="10.3.7.1.2">
+<h5 data-number="10.3.7.1.2" class="anchored" data-anchor-id="precision"><span class="header-section-number">10.3.7.1.2</span> Precision</h5>
+</section>
+<section id="recall" class="level5" data-number="10.3.7.1.3">
+<h5 data-number="10.3.7.1.3" class="anchored" data-anchor-id="recall"><span class="header-section-number">10.3.7.1.3</span> Recall</h5>
+</section>
+<section id="f1-мера" class="level5" data-number="10.3.7.1.4">
+<h5 data-number="10.3.7.1.4" class="anchored" data-anchor-id="f1-мера"><span class="header-section-number">10.3.7.1.4</span> F1-мера</h5>
+</section>
+</section>
+<section id="roc-auc" class="level4" data-number="10.3.7.2">
+<h4 data-number="10.3.7.2" class="anchored" data-anchor-id="roc-auc"><span class="header-section-number">10.3.7.2</span> ROC-AUC</h4>
+</section>
+</section>
+</section>
+<section id="пуассоновская-регрессия" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="пуассоновская-регрессия"><span class="header-section-number">10.4</span> Пуассоновская регрессия</h2>
+<section id="счетные-данные.-распределение-пуассона" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="счетные-данные.-распределение-пуассона"><span class="header-section-number">10.4.1</span> Счетные данные. Распределение Пуассона</h3>
+</section>
+<section id="почему-общие-линейные-модели-плохо-работают" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.2</span> Почему общие линейные модели плохо работают?</h3>
+</section>
+<section id="математическая-модель-1" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="математическая-модель-1"><span class="header-section-number">10.4.3</span> Математическая модель</h3>
+</section>
+<section id="тестирование-качества-модели-1" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="тестирование-качества-модели-1"><span class="header-section-number">10.4.4</span> Тестирование качества модели</h3>
+</section>
+<section id="проверка-на-сверхдисперсию-1" class="level3" data-number="10.4.5">
+<h3 data-number="10.4.5" class="anchored" data-anchor-id="проверка-на-сверхдисперсию-1"><span class="header-section-number">10.4.5</span> Проверка на сверхдисперсию</h3>
+</section>
+<section id="квазипуассоновские-модели" class="level3" data-number="10.4.6">
+<h3 data-number="10.4.6" class="anchored" data-anchor-id="квазипуассоновские-модели"><span class="header-section-number">10.4.6</span> Квазипуассоновские модели</h3>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>А <a href="https://mathworld.wolfram.com/BernoulliDistribution.html">распределению Бернулли</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
