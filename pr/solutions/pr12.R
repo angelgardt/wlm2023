@@ -4,13 +4,18 @@
 # MAIN
 
 # 1
+
+# https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr12/managers.csv
+
+# https://github.com/angelgardt/wlm2023/blob/master/data/pr12/trust_data.csv
+
 pkgs <- c("pROC", "psych")
 install.packages(pkgs[!pkgs %in% installed.packages()])
 
 library(tidyverse)
 theme_set(theme_bw())
 
-managers <- read_csv("../data/pr12/managers.csv")
+managers <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr12/managers.csv")
 # managers_reg <- read_csv("../data/pr12/managers_reg.csv")
 str(managers)
 managers %>% 
@@ -92,7 +97,6 @@ summary(model1)
 model0 <- glm(lvl ~ 1, family = binomial, data = mngrs)
 anova(model0, model1, test = "Chi")
 
-
 # 9
 ## a
 car::Anova(model1)
@@ -169,7 +173,7 @@ recall = confmat[2,2] / (confmat[2,2] + confmat[2, 1])
 recall
 ## F1
 (precision * recall) / (precision + recall) * 2 
-psych::harmonic.mean(precision, recall)
+psych::harmonic.mean(с(precision, recall))
 
 
 # 14
@@ -179,7 +183,7 @@ pROC::auc(pROC::roc(mngrs$lvl, predict(model1.4, type = "response")))
 # plot(pROC::roc(mngrs$lvl, predict(model1.4, type = "response")))
 
 # 15
-satis <- read_csv("../data/pr12/trust_data.csv")
+satis <- read_csv("https://github.com/angelgardt/wlm2023/blob/master/data/pr12/trust_data.csv")
 str(satis)
 par(mfrow = c(2, 2))
 satis$errors_total %>% hist()
