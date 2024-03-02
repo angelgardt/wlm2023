@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -79,6 +80,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -309,6 +337,54 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы работаем с данными о факторам сердечно-сосудистых заболеваний. Ниже представлено описание данных из <a href="https://www.kaggle.com/dileep070/heart-disease-prediction-using-logistic-regression">источника</a>.</p>
+<p><strong>Introduction</strong> World Health Organization has estimated 12 million deaths occur worldwide, every year due to Heart diseases. Half the deaths in the United States and other developed countries are due to cardio vascular diseases. The early prognosis of cardiovascular diseases can aid in making decisions on lifestyle changes in high risk patients and in turn reduce the complications. This research intends to pinpoint the most relevant/risk factors of heart disease as well as predict the overall risk using logistic regression Data Preparation</p>
+<p><strong>Source</strong> The dataset is publically available on the Kaggle website, and it is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease (CHD).The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes.</p>
+<p><strong>Variables</strong> Each attribute is a potential risk factor. There are both demographic, behavioral and medical risk factors.</p>
+<ul>
+<li>Demographic:
+<ul>
+<li>Sex: male or female (Nominal)</li>
+<li>Age: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)</li>
+</ul></li>
+<li>Behavioral:
+<ul>
+<li>Current Smoker: whether or not the patient is a current smoker (Nominal)</li>
+<li>Cigs Per Day: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)</li>
+</ul></li>
+<li>Medical (history):
+<ul>
+<li>BP Meds: whether or not the patient was on blood pressure medication (Nominal)</li>
+<li>Prevalent Stroke: whether or not the patient had previously had a stroke (Nominal)</li>
+<li>Prevalent Hyp: whether or not the patient was hypertensive (Nominal)</li>
+<li>Diabetes: whether or not the patient had diabetes (Nominal)</li>
+</ul></li>
+<li>Medical (current):
+<ul>
+<li>Tot Chol: total cholesterol level (Continuous)</li>
+<li>Sys BP: systolic blood pressure (Continuous)</li>
+<li>Dia BP: diastolic blood pressure (Continuous)</li>
+<li>BMI: Body Mass Index (Continuous)</li>
+<li>Heart Rate: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)</li>
+<li>Glucose: glucose level (Continuous)</li>
+</ul></li>
+<li>Predict variable (desired target):
+<ul>
+<li>10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)</li>
+</ul></li>
+</ul>
+</div>
+</div>
 <section id="hw11_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw11_main">Основные задания</h2>
 <section id="section" class="level3">
@@ -1180,27 +1256,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1215,10 +1270,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1227,8 +1286,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
