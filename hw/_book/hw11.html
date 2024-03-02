@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -78,35 +112,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -354,35 +359,36 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <ul>
 <li>Demographic:
 <ul>
-<li>Sex: male or female (Nominal)</li>
-<li>Age: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)</li>
+<li><code>male</code>: male or female (Nominal)</li>
+<li><code>age</code>: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)</li>
 </ul></li>
 <li>Behavioral:
 <ul>
-<li>Current Smoker: whether or not the patient is a current smoker (Nominal)</li>
-<li>Cigs Per Day: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)</li>
+<li><code>currentSmoker</code>: whether or not the patient is a current smoker (Nominal)</li>
+<li><code>cigsPerDay</code>: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)</li>
 </ul></li>
 <li>Medical (history):
 <ul>
-<li>BP Meds: whether or not the patient was on blood pressure medication (Nominal)</li>
-<li>Prevalent Stroke: whether or not the patient had previously had a stroke (Nominal)</li>
-<li>Prevalent Hyp: whether or not the patient was hypertensive (Nominal)</li>
-<li>Diabetes: whether or not the patient had diabetes (Nominal)</li>
+<li><code>BPMeds</code>: whether or not the patient was on blood pressure medication (Nominal)</li>
+<li><code>prevalentStroke</code>: whether or not the patient had previously had a stroke (Nominal)</li>
+<li><code>prevalentHyp</code>: whether or not the patient was hypertensive (Nominal)</li>
+<li><code>diabetes</code>: whether or not the patient had diabetes (Nominal)</li>
 </ul></li>
 <li>Medical (current):
 <ul>
-<li>Tot Chol: total cholesterol level (Continuous)</li>
-<li>Sys BP: systolic blood pressure (Continuous)</li>
-<li>Dia BP: diastolic blood pressure (Continuous)</li>
-<li>BMI: Body Mass Index (Continuous)</li>
-<li>Heart Rate: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)</li>
-<li>Glucose: glucose level (Continuous)</li>
+<li><code>totChol</code>: total cholesterol level (Continuous)</li>
+<li><code>sysBP</code>: systolic blood pressure (Continuous)</li>
+<li><code>diaBP</code>: diastolic blood pressure (Continuous)</li>
+<li><code>BMI</code>: Body Mass Index (Continuous)</li>
+<li><code>heartRate</code>: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)</li>
+<li><code>glucose</code>: glucose level (Continuous)</li>
 </ul></li>
 <li>Predict variable (desired target):
 <ul>
-<li>10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)</li>
+<li><code>TenYearCHD</code>: 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)</li>
 </ul></li>
 </ul>
+<p>Переменную <code>TenYearCHD</code> мы будем рассматривать как целевую, все остальные — в качестве предикторов.</p>
 </div>
 </div>
 <section id="hw11_main" class="level2">
@@ -391,11 +397,100 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw11-1-level" class="level"></p>
 <div id="hw11-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv">датасет</a> в переменую <code>heart</code>. Изучите их структуру.</li>
+<li>Предобработайте данные, если это необходимо: удалите пропущенные значения, скорректируйте типы переменных. Перезапишите датасет.</li>
+</ol>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">## a</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4238 Columns: 16
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (16): male, age, education, currentSmoker, cigsPerDay, BPMeds, prevalent...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [4,238 × 16] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ male           : num [1:4238] 1 0 1 0 0 0 0 0 1 1 ...
+ $ age            : num [1:4238] 39 46 48 61 46 43 63 45 52 43 ...
+ $ education      : num [1:4238] 4 2 1 3 3 2 1 2 1 1 ...
+ $ currentSmoker  : num [1:4238] 0 0 1 1 1 0 0 1 0 1 ...
+ $ cigsPerDay     : num [1:4238] 0 0 20 30 23 0 0 20 0 30 ...
+ $ BPMeds         : num [1:4238] 0 0 0 0 0 0 0 0 0 0 ...
+ $ prevalentStroke: num [1:4238] 0 0 0 0 0 0 0 0 0 0 ...
+ $ prevalentHyp   : num [1:4238] 0 0 0 1 0 1 0 0 1 1 ...
+ $ diabetes       : num [1:4238] 0 0 0 0 0 0 0 0 0 0 ...
+ $ totChol        : num [1:4238] 195 250 245 225 285 228 205 313 260 225 ...
+ $ sysBP          : num [1:4238] 106 121 128 150 130 ...
+ $ diaBP          : num [1:4238] 70 81 80 95 84 110 71 71 89 107 ...
+ $ BMI            : num [1:4238] 27 28.7 25.3 28.6 23.1 ...
+ $ heartRate      : num [1:4238] 80 95 75 65 85 77 60 79 76 93 ...
+ $ glucose        : num [1:4238] 77 76 70 103 85 99 85 78 79 88 ...
+ $ TenYearCHD     : num [1:4238] 0 0 0 1 0 0 1 0 0 0 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   male = col_double(),
+  ..   age = col_double(),
+  ..   education = col_double(),
+  ..   currentSmoker = col_double(),
+  ..   cigsPerDay = col_double(),
+  ..   BPMeds = col_double(),
+  ..   prevalentStroke = col_double(),
+  ..   prevalentHyp = col_double(),
+  ..   diabetes = col_double(),
+  ..   totChol = col_double(),
+  ..   sysBP = col_double(),
+  ..   diaBP = col_double(),
+  ..   BMI = col_double(),
+  ..   heartRate = col_double(),
+  ..   glucose = col_double(),
+  ..   TenYearCHD = col_double()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## b</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">### no type correction needed</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>heart <span class="sc">%&gt;%</span> <span class="fu">sapply</span>(is.na) <span class="sc">%&gt;%</span> <span class="fu">apply</span>(<span class="dv">2</span>, sum) <span class="do">## has NA, let's remove them</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           male             age       education   currentSmoker      cigsPerDay 
+              0               0             105               0              29 
+         BPMeds prevalentStroke    prevalentHyp        diabetes         totChol 
+             53               0               0               0              50 
+          sysBP           diaBP             BMI       heartRate         glucose 
+              0               0              19               1             388 
+     TenYearCHD 
+              0 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>heart <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>() <span class="ot">-&gt;</span> heart</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(heart)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3656</code></pre>
+</div>
 </div>
 <div id="hw11-1-autocheck" class="autocheck">
 <div id="hw11-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите количество строк в датасете, полученном после удаления пропущенных значений.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-1')"></p>
@@ -406,23 +501,9 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw11-1-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Удалить все пропущенные значения можно с помощью функции <code>drop_na()</code>.</p>
 </details>
 </div>
 </section>
@@ -430,12 +511,26 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw11-2-level" class="level"></p>
 <div id="hw11-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Сегодня мы поработаем с изученной моделью в более «машиннообученском». подходе. Начнем в разбиения выборки на обучающую (тренировочную) и тестовую.</p>
+<p>Разбейте данные на обучающую и тестовую выборки в соотношении 7/3 — 70% данных должно оказать в обучающей и 30% в тестовой. Сохраните обучающий датасет в переменную <code>heart_train</code>, а тестовый — в <code>heart_test</code>.</p>
+<p>Для воспроизводимых результатов используйте <code>set.seed(616)</code>.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">616</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>ind_train <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(heart), <span class="at">size =</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(heart), <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>heart <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(ind_train) <span class="ot">-&gt;</span> heart_train</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>heart <span class="sc">%&gt;%</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>ind_train) <span class="ot">-&gt;</span> heart_test</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(heart_train<span class="sc">$</span>TenYearCHD) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.16</code></pre>
+</div>
 </div>
 <div id="hw11-2-autocheck" class="autocheck">
 <div id="hw11-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите среднее по переменной <code>TenYearCHD</code> обучающей выборки.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-2')"></p>
@@ -448,21 +543,12 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы разбить датасет на тренировочную и тестовую части, необходимо:</p>
+<ul>
+<li>сгенерировать вектор случайных индексов из номеров строк общего датасета длиной, равной 70% от числа строк датасета</li>
+<li>с помощью индексации (или функции из <code>tidyverse</code>) вытащить строки со сгенерированными номерами и сохранить результат в <code>heart_train</code></li>
+<li>с помощью «отрицательной» индексации (или функции из <code>tidyverse</code>) вытащить строки со всеми номерами, кроме сгенерированных, и сохранить результат в <code>heart_test</code></li>
+</ul>
 </details>
 </div>
 </section>

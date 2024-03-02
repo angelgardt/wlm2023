@@ -18,25 +18,27 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 **Variables** Each attribute is a potential risk factor. There are both demographic, behavioral and medical risk factors.
 
 - Demographic:
-    - Sex: male or female (Nominal)
-    - Age: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)
+    - `male`: male or female (Nominal)
+    - `age`: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)
 - Behavioral:
-    - Current Smoker: whether or not the patient is a current smoker (Nominal)
-    - Cigs Per Day: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)
+    - `currentSmoker`: whether or not the patient is a current smoker (Nominal)
+    - `cigsPerDay`: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)
 - Medical (history):
-    - BP Meds: whether or not the patient was on blood pressure medication (Nominal)
-    - Prevalent Stroke: whether or not the patient had previously had a stroke (Nominal)
-    - Prevalent Hyp: whether or not the patient was hypertensive (Nominal)
-    - Diabetes: whether or not the patient had diabetes (Nominal)
+    - `BPMeds`: whether or not the patient was on blood pressure medication (Nominal)
+    - `prevalentStroke`: whether or not the patient had previously had a stroke (Nominal)
+    - `prevalentHyp`: whether or not the patient was hypertensive (Nominal)
+    - `diabetes`: whether or not the patient had diabetes (Nominal)
 - Medical (current):
-    - Tot Chol: total cholesterol level (Continuous)
-    - Sys BP: systolic blood pressure (Continuous)
-    - Dia BP: diastolic blood pressure (Continuous)
-    - BMI: Body Mass Index (Continuous)
-    - Heart Rate: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)
-    - Glucose: glucose level (Continuous)
+    - `totChol`: total cholesterol level (Continuous)
+    - `sysBP`: systolic blood pressure (Continuous)
+    - `diaBP`: diastolic blood pressure (Continuous)
+    - `BMI`: Body Mass Index (Continuous)
+    - `heartRate`: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)
+    - `glucose`: glucose level (Continuous)
 - Predict variable (desired target):
-    - 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
+    - `TenYearCHD`: 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
+
+Переменную `TenYearCHD` мы будем рассматривать как целевую, все остальные --- в качестве предикторов.
 
 :::
 
@@ -47,12 +49,28 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <img id="hw11-1-level" class="level"/>
 
 ::: {#hw11-1-task .task}
-Текст задания `переменная`.
+a. Загрузите [датасет](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv) в переменую `heart`. Изучите их структуру.
+b. Предобработайте данные, если это необходимо: удалите пропущенные значения, скорректируйте типы переменных. Перезапишите датасет.
 :::
+
+```{r}
+library(tidyverse)
+theme_set(theme_bw())
+
+## a
+heart <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv")
+str(heart)
+
+## b
+### no type correction needed
+heart %>% sapply(is.na) %>% apply(2, sum) ## has NA, let's remove them
+heart %>% drop_na() -> heart
+nrow(heart)
+```
 
 ::: {#hw11-1-autocheck .autocheck}
 ::: {#hw11-1-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите количество строк в датасете, полученном после удаления пропущенных значений.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-1" placeholder="Введите ответ…">
@@ -66,25 +84,9 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 ::: hints-wrapper
 <details class="hints" id="hw11-1-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Удалить все пропущенные значения можно с помощью функции `drop_na()`.
 
 </details>
 :::
@@ -94,14 +96,29 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <img id="hw11-2-level" class="level"/>
 
 ::: {#hw11-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Сегодня мы поработаем с изученной моделью в более «машиннообученском». подходе. Начнем в разбиения выборки на обучающую (тренировочную) и тестовую.
+
+Разбейте данные на обучающую и тестовую выборки в соотношении 7/3 --- 70% данных должно оказать в обучающей и 30% в тестовой. Сохраните обучающий датасет в переменную `heart_train`, а тестовый --- в `heart_test`.
+
+Для воспроизводимых результатов используйте `set.seed(616)`.
+
 :::
+
+```{r}
+set.seed(616)
+ind_train <- sample(1:nrow(heart), size = 0.7 * nrow(heart), replace = FALSE)
+heart %>% 
+  slice(ind_train) -> heart_train
+heart %>% 
+  slice(-ind_train) -> heart_test
+
+mean(heart_train$TenYearCHD) %>% round(2)
+```
 
 ::: {#hw11-2-autocheck .autocheck}
 ::: {#hw11-2-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите среднее по переменной `TenYearCHD` обучающей выборки.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-2" placeholder="Введите ответ…">
@@ -117,23 +134,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Чтобы разбить датасет на тренировочную и тестовую части, необходимо:
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* сгенерировать вектор случайных индексов из номеров строк общего датасета длиной, равной 70% от числа строк датасета
+* с помощью индексации (или функции из `tidyverse`) вытащить строки со сгенерированными номерами и сохранить результат в `heart_train`
+* с помощью «отрицательной» индексации (или функции из `tidyverse`) вытащить строки со всеми номерами, кроме сгенерированных, и сохранить результат в `heart_test`
 
 </details>
 :::
