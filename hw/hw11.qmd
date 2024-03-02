@@ -6,6 +6,10 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 -->
 ```
 
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 :::{.callout-note}
 ## Данные
 
@@ -38,7 +42,7 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 - Predict variable (desired target):
     - `TenYearCHD`: 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
 
-Переменную `TenYearCHD` мы будем рассматривать как целевую, все остальные --- в качестве предикторов.
+Необходимо выяснить, какие факторы влияют на риск сердечнососудистых заболеваний в перспективе 10 лет. Переменную `TenYearCHD` мы будем рассматривать как целевую, все остальные --- в качестве предикторов.
 
 :::
 
@@ -53,19 +57,25 @@ a. Загрузите [датасет](https://raw.githubusercontent.com/angelga
 b. Предобработайте данные, если это необходимо: удалите пропущенные значения, скорректируйте типы переменных. Перезапишите датасет.
 :::
 
-```{r}
+```{r, eval=TRUE}
 library(tidyverse)
 theme_set(theme_bw())
+```
+
+```{r, eval=TRUE}
+# read_csv("https://raw.githubusercontent.com/angelgardt/hseuxlab-wlm2021/master/data/framingham.csv") %>% 
+#   select(-education) %>% 
+#   write_csv("../data/hw11/framingham.csv")
 
 ## a
 heart <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv")
-str(heart)
+# str(heart)
 
 ## b
 ### no type correction needed
-heart %>% sapply(is.na) %>% apply(2, sum) ## has NA, let's remove them
+# heart %>% sapply(is.na) %>% apply(2, sum) ## has NA, let's remove them
 heart %>% drop_na() -> heart
-nrow(heart)
+# nrow(heart)
 ```
 
 ::: {#hw11-1-autocheck .autocheck}
@@ -105,7 +115,7 @@ nrow(heart)
 
 :::
 
-```{r}
+```{r, eval=TRUE}
 set.seed(616)
 ind_train <- sample(1:nrow(heart), size = 0.7 * nrow(heart), replace = FALSE)
 heart %>% 
@@ -113,12 +123,12 @@ heart %>%
 heart %>% 
   slice(-ind_train) -> heart_test
 
-mean(heart_train$TenYearCHD) %>% round(2)
+# mean(heart_train$TenYearCHD) %>% round(2)
 ```
 
 ::: {#hw11-2-autocheck .autocheck}
 ::: {#hw11-2-ir .input-requirements}
-В качестве ответа для самопроверки введите среднее по переменной `TenYearCHD` обучающей выборки.
+В качестве ответа для самопроверки введите среднее по переменной `TenYearCHD` обучающей выборки. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-2" placeholder="Введите ответ…">
@@ -148,12 +158,26 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-3-level" class="level"/>
 
 ::: {#hw11-3-task .task}
-Текст задания.
+
+a. Постройте модель на обучающей выборке. Целевой переменной выступит `TenYearCHD`, все остальные --- в качестве предикторов. Так как в модели достаточно много предикторов, взаимодействия мы включать не будем.
+b. Протестируйте общую статистическую значимость модели с помощью теста отношения правдоподобий. Проинтерпретируйте результаты.
+
 :::
+
+```{r}
+## a
+model1 <- glm(TenYearCHD ~ ., family = binomial, data = heart_train)
+summary(model1)
+model1$deviance %>% round()
+
+## b
+model0 <- glm(TenYearCHD ~ 1, family = binomial, data = heart_train)
+anova(model0, model1, test = "Chi")
+```
 
 ::: {#hw11-3-autocheck .autocheck}
 ::: {#hw11-3-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите значение девиансы построенной модели (`deviance`), округленное до целого.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-3" placeholder="Введите ответ…">
@@ -169,23 +193,11 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Чтобы проестировать гипотезу об общей статистической значимости модели, необходимо:
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* построить нулевую модель, аналогичную заданной, но только с одним предиктором --- интерсептом
+* провести тест отношения правдоподобий с помощью функции `anova()`, указав в аргументе `test` необходимый тест
+* значение аргумента `test` соответствует распределению, которому подчиняется распределение значения отношения правдоподобий
 
 </details>
 :::
@@ -195,12 +207,48 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-4-level" class="level"/>
 
 ::: {#hw11-4-task .task}
-Текст задания.
+a. Используя тесты отношения превдоподобий, упростите модель, исключив незначимые предикторы.
+b. Сравните с помощью статистического теста и информационных критериев исходную и упрощенную модели.
+c. Выберите, с какой в дальнейшем вы будете работать:
+    * если модели различаются, то мы, исключив предикторы, потеряли что-то важное, значит необходимо работать с полной моделью
+    * если модели не различаются, то мы, исключив предикторы, **не** потеряли ничего важного, значит проще работать с сокращенной моделью
+    
 :::
 
+```{r}
+## a
+drop1(model1, test = "Chi")
+model1.1 <- update(model1, .~. -heartRate)
+drop1(model1.1, test = "Chi")
+model1.2 <- update(model1.1, .~. -currentSmoker)
+drop1(model1.2, test = "Chi")
+model1.3 <- update(model1.2, .~. -diaBP)
+drop1(model1.3, test = "Chi")
+model1.4 <- update(model1.3, .~. -diabetes)
+drop1(model1.4, test = "Chi")
+model1.5 <- update(model1.4, .~. -BMI)
+drop1(model1.5, test = "Chi")
+model1.6 <- update(model1.5, .~. -prevalentStroke)
+drop1(model1.6, test = "Chi")
+model1.7 <- update(model1.6, .~. -prevalentHyp)
+drop1(model1.7, test = "Chi")
+model1.8 <- update(model1.7, .~. -BPMeds)
+drop1(model1.8, test = "Chi")
+model1.8$deviance %>% round()
+
+## b
+anova(model1, model1.8, test = "Chi")
+
+AIC(model1, model1.8)
+BIC(model1, model1.8)
+
+## c
+### no code
+### no diference, base on AIC and BIC reduced model better
+```
 ::: {#hw11-4-autocheck .autocheck}
 ::: {#hw11-4-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите значение девиансы сокращенной модели (`deviance`), округленное до целого.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-4" placeholder="Введите ответ…">
@@ -211,7 +259,7 @@ mean(heart_train$TenYearCHD) %>% round(2)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw11-4-hints">
 
 <summary>Подсказки</summary>
@@ -242,12 +290,39 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-5-level" class="level"/>
 
 ::: {#hw11-5-task .task}
-Текст задания.
+a. Постройте confusion matrix по тренировочным данным для выбранной в предыдущем задании модели.
+    * Так как мы работаем с медицинскими данными, воспользуемся достаточно либеральным порогом для получения категориальных предсказаний в 0.6. Идея исходит из подхода гипердиагностики --- лучше взять и обследовать пациента с меньшим риском, чтобы выявить потенциально опасные патологии на раннем этапе.
+b. Рассчитайте метрики предказательной силы модели --- accuracy, precision, recall, F1-меру --- по построенной confusion matrix.
+c. Дайте оценку качеству модели по полученным значениям.
+
 :::
+
+```{r}
+## a
+predicted_tr <- ifelse(predict(model1.8, type = "response") > .6, 1, 0)
+confmat_tr <- table(heart_train$TenYearCHD, predicted_tr)
+
+## b
+### accuracy
+mean(heart_train$TenYearCHD == predicted_tr)
+### precision
+precision_tr = confmat_tr[2, 2] / (confmat_tr[2, 2] + confmat_tr[1, 2])
+precision_tr
+### recall
+recall_tr = confmat_tr[2, 2] / (confmat_tr[2, 2] + confmat_tr[2, 1])
+recall_tr
+### F1
+psych::harmonic.mean(c(precision_tr, recall_tr)) %>% round(3)
+
+## c
+### no code
+### high accuracy, high precision --- model makes low mistakes
+### low recall, consequently, low F1 --- model poorly catches the pattern
+```
 
 ::: {#hw11-5-autocheck .autocheck}
 ::: {#hw11-5-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение F1-меры, округленное *до тысячных*.  В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-5" placeholder="Введите ответ…">
@@ -263,25 +338,31 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Confusion matrix имеет следующую структуру:
 
-<summary>Как делать задание?</summary>
+||Предсказания: $0$|Предсказания: $1$|
+|:---:|:---:|:---:|
+|Данные: $0$|$\text{TN}$|$\text{FP}$|
+|Данные: $1$|$\text{FN}$|$\text{TP}$|
+
+* *True Positive* ($\text{TP}$) --- верное предсказанные единицы
+* *True Negative* ($\text{TN}$) --- верно предсказанные нули
+* *False Positive* ($\text{FP}$) --- ложноположительные предсказания, ошибочно предсказанные единицы
+* *False Negative* ($\text{FN$} --- ложноотрицательные предсказания, ошибочно предсказанные нули
+
+Формулы для расчета метрик таковы:
+
+$$
+\begin{split}
+& \text{accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}} \\
+& \text{precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \\
+& \text{recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \\
+& \text{F1} = 2 \cdot \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+\end{split}
+$$
 
 </details>
 
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #6
@@ -289,12 +370,69 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-6-level" class="level"/>
 
 ::: {#hw11-6-task .task}
-Текст задания.
+a. Возьмите несколько более строгих значений порогов --- 0.7, 0.8 и 0.9 --- и посмотрите, справляется ли модель с предсказаниями лучше, если использовать их.
+b. Выберите, при каком пороге модель наиболее хорошо описывает данные. Сравнивая модели, неободимо посмотреть на все метрики, однако для принятия окончательного решения можно воспользоваться F1-мерой, как обобщенным показателем precision и recall.
+
+**Возможно, проще будет сначала сделать [задание 10](#hw11-10-title). Это сократит код.**
 :::
+
+```{r}
+## a
+## 0.7
+predicted_tr07 <- ifelse(predict(model1.8, type = "response") > .7, 1, 0)
+confmat_tr07 <- table(heart_train$TenYearCHD, predicted_tr07)
+
+### accuracy
+mean(heart_train$TenYearCHD == predicted_tr07)
+### precision
+precision_tr07 = confmat_tr07[2, 2] / (confmat_tr07[2, 2] + confmat_tr07[1, 2])
+precision_tr07
+### recall
+recall_tr07 = confmat_tr07[2, 2] / (confmat_tr07[2, 2] + confmat_tr07[2, 1])
+recall_tr07
+### F1
+psych::harmonic.mean(c(precision_tr07, recall_tr07)) %>% round(3)
+
+## 0.8
+predicted_tr08 <- ifelse(predict(model1.8, type = "response") > .8, 1, 0)
+confmat_tr08 <- table(heart_train$TenYearCHD, predicted_tr08)
+
+### accuracy
+mean(heart_train$TenYearCHD == predicted_tr08)
+### precision
+precision_tr08 = confmat_tr08[2, 2] / (confmat_tr08[2, 2] + confmat_tr08[1, 2])
+precision_tr08
+### recall
+recall_tr08 = confmat_tr08[2, 2] / (confmat_tr08[2, 2] + confmat_tr08[2, 1])
+recall_tr08
+### F1
+psych::harmonic.mean(c(precision_tr08, recall_tr08)) %>% round(3)
+
+## 0.9
+predicted_tr09 <- ifelse(predict(model1.8, type = "response") > .9, 1, 0)
+confmat_tr09 <- table(heart_train$TenYearCHD, predicted_tr09)
+
+### accuracy
+mean(heart_train$TenYearCHD == predicted_tr09)
+### precision
+precision_tr09 = confmat_tr09[2, 2] / (confmat_tr09[2, 2] + confmat_tr09[1, 2])
+precision_tr09
+### recall
+recall_tr09 = confmat_tr09[2, 2] / (confmat_tr09[2, 2] + confmat_tr09[2, 1])
+recall_tr09
+### F1
+psych::harmonic.mean(c(precision_tr09, recall_tr09)) %>% round(3)
+
+## b
+psych::harmonic.mean(c(precision_tr, recall_tr)) %>% round(3)
+psych::harmonic.mean(c(precision_tr07, recall_tr07)) %>% round(3)
+psych::harmonic.mean(c(precision_tr08, recall_tr08)) %>% round(3)
+psych::harmonic.mean(c(precision_tr09, recall_tr09)) %>% round(3)
+```
 
 ::: {#hw11-6-autocheck .autocheck}
 ::: {#hw11-6-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите порог, при котором получаются наилучшие предсказания. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-6" placeholder="Введите ответ…">
@@ -305,7 +443,7 @@ mean(heart_train$TenYearCHD) %>% round(2)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw11-6-hints">
 
 <summary>Подсказки</summary>
@@ -336,12 +474,17 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-7-level" class="level"/>
 
 ::: {#hw11-7-task .task}
-Текст задания.
+С помощью имеющейся модели и выбранного порога получите предсказания для тестовых данных.
 :::
+
+```{r}
+predicted_test <- ifelse(predict(model1.8, heart_test, type = "response") > 0.6, 1, 0)
+mean(predicted_test) %>% round(3)
+```
 
 ::: {#hw11-7-autocheck .autocheck}
 ::: {#hw11-7-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ответа введите среднее по вектору предсказаний, округленное *до тысячных*. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-7" placeholder="Введите ответ…">
@@ -357,23 +500,8 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Чтобы получить предсказания для тестовых данных, воспользуйтесь функцией `predict()`, в которую необходимо передать модель и новые данные, а также указать в аргументе `type` значение `"response"`, чтобы получить предсказания вероятностей.
+* Далее, используя выбранный порог, получите дискретные предсказания модели.
 
 </details>
 :::
@@ -383,12 +511,35 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-8-level" class="level"/>
 
 ::: {#hw11-8-task .task}
-Текст задания.
+a. Постройте confusion matrix для предсказаний на тестовой выборке и рассчитайте метрики предсказательной силы.
+b. Сопоставьте результаты с метриками, полученными на тренировочных данных.
 :::
+
+```{r}
+## a
+confmat_test <- table(heart_test$TenYearCHD, predicted_test)
+
+## accuracy
+mean(heart_test$TenYearCHD == predicted_test)
+## precision
+precision_test = confmat_test[2, 2] / (confmat_test[2, 2] + confmat_test[1, 2])
+precision_test
+## recall
+recall_test = confmat_test[2, 2] / (confmat_test[2, 2] + confmat_test[2, 1])
+recall_test
+## F1
+psych::harmonic.mean(c(precision_test, recall_test)) %>% round(3)
+
+## b
+### no code
+### accuracy higher which may be because of unbalanced data
+### precision, recall and F1 lower that is good bacause of no overfitting
+
+```
 
 ::: {#hw11-8-autocheck .autocheck}
 ::: {#hw11-8-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение F1-меры, округленное *до тысячных*.  В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-8" placeholder="Введите ответ…">
@@ -404,23 +555,9 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* При сопоставлении метрик необходимо понять, выше или ниже они получились на тестовой выборке по сравнению с обучающей (тренировочной).
+    * Если они ниже, то проблем с переобучением модели не возникло --- можно пытаться экстраполировать результаты на генеральную совокупность.
+    * Если они выше, то результаты моделирования зависят больше от данных, чем от самой модели --- есть трудности с обобщением результатов на генеральную сопокупность.
 
 </details>
 :::
@@ -430,12 +567,45 @@ mean(heart_train$TenYearCHD) %>% round(2)
 <img id="hw11-9-level" class="level"/>
 
 ::: {#hw11-9-task .task}
-Текст задания.
+Проверьте основные допущения рассматриваемой модели --- линейность связи между предикторами и целевой переменной и отсутствие сверхдисперсии. Проинтерпретируйте полученные результаты.
+
+Для проверки линейности достаточно графической диагностики, для проверси сверхдисперсии используйте функцию ниже (она же использовалась на практике):
+
+```{r, echo=TRUE, eval=TRUE}
+# https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#testing-for-overdispersioncomputing-overdispersion-factor
+overdisp_fun <- function(model) {
+  rdf <- df.residual(model)
+  if (inherits(model, 'negbin'))
+    rdf <- rdf - 1
+  rp <- residuals(model, type = 'pearson')
+  Pearson.chisq <- sum(rp ^ 2)
+  prat <- Pearson.chisq / rdf
+  pval <-
+    pchisq(Pearson.chisq, df = rdf, lower.tail = FALSE)
+  c(
+    chisq = Pearson.chisq,
+    ratio = prat,
+    rdf = rdf,
+    p = pval
+  )
+}
+```
+
 :::
+
+```{r}
+ggplot(data = NULL,
+       aes(x = predict(model1.8, type = "response"),
+           y = resid(model1.8, type = "pearson"))) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+overdisp_fun(model1.8)
+```
 
 ::: {#hw11-9-autocheck .autocheck}
 ::: {#hw11-9-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение `ratio`, полученное при проверке допущения об отсутствии сверхдисперсии, округленное *до тысячных*. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw11-9" placeholder="Введите ответ…">
@@ -451,36 +621,64 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для проверки линейности связи необходимо построить график зависимости пирсоновских остатков от предсказанных моделью значений.
+    * Предсказания получаются из модели с помощью функции `predict()` с указанием `type = "response"` без использования новых данных, так как нас интересуют значения предсказания для данных, на которых модель была подобрана.
+    * Остатки получаются аналогично с помощью функции `resid()` с указанием `type = "pearson"`, чтобы получить стандартизированные значения остатков.
+    * Для отображения тренда используется `geom_smooth()` с методом `"loess"`, так как линейный тренд здесь не работает из-за использования функции связи внутри модели.
+* При проверке сверхдисперсии нулевая гипотеза теста гласит, что в данных не наблюдается сверхдисперсии, а альтернативная --- что сверхдисперсия присутствует. Соответствующим образом интерпретируется и результат тестирования.
 
 </details>
 :::
 
-### #10
+### #10 {#hw11-10-title}
 
 <img id="hw11-10-level" class="level"/>
 
 ::: {#hw11-10-task .task}
-Текст задания.
+На практике упоминалось, что расчет метрик предсказательной силы модели можно обернуть в функцию, чтобы не таскать много строк кода каждый раз, когда необходимо проверить качество модели. Давайте это сделаем.
+
+Напишите функцию `prediction_metrics()`, которая будет рассчитывать метрики предсказательной силы модели на основе значений целевой переменной из данных и предсказанных вероятностей. Функция должна:
+
+* принимать на вход:
+    * вектор значений бинарной переменной из данных (`data`)
+    * вектор предсказанных моделью вероятностей (`response`)
+    * порог, использующийся для перевода непрерывных предсказаний в дискретные (`threshold`)
+* возвращать:
+   * именованный вектор со значениями `accuracy`, `precision`, `recall` и `F1-меры`.
+
+Пример работы функции на полной модели представлен ниже.
+
 :::
 
-::: {#hw11-10-autocheck .autocheck}
+```{r, eval=TRUE}
+prediction_metrics <- function(data, response, threshold) {
+  predicted <- ifelse(response > threshold, 1, 0)
+  confmat <- table(data, predicted)
+  acc = mean(data == predicted)
+  precision = confmat[2, 2] / (confmat[2, 2] + confmat[1, 2])
+  recall = confmat[2, 2] / (confmat[2, 2] + confmat[2, 1])
+  F1 = psych::harmonic.mean(c(precision, recall))
+  return(c(
+    accuracy = acc,
+    precision = precision,
+    recall = recall,
+    F1 = F1)
+  )
+}
+```
+
+```{r, eval=TRUE}
+model1 <- glm(TenYearCHD ~ ., family = binomial, data = heart_train)
+```
+
+```{r, echo=TRUE, eval=TRUE}
+prediction_metrics(data = heart_train$TenYearCHD,
+                   response = predict(model1, type = "response"),
+                   threshold = 0.6)
+```
+
+
+::: {#hw11-10-autocheck .autocheck hidden="true"}
 ::: {#hw11-10-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -498,27 +696,13 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Чтобы написать функцию, необходимо взять код, используемый для расчета метрика предсказательной силы модели и заменить используемые в нем переменные на соответствующие аргументы функции.
+* Чтобы создать именованный вектор, нужно задать соответствие между именем элемента вектора и его значением: `c(name1 = value1, name2 = value2, ...)`.
 
 </details>
 :::
 
+<!---
 ## Дополнительные задания {#hw11_add}
 
 ### #1
@@ -755,6 +939,8 @@ mean(heart_train$TenYearCHD) %>% round(2)
 
 </details>
 :::
+
+--->
 
 ```{=html}
 <!--- CHANGE hw11 TO hw<n> IN THE LINES BELOW--->
