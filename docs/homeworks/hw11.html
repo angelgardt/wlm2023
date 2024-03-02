@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -65,6 +99,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -79,6 +114,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -271,15 +333,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#7</a></li>
   <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#8</a></li>
   <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
-  </ul></li>
-  <li><a href="#hw11_add" id="toc-hw11_add" class="nav-link" data-scroll-target="#hw11_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
+  <li><a href="#hw11-10-title" id="toc-hw11-10-title" class="nav-link" data-scroll-target="#hw11-10-title">#10</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -309,17 +363,69 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 -->
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы работаем с данными о факторам сердечно-сосудистых заболеваний. Ниже представлено описание данных из <a href="https://www.kaggle.com/dileep070/heart-disease-prediction-using-logistic-regression">источника</a>.</p>
+<p><strong>Introduction</strong> World Health Organization has estimated 12 million deaths occur worldwide, every year due to Heart diseases. Half the deaths in the United States and other developed countries are due to cardio vascular diseases. The early prognosis of cardiovascular diseases can aid in making decisions on lifestyle changes in high risk patients and in turn reduce the complications. This research intends to pinpoint the most relevant/risk factors of heart disease as well as predict the overall risk using logistic regression Data Preparation</p>
+<p><strong>Source</strong> The dataset is publically available on the Kaggle website, and it is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease (CHD).The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes.</p>
+<p><strong>Variables</strong> Each attribute is a potential risk factor. There are both demographic, behavioral and medical risk factors.</p>
+<ul>
+<li>Demographic:
+<ul>
+<li><code>male</code>: male or female (Nominal)</li>
+<li><code>age</code>: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)</li>
+</ul></li>
+<li>Behavioral:
+<ul>
+<li><code>currentSmoker</code>: whether or not the patient is a current smoker (Nominal)</li>
+<li><code>cigsPerDay</code>: the number of cigarettes that the person smoked on average in one day (can be considered continuous as one can have any number of cigarettes, even half a cigarette.)</li>
+</ul></li>
+<li>Medical (history):
+<ul>
+<li><code>BPMeds</code>: whether or not the patient was on blood pressure medication (Nominal)</li>
+<li><code>prevalentStroke</code>: whether or not the patient had previously had a stroke (Nominal)</li>
+<li><code>prevalentHyp</code>: whether or not the patient was hypertensive (Nominal)</li>
+<li><code>diabetes</code>: whether or not the patient had diabetes (Nominal)</li>
+</ul></li>
+<li>Medical (current):
+<ul>
+<li><code>totChol</code>: total cholesterol level (Continuous)</li>
+<li><code>sysBP</code>: systolic blood pressure (Continuous)</li>
+<li><code>diaBP</code>: diastolic blood pressure (Continuous)</li>
+<li><code>BMI</code>: Body Mass Index (Continuous)</li>
+<li><code>heartRate</code>: heart rate (Continuous — In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)</li>
+<li><code>glucose</code>: glucose level (Continuous)</li>
+</ul></li>
+<li>Predict variable (desired target):
+<ul>
+<li><code>TenYearCHD</code>: 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)</li>
+</ul></li>
+</ul>
+<p>Необходимо выяснить, какие факторы влияют на риск сердечнососудистых заболеваний в перспективе 10 лет. Переменную <code>TenYearCHD</code> мы будем рассматривать как целевую, все остальные — в качестве предикторов.</p>
+</div>
+</div>
 <section id="hw11_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw11_main">Основные задания</h2>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw11-1-level" class="level"></p>
 <div id="hw11-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw11/framingham.csv">датасет</a> в переменую <code>heart</code>. Изучите их структуру.</li>
+<li>Предобработайте данные, если это необходимо: удалите пропущенные значения, скорректируйте типы переменных. Перезапишите датасет.</li>
+</ol>
 </div>
 <div id="hw11-1-autocheck" class="autocheck">
 <div id="hw11-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите количество строк в датасете, полученном после удаления пропущенных значений.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-1')"></p>
@@ -330,23 +436,9 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw11-1-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Удалить все пропущенные значения можно с помощью функции <code>drop_na()</code>.</p>
 </details>
 </div>
 </section>
@@ -354,12 +446,13 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw11-2-level" class="level"></p>
 <div id="hw11-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<p>Сегодня мы поработаем с изученной моделью в более «машиннообученском». подходе. Начнем в разбиения выборки на обучающую (тренировочную) и тестовую.</p>
+<p>Разбейте данные на обучающую и тестовую выборки в соотношении 7/3 — 70% данных должно оказать в обучающей и 30% в тестовой. Сохраните обучающий датасет в переменную <code>heart_train</code>, а тестовый — в <code>heart_test</code>.</p>
+<p>Для воспроизводимых результатов используйте <code>set.seed(616)</code>.</p>
 </div>
 <div id="hw11-2-autocheck" class="autocheck">
 <div id="hw11-2-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите среднее по переменной <code>TenYearCHD</code> обучающей выборки. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-2" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-2')"></p>
@@ -372,21 +465,12 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы разбить датасет на тренировочную и тестовую части, необходимо:</p>
+<ul>
+<li>сгенерировать вектор случайных индексов из номеров строк общего датасета длиной, равной 70% от числа строк датасета</li>
+<li>с помощью индексации (или функции из <code>tidyverse</code>) вытащить строки со сгенерированными номерами и сохранить результат в <code>heart_train</code></li>
+<li>с помощью «отрицательной» индексации (или функции из <code>tidyverse</code>) вытащить строки со всеми номерами, кроме сгенерированных, и сохранить результат в <code>heart_test</code></li>
+</ul>
 </details>
 </div>
 </section>
@@ -394,11 +478,14 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw11-3-level" class="level"></p>
 <div id="hw11-3-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте модель на обучающей выборке. Целевой переменной выступит <code>TenYearCHD</code>, все остальные — в качестве предикторов. Так как в модели достаточно много предикторов, взаимодействия мы включать не будем.</li>
+<li>Протестируйте общую статистическую значимость модели с помощью теста отношения правдоподобий. Проинтерпретируйте результаты.</li>
+</ol>
 </div>
 <div id="hw11-3-autocheck" class="autocheck">
 <div id="hw11-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите значение девиансы построенной модели (<code>deviance</code>), округленное до целого.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-3')"></p>
@@ -411,21 +498,12 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы проестировать гипотезу об общей статистической значимости модели, необходимо:</p>
+<ul>
+<li>построить нулевую модель, аналогичную заданной, но только с одним предиктором — интерсептом</li>
+<li>провести тест отношения правдоподобий с помощью функции <code>anova()</code>, указав в аргументе <code>test</code> необходимый тест</li>
+<li>значение аргумента <code>test</code> соответствует распределению, которому подчиняется распределение значения отношения правдоподобий</li>
+</ul>
 </details>
 </div>
 </section>
@@ -433,11 +511,19 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="hw11-4-level" class="level"></p>
 <div id="hw11-4-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Используя тесты отношения превдоподобий, упростите модель, исключив незначимые предикторы.</li>
+<li>Сравните с помощью статистического теста и информационных критериев исходную и упрощенную модели.</li>
+<li>Выберите, с какой в дальнейшем вы будете работать:
+<ul>
+<li>если модели различаются, то мы, исключив предикторы, потеряли что-то важное, значит необходимо работать с полной моделью</li>
+<li>если модели не различаются, то мы, исключив предикторы, <strong>не</strong> потеряли ничего важного, значит проще работать с сокращенной моделью</li>
+</ul></li>
+</ol>
 </div>
 <div id="hw11-4-autocheck" class="autocheck">
 <div id="hw11-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>В качестве ответа для самопроверки введите значение девиансы сокращенной модели (<code>deviance</code>), округленное до целого.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-4')"></p>
@@ -445,7 +531,7 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw11-4-hints">
 <summary>
 Подсказки
@@ -472,11 +558,18 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="hw11-5-level" class="level"></p>
 <div id="hw11-5-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте confusion matrix по тренировочным данным для выбранной в предыдущем задании модели.
+<ul>
+<li>Так как мы работаем с медицинскими данными, воспользуемся достаточно либеральным порогом для получения категориальных предсказаний в 0.6. Идея исходит из подхода гипердиагностики — лучше взять и обследовать пациента с меньшим риском, чтобы выявить потенциально опасные патологии на раннем этапе.</li>
+</ul></li>
+<li>Рассчитайте метрики предказательной силы модели — accuracy, precision, recall, F1-меру — по построенной confusion matrix.</li>
+<li>Дайте оценку качеству модели по полученным значениям.</li>
+</ol>
 </div>
 <div id="hw11-5-autocheck" class="autocheck">
 <div id="hw11-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение F1-меры, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-5')"></p>
@@ -489,21 +582,43 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Confusion matrix имеет следующую структуру:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Предсказания: <span class="math inline">\(0\)</span></th>
+<th style="text-align: center;">Предсказания: <span class="math inline">\(1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Данные: <span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{TN}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{FP}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Данные: <span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{FN}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\text{TP}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>True Positive</em> (<span class="math inline">\(\text{TP}\)</span>) — верное предсказанные единицы</li>
+<li><em>True Negative</em> (<span class="math inline">\(\text{TN}\)</span>) — верно предсказанные нули</li>
+<li><em>False Positive</em> (<span class="math inline">\(\text{FP}\)</span>) — ложноположительные предсказания, ошибочно предсказанные единицы</li>
+<li><em>False Negative</em> ($ — ложноотрицательные предсказания, ошибочно предсказанные нули</li>
+</ul>
+<p>Формулы для расчета метрик таковы:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \text{accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}} \\
+&amp; \text{precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \\
+&amp; \text{recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \\
+&amp; \text{F1} = 2 \cdot \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+\end{split}
+\]</span></p>
 </details>
 </div>
 </section>
@@ -511,11 +626,15 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="hw11-6-level" class="level"></p>
 <div id="hw11-6-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Возьмите несколько более строгих значений порогов — 0.7, 0.8 и 0.9 — и посмотрите, справляется ли модель с предсказаниями лучше, если использовать их.</li>
+<li>Выберите, при каком пороге модель наиболее хорошо описывает данные. Сравнивая модели, неободимо посмотреть на все метрики, однако для принятия окончательного решения можно воспользоваться F1-мерой, как обобщенным показателем precision и recall.</li>
+</ol>
+<p><strong>Возможно, проще будет сначала сделать <a href="#hw11-10-title">задание 10</a>. Это сократит код.</strong></p>
 </div>
 <div id="hw11-6-autocheck" class="autocheck">
 <div id="hw11-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите порог, при котором получаются наилучшие предсказания. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-6')"></p>
@@ -523,7 +642,7 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw11-6-hints">
 <summary>
 Подсказки
@@ -550,11 +669,11 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="hw11-7-level" class="level"></p>
 <div id="hw11-7-task" class="task">
-<p>Текст задания.</p>
+<p>С помощью имеющейся модели и выбранного порога получите предсказания для тестовых данных.</p>
 </div>
 <div id="hw11-7-autocheck" class="autocheck">
 <div id="hw11-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ответа введите среднее по вектору предсказаний, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-7')"></p>
@@ -567,21 +686,10 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы получить предсказания для тестовых данных, воспользуйтесь функцией <code>predict()</code>, в которую необходимо передать модель и новые данные, а также указать в аргументе <code>type</code> значение <code>"response"</code>, чтобы получить предсказания вероятностей.</li>
+<li>Далее, используя выбранный порог, получите дискретные предсказания модели.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -589,11 +697,14 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="hw11-8-level" class="level"></p>
 <div id="hw11-8-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте confusion matrix для предсказаний на тестовой выборке и рассчитайте метрики предсказательной силы.</li>
+<li>Сопоставьте результаты с метриками, полученными на тренировочных данных.</li>
+</ol>
 </div>
 <div id="hw11-8-autocheck" class="autocheck">
 <div id="hw11-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение F1-меры, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-8')"></p>
@@ -606,21 +717,13 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>При сопоставлении метрик необходимо понять, выше или ниже они получились на тестовой выборке по сравнению с обучающей (тренировочной).
+<ul>
+<li>Если они ниже, то проблем с переобучением модели не возникло — можно пытаться экстраполировать результаты на генеральную совокупность.</li>
+<li>Если они выше, то результаты моделирования зависят больше от данных, чем от самой модели — есть трудности с обобщением результатов на генеральную сопокупность.</li>
+</ul></li>
+</ul>
 </details>
 </div>
 </section>
@@ -628,11 +731,31 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="hw11-9-level" class="level"></p>
 <div id="hw11-9-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте основные допущения рассматриваемой модели — линейность связи между предикторами и целевой переменной и отсутствие сверхдисперсии. Проинтерпретируйте полученные результаты.</p>
+<p>Для проверки линейности достаточно графической диагностики, для проверси сверхдисперсии используйте функцию ниже (она же использовалась на практике):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#testing-for-overdispersioncomputing-overdispersion-factor</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>overdisp_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(model) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  rdf <span class="ot">&lt;-</span> <span class="fu">df.residual</span>(model)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">inherits</span>(model, <span class="st">'negbin'</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    rdf <span class="ot">&lt;-</span> rdf <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  rp <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model, <span class="at">type =</span> <span class="st">'pearson'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  Pearson.chisq <span class="ot">&lt;-</span> <span class="fu">sum</span>(rp <span class="sc">^</span> <span class="dv">2</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  prat <span class="ot">&lt;-</span> Pearson.chisq <span class="sc">/</span> rdf</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  pval <span class="ot">&lt;-</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pchisq</span>(Pearson.chisq, <span class="at">df =</span> rdf, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">chisq =</span> Pearson.chisq,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">ratio =</span> prat,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">rdf =</span> rdf,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> pval</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div id="hw11-9-autocheck" class="autocheck">
 <div id="hw11-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение <code>ratio</code>, полученное при проверке допущения об отсутствии сверхдисперсии, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw11-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-9')"></p>
@@ -645,31 +768,48 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для проверки линейности связи необходимо построить график зависимости пирсоновских остатков от предсказанных моделью значений.
+<ul>
+<li>Предсказания получаются из модели с помощью функции <code>predict()</code> с указанием <code>type = "response"</code> без использования новых данных, так как нас интересуют значения предсказания для данных, на которых модель была подобрана.</li>
+<li>Остатки получаются аналогично с помощью функции <code>resid()</code> с указанием <code>type = "pearson"</code>, чтобы получить стандартизированные значения остатков.</li>
+<li>Для отображения тренда используется <code>geom_smooth()</code> с методом <code>"loess"</code>, так как линейный тренд здесь не работает из-за использования функции связи внутри модели.</li>
+</ul></li>
+<li>При проверке сверхдисперсии нулевая гипотеза теста гласит, что в данных не наблюдается сверхдисперсии, а альтернативная — что сверхдисперсия присутствует. Соответствующим образом интерпретируется и результат тестирования.</li>
+</ul>
 </details>
 </div>
 </section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">#10</h3>
+<section id="hw11-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw11-10-title">#10</h3>
 <p><img id="hw11-10-level" class="level"></p>
 <div id="hw11-10-task" class="task">
-<p>Текст задания.</p>
+<p>На практике упоминалось, что расчет метрик предсказательной силы модели можно обернуть в функцию, чтобы не таскать много строк кода каждый раз, когда необходимо проверить качество модели. Давайте это сделаем.</p>
+<p>Напишите функцию <code>prediction_metrics()</code>, которая будет рассчитывать метрики предсказательной силы модели на основе значений целевой переменной из данных и предсказанных вероятностей. Функция должна:</p>
+<ul>
+<li>принимать на вход:
+<ul>
+<li>вектор значений бинарной переменной из данных (<code>data</code>)</li>
+<li>вектор предсказанных моделью вероятностей (<code>response</code>)</li>
+<li>порог, использующийся для перевода непрерывных предсказаний в дискретные (<code>threshold</code>)</li>
+</ul></li>
+<li>возвращать:
+<ul>
+<li>именованный вектор со значениями <code>accuracy</code>, <code>precision</code>, <code>recall</code> и <code>F1-меры</code>.</li>
+</ul></li>
+</ul>
+<p>Пример работы функции на полной модели представлен ниже.</p>
 </div>
-<div id="hw11-10-autocheck" class="autocheck">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prediction_metrics</span>(<span class="at">data =</span> heart_train<span class="sc">$</span>TenYearCHD,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">response =</span> <span class="fu">predict</span>(model1, <span class="at">type =</span> <span class="st">"response"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">threshold =</span> <span class="fl">0.6</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  accuracy  precision     recall         F1 
+0.84946646 0.92857143 0.03194103 0.06175772 </code></pre>
+</div>
+</div>
+<div id="hw11-10-autocheck" class="autocheck" hidden="true">
 <div id="hw11-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -684,221 +824,251 @@ REPLACE ALL hw11 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы написать функцию, необходимо взять код, используемый для расчета метрика предсказательной силы модели и заменить используемые в нем переменные на соответствующие аргументы функции.</li>
+<li>Чтобы создать именованный вектор, нужно задать соответствие между именем элемента вектора и его значением: <code>c(name1 = value1, name2 = value2, ...)</code>.</li>
+</ul>
 </details>
 </div>
-</section>
-</section>
-<section id="hw11_add" class="level2">
-<h2 class="anchored" data-anchor-id="hw11_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
-<p><img id="hw11-11-level" class="level"></p>
-<div id="hw11-11-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw11-11-autocheck" class="autocheck">
-<div id="hw11-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw11-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-11')"></p>
-<div id="hw11-11-fb" class="autocheck-feedback">
+<!---
+## Дополнительные задания {#hw11_add}
 
-</div>
-</div>
-<div class="hints-wrapper">
+### #1
+
+<img id="hw11-11-level" class="level"/>
+
+::: {#hw11-11-task .task}
+Текст задания.
+:::
+
+::: {#hw11-11-autocheck .autocheck}
+::: {#hw11-11-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-11')">
+
+::: {#hw11-11-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw11-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw11-12-level" class="level"></p>
-<div id="hw11-12-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw11-12-autocheck" class="autocheck">
-<div id="hw11-12-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw11-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-12')"></p>
-<div id="hw11-12-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw11-12-level" class="level"/>
+
+::: {#hw11-12-task .task}
+Текст задания.
+:::
+
+::: {#hw11-12-autocheck .autocheck}
+::: {#hw11-12-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-12')">
+
+::: {#hw11-12-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw11-12-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
-<p><img id="hw11-13-level" class="level"></p>
-<div id="hw11-13-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw11-13-autocheck" class="autocheck">
-<div id="hw11-13-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw11-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-13')"></p>
-<div id="hw11-13-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw11-13-level" class="level"/>
+
+::: {#hw11-13-task .task}
+Текст задания.
+:::
+
+::: {#hw11-13-autocheck .autocheck}
+::: {#hw11-13-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-13')">
+
+::: {#hw11-13-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw11-13-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
-<p><img id="hw11-14-level" class="level"></p>
-<div id="hw11-14-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw11-14-autocheck" class="autocheck">
-<div id="hw11-14-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw11-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-14')"></p>
-<div id="hw11-14-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw11-14-level" class="level"/>
+
+::: {#hw11-14-task .task}
+Текст задания.
+:::
+
+::: {#hw11-14-autocheck .autocheck}
+::: {#hw11-14-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-14')">
+
+::: {#hw11-14-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw11-14-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
-<p><img id="hw11-15-level" class="level"></p>
-<div id="hw11-15-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw11-15-autocheck" class="autocheck">
-<div id="hw11-15-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw11-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-15')"></p>
-<div id="hw11-15-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw11-15-level" class="level"/>
+
+::: {#hw11-15-task .task}
+Текст задания.
+:::
+
+::: {#hw11-15-autocheck .autocheck}
+::: {#hw11-15-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw11-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw11-15')">
+
+::: {#hw11-15-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw11-15-hints">
-<summary>
-Подсказки
-</summary>
+
+<summary>Подсказки</summary>
+
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
+
+<summary>Как делать задание?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+
+<summary>Что надо сделать?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Ответ неверный
-</summary>
+
+<summary>Ответ неверный</summary>
+
 </details>
+
 </details>
-</div>
+:::
+
+--->
 <!--- CHANGE hw11 TO hw<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="./js/hw11.json"></script>
 <script type="text/javascript" src="./js/hw.js"></script>
@@ -1180,27 +1350,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1215,10 +1364,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1227,8 +1380,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
