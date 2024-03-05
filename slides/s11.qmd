@@ -1,5 +1,5 @@
 ---
-title: "L11. Регуляризация регрессии. Обобщенные аддитивные модели"
+title: "L11 // Регуляризация регрессии. Обобщенные аддитивные модели"
 author: "Антон Ангельгардт"
 format: 
   revealjs:
@@ -13,6 +13,7 @@ highlight-style: github
 ---
 
 ## Зачем?
+
 ```{js favicon-loader}
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
@@ -23,103 +24,400 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
-- Пункт плана
-- Пункт плана
-- Пункт плана
+{{< include ../other/_symbols.qmd >}}
 
-## Текст
+```{r opts, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, warning = FALSE, message = FALSE)
+```
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+```{r pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(latex2exp)
+library(mgcv)
+```
 
-# Раздел
+- Развитие идеи обобщенных линейных моделей
+- Моделирование нелинейных закономерностей
+- Особенности и подводные камни
+- Снова мультиколинеарность
+- Штраф за большие ошибки
+- Преимущества и недостатки
 
-## Списки
 
-When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown
--   Output from executable code
+# L11.1 // Обобщенные аддитивные модели
 
-## Код
+## Recap
 
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+* LM
 
-```{r, echo=TRUE}
-1 + 1
+$$
+y = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_p x_p + e
+$$
+
+* GLM
+
+$$
+g(y) = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_p x_p + e
+$$
+
+Но есть закономерность нелинейная? Прям вот ваще нелинейная?
+
+
+## Нелинейные закономерности
+
+```{r}
+set.seed(120)
+tibble(X = runif(100, -3, 3),
+       Y = 2.45 + sin(X) + sqrt(abs(X)) + rnorm(100, sd = .3)) -> nonlin_data
+
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point()
+```
+
+```{r}
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point() -> nonlin_plot
+
+ggsave("pics/nonlin_plot.jpeg", nonlin_plot, width = 1920, height = 1080, units = "px")
+```
+
+## Изученные модели плохо работают
+
+* общая линейная модель
+
+```{r}
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+* $Y$ --- количественная переменная, для GLM сложно придумать функцию связи, которая сможет линеаризовать закономерность
+
+
+## Полиномиальная регрессия
+
+* полином $n$-ной степени
+$$
+a_n x^n + a_{n-1} x^{n-1} + \dots a_2 x^2 + a_1 x + a_0 = 0
+$$
+
+* квадратный полином
+
+$$
+ax^2 + bx + c = 0
+$$
+
+* полиномы позволяют аппроксимировать закономерности любой сложности
+* возможна **полниномиальная регрессия (polynomial regression)**
+
+$$
+y = b_0 + b_1 x + b_2 x^2 + \dots + b_{n-1}x^{n-1} + b_n x^n + e
+$$
+
+## Различные полиномиальные модели
+
+```{r}
+poly2 <- lm(Y ~ poly(X, 2), nonlin_data)
+poly3 <- lm(Y ~ poly(X, 3), nonlin_data)
+poly5 <- lm(Y ~ poly(X, 5), nonlin_data)
+poly10 <- lm(Y ~ poly(X, 10), nonlin_data)
+poly15 <- lm(Y ~ poly(X, 15), nonlin_data)
+poly20 <- lm(Y ~ poly(X, 20), nonlin_data)
+
+tibble(x = nonlin_data$X,
+       `poly(x, 2)` = poly2$fitted.values,
+       `poly(x, 3)` = poly3$fitted.values,
+       `poly(x, 5)` = poly5$fitted.values,
+       `poly(x, 10)` = poly10$fitted.values,
+       `poly(x, 15)` = poly15$fitted.values,
+       `poly(x, 20)` = poly20$fitted.values) %>% 
+  pivot_longer(-x) %>% 
+  mutate(name = factor(name, ordered = TRUE,
+                       levels = c("poly(x, 2)", "poly(x, 3)", "poly(x, 5)", "poly(x, 10)", "poly(x, 15)", "poly(x, 20)"))) %>% 
+  ggplot() +
+  geom_point(data = nonlin_data,
+             aes(X, Y), alpha = .5) +
+  geom_line(aes(x, value, color = name),
+            size = 1) +
+  labs(color = "Model") +
+  scale_color_manual(values = c("blue3", "green3", "green3", "orange3", "red3", "red3")) +
+  guides(color = "none") +
+  facet_wrap(~ name)
 ```
 
 
-## Формулы
+## Минусы полиномиальных моделей
 
 $$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
+y = b_0 + b_1 x + b_2 x^2 + \dots + b_{n-1}x^{n-1} + b_n x^n + e
 $$
 
-$$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-$$
+* быстро переобучаются
+* сложно интерпретировать результаты
+
+Необходим другой способ.
 
 
-## Колонки
+## Гибкие лекала
 
 :::: {.columns}
 
-::: {.column width="60%"}
-Текст левой колонки
+::: {.column width="40%"}
+<center>
+<figure>
+<img src="pics/lekala.png">
+</figure>
+</center>
 :::
 
-::: {.column width="40%"}
-Текст правой колонки
+::: {.column width="60%"}
+<center>
+<figure>
+<img src="pics/lekalo_curve.png">
+</figure>
+</center>
 :::
 
 ::::
 
 
-## Колонки с картинкой справа
+## Идея GAM
 
-:::: {.columns}
+$$
+g(y) = b_0 + f_1(x_1) + f_2(x_2) + \dots + f_{n}x_{n} + e
+$$
 
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
+* $g(y)$ --- функция связи
+* $f_j(x_j)$ --- гладкие фукции
 
 
-## Колонки с картинкой слева
+## Идея GAM
 
-:::: {.columns}
+$$
+g(y) = b_0 + f_1(x_1) + f_2(x_2) + \dots + f_{n}x_{n} + e
+$$
 
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
+* обобщенные аддитивные модели (generalized additive models, GAM)
+* с помощью функций $f_j(\cdot)$ преобразуются предикторы
+* моделируется связь между преобразованными предикторами и целевой переменной
 
 
-## График
+## Сплайны
 
-```{r plot}
-plot(sample(1:100, 30))
+* работают как гибкие лекала на наших данных
+* кусочно заданная функция
+* на определенном диапазоне совпадает с полиномом некоторой степени
+
+<center>
+<figure>
+<img src="pics/splines_separate.jpg">
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="pics/splines_connected.jpg">
+</figure>
+</center>
+
+
+## Виды сплайнов
+
+* B-splines
+* P-splines (penalized B-splines)
+* cyclic splines (для циклических предикторов, например, времени)
+* thin plate splines (для создания их двух предикторов одного двумерного, например, координаты)
+* soap film splines
+* etc.
+
+
+## Kernel methods
+
+* loess (locally estimated scatterplot smoothing)
+* lowess (locally weighted scatterplot smoothing)
+
+
+## Иерархия моделей
+
+$$
+\begin{split}
+\text{GAM} &\\
+\downarrow &\\
+\text{GLM} &\\
+\downarrow &\\
+\text{LM} &\\
+\downarrow &\\
+\text{ANOVA}&
+\end{split}
+$$
+
+
+## Управление детальностью
+
+У сплайнов есть параметры:
+
+* степень полинома
+* степень сглаживания
+
+```{r}
+gam1 <- gam(Y ~ s(X), data = nonlin_data)
+
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point() +
+  geom_line(aes(y = gam1$fitted.values))
 ```
+
+```{r}
+gam2 <- gam(Y ~ s(X, sp = .1), data = nonlin_data)
+
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point() +
+  geom_line(aes(y = gam2$fitted.values)) +
+  labs(caption = "sp = 0.1")
+```
+
+```{r}
+gam4 <- gam(Y ~ s(X, k = 2), data = nonlin_data)
+
+nonlin_data %>% 
+  ggplot(aes(X, Y)) +
+  geom_point() +
+  geom_line(aes(y = gam4$fitted.values)) +
+  labs(caption = "k = 2")
+```
+
+
+## Тестирование гипотез
+
+* коэффициентов нет, так как предиктор обернуты в функции
+* протестировать гипотезы о значимость коэффициентов при количественных предикторах невозможно
+* тестируются гипотезы о том, что связь между предикторов и зависимой переменной нелинейная
+* коэффициенты при категориальных предикторах аналогичны линейной регрессии
+* можно включить взаимодействие категориальных предикторов
+
+
+## Concurvity
+
+* так как предикторы обернуты в функции, проблемы мультиколлинеарности возникнуть не может
+* однако один предиктор может выражать с помощью некоторой функции через другой
+* тогда возникает проблема **concurvity**
+
+```{r}
+set.seed(210)
+tibble(X1 = runif(50, -2, 2),
+       X2 = X1^2 + rnorm(50)) %>% 
+  ggplot(aes(X1, X2)) +
+  geom_point() +
+  geom_smooth()
+```
+
+
+# L11.2 // Регуляризация регрессии
+
+## Линейная регрессия
+
+$$
+y_i = b_0 + b_1 x_{i1} + b_2 x_{i2} + \dots + b_p x_{ip} + e_i
+$$
+
+$$
+\text{RSS} = \sum_{i=1}^n e_i \to \min_{\vm b}
+$$
+
+* в случае мультиколлинеарности оценки коэффициентов могут быть завышены
+* предлагает минимизировать не просто RSS, а RSS + штраф за оценки коэффициентов
+
+
+## Варианты штрафа
+
+* Ridge-регрессия
+
+$$
+\sum_{i=1}^n e_i + \lambda \sum_{j=1}^p b_j^2 \to \min_{\vm b}
+$$
+
+* LASSO-регрессия
+
+$$
+\sum_{i=1}^n e_i + \lambda \sum_{j=1}^p |b_j| \to \min_{\vm b}
+$$
+
+* Метод эластичной сети (Elastic Nets)
+
+$$
+\sum_{i=1}^n e_i + \lambda_1 \sum_{j=1}^p |b_j| + \lambda_2 \sum_{j=1}^p b_j^2  \to \min_{\vm b}
+$$
+
+
+## Как это работает?
+
+* Модель:
+
+$$
+y_i = b x_i + e_i
+$$
+
+* Данные:
+
+|$y_i$|$x_i$|
+|:---:|:---:|
+|$10$|$1$|
+|$20$|$1$|
+|$30$|$2$|
+
+* **МНК:**
+
+$$
+\begin{split}
+\text{RSS} &= \sum_{i=1}^n (y_i - \hat y_i)^2 = \sum_{i=1}^n (y_i - bx_i)^2 = \\
+&= \sum_{i=1}^n (y_i^2 - 2y_ibx_i + b^2x_i^2) = \\
+&= \sum_{i=1}^n y_i^2 - 2b \sum_{i=1}^n x_iy_i + b^2 \sum_{i=1}^n x_i^2 = Q(b) \\
+Q'(b) &= -2 \sum_{i=1}^n x_i y_i + 2b \sum_{i=1}^n x_i^2 = 0 \\
+b_{\text{LS}} &= \frac{\sum_{i=1}^n x_i y_i}{\sum_{i=1}^n x_i^2} \\
+b_{\text{LS}} &= \frac{10+20+60}{1+1+4} = \frac{90}{6} = 15
+\end{split}
+$$
+
+* **Ridge-регрессия:**
+
+$$
+\begin{split}
+\text{RSS} &+ \lambda b^2 \to \min_b \\
+Q_\text R (b) &= \sum_{i=1}^n y_i^2 - 2b \sum_{i=1}^n x_iy_i + b^2 \sum_{i=1}^n x_i^2 + \lambda b^2 \\
+Q_\text R '(b) &= -2 \sum_{i=1}^n x_i y_i + 2b \sum_{i=1}^n x_i^2 + 2 \lambda b = 0 \\
+b_{\text{R}} &= \frac{\sum_{i=1}^n x_i y_i}{\sum_{i=1}^n x_i^2 + \lambda} \\
+b_{\text{R}} &= \frac{90}{6 + \lambda} \\
+\lambda & = 100: b_{\text{R}} = \frac{90}{6 + 100} < 1
+\end{split}
+$$
+
+
+## Особенности регуляризованной регрессии
+
+* с ростом штрафного коэффициента $\lambda$ значения коэффициентом стремятся к нулю
+* необходимо найти баланс между штрафом и количеством коэффициентов, которое нам необходимо для описания закономерности
+* введение штрафного коэффициента лишает нас возможности тестирования статистические гипотезы
+
 
 ## Итоги
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+- GAM --- самые обобщенные модели
+- гладкие функции и сплайны
+- возможности и ограничения GAM
+- регуляризация регрессии через штрафной коэффициент
+- точное моделирование взамен проверки гипотез
 
 
-# L11. Регуляризация регрессии. Обобщенные аддитивные модели {#end}
+
+# L11 // Регуляризация регрессии. Обобщенные аддитивные модели {#end}
 
 :::: {.quarto-title-authors}
 ::: {.quarto-title-author}
