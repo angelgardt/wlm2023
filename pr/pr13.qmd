@@ -5,17 +5,39 @@
 REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+
 ## Основные задания {#pr13_main}
+
+```{r pkgs, eval=TRUE}
+pkgs <- c("mgcv", "glmnet")
+install.packages(pkgs[!pkgs %in% installed.packages()])
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(mgcv)
+library(glmnet)
+```
+
 
 ### #1
 
 <img id="pr13-1-level" class="level"/>
 
 ::: {#pr13-1-task .task}
-Текст задания `переменная`.
+Сегодня мы посмотрим на данные про авокадо. 
 :::
 
-::: {#pr13-1-autocheck .autocheck}
+```{r}
+read_csv("https://raw.githubusercontent.com/agricolamz/2019.08.01_ANDAN_GAM/master/data/avocado.csv") %>% 
+  write_csv("../data/pr13/avocado.csv")
+```
+
+::: {#pr13-1-autocheck .autocheck hidden="true"}
 ::: {#pr13-1-ir .input-requirements}
 Описание формата инпута.
 :::
