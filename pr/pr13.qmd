@@ -946,8 +946,20 @@ concurvity(gam8)
 <img id="pr13-16-level" class="level"/>
 
 ::: {#pr13-16-task .task}
-Текст задания.
+Вторый данные на сегодня про менеджеров-продажников. Они содержат информацию о некоторых характеристиках менеджеров (количественные шкалы `Fx`, `Cs`, `Sy`, `Sp`, `In`, `Em`, `Re`, `Sc`, `Ie`, `Do`), а также сумму, на которую менеджер напродавал. Наша задача узнать, какие характеристики менеджеров сильнее всего связаны с их эффективностью в продажах.
+
+Загрузие данные. Проверьте их структуру.
 :::
+
+```{r}
+# readxl::read_xlsx("../data/pr13/cpi.xlsx") %>% write_csv("../data/pr13/cpi.csv")
+```
+
+```{r}
+cpi <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr13/cpi.csv")
+str(cpi)
+table(cpi$group)
+```
 
 ::: {#pr13-16-autocheck .autocheck}
 ::: {#pr13-16-ir .input-requirements}
@@ -993,9 +1005,17 @@ concurvity(gam8)
 <img id="pr13-17-level" class="level"/>
 
 ::: {#pr13-17-task .task}
-Текст задания.
+Для функций регуляризованной регрессии нужна некоторая предобработка данных: требуется отдельно вектор целевой переменной и отдельно матрица предикторов.
+
+a. Создайте вектор `prodazhi`, в которой будут содержаться значения из колонки `prodazhi` датасета.
+b. Отберите из датасета только количественные переменные и создайте из них матрицу предикторов `preds`.
 :::
 
+```{r}
+cpi %>% pull(prodazhi) -> prodazhi
+cpi %>% select(-prodazhi, -group) %>% as.matrix() -> preds
+cor(preds) %>% ggcorrplot::ggcorrplot(lab = TRUE)
+```
 ::: {#pr13-17-autocheck .autocheck}
 ::: {#pr13-17-ir .input-requirements}
 Описание формата инпута.
@@ -1040,8 +1060,17 @@ concurvity(gam8)
 <img id="pr13-18-level" class="level"/>
 
 ::: {#pr13-18-task .task}
-Текст задания.
+a. Постройте модель ridge-регрессии на имеющихся данных.
+b. Выведите график зависимости ошибки модели от штрафного коэффициента.
+c. Выведите коэффициенты модели.
 :::
+
+```{r}
+model_ridge <- cv.glmnet(x = preds, y = prodazhi, alpha = 0)
+plot(model_ridge)
+coef(model_ridge, s = "lambda.min")
+coef(model_ridge, s = "lambda.1se")
+```
 
 ::: {#pr13-18-autocheck .autocheck}
 ::: {#pr13-18-ir .input-requirements}
@@ -1087,8 +1116,17 @@ concurvity(gam8)
 <img id="pr13-19-level" class="level"/>
 
 ::: {#pr13-19-task .task}
-Текст задания.
+a. Постройте модель LASSO-регрессии на имеющихся данных.
+b. Выведите график зависимости ошибки модели от штрафного коэффициента.
+c. Выведите коэффициенты модели.
 :::
+
+```{r}
+model_lasso <- cv.glmnet(x = preds, y = prodazhi, alpha = 1)
+plot(model_lasso)
+coef(model_lasso, s = "lambda.min")
+coef(model_lasso, s = "lambda.1se")
+```
 
 ::: {#pr13-19-autocheck .autocheck}
 ::: {#pr13-19-ir .input-requirements}
@@ -1129,13 +1167,15 @@ concurvity(gam8)
 </details>
 :::
 
+<!---
 ### #20
 
 <img id="pr13-20-level" class="level"/>
 
 ::: {#pr13-20-task .task}
-Текст задания.
+Текст задания
 :::
+
 
 ::: {#pr13-20-autocheck .autocheck}
 ::: {#pr13-20-ir .input-requirements}
@@ -1175,6 +1215,8 @@ concurvity(gam8)
 
 </details>
 :::
+
+--->
 
 <!---
 ## Дополнительные задания {#pr13_add}

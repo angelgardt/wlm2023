@@ -280,7 +280,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">#17</a></li>
   <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">#18</a></li>
   <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
-  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -935,7 +934,8 @@ REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr13-16-level" class="level"></p>
 <div id="pr13-16-task" class="task">
-<p>Текст задания.</p>
+<p>Вторый данные на сегодня про менеджеров-продажников. Они содержат информацию о некоторых характеристиках менеджеров (количественные шкалы <code>Fx</code>, <code>Cs</code>, <code>Sy</code>, <code>Sp</code>, <code>In</code>, <code>Em</code>, <code>Re</code>, <code>Sc</code>, <code>Ie</code>, <code>Do</code>), а также сумму, на которую менеджер напродавал. Наша задача узнать, какие характеристики менеджеров сильнее всего связаны с их эффективностью в продажах.</p>
+<p>Загрузие данные. Проверьте их структуру.</p>
 </div>
 <div id="pr13-16-autocheck" class="autocheck">
 <div id="pr13-16-ir" class="input-requirements">
@@ -974,7 +974,11 @@ REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr13-17-level" class="level"></p>
 <div id="pr13-17-task" class="task">
-<p>Текст задания.</p>
+<p>Для функций регуляризованной регрессии нужна некоторая предобработка данных: требуется отдельно вектор целевой переменной и отдельно матрица предикторов.</p>
+<ol type="a">
+<li>Создайте вектор <code>prodazhi</code>, в которой будут содержаться значения из колонки <code>prodazhi</code> датасета.</li>
+<li>Отберите из датасета только количественные переменные и создайте из них матрицу предикторов <code>preds</code>.</li>
+</ol>
 </div>
 <div id="pr13-17-autocheck" class="autocheck">
 <div id="pr13-17-ir" class="input-requirements">
@@ -1013,7 +1017,11 @@ REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr13-18-level" class="level"></p>
 <div id="pr13-18-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте модель ridge-регрессии на имеющихся данных.</li>
+<li>Выведите график зависимости ошибки модели от штрафного коэффициента.</li>
+<li>Выведите коэффициенты модели.</li>
+</ol>
 </div>
 <div id="pr13-18-autocheck" class="autocheck">
 <div id="pr13-18-ir" class="input-requirements">
@@ -1052,7 +1060,11 @@ REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr13-19-level" class="level"></p>
 <div id="pr13-19-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте модель LASSO-регрессии на имеющихся данных.</li>
+<li>Выведите график зависимости ошибки модели от штрафного коэффициента.</li>
+<li>Выведите коэффициенты модели.</li>
+</ol>
 </div>
 <div id="pr13-19-autocheck" class="autocheck">
 <div id="pr13-19-ir" class="input-requirements">
@@ -1086,45 +1098,56 @@ REPLACE ALL pr13 TO pr<n> WITH MATCH CASE
 </details>
 </details>
 </div>
-</section>
-<section id="section-19" class="level3">
-<h3 class="anchored" data-anchor-id="section-19">#20</h3>
-<p><img id="pr13-20-level" class="level"></p>
-<div id="pr13-20-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr13-20-autocheck" class="autocheck">
-<div id="pr13-20-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr13-20" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr13-20')"></p>
-<div id="pr13-20-fb" class="autocheck-feedback">
+<!---
+### #20
 
-</div>
-</div>
-<div class="hints-wrapper" hidden="true">
+<img id="pr13-20-level" class="level"/>
+
+::: {#pr13-20-task .task}
+Текст задания
+:::
+
+
+::: {#pr13-20-autocheck .autocheck}
+::: {#pr13-20-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr13-20" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr13-20')">
+
+::: {#pr13-20-fb .autocheck-feedback}
+:::
+:::
+
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr13-20-hints">
-<summary>
-Подсказки
-</summary>
+
+<summary>Подсказки</summary>
+
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
+
+<summary>Как делать задание?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+
+<summary>Что надо сделать?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Ответ неверный
-</summary>
+
+<summary>Ответ неверный</summary>
+
 </details>
+
 </details>
-</div>
+:::
+
+--->
 <!---
 ## Дополнительные задания {#pr13_add}
 
