@@ -1,6 +1,6 @@
 # Last deployment info
 
-**Date:** Tue 2024-03-05 18:40
+**Date:** Thu 2024-03-07 16:45
 
 **Mode:** update
 
@@ -9,4834 +9,4834 @@
 ```
 docs:
 total 44
-drwxrwxr-x  9 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 analytics
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 homeworks
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 hub
--rw-rw-r--  1 nglgrdt nglgrdt  268 мар  5 18:39 index.html
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 lectures
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 practice
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 projects
--rw-rw-r--  1 nglgrdt nglgrdt   99 мар  5 18:40 README.md
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 slides
+drwxrwxr-x  9 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 analytics
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 homeworks
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 hub
+-rw-rw-r--  1 nglgrdt nglgrdt  268 мар  7 16:45 index.html
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 lectures
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 practice
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 projects
+-rw-rw-r--  1 nglgrdt nglgrdt   99 мар  7 16:45 README.md
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 slides
 
 docs/analytics:
 total 644
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 9 nglgrdt nglgrdt   4096 мар  5 18:40 ..
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 index_files
--rw-rw-r-- 1 nglgrdt nglgrdt 642947 мар  5 18:40 index.html
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 pics
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 9 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 index_files
+-rw-rw-r-- 1 nglgrdt nglgrdt 642947 мар  7 16:45 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
 
 docs/analytics/index_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/analytics/index_files/libs:
 total 52
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 bootstrap
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 crosstalk-1.2.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 htmlwidgets-1.6.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 jquery-3.5.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-binding-4.10.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-htmlwidgets-css-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-main-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-dashboard
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 typedarray-0.1
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-dashboard
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 typedarray-0.1
 
 docs/analytics/index_files/libs/bootstrap:
 total 772
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  98163 мар  5 18:40 bootstrap-icons.css
--rw-r--r--  1 nglgrdt nglgrdt 176200 мар  5 18:40 bootstrap-icons.woff
--rw-rw-r--  1 nglgrdt nglgrdt 419376 мар  5 18:40 bootstrap.min.css
--rw-r--r--  1 nglgrdt nglgrdt  80668 мар  5 18:40 bootstrap.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r--  1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r--  1 nglgrdt nglgrdt 419376 мар  7 16:45 bootstrap.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
 
 docs/analytics/index_files/libs/clipboard:
 total 20
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/analytics/index_files/libs/crosstalk-1.2.1:
 total 20
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 css
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 js
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 scss
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 scss
 
 docs/analytics/index_files/libs/crosstalk-1.2.1/css:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  5 18:40 crosstalk.min.css
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  7 16:45 crosstalk.min.css
 
 docs/analytics/index_files/libs/crosstalk-1.2.1/js:
 total 184
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  5 18:40 crosstalk.js
--rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  5 18:40 crosstalk.js.map
--rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  5 18:40 crosstalk.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  5 18:40 crosstalk.min.js.map
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  7 16:45 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  7 16:45 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  7 16:45 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  7 16:45 crosstalk.min.js.map
 
 docs/analytics/index_files/libs/crosstalk-1.2.1/scss:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  5 18:40 crosstalk.scss
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  7 16:45 crosstalk.scss
 
 docs/analytics/index_files/libs/htmlwidgets-1.6.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  5 18:40 htmlwidgets.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  7 16:45 htmlwidgets.js
 
 docs/analytics/index_files/libs/jquery-3.5.1:
 total 532
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  5 18:40 jquery-AUTHORS.txt
--rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  5 18:40 jquery.js
--rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  5 18:40 jquery.min.js
--rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  5 18:40 jquery.min.map
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  7 16:45 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  7 16:45 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  7 16:45 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  7 16:45 jquery.min.map
 
 docs/analytics/index_files/libs/plotly-binding-4.10.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  5 18:40 plotly.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  7 16:45 plotly.js
 
 docs/analytics/index_files/libs/plotly-htmlwidgets-css-2.11.1:
 total 12
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  173 мар  5 18:40 plotly-htmlwidgets.css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 мар  7 16:45 plotly-htmlwidgets.css
 
 docs/analytics/index_files/libs/plotly-main-2.11.1:
 total 3588
-drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt    4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  5 18:40 plotly-latest.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt    4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  7 16:45 plotly-latest.min.js
 
 docs/analytics/index_files/libs/quarto-dashboard:
 total 2540
-drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt    4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   33318 мар  5 18:40 components.js
--rw-r--r--  1 nglgrdt nglgrdt   25538 мар  5 18:40 datatables.min.css
--rw-r--r--  1 nglgrdt nglgrdt  272464 мар  5 18:40 datatables.min.js
--rw-r--r--  1 nglgrdt nglgrdt 1357654 мар  5 18:40 pdfmake.min.js
--rw-r--r--  1 nglgrdt nglgrdt    8861 мар  5 18:40 quarto-dashboard.js
--rw-r--r--  1 nglgrdt nglgrdt    8282 мар  5 18:40 stickythead.js
--rw-r--r--  1 nglgrdt nglgrdt  798324 мар  5 18:40 vfs_fonts.js
--rw-r--r--  1 nglgrdt nglgrdt   65780 мар  5 18:40 web-components.js
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt    4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   33318 мар  7 16:45 components.js
+-rw-r--r--  1 nglgrdt nglgrdt   25538 мар  7 16:45 datatables.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  272464 мар  7 16:45 datatables.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 1357654 мар  7 16:45 pdfmake.min.js
+-rw-r--r--  1 nglgrdt nglgrdt    8861 мар  7 16:45 quarto-dashboard.js
+-rw-r--r--  1 nglgrdt nglgrdt    8282 мар  7 16:45 stickythead.js
+-rw-r--r--  1 nglgrdt nglgrdt  798324 мар  7 16:45 vfs_fonts.js
+-rw-r--r--  1 nglgrdt nglgrdt   65780 мар  7 16:45 web-components.js
 
 docs/analytics/index_files/libs/quarto-html:
 total 96
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  5888 мар  5 18:40 anchor.min.js
--rw-r--r--  1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-r--r--  1 nglgrdt nglgrdt 28427 мар  5 18:40 quarto.js
--rw-rw-r--  1 nglgrdt nglgrdt  3135 мар  5 18:40 quarto-syntax-highlighting.css
--rw-r--r--  1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r--  1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 28427 мар  7 16:45 quarto.js
+-rw-rw-r--  1 nglgrdt nglgrdt  3135 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-r--r--  1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/analytics/index_files/libs/typedarray-0.1:
 total 32
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  5 18:40 typedarray.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  7 16:45 typedarray.min.js
 
 docs/analytics/pics:
 total 24
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 6204 мар  5 18:40 favicon.png
--rw-rw-r-- 1 nglgrdt nglgrdt 4805 мар  5 18:40 logo.png
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 6204 мар  7 16:45 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 4805 мар  7 16:45 logo.png
 
 docs/homeworks:
 total 1444
-drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 hw10_files
--rw-rw-r--  1 nglgrdt nglgrdt  71269 мар  5 18:39 hw10.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 hw11_files
--rw-rw-r--  1 nglgrdt nglgrdt  73741 мар  5 18:39 hw11.html
--rw-rw-r--  1 nglgrdt nglgrdt  51102 мар  5 18:39 hw12.html
--rw-rw-r--  1 nglgrdt nglgrdt  50928 мар  5 18:39 hw13.html
--rw-rw-r--  1 nglgrdt nglgrdt  50909 мар  5 18:39 hw14.html
--rw-rw-r--  1 nglgrdt nglgrdt  51005 мар  5 18:39 hw15.html
--rw-rw-r--  1 nglgrdt nglgrdt  50935 мар  5 18:39 hw16.html
--rw-rw-r--  1 nglgrdt nglgrdt  69278 мар  5 18:39 hw1.html
--rw-rw-r--  1 nglgrdt nglgrdt  77418 мар  5 18:39 hw2.html
--rw-rw-r--  1 nglgrdt nglgrdt  64038 мар  5 18:39 hw3.html
--rw-rw-r--  1 nglgrdt nglgrdt 108119 мар  5 18:39 hw4.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 hw5_files
--rw-rw-r--  1 nglgrdt nglgrdt  66296 мар  5 18:39 hw5.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 hw6_files
--rw-rw-r--  1 nglgrdt nglgrdt  78632 мар  5 18:39 hw6.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 hw7_files
--rw-rw-r--  1 nglgrdt nglgrdt  68203 мар  5 18:39 hw7.html
--rw-rw-r--  1 nglgrdt nglgrdt  58432 мар  5 18:39 hw8.html
--rw-rw-r--  1 nglgrdt nglgrdt  70894 мар  5 18:39 hw9.html
--rw-rw-r--  1 nglgrdt nglgrdt  34039 мар  5 18:39 index.html
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 js
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
--rw-rw-r--  1 nglgrdt nglgrdt  32077 мар  5 18:39 references.html
--rw-rw-r--  1 nglgrdt nglgrdt 269429 мар  5 18:39 search.json
-drwxrwxr-x  7 nglgrdt nglgrdt   4096 мар  5 18:39 site_libs
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 hw10_files
+-rw-rw-r--  1 nglgrdt nglgrdt  71269 мар  7 16:45 hw10.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 hw11_files
+-rw-rw-r--  1 nglgrdt nglgrdt  73741 мар  7 16:45 hw11.html
+-rw-rw-r--  1 nglgrdt nglgrdt  51102 мар  7 16:45 hw12.html
+-rw-rw-r--  1 nglgrdt nglgrdt  50928 мар  7 16:45 hw13.html
+-rw-rw-r--  1 nglgrdt nglgrdt  50909 мар  7 16:45 hw14.html
+-rw-rw-r--  1 nglgrdt nglgrdt  51005 мар  7 16:45 hw15.html
+-rw-rw-r--  1 nglgrdt nglgrdt  50935 мар  7 16:45 hw16.html
+-rw-rw-r--  1 nglgrdt nglgrdt  69278 мар  7 16:45 hw1.html
+-rw-rw-r--  1 nglgrdt nglgrdt  77418 мар  7 16:45 hw2.html
+-rw-rw-r--  1 nglgrdt nglgrdt  64038 мар  7 16:45 hw3.html
+-rw-rw-r--  1 nglgrdt nglgrdt 108119 мар  7 16:45 hw4.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 hw5_files
+-rw-rw-r--  1 nglgrdt nglgrdt  66296 мар  7 16:45 hw5.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 hw6_files
+-rw-rw-r--  1 nglgrdt nglgrdt  78632 мар  7 16:45 hw6.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 hw7_files
+-rw-rw-r--  1 nglgrdt nglgrdt  68203 мар  7 16:45 hw7.html
+-rw-rw-r--  1 nglgrdt nglgrdt  58432 мар  7 16:45 hw8.html
+-rw-rw-r--  1 nglgrdt nglgrdt  70894 мар  7 16:45 hw9.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34039 мар  7 16:45 index.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
+-rw-rw-r--  1 nglgrdt nglgrdt  32077 мар  7 16:45 references.html
+-rw-rw-r--  1 nglgrdt nglgrdt 269429 мар  7 16:45 search.json
+drwxrwxr-x  7 nglgrdt nglgrdt   4096 мар  7 16:45 site_libs
 
 docs/homeworks/hw10_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/homeworks/hw10_files/figure-html:
 total 292
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 248653 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  37996 мар  5 18:39 unnamed-chunk-17-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 248653 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  37996 мар  7 16:45 unnamed-chunk-17-1.png
 
 docs/homeworks/hw11_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/homeworks/hw11_files/figure-html:
 total 72
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 61454 мар  5 18:39 unnamed-chunk-10-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 61454 мар  7 16:45 unnamed-chunk-10-1.png
 
 docs/homeworks/hw5_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/homeworks/hw5_files/figure-html:
 total 472
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  78433 мар  5 18:39 12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  95651 мар  5 18:39 13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 246724 мар  5 18:39 15-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42731 мар  5 18:39 final-graph-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  78433 мар  7 16:45 12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  95651 мар  7 16:45 13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 246724 мар  7 16:45 15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42731 мар  7 16:45 final-graph-1.png
 
 docs/homeworks/hw6_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/homeworks/hw6_files/figure-html:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 24426 мар  5 18:39 hw6-9-plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 24426 мар  7 16:45 hw6-9-plot-1.png
 
 docs/homeworks/hw7_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/homeworks/hw7_files/figure-html:
 total 44
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 33951 мар  5 18:39 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 33951 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/homeworks/js:
 total 76
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt  830 мар  5 18:39 hw10.json
--rw-rw-r--  1 nglgrdt nglgrdt  820 мар  5 18:39 hw11.json
--rw-rw-r--  1 nglgrdt nglgrdt  736 мар  5 18:39 hw12.json
--rw-rw-r--  1 nglgrdt nglgrdt  736 мар  5 18:39 hw13.json
--rw-rw-r--  1 nglgrdt nglgrdt  736 мар  5 18:39 hw14.json
--rw-rw-r--  1 nglgrdt nglgrdt  736 мар  5 18:39 hw15.json
--rw-rw-r--  1 nglgrdt nglgrdt  736 мар  5 18:39 hw16.json
--rw-rw-r--  1 nglgrdt nglgrdt  872 мар  5 18:39 hw1.json
--rw-rw-r--  1 nglgrdt nglgrdt  828 мар  5 18:39 hw2.json
--rw-rw-r--  1 nglgrdt nglgrdt  792 мар  5 18:39 hw3.json
--rw-rw-r--  1 nglgrdt nglgrdt  825 мар  5 18:39 hw4.json
--rw-rw-r--  1 nglgrdt nglgrdt  769 мар  5 18:39 hw5.json
--rw-rw-r--  1 nglgrdt nglgrdt  816 мар  5 18:39 hw6.json
--rw-rw-r--  1 nglgrdt nglgrdt  754 мар  5 18:39 hw7.json
--rw-rw-r--  1 nglgrdt nglgrdt  760 мар  5 18:39 hw8.json
--rw-rw-r--  1 nglgrdt nglgrdt  760 мар  5 18:39 hw9.json
--rw-rw-r--  1 nglgrdt nglgrdt 1533 мар  5 18:39 hw.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  830 мар  7 16:45 hw10.json
+-rw-rw-r--  1 nglgrdt nglgrdt  820 мар  7 16:45 hw11.json
+-rw-rw-r--  1 nglgrdt nglgrdt  736 мар  7 16:45 hw12.json
+-rw-rw-r--  1 nglgrdt nglgrdt  736 мар  7 16:45 hw13.json
+-rw-rw-r--  1 nglgrdt nglgrdt  736 мар  7 16:45 hw14.json
+-rw-rw-r--  1 nglgrdt nglgrdt  736 мар  7 16:45 hw15.json
+-rw-rw-r--  1 nglgrdt nglgrdt  736 мар  7 16:45 hw16.json
+-rw-rw-r--  1 nglgrdt nglgrdt  872 мар  7 16:45 hw1.json
+-rw-rw-r--  1 nglgrdt nglgrdt  828 мар  7 16:45 hw2.json
+-rw-rw-r--  1 nglgrdt nglgrdt  792 мар  7 16:45 hw3.json
+-rw-rw-r--  1 nglgrdt nglgrdt  825 мар  7 16:45 hw4.json
+-rw-rw-r--  1 nglgrdt nglgrdt  769 мар  7 16:45 hw5.json
+-rw-rw-r--  1 nglgrdt nglgrdt  816 мар  7 16:45 hw6.json
+-rw-rw-r--  1 nglgrdt nglgrdt  754 мар  7 16:45 hw7.json
+-rw-rw-r--  1 nglgrdt nglgrdt  760 мар  7 16:45 hw8.json
+-rw-rw-r--  1 nglgrdt nglgrdt  760 мар  7 16:45 hw9.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1533 мар  7 16:45 hw.js
 
 docs/homeworks/pics:
 total 884
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  5 18:39 favicon.png
--rw-rw-r--  1 nglgrdt nglgrdt 282249 мар  5 18:39 hw-cover.png
--rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  5 18:39 logo.png
--rw-rw-r--  1 nglgrdt nglgrdt 206157 мар  5 18:39 vs-grid-2.jpg
--rw-rw-r--  1 nglgrdt nglgrdt 227082 мар  5 18:39 vs-grid-3.jpg
--rw-rw-r--  1 nglgrdt nglgrdt 158120 мар  5 18:39 vs-grid.jpg
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  7 16:45 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt 282249 мар  7 16:45 hw-cover.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  7 16:45 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt 206157 мар  7 16:45 vs-grid-2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt 227082 мар  7 16:45 vs-grid-3.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt 158120 мар  7 16:45 vs-grid.jpg
 
 docs/homeworks/site_libs:
 total 28
-drwxrwxr-x  7 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 bootstrap
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-nav
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-search
+drwxrwxr-x  7 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-nav
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-search
 
 docs/homeworks/site_libs/bootstrap:
 total 1292
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 473707 мар  5 18:39 bootstrap-dark.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  5 18:39 bootstrap-icons.css
--rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  5 18:39 bootstrap-icons.woff
--rw-rw-r-- 1 nglgrdt nglgrdt 473874 мар  5 18:39 bootstrap.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  5 18:39 bootstrap.min.js
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 473707 мар  7 16:45 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 473874 мар  7 16:45 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
 
 docs/homeworks/site_libs/bootstrap/pics:
 total 108
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  5 18:39 lab_easy.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  5 18:39 lab_extreme.png
--rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  5 18:39 lab_hard.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  5 18:39 lab_medium.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  7 16:45 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  7 16:45 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  7 16:45 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  7 16:45 lab_medium.png
 
 docs/homeworks/site_libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/homeworks/site_libs/quarto-html:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  5 18:39 anchor.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 28427 мар  5 18:39 quarto.js
--rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  5 18:39 quarto-syntax-highlighting.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28427 мар  7 16:45 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/homeworks/site_libs/quarto-nav:
 total 28
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  5 18:39 headroom.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  5 18:39 quarto-nav.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  7 16:45 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  7 16:45 quarto-nav.js
 
 docs/homeworks/site_libs/quarto-search:
 total 160
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  5 18:39 autocomplete.umd.js
--rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  5 18:39 fuse.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 35767 мар  5 18:39 quarto-search.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  7 16:45 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  7 16:45 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35767 мар  7 16:45 quarto-search.js
 
 docs/hub:
 total 176
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 9 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 27745 мар  5 18:39 how-is-it-made.html
--rw-rw-r-- 1 nglgrdt nglgrdt 29419 мар  5 18:39 how-to-support.html
--rw-rw-r-- 1 nglgrdt nglgrdt 42084 мар  5 18:39 index.html
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 pics
--rw-rw-r-- 1 nglgrdt nglgrdt 16528 мар  5 18:39 search.json
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 site_libs
--rw-rw-r-- 1 nglgrdt nglgrdt    17 мар  5 18:39 styles.css
--rw-rw-r-- 1 nglgrdt nglgrdt 30439 мар  5 18:39 what-is-it.html
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 9 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27745 мар  7 16:45 how-is-it-made.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 29419 мар  7 16:45 how-to-support.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 42084 мар  7 16:45 index.html
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt 16528 мар  7 16:45 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 site_libs
+-rw-rw-r-- 1 nglgrdt nglgrdt    17 мар  7 16:45 styles.css
+-rw-rw-r-- 1 nglgrdt nglgrdt 30439 мар  7 16:45 what-is-it.html
 
 docs/hub/pics:
 total 24
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 6204 мар  5 18:39 favicon.png
--rw-rw-r-- 1 nglgrdt nglgrdt 4805 мар  5 18:39 logo.png
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 6204 мар  7 16:45 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 4805 мар  7 16:45 logo.png
 
 docs/hub/site_libs:
 total 28
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 bootstrap
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-nav
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-search
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-search
 
 docs/hub/site_libs/bootstrap:
 total 1288
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 471320 мар  5 18:39 bootstrap-dark.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  5 18:39 bootstrap-icons.css
--rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  5 18:39 bootstrap-icons.woff
--rw-rw-r-- 1 nglgrdt nglgrdt 471505 мар  5 18:39 bootstrap.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  5 18:39 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 471320 мар  7 16:45 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 471505 мар  7 16:45 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
 
 docs/hub/site_libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/hub/site_libs/quarto-html:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  5 18:39 anchor.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 28053 мар  5 18:39 quarto.js
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 мар  7 16:45 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/hub/site_libs/quarto-nav:
 total 28
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  5 18:39 headroom.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  5 18:39 quarto-nav.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  7 16:45 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  7 16:45 quarto-nav.js
 
 docs/hub/site_libs/quarto-search:
 total 160
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  5 18:39 autocomplete.umd.js
--rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  5 18:39 fuse.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 35638 мар  5 18:39 quarto-search.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  7 16:45 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  7 16:45 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 мар  7 16:45 quarto-search.js
 
 docs/lectures:
 total 2524
-drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  34428 мар  5 18:39 index.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l10_files
--rw-rw-r--  1 nglgrdt nglgrdt 118991 мар  5 18:39 l10.html
--rw-rw-r--  1 nglgrdt nglgrdt  34428 мар  5 18:39 l11.html
--rw-rw-r--  1 nglgrdt nglgrdt  34173 мар  5 18:39 l12.html
--rw-rw-r--  1 nglgrdt nglgrdt  34150 мар  5 18:39 l13.html
--rw-rw-r--  1 nglgrdt nglgrdt  34296 мар  5 18:39 l14.html
--rw-rw-r--  1 nglgrdt nglgrdt  34124 мар  5 18:39 l15.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l1_files
--rw-rw-r--  1 nglgrdt nglgrdt 157268 мар  5 18:39 l1.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l2_files
--rw-rw-r--  1 nglgrdt nglgrdt 215809 мар  5 18:39 l2.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l3_files
--rw-rw-r--  1 nglgrdt nglgrdt 204137 мар  5 18:39 l3.html
--rw-rw-r--  1 nglgrdt nglgrdt 102424 мар  5 18:39 l4.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l5_files
--rw-rw-r--  1 nglgrdt nglgrdt 126548 мар  5 18:39 l5.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l6_files
--rw-rw-r--  1 nglgrdt nglgrdt 117900 мар  5 18:39 l6.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l7_files
--rw-rw-r--  1 nglgrdt nglgrdt 191375 мар  5 18:39 l7.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l8_files
--rw-rw-r--  1 nglgrdt nglgrdt 124598 мар  5 18:39 l8.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 l9_files
--rw-rw-r--  1 nglgrdt nglgrdt 112576 мар  5 18:39 l9.html
--rw-rw-r--  1 nglgrdt nglgrdt  34166 мар  5 18:39 part-andan.html
--rw-rw-r--  1 nglgrdt nglgrdt  33995 мар  5 18:39 part-math.html
--rw-rw-r--  1 nglgrdt nglgrdt  33705 мар  5 18:39 part-r.html
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
--rw-rw-r--  1 nglgrdt nglgrdt  34478 мар  5 18:39 references.html
--rw-rw-r--  1 nglgrdt nglgrdt 668136 мар  5 18:39 search.json
-drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  5 18:39 site_libs
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  34428 мар  7 16:45 index.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l10_files
+-rw-rw-r--  1 nglgrdt nglgrdt 118991 мар  7 16:45 l10.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34428 мар  7 16:45 l11.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34173 мар  7 16:45 l12.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34150 мар  7 16:45 l13.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34296 мар  7 16:45 l14.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34124 мар  7 16:45 l15.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l1_files
+-rw-rw-r--  1 nglgrdt nglgrdt 157268 мар  7 16:45 l1.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l2_files
+-rw-rw-r--  1 nglgrdt nglgrdt 215809 мар  7 16:45 l2.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l3_files
+-rw-rw-r--  1 nglgrdt nglgrdt 204137 мар  7 16:45 l3.html
+-rw-rw-r--  1 nglgrdt nglgrdt 102424 мар  7 16:45 l4.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l5_files
+-rw-rw-r--  1 nglgrdt nglgrdt 126548 мар  7 16:45 l5.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l6_files
+-rw-rw-r--  1 nglgrdt nglgrdt 117900 мар  7 16:45 l6.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l7_files
+-rw-rw-r--  1 nglgrdt nglgrdt 191375 мар  7 16:45 l7.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l8_files
+-rw-rw-r--  1 nglgrdt nglgrdt 124598 мар  7 16:45 l8.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 l9_files
+-rw-rw-r--  1 nglgrdt nglgrdt 112576 мар  7 16:45 l9.html
+-rw-rw-r--  1 nglgrdt nglgrdt  34166 мар  7 16:45 part-andan.html
+-rw-rw-r--  1 nglgrdt nglgrdt  33995 мар  7 16:45 part-math.html
+-rw-rw-r--  1 nglgrdt nglgrdt  33705 мар  7 16:45 part-r.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
+-rw-rw-r--  1 nglgrdt nglgrdt  34478 мар  7 16:45 references.html
+-rw-rw-r--  1 nglgrdt nglgrdt 668136 мар  7 16:45 search.json
+drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  7 16:45 site_libs
 
 docs/lectures/l10_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l10_files/figure-html:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 30156 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24943 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 31896 мар  5 18:39 unnamed-chunk-3-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 30156 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24943 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 31896 мар  7 16:45 unnamed-chunk-3-1.png
 
 docs/lectures/l1_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l1_files/figure-html:
 total 92
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 17236 мар  5 18:39 vec-classic-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 16511 мар  5 18:39 vec-free-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 14305 мар  5 18:39 vec-remove-vector-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 26161 мар  5 18:39 vec-same-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 17236 мар  7 16:45 vec-classic-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16511 мар  7 16:45 vec-free-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 14305 мар  7 16:45 vec-remove-vector-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26161 мар  7 16:45 vec-same-1.png
 
 docs/lectures/l2_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l2_files/figure-html:
 total 772
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 86830 мар  5 18:39 unnamed-chunk-103-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 18202 мар  5 18:39 unnamed-chunk-104-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 38884 мар  5 18:39 unnamed-chunk-105-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 51359 мар  5 18:39 unnamed-chunk-106-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 82086 мар  5 18:39 unnamed-chunk-107-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 16401 мар  5 18:39 unnamed-chunk-108-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 83619 мар  5 18:39 unnamed-chunk-109-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 18527 мар  5 18:39 unnamed-chunk-110-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 18229 мар  5 18:39 unnamed-chunk-111-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 55115 мар  5 18:39 unnamed-chunk-112-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 17128 мар  5 18:39 unnamed-chunk-113-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34223 мар  5 18:39 unnamed-chunk-114-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 87482 мар  5 18:39 unnamed-chunk-115-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 79446 мар  5 18:39 unnamed-chunk-116-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 54725 мар  5 18:39 unnamed-chunk-99-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 86830 мар  7 16:45 unnamed-chunk-103-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18202 мар  7 16:45 unnamed-chunk-104-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38884 мар  7 16:45 unnamed-chunk-105-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51359 мар  7 16:45 unnamed-chunk-106-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 82086 мар  7 16:45 unnamed-chunk-107-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16401 мар  7 16:45 unnamed-chunk-108-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 83619 мар  7 16:45 unnamed-chunk-109-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18527 мар  7 16:45 unnamed-chunk-110-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18229 мар  7 16:45 unnamed-chunk-111-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 55115 мар  7 16:45 unnamed-chunk-112-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17128 мар  7 16:45 unnamed-chunk-113-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34223 мар  7 16:45 unnamed-chunk-114-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 87482 мар  7 16:45 unnamed-chunk-115-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 79446 мар  7 16:45 unnamed-chunk-116-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 54725 мар  7 16:45 unnamed-chunk-99-1.png
 
 docs/lectures/l3_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l3_files/figure-html:
 total 424
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 22680 мар  5 18:39 deriv1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24497 мар  5 18:39 deriv2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27121 мар  5 18:39 deriv3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 55981 мар  5 18:39 deriv4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 54366 мар  5 18:39 deriv-graph-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 17509 мар  5 18:39 func-graphs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 75842 мар  5 18:39 func_graphs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36381 мар  5 18:39 integral-plot005-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 35789 мар  5 18:39 integral-plot01-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34423 мар  5 18:39 integral-plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21846 мар  5 18:39 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 22680 мар  7 16:45 deriv1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24497 мар  7 16:45 deriv2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27121 мар  7 16:45 deriv3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 55981 мар  7 16:45 deriv4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 54366 мар  7 16:45 deriv-graph-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17509 мар  7 16:45 func-graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 75842 мар  7 16:45 func_graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36381 мар  7 16:45 integral-plot005-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35789 мар  7 16:45 integral-plot01-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34423 мар  7 16:45 integral-plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21846 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/lectures/l5_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l5_files/figure-html:
 total 1940
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  13987 мар  5 18:39 cfd-dice-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  59334 мар  5 18:39 cluster-clusters-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  61799 мар  5 18:39 cluster-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  74394 мар  5 18:39 cluster-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  31595 мар  5 18:39 geomprob-dots-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 105550 мар  5 18:39 geomprob-incircle-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  26093 мар  5 18:39 geomprob-square-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  88113 мар  5 18:39 norm-dist-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  49677 мар  5 18:39 pdf-inetrvals-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  15470 мар  5 18:39 pdf-segment-nolabs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  17374 мар  5 18:39 pmf-dice-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  17374 мар  5 18:39 pmf-dice-repeat-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  37328 мар  5 18:39 pmf-vs-pdf-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 139453 мар  5 18:39 simple-random-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 131756 мар  5 18:39 simple-random-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 335473 мар  5 18:39 strat-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 333404 мар  5 18:39 strat-pop-strata-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 310928 мар  5 18:39 strat-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  83338 мар  5 18:39 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  13987 мар  7 16:45 cfd-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  59334 мар  7 16:45 cluster-clusters-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  61799 мар  7 16:45 cluster-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  74394 мар  7 16:45 cluster-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31595 мар  7 16:45 geomprob-dots-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 105550 мар  7 16:45 geomprob-incircle-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26093 мар  7 16:45 geomprob-square-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  88113 мар  7 16:45 norm-dist-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  49677 мар  7 16:45 pdf-inetrvals-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  15470 мар  7 16:45 pdf-segment-nolabs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17374 мар  7 16:45 pmf-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17374 мар  7 16:45 pmf-dice-repeat-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  37328 мар  7 16:45 pmf-vs-pdf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 139453 мар  7 16:45 simple-random-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 131756 мар  7 16:45 simple-random-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 335473 мар  7 16:45 strat-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 333404 мар  7 16:45 strat-pop-strata-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 310928 мар  7 16:45 strat-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  83338 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/lectures/l6_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l6_files/figure-html:
 total 540
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  52095 мар  5 18:39 alpha-raise-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  26308 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  39097 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  70662 мар  5 18:39 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 131440 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  55309 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  26308 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  39296 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  17295 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  64165 мар  5 18:39 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  52095 мар  7 16:45 alpha-raise-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26308 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  39097 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  70662 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 131440 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55309 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  26308 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  39296 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17295 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  64165 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/lectures/l7_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l7_files/figure-html:
 total 1832
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 22157 мар  5 18:39 68_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21700 мар  5 18:39 99_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 14199 мар  5 18:39 boxplot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 18209 мар  5 18:39 boxplot_annotated-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 43492 мар  5 18:39 central_tendency_asymm_left-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49601 мар  5 18:39 central_tendency_asymm_right-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49545 мар  5 18:39 central_tendency_bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 47256 мар  5 18:39 central_tendency_symm-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 22199 мар  5 18:39 distributions_with_the_same_means_mean-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21921 мар  5 18:39 distributions_with_the_same_means_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 22128 мар  5 18:39 fifth_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 30056 мар  5 18:39 fig-bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 78415 мар  5 18:39 fig-bimodal-struct-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21217 мар  5 18:39 fig-binom-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 69643 мар  5 18:39 fig-continuous-freqs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 57881 мар  5 18:39 fig-continuous-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 52904 мар  5 18:39 fig-median-bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50140 мар  5 18:39 fig-median-left-skew-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 66684 мар  5 18:39 fig-median-norm-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 51883 мар  5 18:39 fig-median-right-skew-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 22432 мар  5 18:39 fig-mode-nbinom-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28212 мар  5 18:39 fig-mode-norm-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41372 мар  5 18:39 fig-mode-pmf-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29832 мар  5 18:39 fig-norm-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 19594 мар  5 18:39 fig-poiss-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 30817 мар  5 18:39 fig-polymodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 22608 мар  5 18:39 iqr_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 76179 мар  5 18:39 mean_feature_1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 59943 мар  5 18:39 mean_feature_2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 25146 мар  5 18:39 quartiles_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24575 мар  5 18:39 range_problem-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 76179 мар  5 18:39 sd_feature_1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 59943 мар  5 18:39 sd_feature_2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 17773 мар  5 18:39 taia_score_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24420 мар  5 18:39 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 25818 мар  5 18:39 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41433 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 43303 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 42234 мар  5 18:39 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28932 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27492 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28844 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 26532 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 32944 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 32594 мар  5 18:39 unnamed-chunk-9-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 60893 мар  5 18:39 zero_deviation_sum-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 22157 мар  7 16:45 68_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21700 мар  7 16:45 99_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 14199 мар  7 16:45 boxplot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18209 мар  7 16:45 boxplot_annotated-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43492 мар  7 16:45 central_tendency_asymm_left-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49601 мар  7 16:45 central_tendency_asymm_right-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49545 мар  7 16:45 central_tendency_bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 47256 мар  7 16:45 central_tendency_symm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22199 мар  7 16:45 distributions_with_the_same_means_mean-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21921 мар  7 16:45 distributions_with_the_same_means_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22128 мар  7 16:45 fifth_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30056 мар  7 16:45 fig-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 78415 мар  7 16:45 fig-bimodal-struct-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21217 мар  7 16:45 fig-binom-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 69643 мар  7 16:45 fig-continuous-freqs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57881 мар  7 16:45 fig-continuous-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 52904 мар  7 16:45 fig-median-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50140 мар  7 16:45 fig-median-left-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 66684 мар  7 16:45 fig-median-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51883 мар  7 16:45 fig-median-right-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22432 мар  7 16:45 fig-mode-nbinom-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28212 мар  7 16:45 fig-mode-norm-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41372 мар  7 16:45 fig-mode-pmf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29832 мар  7 16:45 fig-norm-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19594 мар  7 16:45 fig-poiss-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30817 мар  7 16:45 fig-polymodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22608 мар  7 16:45 iqr_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 76179 мар  7 16:45 mean_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 59943 мар  7 16:45 mean_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25146 мар  7 16:45 quartiles_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24575 мар  7 16:45 range_problem-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 76179 мар  7 16:45 sd_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 59943 мар  7 16:45 sd_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17773 мар  7 16:45 taia_score_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24420 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25818 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41433 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43303 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 42234 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28932 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27492 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28844 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26532 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 32944 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 32594 мар  7 16:45 unnamed-chunk-9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60893 мар  7 16:45 zero_deviation_sum-1.png
 
 docs/lectures/l8_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l8_files/figure-html:
 total 1120
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 27104 мар  5 18:39 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 45885 мар  5 18:39 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 57076 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 63786 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 80861 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50264 мар  5 18:39 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 77209 мар  5 18:39 unnamed-chunk-15-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 66538 мар  5 18:39 unnamed-chunk-16-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 45287 мар  5 18:39 unnamed-chunk-17-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 74623 мар  5 18:39 unnamed-chunk-18-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 45457 мар  5 18:39 unnamed-chunk-19-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 81445 мар  5 18:39 unnamed-chunk-20-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 69952 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 58277 мар  5 18:39 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50097 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49968 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50129 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 52773 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28380 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 17676 мар  5 18:39 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27104 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 45885 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57076 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 63786 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 80861 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50264 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 77209 мар  7 16:45 unnamed-chunk-15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 66538 мар  7 16:45 unnamed-chunk-16-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 45287 мар  7 16:45 unnamed-chunk-17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 74623 мар  7 16:45 unnamed-chunk-18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 45457 мар  7 16:45 unnamed-chunk-19-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 81445 мар  7 16:45 unnamed-chunk-20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 69952 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58277 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50097 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49968 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50129 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 52773 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28380 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 17676 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/lectures/l9_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/lectures/l9_files/figure-html:
 total 832
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 44670 мар  5 18:39 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 54345 мар  5 18:39 unnamed-chunk-10-2.png
--rw-rw-r-- 1 nglgrdt nglgrdt 53300 мар  5 18:39 unnamed-chunk-10-3.png
--rw-rw-r-- 1 nglgrdt nglgrdt 44842 мар  5 18:39 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21559 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 38116 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 11168 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 12676 мар  5 18:39 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 25419 мар  5 18:39 unnamed-chunk-16-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 32918 мар  5 18:39 unnamed-chunk-17-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21002 мар  5 18:39 unnamed-chunk-18-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 31667 мар  5 18:39 unnamed-chunk-19-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 26410 мар  5 18:39 unnamed-chunk-20-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 31656 мар  5 18:39 unnamed-chunk-21-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41214 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 43774 мар  5 18:39 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 44441 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 39661 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 38631 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 43295 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48983 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 47405 мар  5 18:39 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 44670 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 54345 мар  7 16:45 unnamed-chunk-10-2.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 53300 мар  7 16:45 unnamed-chunk-10-3.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 44842 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21559 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38116 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 11168 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 12676 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25419 мар  7 16:45 unnamed-chunk-16-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 32918 мар  7 16:45 unnamed-chunk-17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21002 мар  7 16:45 unnamed-chunk-18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 31667 мар  7 16:45 unnamed-chunk-19-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26410 мар  7 16:45 unnamed-chunk-20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 31656 мар  7 16:45 unnamed-chunk-21-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41214 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43774 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 44441 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 39661 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38631 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 43295 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48983 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 47405 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/lectures/pics:
 total 5276
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt  38737 мар  5 18:39 and.png
--rw-rw-r--  1 nglgrdt nglgrdt 543353 мар  5 18:39 antideriv.gif
--rw-rw-r--  1 nglgrdt nglgrdt  42344 мар  5 18:39 anti-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  35172 мар  5 18:39 auc1.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  22237 мар  5 18:39 auc2.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  39335 мар  5 18:39 auc3.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  64657 мар  5 18:39 auc4.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  73082 мар  5 18:39 auc5.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  79841 мар  5 18:39 bin_prob_curve.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  63152 мар  5 18:39 bin_prob.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  92244 мар  5 18:39 bin_prob_line.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  39493 мар  5 18:39 bin_y.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  32845 мар  5 18:39 complement.png
--rw-rw-r--  1 nglgrdt nglgrdt 331356 мар  5 18:39 Correlation_examples.png
--rw-rw-r--  1 nglgrdt nglgrdt  50113 мар  5 18:39 decart-prod.png
--rw-rw-r--  1 nglgrdt nglgrdt  29383 мар  5 18:39 deviance.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  34012 мар  5 18:39 difference.png
--rw-rw-r--  1 nglgrdt nglgrdt 105040 мар  5 18:39 duplicate-keys.png
--rw-rw-r--  1 nglgrdt nglgrdt  38980 мар  5 18:39 equivalence.png
--rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  5 18:39 favicon.png
--rw-rw-r--  1 nglgrdt nglgrdt  51111 мар  5 18:39 full-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  36104 мар  5 18:39 implication.png
--rw-rw-r--  1 nglgrdt nglgrdt  38427 мар  5 18:39 inner-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  85990 мар  5 18:39 interaction_main.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  34287 мар  5 18:39 intersection.png
--rw-rw-r--  1 nglgrdt nglgrdt  76558 мар  5 18:39 joins-venn.png
--rw-rw-r--  1 nglgrdt nglgrdt  59113 мар  5 18:39 kubik.jpg
--rw-rw-r--  1 nglgrdt nglgrdt 283630 мар  5 18:39 lec-cover.png
--rw-rw-r--  1 nglgrdt nglgrdt  44309 мар  5 18:39 left-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  56900 мар  5 18:39 line.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  52815 мар  5 18:39 list-structure.png
--rw-rw-r--  1 nglgrdt nglgrdt  94074 мар  5 18:39 list-vs-df.png
--rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  5 18:39 logo.png
--rw-rw-r--  1 nglgrdt nglgrdt  27076 мар  5 18:39 matrix-prod.png
--rw-rw-r--  1 nglgrdt nglgrdt 405334 мар  5 18:39 native-pipe.png
--rw-rw-r--  1 nglgrdt nglgrdt  25101 мар  5 18:39 negation.png
--rw-rw-r--  1 nglgrdt nglgrdt  37329 мар  5 18:39 or.png
--rw-rw-r--  1 nglgrdt nglgrdt  36407 мар  5 18:39 replication.png
--rw-rw-r--  1 nglgrdt nglgrdt  45798 мар  5 18:39 right-join.png
--rw-rw-r--  1 nglgrdt nglgrdt 280720 мар  5 18:39 rproject-1.png
--rw-rw-r--  1 nglgrdt nglgrdt 319323 мар  5 18:39 rproject-2.png
--rw-rw-r--  1 nglgrdt nglgrdt 287481 мар  5 18:39 rproject-3.png
--rw-rw-r--  1 nglgrdt nglgrdt 331627 мар  5 18:39 rproject-4.png
--rw-rw-r--  1 nglgrdt nglgrdt 281473 мар  5 18:39 rproject-5.png
--rw-rw-r--  1 nglgrdt nglgrdt  41642 мар  5 18:39 semi-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  36335 мар  5 18:39 set-a1.png
--rw-rw-r--  1 nglgrdt nglgrdt  29765 мар  5 18:39 set-a.png
--rw-rw-r--  1 nglgrdt nglgrdt  37643 мар  5 18:39 set-func.png
--rw-rw-r--  1 nglgrdt nglgrdt  36804 мар  5 18:39 symm-difference.png
--rw-rw-r--  1 nglgrdt nglgrdt  53638 мар  5 18:39 tidy-2.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  99582 мар  5 18:39 tidy.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  32449 мар  5 18:39 union.png
--rw-rw-r--  1 nglgrdt nglgrdt  62016 мар  5 18:39 vec-to-mat.png
--rw-rw-r--  1 nglgrdt nglgrdt  35775 мар  5 18:39 wide-long.png
--rw-rw-r--  1 nglgrdt nglgrdt  42537 мар  5 18:39 xor.png
--rw-rw-r--  1 nglgrdt nglgrdt  22992 мар  5 18:39 xy.png
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  38737 мар  7 16:45 and.png
+-rw-rw-r--  1 nglgrdt nglgrdt 543353 мар  7 16:45 antideriv.gif
+-rw-rw-r--  1 nglgrdt nglgrdt  42344 мар  7 16:45 anti-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35172 мар  7 16:45 auc1.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  22237 мар  7 16:45 auc2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  39335 мар  7 16:45 auc3.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  64657 мар  7 16:45 auc4.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  73082 мар  7 16:45 auc5.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  79841 мар  7 16:45 bin_prob_curve.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  63152 мар  7 16:45 bin_prob.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  92244 мар  7 16:45 bin_prob_line.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  39493 мар  7 16:45 bin_y.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32845 мар  7 16:45 complement.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331356 мар  7 16:45 Correlation_examples.png
+-rw-rw-r--  1 nglgrdt nglgrdt  50113 мар  7 16:45 decart-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29383 мар  7 16:45 deviance.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  34012 мар  7 16:45 difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt 105040 мар  7 16:45 duplicate-keys.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38980 мар  7 16:45 equivalence.png
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  7 16:45 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt  51111 мар  7 16:45 full-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36104 мар  7 16:45 implication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38427 мар  7 16:45 inner-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  85990 мар  7 16:45 interaction_main.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  34287 мар  7 16:45 intersection.png
+-rw-rw-r--  1 nglgrdt nglgrdt  76558 мар  7 16:45 joins-venn.png
+-rw-rw-r--  1 nglgrdt nglgrdt  59113 мар  7 16:45 kubik.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt 283630 мар  7 16:45 lec-cover.png
+-rw-rw-r--  1 nglgrdt nglgrdt  44309 мар  7 16:45 left-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  56900 мар  7 16:45 line.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  52815 мар  7 16:45 list-structure.png
+-rw-rw-r--  1 nglgrdt nglgrdt  94074 мар  7 16:45 list-vs-df.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  7 16:45 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt  27076 мар  7 16:45 matrix-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt 405334 мар  7 16:45 native-pipe.png
+-rw-rw-r--  1 nglgrdt nglgrdt  25101 мар  7 16:45 negation.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37329 мар  7 16:45 or.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36407 мар  7 16:45 replication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  45798 мар  7 16:45 right-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt 280720 мар  7 16:45 rproject-1.png
+-rw-rw-r--  1 nglgrdt nglgrdt 319323 мар  7 16:45 rproject-2.png
+-rw-rw-r--  1 nglgrdt nglgrdt 287481 мар  7 16:45 rproject-3.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331627 мар  7 16:45 rproject-4.png
+-rw-rw-r--  1 nglgrdt nglgrdt 281473 мар  7 16:45 rproject-5.png
+-rw-rw-r--  1 nglgrdt nglgrdt  41642 мар  7 16:45 semi-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36335 мар  7 16:45 set-a1.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29765 мар  7 16:45 set-a.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37643 мар  7 16:45 set-func.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36804 мар  7 16:45 symm-difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt  53638 мар  7 16:45 tidy-2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  99582 мар  7 16:45 tidy.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32449 мар  7 16:45 union.png
+-rw-rw-r--  1 nglgrdt nglgrdt  62016 мар  7 16:45 vec-to-mat.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35775 мар  7 16:45 wide-long.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42537 мар  7 16:45 xor.png
+-rw-rw-r--  1 nglgrdt nglgrdt  22992 мар  7 16:45 xy.png
 
 docs/lectures/site_libs:
 total 72
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 bootstrap
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 crosstalk-1.2.0
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 crosstalk-1.2.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 htmlwidgets-1.6.2
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 htmlwidgets-1.6.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 jquery-3.5.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 plotly-binding-4.10.2
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 plotly-binding-4.10.3
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 plotly-binding-4.10.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 plotly-htmlwidgets-css-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 plotly-main-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-nav
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 typedarray-0.1
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 13 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 crosstalk-1.2.0
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 htmlwidgets-1.6.2
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-binding-4.10.2
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-binding-4.10.3
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-nav
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 typedarray-0.1
 
 docs/lectures/site_libs/bootstrap:
 total 1288
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 472642 мар  5 18:39 bootstrap-dark.min.css
--rw-r--r--  1 nglgrdt nglgrdt  98163 мар  5 18:39 bootstrap-icons.css
--rw-r--r--  1 nglgrdt nglgrdt 176200 мар  5 18:39 bootstrap-icons.woff
--rw-rw-r--  1 nglgrdt nglgrdt 472667 мар  5 18:39 bootstrap.min.css
--rw-r--r--  1 nglgrdt nglgrdt  80668 мар  5 18:39 bootstrap.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 472642 мар  7 16:45 bootstrap-dark.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r--  1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r--  1 nglgrdt nglgrdt 472667 мар  7 16:45 bootstrap.min.css
+-rw-r--r--  1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
 
 docs/lectures/site_libs/clipboard:
 total 20
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/lectures/site_libs/crosstalk-1.2.0:
 total 20
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 css
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 js
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 scss
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 scss
 
 docs/lectures/site_libs/crosstalk-1.2.0/css:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  5 18:39 crosstalk.min.css
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  7 16:45 crosstalk.min.css
 
 docs/lectures/site_libs/crosstalk-1.2.0/js:
 total 184
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  5 18:39 crosstalk.js
--rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  5 18:39 crosstalk.js.map
--rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  5 18:39 crosstalk.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  5 18:39 crosstalk.min.js.map
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  7 16:45 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  7 16:45 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  7 16:45 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  7 16:45 crosstalk.min.js.map
 
 docs/lectures/site_libs/crosstalk-1.2.0/scss:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  5 18:39 crosstalk.scss
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  7 16:45 crosstalk.scss
 
 docs/lectures/site_libs/crosstalk-1.2.1:
 total 20
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 css
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 js
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 scss
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 scss
 
 docs/lectures/site_libs/crosstalk-1.2.1/css:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  5 18:39 crosstalk.min.css
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  7 16:45 crosstalk.min.css
 
 docs/lectures/site_libs/crosstalk-1.2.1/js:
 total 184
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  5 18:39 crosstalk.js
--rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  5 18:39 crosstalk.js.map
--rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  5 18:39 crosstalk.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  5 18:39 crosstalk.min.js.map
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  7 16:45 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  7 16:45 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  7 16:45 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  7 16:45 crosstalk.min.js.map
 
 docs/lectures/site_libs/crosstalk-1.2.1/scss:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  5 18:39 crosstalk.scss
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  7 16:45 crosstalk.scss
 
 docs/lectures/site_libs/htmlwidgets-1.6.2:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  5 18:39 htmlwidgets.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  7 16:45 htmlwidgets.js
 
 docs/lectures/site_libs/htmlwidgets-1.6.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  5 18:39 htmlwidgets.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  7 16:45 htmlwidgets.js
 
 docs/lectures/site_libs/jquery-3.5.1:
 total 532
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  5 18:39 jquery-AUTHORS.txt
--rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  5 18:39 jquery.js
--rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  5 18:39 jquery.min.js
--rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  5 18:39 jquery.min.map
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  7 16:45 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  7 16:45 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  7 16:45 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  7 16:45 jquery.min.map
 
 docs/lectures/site_libs/plotly-binding-4.10.2:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  5 18:39 plotly.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  7 16:45 plotly.js
 
 docs/lectures/site_libs/plotly-binding-4.10.3:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  5 18:39 plotly.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  7 16:45 plotly.js
 
 docs/lectures/site_libs/plotly-binding-4.10.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  5 18:39 plotly.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  7 16:45 plotly.js
 
 docs/lectures/site_libs/plotly-htmlwidgets-css-2.11.1:
 total 12
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt  173 мар  5 18:39 plotly-htmlwidgets.css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 мар  7 16:45 plotly-htmlwidgets.css
 
 docs/lectures/site_libs/plotly-main-2.11.1:
 total 3588
-drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt    4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  5 18:39 plotly-latest.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt    4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  7 16:45 plotly-latest.min.js
 
 docs/lectures/site_libs/quarto-html:
 total 100
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  5888 мар  5 18:39 anchor.min.js
--rw-r--r--  1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-r--r--  1 nglgrdt nglgrdt 28427 мар  5 18:39 quarto.js
--rw-rw-r--  1 nglgrdt nglgrdt  3135 мар  5 18:39 quarto-syntax-highlighting.css
--rw-rw-r--  1 nglgrdt nglgrdt  2770 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r--  1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r--  1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 28427 мар  7 16:45 quarto.js
+-rw-rw-r--  1 nglgrdt nglgrdt  3135 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-rw-r--  1 nglgrdt nglgrdt  2770 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/lectures/site_libs/quarto-nav:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 4570 мар  5 18:39 headroom.min.js
--rw-r--r--  1 nglgrdt nglgrdt 8617 мар  5 18:39 quarto-nav.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 4570 мар  7 16:45 headroom.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 8617 мар  7 16:45 quarto-nav.js
 
 docs/lectures/site_libs/quarto-search:
 total 160
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 92971 мар  5 18:39 autocomplete.umd.js
--rw-r--r--  1 nglgrdt nglgrdt 23539 мар  5 18:39 fuse.min.js
--rw-r--r--  1 nglgrdt nglgrdt 35767 мар  5 18:39 quarto-search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 92971 мар  7 16:45 autocomplete.umd.js
+-rw-r--r--  1 nglgrdt nglgrdt 23539 мар  7 16:45 fuse.min.js
+-rw-r--r--  1 nglgrdt nglgrdt 35767 мар  7 16:45 quarto-search.js
 
 docs/lectures/site_libs/typedarray-0.1:
 total 32
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  5 18:39 typedarray.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 18 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  7 16:45 typedarray.min.js
 
 docs/practice:
-total 1616
-drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  33485 мар  5 18:39 index.html
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 js
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
--rw-rw-r--  1 nglgrdt nglgrdt  68662 мар  5 18:39 pr10.html
--rw-rw-r--  1 nglgrdt nglgrdt  94167 мар  5 18:39 pr11.html
--rw-rw-r--  1 nglgrdt nglgrdt  68638 мар  5 18:39 pr12.html
--rw-rw-r--  1 nglgrdt nglgrdt  68585 мар  5 18:39 pr13.html
--rw-rw-r--  1 nglgrdt nglgrdt  68411 мар  5 18:39 pr14.html
--rw-rw-r--  1 nglgrdt nglgrdt  68392 мар  5 18:39 pr15.html
--rw-rw-r--  1 nglgrdt nglgrdt  68489 мар  5 18:39 pr16.html
--rw-rw-r--  1 nglgrdt nglgrdt  68420 мар  5 18:39 pr17.html
--rw-rw-r--  1 nglgrdt nglgrdt  84727 мар  5 18:39 pr1.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 pr2_files
--rw-rw-r--  1 nglgrdt nglgrdt 106709 мар  5 18:39 pr2.html
--rw-rw-r--  1 nglgrdt nglgrdt  65950 мар  5 18:39 pr3.html
--rw-rw-r--  1 nglgrdt nglgrdt  85802 мар  5 18:39 pr4.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 pr5_files
--rw-rw-r--  1 nglgrdt nglgrdt 104368 мар  5 18:39 pr5.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 pr7_files
--rw-rw-r--  1 nglgrdt nglgrdt  72109 мар  5 18:39 pr7.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 pr8_files
--rw-rw-r--  1 nglgrdt nglgrdt  64183 мар  5 18:39 pr8.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 pr9_files
--rw-rw-r--  1 nglgrdt nglgrdt  89334 мар  5 18:39 pr9.html
--rw-rw-r--  1 nglgrdt nglgrdt  32683 мар  5 18:39 references.html
--rw-rw-r--  1 nglgrdt nglgrdt 272729 мар  5 18:39 search.json
-drwxrwxr-x  7 nglgrdt nglgrdt   4096 мар  5 18:39 site_libs
+total 1628
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  33485 мар  7 16:45 index.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
+-rw-rw-r--  1 nglgrdt nglgrdt  68662 мар  7 16:45 pr10.html
+-rw-rw-r--  1 nglgrdt nglgrdt  94167 мар  7 16:45 pr11.html
+-rw-rw-r--  1 nglgrdt nglgrdt  68638 мар  7 16:45 pr12.html
+-rw-rw-r--  1 nglgrdt nglgrdt  72383 мар  7 16:45 pr13.html
+-rw-rw-r--  1 nglgrdt nglgrdt  68411 мар  7 16:45 pr14.html
+-rw-rw-r--  1 nglgrdt nglgrdt  68392 мар  7 16:45 pr15.html
+-rw-rw-r--  1 nglgrdt nglgrdt  68489 мар  7 16:45 pr16.html
+-rw-rw-r--  1 nglgrdt nglgrdt  68420 мар  7 16:45 pr17.html
+-rw-rw-r--  1 nglgrdt nglgrdt  84727 мар  7 16:45 pr1.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 pr2_files
+-rw-rw-r--  1 nglgrdt nglgrdt 106709 мар  7 16:45 pr2.html
+-rw-rw-r--  1 nglgrdt nglgrdt  65950 мар  7 16:45 pr3.html
+-rw-rw-r--  1 nglgrdt nglgrdt  85802 мар  7 16:45 pr4.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 pr5_files
+-rw-rw-r--  1 nglgrdt nglgrdt 104368 мар  7 16:45 pr5.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 pr7_files
+-rw-rw-r--  1 nglgrdt nglgrdt  72109 мар  7 16:45 pr7.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 pr8_files
+-rw-rw-r--  1 nglgrdt nglgrdt  64183 мар  7 16:45 pr8.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 pr9_files
+-rw-rw-r--  1 nglgrdt nglgrdt  89334 мар  7 16:45 pr9.html
+-rw-rw-r--  1 nglgrdt nglgrdt  32683 мар  7 16:45 references.html
+-rw-rw-r--  1 nglgrdt nglgrdt 279567 мар  7 16:45 search.json
+drwxrwxr-x  7 nglgrdt nglgrdt   4096 мар  7 16:45 site_libs
 
 docs/practice/js:
 total 76
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr10.json
--rw-rw-r--  1 nglgrdt nglgrdt 1540 мар  5 18:39 pr11.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr12.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr13.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr14.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr15.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr16.json
--rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  5 18:39 pr17.json
--rw-rw-r--  1 nglgrdt nglgrdt 1454 мар  5 18:39 pr1.json
--rw-rw-r--  1 nglgrdt nglgrdt 1456 мар  5 18:39 pr2.json
--rw-rw-r--  1 nglgrdt nglgrdt 1443 мар  5 18:39 pr3.json
--rw-rw-r--  1 nglgrdt nglgrdt 1450 мар  5 18:39 pr4.json
--rw-rw-r--  1 nglgrdt nglgrdt 1459 мар  5 18:39 pr5.json
--rw-rw-r--  1 nglgrdt nglgrdt 1445 мар  5 18:39 pr7.json
--rw-rw-r--  1 nglgrdt nglgrdt 1425 мар  5 18:39 pr8.json
--rw-rw-r--  1 nglgrdt nglgrdt 1425 мар  5 18:39 pr9.json
--rw-rw-r--  1 nglgrdt nglgrdt 1508 мар  5 18:39 pr.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr10.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1540 мар  7 16:45 pr11.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr12.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr13.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr14.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr15.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr16.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1516 мар  7 16:45 pr17.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1454 мар  7 16:45 pr1.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1456 мар  7 16:45 pr2.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1443 мар  7 16:45 pr3.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1450 мар  7 16:45 pr4.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1459 мар  7 16:45 pr5.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1445 мар  7 16:45 pr7.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1425 мар  7 16:45 pr8.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1425 мар  7 16:45 pr9.json
+-rw-rw-r--  1 nglgrdt nglgrdt 1508 мар  7 16:45 pr.js
 
 docs/practice/pics:
 total 300
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  5 18:39 favicon.png
--rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  5 18:39 logo.png
--rw-rw-r--  1 nglgrdt nglgrdt 282143 мар  5 18:39 pr-cover.png
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  7 16:45 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  7 16:45 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt 282143 мар  7 16:45 pr-cover.png
 
 docs/practice/pr2_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/practice/pr2_files/figure-html:
 total 48
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 16568 мар  5 18:39 15-vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 16810 мар  5 18:39 18-vis-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 16568 мар  7 16:45 15-vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16810 мар  7 16:45 18-vis-1.png
 
 docs/practice/pr5_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/practice/pr5_files/figure-html:
 total 2008
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  15371 мар  5 18:39 12a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  16407 мар  5 18:39 12b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  23083 мар  5 18:39 12c-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  27314 мар  5 18:39 13a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  65440 мар  5 18:39 13b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  24131 мар  5 18:39 15-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  41711 мар  5 18:39 16a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  57400 мар  5 18:39 16b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 150138 мар  5 18:39 16c-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  47650 мар  5 18:39 17-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 104446 мар  5 18:39 18-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  38894 мар  5 18:39 19b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  41742 мар  5 18:39 20-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  58713 мар  5 18:39 21-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  60143 мар  5 18:39 22-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  63936 мар  5 18:39 23-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  37595 мар  5 18:39 24-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  18250 мар  5 18:39 25-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  24690 мар  5 18:39 26-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  93315 мар  5 18:39 27-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 127998 мар  5 18:39 28-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 130675 мар  5 18:39 29-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt   3250 мар  5 18:39 2a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  12265 мар  5 18:39 2b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 130795 мар  5 18:39 30-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  27251 мар  5 18:39 3a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  64811 мар  5 18:39 3b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  97966 мар  5 18:39 4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  17464 мар  5 18:39 5a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  16205 мар  5 18:39 5b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  43004 мар  5 18:39 6a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42341 мар  5 18:39 6b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42618 мар  5 18:39 6c-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42491 мар  5 18:39 7a-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42297 мар  5 18:39 7b-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  41864 мар  5 18:39 8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  61773 мар  5 18:39 9-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  19532 мар  5 18:39 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  15371 мар  7 16:45 12a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  16407 мар  7 16:45 12b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  23083 мар  7 16:45 12c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  27314 мар  7 16:45 13a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  65440 мар  7 16:45 13b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  24131 мар  7 16:45 15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  41711 мар  7 16:45 16a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  57400 мар  7 16:45 16b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 150138 мар  7 16:45 16c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  47650 мар  7 16:45 17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 104446 мар  7 16:45 18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  38894 мар  7 16:45 19b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  41742 мар  7 16:45 20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  58713 мар  7 16:45 21-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  60143 мар  7 16:45 22-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  63936 мар  7 16:45 23-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  37595 мар  7 16:45 24-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  18250 мар  7 16:45 25-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  24690 мар  7 16:45 26-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  93315 мар  7 16:45 27-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 127998 мар  7 16:45 28-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 130675 мар  7 16:45 29-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   3250 мар  7 16:45 2a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  12265 мар  7 16:45 2b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 130795 мар  7 16:45 30-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  27251 мар  7 16:45 3a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  64811 мар  7 16:45 3b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  97966 мар  7 16:45 4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17464 мар  7 16:45 5a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  16205 мар  7 16:45 5b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  43004 мар  7 16:45 6a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42341 мар  7 16:45 6b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42618 мар  7 16:45 6c-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42491 мар  7 16:45 7a-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42297 мар  7 16:45 7b-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  41864 мар  7 16:45 8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  61773 мар  7 16:45 9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  19532 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/practice/pr7_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/practice/pr7_files/figure-html:
 total 196
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 64052 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49900 мар  5 18:39 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 16088 мар  5 18:39 unnamed-chunk-15-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27565 мар  5 18:39 unnamed-chunk-15-2.png
--rw-rw-r-- 1 nglgrdt nglgrdt 25592 мар  5 18:39 unnamed-chunk-6-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 64052 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49900 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16088 мар  7 16:45 unnamed-chunk-15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27565 мар  7 16:45 unnamed-chunk-15-2.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25592 мар  7 16:45 unnamed-chunk-6-1.png
 
 docs/practice/pr8_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/practice/pr8_files/figure-html:
 total 44
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 35113 мар  5 18:39 p8-1-dists-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 35113 мар  7 16:45 p8-1-dists-1.png
 
 docs/practice/pr9_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-html
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-html
 
 docs/practice/pr9_files/figure-html:
 total 772
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 781180 мар  5 18:39 pr9-20-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 781180 мар  7 16:45 pr9-20-1.png
 
 docs/practice/site_libs:
 total 28
-drwxrwxr-x  7 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 bootstrap
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-nav
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-search
+drwxrwxr-x  7 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 10 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-nav
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-search
 
 docs/practice/site_libs/bootstrap:
 total 1292
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 473731 мар  5 18:39 bootstrap-dark.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  5 18:39 bootstrap-icons.css
--rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  5 18:39 bootstrap-icons.woff
--rw-rw-r-- 1 nglgrdt nglgrdt 473898 мар  5 18:39 bootstrap.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  5 18:39 bootstrap.min.js
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 473731 мар  7 16:45 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 473898 мар  7 16:45 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
 
 docs/practice/site_libs/bootstrap/pics:
 total 108
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  5 18:39 lab_easy.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  5 18:39 lab_extreme.png
--rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  5 18:39 lab_hard.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  5 18:39 lab_medium.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  7 16:45 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  7 16:45 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  7 16:45 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  7 16:45 lab_medium.png
 
 docs/practice/site_libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/practice/site_libs/quarto-html:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  5 18:39 anchor.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 28427 мар  5 18:39 quarto.js
--rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  5 18:39 quarto-syntax-highlighting.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28427 мар  7 16:45 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/practice/site_libs/quarto-nav:
 total 28
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  5 18:39 headroom.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  5 18:39 quarto-nav.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  7 16:45 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  7 16:45 quarto-nav.js
 
 docs/practice/site_libs/quarto-search:
 total 160
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  5 18:39 autocomplete.umd.js
--rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  5 18:39 fuse.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 35767 мар  5 18:39 quarto-search.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  7 16:45 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  7 16:45 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35767 мар  7 16:45 quarto-search.js
 
 docs/projects:
 total 172
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 9 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 28891 мар  5 18:39 f.html
--rw-rw-r-- 1 nglgrdt nglgrdt 29149 мар  5 18:39 index.html
--rw-rw-r-- 1 nglgrdt nglgrdt 48021 мар  5 18:39 j.html
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 pics
--rw-rw-r-- 1 nglgrdt nglgrdt 28636 мар  5 18:39 references.html
--rw-rw-r-- 1 nglgrdt nglgrdt 13639 мар  5 18:39 search.json
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 site_libs
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 9 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 28891 мар  7 16:45 f.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 29149 мар  7 16:45 index.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 48021 мар  7 16:45 j.html
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 pics
+-rw-rw-r-- 1 nglgrdt nglgrdt 28636 мар  7 16:45 references.html
+-rw-rw-r-- 1 nglgrdt nglgrdt 13639 мар  7 16:45 search.json
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 site_libs
 
 docs/projects/pics:
 total 656
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt   6204 мар  5 18:39 favicon.png
--rw-rw-r-- 1 nglgrdt nglgrdt   4805 мар  5 18:39 logo.png
--rw-rw-r-- 1 nglgrdt nglgrdt 364337 мар  5 18:39 mr-shepard.png
--rw-rw-r-- 1 nglgrdt nglgrdt 282293 мар  5 18:39 proj-cover.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt   6204 мар  7 16:45 favicon.png
+-rw-rw-r-- 1 nglgrdt nglgrdt   4805 мар  7 16:45 logo.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 364337 мар  7 16:45 mr-shepard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 282293 мар  7 16:45 proj-cover.png
 
 docs/projects/site_libs:
 total 28
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 bootstrap
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-nav
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-search
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 bootstrap
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-nav
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-search
 
 docs/projects/site_libs/bootstrap:
 total 1292
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 472461 мар  5 18:39 bootstrap-dark.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  5 18:39 bootstrap-icons.css
--rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  5 18:39 bootstrap-icons.woff
--rw-rw-r-- 1 nglgrdt nglgrdt 472634 мар  5 18:39 bootstrap.min.css
--rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  5 18:39 bootstrap.min.js
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 pics
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 472461 мар  7 16:45 bootstrap-dark.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  98163 мар  7 16:45 bootstrap-icons.css
+-rw-r--r-- 1 nglgrdt nglgrdt 176200 мар  7 16:45 bootstrap-icons.woff
+-rw-rw-r-- 1 nglgrdt nglgrdt 472634 мар  7 16:45 bootstrap.min.css
+-rw-r--r-- 1 nglgrdt nglgrdt  80668 мар  7 16:45 bootstrap.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
 
 docs/projects/site_libs/bootstrap/pics:
 total 108
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  5 18:39 lab_easy.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  5 18:39 lab_extreme.png
--rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  5 18:39 lab_hard.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  5 18:39 lab_medium.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 27028 мар  7 16:45 lab_easy.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27813 мар  7 16:45 lab_extreme.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19367 мар  7 16:45 lab_hard.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23693 мар  7 16:45 lab_medium.png
 
 docs/projects/site_libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/projects/site_libs/quarto-html:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  5 18:39 anchor.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 28053 мар  5 18:39 quarto.js
--rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  5 18:39 quarto-syntax-highlighting.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  5888 мар  7 16:45 anchor.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 28053 мар  7 16:45 quarto.js
+-rw-rw-r-- 1 nglgrdt nglgrdt  3135 мар  7 16:45 quarto-syntax-highlighting.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2770 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/projects/site_libs/quarto-nav:
 total 28
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  5 18:39 headroom.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  5 18:39 quarto-nav.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 4570 мар  7 16:45 headroom.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 8617 мар  7 16:45 quarto-nav.js
 
 docs/projects/site_libs/quarto-search:
 total 160
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  5 18:39 autocomplete.umd.js
--rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  5 18:39 fuse.min.js
--rw-r--r-- 1 nglgrdt nglgrdt 35638 мар  5 18:39 quarto-search.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 7 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 92971 мар  7 16:45 autocomplete.umd.js
+-rw-r--r-- 1 nglgrdt nglgrdt 23539 мар  7 16:45 fuse.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt 35638 мар  7 16:45 quarto-search.js
 
 docs/slides:
 total 1344
-drwxrwxr-x 19 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 pics
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s10_files
--rw-rw-r--  1 nglgrdt nglgrdt  67899 мар  5 18:39 s10.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s11_files
--rw-rw-r--  1 nglgrdt nglgrdt  46195 мар  5 18:39 s11.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s12_files
--rw-rw-r--  1 nglgrdt nglgrdt  38489 мар  5 18:39 s12.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s13_files
--rw-rw-r--  1 nglgrdt nglgrdt  38366 мар  5 18:39 s13.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s14_files
--rw-rw-r--  1 nglgrdt nglgrdt  38591 мар  5 18:39 s14.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s15_files
--rw-rw-r--  1 nglgrdt nglgrdt  38423 мар  5 18:39 s15.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s1_files
--rw-rw-r--  1 nglgrdt nglgrdt 120091 мар  5 18:39 s1.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s2_files
--rw-rw-r--  1 nglgrdt nglgrdt 163319 мар  5 18:39 s2.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s3_files
--rw-rw-r--  1 nglgrdt nglgrdt 239073 мар  5 18:39 s3.html
-drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  5 18:39 s4_files
--rw-rw-r--  1 nglgrdt nglgrdt  66551 мар  5 18:39 s4.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s5_files
--rw-rw-r--  1 nglgrdt nglgrdt  70646 мар  5 18:39 s5.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s6_files
--rw-rw-r--  1 nglgrdt nglgrdt  70252 мар  5 18:39 s6.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s7_files
--rw-rw-r--  1 nglgrdt nglgrdt  85888 мар  5 18:39 s7.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:40 s8_files
--rw-rw-r--  1 nglgrdt nglgrdt  61843 мар  5 18:39 s8.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 s9_files
--rw-rw-r--  1 nglgrdt nglgrdt  74693 мар  5 18:39 s9.html
-drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  5 18:39 template_files
--rw-rw-r--  1 nglgrdt nglgrdt  38505 мар  5 18:39 template.html
+drwxrwxr-x 19 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x  9 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 pics
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s10_files
+-rw-rw-r--  1 nglgrdt nglgrdt  67899 мар  7 16:45 s10.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s11_files
+-rw-rw-r--  1 nglgrdt nglgrdt  46195 мар  7 16:45 s11.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s12_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38489 мар  7 16:45 s12.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s13_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38366 мар  7 16:45 s13.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s14_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38591 мар  7 16:45 s14.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s15_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38423 мар  7 16:45 s15.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s1_files
+-rw-rw-r--  1 nglgrdt nglgrdt 120091 мар  7 16:45 s1.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s2_files
+-rw-rw-r--  1 nglgrdt nglgrdt 163319 мар  7 16:45 s2.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s3_files
+-rw-rw-r--  1 nglgrdt nglgrdt 239073 мар  7 16:45 s3.html
+drwxrwxr-x  3 nglgrdt nglgrdt   4096 мар  7 16:45 s4_files
+-rw-rw-r--  1 nglgrdt nglgrdt  66551 мар  7 16:45 s4.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s5_files
+-rw-rw-r--  1 nglgrdt nglgrdt  70646 мар  7 16:45 s5.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s6_files
+-rw-rw-r--  1 nglgrdt nglgrdt  70252 мар  7 16:45 s6.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s7_files
+-rw-rw-r--  1 nglgrdt nglgrdt  85888 мар  7 16:45 s7.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s8_files
+-rw-rw-r--  1 nglgrdt nglgrdt  61843 мар  7 16:45 s8.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 s9_files
+-rw-rw-r--  1 nglgrdt nglgrdt  74693 мар  7 16:45 s9.html
+drwxrwxr-x  4 nglgrdt nglgrdt   4096 мар  7 16:45 template_files
+-rw-rw-r--  1 nglgrdt nglgrdt  38505 мар  7 16:45 template.html
 
 docs/slides/pics:
 total 5744
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  38737 мар  5 18:40 and.png
--rw-rw-r--  1 nglgrdt nglgrdt  74403 мар  5 18:40 anscombe.png
--rw-rw-r--  1 nglgrdt nglgrdt 543353 мар  5 18:40 antideriv.gif
--rw-rw-r--  1 nglgrdt nglgrdt  96881 мар  5 18:40 antideriv.png
--rw-rw-r--  1 nglgrdt nglgrdt  42344 мар  5 18:40 anti-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  35172 мар  5 18:40 auc1.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  22237 мар  5 18:40 auc2.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  39335 мар  5 18:40 auc3.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  64657 мар  5 18:40 auc4.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  73082 мар  5 18:40 auc5.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  79841 мар  5 18:40 bin_prob_curve.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  63152 мар  5 18:40 bin_prob.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  92244 мар  5 18:40 bin_prob_line.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  39493 мар  5 18:40 bin_y.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  32845 мар  5 18:40 complement.png
--rw-rw-r--  1 nglgrdt nglgrdt 331356 мар  5 18:40 Correlation_examples.png
--rw-rw-r--  1 nglgrdt nglgrdt 344139 мар  5 18:40 datasaurus.png
--rw-rw-r--  1 nglgrdt nglgrdt  50113 мар  5 18:40 decart-prod.png
--rw-rw-r--  1 nglgrdt nglgrdt  29383 мар  5 18:40 deviance.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  34012 мар  5 18:40 difference.png
--rw-rw-r--  1 nglgrdt nglgrdt 105040 мар  5 18:40 duplicate-keys.png
--rw-rw-r--  1 nglgrdt nglgrdt  38980 мар  5 18:40 equivalence.png
--rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  5 18:40 favicon.png
--rw-rw-r--  1 nglgrdt nglgrdt  51111 мар  5 18:40 full-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  36104 мар  5 18:40 implication.png
--rw-rw-r--  1 nglgrdt nglgrdt  38427 мар  5 18:40 inner-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  85990 мар  5 18:40 interaction_main.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  34287 мар  5 18:40 intersection.png
--rw-rw-r--  1 nglgrdt nglgrdt  76558 мар  5 18:40 joins-venn.png
--rw-rw-r--  1 nglgrdt nglgrdt  59113 мар  5 18:40 kubik.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  44309 мар  5 18:40 left-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  79432 мар  5 18:40 lekala.png
--rw-rw-r--  1 nglgrdt nglgrdt 725187 мар  5 18:40 lekalo_curve.png
--rw-rw-r--  1 nglgrdt nglgrdt 123999 мар  5 18:40 likertscale.png
--rw-rw-r--  1 nglgrdt nglgrdt  56900 мар  5 18:40 line.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  52815 мар  5 18:40 list-structure.png
--rw-rw-r--  1 nglgrdt nglgrdt  94074 мар  5 18:40 list-vs-df.png
--rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  5 18:40 logo.png
--rw-rw-r--  1 nglgrdt nglgrdt  27076 мар  5 18:40 matrix-prod.png
--rw-rw-r--  1 nglgrdt nglgrdt  25101 мар  5 18:40 negation.png
--rw-rw-r--  1 nglgrdt nglgrdt 264941 мар  5 18:40 nonlin_plot.jpeg
--rw-rw-r--  1 nglgrdt nglgrdt  37329 мар  5 18:40 or.png
--rw-rw-r--  1 nglgrdt nglgrdt 140378 мар  5 18:40 painscale.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  36407 мар  5 18:40 replication.png
--rw-rw-r--  1 nglgrdt nglgrdt  45798 мар  5 18:40 right-join.png
--rw-rw-r--  1 nglgrdt nglgrdt 211766 мар  5 18:40 rstudio-interface.png
--rw-rw-r--  1 nglgrdt nglgrdt  41642 мар  5 18:40 semi-join.png
--rw-rw-r--  1 nglgrdt nglgrdt  36335 мар  5 18:40 set-a1.png
--rw-rw-r--  1 nglgrdt nglgrdt  29765 мар  5 18:40 set-a.png
--rw-rw-r--  1 nglgrdt nglgrdt  37643 мар  5 18:40 set-func.png
--rw-rw-r--  1 nglgrdt nglgrdt 296171 мар  5 18:40 splines_connected.jpg
--rw-rw-r--  1 nglgrdt nglgrdt 293049 мар  5 18:40 splines_separate.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  36804 мар  5 18:40 symm-difference.png
--rw-rw-r--  1 nglgrdt nglgrdt  53638 мар  5 18:40 tidy-2.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  99582 мар  5 18:40 tidy.jpg
--rw-rw-r--  1 nglgrdt nglgrdt  32449 мар  5 18:40 union.png
--rw-rw-r--  1 nglgrdt nglgrdt  62016 мар  5 18:40 vec-to-mat.png
--rw-rw-r--  1 nglgrdt nglgrdt  35775 мар  5 18:40 wide-long.png
--rw-rw-r--  1 nglgrdt nglgrdt  42537 мар  5 18:40 xor.png
--rw-rw-r--  1 nglgrdt nglgrdt  22992 мар  5 18:40 xy.png
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  38737 мар  7 16:45 and.png
+-rw-rw-r--  1 nglgrdt nglgrdt  74403 мар  7 16:45 anscombe.png
+-rw-rw-r--  1 nglgrdt nglgrdt 543353 мар  7 16:45 antideriv.gif
+-rw-rw-r--  1 nglgrdt nglgrdt  96881 мар  7 16:45 antideriv.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42344 мар  7 16:45 anti-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35172 мар  7 16:45 auc1.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  22237 мар  7 16:45 auc2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  39335 мар  7 16:45 auc3.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  64657 мар  7 16:45 auc4.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  73082 мар  7 16:45 auc5.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  79841 мар  7 16:45 bin_prob_curve.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  63152 мар  7 16:45 bin_prob.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  92244 мар  7 16:45 bin_prob_line.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  39493 мар  7 16:45 bin_y.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32845 мар  7 16:45 complement.png
+-rw-rw-r--  1 nglgrdt nglgrdt 331356 мар  7 16:45 Correlation_examples.png
+-rw-rw-r--  1 nglgrdt nglgrdt 344139 мар  7 16:45 datasaurus.png
+-rw-rw-r--  1 nglgrdt nglgrdt  50113 мар  7 16:45 decart-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29383 мар  7 16:45 deviance.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  34012 мар  7 16:45 difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt 105040 мар  7 16:45 duplicate-keys.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38980 мар  7 16:45 equivalence.png
+-rw-rw-r--  1 nglgrdt nglgrdt   6204 мар  7 16:45 favicon.png
+-rw-rw-r--  1 nglgrdt nglgrdt  51111 мар  7 16:45 full-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36104 мар  7 16:45 implication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  38427 мар  7 16:45 inner-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  85990 мар  7 16:45 interaction_main.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  34287 мар  7 16:45 intersection.png
+-rw-rw-r--  1 nglgrdt nglgrdt  76558 мар  7 16:45 joins-venn.png
+-rw-rw-r--  1 nglgrdt nglgrdt  59113 мар  7 16:45 kubik.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  44309 мар  7 16:45 left-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  79432 мар  7 16:45 lekala.png
+-rw-rw-r--  1 nglgrdt nglgrdt 725187 мар  7 16:45 lekalo_curve.png
+-rw-rw-r--  1 nglgrdt nglgrdt 123999 мар  7 16:45 likertscale.png
+-rw-rw-r--  1 nglgrdt nglgrdt  56900 мар  7 16:45 line.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  52815 мар  7 16:45 list-structure.png
+-rw-rw-r--  1 nglgrdt nglgrdt  94074 мар  7 16:45 list-vs-df.png
+-rw-rw-r--  1 nglgrdt nglgrdt   4805 мар  7 16:45 logo.png
+-rw-rw-r--  1 nglgrdt nglgrdt  27076 мар  7 16:45 matrix-prod.png
+-rw-rw-r--  1 nglgrdt nglgrdt  25101 мар  7 16:45 negation.png
+-rw-rw-r--  1 nglgrdt nglgrdt 264941 мар  7 16:45 nonlin_plot.jpeg
+-rw-rw-r--  1 nglgrdt nglgrdt  37329 мар  7 16:45 or.png
+-rw-rw-r--  1 nglgrdt nglgrdt 140378 мар  7 16:45 painscale.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  36407 мар  7 16:45 replication.png
+-rw-rw-r--  1 nglgrdt nglgrdt  45798 мар  7 16:45 right-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt 211766 мар  7 16:45 rstudio-interface.png
+-rw-rw-r--  1 nglgrdt nglgrdt  41642 мар  7 16:45 semi-join.png
+-rw-rw-r--  1 nglgrdt nglgrdt  36335 мар  7 16:45 set-a1.png
+-rw-rw-r--  1 nglgrdt nglgrdt  29765 мар  7 16:45 set-a.png
+-rw-rw-r--  1 nglgrdt nglgrdt  37643 мар  7 16:45 set-func.png
+-rw-rw-r--  1 nglgrdt nglgrdt 296171 мар  7 16:45 splines_connected.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt 293049 мар  7 16:45 splines_separate.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  36804 мар  7 16:45 symm-difference.png
+-rw-rw-r--  1 nglgrdt nglgrdt  53638 мар  7 16:45 tidy-2.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  99582 мар  7 16:45 tidy.jpg
+-rw-rw-r--  1 nglgrdt nglgrdt  32449 мар  7 16:45 union.png
+-rw-rw-r--  1 nglgrdt nglgrdt  62016 мар  7 16:45 vec-to-mat.png
+-rw-rw-r--  1 nglgrdt nglgrdt  35775 мар  7 16:45 wide-long.png
+-rw-rw-r--  1 nglgrdt nglgrdt  42537 мар  7 16:45 xor.png
+-rw-rw-r--  1 nglgrdt nglgrdt  22992 мар  7 16:45 xy.png
 
 docs/slides/s10_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s10_files/figure-revealjs:
 total 132
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 21187 мар  5 18:39 plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36731 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28640 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36776 мар  5 18:39 unnamed-chunk-3-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21187 мар  7 16:45 plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36731 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28640 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36776 мар  7 16:45 unnamed-chunk-3-1.png
 
 docs/slides/s10_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s10_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s10_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s10_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s10_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s10_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  7 16:45 quarto.css
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s10_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s10_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s10_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s10_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s10_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s10_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s10_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s10_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt    87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 10730 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt    87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 10730 мар  7 16:45 support.js
 
 docs/slides/s10_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s10_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s10_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s11_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s11_files/figure-revealjs:
 total 660
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  21124 мар  5 18:40 plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  30862 мар  5 18:40 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  68312 мар  5 18:40 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  68312 мар  5 18:40 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 277258 мар  5 18:40 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  39914 мар  5 18:40 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  38978 мар  5 18:40 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  38072 мар  5 18:40 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  69357 мар  5 18:40 unnamed-chunk-8-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  21124 мар  7 16:45 plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  30862 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  68312 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  68312 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 277258 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  39914 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  38978 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  38072 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  69357 мар  7 16:45 unnamed-chunk-8-1.png
 
 docs/slides/s11_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s11_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s11_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s11_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s11_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s11_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  7 16:45 quarto.css
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s11_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s11_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s11_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s11_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s11_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s11_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s11_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s11_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt    87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 10730 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt    87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 10730 мар  7 16:45 support.js
 
 docs/slides/s11_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s11_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s11_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s12_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s12_files/figure-revealjs:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 21170 мар  5 18:40 plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21170 мар  7 16:45 plot-1.png
 
 docs/slides/s12_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s12_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s12_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s12_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s12_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s12_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s12_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s12_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s12_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s12_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s12_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s12_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s12_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s12_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s12_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s12_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s12_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s13_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s13_files/figure-revealjs:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 20751 мар  5 18:39 plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20751 мар  7 16:45 plot-1.png
 
 docs/slides/s13_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s13_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s13_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s13_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s13_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s13_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s13_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s13_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s13_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s13_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s13_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s13_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s13_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s13_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s13_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s13_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s13_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s14_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s14_files/figure-revealjs:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 20720 мар  5 18:39 plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20720 мар  7 16:45 plot-1.png
 
 docs/slides/s14_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s14_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s14_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s14_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s14_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s14_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s14_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s14_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s14_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s14_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s14_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s14_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s14_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s14_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s14_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s14_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s14_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s15_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s15_files/figure-revealjs:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 21170 мар  5 18:40 plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21170 мар  7 16:45 plot-1.png
 
 docs/slides/s15_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s15_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s15_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s15_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s15_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s15_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s15_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s15_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s15_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s15_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s15_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s15_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s15_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s15_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s15_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s15_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s15_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s1_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s1_files/figure-revealjs:
 total 100
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 19675 мар  5 18:39 vec-classic-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 18862 мар  5 18:39 vec-free-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 16829 мар  5 18:39 vec-remove-vector-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 30539 мар  5 18:39 vec-same-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 19675 мар  7 16:45 vec-classic-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 18862 мар  7 16:45 vec-free-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 16829 мар  7 16:45 vec-remove-vector-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30539 мар  7 16:45 vec-same-1.png
 
 docs/slides/s1_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s1_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s1_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s1_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s1_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s1_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s1_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s1_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s1_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s1_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s1_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s1_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s1_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s1_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s1_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s1_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s1_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s2_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s2_files/figure-revealjs:
 total 844
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 106257 мар  5 18:39 unnamed-chunk-103-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  20462 мар  5 18:39 unnamed-chunk-105-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  42551 мар  5 18:39 unnamed-chunk-106-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  55542 мар  5 18:39 unnamed-chunk-107-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  93093 мар  5 18:39 unnamed-chunk-108-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  18340 мар  5 18:39 unnamed-chunk-109-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 101907 мар  5 18:39 unnamed-chunk-110-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  23121 мар  5 18:39 unnamed-chunk-111-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  20296 мар  5 18:39 unnamed-chunk-112-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  60891 мар  5 18:39 unnamed-chunk-113-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  18699 мар  5 18:39 unnamed-chunk-114-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  36510 мар  5 18:39 unnamed-chunk-115-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  97308 мар  5 18:39 unnamed-chunk-116-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  82980 мар  5 18:39 unnamed-chunk-117-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  59582 мар  5 18:39 unnamed-chunk-99-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 106257 мар  7 16:45 unnamed-chunk-103-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  20462 мар  7 16:45 unnamed-chunk-105-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  42551 мар  7 16:45 unnamed-chunk-106-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  55542 мар  7 16:45 unnamed-chunk-107-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  93093 мар  7 16:45 unnamed-chunk-108-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  18340 мар  7 16:45 unnamed-chunk-109-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 101907 мар  7 16:45 unnamed-chunk-110-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  23121 мар  7 16:45 unnamed-chunk-111-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  20296 мар  7 16:45 unnamed-chunk-112-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  60891 мар  7 16:45 unnamed-chunk-113-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  18699 мар  7 16:45 unnamed-chunk-114-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  36510 мар  7 16:45 unnamed-chunk-115-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  97308 мар  7 16:45 unnamed-chunk-116-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  82980 мар  7 16:45 unnamed-chunk-117-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  59582 мар  7 16:45 unnamed-chunk-99-1.png
 
 docs/slides/s2_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s2_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s2_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s2_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s2_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s2_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s2_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s2_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s2_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s2_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s2_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s2_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s2_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s2_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s2_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s2_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s2_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s3_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s3_files/figure-revealjs:
 total 476
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 25638 мар  5 18:40 deriv1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28121 мар  5 18:40 deriv2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 30985 мар  5 18:40 deriv3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 63367 мар  5 18:40 deriv4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 62245 мар  5 18:40 deriv-graph-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 19562 мар  5 18:40 discrete-func-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 85231 мар  5 18:40 func-graphs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 40038 мар  5 18:40 integral-plot005-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 38706 мар  5 18:40 integral-plot01-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36943 мар  5 18:40 integral-plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 26068 мар  5 18:40 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 25638 мар  7 16:45 deriv1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28121 мар  7 16:45 deriv2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 30985 мар  7 16:45 deriv3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 63367 мар  7 16:45 deriv4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 62245 мар  7 16:45 deriv-graph-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 19562 мар  7 16:45 discrete-func-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 85231 мар  7 16:45 func-graphs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 40038 мар  7 16:45 integral-plot005-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 38706 мар  7 16:45 integral-plot01-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36943 мар  7 16:45 integral-plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 26068 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/slides/s3_files/libs:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 crosstalk-1.2.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 htmlwidgets-1.6.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 jquery-3.5.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-binding-4.10.4
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-htmlwidgets-css-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 plotly-main-2.11.1
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 typedarray-0.1
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 crosstalk-1.2.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 htmlwidgets-1.6.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 jquery-3.5.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-binding-4.10.4
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-htmlwidgets-css-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 plotly-main-2.11.1
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 typedarray-0.1
 
 docs/slides/s3_files/libs/clipboard:
 total 20
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s3_files/libs/crosstalk-1.2.1:
 total 20
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 css
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 js
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 scss
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 scss
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/css:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  5 18:40 crosstalk.min.css
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1306 мар  7 16:45 crosstalk.min.css
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/js:
 total 184
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  5 18:40 crosstalk.js
--rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  5 18:40 crosstalk.js.map
--rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  5 18:40 crosstalk.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  5 18:40 crosstalk.min.js.map
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 49030 мар  7 16:45 crosstalk.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 54853 мар  7 16:45 crosstalk.js.map
+-rw-rw-r-- 1 nglgrdt nglgrdt 18925 мар  7 16:45 crosstalk.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt 50338 мар  7 16:45 crosstalk.min.js.map
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/scss:
 total 12
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  5 18:40 crosstalk.scss
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 1816 мар  7 16:45 crosstalk.scss
 
 docs/slides/s3_files/libs/htmlwidgets-1.6.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  5 18:40 htmlwidgets.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33190 мар  7 16:45 htmlwidgets.js
 
 docs/slides/s3_files/libs/jquery-3.5.1:
 total 532
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  5 18:40 jquery-AUTHORS.txt
--rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  5 18:40 jquery.js
--rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  5 18:40 jquery.min.js
--rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  5 18:40 jquery.min.map
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  13369 мар  7 16:45 jquery-AUTHORS.txt
+-rw-rw-r--  1 nglgrdt nglgrdt 287630 мар  7 16:45 jquery.js
+-rw-rw-r--  1 nglgrdt nglgrdt  89476 мар  7 16:45 jquery.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt 137986 мар  7 16:45 jquery.min.map
 
 docs/slides/s3_files/libs/plotly-binding-4.10.4:
 total 44
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  5 18:40 plotly.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 33758 мар  7 16:45 plotly.js
 
 docs/slides/s3_files/libs/plotly-htmlwidgets-css-2.11.1:
 total 12
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt  173 мар  5 18:40 plotly-htmlwidgets.css
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt  173 мар  7 16:45 plotly-htmlwidgets.css
 
 docs/slides/s3_files/libs/plotly-main-2.11.1:
 total 3588
-drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt    4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  5 18:40 plotly-latest.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt    4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt    4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 3665833 мар  7 16:45 plotly-latest.min.js
 
 docs/slides/s3_files/libs/quarto-html:
 total 80
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r--  1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r--  1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r--  1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r--  1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r--  1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r--  1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r--  1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r--  1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r--  1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r--  1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r--  1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s3_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s3_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s3_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s3_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s3_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s3_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s3_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s3_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s3_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s3_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s3_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s3_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s3_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s3_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s3_files/libs/typedarray-0.1:
 total 32
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  5 18:40 typedarray.min.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 22444 мар  7 16:45 typedarray.min.js
 
 docs/slides/s4_files:
 total 12
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s4_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s4_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s4_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s4_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s4_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s4_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s4_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s4_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s4_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s4_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s4_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s4_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s4_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s4_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s4_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s4_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s4_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s5_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s5_files/figure-revealjs:
 total 2124
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  19274 мар  5 18:39 cfd-dice-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  68591 мар  5 18:39 cluster-clusters-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  71357 мар  5 18:39 cluster-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  82247 мар  5 18:39 cluster-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  33856 мар  5 18:39 geomprob-dots-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 109172 мар  5 18:39 geomprob-incircle-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  28410 мар  5 18:39 geomprob-square-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 102425 мар  5 18:39 norm-dist-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  59602 мар  5 18:39 pdf-inetrvals-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  17895 мар  5 18:39 pdf-segment-nolabs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  21110 мар  5 18:39 pmf-dice-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  21110 мар  5 18:39 pmf-dice-repeat-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  43905 мар  5 18:39 pmf-vs-pdf-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 152780 мар  5 18:39 simple-random-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 143430 мар  5 18:39 simple-random-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 360802 мар  5 18:39 strat-pop-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 350100 мар  5 18:39 strat-pop-strata-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 338776 мар  5 18:39 strat-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  96547 мар  5 18:39 unnamed-chunk-1-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  19274 мар  7 16:45 cfd-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  68591 мар  7 16:45 cluster-clusters-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  71357 мар  7 16:45 cluster-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  82247 мар  7 16:45 cluster-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  33856 мар  7 16:45 geomprob-dots-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 109172 мар  7 16:45 geomprob-incircle-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  28410 мар  7 16:45 geomprob-square-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 102425 мар  7 16:45 norm-dist-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  59602 мар  7 16:45 pdf-inetrvals-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  17895 мар  7 16:45 pdf-segment-nolabs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  21110 мар  7 16:45 pmf-dice-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  21110 мар  7 16:45 pmf-dice-repeat-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  43905 мар  7 16:45 pmf-vs-pdf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 152780 мар  7 16:45 simple-random-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 143430 мар  7 16:45 simple-random-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 360802 мар  7 16:45 strat-pop-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 350100 мар  7 16:45 strat-pop-strata-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 338776 мар  7 16:45 strat-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  96547 мар  7 16:45 unnamed-chunk-1-1.png
 
 docs/slides/s5_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s5_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s5_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s5_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s5_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s5_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s5_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s5_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s5_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s5_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s5_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s5_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s5_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s5_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s5_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s5_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s5_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s6_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s6_files/figure-revealjs:
 total 660
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt  57524 мар  5 18:40 alpha-raise-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  31792 мар  5 18:40 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  43087 мар  5 18:40 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  93953 мар  5 18:40 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 187643 мар  5 18:40 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  63997 мар  5 18:40 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  31792 мар  5 18:40 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  48082 мар  5 18:40 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  22074 мар  5 18:40 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt  72821 мар  5 18:40 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt  57524 мар  7 16:45 alpha-raise-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31792 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  43087 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  93953 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 187643 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  63997 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  31792 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  48082 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  22074 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt  72821 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/slides/s6_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s6_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s6_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s6_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s6_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s6_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s6_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s6_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s6_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s6_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s6_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s6_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s6_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s6_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s6_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s6_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s6_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s7_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s7_files/figure-revealjs:
 total 2120
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 23962 мар  5 18:39 68_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23592 мар  5 18:39 99_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 15977 мар  5 18:39 boxplot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 20353 мар  5 18:39 boxplot_annotated-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50618 мар  5 18:39 central_tendency_asymm_left-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 58695 мар  5 18:39 central_tendency_asymm_right-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 57437 мар  5 18:39 central_tendency_bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 55471 мар  5 18:39 central_tendency_symm-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29254 мар  5 18:39 distributions_with_the_same_means_mean-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29071 мар  5 18:39 distributions_with_the_same_means_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23923 мар  5 18:39 fifth_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24772 мар  5 18:39 iqr_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 90350 мар  5 18:39 mean_feature_1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 70191 мар  5 18:39 mean_feature_2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 60626 мар  5 18:39 median-bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 58245 мар  5 18:39 median-left-skew-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 75903 мар  5 18:39 median-norm-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 60080 мар  5 18:39 median-right-skew-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 35447 мар  5 18:39 mode-bimodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 89900 мар  5 18:39 mode-bimodal-struct-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23688 мар  5 18:39 mode-binom-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 77914 мар  5 18:39 mode-continuous-freqs-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 66654 мар  5 18:39 mode-continuous-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 25623 мар  5 18:39 mode-norm-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 35628 мар  5 18:39 mode-norm-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 33049 мар  5 18:39 mode-norm-sample-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 44014 мар  5 18:39 mode-pmf-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 21645 мар  5 18:39 mode-poiss-mode-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 35939 мар  5 18:39 mode-polymodal-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 27358 мар  5 18:39 quartiles_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29964 мар  5 18:39 range_problem-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 90350 мар  5 18:39 sd_feature_1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 70191 мар  5 18:39 sd_feature_2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 22872 мар  5 18:39 taia_score_vis-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 31066 мар  5 18:39 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49240 мар  5 18:39 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 51980 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 49741 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34227 мар  5 18:39 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29748 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34759 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 33907 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 39346 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41082 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 29411 мар  5 18:39 unnamed-chunk-9-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 70258 мар  5 18:39 zero_deviation_sum-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 23962 мар  7 16:45 68_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23592 мар  7 16:45 99_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 15977 мар  7 16:45 boxplot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 20353 мар  7 16:45 boxplot_annotated-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50618 мар  7 16:45 central_tendency_asymm_left-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58695 мар  7 16:45 central_tendency_asymm_right-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57437 мар  7 16:45 central_tendency_bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 55471 мар  7 16:45 central_tendency_symm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29254 мар  7 16:45 distributions_with_the_same_means_mean-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29071 мар  7 16:45 distributions_with_the_same_means_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23923 мар  7 16:45 fifth_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24772 мар  7 16:45 iqr_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 90350 мар  7 16:45 mean_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70191 мар  7 16:45 mean_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60626 мар  7 16:45 median-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58245 мар  7 16:45 median-left-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 75903 мар  7 16:45 median-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 60080 мар  7 16:45 median-right-skew-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35447 мар  7 16:45 mode-bimodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 89900 мар  7 16:45 mode-bimodal-struct-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23688 мар  7 16:45 mode-binom-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 77914 мар  7 16:45 mode-continuous-freqs-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 66654 мар  7 16:45 mode-continuous-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 25623 мар  7 16:45 mode-norm-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35628 мар  7 16:45 mode-norm-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33049 мар  7 16:45 mode-norm-sample-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 44014 мар  7 16:45 mode-pmf-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 21645 мар  7 16:45 mode-poiss-mode-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 35939 мар  7 16:45 mode-polymodal-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 27358 мар  7 16:45 quartiles_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29964 мар  7 16:45 range_problem-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 90350 мар  7 16:45 sd_feature_1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70191 мар  7 16:45 sd_feature_2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 22872 мар  7 16:45 taia_score_vis-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 31066 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49240 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 51980 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 49741 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34227 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29748 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34759 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33907 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 39346 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41082 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 29411 мар  7 16:45 unnamed-chunk-9-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 70258 мар  7 16:45 zero_deviation_sum-1.png
 
 docs/slides/s7_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s7_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s7_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s7_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s7_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s7_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s7_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s7_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s7_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s7_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s7_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s7_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s7_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s7_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/s7_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s7_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s7_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s8_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s8_files/figure-revealjs:
 total 1248
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 20779 мар  5 18:40 plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 33871 мар  5 18:40 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48385 мар  5 18:40 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 63047 мар  5 18:40 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 68955 мар  5 18:40 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 90179 мар  5 18:40 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50169 мар  5 18:40 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 83032 мар  5 18:40 unnamed-chunk-15-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 72944 мар  5 18:40 unnamed-chunk-16-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48401 мар  5 18:40 unnamed-chunk-17-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 89946 мар  5 18:40 unnamed-chunk-18-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48309 мар  5 18:40 unnamed-chunk-19-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 89727 мар  5 18:40 unnamed-chunk-20-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 76433 мар  5 18:40 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 64335 мар  5 18:40 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 56682 мар  5 18:40 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 56532 мар  5 18:40 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 56728 мар  5 18:40 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 59471 мар  5 18:40 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34365 мар  5 18:40 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 20585 мар  5 18:40 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20779 мар  7 16:45 plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 33871 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48385 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 63047 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 68955 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 90179 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50169 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 83032 мар  7 16:45 unnamed-chunk-15-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 72944 мар  7 16:45 unnamed-chunk-16-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48401 мар  7 16:45 unnamed-chunk-17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 89946 мар  7 16:45 unnamed-chunk-18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48309 мар  7 16:45 unnamed-chunk-19-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 89727 мар  7 16:45 unnamed-chunk-20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 76433 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 64335 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 56682 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 56532 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 56728 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 59471 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34365 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 20585 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/slides/s8_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s8_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:40 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s8_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:40 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:40 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:40 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:40 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:40 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:40 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:40 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s8_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:40 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s8_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:40 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:40 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:40 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:40 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:40 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:40 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:40 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s8_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:40 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  5 18:40 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  7 16:45 quarto.css
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:40 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:40 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:40 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:40 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:40 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:40 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:40 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:40 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:40 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:40 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:40 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:40 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:40 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:40 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:40 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:40 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:40 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:40 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:40 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:40 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s8_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s8_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:40 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:40 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:40 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:40 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s8_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:40 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:40 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s8_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:40 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:40 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:40 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:40 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:40 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:40 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s8_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:40 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:40 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:40 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s8_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:40 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s8_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:40 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:40 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:40 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s8_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  1856 мар  5 18:40 footer.css
--rw-r--r--  1 nglgrdt nglgrdt    87 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 10730 мар  5 18:40 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt    87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 10730 мар  7 16:45 support.js
 
 docs/slides/s8_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:40 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:40 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:40 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:40 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:40 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s8_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:40 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:40 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s8_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:40 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:40 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:40 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:40 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:40 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/s9_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/s9_files/figure-revealjs:
 total 924
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 20843 мар  5 18:39 plot-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48120 мар  5 18:39 unnamed-chunk-10-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 58472 мар  5 18:39 unnamed-chunk-10-2.png
--rw-rw-r-- 1 nglgrdt nglgrdt 57237 мар  5 18:39 unnamed-chunk-10-3.png
--rw-rw-r-- 1 nglgrdt nglgrdt 48607 мар  5 18:39 unnamed-chunk-11-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 24380 мар  5 18:39 unnamed-chunk-1-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41258 мар  5 18:39 unnamed-chunk-12-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 13402 мар  5 18:39 unnamed-chunk-13-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 15341 мар  5 18:39 unnamed-chunk-14-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 28517 мар  5 18:39 unnamed-chunk-16-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36569 мар  5 18:39 unnamed-chunk-17-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 23976 мар  5 18:39 unnamed-chunk-18-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 36502 мар  5 18:39 unnamed-chunk-19-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 34176 мар  5 18:39 unnamed-chunk-20-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 37117 мар  5 18:39 unnamed-chunk-21-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 44067 мар  5 18:39 unnamed-chunk-2-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 47371 мар  5 18:39 unnamed-chunk-3-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 47979 мар  5 18:39 unnamed-chunk-4-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 42933 мар  5 18:39 unnamed-chunk-5-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 41821 мар  5 18:39 unnamed-chunk-6-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 46735 мар  5 18:39 unnamed-chunk-7-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 52716 мар  5 18:39 unnamed-chunk-8-1.png
--rw-rw-r-- 1 nglgrdt nglgrdt 50983 мар  5 18:39 unnamed-chunk-9-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 20843 мар  7 16:45 plot-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48120 мар  7 16:45 unnamed-chunk-10-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 58472 мар  7 16:45 unnamed-chunk-10-2.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 57237 мар  7 16:45 unnamed-chunk-10-3.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 48607 мар  7 16:45 unnamed-chunk-11-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 24380 мар  7 16:45 unnamed-chunk-1-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41258 мар  7 16:45 unnamed-chunk-12-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 13402 мар  7 16:45 unnamed-chunk-13-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 15341 мар  7 16:45 unnamed-chunk-14-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 28517 мар  7 16:45 unnamed-chunk-16-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36569 мар  7 16:45 unnamed-chunk-17-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 23976 мар  7 16:45 unnamed-chunk-18-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 36502 мар  7 16:45 unnamed-chunk-19-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 34176 мар  7 16:45 unnamed-chunk-20-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 37117 мар  7 16:45 unnamed-chunk-21-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 44067 мар  7 16:45 unnamed-chunk-2-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 47371 мар  7 16:45 unnamed-chunk-3-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 47979 мар  7 16:45 unnamed-chunk-4-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 42933 мар  7 16:45 unnamed-chunk-5-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 41821 мар  7 16:45 unnamed-chunk-6-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 46735 мар  7 16:45 unnamed-chunk-7-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 52716 мар  7 16:45 unnamed-chunk-8-1.png
+-rw-rw-r-- 1 nglgrdt nglgrdt 50983 мар  7 16:45 unnamed-chunk-9-1.png
 
 docs/slides/s9_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/s9_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/s9_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/s9_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/s9_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/s9_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 30194 мар  7 16:45 quarto.css
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/s9_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/s9_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/s9_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/s9_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/s9_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/s9_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/s9_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/s9_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt    87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 10730 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt    87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 10730 мар  7 16:45 support.js
 
 docs/slides/s9_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/s9_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/s9_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 
 docs/slides/template_files:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  5 18:40 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 figure-revealjs
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 libs
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 figure-revealjs
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 libs
 
 docs/slides/template_files/figure-revealjs:
 total 32
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-rw-r-- 1 nglgrdt nglgrdt 21163 мар  5 18:39 plot-1.png
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-rw-r-- 1 nglgrdt nglgrdt 21163 мар  7 16:45 plot-1.png
 
 docs/slides/template_files/libs:
 total 20
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 clipboard
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-html
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 revealjs
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 clipboard
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-html
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 revealjs
 
 docs/slides/template_files/libs/clipboard:
 total 20
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  5 18:39 clipboard.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt 9160 мар  7 16:45 clipboard.min.js
 
 docs/slides/template_files/libs/quarto-html:
 total 80
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  5 18:39 light-border.css
--rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  5 18:39 popper.min.js
--rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  5 18:39 quarto-html.min.css
--rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  5 18:39 quarto-syntax-highlighting-dark.css
--rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  5 18:39 tabby.min.js
--rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  5 18:39 tippy.css
--rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  5 18:39 tippy.umd.min.js
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 5 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt  2810 мар  7 16:45 light-border.css
+-rw-r--r-- 1 nglgrdt nglgrdt 20084 мар  7 16:45 popper.min.js
+-rw-rw-r-- 1 nglgrdt nglgrdt     1 мар  7 16:45 quarto-html.min.css
+-rw-rw-r-- 1 nglgrdt nglgrdt  2579 мар  7 16:45 quarto-syntax-highlighting-dark.css
+-rw-r--r-- 1 nglgrdt nglgrdt 11289 мар  7 16:45 tabby.min.js
+-rw-r--r-- 1 nglgrdt nglgrdt  1409 мар  7 16:45 tippy.css
+-rw-r--r-- 1 nglgrdt nglgrdt 24033 мар  7 16:45 tippy.umd.min.js
 
 docs/slides/template_files/libs/revealjs:
 total 16
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  5 18:39 dist
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 plugin
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  5 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  3 nglgrdt nglgrdt 4096 мар  7 16:45 dist
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 plugin
 
 docs/slides/template_files/libs/revealjs/dist:
 total 1240
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt    871 мар  5 18:39 reset.css
--rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  5 18:39 reveal.css
--rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  5 18:39 reveal.esm.js
--rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  5 18:39 reveal.esm.js.map
--rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  5 18:39 reveal.js
--rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  5 18:39 reveal.js.map
-drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  5 18:39 theme
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt    871 мар  7 16:45 reset.css
+-rw-r--r-- 1 nglgrdt nglgrdt  47065 мар  7 16:45 reveal.css
+-rw-r--r-- 1 nglgrdt nglgrdt  88904 мар  7 16:45 reveal.esm.js
+-rw-r--r-- 1 nglgrdt nglgrdt 351303 мар  7 16:45 reveal.esm.js.map
+-rw-r--r-- 1 nglgrdt nglgrdt 145280 мар  7 16:45 reveal.js
+-rw-r--r-- 1 nglgrdt nglgrdt 614239 мар  7 16:45 reveal.js.map
+drwxrwxr-x 3 nglgrdt nglgrdt   4096 мар  7 16:45 theme
 
 docs/slides/template_files/libs/revealjs/dist/theme:
 total 44
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  5 18:39 ..
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 fonts
--rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  5 18:39 quarto.css
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 fonts
+-rw-rw-r-- 1 nglgrdt nglgrdt 29215 мар  7 16:45 quarto.css
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts:
 total 16
-drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 league-gothic
-drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  5 18:39 source-sans-pro
+drwxrwxr-x 4 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 3 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 league-gothic
+drwxrwxr-x 2 nglgrdt nglgrdt 4096 мар  7 16:45 source-sans-pro
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 140
-drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   317 мар  5 18:39 league-gothic.css
--rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  5 18:39 league-gothic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  5 18:39 league-gothic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  5 18:39 league-gothic.woff
--rw-r--r-- 1 nglgrdt nglgrdt    92 мар  5 18:39 LICENSE
+drwxrwxr-x 2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   317 мар  7 16:45 league-gothic.css
+-rwxr-xr-x 1 nglgrdt nglgrdt 25696 мар  7 16:45 league-gothic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 64256 мар  7 16:45 league-gothic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 30764 мар  7 16:45 league-gothic.woff
+-rw-r--r-- 1 nglgrdt nglgrdt    92 мар  7 16:45 LICENSE
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 1812
-drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  5 18:39 LICENSE
--rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  5 18:39 source-sans-pro.css
--rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  5 18:39 source-sans-pro-italic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  5 18:39 source-sans-pro-italic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  5 18:39 source-sans-pro-italic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  5 18:39 source-sans-pro-regular.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  5 18:39 source-sans-pro-regular.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  5 18:39 source-sans-pro-regular.woff
--rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  5 18:39 source-sans-pro-semibold.eot
--rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  5 18:39 source-sans-pro-semibolditalic.eot
--rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  5 18:39 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  5 18:39 source-sans-pro-semibolditalic.woff
--rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  5 18:39 source-sans-pro-semibold.ttf
--rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  5 18:39 source-sans-pro-semibold.woff
+drwxrwxr-x 2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 4 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r-- 1 nglgrdt nglgrdt   4632 мар  7 16:45 LICENSE
+-rw-r--r-- 1 nglgrdt nglgrdt   1457 мар  7 16:45 source-sans-pro.css
+-rwxr-xr-x 1 nglgrdt nglgrdt  75720 мар  7 16:45 source-sans-pro-italic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 238084 мар  7 16:45 source-sans-pro-italic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98556 мар  7 16:45 source-sans-pro-italic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  88070 мар  7 16:45 source-sans-pro-regular.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 288008 мар  7 16:45 source-sans-pro-regular.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 114324 мар  7 16:45 source-sans-pro-regular.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt  89897 мар  7 16:45 source-sans-pro-semibold.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt  75706 мар  7 16:45 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x 1 nglgrdt nglgrdt 240944 мар  7 16:45 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt  98816 мар  7 16:45 source-sans-pro-semibolditalic.woff
+-rwxr-xr-x 1 nglgrdt nglgrdt 284640 мар  7 16:45 source-sans-pro-semibold.ttf
+-rwxr-xr-x 1 nglgrdt nglgrdt 115648 мар  7 16:45 source-sans-pro-semibold.woff
 
 docs/slides/template_files/libs/revealjs/plugin:
 total 48
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  5 18:39 ..
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 markdown
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 math
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 notes
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 pdf-export
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-line-highlight
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 quarto-support
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 reveal-menu
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 search
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 zoom
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x  4 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 markdown
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 math
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 notes
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 pdf-export
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-line-highlight
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 quarto-support
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 reveal-menu
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 search
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 zoom
 
 docs/slides/template_files/libs/revealjs/plugin/highlight:
 total 1872
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 940090 мар  5 18:39 highlight.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 940037 мар  5 18:39 highlight.js
--rw-r--r--  1 nglgrdt nglgrdt    940 мар  5 18:39 monokai.css
--rw-r--r--  1 nglgrdt nglgrdt  16332 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt    947 мар  5 18:39 zenburn.css
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 940090 мар  7 16:45 highlight.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 940037 мар  7 16:45 highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt    940 мар  7 16:45 monokai.css
+-rw-r--r--  1 nglgrdt nglgrdt  16332 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt    947 мар  7 16:45 zenburn.css
 
 docs/slides/template_files/libs/revealjs/plugin/markdown:
 total 208
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 91179 мар  5 18:39 markdown.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 91331 мар  5 18:39 markdown.js
--rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 91179 мар  7 16:45 markdown.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 91331 мар  7 16:45 markdown.js
+-rwxr-xr-x  1 nglgrdt nglgrdt 13819 мар  7 16:45 plugin.js
 
 docs/slides/template_files/libs/revealjs/plugin/math:
 total 88
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  5 18:39 katex.js
--rw-r--r--  1 nglgrdt nglgrdt 31199 мар  5 18:39 math.esm.js
--rw-r--r--  1 nglgrdt nglgrdt  2094 мар  5 18:39 mathjax2.js
--rw-r--r--  1 nglgrdt nglgrdt  2216 мар  5 18:39 mathjax3.js
--rw-r--r--  1 nglgrdt nglgrdt 31388 мар  5 18:39 math.js
--rw-r--r--  1 nglgrdt nglgrdt   334 мар  5 18:39 plugin.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rwxr-xr-x  1 nglgrdt nglgrdt  2574 мар  7 16:45 katex.js
+-rw-r--r--  1 nglgrdt nglgrdt 31199 мар  7 16:45 math.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt  2094 мар  7 16:45 mathjax2.js
+-rw-r--r--  1 nglgrdt nglgrdt  2216 мар  7 16:45 mathjax3.js
+-rw-r--r--  1 nglgrdt nglgrdt 31388 мар  7 16:45 math.js
+-rw-r--r--  1 nglgrdt nglgrdt   334 мар  7 16:45 plugin.js
 
 docs/slides/template_files/libs/revealjs/plugin/notes:
 total 248
-drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 104248 мар  5 18:39 notes.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 104435 мар  5 18:39 notes.js
--rw-r--r--  1 nglgrdt nglgrdt   6014 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt  23384 мар  5 18:39 speaker-view.html
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt   4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 104248 мар  7 16:45 notes.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 104435 мар  7 16:45 notes.js
+-rw-r--r--  1 nglgrdt nglgrdt   6014 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt  23384 мар  7 16:45 speaker-view.html
 
 docs/slides/template_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 2848 мар  5 18:39 pdfexport.js
--rw-r--r--  1 nglgrdt nglgrdt   37 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 2848 мар  7 16:45 pdfexport.js
+-rw-r--r--  1 nglgrdt nglgrdt   37 мар  7 16:45 plugin.yml
 
 docs/slides/template_files/libs/revealjs/plugin/quarto-line-highlight:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt   481 мар  5 18:39 line-highlight.css
--rw-r--r--  1 nglgrdt nglgrdt 11502 мар  5 18:39 line-highlight.js
--rw-r--r--  1 nglgrdt nglgrdt   164 мар  5 18:39 plugin.yml
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt   481 мар  7 16:45 line-highlight.css
+-rw-r--r--  1 nglgrdt nglgrdt 11502 мар  7 16:45 line-highlight.js
+-rw-r--r--  1 nglgrdt nglgrdt   164 мар  7 16:45 plugin.yml
 
 docs/slides/template_files/libs/revealjs/plugin/quarto-support:
 total 28
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 1856 мар  5 18:39 footer.css
--rw-r--r--  1 nglgrdt nglgrdt   87 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt 9298 мар  5 18:39 support.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 1856 мар  7 16:45 footer.css
+-rw-r--r--  1 nglgrdt nglgrdt   87 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt 9298 мар  7 16:45 support.js
 
 docs/slides/template_files/libs/revealjs/plugin/reveal-menu:
 total 68
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  8192 мар  5 18:39 menu.css
--rw-r--r--  1 nglgrdt nglgrdt 37128 мар  5 18:39 menu.js
--rw-r--r--  1 nglgrdt nglgrdt   205 мар  5 18:39 plugin.yml
--rw-r--r--  1 nglgrdt nglgrdt  3860 мар  5 18:39 quarto-menu.css
--rw-r--r--  1 nglgrdt nglgrdt  1262 мар  5 18:39 quarto-menu.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  8192 мар  7 16:45 menu.css
+-rw-r--r--  1 nglgrdt nglgrdt 37128 мар  7 16:45 menu.js
+-rw-r--r--  1 nglgrdt nglgrdt   205 мар  7 16:45 plugin.yml
+-rw-r--r--  1 nglgrdt nglgrdt  3860 мар  7 16:45 quarto-menu.css
+-rw-r--r--  1 nglgrdt nglgrdt  1262 мар  7 16:45 quarto-menu.js
 
 docs/slides/template_files/libs/revealjs/plugin/search:
 total 56
-drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt  6490 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 17041 мар  5 18:39 search.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 17245 мар  5 18:39 search.js
+drwxrwxr-x  2 nglgrdt nglgrdt  4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt  4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt  6490 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 17041 мар  7 16:45 search.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 17245 мар  7 16:45 search.js
 
 docs/slides/template_files/libs/revealjs/plugin/zoom:
 total 24
-drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  5 18:39 .
-drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  5 18:39 ..
--rw-r--r--  1 nglgrdt nglgrdt 6779 мар  5 18:39 plugin.js
--rw-r--r--  1 nglgrdt nglgrdt 2718 мар  5 18:39 zoom.esm.js
--rw-r--r--  1 nglgrdt nglgrdt 2951 мар  5 18:39 zoom.js
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 мар  7 16:45 .
+drwxrwxr-x 12 nglgrdt nglgrdt 4096 мар  7 16:45 ..
+-rw-r--r--  1 nglgrdt nglgrdt 6779 мар  7 16:45 plugin.js
+-rw-r--r--  1 nglgrdt nglgrdt 2718 мар  7 16:45 zoom.esm.js
+-rw-r--r--  1 nglgrdt nglgrdt 2951 мар  7 16:45 zoom.js
 ```
 ## Log
 
