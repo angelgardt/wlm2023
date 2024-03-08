@@ -14,25 +14,63 @@ knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FAL
 library(tidyverse)
 theme_set(theme_bw())
 library(mgcv)
+library(glmnet)
 ```
 
 ## Основные задания {#hw12_main}
+
+:::{.callout-note}
+
+## PISA
+
+Сегодня мы возьмем [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw12/pisasci2006.csv), полученные в ходе программы PISA (Programme for International Student Assessment, 2006), дополненные рядом показателей из данных ООН. Переменные, которые нас будут интересовать:
+
+* `Overall` Science Score (average score for 15 year olds)
+* `Interest` in science
+* Identifying scientific `Issues`
+* `Explaining` phenomena scientifically
+* `Support` for scientific inquiry
+* `Income` Index
+* `Health` Index
+* `Education` Index
+* Human Development Index (`HDI`, composed of the Income index, Health Index, and Education Index)
+
+Также в данных есть переменная `Country`. Так как у нас усредненные показатели по странам, то эта переменная выступает в данном случае в качестве ID (идентификатора наблюдения), поэтому её мы не будем использовать в моделировании.
+
+В качестве целевой переменной нас будет интересовать `Overall`, остальные мы будм рассматривать как предикторы.
+
+:::
+
 
 ### #1
 
 <img id="hw12-1-level" class="level"/>
 
 ::: {#hw12-1-task .task}
-Текст задания `переменная`.
+a. Уже классически, загрузите данные и проверьте их структуру.
+b. Если в данных есть пропущенные значения, удалите наблюдения, которые их содержат.
+c. Визуализируйте взаимосвязи между переменными датасета (за исключением `Country`). Что можно сказать о характере связей между переменными?
+
+Для визуализации в данном случае хорошо подойдет функция `ggpairs()` из пакета `GGally`.
 :::
 
 ```{r}
+# read_csv("https://raw.githubusercontent.com/m-clark/generalized-additive-models/master/data/pisasci2006.csv") %>% write_csv("../data/hw12/pisasci2006.csv")
 
+## a
+pisa <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw12/pisasci2006.csv")
+
+## b
+pisa %>% drop_na() -> pisa
+nrow(pisa)
+
+## c
+GGally::ggpairs(pisa %>% select(-Country))
 ```
 
 ::: {#hw12-1-autocheck .autocheck}
 ::: {#hw12-1-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите число строк в датасете после удаления пропущенных значений.
 :::
 
 <input class="autocheck-input" type="text" id="hw12-1" placeholder="Введите ответ…">
@@ -74,14 +112,22 @@ library(mgcv)
 <img id="hw12-2-level" class="level"/>
 
 ::: {#hw12-2-task .task}
-Текст задания.
-
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+a. Постройте обобщенную аддитивную модель `gam1`, в которой целевой переменной будет `Overall`, а *нелинейными* предикторами --- `Interest`, `Support`, `Income` и `Health`.
+b. Протестируйте гипотезу о статистической значимости модели в целом.
 :::
+
+```{r}
+## a
+gam1 <- gam(Overall ~ s(Interest) + s(Support) + s(Income) + s(Health), data = pisa)
+
+## b
+gam0 <- gam(Overall ~ 1, data = pisa)
+anova(gam0, gam1, test = "Chisq")
+```
 
 ::: {#hw12-2-autocheck .autocheck}
 ::: {#hw12-2-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите _абсолютное_ значение девиансы модели (колонка `Deviance` из результатов тестирования значимости модели), округленное до целого.
 :::
 
 <input class="autocheck-input" type="text" id="hw12-2" placeholder="Введите ответ…">
@@ -118,15 +164,32 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #3
+### #3 {#hw12-3-title}
 
 <img id="hw12-3-level" class="level"/>
 
 ::: {#hw12-3-task .task}
-Текст задания.
+a. Протестируйте гипотезы о том, что связи между предикторами и целевой переменной построенной модели нелинейные.
+b. Если
+    * результаты тестирования гипотез показывают, что связи между всеми предикторами модели и целевой переменной нелинейные, переходите к [следующему заданию](#hw12-4-title)
+    * результаты тестирования гипотез показывают, что в модели есть предикторы, линейно связанные с целевой переменной, то модифицируйте модель так, чтобы _нелинейные предикторы были включены в модель внутри сплайнов, а линейные вне сплайнов_.
+        * сохраните результат модификации в объект `gam2`
+        * сравните с помощью статистического теста исходную и модифицированную модель
+        * проверьте, изменились ли результаты тестов на нелинейность связи после модификации модели
+
 :::
 
-::: {#hw12-3-autocheck .autocheck}
+```{r}
+## a
+summary(gam1)
+
+## b
+gam2 <- gam(Overall ~ s(Income) + s(Interest) + Support + Health, data = pisa)
+anova(gam1, gam2, test = "Chisq")
+summary(gam2)
+```
+
+::: {#hw12-3-autocheck .autocheck hidden="true"}
 ::: {#hw12-3-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -165,17 +228,36 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #4
+:::{.callout-warning}
+Если в [предыдущем задании](#hw12-3-title) не потребовалась модификация модели, то обобщенная аддитивная модель, с которой необходимо работать далее --- это `gam1`. Если модификации была проведена, то обобщенная линейная модель, с которой необходимо работать далее --- это `gam2`.
+:::
+
+### #4 {#hw12-4-title}
 
 <img id="hw12-4-level" class="level"/>
 
 ::: {#hw12-4-task .task}
-Текст задания.
+
+a. Постройте модель множественной линейной регрессии , в которую включены те же предикторы, что и в обобщенную аддитивную модель. Сравните результаты тестирования статистических гипотез для обобщенной аддитивной модели и модели множественной линейной регресси.
+b. Рассчитайте метрики MAPE и RMSE для обобщенной аддитивной модели и модели множественной линейной регрессии. На основании их значений сделайте вывод о том, какая из моделей лучше описывает закономерности, имеющиеся в данных.
+
 :::
+
+```{r}
+## a
+lm2 <- lm(Overall ~ Interest + Income + Support + Health, data = pisa)
+summary(lm2)
+
+## b
+Metrics::rmse(pisa$Overall, lm2$fitted.values)
+Metrics::rmse(pisa$Overall, gam2$fitted.values) %>% round(2)
+Metrics::mape(pisa$Overall, lm2$fitted.values)
+Metrics::mape(pisa$Overall, gam2$fitted.values)
+```
 
 ::: {#hw12-4-autocheck .autocheck}
 ::: {#hw12-4-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки введите значение RMSE обобщенной аддитивной модели, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw12-4" placeholder="Введите ответ…">
@@ -217,10 +299,15 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw12-5-level" class="level"/>
 
 ::: {#hw12-5-task .task}
-Текст задания.
+Проведите графическую диагностику обобщенной аддитивной модели. Сделайты вывод о её качестве.
 :::
 
-::: {#hw12-5-autocheck .autocheck}
+```{r}
+par(mfrow = c(2, 2))
+gam.check(gam2)
+```
+
+::: {#hw12-5-autocheck .autocheck hidden="true"}
 ::: {#hw12-5-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -264,10 +351,26 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw12-6-level" class="level"/>
 
 ::: {#hw12-6-task .task}
-Текст задания.
+Проверьте выполнение допущения о concurvity. Сделайте вывод о наличии или отсутствии зависимости между предикторами.
 :::
 
-::: {#hw12-6-autocheck .autocheck}
+:::{.callout-important}
+#### Интерпретация значений concurvity
+
+На практике у препода произошло помутнение сознания и он нагло наврал о том, как интерпретируются значения concurvity.
+
+**Значения concurvity (любой из трёх метрик) варьируются от 0 до 1.**
+
+* **Если значение близко к нулю, что проблемы concurvity нет, предикторы независимы друг от друга.**
+* **Если значение близко к единице, что проблема concurvity есть, один предиктор может быть выражен через другой с помощью какой-либо функции.**
+
+:::
+
+```{r}
+concurvity(gam2)
+```
+
+::: {#hw12-6-autocheck .autocheck hidden="true"}
 ::: {#hw12-6-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -311,10 +414,18 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw12-7-level" class="level"/>
 
 ::: {#hw12-7-task .task}
-Текст задания.
+
+Неким заказчиком нам велено изучить зависимость `Overall` от `Issues`, `Explain`, `Evidence` и `HDI`. Мы уже строили графики, по которым можно заподозрить нечто неладное относительно этих переменных, однако давайте для большей наглядности построим корреляционную матрицу между всеми этими переменными --- `Overall`, `Issues`, `Explain`, `Evidence` и `HDI`. Сделайте вывод о том, можно ли моделировать зависимости в помощью линейных моделей и как это корректнее сделать.
+
 :::
 
-::: {#hw12-7-autocheck .autocheck}
+```{r}
+pisa %>% 
+  select(Overall, Issues, Explain, Evidence, HDI) %>% 
+  cor() %>% ggcorrplot::ggcorrplot(lab = TRUE)
+```
+
+::: {#hw12-7-autocheck .autocheck hidden="true"}
 ::: {#hw12-7-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -353,17 +464,33 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #8
+### #8 {#hw12-8-title}
 
 <img id="hw12-8-level" class="level"/>
 
 ::: {#hw12-8-task .task}
-Текст задания.
+
+Смоделируйте зависимость `Overall` от предикторов `Issues`, `Explain`, `Evidence` и `HDI` с помощью LASSO-регрессии.
+
+a. Создайте вектор `Y`, содержащий значения целевой переменной, и матрицу `X` со значениями предикторов.
+b. Постройте модель LASSO-регрессии и выведите значения коэффициентов при минимальном значении штрафного коэффициента.
+c. Есть ли в модели предикторы, коэффициенты при которых были обнулены в ходе регуляризации?
+
 :::
+
+```{r}
+## a
+Y <- pisa$Overall
+X <- pisa %>% select(Issues, Explain, Evidence, HDI) %>% as.matrix()
+
+## b
+model_lasso <- cv.glmnet(x = X, y = Y, alpha = 1)
+coef(model_lasso, s = "lambda.min")
+```
 
 ::: {#hw12-8-autocheck .autocheck}
 ::: {#hw12-8-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки в поле ниже введите через запятую названия предикторов, коэффициенты при которых были обнулены в ходе регуляризации. Если таких предикторов не было, введите `нет`. Проверка игнорирует все пробелы, но чувствительна к регистру.
 :::
 
 <input class="autocheck-input" type="text" id="hw12-8" placeholder="Введите ответ…">
@@ -400,15 +527,25 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
-### #9
+### #9 {#hw12-9-title}
 
 <img id="hw12-9-level" class="level"/>
 
 ::: {#hw12-9-task .task}
-Текст задания.
+Смоделируйте зависимость `Overall` от `Issues`, `Explain`, `Evidence` и `HDI` с помощью Ridge-регрессии, оставив только те предикторы, коэффициенты при которых сохранили ненулевое значения в [предыдущем задании](#hw12-8-title).
+
+* Те предикторы, коэффициенты при которых обнулились в LASSO-регрессии не должны быть включены в модель Ridge-регрессии.
+* Если ни один из коэффициентов не был обнулён, то в модель включаются все предикторы.
+    
 :::
 
-::: {#hw12-9-autocheck .autocheck}
+```{r}
+X2 <- pisa %>% select(Issues, Explain, Evidence) %>% as.matrix()
+model_ridge <- cv.glmnet(x = X2, y = Y, alpha = 0)
+# coef(model_ridge, s = "lambda.min")
+```
+
+::: {#hw12-9-autocheck .autocheck hidden="true"}
 ::: {#hw12-9-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -452,12 +589,24 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw12-10-level" class="level"/>
 
 ::: {#hw12-10-task .task}
-Текст задания.
+a. Постройте модель множественной линейной регресии (без взаимодействия), соответствующую по структуре модели ridge-регрессии из [предыдущего задания](#hw12-9-title).
+b. Рассчитайте метрики качества модели MAPE и RMSE для построенной модели множественной линейной регрессии и регуляризованной регресии (ridge-регрессии). Какая из моделей лучше описывает закономерность данных? С чем это может быть связано?
 :::
+
+```{r}
+## a
+lm <- lm(Overall ~ Issues + Explain + Evidence, pisa)
+
+## b
+Metrics::mape(pisa$Overall, lm$fitted.values)
+Metrics::mape(pisa$Overall, predict(model_ridge, X2, s = "lambda.min"))
+Metrics::rmse(pisa$Overall, lm$fitted.values)
+Metrics::rmse(pisa$Overall, predict(model_ridge, X2, s = "lambda.min")) %>% round(3)
+```
 
 ::: {#hw12-10-autocheck .autocheck}
 ::: {#hw12-10-ir .input-requirements}
-Описание формата инпута.
+В качестве ответа для самопроверки в поле ниже введите значение RMSE для модели ridge-регресии, округленное до тысячных. В качестве десятичного разделителя используйте точку. 
 :::
 
 <input class="autocheck-input" type="text" id="hw12-10" placeholder="Введите ответ…">
@@ -494,6 +643,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+<!---
 ## Дополнительные задания {#hw12_add}
 
 ### #1
@@ -730,6 +880,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 </details>
 :::
+
+--->
 
 ```{=html}
 <!--- CHANGE hw12 TO hw<n> IN THE LINES BELOW--->
