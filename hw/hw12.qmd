@@ -5,6 +5,17 @@
 REPLACE ALL hw12 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(tidyverse)
+theme_set(theme_bw())
+library(mgcv)
+```
+
 ## Основные задания {#hw12_main}
 
 ### #1
@@ -14,6 +25,10 @@ REPLACE ALL hw12 TO hw<n> WITH MATCH CASE
 ::: {#hw12-1-task .task}
 Текст задания `переменная`.
 :::
+
+```{r}
+
+```
 
 ::: {#hw12-1-autocheck .autocheck}
 ::: {#hw12-1-ir .input-requirements}

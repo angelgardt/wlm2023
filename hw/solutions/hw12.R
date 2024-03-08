@@ -5,6 +5,12 @@
 
 # 1
 
+library(tidyverse)
+theme_set(theme_bw())
+
+houses <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw9/house_price.csv")
+str(houses)
+
 
 # 2
 
