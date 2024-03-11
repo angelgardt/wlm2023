@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -261,7 +290,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#ограничения-изученных-ранее-линейных-моделей" id="toc-ограничения-изученных-ранее-линейных-моделей" class="nav-link active" data-scroll-target="#ограничения-изученных-ранее-линейных-моделей"><span class="header-section-number">12.1</span> Ограничения изученных ранее линейных моделей</a></li>
+  <li><a href="#случайные-vs-фиксированные-факторы" id="toc-случайные-vs-фиксированные-факторы" class="nav-link" data-scroll-target="#случайные-vs-фиксированные-факторы"><span class="header-section-number">12.2</span> Случайные vs фиксированные факторы</a></li>
+  <li><a href="#виды-glmm-и-их-математическая-формулировка" id="toc-виды-glmm-и-их-математическая-формулировка" class="nav-link" data-scroll-target="#виды-glmm-и-их-математическая-формулировка"><span class="header-section-number">12.3</span> Виды GLMM и их математическая формулировка</a></li>
+  <li><a href="#методы-подбора-параметров-в-смешанных-моделях" id="toc-методы-подбора-параметров-в-смешанных-моделях" class="nav-link" data-scroll-target="#методы-подбора-параметров-в-смешанных-моделях"><span class="header-section-number">12.4</span> Методы подбора параметров в смешанных моделях</a></li>
+  <li><a href="#диагностика-модели" id="toc-диагностика-модели" class="nav-link" data-scroll-target="#диагностика-модели"><span class="header-section-number">12.5</span> Диагностика модели</a>
+  <ul class="collapse">
+  <li><a href="#индуцированные-корреляции" id="toc-индуцированные-корреляции" class="nav-link" data-scroll-target="#индуцированные-корреляции"><span class="header-section-number">12.5.1</span> Индуцированные корреляции</a></li>
+  <li><a href="#анализ-остатков-модели" id="toc-анализ-остатков-модели" class="nav-link" data-scroll-target="#анализ-остатков-модели"><span class="header-section-number">12.5.2</span> Анализ остатков модели</a></li>
+  </ul></li>
+  <li><a href="#тестирование-гипотез" id="toc-тестирование-гипотез" class="nav-link" data-scroll-target="#тестирование-гипотез"><span class="header-section-number">12.6</span> Тестирование гипотез</a>
+  <ul class="collapse">
+  <li><a href="#t-тесты-вальда" id="toc-t-тесты-вальда" class="nav-link" data-scroll-target="#t-тесты-вальда"><span class="header-section-number">12.6.1</span> t-тесты Вальда</a></li>
+  <li><a href="#тесты-отношения-правдоподобий" id="toc-тесты-отношения-правдоподобий" class="nav-link" data-scroll-target="#тесты-отношения-правдоподобий"><span class="header-section-number">12.6.2</span> Тесты отношения правдоподобий</a></li>
+  </ul></li>
+  <li><a href="#сравнение-моделей" id="toc-сравнение-моделей" class="nav-link" data-scroll-target="#сравнение-моделей"><span class="header-section-number">12.7</span> Сравнение моделей</a></li>
+  <li><a href="#модели-для-других-распределений" id="toc-модели-для-других-распределений" class="nav-link" data-scroll-target="#модели-для-других-распределений"><span class="header-section-number">12.8</span> Модели для других распределений</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -285,8 +335,255 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- transposed matrix --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<section id="ограничения-изученных-ранее-линейных-моделей" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="ограничения-изученных-ранее-линейных-моделей"><span class="header-section-number">12.1</span> Ограничения изученных ранее линейных моделей</h2>
+<p>При построении обычных линейных моделей мы предполагаем, что наши наблюдения независимы. Однако зачастую это требование не выполняется в полной мере, и наши данные имеют некоторую группировку (clustered data), которую, возможно, мы даже не планировали.</p>
+<p>Примеры возможных группировок:</p>
+<ul>
+<li>измерения в разные периоды времени (разные партии химических реактивов, разные настройки аппаратуры)</li>
+<li>измерения в разных участках пространства (мониторы компьютеров могут различаться)</li>
+<li>повторные измерения (испытуемые / респонденты различаются между собой)</li>
+<li>измерения на разных группах испытуемых / респондентов (школьники разных классов в одной параллели могут различаться)</li>
+</ul>
+<p>Возникают <strong>внутригрупповые корреляции (intraclass correlations)</strong> — наблюдения из одной группы более похожи друг на друга, чем наблюдениях из разных групп.</p>
+<ul>
+<li>Подобную структуру данных некорректно игнорировать — увеличивается вероятность ошибиться с выводами.</li>
+<li>Интуитивное решение: включить группирующие факторы в модель в качестве предикторов — технически так, безусловно, сделать можно, однако такой подход,
+<ul>
+<li>во-первых, значительно усложняет модель (чрезмерно увеличивается количество параметров),</li>
+<li>а во-вторых, ограничивает широту обобщения результатов (интерпретаировать параметры модели можно только для конкретных испытуемых / респондентов / учебных классов).</li>
+</ul></li>
+</ul>
+<p>Чтобы решить возникающие трудности, необходимо ввести в модель <strong>случайные факторы</strong>.</p>
+</section>
+<section id="случайные-vs-фиксированные-факторы" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="случайные-vs-фиксированные-факторы"><span class="header-section-number">12.2</span> Случайные vs фиксированные факторы</h2>
+<p>До сих пор мы работали только с <strong>фиксированными факторами</strong> — моделировали среднее значение для каждго уровня фактора.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l12_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Если групп возникает много, то и моделируемых средных значений также много. Кроме того, когда мы задавали фиксированные факторы, мы считали, что сравниваемые группы фиксированные, и нас интересуют сравнения именно между ними.</p>
+<p>Однако когда группировка возникает не как результат дизайна исследования, а как некоторый побочный результат (то есть, мы не планировали изучать фактор, по которому разделилась наша выборка), нам не важны конкретные значения интерсептов в каждой из групп. Мы можем представить данный фактор как случайную величину (величину «поправки»), и оценить дисперсию между уровнями группирующего фактора. Это и есть <strong>случайные факторы</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l12_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l12_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Свойства</strong></th>
+<th style="text-align: left;"><strong>Фиксированные факторы</strong></th>
+<th style="text-align: left;"><strong>Случайные факторы</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Уровни фактора</td>
+<td style="text-align: left;">Фиксированные, заранее определенные, потенциально воспроизводимые</td>
+<td style="text-align: left;">Случайная выборка из всех возмоных уровней</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Используются для тестирвоания гипотез</td>
+<td style="text-align: left;">О средних значения ЗП на раных уровнях фактора <span class="math inline">\(H_0:\mu_1 = \mu_2 = \dots = \mu\)</span></td>
+<td style="text-align: left;">О дисперсии ЗП между уровнями фактора <span class="math inline">\(H_0:\sigma_r^2 = 0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Выводы можно экстраполировать</td>
+<td style="text-align: left;">Только на уровни анализа</td>
+<td style="text-align: left;">На все возможные уровни</td>
+</tr>
+</tbody>
+</table>
+<p>На один и тот же фактор можно смотреть и как на случайный, и как на фиксированный в зависимости от задач исследователя. Так как мы хотим моделировать дисперсию, то у случайного фактора должно быть минимум пять градаций.</p>
+</section>
+<section id="виды-glmm-и-их-математическая-формулировка" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="виды-glmm-и-их-математическая-формулировка"><span class="header-section-number">12.3</span> Виды GLMM и их математическая формулировка</h2>
+<p>Мы строим прямые — модели же линейные. А прямая задается двумя параметрами — интерсептом и углом наклона (slope). Эти параметры мы оцениваем в качестве фиксированных факторов. Но так как других у нас нет, то эти же параметры оцениваются и как случайные факторы. То есть, случайные факторы как бы дополняют фиксированные.</p>
+<ul>
+<li><strong>Модель со случайным интерсептом</strong></li>
+</ul>
+<p><span class="math display">\[
+\begin{split}
+y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_i + \varepsilon_{ij} \\
+\eta_i &amp;\thicksim \mathcal{N}(0, \sigma^2_\eta) \\
+\varepsilon_i &amp;\thicksim \mathcal{N}(0, \sigma^2)
+\end{split}
+\]</span></p>
+<p><span class="math inline">\(i\)</span> — наблюдение (респондент), <span class="math inline">\(j\)</span> — уровни (значения) предиктора.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l12_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Модель со случайным интерсептом и углом наклона</strong></li>
+</ul>
+<p><span class="math display">\[
+\begin{split}
+y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \varepsilon_{ij} \\
+\eta_{0i} &amp;\thicksim \mathcal{N}(0, \sigma^2_{\eta_0}) \\
+\eta_{1ij} &amp;\thicksim \mathcal{N}(0, \sigma^2_{\eta_1}) \\
+\varepsilon_{ij} &amp;\thicksim \mathcal{N}(0, \sigma^2)
+\end{split}
+\]</span></p>
+<p><span class="math inline">\(i\)</span> — наблюдение (респондент), <span class="math inline">\(j\)</span> — уровни (значения) предиктора.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l12_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="методы-подбора-параметров-в-смешанных-моделях" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="методы-подбора-параметров-в-смешанных-моделях"><span class="header-section-number">12.4</span> Методы подбора параметров в смешанных моделях</h2>
+<p>Параметры в смешанных моделях могут подбираться двумя методами. Первый из них — <strong>метод максимального правдоподобия (maximum likelihood, ML)</strong>.</p>
+<p>Однако когда мы пытаемся оценить дисперсию методом максимального правдоподобия, оценки получаются смещенными. Это происходит потому, что сразу приходится оценивать и <span class="math inline">\(\beta\)</span>, и дисперсии.</p>
+<p>Этого можно избежать, применяя метод <strong>ограниченного максимального правдоподобия (restricted maximum likelihood, REML)</strong>. Данный метод позволяет с помощью математических преобразований занулить <span class="math inline">\(\beta\)</span> и получить несмещенные оценки дисперсий.</p>
+<p>REML-оценки <span class="math inline">\(\beta\)</span> стремятся к ML-оценкам при увеличении объема выборки.</p>
+<p><strong>Так что же использовать, REML или ML?</strong></p>
+<ul>
+<li>Если нужны точные оценки фиксированных эффектов — ML.</li>
+<li>Если нужны точные оценки случайных эффектов — REML.</li>
+<li>Если нужно работать с правдоподобиями — следите, чтобы в моделях, подобранных REML была одинаковая фиксированная часть.</li>
+<li>Для обобщенных негауссовских смешанных линейных моделей REML не определен — там используется ML.</li>
+</ul>
+</section>
+<section id="диагностика-модели" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="диагностика-модели"><span class="header-section-number">12.5</span> Диагностика модели</h2>
+<section id="индуцированные-корреляции" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="индуцированные-корреляции"><span class="header-section-number">12.5.1</span> Индуцированные корреляции</h3>
+<p>Появление в модели случайного фактора позволяет учесть взаимосвязь наблюдений для каждого из респондентов — «индуцированные» корреляции.</p>
+<p>Посмотрим внимательно на случайную часть модели.</p>
+<p>Случайные эффекты, распределенные нормально со средним 0 и некоторой дисперсией</p>
+<p><span class="math display">\[
+\eta \thicksim \mathcal{N}(0, \sigma^2_\eta)
+\]</span></p>
+<p>Остатки модели, независимые распределенные нормально со средним 0 и некоторой дисперсией</p>
+<p><span class="math display">\[
+\varepsilon \overset{\text{i.i.d}}{\thicksim} \mathcal{N}(0, \sigma^2)
+\]</span></p>
+<p>Путем математических преобразований матриц ковариаций можно получить, что корреляция между наблюдениями одного субъекта равна следующему выражению.</p>
+<p><span class="math display">\[
+\text{ICC} = \frac{\sigma^2_\eta}{\sigma^2_\eta + \sigma^2}
+\]</span></p>
+<p>Эта характеристика называется <strong>коэффициент внутриклассовой корреляции (intra-class correlation, ICC)</strong>.</p>
+<p>Таким образом, ICC — это способ измерить, насколько коррелируют друг с другом наблюдения из одной и той же группы, заданной случайным фактором. Значения ICC интерпретируются аналогично коэффициенту корреляции.</p>
+<p>Если ICC низкий, то наблюдения очень разные внутри каждой из групп. Значит, чтобы надежно оценить эффект этого случайного фактора, нужно брать больше наблюдений в группе.</p>
+<p>Если ICC высокий, то наблюдения очень похожи внутри каждой из групп, заданных случайным фактором. Значит, можно брать меньше наблюдений в группе.</p>
+<p>Это можно использовать при определении объема выборки (при анализе пилотных данных).</p>
+</section>
+<section id="анализ-остатков-модели" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="анализ-остатков-модели"><span class="header-section-number">12.5.2</span> Анализ остатков модели</h3>
+<p>Остается ряд допущений, классических для линейных моделей:</p>
+<ul>
+<li>линейность связи</li>
+<li>распределение остатков</li>
+<li>(не)зависимость остатков от предсказанных значений</li>
+</ul>
+<p>Но так как в модели темерь есть и случайные факторы, мы можем изучать зависимость остатков от случайных факторов.</p>
+</section>
+</section>
+<section id="тестирование-гипотез" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="тестирование-гипотез"><span class="header-section-number">12.6</span> Тестирование гипотез</h2>
+<p>С помощью смешанных моделей можно тестировать статистические гипотезы. Но есть проблема: тесты, применяемые для GLM (t- и z-тесты Вальда, LRT) дают приблизительные оценки. Для отбора моделей используют информационные критерии (AIC).</p>
+<section id="t-тесты-вальда" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="t-тесты-вальда"><span class="header-section-number">12.6.1</span> t-тесты Вальда</h3>
+<p><span class="math display">\[
+\begin{split}
+&amp;H_0: \beta_k = 0 \\
+&amp;H_1: \beta_k \neq 0 \\
+t &amp;= \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksim t(n-p)
+\end{split}
+\]</span></p>
+<ul>
+<li>Так как эти тесты дают лишь приблизительные оценки, их значения не приводятся в аутпутах функций.</li>
+<li>Их можно вернуть, <strong>однако при интерпретации получаемых результатов всегда нужно помнить, что это только приблизительные оценки</strong>.</li>
+</ul>
+</section>
+<section id="тесты-отношения-правдоподобий" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="тесты-отношения-правдоподобий"><span class="header-section-number">12.6.2</span> Тесты отношения правдоподобий</h3>
+<p><span class="math display">\[
+\text{LRT} = 2 \ln \Big( \frac{L_{\text{M}_1}}{L_{\text{M}_2}} \Big ) = 2 (\ln L_{\text{M}_1} - L_{\text{M}_2})
+\]</span></p>
+<p><strong>LRT для случайных эффектов</strong></p>
+<ul>
+<li>Требуются модели <strong>с одинаковой фиксированной частью</strong>, подобранные REML</li>
+<li>Уровни значимости будут завышены</li>
+<li>Обычно тесты не делают, а набор случайных эффектов определяется структурой данных</li>
+</ul>
+<p><strong>LRT для фиксированных эффектов</strong></p>
+<ul>
+<li>Требуются модели с одинаковой случайной частью, подобранные ML</li>
+<li>Уровни значимости будут занижены</li>
+</ul>
+</section>
+</section>
+<section id="сравнение-моделей" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="сравнение-моделей"><span class="header-section-number">12.7</span> Сравнение моделей</h2>
+<p>Для сравнения моделей актуальны ранее изученные варианты:</p>
+<ul>
+<li>тесты отношения правдоподобий</li>
+<li>информационные критерии (AIC, BIC)</li>
+</ul>
+</section>
+<section id="модели-для-других-распределений" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="модели-для-других-распределений"><span class="header-section-number">12.8</span> Модели для других распределений</h2>
+<p>Совместив идеи GLM и mixed models можно получить модели для бинарных переменных.</p>
+<ul>
+<li>В основе анализа стоит подбор параметров логистической регрессионной модели</li>
+<li>Параметры логистической регрессии подбираются методом максимального правдоподобия</li>
+<li>Угловые коэффициенты логистической регрессии позволяют сказать, во сколько раз изменяется соотношение шансов для события при увеличении предиктора на единицу (или при переходе от базового уровня фактора к данному уровню)</li>
+<li>Для визуализации результатов лучше проводить обратное логит-преобразование и отражать зависимую переменную в терминах вероятностей</li>
+<li>Группирующие факторы могут определять дисперсию свободного члена модели или дисперсию углового коэффициента и свободного члена модели</li>
+<li>Внутриклассовые корреляции могут быть вычислены лишь приблизительно, но их рассмотрение дает важную информацию. Если ICC равен нулю, то лучше отказаться от рассмотрения случайных факторов и применить обычную GLM.</li>
+</ul>
+<p>Аналогично можно получить смешанные модели для счетных переменных.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

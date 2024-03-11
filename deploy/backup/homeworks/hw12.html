@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -354,21 +388,10 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Чтобы удалить строки с пропущенными значениями, воспользуйтей функцией <code>drop_na()</code>.</li>
+<li>Функция <code>ggpairs()</code> ожидает на вход датасет, состоящий только из тех переменных, взаимосвязи между которыми нас интересуют.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -396,21 +419,12 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>В GAM-модель нелинейный предикторы вводятся внутри сплайнов (функция <code>s()</code>).</li>
+<li>Каждый нелинейный предиктор вводится внутри своего сплайна — <code>s(pred1) + s(pred2) + s(pred3)</code></li>
+<li>Тестирование гипотезы о значимости модели в целом проводится аналогично обобщенным линейным моделям — потребуется нулевая модель, содержащая в качестве предиктора только интерсепт.</li>
+<li>Для сравнения построенной и нулевой модели используется функция <code>anova()</code> с аргументом <code>test = "Chisq"</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -423,7 +437,7 @@ PISA
 <li>Если
 <ul>
 <li>результаты тестирования гипотез показывают, что связи между всеми предикторами модели и целевой переменной нелинейные, переходите к <a href="#hw12-4-title">следующему заданию</a></li>
-<li>результаты тестирования гипотез показывают, что в модели есть предикторы, линейно связанные с целевой переменной, то модифицируйте модель так, чтобы <em>нелинейные предикторы были включены в модель внутри сплайнов, а линейные вне сплайнов</em>.
+<li>результаты тестирования гипотез показывают, что в модели есть предикторы, линейно связанные с целевой переменной, то модифицируйте модель так, чтобы <em>нелинейные предикторы были включены в модель внутри сплайнов, а линейные — вне сплайнов</em>.
 <ul>
 <li>сохраните результат модификации в объект <code>gam2</code></li>
 <li>сравните с помощью статистического теста исходную и модифицированную модель</li>
@@ -447,21 +461,16 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Гипотезы о (не)линейности связей между предикторами и целевой переменной тестируются автоматически при выводе статистик модели с помощью функции <code>summary()</code>.</li>
+<li>GAM-модели позволяют вводить как нелинейные, так и линейные предикторы в одну и ту же модель. Общий синтаксис выглядит так (<code>DV</code> — целевая переменная, <code>IV1</code> и <code>IV2</code> — нелинейные предикторы, <code>IV3</code> и <code>IV4</code> — линейные предикторы):</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gam</span>(DV <span class="sc">~</span> <span class="fu">s</span>(IV1) <span class="sc">+</span> <span class="fu">s</span>(IV2) <span class="sc">+</span> IV3 <span class="sc">+</span> IV4, <span class="at">data =</span> ds)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Сравнить модели друг с другом позволяет функция <code>anova(..., test = "Chisq")</code>, как и в случае с GLM.</li>
+</ul>
 </details>
 </div>
 <div class="callout callout-style-simple callout-warning">
@@ -499,21 +508,14 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>В модели множественной линейной регресии, исходя из её математической формулировки, все предикторы считаются линейными.</li>
+<li>Получить значения метрик качества можно с помощью соответствующих функций из пакета <code>Metrics</code>.
+<ul>
+<li>Функции ожидают в качестве первого аргумента реальные значения целевой переменной из данных, в качестве второго — модельные значения.</li>
+</ul></li>
+<li>Модельные значения храняться в элементе <code>fitted.values</code> объекта, содержащего модель — общую линейную или обощенную аддитивную.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -538,21 +540,10 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для графической диагностики обобщенных аддитивных моделей используется функция <code>gam.check()</code>.</li>
+<li>Необходимо обратить внимание на распределение остатков и на зависимость остатков от предсказанных моделью значений.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -595,21 +586,10 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для проверки наличия или отсутствия concurvity, используется функция <code>concurvity()</code>, которая в качестве аргумента принимает обобщенную аддитивную модель.</li>
+<li>Для интерпретации чаще всего используются значения <code>worst</code> и/или <code>observed</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -629,7 +609,7 @@ PISA
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw12-7-hints">
 <summary>
 Подсказки
@@ -678,21 +658,13 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Извлечь вектор значений целевой переменной можно через индексацию колонки с помощью оператора <code>$</code> или с помощью функции <code>pull()</code> из <code>tidyverse</code>.</li>
+<li>Преобразовать тиббл со значениями предикторов в матрицу можно с помощью функции <code>as.matrix()</code>.</li>
+<li>Модель регуляризованной регрессии строится с помощью функции <code>cv.glmnet()</code>.</li>
+<li>Вид регуляризации задается через аргумент <code>alpha</code>: <code>0</code> — ridge-регрессия, <code>1</code> — LASSO-регрессия.</li>
+<li>Вывести значения коэффициентов модели поможет функция <code>coef()</code>, а её аргумент <code>s</code> позволит задать значения штрафного коэффициента — <code>"lambda.min"</code> или <code>"lambda.1se"</code>.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -721,21 +693,13 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Если какие-либо коэффициент в LASSO-регрессии получили нулевые значения коэффициентов, то их необходимо исключить из матрицы предикторов.
+<ul>
+<li>Можно создать новую матрицу из исходного датасета аналогично тому, как создавалась матрица <code>X</code> в задании 8a, а можно с помощью индексации убрать колонки из уже созданной матрицы <code>X</code>.</li>
+<li>Новую матрицу предиктороров нужно передать в функцию <code>cv.glmnet()</code> с указанием аргумента <code>alpha = 0</code>, чтобы была построена именно ridge-регрессия.</li>
+</ul></li>
+</ul>
 </details>
 </div>
 </section>
@@ -745,7 +709,7 @@ PISA
 <div id="hw12-10-task" class="task">
 <ol type="a">
 <li>Постройте модель множественной линейной регресии (без взаимодействия), соответствующую по структуре модели ridge-регрессии из <a href="#hw12-9-title">предыдущего задания</a>.</li>
-<li>Рассчитайте метрики качества модели MAPE и RMSE для построенной модели множественной линейной регрессии и регуляризованной регресии (ridge-регрессии). Какая из моделей лучше описывает закономерность данных? С чем это может быть связано?</li>
+<li>Рассчитайте метрики качества модели MAPE и RMSE для построенной модели множественной линейной регрессии и регуляризованной регресии (ridge-регрессии) с минимальным значением штрафного коэффициента. Какая из моделей лучше описывает закономерность данных? С чем это может быть связано?</li>
 </ol>
 </div>
 <div id="hw12-10-autocheck" class="autocheck">
@@ -763,21 +727,14 @@ PISA
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для расчета метрик подойдут функции из пакета <code>Metrics</code>.</li>
+<li>Значения, предсказанные общей линейной моделью можно получить, вытащив элемент <code>fitted.values</code> из объекта, содержащего модель.</li>
+<li>Для получения предсказаний регуляризованной модели необходимо воспользоваться функцией <code>predict()</code>.
+<ul>
+<li>Так как коэффициенты этой модели зависят от значения штрафного коэффициента — а значит и предсказанные значения также будут зависеть от его значения — в функцию <code>predict()</code> через аргумент <code>s</code> необходимо указать значения штрафного коэффициента, которое будет использовано для вычисления модельных значений. По заданию это будет <code>s = "lambda.min"</code>.</li>
+</ul></li>
+</ul>
 </details>
 </div>
 <!---
