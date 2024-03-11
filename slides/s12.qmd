@@ -1,5 +1,5 @@
 ---
-title: "L12. Линейные модели со смешанными эффектами"
+title: "L12 // Линейные модели со смешанными эффектами"
 author: "Антон Ангельгардт"
 format: 
   revealjs:
@@ -12,7 +12,7 @@ format:
 highlight-style: github
 ---
 
-## Зачем?
+## Что будет?
 ```{js favicon-loader}
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
@@ -23,103 +23,334 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
-- Пункт плана
-- Пункт плана
-- Пункт плана
+- Ограничения обобщенных линейных моделей
+- Случайные и фиксированные факторы
+- Подбор коэффициентов модели
+- Диагностика моделей
+- Тестирование гипотез
+- Дальнейшее расширение смешанных моделей
 
-## Текст
+{{< include ../other/_symbols.qmd >}}
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+```{r opts, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, warning = FALSE, message = FALSE)
+```
 
-# Раздел
+```{r pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(latex2exp)
+```
 
-## Списки
+## Ограничения изученных ранее линейных моделей
 
-When you click the **Render** button a document will be generated that includes:
+- в общих и обобщенных линейных моделях предполагается независимость наблюдений
+- данные могут иметь некоторую группировку (clustered data)
+    - разные периоды времени
+    - разных участках пространства
+    - повторные измерения
+    - измерения на разных группах испытуемых / респондентов
 
--   Content authored with markdown
--   Output from executable code
+**Внутригрупповые корреляции (intraclass correlations)** --- наблюдения из одной группы более похожи друг на друга, чем наблюдениях из разных групп.
 
-## Код
 
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Что делать? 
 
-```{r, echo=TRUE}
-1 + 1
+- Структуру данных нельзя игнорировать --- увеличивается вероятность ошибиться с выводами
+- Включить группирующие факторы в модель в качестве предикторов?
+    - усложняется модель (чрезмерно увеличивается количество параметров),
+    - широту обобщения результатов огранчена
+
+Решение: введение в модель **случайных факторов**.
+
+
+## Случайные vs фиксированные факторы
+
+```{r}
+set.seed(2044)
+I <- 10  #subjects
+n <- 10  #number of time points per subject
+N <- n * I  #total number of records
+X <- runif(N)  #observation times - uniform across (0,1)
+i <- rep(1:I, each = n)
+sig.alpha.DGP <- 1.5
+sig.eps.DGP <- 0.25
+alpha <- rnorm(I, mean = 0, sd = sig.alpha.DGP)  #notice only M values are needed
+eps <- rnorm(N, mean = 0, sd = sig.eps.DGP)  #individual level errors
+int.coef <- 0
+x.coef <- 2
+Y <- int.coef + x.coef * X + alpha[i] + eps
+df <- data.frame(id = 1:N, subjID = factor(i), X = X, Y = Y)
+ggplot(data = df %>% select(-subjID)) + 
+  geom_point(aes(x = X, y = Y,
+                 #group = subjID, color = subjID
+                 )) + 
+  # geom_smooth(aes(x = X, y = Y, group = subjID, color = subjID),
+  #             method = "lm",
+  #             se = F, linetype = "dashed",
+  #             alpha = .5) +
+  geom_smooth(data = df %>% select(-subjID),
+              aes(x = X, y = Y),
+              method = "lm",
+              se = F, color = "black")
+```
+
+```{r}
+set.seed(2044)
+I <- 10  #subjects
+n <- 10  #number of time points per subject
+N <- n * I  #total number of records
+X <- runif(N)  #observation times - uniform across (0,1)
+i <- rep(1:I, each = n)
+sig.alpha.DGP <- 1.5
+sig.eps.DGP <- 0.25
+alpha <- rnorm(I, mean = 0, sd = sig.alpha.DGP)  #notice only M values are needed
+eps <- rnorm(N, mean = 0, sd = sig.eps.DGP)  #individual level errors
+int.coef <- 0
+x.coef <- 2
+Y <- int.coef + x.coef * X + alpha[i] + eps
+df <- data.frame(id = 1:N, subjID = factor(i), X = X, Y = Y)
+ggplot(data = df) + 
+  geom_point(aes(x = X, y = Y, group = subjID, color = subjID)) + 
+  # geom_smooth(aes(x = X, y = Y, group = subjID, color = subjID),
+  #             method = "lm",
+  #             se = F, linetype = "dashed",
+  #             alpha = .5) +
+  geom_smooth(data = df %>% select(-subjID),
+              aes(x = X, y = Y),
+              method = "lm",
+              se = F, color = "black")
+```
+
+```{r}
+set.seed(2044)
+I <- 10  #subjects
+n <- 10  #number of time points per subject
+N <- n * I  #total number of records
+X <- runif(N)  #observation times - uniform across (0,1)
+i <- rep(1:I, each = n)
+sig.alpha.DGP <- 1.5
+sig.eps.DGP <- 0.25
+alpha <- rnorm(I, mean = 0, sd = sig.alpha.DGP)  #notice only M values are needed
+eps <- rnorm(N, mean = 0, sd = sig.eps.DGP)  #individual level errors
+int.coef <- 0
+x.coef <- 2
+Y <- int.coef + x.coef * X + alpha[i] + eps
+df <- data.frame(id = 1:N, subjID = factor(i), X = X, Y = Y)
+ggplot(data = df) + 
+  geom_point(aes(x = X, y = Y, group = subjID, color = subjID)) + 
+  geom_smooth(aes(x = X, y = Y, group = subjID, color = subjID),
+              method = "lm",
+              se = F, linetype = "dashed",
+              alpha = .5) +
+  geom_smooth(data = df %>% select(-subjID),
+              aes(x = X, y = Y),
+              method = "lm",
+              se = F, color = "black")
 ```
 
 
-## Формулы
+## Случайные vs фиксированные факторы
+
+|**Свойства**|**Фиксированные факторы**|**Случайные факторы**|
+|:---|:---|:---|
+|Уровни фактора|Фиксированные, заранее определенные, потенциально воспроизводимые|Случайная выборка из всех возмоных уровней|
+|Используются для тестирвоания гипотез|О средних значения ЗП на раных уровнях фактора $H_0:\mu_1 = \mu_2 = \dots = \mu$|О дисперсии ЗП между уровнями фактора $H_0:\sigma_r^2 = 0$|
+|Выводы можно экстраполировать|Только на уровни анализа|На все возможные уровни|
+
+
+
+## Виды GLMM и их математическая формулировка
+
+- **Модель со случайным интерсептом**
 
 $$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
+\begin{split}
+y_{ij} &= \beta_0 + \beta_1 x_{ij} + \eta_i + \varepsilon_{ij} \\
+\eta_i &\thicksim \norm(0, \sigma^2_\eta) \\
+\varepsilon_i &\thicksim \norm(0, \sigma^2)
+\end{split}
 $$
 
-$$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
-$$
+$i$ --- наблюдение (респондент), $j$ --- уровни (значения) предиктора.
 
-
-## Колонки
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-Текст правой колонки
-:::
-
-::::
-
-
-## Колонки с картинкой справа
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
-
-
-## Колонки с картинкой слева
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
-
-
-## График
-
-```{r plot}
-plot(sample(1:100, 30))
+```{r}
+set.seed(2044)
+I <- 10  #subjects
+n <- 10  #number of time points per subject
+N <- n * I  #total number of records
+X <- runif(N)  #observation times - uniform across (0,1)
+i <- rep(1:I, each = n)
+sig.alpha.DGP <- 1.5
+sig.eps.DGP <- 0.25
+alpha <- rnorm(I, mean = 0, sd = sig.alpha.DGP)  #notice only M values are needed
+eps <- rnorm(N, mean = 0, sd = sig.eps.DGP)  #individual level errors
+int.coef <- 0
+x.coef <- 2
+Y <- int.coef + x.coef * X + alpha[i] + eps
+df <- data.frame(id = 1:N, subjID = factor(i), X = X, Y = Y)
+fit <- lm(Y ~ X + subjID, df)
+ggplot(data = df) + 
+  geom_point(aes(x = X, y = Y, group = subjID, color = subjID)) + 
+  geom_smooth(aes(x = X, y = fit$fitted.values, group = subjID, color = subjID),
+              method = "lm",
+              se = F, linetype = "dashed",
+              alpha = .5)
 ```
+
+- **Модель со случайным интерсептом и углом наклона**
+
+$$
+\begin{split}
+y_{ij} &= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \varepsilon_{ij} \\
+\eta_{0i} &\thicksim \norm(0, \sigma^2_{\eta_0}) \\
+\eta_{1ij} &\thicksim \norm(0, \sigma^2_{\eta_1}) \\
+\varepsilon_{ij} &\thicksim \norm(0, \sigma^2)
+\end{split}
+$$
+
+$i$ --- наблюдение (респондент), $j$ --- уровни (значения) предиктора.
+
+```{r}
+set.seed(2044)
+I <- 10  #subjects
+n <- 10  #number of time points per subject
+N <- n * I  #total number of records
+X <- runif(N)  #observation times - uniform across (0,1)
+i <- rep(1:I, each = n)
+sig.alpha.DGP <- 1.5
+sig.alpha2.DGP <- 0.3
+sig.eps.DGP <- 0.25
+alpha <- rnorm(I, mean = 0, sd = sig.alpha.DGP)  #notice only M values are needed
+alpha2 <- rnorm(I, mean = 0, sd = sig.alpha2.DGP)  #notice only M values are needed
+eps <- rnorm(N, mean = 0, sd = sig.eps.DGP)  #individual level errors
+int.coef <- 0
+x.coef <- 2
+Y <- int.coef + x.coef * X + alpha[i] + alpha2[i] * X + eps
+df <- data.frame(id = 1:N, subjID = factor(i), X = X, Y = Y)
+ggplot(data = df) + 
+  geom_point(aes(x = X, y = Y, group = subjID, color = subjID)) + 
+  geom_smooth(aes(x = X, y = Y, group = subjID, color = subjID),
+              method = "lm",
+              se = F, linetype = "dashed",
+              alpha = .5)
+```
+
+
+
+## Методы подбора параметров в смешанных моделях
+
+* **метод максимального правдоподобия (maximum likelihood, ML)**
+    * оценка дисперсии методом максимального правдоподобия приводит к смещенным оценкам
+    * так как сразу приходится оценивать и $\beta$, и дисперсии
+* метод **ограниченного максимального правдоподобия (restricted maximum likelihood, REML)**
+    * с помощью математических преобразований зануляются $\beta$
+    * получаются несмещенные оценки дисперсий
+
+REML-оценки $\beta$ стремятся к ML-оценкам при увеличении объема выборки.
+
+
+## Что использовать?
+
+- Для точных оценок фиксированных эффектов --- ML.
+- Для точных оценок случайных эффектов --- REML.
+- При работе с правдоподобиями в моделях, подобранных REML, должна быть одинаковая фиксированная часть.
+- Для обобщенных негауссовских смешанных линейных моделей REML не определен --- используется ML.
+
+
+## Диагностика модели
+
+* **индуцированные корреляции**
+* **коэффициент внутриклассовой корреляции (intra-class correlation, ICC)**
+
+$$
+\eta \thicksim \mathrm{N} (0, \sigma^2_\eta)
+$$
+
+$$
+\varepsilon \overset{\iid}{\thicksim} \mathrm{N} (0, \sigma^2)
+$$
+
+$$
+\text{ICC} = \frac{\sigma^2_\eta}{\sigma^2_\eta + \sigma^2}
+$$
+
+* Если ICC низкий, то наблюдения очень разные внутри каждой из групп. Значит, чтобы надежно оценить эффект этого случайного фактора, нужно брать больше наблюдений в группе.
+* Если ICC высокий, то наблюдения очень похожи внутри каждой из групп, заданных случайным фактором. Значит, можно брать меньше наблюдений в группе.
+
+
+## Анализ остатков модели
+
+* линейность связи
+* распределение остатков
+* (не)зависимость остатков от предсказанных значений
+* зависимость остатков от случайных факторов
+
+
+
+## Тестирование гипотез
+
+* **t-тесты Вальда**
+
+$$
+\begin{split}
+&H_0: \beta_k = 0 \\
+&H_1: \beta_k \neq 0 \\
+t &= \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksim t(n-p)
+\end{split}
+$$
+
+* **тесты отношения правдоподобий**
+
+$$
+\text{LRT} = 2 \ln \Big( \frac{L_{\text{M}_1}}{L_{\text{M}_2}} \Big ) = 2 (\ln L_{\text{M}_1} - L_{\text{M}_2})
+$$
+
+* **LRT для случайных эффектов**
+    * модели **с одинаковой фиксированной частью**, подобранные REML
+    * уровни значимости будут завышены
+    * обычно тесты не делают, а набор случайных эффектов определяется структурой данных
+* **LRT для фиксированных эффектов**
+    * модели с одинаковой случайной частью, подобранные ML
+    * уровни значимости будут занижены
+
+
+## Сравнение моделей
+
+* тесты отношения правдоподобий
+* информационные критерии (AIC, BIC)
+
+
+## Модели для других распределений
+
+Совместив идеи GLM и mixed models можно получить модели для бинарных переменных.
+
+- В основе --- подбор параметров логистической регрессионной модели
+- Параметры подбираются методом максимального правдоподобия
+- Угловые коэффициенты --- во сколько раз изменяется соотношение шансов для события при увеличении предиктора на единицу
+- Группирующие факторы --- дисперсия свободного члена модели или дисперсия углового коэффициента
+- Внутриклассовые корреляции --- приблизительные
+    - Если ICC равен нулю, стоит отказаться от случайных факторов и применить обычную GLM
+
+
+Аналогично можно получить смешанные модели для счетных переменных.
+
+
 
 ## Итоги
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+- Зависимость наблюдений нужно учитывать
+- Сделать это можно введением случайных факторов в модель
+- Существует случайный интерсепт и случайный угловой коэффициент
+- REML работает на случайные эффекты, ML --- на фиксированные
+- Диагностика как и раньше, но шире
+- Тестирование гипотез аналогично GLM
+- Возможны модели для других распределений целевой переменной
 
 
-# L12. Линейные модели со смешанными эффектами {#end}
+
+# L12 // Линейные модели со смешанными эффектами {#end}
 
 :::: {.quarto-title-authors}
 ::: {.quarto-title-author}
