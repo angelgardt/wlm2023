@@ -168,8 +168,8 @@ ggplot(data = df) +
 $$
 \begin{split}
 y_{ij} &= \beta_0 + \beta_1 x_{ij} + \eta_i + \varepsilon_{ij} \\
-\eta_i &\thicksim \norm(0, \sigma^2_\eta) \\
-\varepsilon_i &\thicksim \norm(0, \sigma^2)
+\eta_i &\thicksim \mathrm{N} (0, \sigma^2_\eta) \\
+\varepsilon_i &\thicksim \mathrm{N} (0, \sigma^2)
 \end{split}
 $$
 
@@ -204,9 +204,9 @@ ggplot(data = df) +
 $$
 \begin{split}
 y_{ij} &= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \varepsilon_{ij} \\
-\eta_{0i} &\thicksim \norm(0, \sigma^2_{\eta_0}) \\
-\eta_{1ij} &\thicksim \norm(0, \sigma^2_{\eta_1}) \\
-\varepsilon_{ij} &\thicksim \norm(0, \sigma^2)
+\eta_{0i} &\thicksim \mathrm{N} (0, \sigma^2_{\eta_0}) \\
+\eta_{1ij} &\thicksim \mathrm{N} (0, \sigma^2_{\eta_1}) \\
+\varepsilon_{ij} &\thicksim \mathrm{N} (0, \sigma^2)
 \end{split}
 $$
 
