@@ -301,7 +301,8 @@ window.Quarto = {
   <li><a href="#диагностика-модели" id="toc-диагностика-модели" class="nav-link" data-scroll-target="#диагностика-модели"><span class="header-section-number">12.5</span> Диагностика модели</a>
   <ul class="collapse">
   <li><a href="#индуцированные-корреляции" id="toc-индуцированные-корреляции" class="nav-link" data-scroll-target="#индуцированные-корреляции"><span class="header-section-number">12.5.1</span> Индуцированные корреляции</a></li>
-  <li><a href="#анализ-остатков-модели" id="toc-анализ-остатков-модели" class="nav-link" data-scroll-target="#анализ-остатков-модели"><span class="header-section-number">12.5.2</span> Анализ остатков модели</a></li>
+  <li><a href="#pseudo-r2" id="toc-pseudo-r2" class="nav-link" data-scroll-target="#pseudo-r2"><span class="header-section-number">12.5.2</span> Pseudo-<span class="math inline">\(R^2\)</span></a></li>
+  <li><a href="#анализ-остатков-модели" id="toc-анализ-остатков-модели" class="nav-link" data-scroll-target="#анализ-остатков-модели"><span class="header-section-number">12.5.3</span> Анализ остатков модели</a></li>
   </ul></li>
   <li><a href="#тестирование-гипотез" id="toc-тестирование-гипотез" class="nav-link" data-scroll-target="#тестирование-гипотез"><span class="header-section-number">12.6</span> Тестирование гипотез</a>
   <ul class="collapse">
@@ -515,8 +516,16 @@ y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \vareps
 <p>Если ICC высокий, то наблюдения очень похожи внутри каждой из групп, заданных случайным фактором. Значит, можно брать меньше наблюдений в группе.</p>
 <p>Это можно использовать при определении объема выборки (при анализе пилотных данных).</p>
 </section>
-<section id="анализ-остатков-модели" class="level3" data-number="12.5.2">
-<h3 data-number="12.5.2" class="anchored" data-anchor-id="анализ-остатков-модели"><span class="header-section-number">12.5.2</span> Анализ остатков модели</h3>
+<section id="pseudo-r2" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="pseudo-r2"><span class="header-section-number">12.5.2</span> Pseudo-<span class="math inline">\(R^2\)</span></h3>
+<p>Для смешанных моделей существует аналог коэффициента детерминации, только теперь их два:</p>
+<ul>
+<li>Marginal <span class="math inline">\(R^2\)</span> — доля дисперсии, объясненной фиксированными факторами</li>
+<li>Conditional <span class="math inline">\(R^2\)</span> — доля дисперсии, объясненной моделью в целом (и фиксированными, и случайными факторами)</li>
+</ul>
+</section>
+<section id="анализ-остатков-модели" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="анализ-остатков-модели"><span class="header-section-number">12.5.3</span> Анализ остатков модели</h3>
 <p>Остается ряд допущений, классических для линейных моделей:</p>
 <ul>
 <li>линейность связи</li>

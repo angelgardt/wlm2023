@@ -533,7 +533,6 @@ y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \vareps
 <section id="диагностика-модели" class="slide level2">
 <h2>Диагностика модели</h2>
 <ul>
-<li><strong>индуцированные корреляции</strong></li>
 <li><strong>коэффициент внутриклассовой корреляции (intra-class correlation, ICC)</strong></li>
 </ul>
 <p><span class="math display">\[
@@ -548,6 +547,13 @@ y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \vareps
 <ul>
 <li>Если ICC низкий, то наблюдения очень разные внутри каждой из групп. Значит, чтобы надежно оценить эффект этого случайного фактора, нужно брать больше наблюдений в группе.</li>
 <li>Если ICC высокий, то наблюдения очень похожи внутри каждой из групп, заданных случайным фактором. Значит, можно брать меньше наблюдений в группе.</li>
+</ul>
+</section>
+<section id="pseudo-r2" class="slide level2">
+<h2>Pseudo-<span class="math inline">\(R^2\)</span></h2>
+<ul>
+<li>Marginal <span class="math inline">\(R^2\)</span> — доля дисперсии, объясненной фиксированными факторами</li>
+<li>Conditional <span class="math inline">\(R^2\)</span> — доля дисперсии, объясненной моделью в целом (и фиксированными, и случайными факторами)</li>
 </ul>
 </section>
 <section id="анализ-остатков-модели" class="slide level2">
