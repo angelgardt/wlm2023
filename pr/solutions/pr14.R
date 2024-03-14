@@ -54,6 +54,7 @@ share %>% ggplot(aes(setsize, time1, color = id)) +
 
 
 # 4
+# https://sape.inf.usi.ch/quick-reference/ggplot2/shape
 share %>% ggplot(aes(setsize, time1, shape = id)) +
   stat_summary(fun = mean, geom = 'point', position = position_dodge(.1)) +
   stat_summary(fun = mean, geom = 'line', position = position_dodge(.1)) +
