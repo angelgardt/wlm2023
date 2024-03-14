@@ -36,7 +36,6 @@ share %>% ggplot(aes(setsize, time1)) +
             size = 2)
 
 
-
 # 3
 ## a
 model2 <- glm(time1 ~ setsize + id, family = Gamma, data = share)
