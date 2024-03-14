@@ -5,17 +5,37 @@
 REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 ## Основные задания {#pr14_main}
+
+:::{.callout-note}
+Для работы нам понадобятся пакеты `lme4`, `lmerTest` и `performance`. Код для их установки ниже.
+
+```{r, echo=TRUE, eval=FALSE}
+pkgs <- c("lme4", "lmerTest", "performance")
+install.packages(pkgs[!pkgs %in% installed.packages()])
+```
+
+:::
 
 ### #1
 
 <img id="pr14-1-level" class="level"/>
 
 ::: {#pr14-1-task .task}
-Текст задания `переменная`.
+Сегодня мы возьмем уже хорошо знакомые нам данные `share` про зрительный поиск иконок share iOS и Android, и попробуем их проанализировать с помощью смешанных моделей.
+
+* Загрузите [данные](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr14/share.csv), вспомните их структуру.
+* Приведите переменные `trialtype`, `id` и `platform` к факторному типу. Время `time1` сейчас записано в секундах --- переведите его в миллисекунды.
+* Отберите те пробы, которые содержать только один целевой стимул.
+
 :::
 
-::: {#pr14-1-autocheck .autocheck}
+::: {#pr14-1-autocheck .autocheck hidden="true"}
 ::: {#pr14-1-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -28,7 +48,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-1-hints">
 
 <summary>Подсказки</summary>
@@ -59,12 +79,12 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <img id="pr14-2-level" class="level"/>
 
 ::: {#pr14-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+a. Постройте обобщенную линейную модель, в которой целевой переменной будет `time1`, а количественным предиктором `setsize`. Для моделирования целевой переменной используйте гамма-распределение.
+b. Визуализируйте реальные и модельные значения. Оцените результаты моделирования.
 :::
 
-::: {#pr14-2-autocheck .autocheck}
+::: {#pr14-2-autocheck .autocheck hidden="true"}
 ::: {#pr14-2-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -77,7 +97,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-2-hints">
 
 <summary>Подсказки</summary>
@@ -108,10 +128,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-3-level" class="level"/>
 
 ::: {#pr14-3-task .task}
-Текст задания.
+a. Постройте обобщенную линейную модель, в которой целевой переменной будет `time1`, количественным предиктором --- `setsize`, а категориальным --- `id`. Для моделирования целевой переменной используйте гамма-распределение.
+b. Визуализируйте реальные и модельные значения. Оцените результаты моделирования.
 :::
 
-::: {#pr14-3-autocheck .autocheck}
+::: {#pr14-3-autocheck .autocheck hidden="true"}
 ::: {#pr14-3-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -124,7 +145,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-3-hints">
 
 <summary>Подсказки</summary>
@@ -155,10 +176,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-4-level" class="level"/>
 
 ::: {#pr14-4-task .task}
-Текст задания.
+Визуализируйте средние значения времени реакции (`time1`) для каждого респондента в зависимости от `setsize`. Оцените график. Можно ли использовать количество стимулов в качестве количественного предиктора в линейной модели?
 :::
 
-::: {#pr14-4-autocheck .autocheck}
+::: {#pr14-4-autocheck .autocheck hidden="true"}
 ::: {#pr14-4-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -171,7 +192,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-4-hints">
 
 <summary>Подсказки</summary>
@@ -202,10 +223,13 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-5-level" class="level"/>
 
 ::: {#pr14-5-task .task}
-Текст задания.
+Постройте две смешанные линейные модели. В обеих целевой переменной задайте `time1`, а фиксированным эффектом --- `setsize`.
+
+a. В первую модель включите только случайный интерсепт.
+b. Во вторую включите случайный интерспепт и случайный угловой коэффициент для переменной `setsize`.
 :::
 
-::: {#pr14-5-autocheck .autocheck}
+::: {#pr14-5-autocheck .autocheck hidden="true"}
 ::: {#pr14-5-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -218,7 +242,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-5-hints">
 
 <summary>Подсказки</summary>
@@ -249,10 +273,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-6-level" class="level"/>
 
 ::: {#pr14-6-task .task}
-Текст задания.
+Сравните две построенные модели: протестируйте гипотезу о структуре случайных эффектов.
+
+Обратите внимание на способ подбора коэффициентов модели.
+
+Решите, с какой структурой случайных эффектов далее будете работать.
 :::
 
-::: {#pr14-6-autocheck .autocheck}
+::: {#pr14-6-autocheck .autocheck hidden="true"}
 ::: {#pr14-6-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -265,7 +293,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-6-hints">
 
 <summary>Подсказки</summary>
@@ -296,10 +324,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-7-level" class="level"/>
 
 ::: {#pr14-7-task .task}
-Текст задания.
+a. Постройте смешанную линейную модель, в которой целевая переменная и фиксированные эффекты будут такими же, как в предыдущих, а случайная часть модели будет соответствовать выбранной в предыдущем задании. Подберите коэффициента таким способом, чтобы можно было далее тестировать гипотезы об их значениях.
+b. Рассчитайте коэффициент внутриклассовой корреляции для построенной модели.
 :::
 
-::: {#pr14-7-autocheck .autocheck}
+::: {#pr14-7-autocheck .autocheck hidden="true"}
 ::: {#pr14-7-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -312,7 +341,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-7-hints">
 
 <summary>Подсказки</summary>
@@ -343,10 +372,17 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-8-level" class="level"/>
 
 ::: {#pr14-8-task .task}
-Текст задания.
+Проведите диагностику модели.
+
+a. Подготовьте данные для анализа остатков модели.
+b. Визуализируйте зависимость остатков от предсказанных моделью значений.
+с. Визуализируйте зависимость остатков от фиксированных факторов.
+d. Визуализируйте зависимость остатков от случайных факторов.
+
+Сделайте выводы по результатам графической диагностики.
 :::
 
-::: {#pr14-8-autocheck .autocheck}
+::: {#pr14-8-autocheck .autocheck hidden="true"}
 ::: {#pr14-8-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -359,7 +395,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-8-hints">
 
 <summary>Подсказки</summary>
@@ -390,10 +426,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-9-level" class="level"/>
 
 ::: {#pr14-9-task .task}
-Текст задания.
+a. В эксперименте помимо сетсайза были и другие переменные, в частности --- `trialtype` и `platform`. Включите их, а также все возможные взаимодействия в модель.
+b. Проведите графическую диагностику остатков модели. Сделайте выводы по результатам диагностики.
 :::
 
-::: {#pr14-9-autocheck .autocheck}
+::: {#pr14-9-autocheck .autocheck hidden="true"}
 ::: {#pr14-9-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -406,7 +443,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-9-hints">
 
 <summary>Подсказки</summary>
@@ -437,10 +474,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-10-level" class="level"/>
 
 ::: {#pr14-10-task .task}
-Текст задания.
+Проверьте гипотезу о статистической значимости модели в целом.
 :::
 
-::: {#pr14-10-autocheck .autocheck}
+::: {#pr14-10-autocheck .autocheck hidden="true"}
 ::: {#pr14-10-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -453,7 +490,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-10-hints">
 
 <summary>Подсказки</summary>
@@ -484,10 +521,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-11-level" class="level"/>
 
 ::: {#pr14-11-task .task}
-Текст задания.
+Выведите саммари модели (`summary()`). Изучите результаты. Можно ли доверять результатам представленных в нём статистических тестов?
 :::
 
-::: {#pr14-11-autocheck .autocheck}
+::: {#pr14-11-autocheck .autocheck hidden="true"}
 ::: {#pr14-11-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -500,7 +537,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-11-hints">
 
 <summary>Подсказки</summary>
@@ -528,13 +565,13 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ### #12
 
-<img class="level"/>
+<img id="pr14-12-level" class="level"/>
 
 ::: {#pr14-12-task .task}
-Текст задания.
+Проверьте гипотезы о значимости коэффициентов модели и при необходимости упростите её.
 :::
 
-::: {#pr14-12-autocheck .autocheck}
+::: {#pr14-12-autocheck .autocheck hidden="true"}
 ::: {#pr14-12-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -547,7 +584,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-12-hints">
 
 <summary>Подсказки</summary>
@@ -577,11 +614,11 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <img id="pr14-13-level" class="level"/>
 
-::: task
-Текст задания.
+::: {#pr14-13-task .task}
+Сравните упрощенную и исходную модели друг с другом с помощью информационных критериев. Какая из них лучше описывает данные?
 :::
 
-::: {#pr14-13-autocheck .autocheck}
+::: {#pr14-13-autocheck .autocheck hidden="true"}
 ::: {#pr14-13-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -594,7 +631,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-13-hints">
 
 <summary>Подсказки</summary>
@@ -625,10 +662,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-14-level" class="level"/>
 
 ::: {#pr14-14-task .task}
-Текст задания.
+Рассчитайте псевдо-$R^2$ для модели, которая лучше описывает данные.
 :::
 
-::: {#pr14-14-autocheck .autocheck}
+::: {#pr14-14-autocheck .autocheck hidden="true"}
 ::: {#pr14-14-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -641,7 +678,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-14-hints">
 
 <summary>Подсказки</summary>
@@ -672,10 +709,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-15-level" class="level"/>
 
 ::: {#pr14-15-task .task}
-Текст задания.
+Выведите саммари модели, которая лучше описывает данные, и проинтерпретируйте результаты.
 :::
 
-::: {#pr14-15-autocheck .autocheck}
+::: {#pr14-15-autocheck .autocheck hidden="true"}
 ::: {#pr14-15-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -688,7 +725,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-15-hints">
 
 <summary>Подсказки</summary>
@@ -719,10 +756,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-16-level" class="level"/>
 
 ::: {#pr14-16-task .task}
-Текст задания.
+a. Постройте обобщенную линейную модель, структура [фиксированных] предикторов которой совпадает с фиксированной частью упрощенной модели. Для моделирования целевой переменной используйте гамма-распределение.
+b. Получите предсказания для GLM и [упрощенной] GLMM.
+c. Рассчитайте метрики предсказательной силы двух моделей (возьмите RMSE и MAPE) и сравните их. Какая модель лучше предсказывает целевую переменную?
 :::
 
-::: {#pr14-16-autocheck .autocheck}
+::: {#pr14-16-autocheck .autocheck hidden="true"}
 ::: {#pr14-16-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -735,7 +774,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-16-hints">
 
 <summary>Подсказки</summary>
@@ -766,10 +805,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-17-level" class="level"/>
 
 ::: {#pr14-17-task .task}
-Текст задания.
+Создайте в датасете новую переменную `is_correct`, которая будет равна `1`, если клик в пробе был верный, и `0`, если клик в пробе был ошибочный.
 :::
 
-::: {#pr14-17-autocheck .autocheck}
+::: {#pr14-17-autocheck .autocheck hidden="true"}
 ::: {#pr14-17-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -782,7 +821,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-17-hints">
 
 <summary>Подсказки</summary>
@@ -813,10 +852,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-18-level" class="level"/>
 
 ::: {#pr14-18-task .task}
-Текст задания.
+Постройте биномиальную смешанную модель, в которой целевой переменной будет `is_correct`. В случайную часть модели включите только интерсепт, а в фиксированной части попробуйте различные сочетания предикторов. Оцените результаты моделирования.
 :::
 
-::: {#pr14-18-autocheck .autocheck}
+::: {#pr14-18-autocheck .autocheck hidden="true"}
 ::: {#pr14-18-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -829,7 +868,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-18-hints">
 
 <summary>Подсказки</summary>
@@ -860,10 +899,10 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-19-level" class="level"/>
 
 ::: {#pr14-19-task .task}
-Текст задания.
+Протестируйте гипотезу о статитсической значимости биномиальной GLMM в целом.
 :::
 
-::: {#pr14-19-autocheck .autocheck}
+::: {#pr14-19-autocheck .autocheck hidden="true"}
 ::: {#pr14-19-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -876,7 +915,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-19-hints">
 
 <summary>Подсказки</summary>
@@ -907,10 +946,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="pr14-20-level" class="level"/>
 
 ::: {#pr14-20-task .task}
-Текст задания.
+Получите предсказания биномиальной GLMM в мосштабе вероятностей, а затем, используя порог 0.8, переведите их в категориальные предсказания.
+
+Постройте confusion matrix и оцените результаты моделирования.
 :::
 
-::: {#pr14-20-autocheck .autocheck}
+::: {#pr14-20-autocheck .autocheck hidden="true"}
 ::: {#pr14-20-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -923,7 +964,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="pr14-20-hints">
 
 <summary>Подсказки</summary>
@@ -949,6 +990,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+<!---
 ## Дополнительные задания {#pr14_add}
 
 ### #1
@@ -1420,6 +1462,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 </details>
 :::
+
+--->
+
 
 ```{=html}
 <!--- CHANGE pr14 TO pr<n> IN THE LINES BELOW--->

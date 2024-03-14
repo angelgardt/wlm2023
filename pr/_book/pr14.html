@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -65,6 +99,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -79,6 +114,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -283,19 +345,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">#19</a></li>
   <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">#20</a></li>
   </ul></li>
-  <li><a href="#pr14_add" id="toc-pr14_add" class="nav-link" data-scroll-target="#pr14_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">#1</a></li>
-  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">#2</a></li>
-  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">#3</a></li>
-  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">#4</a></li>
-  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">#5</a></li>
-  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">#6</a></li>
-  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">#7</a></li>
-  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">#8</a></li>
-  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">#9</a></li>
-  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">#10</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -326,13 +375,32 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 -->
 <section id="pr14_main" class="level2">
 <h2 class="anchored" data-anchor-id="pr14_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Для работы нам понадобятся пакеты <code>lme4</code>, <code>lmerTest</code> и <code>performance</code>. Код для их установки ниже.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"lme4"</span>, <span class="st">"lmerTest"</span>, <span class="st">"performance"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs[<span class="sc">!</span>pkgs <span class="sc">%in%</span> <span class="fu">installed.packages</span>()])</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="pr14-1-level" class="level"></p>
 <div id="pr14-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<p>Сегодня мы возьмем уже хорошо знакомые нам данные <code>share</code> про зрительный поиск иконок share iOS и Android, и попробуем их проанализировать с помощью смешанных моделей.</p>
+<ul>
+<li>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr14/share.csv">данные</a>, вспомните их структуру.</li>
+<li>Приведите переменные <code>trialtype</code>, <code>id</code> и <code>platform</code> к факторному типу. Время <code>time1</code> сейчас записано в секундах — переведите его в миллисекунды.</li>
+<li>Отберите те пробы, которые содержать только один целевой стимул.</li>
+</ul>
 </div>
-<div id="pr14-1-autocheck" class="autocheck">
+<div id="pr14-1-autocheck" class="autocheck" hidden="true">
 <div id="pr14-1-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -342,7 +410,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-1-hints">
 <summary>
 Подсказки
@@ -369,10 +437,12 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="pr14-2-level" class="level"></p>
 <div id="pr14-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<ol type="a">
+<li>Постройте обобщенную линейную модель, в которой целевой переменной будет <code>time1</code>, а количественным предиктором <code>setsize</code>. Для моделирования целевой переменной используйте гамма-распределение.</li>
+<li>Визуализируйте реальные и модельные значения. Оцените результаты моделирования.</li>
+</ol>
 </div>
-<div id="pr14-2-autocheck" class="autocheck">
+<div id="pr14-2-autocheck" class="autocheck" hidden="true">
 <div id="pr14-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -382,7 +452,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-2-hints">
 <summary>
 Подсказки
@@ -409,9 +479,12 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="pr14-3-level" class="level"></p>
 <div id="pr14-3-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте обобщенную линейную модель, в которой целевой переменной будет <code>time1</code>, количественным предиктором — <code>setsize</code>, а категориальным — <code>id</code>. Для моделирования целевой переменной используйте гамма-распределение.</li>
+<li>Визуализируйте реальные и модельные значения. Оцените результаты моделирования.</li>
+</ol>
 </div>
-<div id="pr14-3-autocheck" class="autocheck">
+<div id="pr14-3-autocheck" class="autocheck" hidden="true">
 <div id="pr14-3-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -421,7 +494,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-3-hints">
 <summary>
 Подсказки
@@ -448,9 +521,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="pr14-4-level" class="level"></p>
 <div id="pr14-4-task" class="task">
-<p>Текст задания.</p>
+<p>Визуализируйте средние значения времени реакции (<code>time1</code>) для каждого респондента в зависимости от <code>setsize</code>. Оцените график. Можно ли использовать количество стимулов в качестве количественного предиктора в линейной модели?</p>
 </div>
-<div id="pr14-4-autocheck" class="autocheck">
+<div id="pr14-4-autocheck" class="autocheck" hidden="true">
 <div id="pr14-4-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -460,7 +533,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-4-hints">
 <summary>
 Подсказки
@@ -487,9 +560,13 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="pr14-5-level" class="level"></p>
 <div id="pr14-5-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте две смешанные линейные модели. В обеих целевой переменной задайте <code>time1</code>, а фиксированным эффектом — <code>setsize</code>.</p>
+<ol type="a">
+<li>В первую модель включите только случайный интерсепт.</li>
+<li>Во вторую включите случайный интерспепт и случайный угловой коэффициент для переменной <code>setsize</code>.</li>
+</ol>
 </div>
-<div id="pr14-5-autocheck" class="autocheck">
+<div id="pr14-5-autocheck" class="autocheck" hidden="true">
 <div id="pr14-5-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -499,7 +576,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-5-hints">
 <summary>
 Подсказки
@@ -526,9 +603,11 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="pr14-6-level" class="level"></p>
 <div id="pr14-6-task" class="task">
-<p>Текст задания.</p>
+<p>Сравните две построенные модели: протестируйте гипотезу о структуре случайных эффектов.</p>
+<p>Обратите внимание на способ подбора коэффициентов модели.</p>
+<p>Решите, с какой структурой случайных эффектов далее будете работать.</p>
 </div>
-<div id="pr14-6-autocheck" class="autocheck">
+<div id="pr14-6-autocheck" class="autocheck" hidden="true">
 <div id="pr14-6-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -538,7 +617,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-6-hints">
 <summary>
 Подсказки
@@ -565,9 +644,12 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="pr14-7-level" class="level"></p>
 <div id="pr14-7-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте смешанную линейную модель, в которой целевая переменная и фиксированные эффекты будут такими же, как в предыдущих, а случайная часть модели будет соответствовать выбранной в предыдущем задании. Подберите коэффициента таким способом, чтобы можно было далее тестировать гипотезы об их значениях.</li>
+<li>Рассчитайте коэффициент внутриклассовой корреляции для построенной модели.</li>
+</ol>
 </div>
-<div id="pr14-7-autocheck" class="autocheck">
+<div id="pr14-7-autocheck" class="autocheck" hidden="true">
 <div id="pr14-7-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -577,7 +659,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-7-hints">
 <summary>
 Подсказки
@@ -604,9 +686,15 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="pr14-8-level" class="level"></p>
 <div id="pr14-8-task" class="task">
-<p>Текст задания.</p>
+<p>Проведите диагностику модели.</p>
+<ol type="a">
+<li>Подготовьте данные для анализа остатков модели.</li>
+<li>Визуализируйте зависимость остатков от предсказанных моделью значений. с. Визуализируйте зависимость остатков от фиксированных факторов.</li>
+<li>Визуализируйте зависимость остатков от случайных факторов.</li>
+</ol>
+<p>Сделайте выводы по результатам графической диагностики.</p>
 </div>
-<div id="pr14-8-autocheck" class="autocheck">
+<div id="pr14-8-autocheck" class="autocheck" hidden="true">
 <div id="pr14-8-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -616,7 +704,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-8-hints">
 <summary>
 Подсказки
@@ -643,9 +731,12 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="pr14-9-level" class="level"></p>
 <div id="pr14-9-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>В эксперименте помимо сетсайза были и другие переменные, в частности — <code>trialtype</code> и <code>platform</code>. Включите их, а также все возможные взаимодействия в модель.</li>
+<li>Проведите графическую диагностику остатков модели. Сделайте выводы по результатам диагностики.</li>
+</ol>
 </div>
-<div id="pr14-9-autocheck" class="autocheck">
+<div id="pr14-9-autocheck" class="autocheck" hidden="true">
 <div id="pr14-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -655,7 +746,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-9-hints">
 <summary>
 Подсказки
@@ -682,9 +773,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="pr14-10-level" class="level"></p>
 <div id="pr14-10-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте гипотезу о статистической значимости модели в целом.</p>
 </div>
-<div id="pr14-10-autocheck" class="autocheck">
+<div id="pr14-10-autocheck" class="autocheck" hidden="true">
 <div id="pr14-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -694,7 +785,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-10-hints">
 <summary>
 Подсказки
@@ -721,9 +812,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-10">#11</h3>
 <p><img id="pr14-11-level" class="level"></p>
 <div id="pr14-11-task" class="task">
-<p>Текст задания.</p>
+<p>Выведите саммари модели (<code>summary()</code>). Изучите результаты. Можно ли доверять результатам представленных в нём статистических тестов?</p>
 </div>
-<div id="pr14-11-autocheck" class="autocheck">
+<div id="pr14-11-autocheck" class="autocheck" hidden="true">
 <div id="pr14-11-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -733,7 +824,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-11-hints">
 <summary>
 Подсказки
@@ -758,11 +849,11 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 </section>
 <section id="section-11" class="level3">
 <h3 class="anchored" data-anchor-id="section-11">#12</h3>
-<p><img class="level"></p>
+<p><img id="pr14-12-level" class="level"></p>
 <div id="pr14-12-task" class="task">
-<p>Текст задания.</p>
+<p>Проверьте гипотезы о значимости коэффициентов модели и при необходимости упростите её.</p>
 </div>
-<div id="pr14-12-autocheck" class="autocheck">
+<div id="pr14-12-autocheck" class="autocheck" hidden="true">
 <div id="pr14-12-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -772,7 +863,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-12-hints">
 <summary>
 Подсказки
@@ -798,10 +889,10 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <section id="section-12" class="level3">
 <h3 class="anchored" data-anchor-id="section-12">#13</h3>
 <p><img id="pr14-13-level" class="level"></p>
-<div class="task">
-<p>Текст задания.</p>
+<div id="pr14-13-task" class="task">
+<p>Сравните упрощенную и исходную модели друг с другом с помощью информационных критериев. Какая из них лучше описывает данные?</p>
 </div>
-<div id="pr14-13-autocheck" class="autocheck">
+<div id="pr14-13-autocheck" class="autocheck" hidden="true">
 <div id="pr14-13-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -811,7 +902,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-13-hints">
 <summary>
 Подсказки
@@ -838,9 +929,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-13">#14</h3>
 <p><img id="pr14-14-level" class="level"></p>
 <div id="pr14-14-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте псевдо-<span class="math inline">\(R^2\)</span> для модели, которая лучше описывает данные.</p>
 </div>
-<div id="pr14-14-autocheck" class="autocheck">
+<div id="pr14-14-autocheck" class="autocheck" hidden="true">
 <div id="pr14-14-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -850,7 +941,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-14-hints">
 <summary>
 Подсказки
@@ -877,9 +968,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-14">#15</h3>
 <p><img id="pr14-15-level" class="level"></p>
 <div id="pr14-15-task" class="task">
-<p>Текст задания.</p>
+<p>Выведите саммари модели, которая лучше описывает данные, и проинтерпретируйте результаты.</p>
 </div>
-<div id="pr14-15-autocheck" class="autocheck">
+<div id="pr14-15-autocheck" class="autocheck" hidden="true">
 <div id="pr14-15-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -889,7 +980,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-15-hints">
 <summary>
 Подсказки
@@ -916,9 +1007,13 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-15">#16</h3>
 <p><img id="pr14-16-level" class="level"></p>
 <div id="pr14-16-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Постройте обобщенную линейную модель, структура [фиксированных] предикторов которой совпадает с фиксированной частью упрощенной модели. Для моделирования целевой переменной используйте гамма-распределение.</li>
+<li>Получите предсказания для GLM и [упрощенной] GLMM.</li>
+<li>Рассчитайте метрики предсказательной силы двух моделей (возьмите RMSE и MAPE) и сравните их. Какая модель лучше предсказывает целевую переменную?</li>
+</ol>
 </div>
-<div id="pr14-16-autocheck" class="autocheck">
+<div id="pr14-16-autocheck" class="autocheck" hidden="true">
 <div id="pr14-16-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -928,7 +1023,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-16-hints">
 <summary>
 Подсказки
@@ -955,9 +1050,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-16">#17</h3>
 <p><img id="pr14-17-level" class="level"></p>
 <div id="pr14-17-task" class="task">
-<p>Текст задания.</p>
+<p>Создайте в датасете новую переменную <code>is_correct</code>, которая будет равна <code>1</code>, если клик в пробе был верный, и <code>0</code>, если клик в пробе был ошибочный.</p>
 </div>
-<div id="pr14-17-autocheck" class="autocheck">
+<div id="pr14-17-autocheck" class="autocheck" hidden="true">
 <div id="pr14-17-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -967,7 +1062,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-17-hints">
 <summary>
 Подсказки
@@ -994,9 +1089,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-17">#18</h3>
 <p><img id="pr14-18-level" class="level"></p>
 <div id="pr14-18-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте биномиальную смешанную модель, в которой целевой переменной будет <code>is_correct</code>. В случайную часть модели включите только интерсепт, а в фиксированной части попробуйте различные сочетания предикторов. Оцените результаты моделирования.</p>
 </div>
-<div id="pr14-18-autocheck" class="autocheck">
+<div id="pr14-18-autocheck" class="autocheck" hidden="true">
 <div id="pr14-18-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -1006,7 +1101,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-18-hints">
 <summary>
 Подсказки
@@ -1033,9 +1128,9 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-18">#19</h3>
 <p><img id="pr14-19-level" class="level"></p>
 <div id="pr14-19-task" class="task">
-<p>Текст задания.</p>
+<p>Протестируйте гипотезу о статитсической значимости биномиальной GLMM в целом.</p>
 </div>
-<div id="pr14-19-autocheck" class="autocheck">
+<div id="pr14-19-autocheck" class="autocheck" hidden="true">
 <div id="pr14-19-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -1045,7 +1140,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-19-hints">
 <summary>
 Подсказки
@@ -1072,9 +1167,10 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-19">#20</h3>
 <p><img id="pr14-20-level" class="level"></p>
 <div id="pr14-20-task" class="task">
-<p>Текст задания.</p>
+<p>Получите предсказания биномиальной GLMM в мосштабе вероятностей, а затем, используя порог 0.8, переведите их в категориальные предсказания.</p>
+<p>Постройте confusion matrix и оцените результаты моделирования.</p>
 </div>
-<div id="pr14-20-autocheck" class="autocheck">
+<div id="pr14-20-autocheck" class="autocheck" hidden="true">
 <div id="pr14-20-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -1084,7 +1180,7 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="pr14-20-hints">
 <summary>
 Подсказки
@@ -1106,399 +1202,480 @@ REPLACE ALL pr14 TO pr<n> WITH MATCH CASE
 </details>
 </details>
 </div>
-</section>
-</section>
-<section id="pr14_add" class="level2">
-<h2 class="anchored" data-anchor-id="pr14_add">Дополнительные задания</h2>
-<section id="section-20" class="level3">
-<h3 class="anchored" data-anchor-id="section-20">#1</h3>
-<p><img id="pr14-21-level" class="level"></p>
-<div id="pr14-21-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-21-autocheck" class="autocheck">
-<div id="pr14-21-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-21" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-21')"></p>
-<div id="pr14-21-fb" class="autocheck-feedback">
+<!---
+## Дополнительные задания {#pr14_add}
 
-</div>
-</div>
-<div class="hints-wrapper">
+### #1
+
+<img id="pr14-21-level" class="level"/>
+
+::: {#pr14-21-task .task}
+Текст задания.
+:::
+
+::: {#pr14-21-autocheck .autocheck}
+::: {#pr14-21-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-21" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-21')">
+
+::: {#pr14-21-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-21-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-21" class="level3">
-<h3 class="anchored" data-anchor-id="section-21">#2</h3>
-<p><img id="pr14-22-level" class="level"></p>
-<div id="pr14-22-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-22-autocheck" class="autocheck">
-<div id="pr14-22-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-22" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-22')"></p>
-<div id="pr14-22-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="pr14-22-level" class="level"/>
+
+::: {#pr14-22-task .task}
+Текст задания.
+:::
+
+::: {#pr14-22-autocheck .autocheck}
+::: {#pr14-22-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-22" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-22')">
+
+::: {#pr14-22-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-22-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-22" class="level3">
-<h3 class="anchored" data-anchor-id="section-22">#3</h3>
-<p><img id="pr14-23-level" class="level"></p>
-<div id="pr14-23-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-23-autocheck" class="autocheck">
-<div id="pr14-23-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-23" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-23')"></p>
-<div id="pr14-23-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="pr14-23-level" class="level"/>
+
+::: {#pr14-23-task .task}
+Текст задания.
+:::
+
+::: {#pr14-23-autocheck .autocheck}
+::: {#pr14-23-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-23" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-23')">
+
+::: {#pr14-23-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-23-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-23" class="level3">
-<h3 class="anchored" data-anchor-id="section-23">#4</h3>
-<p><img id="pr14-24-level" class="level"></p>
-<div id="pr14-24-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-24-autocheck" class="autocheck">
-<div id="pr14-24-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-24" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-24')"></p>
-<div id="pr14-24-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="pr14-24-level" class="level"/>
+
+::: {#pr14-24-task .task}
+Текст задания.
+:::
+
+::: {#pr14-24-autocheck .autocheck}
+::: {#pr14-24-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-24" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-24')">
+
+::: {#pr14-24-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-24-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-24" class="level3">
-<h3 class="anchored" data-anchor-id="section-24">#5</h3>
-<p><img id="pr14-25-level" class="level"></p>
-<div id="pr14-25-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-25-autocheck" class="autocheck">
-<div id="pr14-25-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-25" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-25')"></p>
-<div id="pr14-25-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="pr14-25-level" class="level"/>
+
+::: {#pr14-25-task .task}
+Текст задания.
+:::
+
+::: {#pr14-25-autocheck .autocheck}
+::: {#pr14-25-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-25" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-25')">
+
+::: {#pr14-25-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-25-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-25" class="level3">
-<h3 class="anchored" data-anchor-id="section-25">#6</h3>
-<p><img id="pr14-26-level" class="level"></p>
-<div id="pr14-26-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-26-autocheck" class="autocheck">
-<div id="pr14-26-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-26" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-26')"></p>
-<div id="pr14-26-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #6
+
+<img id="pr14-26-level" class="level"/>
+
+::: {#pr14-26-task .task}
+Текст задания.
+:::
+
+::: {#pr14-26-autocheck .autocheck}
+::: {#pr14-26-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-26" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-26')">
+
+::: {#pr14-26-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-26-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-26" class="level3">
-<h3 class="anchored" data-anchor-id="section-26">#7</h3>
-<p><img id="pr14-27-level" class="level"></p>
-<div id="pr14-27-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-27-autocheck" class="autocheck">
-<div id="pr14-27-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-27" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-27')"></p>
-<div id="pr14-27-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #7
+
+<img id="pr14-27-level" class="level"/>
+
+::: {#pr14-27-task .task}
+Текст задания.
+:::
+
+::: {#pr14-27-autocheck .autocheck}
+::: {#pr14-27-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-27" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-27')">
+
+::: {#pr14-27-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-27-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-27" class="level3">
-<h3 class="anchored" data-anchor-id="section-27">#8</h3>
-<p><img id="pr14-28-level" class="level"></p>
-<div id="pr14-28-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-28-autocheck" class="autocheck">
-<div id="pr14-28-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-28" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-28')"></p>
-<div id="pr14-28-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #8
+
+<img id="pr14-28-level" class="level"/>
+
+::: {#pr14-28-task .task}
+Текст задания.
+:::
+
+::: {#pr14-28-autocheck .autocheck}
+::: {#pr14-28-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-28" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-28')">
+
+::: {#pr14-28-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-28-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-28" class="level3">
-<h3 class="anchored" data-anchor-id="section-28">#9</h3>
-<p><img id="pr14-29-level" class="level"></p>
-<div id="pr14-29-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-29-autocheck" class="autocheck">
-<div id="pr14-29-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-29" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-29')"></p>
-<div id="pr14-29-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #9
+
+<img id="pr14-29-level" class="level"/>
+
+::: {#pr14-29-task .task}
+Текст задания.
+:::
+
+::: {#pr14-29-autocheck .autocheck}
+::: {#pr14-29-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-29" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-29')">
+
+::: {#pr14-29-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-29-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-29" class="level3">
-<h3 class="anchored" data-anchor-id="section-29">#10</h3>
-<p><img id="pr14-30-level" class="level"></p>
-<div id="pr14-30-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="pr14-30-autocheck" class="autocheck">
-<div id="pr14-30-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="pr14-30" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-30')"></p>
-<div id="pr14-30-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #10
+
+<img id="pr14-30-level" class="level"/>
+
+::: {#pr14-30-task .task}
+Текст задания.
+:::
+
+::: {#pr14-30-autocheck .autocheck}
+::: {#pr14-30-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="pr14-30" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('pr14-30')">
+
+::: {#pr14-30-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="pr14-30-hints">
-<summary>
-Подсказки
-</summary>
+
+<summary>Подсказки</summary>
+
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
+
+<summary>Как делать задание?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+
+<summary>Что надо сделать?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Ответ неверный
-</summary>
+
+<summary>Ответ неверный</summary>
+
 </details>
+
 </details>
-</div>
+:::
+
+--->
 <!--- CHANGE pr14 TO pr<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="./js/pr14.json"></script>
 <script type="text/javascript" src="./js/pr.js"></script>
@@ -1780,27 +1957,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1815,10 +1971,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1827,8 +1987,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
