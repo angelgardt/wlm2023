@@ -5,15 +5,50 @@
 REPLACE ALL hw13 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r}
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+```
+
 ## Основные задания {#hw13_main}
+
+:::{.callput-note}
+### Данные
+
+Сегодня мы работаем с [датасетом про ноутбуки](https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv), который содержит следующие переменные:
+
+* `Company` --- компания-производитель компьютера
+* `Product` --- бренд и модель
+* `TypeName` --- тип ноутбука (Notebook, Ultrabook, Gaming, etc.)
+* `Inches` --- размер экрана
+* `ScreenResolution` --- разрешение экрана
+* `Cpu` --- характеристики процессора
+* `Ram` --- размер оперативной памяти
+* `Memory` --- память жёсткого диска
+* `GPU` --- характеристики графического процессора
+* `OpSys` --- операционная система
+* `Weight` --- вес компьютера
+* `Price_euros` --- цена в Евро
+
+:::
 
 ### #1
 
 <img id="hw13-1-level" class="level"/>
 
 ::: {#hw13-1-task .task}
-Текст задания `переменная`.
+Загрузите [датасет](https://raw.githubusercontent.com/angelgardt/hseuxlab-wlm2021/master/data/laptop_price.csv). Проверьте типы переменных. Если есть такие переменные, которые по своему содержанию должны быть другого типа, приведите их к нужному типу. Сделайте необходимые преобразования с переменными, если они потребуются.
 :::
+
+```{r}
+laptops <- read_csv("https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv")
+
+laptops %>% 
+    mutate(Ram = Ram %>% str_remove("GB") %>% as.numeric(),
+           Weight = Weight %>% str_remove("kg") %>% as.numeric()) -> laptops
+```
 
 ::: {#hw13-1-autocheck .autocheck}
 ::: {#hw13-1-ir .input-requirements}
@@ -59,9 +94,9 @@ REPLACE ALL hw13 TO hw<n> WITH MATCH CASE
 <img id="hw13-2-level" class="level"/>
 
 ::: {#hw13-2-task .task}
-Текст задания.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Мы хотим узнать, от каких технических характеристик зависит цена ноутбука. Исследуйте взаимосвязи между ценой и характеристиками ноутбуков. Предположите, какие из характеристик могут быть включены в регрессионную модель в качестве предикторов цены.
+
 :::
 
 ::: {#hw13-2-autocheck .autocheck}
@@ -108,8 +143,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-3-level" class="level"/>
 
 ::: {#hw13-3-task .task}
-Текст задания.
+Постройте линейную модель `model1` со случайным интерсептом, которая позволит ответить на вопрос, как зависит цена компьютера от размера экрана? В качестве случайного эффекта включите в модель группировку по компании-производителю.
 :::
+
+```{r}
+model1 <- lmer(Price_euros ~ Inches + (1|Company), laptops)
+```
 
 ::: {#hw13-3-autocheck .autocheck}
 ::: {#hw13-3-ir .input-requirements}
@@ -155,8 +194,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-4-level" class="level"/>
 
 ::: {#hw13-4-task .task}
-Текст задания.
+Проверьте статистическую значимость модели `model1` в целом и статистистическую значимость фиксированных предикторов. Проинтерпретируйте полученные результаты.
 :::
+
+```{r}
+model0 <- lmer(Price_euros ~ 1 + (1|Company), laptops)
+anova(model0, model1, test = "Chi")
+summary(model1)
+```
 
 ::: {#hw13-4-autocheck .autocheck}
 ::: {#hw13-4-ir .input-requirements}
@@ -202,8 +247,13 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-5-level" class="level"/>
 
 ::: {#hw13-5-task .task}
-Текст задания.
+Включите в модель в качестве *количественного* фиксированного предиктора размер оперативной памяти ноутбука (`Ram`) --- создайте новую модель `model2`.
 :::
+
+```{r}
+laptops$Ram %>% unique()
+model2 <- lmer(Price_euros ~ Inches + Ram + (1|Company), laptops)
+```
 
 ::: {#hw13-5-autocheck .autocheck}
 ::: {#hw13-5-ir .input-requirements}
@@ -249,8 +299,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-6-level" class="level"/>
 
 ::: {#hw13-6-task .task}
-Текст задания.
+Сравните две имеющиеся модели --- с одним (`model1`) и двумя (`model2`) фиксированными предикторами. Проинтерпретируйте результаты.
 :::
+
+```{r}
+anova(model1, model2, test = "Chi")
+```
 
 ::: {#hw13-6-autocheck .autocheck}
 ::: {#hw13-6-ir .input-requirements}
@@ -296,8 +350,14 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-7-level" class="level"/>
 
 ::: {#hw13-7-task .task}
-Текст задания.
+Протестируйте статистическую значимость предикторов модели с двумя фиксированными предикторами (`model2`). Проинтерпретируйте результаты. Сравните с результатами тестирования значимости предикторов модели с одним фиксированным предиктором. 
+
+Почему так могло произойти?
 :::
+
+```{r}
+summary(model2)
+```
 
 ::: {#hw13-7-autocheck .autocheck}
 ::: {#hw13-7-ir .input-requirements}
@@ -343,8 +403,16 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-8-level" class="level"/>
 
 ::: {#hw13-8-task .task}
-Текст задания.
+Усложните случайную часть модели. Возьмите за основу имеющуюся модель с двумя фиксированными предикторами и добавьте ещё один случайный интерсепт. Группирующую переменную выберите самостоятельно. Обоснуйте выбор случайного фактора. Создайте модель `model3`.
+
+Протестируйте статистическую значимость фиксированных предикторов. Проинтерпретируйте результаты. Если есть что-либо необычное в результатах тестирования, дайте комментарий, почему это могло произойти.
 :::
+
+```{r}
+laptops$TypeName %>% unique()
+model3 <- lmer(Price_euros ~ Inches + Ram + (1|Company) + (1|TypeName), laptops)
+summary(model3)
+```
 
 ::: {#hw13-8-autocheck .autocheck}
 ::: {#hw13-8-ir .input-requirements}
@@ -390,8 +458,12 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-9-level" class="level"/>
 
 ::: {#hw13-9-task .task}
-Текст задания.
+Сравните модели с двумя фиксированными предикторами друг с другом (`model2` и `model3`). Проинтерпретируйте результаты.
 :::
+
+```{r}
+anova(model2, model3, test = "Chi", refit = FALSE)
+```
 
 ::: {#hw13-9-autocheck .autocheck}
 ::: {#hw13-9-ir .input-requirements}
@@ -437,8 +509,13 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 <img id="hw13-10-level" class="level"/>
 
 ::: {#hw13-10-task .task}
-Текст задания.
+Проведите дагностику модели `model3`. Сделайте заключение о качестве модели на основе результатов диагностики.
 :::
+
+```{r}
+hist(residuals(model3))
+plot(fitted.values(model3), residuals(model3))
+```
 
 ::: {#hw13-10-autocheck .autocheck}
 ::: {#hw13-10-ir .input-requirements}
@@ -479,6 +556,7 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 </details>
 :::
 
+<!---
 ## Дополнительные задания {#hw13_add}
 
 ### #1
@@ -715,6 +793,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 </details>
 :::
+
+--->
 
 ```{=html}
 <!--- CHANGE hw13 TO hw<n> IN THE LINES BELOW--->
