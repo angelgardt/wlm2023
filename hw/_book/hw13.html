@@ -295,7 +295,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#hw13_main" id="toc-hw13_main" class="nav-link active" data-scroll-target="#hw13_main">Основные задания</a>
   <ul class="collapse">
-  <li><a href="#данные" id="toc-данные" class="nav-link" data-scroll-target="#данные">Данные</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
@@ -335,49 +334,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!--
 REPLACE ALL hw13 TO hw<n> WITH MATCH CASE
 -->
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: Matrix
-
-Attaching package: 'Matrix'
-
-The following objects are masked from 'package:tidyr':
-
-    expand, pack, unpack</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'lmerTest'
-
-The following object is masked from 'package:lme4':
-
-    lmer
-
-The following object is masked from 'package:stats':
-
-    step</code></pre>
-</div>
-</div>
 <section id="hw13_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw13_main">Основные задания</h2>
-<section id="данные" class="level3 callput-note">
-<h3 class="anchored" data-anchor-id="данные">Данные</h3>
-<p>Сегодня мы работаем с <a href="https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv">датасетом про ноутбуки</a>, который содержит следующие переменные:</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы работаем с <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw13/laptop_price.csv">датасетом про ноутбуки</a>, который содержит следующие переменные:</p>
 <ul>
 <li><code>Company</code> — компания-производитель компьютера</li>
 <li><code>Product</code> — бренд и модель</li>
@@ -392,30 +361,15 @@ The following object is masked from 'package:stats':
 <li><code>Weight</code> — вес компьютера</li>
 <li><code>Price_euros</code> — цена в Евро</li>
 </ul>
-</section>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw13-1-level" class="level"></p>
 <div id="hw13-1-task" class="task">
-<p>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/hseuxlab-wlm2021/master/data/laptop_price.csv">датасет</a>. Проверьте типы переменных. Если есть такие переменные, которые по своему содержанию должны быть другого типа, приведите их к нужному типу. Сделайте необходимые преобразования с переменными, если они потребуются.</p>
+<p>Загрузите <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw13/laptop_price.csv">датасет</a>. Проверьте типы переменных. Если есть такие переменные, которые по своему содержанию должны быть другого типа, приведите их к нужному типу. Сделайте необходимые преобразования с переменными, если они потребуются.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>laptops <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1303 Columns: 13
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (10): Company, Product, TypeName, ScreenResolution, Cpu, Ram, Memory, Gp...
-dbl  (3): laptop_ID, Inches, Price_euros
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>laptops <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">Ram =</span> Ram <span class="sc">%&gt;%</span> <span class="fu">str_remove</span>(<span class="st">"GB"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>(),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">Weight =</span> Weight <span class="sc">%&gt;%</span> <span class="fu">str_remove</span>(<span class="st">"kg"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>()) <span class="ot">-&gt;</span> laptops</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="hw13-1-autocheck" class="autocheck">
+<div id="hw13-1-autocheck" class="autocheck" hidden="true">
 <div id="hw13-1-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -428,23 +382,9 @@ dbl  (3): laptop_ID, Inches, Price_euros
 <div class="hints-wrapper">
 <details class="hints" id="hw13-1-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Обратите внимание, как записаны переменные <code>Ram</code> и <code>Weight</code>. Возможно, понадобится функция <code>str_remove()</code>.</p>
 </details>
 </div>
 </section>
@@ -453,8 +393,9 @@ dbl  (3): laptop_ID, Inches, Price_euros
 <p><img id="hw13-2-level" class="level"></p>
 <div id="hw13-2-task" class="task">
 <p>Мы хотим узнать, от каких технических характеристик зависит цена ноутбука. Исследуйте взаимосвязи между ценой и характеристиками ноутбуков. Предположите, какие из характеристик могут быть включены в регрессионную модель в качестве предикторов цены.</p>
+<p><em>Подойдут любые способы изучения закономерностей по типу расчета описательных статистик или визуализаций.</em></p>
 </div>
-<div id="hw13-2-autocheck" class="autocheck">
+<div id="hw13-2-autocheck" class="autocheck" hidden="true">
 <div id="hw13-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -464,7 +405,7 @@ dbl  (3): laptop_ID, Inches, Price_euros
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw13-2-hints">
 <summary>
 Подсказки
@@ -491,12 +432,9 @@ dbl  (3): laptop_ID, Inches, Price_euros
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw13-3-level" class="level"></p>
 <div id="hw13-3-task" class="task">
-<p>Постройте линейную модель <code>model1</code> со случайным интерсептом, которая позволит ответить на вопрос, как зависит цена компьютера от размера экрана? В качестве случайного эффекта включите в модель группировку по компании-производителю.</p>
+<p>Постройте линейную модель <code>model1</code> со случайным интерсептом, которая позволит ответить на вопрос, как зависит цена компьютера от размера экрана. В качестве случайного эффекта включите в модель группировку по компании-производителю.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Price_euros <span class="sc">~</span> Inches <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Company), laptops)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="hw13-3-autocheck" class="autocheck">
+<div id="hw13-3-autocheck" class="autocheck" hidden="true">
 <div id="hw13-3-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -511,21 +449,11 @@ dbl  (3): laptop_ID, Inches, Price_euros
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для построения смешанной модели используйте функцию <code>lmer()</code> из пакета <code>lme4</code> или <code>lmerTest</code>.</li>
+<li>Фиксированные факторы вводятся в модель аналогично общим линейным моделям.</li>
+<li>Случайные факторы вводятся модель с помощью синтаксиса <code>(1 + slope|rand)</code>, где <code>1</code> — указание на случайный интерсепт, <code>slope</code> — переменная, задающая случайный угловой коэффициент, <code>rand</code> — группирующая переменная, задающая случайный фактор.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -535,57 +463,9 @@ dbl  (3): laptop_ID, Inches, Price_euros
 <div id="hw13-4-task" class="task">
 <p>Проверьте статистическую значимость модели <code>model1</code> в целом и статистистическую значимость фиксированных предикторов. Проинтерпретируйте полученные результаты.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model0 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Price_euros <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Company), laptops)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model0, model1, <span class="at">test =</span> <span class="st">"Chi"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>refitting model(s) with ML (instead of REML)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Data: laptops
-Models:
-model0: Price_euros ~ 1 + (1 | Company)
-model1: Price_euros ~ Inches + (1 | Company)
-       npar   AIC   BIC logLik deviance  Chisq Df Pr(&gt;Chisq)  
-model0    3 20614 20630 -10304    20608                       
-model1    4 20611 20632 -10302    20603 4.8662  1    0.02739 *
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
-lmerModLmerTest]
-Formula: Price_euros ~ Inches + (1 | Company)
-   Data: laptops
-
-REML criterion at convergence: 20584.1
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--3.1258 -0.7192 -0.2301  0.4708  5.8960 
-
-Random effects:
- Groups   Name        Variance Std.Dev.
- Company  (Intercept) 436789   660.9   
- Residual             413349   642.9   
-Number of obs: 1303, groups:  Company, 19
-
-Fixed effects:
-            Estimate Std. Error      df t value Pr(&gt;|t|)   
-(Intercept)   834.30     250.82   94.41   3.326  0.00125 **
-Inches         29.33      13.29 1295.53   2.208  0.02745 * 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Correlation of Fixed Effects:
-       (Intr)
-Inches -0.765</code></pre>
-</div>
-</div>
 <div id="hw13-4-autocheck" class="autocheck">
 <div id="hw13-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение коэффициента при предикторе, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw13-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw13-4')"></p>
@@ -598,21 +478,11 @@ Inches -0.765</code></pre>
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Для тестирования гипотез о статистической значимости модели в целом необходима нулевая модель, в которой предиктором является только интерсепт, с такой же структурой случайных эффектов, как и в тестируемой модели.</li>
+<li>Для тестирования значимости фиксированных факторов используются t-тесты Вальда или тесты отношения правдоподобий.</li>
+<li>Лучше проверить статистическую значимость с помощью обоих тестов, чтобы иметь возможность в случае сомнений в точности тестов сопоставить их результаты.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -620,16 +490,9 @@ Inches -0.765</code></pre>
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="hw13-5-level" class="level"></p>
 <div id="hw13-5-task" class="task">
-<p>Включите в модель в качестве <em>количественного</em> фиксированного предиктора размер оперативной памяти ноутбука (<code>Ram</code>) — создайте новую модель <code>model2</code>.</p>
+<p>Включите в модель <code>model1</code> в качестве еще одного фиксированного <em>количественного</em> предиктора размер оперативной памяти ноутбука (<code>Ram</code>) — создайте новую модель <code>model2</code>.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>laptops<span class="sc">$</span>Ram <span class="sc">%&gt;%</span> <span class="fu">unique</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  8 16  4  2 12  6 32 24 64</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Price_euros <span class="sc">~</span> Inches <span class="sc">+</span> Ram <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Company), laptops)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="hw13-5-autocheck" class="autocheck">
+<div id="hw13-5-autocheck" class="autocheck" hidden="true">
 <div id="hw13-5-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -639,7 +502,7 @@ Inches -0.765</code></pre>
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw13-5-hints">
 <summary>
 Подсказки
@@ -668,26 +531,9 @@ Inches -0.765</code></pre>
 <div id="hw13-6-task" class="task">
 <p>Сравните две имеющиеся модели — с одним (<code>model1</code>) и двумя (<code>model2</code>) фиксированными предикторами. Проинтерпретируйте результаты.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model1, model2, <span class="at">test =</span> <span class="st">"Chi"</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>refitting model(s) with ML (instead of REML)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Data: laptops
-Models:
-model1: Price_euros ~ Inches + (1 | Company)
-model2: Price_euros ~ Inches + Ram + (1 | Company)
-       npar   AIC   BIC   logLik deviance  Chisq Df Pr(&gt;Chisq)    
-model1    4 20611 20632 -10301.5    20603                         
-model2    5 19616 19642  -9802.9    19606 997.38  1  &lt; 2.2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
 <div id="hw13-6-autocheck" class="autocheck">
 <div id="hw13-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите значение статистики использованного теста, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw13-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw13-6')"></p>
@@ -698,23 +544,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="hints-wrapper">
 <details class="hints" id="hw13-6-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Обратите внимание на способ подбора моделей — так как модели различаются структурой фиксированной части, нас интересуют точные оценки их коэффициентов.</p>
 </details>
 </div>
 </section>
@@ -725,43 +557,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>Протестируйте статистическую значимость предикторов модели с двумя фиксированными предикторами (<code>model2</code>). Проинтерпретируйте результаты. Сравните с результатами тестирования значимости предикторов модели с одним фиксированным предиктором.</p>
 <p>Почему так могло произойти?</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
-lmerModLmerTest]
-Formula: Price_euros ~ Inches + Ram + (1 | Company)
-   Data: laptops
-
-REML criterion at convergence: 19585
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--5.7549 -0.5995 -0.1641  0.4759  6.5547 
-
-Random effects:
- Groups   Name        Variance Std.Dev.
- Company  (Intercept) 110260   332.1   
- Residual             193891   440.3   
-Number of obs: 1303, groups:  Company, 19
-
-Fixed effects:
-            Estimate Std. Error       df t value Pr(&gt;|t|)    
-(Intercept) 1066.445    156.396  158.804   6.819 1.81e-10 ***
-Inches       -48.468      9.299 1299.090  -5.212 2.17e-07 ***
-Ram          100.956      2.607 1298.897  38.725  &lt; 2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Correlation of Fixed Effects:
-       (Intr) Inches
-Inches -0.829       
-Ram     0.038 -0.216</code></pre>
-</div>
-</div>
 <div id="hw13-7-autocheck" class="autocheck">
 <div id="hw13-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение коэффициента при предикторе <code>Inches</code>, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw13-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw13-7')"></p>
@@ -772,23 +570,9 @@ Ram     0.038 -0.216</code></pre>
 <div class="hints-wrapper">
 <details class="hints" id="hw13-7-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>При сопоставлении результатов тестирования гипотез двух моделей обратите внимание (1) на статистическую значимость и (2) на значение коэффициентов при предикторах.</p>
 </details>
 </div>
 </section>
@@ -796,53 +580,14 @@ Ram     0.038 -0.216</code></pre>
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="hw13-8-level" class="level"></p>
 <div id="hw13-8-task" class="task">
-<p>Усложните случайную часть модели. Возьмите за основу имеющуюся модель с двумя фиксированными предикторами и добавьте ещё один случайный интерсепт. Группирующую переменную выберите самостоятельно. Обоснуйте выбор случайного фактора. Создайте модель <code>model3</code>.</p>
-<p>Протестируйте статистическую значимость фиксированных предикторов. Проинтерпретируйте результаты. Если есть что-либо необычное в результатах тестирования, дайте комментарий, почему это могло произойти.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>laptops<span class="sc">$</span>TypeName <span class="sc">%&gt;%</span> <span class="fu">unique</span>()</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Ultrabook"          "Notebook"           "Netbook"           
-[4] "Gaming"             "2 in 1 Convertible" "Workstation"       </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Price_euros <span class="sc">~</span> Inches <span class="sc">+</span> Ram <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Company) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>TypeName), laptops)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model3)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
-lmerModLmerTest]
-Formula: Price_euros ~ Inches + Ram + (1 | Company) + (1 | TypeName)
-   Data: laptops
-
-REML criterion at convergence: 19284.7
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--4.6762 -0.6105 -0.1320  0.4737  5.3333 
-
-Random effects:
- Groups   Name        Variance Std.Dev.
- Company  (Intercept)  78395   280.0   
- TypeName (Intercept) 163069   403.8   
- Residual             151450   389.2   
-Number of obs: 1303, groups:  Company, 19; TypeName, 6
-
-Fixed effects:
-            Estimate Std. Error       df t value Pr(&gt;|t|)    
-(Intercept)  715.555    239.026   20.198   2.994  0.00712 ** 
-Inches        -4.381     11.290 1286.784  -0.388  0.69806    
-Ram           84.189      2.638 1290.844  31.918  &lt; 2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Correlation of Fixed Effects:
-       (Intr) Inches
-Inches -0.647       
-Ram     0.042 -0.214</code></pre>
-</div>
+<ol type="a">
+<li><p>Усложните случайную часть модели. Возьмите за основу имеющуюся модель с двумя фиксированными предикторами и добавьте ещё один случайный интерсепт по переменной <code>TypeName</code>. Создайте модель <code>model3</code>.</p></li>
+<li><p>Протестируйте статистическую значимость фиксированных предикторов. Проинтерпретируйте результаты. Если есть что-либо необычное в результатах тестирования, дайте комментарий, почему это могло произойти.</p></li>
+</ol>
 </div>
 <div id="hw13-8-autocheck" class="autocheck">
 <div id="hw13-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение коэффициента при предикторе <code>Inches</code>, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw13-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw13-8')"></p>
@@ -855,21 +600,15 @@ Ram     0.042 -0.214</code></pre>
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Синтаксис модели с двумя случайными интерсептами выглядит следующим образом:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(DV <span class="sc">~</span> IV1 <span class="sc">+</span> IV2 <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>rand1) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>rand2), <span class="at">data =</span> data)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>При сопоставлении результатов тестирования гипотез двух моделей обратите внимание (1) на статистическую значимость и (2) на значение коэффициентов при предикторах.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -879,23 +618,9 @@ Ram     0.042 -0.214</code></pre>
 <div id="hw13-9-task" class="task">
 <p>Сравните модели с двумя фиксированными предикторами друг с другом (<code>model2</code> и <code>model3</code>). Проинтерпретируйте результаты.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model2, model3, <span class="at">test =</span> <span class="st">"Chi"</span>, <span class="at">refit =</span> <span class="cn">FALSE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Data: laptops
-Models:
-model2: Price_euros ~ Inches + Ram + (1 | Company)
-model3: Price_euros ~ Inches + Ram + (1 | Company) + (1 | TypeName)
-       npar   AIC   BIC  logLik deviance  Chisq Df Pr(&gt;Chisq)    
-model2    5 19595 19621 -9792.5    19585                         
-model3    6 19297 19328 -9642.3    19285 300.36  1  &lt; 2.2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
 <div id="hw13-9-autocheck" class="autocheck">
 <div id="hw13-9-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки введите значение статистики использованного теста, округленное до сотых. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw13-9" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw13-9')"></p>
@@ -906,23 +631,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="hints-wrapper">
 <details class="hints" id="hw13-9-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Обратите внимание на способ подбора моделей — так как у моделей одинаковая фиксированная часть, нас интересует тестирование гипотез о случайной части модели.</p>
 </details>
 </div>
 </section>
@@ -930,27 +641,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="hw13-10-level" class="level"></p>
 <div id="hw13-10-task" class="task">
-<p>Проведите дагностику модели <code>model3</code>. Сделайте заключение о качестве модели на основе результатов диагностики.</p>
+<p>Проведите диагностику модели <code>model3</code>. Сделайте заключение о качестве модели на основе результатов диагностики.</p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">residuals</span>(model3))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw13_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">fitted.values</span>(model3), <span class="fu">residuals</span>(model3))</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw13_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="hw13-10-autocheck" class="autocheck">
+<div id="hw13-10-autocheck" class="autocheck" hidden="true">
 <div id="hw13-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -965,21 +658,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Так как в модели в качестве фиксированных эффектов включены только количественные предикторы, при изучении распределения остатков достаточно посмотреть из зависимость от предсказанных значений.</li>
+<li>Однако в модель включены два случайных эффекта — поэтому полезно будет рассмотреть зависимость распределения остатков от каждого из них.</li>
+</ul>
 </details>
 </div>
 <!---

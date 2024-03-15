@@ -6,6 +6,10 @@ REPLACE ALL hw13 TO hw<n> WITH MATCH CASE
 -->
 ```
 
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 ```{r}
 library(tidyverse)
 library(lme4)
@@ -14,10 +18,10 @@ library(lmerTest)
 
 ## Основные задания {#hw13_main}
 
-:::{.callput-note}
+:::{.callout-note}
 ### Данные
 
-Сегодня мы работаем с [датасетом про ноутбуки](https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv), который содержит следующие переменные:
+Сегодня мы работаем с [датасетом про ноутбуки](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw13/laptop_price.csv), который содержит следующие переменные:
 
 * `Company` --- компания-производитель компьютера
 * `Product` --- бренд и модель
@@ -39,18 +43,19 @@ library(lmerTest)
 <img id="hw13-1-level" class="level"/>
 
 ::: {#hw13-1-task .task}
-Загрузите [датасет](https://raw.githubusercontent.com/angelgardt/hseuxlab-wlm2021/master/data/laptop_price.csv). Проверьте типы переменных. Если есть такие переменные, которые по своему содержанию должны быть другого типа, приведите их к нужному типу. Сделайте необходимые преобразования с переменными, если они потребуются.
+Загрузите [датасет](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw13/laptop_price.csv). Проверьте типы переменных. Если есть такие переменные, которые по своему содержанию должны быть другого типа, приведите их к нужному типу. Сделайте необходимые преобразования с переменными, если они потребуются.
 :::
 
 ```{r}
 laptops <- read_csv("https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv")
+str(laptops)
 
 laptops %>% 
     mutate(Ram = Ram %>% str_remove("GB") %>% as.numeric(),
            Weight = Weight %>% str_remove("kg") %>% as.numeric()) -> laptops
 ```
 
-::: {#hw13-1-autocheck .autocheck}
+::: {#hw13-1-autocheck .autocheck hidden="true"}
 ::: {#hw13-1-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -66,25 +71,9 @@ laptops %>%
 ::: hints-wrapper
 <details class="hints" id="hw13-1-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Обратите внимание, как записаны переменные `Ram` и `Weight`. Возможно, понадобится функция `str_remove()`.
 
 </details>
 :::
@@ -97,9 +86,11 @@ laptops %>%
 
 Мы хотим узнать, от каких технических характеристик зависит цена ноутбука. Исследуйте взаимосвязи между ценой и характеристиками ноутбуков. Предположите, какие из характеристик могут быть включены в регрессионную модель в качестве предикторов цены.
 
+_Подойдут любые способы изучения закономерностей по типу расчета описательных статистик или визуализаций._
+
 :::
 
-::: {#hw13-2-autocheck .autocheck}
+::: {#hw13-2-autocheck .autocheck hidden="true"}
 ::: {#hw13-2-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -112,7 +103,7 @@ laptops %>%
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw13-2-hints">
 
 <summary>Подсказки</summary>
@@ -143,14 +134,14 @@ laptops %>%
 <img id="hw13-3-level" class="level"/>
 
 ::: {#hw13-3-task .task}
-Постройте линейную модель `model1` со случайным интерсептом, которая позволит ответить на вопрос, как зависит цена компьютера от размера экрана? В качестве случайного эффекта включите в модель группировку по компании-производителю.
+Постройте линейную модель `model1` со случайным интерсептом, которая позволит ответить на вопрос, как зависит цена компьютера от размера экрана. В качестве случайного эффекта включите в модель группировку по компании-производителю.
 :::
 
 ```{r}
 model1 <- lmer(Price_euros ~ Inches + (1|Company), laptops)
 ```
 
-::: {#hw13-3-autocheck .autocheck}
+::: {#hw13-3-autocheck .autocheck hidden="true"}
 ::: {#hw13-3-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -168,23 +159,9 @@ model1 <- lmer(Price_euros ~ Inches + (1|Company), laptops)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для построения смешанной модели используйте функцию `lmer()` из пакета `lme4` или `lmerTest`.
+* Фиксированные факторы вводятся в модель аналогично общим линейным моделям.
+* Случайные факторы вводятся модель с помощью синтаксиса `(1 + slope|rand)`, где `1` --- указание на случайный интерсепт, `slope` --- переменная, задающая случайный угловой коэффициент, `rand` --- группирующая переменная, задающая случайный фактор.
 
 </details>
 :::
@@ -201,11 +178,12 @@ model1 <- lmer(Price_euros ~ Inches + (1|Company), laptops)
 model0 <- lmer(Price_euros ~ 1 + (1|Company), laptops)
 anova(model0, model1, test = "Chi")
 summary(model1)
+anova(model1)
 ```
 
 ::: {#hw13-4-autocheck .autocheck}
 ::: {#hw13-4-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение коэффициента при предикторе, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw13-4" placeholder="Введите ответ…">
@@ -221,23 +199,9 @@ summary(model1)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Для тестирования гипотез о статистической значимости модели в целом необходима нулевая модель, в которой предиктором является только интерсепт, с такой же структурой случайных эффектов, как и в тестируемой модели.
+* Для тестирования значимости фиксированных факторов используются t-тесты Вальда или тесты отношения правдоподобий.
+* Лучше проверить статистическую значимость с помощью обоих тестов, чтобы иметь возможность в случае сомнений в точности тестов сопоставить их результаты.
 
 </details>
 :::
@@ -247,7 +211,7 @@ summary(model1)
 <img id="hw13-5-level" class="level"/>
 
 ::: {#hw13-5-task .task}
-Включите в модель в качестве *количественного* фиксированного предиктора размер оперативной памяти ноутбука (`Ram`) --- создайте новую модель `model2`.
+Включите в модель `model1` в качестве еще одного фиксированного *количественного* предиктора размер оперативной памяти ноутбука (`Ram`) --- создайте новую модель `model2`.
 :::
 
 ```{r}
@@ -255,7 +219,7 @@ laptops$Ram %>% unique()
 model2 <- lmer(Price_euros ~ Inches + Ram + (1|Company), laptops)
 ```
 
-::: {#hw13-5-autocheck .autocheck}
+::: {#hw13-5-autocheck .autocheck hidden="true"}
 ::: {#hw13-5-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -268,7 +232,7 @@ model2 <- lmer(Price_euros ~ Inches + Ram + (1|Company), laptops)
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw13-5-hints">
 
 <summary>Подсказки</summary>
@@ -308,7 +272,7 @@ anova(model1, model2, test = "Chi")
 
 ::: {#hw13-6-autocheck .autocheck}
 ::: {#hw13-6-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите значение статистики использованного теста, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw13-6" placeholder="Введите ответ…">
@@ -322,25 +286,9 @@ anova(model1, model2, test = "Chi")
 ::: hints-wrapper
 <details class="hints" id="hw13-6-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Обратите внимание на способ подбора моделей --- так как модели различаются структурой фиксированной части, нас интересуют точные оценки их коэффициентов.
 
 </details>
 :::
@@ -361,7 +309,7 @@ summary(model2)
 
 ::: {#hw13-7-autocheck .autocheck}
 ::: {#hw13-7-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение коэффициента при предикторе `Inches`, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw13-7" placeholder="Введите ответ…">
@@ -375,25 +323,9 @@ summary(model2)
 ::: hints-wrapper
 <details class="hints" id="hw13-7-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+При сопоставлении результатов тестирования гипотез двух моделей обратите внимание (1) на статистическую значимость и (2) на значение коэффициентов при предикторах.
 
 </details>
 :::
@@ -403,20 +335,23 @@ summary(model2)
 <img id="hw13-8-level" class="level"/>
 
 ::: {#hw13-8-task .task}
-Усложните случайную часть модели. Возьмите за основу имеющуюся модель с двумя фиксированными предикторами и добавьте ещё один случайный интерсепт. Группирующую переменную выберите самостоятельно. Обоснуйте выбор случайного фактора. Создайте модель `model3`.
+a. Усложните случайную часть модели. Возьмите за основу имеющуюся модель с двумя фиксированными предикторами и добавьте ещё один случайный интерсепт по переменной `TypeName`. Создайте модель `model3`.
 
-Протестируйте статистическую значимость фиксированных предикторов. Проинтерпретируйте результаты. Если есть что-либо необычное в результатах тестирования, дайте комментарий, почему это могло произойти.
+b. Протестируйте статистическую значимость фиксированных предикторов. Проинтерпретируйте результаты. Если есть что-либо необычное в результатах тестирования, дайте комментарий, почему это могло произойти.
 :::
 
 ```{r}
+## a
 laptops$TypeName %>% unique()
 model3 <- lmer(Price_euros ~ Inches + Ram + (1|Company) + (1|TypeName), laptops)
+
+## b
 summary(model3)
 ```
 
 ::: {#hw13-8-autocheck .autocheck}
 ::: {#hw13-8-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение коэффициента при предикторе `Inches`, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw13-8" placeholder="Введите ответ…">
@@ -432,23 +367,13 @@ summary(model3)
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+* Синтаксис модели с двумя случайными интерсептами выглядит следующим образом:
 
-<summary>Как делать задание?</summary>
+```{r, echo=TRUE, eval=FALSE}
+model <- lmer(DV ~ IV1 + IV2 + (1|rand1) + (1|rand2), data = data)
+```
 
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* При сопоставлении результатов тестирования гипотез двух моделей обратите внимание (1) на статистическую значимость и (2) на значение коэффициентов при предикторах.
 
 </details>
 :::
@@ -467,7 +392,7 @@ anova(model2, model3, test = "Chi", refit = FALSE)
 
 ::: {#hw13-9-autocheck .autocheck}
 ::: {#hw13-9-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки введите значение статистики использованного теста, округленное до сотых. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw13-9" placeholder="Введите ответ…">
@@ -481,25 +406,9 @@ anova(model2, model3, test = "Chi", refit = FALSE)
 ::: hints-wrapper
 <details class="hints" id="hw13-9-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+Обратите внимание на способ подбора моделей --- так как у моделей одинаковая фиксированная часть, нас интересует тестирование гипотез о случайной части модели.
 
 </details>
 :::
@@ -509,15 +418,24 @@ anova(model2, model3, test = "Chi", refit = FALSE)
 <img id="hw13-10-level" class="level"/>
 
 ::: {#hw13-10-task .task}
-Проведите дагностику модели `model3`. Сделайте заключение о качестве модели на основе результатов диагностики.
+Проведите диагностику модели `model3`. Сделайте заключение о качестве модели на основе результатов диагностики.
 :::
 
 ```{r}
-hist(residuals(model3))
-plot(fitted.values(model3), residuals(model3))
+res <- tibble(
+  laptops,
+  fitted = fitted(model3),
+  resid = resid(model3, type = 'pearson'),
+  sresid = resid(model3, type = 'pearson', scaled = TRUE)
+)
+gg_res <- ggplot(res, aes(y = sresid)) +
+  geom_hline(yintercept = 0)
+gg_res + geom_point(aes(x = fitted))
+gg_res + geom_boxplot(aes(x = Company))
+gg_res + geom_boxplot(aes(x = TypeName))
 ```
 
-::: {#hw13-10-autocheck .autocheck}
+::: {#hw13-10-autocheck .autocheck hidden="true"}
 ::: {#hw13-10-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -535,23 +453,8 @@ plot(fitted.values(model3), residuals(model3))
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Так как в модели в качестве фиксированных эффектов включены только количественные предикторы, при изучении распределения остатков достаточно посмотреть из зависимость от предсказанных значений.
+* Однако в модель включены два случайных эффекта --- поэтому полезно будет рассмотреть зависимость распределения остатков от каждого из них.
 
 </details>
 :::
