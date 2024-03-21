@@ -76,3 +76,4 @@ tibble(
              position = position_dodge(.3)) +
   facet_wrap(~ facet, scales = "free_x") +
   labs(x = "", color = "")
+
