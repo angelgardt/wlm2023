@@ -8,13 +8,17 @@ library(factoextra)
 library(cluster)
 
 # 1
+## a
 emp <- read_csv("../data/hw14/emp.csv")
 str(emp)
+is.na(emp) %>% sum()
+
+## b
 emp %>% select(contains("q")) -> empq
 
 
 # 2
-d <- dist(empq)
+d <- dist(empq, method = "manh")
 hc_c <- hclust(d, "complete")
 hc_s <- hclust(d, "single")
 hc_a <- hclust(d, "average")
@@ -68,21 +72,26 @@ fviz_silhouette(silhouette(x = fuzzy2$clustering,
 
 
 # 9
+## a
 empq %>% 
   mutate(cluster1 = fuzzy2$membership[, 1]) -> emp_1
 
+## b
 lm1 <- lm(cluster1 ~ ., emp_1)
 summary(lm1)
 
 # 10
+## a
 ques <- read_csv("../data/hw14/ques.csv")
 
+## b
 summary(lm1)$coefficients %>% 
-  as_tibble() %>% 
-  set_names(c("est", "se", "t", "p")) %>% 
-  mutate(question = rownames(summary(lm1)$coefficients)) %>% 
+  # as.data.frame() %>% 
+  as_tibble(rownames = "question") %>% 
+  set_names(c("question", "est", "se", "t", "p")) %>% 
+  # mutate(question = rownames(summary(lm1)$coefficients)) %>% 
   right_join(ques) %>% 
-  filter(p < .05) %>% View
+  filter(p < .05) %>% View()
 
 
 # ADDITIONAL
