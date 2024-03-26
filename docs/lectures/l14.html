@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -261,7 +290,31 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#проклятие-размености-curse-of-dimensionality" id="toc-проклятие-размености-curse-of-dimensionality" class="nav-link active" data-scroll-target="#проклятие-размености-curse-of-dimensionality"><span class="header-section-number">14.1</span> Проклятие размености (curse of dimensionality)</a>
+  <ul class="collapse">
+  <li><a href="#геометрическая-вероятность" id="toc-геометрическая-вероятность" class="nav-link" data-scroll-target="#геометрическая-вероятность"><span class="header-section-number">14.1.1</span> Геометрическая вероятность</a></li>
+  </ul></li>
+  <li><a href="#факторный-анализ-vs-анализ-главных-компонент" id="toc-факторный-анализ-vs-анализ-главных-компонент" class="nav-link" data-scroll-target="#факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">14.2</span> Факторный анализ vs анализ главных компонент</a></li>
+  <li><a href="#задачи-факторного-анализа-и-анализа-главных-компонент" id="toc-задачи-факторного-анализа-и-анализа-главных-компонент" class="nav-link" data-scroll-target="#задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">14.3</span> Задачи факторного анализа и анализа главных компонент</a></li>
+  <li><a href="#анализ-главных-компонент-principal-component-analysis" id="toc-анализ-главных-компонент-principal-component-analysis" class="nav-link" data-scroll-target="#анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">14.4</span> Анализ главных компонент (Principal Component Analysis)</a>
+  <ul class="collapse">
+  <li><a href="#математическая-модель-анализа-главных-компонент" id="toc-математическая-модель-анализа-главных-компонент" class="nav-link" data-scroll-target="#математическая-модель-анализа-главных-компонент"><span class="header-section-number">14.4.1</span> Математическая модель анализа главных компонент</a></li>
+  <li><a href="#поиск-главных-компонент-геометрически" id="toc-поиск-главных-компонент-геометрически" class="nav-link" data-scroll-target="#поиск-главных-компонент-геометрически"><span class="header-section-number">14.4.2</span> Поиск главных компонент геометрически</a></li>
+  <li><a href="#сокращение-размерности-признакового-пространства" id="toc-сокращение-размерности-признакового-пространства" class="nav-link" data-scroll-target="#сокращение-размерности-признакового-пространства"><span class="header-section-number">14.4.3</span> Сокращение размерности признакового пространства</a></li>
+  <li><a href="#информативность-компонент" id="toc-информативность-компонент" class="nav-link" data-scroll-target="#информативность-компонент"><span class="header-section-number">14.4.4</span> Информативность компонент</a></li>
+  <li><a href="#интерпретация-главных-компонент" id="toc-интерпретация-главных-компонент" class="nav-link" data-scroll-target="#интерпретация-главных-компонент"><span class="header-section-number">14.4.5</span> Интерпретация главных компонент</a></li>
+  </ul></li>
+  <li><a href="#эксплораторный-факторный-анализ-exploratory-factor-analysis" id="toc-эксплораторный-факторный-анализ-exploratory-factor-analysis" class="nav-link" data-scroll-target="#эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">14.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</a>
+  <ul class="collapse">
+  <li><a href="#математическая-модель-эксплораторного-факторного-анализа" id="toc-математическая-модель-эксплораторного-факторного-анализа" class="nav-link" data-scroll-target="#математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">14.5.1</span> Математическая модель эксплораторного факторного анализа</a></li>
+  <li><a href="#вращение-факторов-factor-rotation" id="toc-вращение-факторов-factor-rotation" class="nav-link" data-scroll-target="#вращение-факторов-factor-rotation"><span class="header-section-number">14.5.2</span> Вращение факторов (factor rotation)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -285,8 +338,361 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!---  --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- transposed matrix --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<section id="проклятие-размености-curse-of-dimensionality" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="проклятие-размености-curse-of-dimensionality"><span class="header-section-number">14.1</span> Проклятие размености (curse of dimensionality)</h2>
+<p>С данными могут случиться две проблемы: либо их слишком мало, либо их слишком много. С первой проблемой многие так или иначе сталкивались — во-первых, не достигается требуемая статистическая мощность анализа (мало наблюдений), во-вторых, упускаем какие-либо закономерности (мало переменных). А в чем может быть проблема, если данных много?</p>
+<section id="геометрическая-вероятность" class="level3" data-number="14.1.1">
+<h3 data-number="14.1.1" class="anchored" data-anchor-id="геометрическая-вероятность"><span class="header-section-number">14.1.1</span> Геометрическая вероятность</h3>
+<p>Возьмем квадрат, в который вписан круг:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l14_files/figure-html/geomprob-square-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Будем бросать в этот квадрат точки случайным образом:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l14_files/figure-html/geomprob-dots-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Вопрос: <strong>какова вероятность, что случайно брошенная точка попадет в круг (событие <span class="math inline">\(A\)</span>)?</strong></p>
+<p>Мы можем воспользоваться статистическим подходом к вероятности, набросать побольше точек и посчитать, сколько из них попало в пределы круга:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="l14_files/figure-html/geomprob-incircle-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Из визуализации видно, что в конечном итоге при очень большом количестве бросаний точек они заполнят всю площадь квадрата, а значит, и всю площадь круга, поэтому вероятность попадания случайно прошенной точки в круг равняется отношению площади круга к площади квадрата, то есть:</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \lim_{N \rightarrow \infty} \frac{n}{N} = \frac{S_\text{circle}}{S_\text{square}}
+\]</span></p>
+<p>Можно расписать точнее, если вспомнить геометрические формулы:</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \frac{S_\text{circle}}{S_\text{square}} = \frac{\pi r^2}{a^2} = \frac{\pi \big(\frac{1}{2}a\big)^2}{a^2} = \frac{1}{4}\pi \approx 0.785
+\]</span></p>
+<p>Окей, это для <span class="math inline">\(\mathbb{R}^2\)</span>, то есть для пространства размерности два (оно же — плоскость). Теперь рассмотрим ситуацию для <span class="math inline">\(\mathbb{R}^3\)</span>, то есть для пространства размерности три.</p>
+<p><span class="math display">\[
+\mathbb{P}(A) = \frac{V_\text{ball}}{V_\text{cube}} = \frac{\frac{4}{3}\pi r^3}{a^3} = \frac{\frac{4}{3}\pi \big(\frac{1}{2}a\big)^3}{a^3} \approx 0.523
+\]</span></p>
+<p>В общем случае, для <span class="math inline">\(\mathbb{R}^k\)</span> объем шара равен:</p>
+<p><span class="math display">\[
+\begin{split}
+k = 2n &amp;, V = \frac{\pi^2}{n!}r^{2n} \\
+k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
+\end{split}
+\]</span></p>
+<p>Можно аналитически доказать, что при <span class="math inline">\(k \to \infty : V \to 0\)</span>.</p>
+<hr>
+<p>То есть, говоря более осязаемо, места вне шара становится больше. Набирая переменных, мы делаем расстояния между точками больше, из-за объем выборки должен расти экспоненциально, чтобы сохранялась адекватная точность оценки параметров. Это и называется проклятием размерности.</p>
+<p>Что делать? Снижать размерность.</p>
+</section>
+</section>
+<section id="факторный-анализ-vs-анализ-главных-компонент" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">14.2</span> Факторный анализ vs анализ главных компонент</h2>
+<p>Так сложилось, что под термином «факторный анализ» часто смешиваются две вещи: анализ главных компонент и собственно факторный анализ. Кроме того, собственно факторный анализ также подразделяется на эксплораторный — когда мы ищем факторы — и конфирматорный — когда у нас есть гипотеза о структуре факторов, и нам необходимо ее подтвердить.</p>
+<p>Анализ главных компонент и факторный анализ различаются в своей математической модели, своей изначальной идеологии, но дают сходные результаты и решают сходные задачи.</p>
+</section>
+<section id="задачи-факторного-анализа-и-анализа-главных-компонент" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">14.3</span> Задачи факторного анализа и анализа главных компонент</h2>
+<ul>
+<li>Сокращение числа переменных</li>
+<li>Измерение неизмеримого (построение новых обобзеных показателей)</li>
+<li>Наглядное представление многомерных наблюдений</li>
+<li>Описание структуры взаимных связей между переменными</li>
+<li>Преодоление мультиколлинеарности (в регрессионном анализе)</li>
+<li>Заполнение пропущенных значений (при работе с разряженными матрицами)</li>
+</ul>
+<p>и т.д.</p>
+</section>
+<section id="анализ-главных-компонент-principal-component-analysis" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">14.4</span> Анализ главных компонент (Principal Component Analysis)</h2>
+<section id="математическая-модель-анализа-главных-компонент" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="математическая-модель-анализа-главных-компонент"><span class="header-section-number">14.4.1</span> Математическая модель анализа главных компонент</h3>
+<p>Рассмотрим случайный вектор (матрицу) <span class="math inline">\((\mathbf{X}_1, \mathbf{X}_2, \dots, \mathbf{X}_k)\)</span> (<span class="math inline">\(\mathbf{X}_i\)</span> — некоторый столбец [числовых] данных). Мы хотим найти такую линейную комбинацию наших данных, у которой дисперсия максимальна. При это мы хотим домножать матрицу данных на вектор коэффициентов единичной длины, чтобы искусственно не раздувать дисперсию.</p>
+<p>Формально,</p>
+<p><span class="math display">\[
+\begin{split}
+&amp;\mathbf{Y}_1 = a_{11} \mathbf{X}_1 + a_{12} \mathbf{X}_2 + \dots + a_{1k} \mathbf{X}_k \\
+&amp;\text{var}(\mathbf{Y}_1) \to \max \\
+&amp;\mathbf{a}_1 \mathbf{a}_1^\top = 1, \, \mathbf{a}_1 =
+\begin{pmatrix} a_{11} &amp; a_{12} \dots a_{1k} \end{pmatrix}
+\end{split}
+\]</span></p>
+<p>Далее, находим вторую линейную комбинацию наших данных с максимальной дисперсией, независимую (некоррелированную) с первой. Требования к вектору коэффициентов оставляем те же.</p>
+<p><span class="math display">\[
+\begin{split}
+&amp;\mathbf{Y}_2 = a_{21} \mathbf{X}_1 + a_{22} \mathbf{X}_2 + \dots + a_{2k} \mathbf{X}_k \\
+&amp;\text{var}(\mathbf{Y}_2) \to \max \\
+&amp;\mathbf{a}_2 \mathbf{a}_2^\top = 1, \, \mathbf{a}_2 =
+\begin{pmatrix} a_{21} &amp; a_{22} \dots a_{2k} \end{pmatrix} \\
+&amp;\text{cor}(\mathbf{Y}_2, \mathbf{Y}_1) = 0
+\end{split}
+\]</span></p>
+<p>Далее, находим третью линейную комбинацию, аналогичную предыдущим и некоррелированную с ними.</p>
+<p><span class="math display">\[
+\begin{split}
+&amp;\mathbf{Y}_3 = a_{31} \mathbf{X}_1 + a_{32} \mathbf{X}_2 + \dots + a_{3k} \mathbf{X}_k \\
+&amp;\text{var}(\mathbf{Y}_3) \to \max \\
+&amp;\mathbf{a}_3 \mathbf{a}_3^\top = 1, \, \mathbf{a}_3 =
+\begin{pmatrix} a_{31} &amp; a_{32} \dots a_{3k} \end{pmatrix} \\
+&amp;\text{cor}(\mathbf{Y}_3, \mathbf{Y}_1) = 0, \, \text{cor}(\mathbf{Y}_2, \mathbf{Y}_1) = 0
+\end{split}
+\]</span></p>
+<p>Так как у нас всего <span class="math inline">\(k\)</span> переменных, то мы можем найти <span class="math inline">\(k\)</span> таких линейных комбинаций.</p>
+<p>В общем виде, они будут выглядеть следующим образом:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp;\mathbf{Y}_k = a_{k1} \mathbf{X}_1 + a_{k2} \mathbf{X}_2 + \dots + a_{kk} \mathbf{X}_k \\
+&amp;\text{var}(\mathbf{Y}_k) \to \max \\
+&amp;\mathbf{a}_k \mathbf{a}_k^\top = 1, \, \mathbf{a}_k =
+\begin{pmatrix} a_{k1} &amp; a_{k2} \dots a_{kk} \end{pmatrix} \\
+&amp;\text{cor}(\mathbf{Y}_k, \mathbf{Y}_i) = 0, \, i = 1, 2, \ldots, k
+\end{split}
+\]</span></p>
+<p>Полученные <span class="math inline">\(Y_i\)</span> и будут искомые <strong>главные компоненты (principal components)</strong> — наши новые оси, с помощью которых мы будем смотреть на данные и описывать их.</p>
+<p>Если мы в качестве информативности компоненты используем её дисперсию, то можно сказать, что мы ищем наиболее информативные линейные комбинации. То есть, мы ищем некоторую «правильную систему координат».</p>
+</section>
+<section id="поиск-главных-компонент-геометрически" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="поиск-главных-компонент-геометрически"><span class="header-section-number">14.4.2</span> Поиск главных компонент геометрически</h3>
+<p>Чтобы лучше понять, что все это значит, посмотрим на картинку.</p>
+<center>
+<figure class="figure">
+<img src="pics/pca-1.jpg" class="figure-img">
+</figure>
+</center>
+<p>Рассмотрим самый простой случай. Пусть у нас есть две переменные (<span class="math inline">\(\mathbf{X}_1\)</span>, <span class="math inline">\(\mathbf{X}_2\)</span>) и мы подбираем их линейную комбинацию с наибольшей дисперсией. Графически это то же самое, что провести прямую <span class="math inline">\(Y_1\)</span>, то есть такую прямую, по которой наши данные будут максимально «растянуты».</p>
+<center>
+<figure class="figure">
+<img src="pics/pca-2.jpg" class="figure-img">
+</figure>
+</center>
+<p>Далее ищем вторую линейную комбинацию. Прицнип тот же: необходима прямая, по которой данные макисмально растянуты. Однако эта прямая должна быть перпендикулярная <span class="math inline">\(Y_1\)</span>, чтобы выполнялось условие <span class="math inline">\(\text{cor}(Y_1, Y_2) = 0\)</span> (в двумерном пространстве отсутствие корреляции эквивалентно ортогональности, то есть пересечению прямых под прямым углом).</p>
+<center>
+<figure class="figure">
+<img src="pics/pca-3.jpg" class="figure-img">
+</figure>
+</center>
+<p>Получаем что-то такое. Красные оси и есть наши главные компоненты. Их столько же, сколько изначально было переменных. Теперь мы можем рассматривать наши наблюдения относительно новой системы координат <span class="math inline">\(Y_1 O^′ Y_2\)</span>.</p>
+</section>
+<section id="сокращение-размерности-признакового-пространства" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="сокращение-размерности-признакового-пространства"><span class="header-section-number">14.4.3</span> Сокращение размерности признакового пространства</h3>
+<p>Итак, мы нашли новые координаты, но что-то переменных у нас меньше не стало — мы нашли <span class="math inline">\(k\)</span> новых переменных взамен <span class="math inline">\(k\)</span> старых. Мы же хотели, чтобы осей, то есть измерений признакового пространства, стало меньше.</p>
+<p>Теперь нам пригодится следующая идея лаваша.</p>
+<center>
+<figure class="figure">
+<img src="pics/lavash.jpg" class="figure-img">
+</figure>
+</center>
+<p>Лаваш, это, безусловно, трехмерный объект, однако практически вся его «изменчивость» сосредоточена по двум измерениям:</p>
+<center>
+<figure class="figure">
+<img src="pics/lavash_dim.jpg" class="figure-img">
+</figure>
+</center>
+<p>Толщина лаваша практически «неинформативна» для нас<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, поэтому мы можем игнорировать его изменчивость по третьей оси.</p>
+<p>Таким образом, чтобы снизить размерность, мы волей, данной нам нами, выбрасываем малоинформативные главные компоненты.</p>
+</section>
+<section id="информативность-компонент" class="level3" data-number="14.4.4">
+<h3 data-number="14.4.4" class="anchored" data-anchor-id="информативность-компонент"><span class="header-section-number">14.4.4</span> Информативность компонент</h3>
+<p>Что же такое малоинформативные компоненты? И как нам решить, какие из компонент конкретного решения малоинформативны?</p>
+<p>Вновь рассмотрим картинку. В данном случае мы имеем дело с ситуацией, когда все наблюдения расположены более-менее вокруг одной прямой — первой главной компоненты <span class="math inline">\(\text{PC1}\)</span>:</p>
+<center>
+<figure class="figure">
+<img src="pics/pc1.jpg" class="figure-img">
+</figure>
+</center>
+<p>Таким образом, изменчивостью по второй главной компоненте <span class="math inline">\(\text{PC2}\)</span> можно пренебречь.</p>
+<p>Каждая из главных компонент объясняет какую-то часть дисперсии данных, значит мы можем воспользоваться следующей идеей: <strong>если новая переменная (главная компонента) объясняет меньше дисперсии, чем исходная переменная, то она не информативна.</strong> Дисперсия исходных переменных может быть какой угодно, поэтому перед проведением анализа переменные стандартизируют — их дисперсия становится равной единице. Это значит, что <strong>если дисперсия главной компоненты меньше единицы, то можно считать её неинформативной</strong>.</p>
+<p>Кроме того, есть ещё один способ отбора главных компонент. Можно вычислить, какую долю дисперсии данных объясняет каждая компонента, и упорядочить компоненты по возрастанию доли объясняемой дисперсии. Затем, рассчитав <strong>кумулятивную долю объясняемой дисперсии</strong>, выяснить, какого количества главных компонент достаточно, чтобы объяснить <strong>не менее 80% дисперсии данных</strong>. Это некий конвенциональный порог, поэтому его можно изменять в зависимости от решаемой задачи.</p>
+<p>Результаты обычно представляются в виде таблицы:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">PC1</th>
+<th style="text-align: center;">PC2</th>
+<th style="text-align: center;">PC3</th>
+<th style="text-align: center;">…</th>
+<th style="text-align: center;">PCk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standard Deviation</td>
+<td style="text-align: center;">2.214</td>
+<td style="text-align: center;">1.501</td>
+<td style="text-align: center;">0.622</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">0.003</td>
+</tr>
+<tr class="even">
+<td>Proportion of Variance</td>
+<td style="text-align: center;">0.596</td>
+<td style="text-align: center;">0.327</td>
+<td style="text-align: center;">0.059</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">0.000</td>
+</tr>
+<tr class="odd">
+<td>Cumulative Proportion</td>
+<td style="text-align: center;">0.596</td>
+<td style="text-align: center;">0.923</td>
+<td style="text-align: center;">0.982</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">1.000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="интерпретация-главных-компонент" class="level3" data-number="14.4.5">
+<h3 data-number="14.4.5" class="anchored" data-anchor-id="интерпретация-главных-компонент"><span class="header-section-number">14.4.5</span> Интерпретация главных компонент</h3>
+<p>В принципе, анализ главных компонент может решать чисто техническую задачу сокращения размерности признакового пространства, и нас может и не интересовать содержательная интерпретация новых переменных.</p>
+<p>Однако решая аналитические задачи, мы часто заинтересованы в том, чтобы хотя бы как-то понимать, что же мы в итоге получили. Для этого воспользуемся <strong>матрицой нагрузок (matrix of variable loadings)</strong>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">PC1</th>
+<th style="text-align: center;">PC2</th>
+<th style="text-align: center;">PC3</th>
+<th style="text-align: center;">…</th>
+<th style="text-align: center;">PCk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X1</td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">−0.62</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">−0.42</td>
+</tr>
+<tr class="even">
+<td>X2</td>
+<td style="text-align: center;">0.38</td>
+<td style="text-align: center;">−0.27</td>
+<td style="text-align: center;">−0.74</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">−0.27</td>
+</tr>
+<tr class="odd">
+<td>X3</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">−0.24</td>
+<td style="text-align: center;">0.19</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">−0.38</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">−0.05</td>
+</tr>
+<tr class="odd">
+<td>Xk</td>
+<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">0.57</td>
+<td style="text-align: center;">−0.11</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">−0.77</td>
+</tr>
+</tbody>
+</table>
+<p>Нагрзузки — это не что иное как коэффициенты <span class="math inline">\(a_{ij}\)</span> из математической модели. Чем они больше, тем сильнее исходные переменные связаны с главными компонентами. Обобщив связи, можно попробовать придумать адеватную исследовательской области интерпретацию.</p>
+</section>
+</section>
+<section id="эксплораторный-факторный-анализ-exploratory-factor-analysis" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">14.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</h2>
+<section id="математическая-модель-эксплораторного-факторного-анализа" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">14.5.1</span> Математическая модель эксплораторного факторного анализа</h3>
+<p>У нас есть все та же матрица наблюдений <span class="math inline">\(X^\top = \pmatrix{X_1 &amp; X_2 &amp; \ldots X_k}\)</span>, только мы ее транспонировали для будущего удобства. Мы предполагаем, что под нашими наблюдениями спрятаны некие <strong>факторы</strong> в количестве <span class="math inline">\(p\)</span> штук, <span class="math inline">\(p &lt; k\)</span>. Их мы также можем оформить в матрицу $F^= . Эти факторы объясняют имеющиеся переменные. Делают это они следующим образом:</p>
+<p><span class="math display">\[
+\begin{split}
+&amp;\mathbf{X}_i = a_{i1} \mathbf{F}_1 + a_{i2} \mathbf{F}_2 + \dots + a_{ip} \mathbf{F}_p + \mathbf{U}_i, \, i = 1, 2, \ldots, k \\
+&amp; \mathbf{X} = \mathbf{A} \mathbf{F} + \mathbf{U}, \\
+&amp; \mathbf{A} = (a_{ij}), \, i = 1,2,\ldots,k, \, j = 1,2,\dots,p \\
+&amp; \mathbf{U}^\top = \pmatrix{\mathbf{U}_1 &amp; \mathbf{U}_2 &amp; \dots &amp; \mathbf{U}_k}
+\end{split}
+\]</span></p>
+<p>Здесь <span class="math inline">\(\mathbf{U}\)</span> — то, что не удалось объяснить факторами (<strong>остатки, уникальность, uniqueness</strong>).</p>
+<p>Также выдвигаем ряд дополнительных предположения для формализации требования и упрощения вычислений:</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{E}\mathbf{X} = 0\)</span>.
+<ul>
+<li>Так сделать можно, так как мы все равно будем стандартизировать переменные, и математическое ожидание обратиться в ноль.</li>
+</ul></li>
+<li><span class="math inline">\(\text{cor}(\mathbf{F}_j, \mathbf{F}_t) = 0, \, \forall j \forall t, \, j \neq t, j = 1,2,\ldots,p, \, t = 1,2,\ldots,p\)</span>.
+<ul>
+<li>То есть хотим, чтобы факторы были независимы (некоррелированы).</li>
+</ul></li>
+<li><span class="math inline">\(\text{var}(\mathbf{F}) = \mathbf{I}\)</span>.
+<ul>
+<li>Если «истинная» дисперсия факторов будет отличаться от единицы, то разница уйдет в матрицу <span class="math inline">\(\mathbf{A}\)</span>.</li>
+</ul></li>
+<li><span class="math inline">\(\text{cor}(\mathbf{U}_i, \mathbf{U}_r) = 0, \, \text{cor}(\mathbf{U}_i, \mathbf{F}_j) = 0, \, \forall i \forall r \forall j, i \neq r, \, i = 1,2,\ldots,k, \, r = 1,2,\ldots,k, \, j = 1,2,\ldots,p\)</span>.
+<ul>
+<li>Ну, они же все-таки уникальности.</li>
+</ul></li>
+</ol>
+<p>Элементы матрицы <span class="math inline">\(\mathbf{A}\)</span> называются <strong>факторными нагрузками (factor loadings)</strong>. Элементы вектора <span class="math inline">\(\mathbf{U}\)</span> называются <strong>уникальными факторами (specific variates)</strong>.</p>
+<p>Теперь об информативности. Аналогично PCA, возьмем в качестве меры информативности дисперсию. Мы хотим узнать, насколько хорошо факторы объясняют исходные переменные. Дисперсия переменных будет складываться из следующего:</p>
+<p><span class="math display">\[
+\text{var}\mathbf{X}_i = \sum_{j=1}^p a^2_{ij} + \text{var}\mathbf{U}_i
+\]</span></p>
+<p>То есть, чем больше <strong>уникальность (uniqueness)</strong> — часть дисперсии переменной, объясненной уникальными факторами — тем хуже наши факторы объясняют переменную. Что делать? Либо подобрать другую модель (изменить количество факторов), либо не брать такую переменную в факторный анализ…</p>
+<p>Однако в факторном анализе есть еще одна интересная деталь. Мы работаем с выборочными корреляциями. По этой причине мы не можем подобрать единственно верное решение задачи факторного анализа. Матрица факторных нагрузок определена с точностью до ортогонального преобразования (по-русски, вращения). То есть у нас есть множество решений, которые отличаются друг от друга поворотом, и мы можем выбирать самое «симпатишное».</p>
+<blockquote class="blockquote">
+<p>За такую неопределенность факторный анализа часто критикуют. Да и вообще, как вы могли заметить, в факторном анализе субъективность чуть ли не на каждом шагу.</p>
+</blockquote>
+</section>
+<section id="вращение-факторов-factor-rotation" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="вращение-факторов-factor-rotation"><span class="header-section-number">14.5.2</span> Вращение факторов (factor rotation)</h3>
+<p>Вращать вообще-то не обязательно. Если хочется, чтобы все было похоже на PCA, то можно ввести некоторое дополнительное условие и получить единственное решение.</p>
+<p>Однако вращение факторов позволяет получить иногда более интересные результаты. Самые используемые вращения таковы:</p>
+<ul>
+<li><strong>varimax</strong> — находит наиболее «контрастное» решение, еще более «изолируя» друг от друга факторы</li>
+<li><strong>quartimax</strong> — минимизирует количество факторов, необходимых для объяснения каждой переменной</li>
+<li><strong>equamax</strong> — количество переменных, сильно нагружающих фактор, и количество факторов для объяснения переменных минимальны</li>
+<li><strong>promax</strong> — наклонное вращение, позволяющее коррелировать факторы</li>
+<li><strong>oblimin</strong> — косоугольное вращение, позволяющее коррелировать факторы</li>
+</ul>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Хотя это, бесспорно, определяется видом лаваша — их популяция весьма разнообразна.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
