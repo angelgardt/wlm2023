@@ -1,5 +1,5 @@
 ---
-title: "L14. Анализ главных компонент. Эксплораторный факторный анализ"
+title: "L14 // Анализ главных компонент. Эксплораторный факторный анализ"
 author: "Антон Ангельгардт"
 format: 
   revealjs:
@@ -12,7 +12,7 @@ format:
 highlight-style: github
 ---
 
-## Зачем?
+## Что будет?
 ```{js favicon-loader}
 //  <link rel="icon" type="image/x-icon" href="pics/favicon.png">
 
@@ -23,103 +23,306 @@ document.head.appendChild(link);
 link.href = 'pics/favicon.png';
 ```
 
+{{< include ../other/_symbols.qmd >}}
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r pkgs}
+library(tidyverse)
+theme_set(theme_bw())
+library(ggforce)
+```
+
 - Пункт плана
 - Пункт плана
 - Пункт плана
 
-## Текст
+## Проклятие размености (curse of dimensionality)
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
-# Раздел
+```{r geomprob-square-14}
+ggplot() +
+  geom_rect(aes(xmin = -.5, xmax = .5, ymin = -.5, ymax = .5), color = "black", alpha = 0, linewidth = 1) +
+  geom_circle(aes(x0 = 0, y0 = 0, r = .5)) +
+  guides(x = "none", y = "none") +
+  coord_fixed()
+```
 
-## Списки
+```{r geomprob-dots}
+tibble(x = runif(100, -.5, .5),
+       y = runif(100, -.5, .5)) %>% 
+ggplot() +
+  geom_rect(aes(xmin = -.5, xmax = .5, ymin = -.5, ymax = .5), color = "black", alpha = 0, linewidth = 1) +
+  geom_circle(aes(x0 = 0, y0 = 0, r = .5)) +
+  geom_point(aes(x, y)) +
+  guides(x = "none", y = "none") +
+  labs(x = "", y = "") +
+  coord_fixed()
+```
 
-When you click the **Render** button a document will be generated that includes:
+**Какова вероятность, что случайно брошенная точка попадет в круг (событие $A$)?**
 
--   Content authored with markdown
--   Output from executable code
-
-## Код
-
-When you click the `Render` button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r, echo=TRUE}
-1 + 1
+```{r geomprob-incircle}
+tibble(x = runif(1000, -.5, .5),
+       y = runif(1000, -.5, .5),
+       d = sqrt(x^2 + y^2),
+       incirc = ifelse(d <= .5, TRUE, FALSE)) %>% 
+ggplot() +
+  geom_rect(aes(xmin = -.5, xmax = .5, ymin = -.5, ymax = .5), color = "black", alpha = 0, linewidth = 1) +
+  geom_circle(aes(x0 = 0, y0 = 0, r = .5)) +
+  geom_point(aes(x, y, color = incirc)) +
+  guides(x = "none", y = "none", color = "none") +
+  labs(x = "", y = "") +
+  coord_fixed() +
+  scale_color_manual(values = c(`TRUE` = "black", `FALSE` = "gray70"))
 ```
 
 
-## Формулы
+* для $\setR^2$
 
 $$
-\mathbb{E}(X)=\frac{1}{n} \sum_{i=1}^n x_i
+\prob (A) = \lim_{N \rightarrow \infty} \frac{n}{N} = \frac{S_\text{circle}}{S_\text{square}}
 $$
 
 $$
-n \in \mathbb{N} \\
-x \thicksim \mathcal{N}(0, 1)
+\prob (A) = \frac{S_\text{circle}}{S_\text{square}} = \frac{\pi r^2}{a^2} = \frac{\pi \big(\frac{1}{2}a\big)^2}{a^2} = \frac{1}{4}\pi \approx 0.785
+$$
+
+* для $\setR^3$
+
+$$
+\prob (A) = \frac{V_\text{ball}}{V_\text{cube}} = \frac{\frac{4}{3}\pi r^3}{a^3} = \frac{\frac{4}{3}\pi \big(\frac{1}{2}a\big)^3}{a^3} \approx 0.523
+$$
+
+* для $\setR^k$
+
+$$
+\begin{split}
+k = 2n &, V = \frac{\pi^2}{n!}r^{2n} \\
+k = 2n+1 &, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
+\end{split}
+$$
+
+* $k \to \infty : V \to 0$.
+
+
+## Проклятие размерности
+
+* увеличивая количество переменных, мы делаем расстояния между точками больше
+* объем выборки должен расти экспоненциально, чтобы сохранялась достаточная точность оценки параметров
+
+**Что делать? Снижать размерность.**
+
+
+## Задачи факторного анализа и анализа главных компонент
+
+- Сокращение числа переменных
+- Измерение неизмеримого (построение новых обобзеных показателей)
+- Наглядное представление многомерных наблюдений
+- Описание структуры взаимных связей между переменными
+- Преодоление мультиколлинеарности (в регрессионном анализе)
+- Заполнение пропущенных значений (при работе с разряженными матрицами)
+
+и т.д.
+
+
+# Анализ главных компонент (Principal Component Analysis)
+
+## Математическая модель анализа главных компонент
+
+* Случайный вектор (матрица) $(\vm X_1, \vm X_2, \dots, \vm X_k)$
+    * $\vm X_i$ --- некоторый столбец [числовых] данных
+* Задача --- найти линейную комбинацию переменных, у которой максимальная дисперсия
+
+$$
+\begin{split}
+&\vm Y_1 = a_{11} \vm X_1 + a_{12} \vm X_2 + \dots + a_{1k} \vm X_k \\
+&\var(\vm Y_1) \to \max \\
+&\vm a_1 \vm a_1^\top = 1, \, \vm a_1 = 
+\begin{pmatrix} a_{11} & a_{12} \dots a_{1k} \end{pmatrix}
+\end{split}
 $$
 
 
-## Колонки
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-Текст правой колонки
-:::
-
-::::
+$$
+\begin{split}
+&\vm Y_2 = a_{21} \vm X_1 + a_{22} \vm X_2 + \dots + a_{2k} \vm X_k \\
+&\var(\vm Y_2) \to \max \\
+&\vm a_2 \vm a_2^\top = 1, \, \vm a_2 = 
+\begin{pmatrix} a_{21} & a_{22} \dots a_{2k} \end{pmatrix} \\
+&\cor(\vm Y_2, \vm Y_1) = 0
+\end{split}
+$$
 
 
-## Колонки с картинкой справа
-
-:::: {.columns}
-
-::: {.column width="60%"}
-Текст левой колонки
-:::
-
-::: {.column width="40%"}
-![](pics/test-pic.png)
-:::
-
-::::
+$$
+\begin{split}
+&\vm Y_3 = a_{31} \vm X_1 + a_{32} \vm X_2 + \dots + a_{3k} \vm X_k \\
+&\var(\vm Y_3) \to \max \\
+&\vm a_3 \vm a_3^\top = 1, \, \vm a_3 = 
+\begin{pmatrix} a_{31} & a_{32} \dots a_{3k} \end{pmatrix} \\
+&\cor(\vm Y_3, \vm Y_1) = 0, \, \cor(\vm Y_2, \vm Y_1) = 0
+\end{split}
+$$
 
 
-## Колонки с картинкой слева
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](pics/test-pic.png)
-:::
-
-::: {.column width="40%"}
-Текст
-:::
-
-::::
+$$
+\begin{split}
+&\vm Y_k = a_{k1} \vm X_1 + a_{k2} \vm X_2 + \dots + a_{kk} \vm X_k \\
+&\var(\vm Y_k) \to \max \\
+&\vm a_k \vm a_k^\top = 1, \, \vm a_k = 
+\begin{pmatrix} a_{k1} & a_{k2} \dots a_{kk} \end{pmatrix} \\
+&\cor(\vm Y_k, \vm Y_i) = 0, \, i = 1, 2, \ldots, k
+\end{split}
+$$
 
 
-## График
+## Главные компоненты
 
-```{r plot}
-plot(sample(1:100, 30))
-```
+* Полученные $Y_i$ --- искомые **главные компоненты (principal components)**
+* Новые оси, с помощью которых мы будем смотреть на данные и описывать их
+* Информативность --- это дисперсия
+* Найти наиболее информативные линейные комбинации --- некоторую «правильную систему координат».
+
+
+## Поиск главных компонент геометрически
+
+<center>
+<figure>
+<img src="pics/pca-1.jpg">
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="pics/pca-2.jpg">
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="pics/pca-3.jpg">
+</figure>
+</center>
+
+
+## Сокращение размерности признакового пространства
+
+<center>
+<figure>
+<img src="pics/lavash.jpg">
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="pics/lavash_dim.jpg">
+</figure>
+</center>
+
+
+## Информативность компонент
+
+
+<center>
+<figure>
+<img src="pics/pc1.jpg">
+</figure>
+</center>
+
+* все наблюдения расположены более-менее вокруг одной прямой --- первой главной компоненты $\text{PC1}$
+* изменчивостью по второй главной компоненте $\text{PC2}$ можно пренебречь
+
+## Информативность компонент
+
+* каждая из главных компонент объясняет часть дисперсии данных
+* **если новая переменная (главная компонента) объясняет меньше дисперсии, чем исходная переменная, то она не информативна**
+* **кумулятивная доля объясняемой дисперсии** позволяет определить количество главных компонент, достаточное для объяснения **не менее 80% дисперсии данных**
+
+
+|                        |  PC1  |  PC2  |  PC3  | ... |  PCk  |
+|------------------------|:-----:|:-----:|:-----:|:---:|:-----:|
+| Standard Deviation     | 2.214 | 1.501 | 0.622 | ... | 0.003 |
+| Proportion of Variance | 0.596 | 0.327 | 0.059 | ... | 0.000 |
+| Cumulative Proportion  | 0.596 | 0.923 | 0.982 | ... | 1.000 |
+
+
+## Интерпретация главных компонент
+
+* **матрица нагрузок (matrix of variable loadings)**
+
+|     |  PC1 |  PC2  |  PC3  | ... |  PCk  |
+|-----|:----:|:-----:|:-----:|:---:|:-----:|
+| X1  | 0.06 | −0.62 |  0.42 | ... | −0.42 |
+| X2  | 0.38 | −0.27 | −0.74 | ... | −0.27 |
+| X3  | 0.44 | −0.24 |  0.19 | ... | −0.38 |
+| ... |  ... |  ...  |  ...  | ... | −0.05 |
+| Xk  | 0.24 |  0.57 | −0.11 | ... | −0.77 |
+
+
+
+# Эксплораторный факторный анализ (Exploratory Factor Analysis)
+
+## Математическая модель эксплораторного факторного анализа
+
+* матрица наблюдений $X^\top = \pmatrix{X_1 & X_2 & \ldots X_k}$
+* за нашими наблюдениями лежат $p$ **факторов**, $p < k$
+* матрица факторов $F^\top = \pmatrix{F_1 & F_2 & \ldots & F_p}$
+
+$$
+\begin{split}
+&\vm X_i = a_{i1} \vm F_1 + a_{i2} \vm F_2 + \dots + a_{ip} \vm F_p + \vm U_i, \, i = 1, 2, \ldots, k \\
+& \vm X = \vm A \vm F + \vm U, \\
+& \vm A = (a_{ij}), \, i = 1,2,\ldots,k, \, j = 1,2,\dots,p \\
+& \vm U^\top = \pmatrix{\vm U_1 & \vm U_2 & \dots & \vm U_k}
+\end{split}
+$$
+
+* $\vm U$ --- то, что не удалось объяснить факторами (**остатки, уникальность, uniqueness**).
+
+
+## Допущения эксплораторного факторного анализа
+
+1. $\expect \vm X = 0$.
+2. $\cor (\vm F_j, \vm F_t) = 0, \, \forall j \forall t, \, j \neq t, j = 1,2,\ldots,p, \, t = 1,2,\ldots,p$.
+3. $\var (\vm F) = \vm I$.
+4. $\cor (\vm U_i, \vm U_r) = 0, \, \cor (\vm U_i, \vm F_j) = 0, \, \forall i \forall r \forall j, i \neq r, \, i = 1,2,\ldots,k, \, r = 1,2,\ldots,k, \, j = 1,2,\ldots,p$.
+
+* Элементы матрицы $\vm A$ --- **факторные нагрузки (factor loadings)**.
+* Элементы вектора $\vm U$ --- **уникальные факторы (specific variates)**.
+
+
+## Уникальности
+
+$$
+\var \vm X_i = \sum_{j=1}^p a^2_{ij} + \var \vm U_i
+$$
+
+* чем больше **уникальность (uniqueness)**, тем хуже наши факторы объясняют переменную.
+
+
+
+## Вращение факторов (factor rotation)
+
+* **varimax** --- находит наиболее «контрастное» решение, еще более «изолируя» друг от друга факторы
+* **quartimax** --- минимизирует количество факторов, необходимых для объяснения каждой переменной
+* **equamax** --- количество переменных, сильно нагружающих фактор, и количество факторов для объяснения переменных минимальны
+* **promax** --- наклонное вращение, позволяющее коррелировать факторы
+* **oblimin** --- косоугольное вращение, позволяющее коррелировать факторы
+
 
 ## Итоги
 
-- Пункт итогов
-- Пункт итогов
-- Пункт итогов
+- модели PCA и EFA
+- главные компоненты и факторы
+- решение задачи факторного анализа
+- вращение факторов
 
 
-# L14. Анализ главных компонент. Эксплораторный факторный анализ {#end}
+
+# L14 // Анализ главных компонент. Эксплораторный факторный анализ {#end}
 
 :::: {.quarto-title-authors}
 ::: {.quarto-title-author}

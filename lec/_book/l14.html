@@ -625,14 +625,14 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 </tr>
 </tbody>
 </table>
-<p>Нагрзузки — это не что иное как коэффициенты <span class="math inline">\(a_{ij}\)</span> из математической модели. Чем они больше, тем сильнее исходные переменные связаны с главными компонентами. Обобщив связи, можно попробовать придумать адеватную исследовательской области интерпретацию.</p>
+<p>Нагрузки — это не что иное как коэффициенты <span class="math inline">\(a_{ij}\)</span> из математической модели. Чем они больше, тем сильнее исходные переменные связаны с главными компонентами. Обобщив связи, можно попробовать придумать адеватную исследовательской области интерпретацию.</p>
 </section>
 </section>
 <section id="эксплораторный-факторный-анализ-exploratory-factor-analysis" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">14.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</h2>
 <section id="математическая-модель-эксплораторного-факторного-анализа" class="level3" data-number="14.5.1">
 <h3 data-number="14.5.1" class="anchored" data-anchor-id="математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">14.5.1</span> Математическая модель эксплораторного факторного анализа</h3>
-<p>У нас есть все та же матрица наблюдений <span class="math inline">\(X^\top = \pmatrix{X_1 &amp; X_2 &amp; \ldots X_k}\)</span>, только мы ее транспонировали для будущего удобства. Мы предполагаем, что под нашими наблюдениями спрятаны некие <strong>факторы</strong> в количестве <span class="math inline">\(p\)</span> штук, <span class="math inline">\(p &lt; k\)</span>. Их мы также можем оформить в матрицу $F^= . Эти факторы объясняют имеющиеся переменные. Делают это они следующим образом:</p>
+<p>У нас есть все та же матрица наблюдений <span class="math inline">\(X^\top = \pmatrix{X_1 &amp; X_2 &amp; \ldots X_k}\)</span>, только мы ее транспонировали для будущего удобства. Мы предполагаем, что под нашими наблюдениями спрятаны некие <strong>факторы</strong> в количестве <span class="math inline">\(p\)</span> штук, <span class="math inline">\(p &lt; k\)</span>. Их мы также можем оформить в матрицу <span class="math inline">\(F^\top = \pmatrix{F_1 &amp; F_2 &amp; \ldots &amp; F_p}\)</span>. Эти факторы объясняют имеющиеся переменные. Делают это они следующим образом:</p>
 <p><span class="math display">\[
 \begin{split}
 &amp;\mathbf{X}_i = a_{i1} \mathbf{F}_1 + a_{i2} \mathbf{F}_2 + \dots + a_{ip} \mathbf{F}_p + \mathbf{U}_i, \, i = 1, 2, \ldots, k \\
