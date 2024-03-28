@@ -97,17 +97,20 @@ sqrt(chisq.test(stud$lunch, stud$`test preparation course`)$statistic / nrow(stu
 
 
 # 3
-ggplot(data = stud) +
-  geom_mosaic(aes(x = product(gender, lunch)))
+stud %>% 
+  rename(test_preparation_course = `test preparation course`) %>% # select(test_preparation_course)
+  ggplot() +
+  geom_mosaic(aes(x = product(test_preparation_course, lunch)))
 
 
 # 4
 stud %>% mutate(test = ifelse(`test preparation course` == "completed", 1, 0)) -> s_
+str(s_)
 cor.test(s_$`math score`, s_$test)
 ltm::biserial.cor(stud$`math score`, stud$`test preparation course`)
 
 
 # 5
 stud %>% 
-  ggplot(aes(lunch, `math score`)) +
+  ggplot(aes(`test preparation course`, `math score`)) +
   geom_boxplot()
