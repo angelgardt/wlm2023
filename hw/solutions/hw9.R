@@ -14,6 +14,7 @@ model1 <- lm(SalePrice ~ LotArea, houses)
 summary(model1)
 
 # 3
+par(mfrow = c(2, 2))
 plot(model1)
 
 houses %>% 
@@ -33,8 +34,8 @@ summary(model2)
 # 6
 plot(model2)
 
-houses %>% 
-  ggplot(aes(LotArea, SalePrice)) +
+houses_cond %>% 
+  ggplot(aes(LotArea, SalePrice, color = SaleCondition)) +
   geom_point() +
   geom_smooth(method = "lm")
 
@@ -51,6 +52,7 @@ summary(model4)
 plot(model4)
 
 # 10
+drop1(model4, test = "F")
 model4.1 <- update(model4, . ~ . -LotArea : SaleCondition)
 anova(model4, model4.1)
 
@@ -71,16 +73,18 @@ Metrics::rmse(houses_noinfluential$SalePrice, model1.1$fitted.values)
 
 # 2
 houses_cond %>% 
-  mutate(fitted = model2$fitted.values) %>% 
+  mutate(fitted = model2$fitted.values) %>% # colnames()
   ggplot(aes(LotArea, SalePrice, color = SaleCondition)) +
-  geom_point() +
-  geom_line(aes(y = fitted))
+  geom_point(alpha = .3) +
+  geom_line(aes(y = fitted), size = 2)
 
 # 3
 ## code may vary
 
 # 4
 ## code may vary
+# report::report(model1)
+# apaTables::apa.reg.table(model1, filename = "simple_reg.doc")
 
 # 5
 reg_coef <- function(data, y, X) {
