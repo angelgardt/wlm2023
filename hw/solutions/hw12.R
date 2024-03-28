@@ -97,21 +97,3 @@ Metrics::mape(pisa$Overall, lm$fitted.values)
 Metrics::mape(pisa$Overall, predict(model_ridge, X2, s = "lambda.min"))
 Metrics::rmse(pisa$Overall, lm$fitted.values)
 Metrics::rmse(pisa$Overall, predict(model_ridge, X2, s = "lambda.min"))
-
-
-# ADDITIONAL
-
-# 1
-
-
-# 2
-
-
-# 3
-
-
-# 4
-
-
-# 5
-

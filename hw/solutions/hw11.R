@@ -221,22 +221,3 @@ prediction_metrics <- function(data, response, threshold) {
 prediction_metrics(data = heart_train$TenYearCHD,
                    response = predict(model1, type = "response"),
                    threshold = 0.6)
-
-
-
-# ADDITIONAL
-
-# 1
-
-
-# 2
-
-
-# 3
-
-
-# 4
-
-
-# 5
-

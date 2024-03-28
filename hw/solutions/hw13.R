@@ -70,21 +70,3 @@ gg_res <- ggplot(res, aes(y = sresid)) +
 gg_res + geom_point(aes(x = fitted))
 gg_res + geom_boxplot(aes(x = Company))
 gg_res + geom_boxplot(aes(x = TypeName))
-
-
-# ADDITIONAL
-
-# 1
-
-
-# 2
-
-
-# 3
-
-
-# 4
-
-
-# 5
-
