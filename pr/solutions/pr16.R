@@ -112,20 +112,48 @@ psych::fa.parallel(pizza2, fa = "both", fm = "ml")
 
 # 14
 factanal(pizza2, factors = 3)
-factanal(pizza2, factors = 2)
+fan <- factanal(pizza2, 
+                factors = 2, 
+                scores = "regression")
 
 # 15
+fan$loadings
+fan$scores
+
 
 # 16
+pizza %>% 
+  bind_cols(fan$scores) %>% 
+  ggplot(aes(Factor1, Factor2,
+             color = brand)) +
+  geom_point()
+
 
 # 17
+tolunc <- read_csv2("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr16/tolerance_uncertainty.csv")
+str(tolunc)
+tolunc %>% select(-sex, -age) -> tu
+
+cor(tu) %>% 
+  ggcorrplot::ggcorrplot(colors = c("red3", "white", "blue3"),
+                         lab = TRUE)
+
 
 # 18
+psych::fa.parallel(tu, fa = "fa", fm = "ml")
+EFAtools::BARTLETT(tu)
+EFAtools::KMO(tu)
 
 # 19
+factanal(tu, factors = 1)
+factanal(tu, factors = 2)
+factanal(tu, factors = 3)
+factanal(tu, factors = 4)
+
 
 # 20
-
+factanal(tu, factors = 4, rotation = "promax")
+factanal(tu, factors = 4, rotation = "oblimin")
 
 
 # ADDITIONAL
