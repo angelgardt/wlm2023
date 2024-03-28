@@ -16,7 +16,7 @@ str(fs)
 
 ## b
 fs %>% 
-  filter(pres == "p" & key == "right") -> fs_correct 
+  filter(pres == "p" & key == "right") -> fs_correct
 nrow(fs_correct)
 
 # 2
