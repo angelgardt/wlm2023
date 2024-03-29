@@ -78,35 +78,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -355,7 +326,7 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <img src="pics/big_five_eng.png" width="100%" class="figure-img">
 </figure>
 </center>
-<p>Данные собирались с помощью опросника Big-Five Factor Markers. На измерение каждого фактора в опроснике отведено по десять утверждений:</p>
+<p>Данные собирались с помощью опросника Big-Five Factor Markers. На измерение каждого фактора в опроснике отведено по десять утверждений — с этими переменными мы будем работать:</p>
 <ul>
 <li><code>EXT1</code>–<code>EXT10</code> — extraversion</li>
 <li><code>EST1</code>–<code>EST10</code> — neuroticism (emotional stability)</li>
@@ -363,17 +334,23 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <li><code>CSN1</code>–<code>CSN10</code> — conscientiousness</li>
 <li><code>OPN1</code>–<code>OPN10</code> — openness</li>
 </ul>
+<p>Подробное описание датасета можно найти в <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/big_five_bffm_codebook.txt">этом файле</a>.</p>
+<p><a href="https://www.kaggle.com/tunguz/big-five-personality-test">Оригинальный датасет</a> содержит 1 015 342 наблюдения — это очень много, возможно, не хватит оперативной памяти, поэтому мы будем работать <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/bffm.csv">с его частью</a>.</p>
 </div>
 </div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw15-1-level" class="level"></p>
 <div id="hw15-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите данные. Проверьте их структуру и типы переменных.</li>
+<li>При необходимости скорректируйте типы переменных.</li>
+<li>Если в данных есть пропущенные значения или они возникли в ходе предобработки, удалите их из датасета.</li>
+</ol>
 </div>
 <div id="hw15-1-autocheck" class="autocheck">
 <div id="hw15-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите количество строк в датасете, получившемся после предобработки (корректировки типов переменных и удаления пропущенных значений).</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw15-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw15-1')"></p>
@@ -386,21 +363,11 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Обратите внимание на структуру файла с данными, в особенности на разедлитель колонок, который в нем используется.</li>
+<li>При предобработке данных может пригодится функция <code>across()</code>, которая позволяет выделить колонки, по которым необходимо провести предобработку.</li>
+<li>Возможно, полезно будет вспомнить регулярные выражения для отбора необходимых колонок.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -408,10 +375,13 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw15-2-level" class="level"></p>
 <div id="hw15-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<ol type="a">
+<li>Отберите переменные для анализ — пункты опросника (<code>EXT1</code>–<code>EXT10</code>, <code>EST1</code>–<code>EST10</code>, <code>AGR1</code>–<code>AGR10</code>, <code>CSN1</code>–<code>CSN10</code>, <code>OPN1</code>–<code>OPN10</code>).</li>
+<li>Постройте и визуализируйте корреляционную матрицу по отобранным переменным.</li>
+</ol>
+<p>Есть ли нечто странное в данных?</p>
 </div>
-<div id="hw15-2-autocheck" class="autocheck">
+<div id="hw15-2-autocheck" class="autocheck" hidden="true">
 <div id="hw15-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -426,21 +396,10 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Обратите внимание на силу корреляций, а также на их направление.</li>
+<li>С чем это может быть связано, если мы предполагаем, что опросник хорошо сконструирован и его психометрические показали достаточно высокие?</li>
+</ul>
 </details>
 </div>
 </section>
@@ -449,6 +408,7 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <p><img id="hw15-3-level" class="level"></p>
 <div id="hw15-3-task" class="task">
 <p>Текст задания.</p>
+<p><em>Вероятно, поможет <a href="https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/direction_matrix_bffm.csv">матрица направлений вопросов</a>.</em></p>
 </div>
 <div id="hw15-3-autocheck" class="autocheck">
 <div id="hw15-3-ir" class="input-requirements">

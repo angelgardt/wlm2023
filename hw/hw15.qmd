@@ -20,7 +20,7 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 </center>
 
 Данные собирались с помощью опросника Big-Five Factor Markers. 
-На измерение каждого фактора в опроснике отведено по десять утверждений:
+На измерение каждого фактора в опроснике отведено по десять утверждений --- с этими переменными мы будем работать:
 
 * `EXT1`--`EXT10` --- extraversion
 * `EST1`--`EST10` --- neuroticism (emotional stability)
@@ -28,7 +28,9 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 * `CSN1`--`CSN10` --- conscientiousness
 * `OPN1`--`OPN10` --- openness
 
+Подробное описание датасета можно найти в [этом файле](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/big_five_bffm_codebook.txt).
 
+[Оригинальный датасет](https://www.kaggle.com/tunguz/big-five-personality-test) содержит 1 015 342 наблюдения --- это очень много, возможно, не хватит оперативной памяти, поэтому мы будем работать [с его частью](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/bffm.csv).
 
 :::
 
@@ -37,12 +39,14 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <img id="hw15-1-level" class="level"/>
 
 ::: {#hw15-1-task .task}
-Текст задания `переменная`.
+a. Загрузите данные. Проверьте их структуру и типы переменных.
+b. При необходимости скорректируйте типы переменных.
+c. Если в данных есть пропущенные значения или они возникли в ходе предобработки, удалите их из датасета.
 :::
 
 ::: {#hw15-1-autocheck .autocheck}
 ::: {#hw15-1-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите количество строк в датасете, получившемся после предобработки (корректировки типов переменных и удаления пропущенных значений).
 :::
 
 <input class="autocheck-input" type="text" id="hw15-1" placeholder="Введите ответ…">
@@ -58,23 +62,9 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Обратите внимание на структуру файла с данными, в особенности на разедлитель колонок, который в нем используется.
+* При предобработке данных может пригодится функция `across()`, которая позволяет выделить колонки, по которым необходимо провести предобработку.
+* Возможно, полезно будет вспомнить регулярные выражения для отбора необходимых колонок.
 
 </details>
 :::
@@ -84,12 +74,14 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 <img id="hw15-2-level" class="level"/>
 
 ::: {#hw15-2-task .task}
-Текст задания.
+a. Отберите переменные для анализ --- пункты опросника (`EXT1`--`EXT10`, `EST1`--`EST10`, `AGR1`--`AGR10`, `CSN1`--`CSN10`, `OPN1`--`OPN10`).
+b. Постройте и визуализируйте корреляционную матрицу по отобранным переменным.
 
-$$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
+Есть ли нечто странное в данных?
+
 :::
 
-::: {#hw15-2-autocheck .autocheck}
+::: {#hw15-2-autocheck .autocheck hidden="true"}
 ::: {#hw15-2-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -107,23 +99,8 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Обратите внимание на силу корреляций, а также на их направление.
+* С чем это может быть связано, если мы предполагаем, что опросник хорошо сконструирован и его психометрические показали достаточно высокие?
 
 </details>
 :::
@@ -134,6 +111,9 @@ $$\sin^2{\alpha} + \cos^2{\alpha} = 1$$
 
 ::: {#hw15-3-task .task}
 Текст задания.
+
+*Вероятно, поможет [матрица направлений вопросов](https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/direction_matrix_bffm.csv).*
+
 :::
 
 ::: {#hw15-3-autocheck .autocheck}

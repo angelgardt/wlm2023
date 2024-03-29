@@ -13,11 +13,29 @@ library(factoextra)
 bffm <- read_tsv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/bffm.csv")
 str(bffm)
 
+bffm %>% 
+  # select(matches("^[[:upper:]]{3}\\d+$")) %>% 
+  # colnames()
+  # sapply(unique)
+  mutate(across(matches("^[[:upper:]]{3}\\d+$"), as.numeric)) %>% 
+  drop_na() -> bffm
+
+nrow(bffm)
+
 
 # 2
+## a
+bffm %>% 
+  select(matches("^[[:upper:]]{3}\\d+$")) -> bffm_q
 
+## b
+bffm_q %>% 
+  cor() %>% 
+  ggcorrplot::ggcorrplot(colors = c("red3", "white", "blue3"))
 
 # 3
+
+# https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/direction_matrix_bffm.csv
 
 
 # 4
