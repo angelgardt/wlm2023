@@ -9,4 +9,7 @@ ind <- sample(1:nrow(bffm), 20086)
 bffm %>% 
   slice(ind) -> bffm_shrink
 
-bffm_shrink %>% write_tsv("../data/hw15/bffm.csv")
+bffm_shrink %>%write_tsv("../data/hw15/bffm.csv")
+
+# from hw15
+bffm_q %>% write_csv("../data/hw16/bffm.csv")
