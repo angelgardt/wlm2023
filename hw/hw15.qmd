@@ -7,6 +7,31 @@ REPLACE ALL hw15 TO hw<n> WITH MATCH CASE
 ```
 ## Основные задания {#hw15_main}
 
+:::{.callout-note}
+
+## Данные
+
+Сегодня мы работает с датасетом по Большой пятерке (Big Five). Вспомнить структуру модели можно [тут](https://en.wikipedia.org/wiki/Big_Five_personality_traits).
+
+<center>
+<figure>
+<img src="pics/big_five_eng.png" width="100%">
+</figure>
+</center>
+
+Данные собирались с помощью опросника Big-Five Factor Markers. 
+На измерение каждого фактора в опроснике отведено по десять утверждений:
+
+* `EXT1`--`EXT10` --- extraversion
+* `EST1`--`EST10` --- neuroticism (emotional stability)
+* `AGR1`--`AGR10` --- agreeableness
+* `CSN1`--`CSN10` --- conscientiousness
+* `OPN1`--`OPN10` --- openness
+
+
+
+:::
+
 ### #1
 
 <img id="hw15-1-level" class="level"/>

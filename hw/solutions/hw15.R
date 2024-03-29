@@ -3,7 +3,15 @@
 
 # MAIN
 
+library(tidyverse)
+theme_set(theme_bw())
+theme_update(legend.position = "bottom")
+library(factoextra)
+
+
 # 1
+bffm <- read_tsv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/bffm.csv")
+str(bffm)
 
 
 # 2
