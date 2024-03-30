@@ -58,12 +58,350 @@ auth_from_secret(access_token = token$credentials$access_token,
 
 
 ## Load data
-```{r load-data, cache=FALSE}
-source("scripts/get_spec_data.R")
-source("scripts/get_calendar_data.R")
-source("scripts/get_journal_data.R")
-source("scripts/get_yt_data.R")
-source("scripts/get_classroom_data.R")
+
+### Spec
+
+```{r get-spec-data}
+## homeworks
+hw_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+                      sheet = "HW") %>% 
+  select(task, level)
+
+## quizes
+q_sp <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+                     sheet = "Q") %>% 
+  select(task_code, level, max_score)
+```
+
+### Calendar
+
+```{r get-calendar-data}
+read_sheet("https://docs.google.com/spreadsheets/d/1k9QtNjZLzTrbYlkXrWFWxglXTG5kol1DHSPIN9stLiE/edit?usp=sharing",
+           sheet = "План", skip = 2) -> calendar
+calendar %>% 
+  select(date, code_1) %>% 
+  filter(str_detect(code_1, "^L|^P|^C|^A")) %>% 
+  mutate(date = as_date(date, format = "%d/%m/%y")) %>% 
+  rename("code" = "code_1") -> calendar_activities
+
+calendar %>%
+  select(code_2, deadline_soft, deadline_hard) %>%
+  filter(str_detect(code_2, "^Q|^HW")) %>%
+  mutate(deadline_soft = as_datetime(deadline_soft, format = "%d/%m/%y %H:%M") %>% date(),
+         deadline_hard = as_datetime(deadline_hard, format = "%d/%m/%y %H:%M") %>% date()) %>%
+  rename("code" = "code_2") %>% 
+  pivot_longer(-code, names_to = "deadline", values_to = "date") %>% 
+  mutate(deadline = str_remove(deadline, "deadline_")) -> calendar_assessment
+
+```
+
+### Journal
+
+```{r get-journal-data}
+## practice
+journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+                         sheet = "Journal", col_types = "c")
+journal %>% 
+  select(ID, Stream, starts_with("P")) -> pr_journal
+
+## calculate number of participants
+pr_journal %>% 
+  filter(Stream == "main") %>% 
+  summarise(n = n()) %>% 
+  .$n -> n_partic
+
+## practice presence
+pr_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "practice",
+               values_to = "present") %>% 
+  separate(practice, into = c("practice", "half"), sep = "-") %>% 
+  group_by(practice, half) %>% 
+  mutate(present = as.numeric(present),
+         practice = factor(practice,
+                           ordered = TRUE,
+                           levels = paste0("P", 1:17))) %>%
+  replace_na(list(present = 0)) %>% 
+  summarise(count = sum(present),
+            percentage = mean(present) %>% round(2)) -> pr
+
+
+
+## consulations
+journal %>% 
+  select(ID, Stream, starts_with("C")) -> c_journal
+
+## consulations presence
+c_journal %>% 
+  filter(Stream == "main") %>% 
+  select(-Stream) %>% 
+  pivot_longer(-ID, 
+               names_to = "consultation",
+               values_to = "present") %>% 
+  group_by(consultation) %>% 
+  mutate(present = as.numeric(present),
+         consultation = factor(consultation,
+                               ordered = TRUE,
+                               levels = paste0("C", 1:17))) %>%
+  replace_na(list(present = 0)) %>% 
+  summarise(count = sum(present),
+            percentage = mean(present) %>% round(2)) -> cons
+
+
+
+## homeworks
+journal %>% 
+  select(ID, Stream, matches("^HW\\d+")) -> hw_journal
+
+## homeworks not submitted
+hw_journal %>% 
+  filter(Stream == "main") %>% 
+  pivot_longer(cols = -c(ID, Stream),
+               names_to = "hw",
+               values_to = "score") %>% 
+  filter(score == "NS") %>% 
+  group_by(hw) %>% 
+  summarise(n = n()) -> hws_ns
+
+## homeworks scores
+hw_journal %>% 
+  filter(Stream == "main") %>%
+  select(-Stream) %>% 
+  pivot_longer(cols = -ID,
+               names_to = "hw",
+               values_to = "score") %>% 
+  filter(score != "NS") %>% 
+  mutate(score = as.numeric(score),
+         hw = factor(hw, 
+                     ordered = TRUE,
+                     levels = paste0("HW", 1:16))) -> hws_scores
+
+## homework sheets
+sheet_names("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing") %>% 
+  str_extract("^HW\\d+") %>% 
+  na.omit() -> hws_sheets
+
+## homework tasks
+hw_tsks <- tibble()
+for (i in 1:length(hws_sheets)) {
+  read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+             sheet = hws_sheets[i], col_types = "c") %>% 
+    select(ID, starts_with("hw")) %>% 
+    pivot_longer(-ID, names_to = "task", values_to = "score") %>% 
+    bind_rows(hw_tsks) -> hw_tsks
+}
+
+## homework tasks preprocess
+hw_tsks %>%
+  left_join(hw_spec,
+            join_by(task)) %>%
+  separate(task, into = c("hw", "task")) %>%
+  mutate(task = factor(task,
+                       ordered = TRUE,
+                       levels = as.character(1:15)),
+         level = factor(level,
+                        ordered = TRUE,
+                        levels = c("easy", "medium", "hard", "extreme"))) %>%
+  mutate(hw = toupper(hw)) -> hw_tasks
+
+
+
+## quizes
+# q_journal <- read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+#                         sheet = "Journal") %>% 
+#   select(ID, Stream, starts_with("Q"))
+
+
+# q_scores <- tibble()
+# for(i in paste0("Q", 1:2)) {
+#   if(i == "Q1") {
+#     read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+#                sheet = i) %>% 
+#       select(ID, matches("q\\d+-\\d+"), TOTAL) -> q_scores
+#   } else {
+#     read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+#                sheet = i) %>% 
+#       select(ID, matches("q\\d+-\\d+"), TOTAL) %>% 
+#       full_join(q_scores, join_by(ID)) -> q_scores
+#   }
+# }
+
+```
+
+### YouTube
+
+```{r get-yt-data}
+## custom load function
+## package function seems to have a bug
+ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14, 
+                                      end_date = Sys.Date(), 
+                                      metrics = c(
+                                        "views", 
+                                        "likes",
+                                        "dislikes",
+                                        "estimatedMinutesWatched",
+                                        "averageViewDuration", 
+                                        "averageViewPercentage"), 
+                                      dimensions = "day", 
+                                      filters = NULL, ...) 
+{
+  require(cli)
+  require(gargle)
+  cli_alert_info("Compose params")
+  metrics <- paste0(metrics, collapse = ",")
+  dimensions <- paste0(dimensions, collapse = ",")
+  out <- request_build(method = "GET", 
+                       params = list(startDate = start_date, 
+                                     endDate = end_date, ids = "channel==MINE",
+                                     dimensions = dimensions, 
+                                     filters = filters, 
+                                     metrics = metrics), 
+                       token = ryt_token(), 
+                       path = "v2/reports", 
+                       base_url = "https://youtubeanalytics.googleapis.com/")
+  cli_alert_info("Send query")
+  ans <- request_retry(out, encode = "json")
+  resp <- response_process(ans)
+  cli_alert_info("Parse result")
+  suppressMessages({
+    data <- tibble(response = resp$rows) %>% 
+      unnest_wider(.data$response, ...)
+  })
+  if (nrow(data) == 0) {
+    cli_alert_warning("Empty answer")
+    return(tibble())
+  }
+  headers <- tibble(response = resp$columnHeaders) %>%
+    unnest_wider(.data$response, ...)
+  data <- set_names(data, headers$name)
+  cli_alert_success(str_glue("Success, loading {nrow(data)} rows."))
+  return(data)
+}
+
+
+
+
+ryt_get_videos() %>% 
+  select(id_video_id, title) %>%
+  filter(!str_detect(title, "внутряк")) -> videos
+
+# video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
+
+dimensions <- c('day', 'video')
+metrics <- c("views", "likes", "dislikes", "estimatedMinutesWatched", "averageViewDuration", "averageViewPercentage")
+
+ryt_get_analytics_custom(
+  start_date = '2023-11-06', end_date = Sys.Date(),
+  dimensions = dimensions,
+  metrics    = metrics,
+  filters = str_glue('video=={str_c(head(videos$id_video_id, 500), collapse=",")}'), names_sep = ""
+) %>% 
+  set_names(c(dimensions, metrics)) %>% 
+  left_join(videos, join_by("video" == "id_video_id")) -> basics_by_videos
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^L")) %>% 
+  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> lec
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^P")) %>% 
+  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> pr_videos
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^С|^C")) %>% 
+  separate(title, into = c("code", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> cons_videos
+
+basics_by_videos %>% 
+  mutate(day = as_date(day)) %>% 
+  filter(str_detect(title, "^A|^А")) %>% 
+  separate(title, into = c("code", "name", "course", "lab"), sep = " // ") %>% 
+  select(-course, - lab) -> a_videos
+```
+
+
+### Classroom
+
+```{r get-classroom-data, eval=FALSE}
+get_course_list() %>% 
+  .$courses %>% 
+  filter(name == "WLM 2023 // HSE UX LAB") %>% 
+  .$id -> course_id
+
+get_coursework_list(course_id)$courseWork %>% 
+  select(id, title) %>%
+  filter(str_detect(title, "^Q")) %>% 
+  mutate(code = str_extract(title, "^Q\\d+")) -> q_ids
+
+tibble(
+  Q1 = "https://docs.google.com/forms/d/1WrlABMSqcQY03Wefboe3E9uTXSxPW1o-Z6esk4qPSuM/edit#responses",
+  Q2 = "https://docs.google.com/forms/d/1muDdJjr0ZIwHFYuDRK9YBbQlsxXfd8fJM1dNdyFOaMk/edit#responses",
+  Q3 = "https://docs.google.com/forms/d/1lRFq_QXwI-LSXNDsZksgZLJ7in33fANNslYmlS3qUk0/edit#responses",
+  Q4 = "https://docs.google.com/forms/d/1VqekS1ApzQ74QxaQ1O-B9oPjjJ8c2QyRwe1DS9PEZKg/edit#responses",
+  Q5 = "https://docs.google.com/forms/d/1uq3i_Zz-ArIG0ILGxlLmFIMqGscVkKv7PHZe6LoFF4c/edit#responses",
+  Q6 = "https://docs.google.com/forms/d/17fPOx52-RK-hxDUsrD5hei0Uw7ScdWwfKpD_1fb8AWw/edit#responses",
+  Q7 = "https://docs.google.com/forms/d/1Ywo9r_EF9qEeV9PbG70EMm95ci2XM2S-b9IgCPjYBLI/edit#responses",
+  Q8 = "https://docs.google.com/forms/d/1JItuzbpNIemDLYFYI43pi_GGy_vmdpLWAauZzLNv0dE/edit#responses",
+  Q9 = "https://docs.google.com/forms/d/177eGZsat4ntKKFoS-YKbZ3GuZnzTaB4-vwh2lYTYwK0/edit#responses",
+  Q10 = "https://docs.google.com/forms/d/1EzNjUV5653DYEEsFXeIdgT98pEqEmcMh0hTVwlna-3Q/edit#responses",
+  Q11 = "https://docs.google.com/forms/d/1KTfflQIUL_VMsSB8W3KgXmLVu32VagUVycnOe08UN6o/edit#responses",
+  Q12 = "https://docs.google.com/forms/d/1WfDmr8Sds-hCrnL5oaBVGx_C2EzwvTBcCL1Ph2Dxebw/edit#responses",
+  Q13 = "https://docs.google.com/forms/d/1ffHuvBGiM7ctNozoH6TJgrU_Asp1oMaJMoMvFDiURbw/edit#responses",
+  Q14 = "https://docs.google.com/forms/d/1HBJ78eluyw29GNnRHlG5Yqtc_inclX9tJ_S5FpwNwNk/edit#responses",
+  Q15 = "https://docs.google.com/forms/d/1dG1AAOkA8vT8GyfPKklK5oeEAXRNBIiQcHyasQIYfxk/edit#responses"
+) %>% pivot_longer(cols = everything(),
+                   names_to = "code",
+                   values_to = "link") -> q_links
+
+# get_coursework_properties(course_id, coursework_id)
+# get_form_properties(form_id = NULL, form_url = NULL)
+
+## quiz specification preprocess
+q_sp %>% 
+  mutate(code = task_code %>% 
+           str_extract("^q\\d+") %>% 
+           toupper(),
+         task = task_code %>% 
+           str_extract("\\d+$") %>% 
+           factor(ordered = TRUE,
+                  levels = as.character(1:20)),
+         level = level %>% 
+           factor(ordered = TRUE,
+                  levels = c("easy", "medium", "hard", "extreme"))) -> q_spec
+
+q_spec %>% 
+  group_by(code) %>% 
+  summarise(max_total_score = sum(max_score)) -> q_max_total_scores
+
+### quizes preproc
+source("scripts/q-preproc/q1_preproc.R")
+source("scripts/q-preproc/q2_preproc.R")
+
+
+q1_total_scores %>% 
+  bind_rows(q2_total_scores) %>% 
+  left_join(q_max_total_scores,
+            join_by(code)) %>% 
+  mutate(lastSubmittedTime = as_datetime(lastSubmittedTime),
+         totalScore100 = (totalScore / max_total_score * 100) %>% round()) %>% 
+  filter(month(lastSubmittedTime) > 10) -> q_total_scores
+
+q1_item_score %>% 
+  bind_rows(q2_item_score) -> q_item_scores
+
+
+
+# get_form_responses(form_url = q_links$link[15]) -> q15
+```
+
+```{r get-aesthetics}
 aesth <- yaml::read_yaml("aesthetics.yml")
 ```
 
@@ -2032,3 +2370,6 @@ a_ave_views_perc %>%
     x = 0, y = -.3
   ))
 ```
+
+# J & F // Проекты {#jf}
+
