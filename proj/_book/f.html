@@ -214,14 +214,63 @@ ul.task-list li input[type="checkbox"] {
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
 <p>В этом проекте<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> вам предстоит ответить на исследовательский вопрос с помощью изученных статистических моделей.</p>
-<p><strong><a href="https://docs.google.com/document/d/1tUs8dw3uZ7zIu9dyOtZWf8PYnH4nJSOgTmXAxF51wWU/edit?usp=sharing">Критерии оценивания итогового проекта</a></strong></p>
+<p><strong>Критерии оценивания проекта прикреплены к заданию в Google Classroom.</strong></p>
 <section id="f1-план" class="level2">
 <h2 class="anchored" data-anchor-id="f1-план">F1 // План</h2>
-<p><strong>Дедлайн: </strong></p>
+<p><strong>Дедлайн: 15/04/2024 23:59</strong></p>
+<p>Разработка плана анализа данных влючает в себя следующие шаги:</p>
+<ol type="1">
+<li><strong>Выберите датасет, который вам наиболее интересен.</strong>
+<ul>
+<li>Выберите исследовательный вопрос — для датасетов 3 и 4 предложено несколько исследовательских вопросов</li>
+</ul></li>
+<li><strong>Сформулируйте гипотезы — теоретические и эмпирические — к исследовательскому вопросу</strong>.
+<ul>
+<li>При формулировке гипотез вы можете использовать какие-либо теоретические источники — эмпирические статьи, обзоры, монографии, препринты, тезисы и др. — а также результаты первичного исследования данных — описательные статистики, разведочные визуализации и т.д.</li>
+<li>Гипотез может быть несколько, а может быть и одна — в зависимости от того, сколько будет необходимо для того, чтобы ответить на исследовательский вопрос</li>
+</ul></li>
+<li><strong>Выберите статистические методы / модели анализа, с помощью которых вы сможете проверить заявленные гипотезы.</strong>
+<ul>
+<li>Обоснуйте свой выбор, раскройте, как почему именно этот метод позволит вам протестировать заявленные гипотезы.</li>
+</ul></li>
+<li><strong>Рассчитайте объем выборки, которые требуется для достижения необходимой статистической мощности анализа.</strong>
+<ul>
+<li>размер эффекта вы можете взять либо из теоретических источников, либо выдвинуть предположения о том, какой он может быть, опираясь на результаты первичного исследования данных</li>
+</ul></li>
+<li><strong>Составьте поэтапный план анализа данных — от предобработки до результатов.</strong></li>
+<li><strong>Опишите результаты, которые вы ожидаете по итогу анализа в случае, если заявленные гипотезы подтвердятся.</strong></li>
+</ol>
+<p>Безусловно, этапы анализа данных будут определяться выбранным методом, однако всё же есть ряд ключевых моментов, о которых необходимо подумать, независимо от того, какой анализ вы делаете. Ниже представлен примерный список вопросов, на которые вам необходимо ответить, составляя план:</p>
+<ul>
+<li>что необходимо будет сделать в ходе предобработки данных?</li>
+<li>будет ли производится расчет каких-либо новых показателей на основе исходных переменных?</li>
+<li>как будет производится обработка выбросов? каковы критерии исключения наблюдений из датасета, если это необходимо?</li>
+<li>как будет производится обработка пропущенных значений?</li>
+<li>что необходимо будет проверить на этапе исследования данных?</li>
+<li>как могут повлиять результаты исследования данных (описательные статистики, визуализации, связи между переменными и т.д.) на реализацию анализа с помощью выбранного статистического метода?</li>
+<li>какова будет модель с точки зрения переменных?
+<ul>
+<li>какие переменные в неё войдут в качестве целевой, предикторов, ковариат?</li>
+<li>какие связи в ней будут учтены?</li>
+</ul></li>
+<li>какие результаты мы ожидаем? в каком случае мы сможем сказать, что гипотеза подтвердилась?
+<ul>
+<li>какие критерии статистического вывода будут использоваться?</li>
+<li>какие значения метрик качества модели будут выбраны для вывода о гипотезе?</li>
+<li>какие значения метрик качества модели будут выбраны для сравнения моделей?</li>
+</ul></li>
+</ul>
+<p>Для сохрание общей структуры используйте бланк плана, прикрепленный к заданию в Google Classroom, в котором выделены основные блоки. Заполненный бланк необходимо загрузить в это же задание.</p>
 </section>
 <section id="f2-защита" class="level2">
 <h2 class="anchored" data-anchor-id="f2-защита">F2 // Защита</h2>
-<p><strong>Дедлайн: </strong></p>
+<p><strong>Дедлайн: 2/05/2024 18:00</strong></p>
+<p>После составления плана вам необходимо реализовать его в среде R. Итогом проекта является <strong>презентация</strong>, в которой вам необходимо кратко изложить ход работы над проектом, а также представить результаты анализа, их интерпретацию и обсуждение ограничений. Формат перезнтации свободный.</p>
+<p>В соответствующее задание в Google Classromm необходимо загрузить:</p>
+<ul>
+<li>файл с презентацией</li>
+<li>архив с проектом RStudio Project, в котором вы работали над итоговым проектом</li>
+</ul>
 <hr>
 </section>
 <section id="f_data" class="level2">
@@ -233,6 +282,19 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <section id="f_2" class="level3">
 <h3 class="anchored" data-anchor-id="f_2">Датасет 1 // Speed Dating</h3>
 <p>Данные о результатах «быстрых свиданий» (speed dating).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-1/SpeedDating.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -264,6 +326,19 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <section id="f_3" class="level3">
 <h3 class="anchored" data-anchor-id="f_3">Датасет 2 // HR employees</h3>
 <p>HR-данные о сотрудниках большой компании.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-2/HRemployees.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -371,6 +446,19 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </section>
 <section id="f_4" class="level3">
 <h3 class="anchored" data-anchor-id="f_4">Датасет 3 // Music &amp; Mental Health</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-3/MxMH.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
 <blockquote class="blockquote">
 <p>Музыкальная терапия, или МТ, — это использование музыки для снижения стресса, улучшения настроения и общего психического здоровья человека. МТ также признана научно обоснованной практикой, использующей музыку в качестве катализатора для «счастливых» гормонов, таких как окситоцин. Тем не менее, МТ использует широкий спектр различных жанров, варьирующихся от одной организации к другой. Набор данных MxMH направлен на выявление существующих корреляций между музыкальным вкусом человека и его психическим здоровьем, если таковые имеются. В идеале эти результаты могли бы способствовать более информированному применению МТ или просто предоставить интересные сведения о разуме.</p>
 </blockquote>
@@ -425,6 +513,19 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 <section id="датасет-4-game-addiction" class="level3">
 <h3 class="anchored" data-anchor-id="датасет-4-game-addiction">Датасет 4 // Game Addiction</h3>
 <p>Датасет об игре в Dota и игровой зависимости.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-4/GameAdddiction.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -435,7 +536,7 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>Данные были собраны через Google Forms. В названиях переменных прописано их содержание.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -456,7 +557,6 @@ REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 </ul>
 </div>
 </div>
-<p>Датасет об игре в Dota и игровой зависимости. Переменные описаны в их названиях в самом датасете. (Для упрощения обработки данных переменные будет удобнее переименовать)</p>
 
 
 </section>
