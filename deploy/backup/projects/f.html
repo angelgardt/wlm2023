@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.510">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Отмена",
     "search-submit-button-title": "Отправить",
     "search-label": "Search"
@@ -174,8 +175,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#f_1" id="toc-f_1" class="nav-link active" data-scroll-target="#f_1">Вариант 1</a></li>
-  <li><a href="#f_2" id="toc-f_2" class="nav-link" data-scroll-target="#f_2">Вариант 2</a></li>
+  <li><a href="#f1-план" id="toc-f1-план" class="nav-link active" data-scroll-target="#f1-план">F1 // План</a></li>
+  <li><a href="#f2-защита" id="toc-f2-защита" class="nav-link" data-scroll-target="#f2-защита">F2 // Защита</a></li>
+  <li><a href="#f_data" id="toc-f_data" class="nav-link" data-scroll-target="#f_data">Датасеты</a>
+  <ul class="collapse">
+  <li><a href="#f_0" id="toc-f_0" class="nav-link" data-scroll-target="#f_0">Свой датасет</a></li>
+  <li><a href="#f_2" id="toc-f_2" class="nav-link" data-scroll-target="#f_2">Датасет 1 // Speed Dating</a></li>
+  <li><a href="#f_3" id="toc-f_3" class="nav-link" data-scroll-target="#f_3">Датасет 2 // HR employees</a></li>
+  <li><a href="#f_4" id="toc-f_4" class="nav-link" data-scroll-target="#f_4">Датасет 3 // Music &amp; Mental Health</a></li>
+  <li><a href="#датасет-4-game-addiction" id="toc-датасет-4-game-addiction" class="nav-link" data-scroll-target="#датасет-4-game-addiction">Датасет 4 // Game Addiction</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -204,14 +213,359 @@ ul.task-list li input[type="checkbox"] {
 <!--
 REPLACE ALL hw1 TO hw<n> WITH MATCH CASE
 -->
-<p>В этом проекте вам предстоит ответить на исследовательский вопрос с помощью изученных статистических моделей.</p>
-<section id="f_1" class="level2">
-<h2 class="anchored" data-anchor-id="f_1">Вариант 1</h2>
+<p>В этом проекте<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> вам предстоит ответить на исследовательский вопрос с помощью изученных статистических моделей.</p>
+<p><strong>Критерии оценивания проекта прикреплены к заданию в Google Classroom.</strong></p>
+<section id="f1-план" class="level2">
+<h2 class="anchored" data-anchor-id="f1-план">F1 // План</h2>
+<p><strong>Дедлайн: 15/04/2024 23:59</strong></p>
+<p>Разработка плана анализа данных влючает в себя следующие шаги:</p>
+<ol type="1">
+<li><strong>Выберите датасет, который вам наиболее интересен.</strong>
+<ul>
+<li>Выберите исследовательный вопрос — для датасетов 3 и 4 предложено несколько исследовательских вопросов</li>
+</ul></li>
+<li><strong>Сформулируйте гипотезы — теоретические и эмпирические — к исследовательскому вопросу</strong>.
+<ul>
+<li>При формулировке гипотез вы можете использовать какие-либо теоретические источники — эмпирические статьи, обзоры, монографии, препринты, тезисы и др. — а также результаты первичного исследования данных — описательные статистики, разведочные визуализации и т.д.</li>
+<li>Гипотез может быть несколько, а может быть и одна — в зависимости от того, сколько будет необходимо для того, чтобы ответить на исследовательский вопрос</li>
+</ul></li>
+<li><strong>Выберите статистические методы / модели анализа, с помощью которых вы сможете проверить заявленные гипотезы.</strong>
+<ul>
+<li>Обоснуйте свой выбор, раскройте, как почему именно этот метод позволит вам протестировать заявленные гипотезы.</li>
+</ul></li>
+<li><strong>Рассчитайте объем выборки, которые требуется для достижения необходимой статистической мощности анализа.</strong>
+<ul>
+<li>размер эффекта вы можете взять либо из теоретических источников, либо выдвинуть предположения о том, какой он может быть, опираясь на результаты первичного исследования данных</li>
+</ul></li>
+<li><strong>Составьте поэтапный план анализа данных — от предобработки до результатов.</strong></li>
+<li><strong>Опишите результаты, которые вы ожидаете по итогу анализа в случае, если заявленные гипотезы подтвердятся.</strong></li>
+</ol>
+<p>Безусловно, этапы анализа данных будут определяться выбранным методом, однако всё же есть ряд ключевых моментов, о которых необходимо подумать, независимо от того, какой анализ вы делаете. Ниже представлен примерный список вопросов, на которые вам необходимо ответить, составляя план:</p>
+<ul>
+<li>что необходимо будет сделать в ходе предобработки данных?</li>
+<li>будет ли производится расчет каких-либо новых показателей на основе исходных переменных?</li>
+<li>как будет производится обработка выбросов? каковы критерии исключения наблюдений из датасета, если это необходимо?</li>
+<li>как будет производится обработка пропущенных значений?</li>
+<li>что необходимо будет проверить на этапе исследования данных?</li>
+<li>как могут повлиять результаты исследования данных (описательные статистики, визуализации, связи между переменными и т.д.) на реализацию анализа с помощью выбранного статистического метода?</li>
+<li>какова будет модель с точки зрения переменных?
+<ul>
+<li>какие переменные в неё войдут в качестве целевой, предикторов, ковариат?</li>
+<li>какие связи в ней будут учтены?</li>
+</ul></li>
+<li>какие результаты мы ожидаем? в каком случае мы сможем сказать, что гипотеза подтвердилась?
+<ul>
+<li>какие критерии статистического вывода будут использоваться?</li>
+<li>какие значения метрик качества модели будут выбраны для вывода о гипотезе?</li>
+<li>какие значения метрик качества модели будут выбраны для сравнения моделей?</li>
+</ul></li>
+</ul>
+<p>Для сохрание общей структуры используйте бланк плана, прикрепленный к заданию в Google Classroom, в котором выделены основные блоки. Заполненный бланк необходимо загрузить в это же задание.</p>
 </section>
-<section id="f_2" class="level2">
-<h2 class="anchored" data-anchor-id="f_2">Вариант 2</h2>
+<section id="f2-защита" class="level2">
+<h2 class="anchored" data-anchor-id="f2-защита">F2 // Защита</h2>
+<p><strong>Дедлайн: 2/05/2024 18:00</strong></p>
+<p>После составления плана вам необходимо реализовать его в среде R. Итогом проекта является <strong>презентация</strong>, в которой вам необходимо кратко изложить ход работы над проектом, а также представить результаты анализа, их интерпретацию и обсуждение ограничений. Формат перезнтации свободный.</p>
+<p>В соответствующее задание в Google Classromm необходимо загрузить:</p>
+<ul>
+<li>файл с презентацией</li>
+<li>архив с проектом RStudio Project, в котором вы работали над итоговым проектом</li>
+</ul>
+<hr>
+</section>
+<section id="f_data" class="level2">
+<h2 class="anchored" data-anchor-id="f_data">Датасеты</h2>
+<section id="f_0" class="level3">
+<h3 class="anchored" data-anchor-id="f_0">Свой датасет</h3>
+<p>Вы можете взять данные какого-либо собственного исследования и проанализировать их в рамках проекта. В этом случае в <a href="https://docs.google.com/document/d/1p5qF91b-QDMGoss83UIP6wDyiilbrlilpqk6uEA54zI/edit?usp=sharing">бланке плана</a> необходимо описать исследование, в рамках которого данные были собраны, а также описать сам датасет.</p>
+</section>
+<section id="f_2" class="level3">
+<h3 class="anchored" data-anchor-id="f_2">Датасет 1 // Speed Dating</h3>
+<p>Данные о результатах «быстрых свиданий» (speed dating).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-1/SpeedDating.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание датасета
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Data was gathered from participants in experimental speed dating events from 2002-2004. During the events, the attendees would have a four minute “first date” with every other participant of the opposite sex. At the end of their four minutes, participants were asked if they would like to see their date again. They were also asked to rate their date on six attributes: Attractiveness, Sincerity, Intelligence, Fun, Ambition, and Shared Interests.</p>
+<p>The dataset also includes questionnaire data gathered from participants at different points in the process. These fields include: demographics, dating habits, self-perception across key attributes, beliefs on what others find valuable in a mate, and lifestyle information. See the Speed Dating Data Key document below for details.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Исследовательский вопрос
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Какие факторы оказываются решающими при формировании пары по итогам «быстрых свиданий»?</p>
+</div>
+</div>
+</section>
+<section id="f_3" class="level3">
+<h3 class="anchored" data-anchor-id="f_3">Датасет 2 // HR employees</h3>
+<p>HR-данные о сотрудниках большой компании.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-2/HRemployees.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание датасета
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>Age</code> — возраст сотрудника</li>
+<li><code>Gender</code> — под сотрудника</li>
+<li><code>Attrition</code> — наступило ли у сотрудника профессинальное выгорание</li>
+<li><code>BusinessTravel</code> — частота командировок</li>
+<li><code>Department</code> — подраздление, в котором работает сотрудник</li>
+<li><code>DistanceFromHome</code> — расстояние от дома до работы</li>
+<li><code>Education</code> — уровень образования
+<ul>
+<li><code>1</code> — Below College</li>
+<li><code>2</code> — College</li>
+<li><code>3</code> — Bachelor</li>
+<li><code>4</code> — Master</li>
+<li><code>5</code> — Doctor</li>
+</ul></li>
+<li><code>EducationField</code> — область образования</li>
+<li><code>EmployeeNumber</code> — идентификатор сотрудника</li>
+<li><code>EnvironmentSatisfaction</code> — удовлетворенность физическими условиями труда
+<ul>
+<li><code>1</code> — Low</li>
+<li><code>2</code> — Medium</li>
+<li><code>3</code> — High</li>
+<li><code>4</code> — Very High</li>
+</ul></li>
+<li><code>JobInvolvement</code> — вовреченность в работу
+<ul>
+<li><code>1</code> — Low</li>
+<li><code>2</code> — Medium</li>
+<li><code>3</code> — High</li>
+<li><code>4</code> — Very High</li>
+</ul></li>
+<li><code>JobSatisfaction</code> — удовлетворенность работой
+<ul>
+<li><code>1</code> — Low</li>
+<li><code>2</code> — Medium</li>
+<li><code>3</code> — High</li>
+<li><code>4</code> — Very High</li>
+</ul></li>
+<li><code>JobRole</code> — должность</li>
+<li><code>JobLevel</code> — уровень должности</li>
+<li><code>MaritalStatus</code> — семейное положение</li>
+<li><code>MonthlyIncome</code> — ежемесячный доход сотрудника</li>
+<li><code>HourlyRate</code> — стоимость часа работы сотрудника</li>
+<li><code>DailyRate</code> — стоимость дня работы сотрудника</li>
+<li><code>MonthlyRate</code> — стоимость месяца работы сотрудника</li>
+<li><code>NumCompaniesWorked</code> — количество компаний, в которых работал сотрудник</li>
+<li><code>Over18</code> — является ли сотрудник совершеннолетним</li>
+<li><code>OverTime</code> — бывают ли у сотрудника переработки</li>
+<li><code>PercentSalaryHike</code> — процент повышения зароботной платы</li>
+<li><code>PerformanceRating</code> — оценка качества работы сотрудника
+<ul>
+<li><code>1</code> — Low</li>
+<li><code>2</code> — Good</li>
+<li><code>3</code> — Excellent</li>
+<li><code>4</code> — Outstanding</li>
+</ul></li>
+<li><code>RelationshipSatisfaction</code> — удовлетворенность отношениями в коллективе
+<ul>
+<li><code>1</code> — Low</li>
+<li><code>2</code> — Medium</li>
+<li><code>3</code> — High</li>
+<li><code>4</code> — Very High</li>
+</ul></li>
+<li><code>StandardHours</code> —</li>
+<li><code>StockOptionLevel</code> — уровень показателя Employee Stock Option (ESO)</li>
+<li><code>TotalWorkingYears</code> — общий стаж</li>
+<li><code>TrainingTimesLastYear</code> — количество тренингов/повышения квалификации за последний год</li>
+<li><code>WorkLifeBalance</code> — оценка баланса между работой и личной жизнью
+<ul>
+<li><code>1</code> — Bad</li>
+<li><code>2</code> — Good</li>
+<li><code>3</code> — Better</li>
+<li><code>4</code> — Best</li>
+</ul></li>
+<li><code>YearsAtCompany</code> — сколько лет сотрудник работает в данной компании</li>
+<li><code>YearsInCurrentRole</code> — сколько лет сотрудник работает на данной позиции</li>
+<li><code>YearsSinceLastPromotion</code> — сколько лет прошло с последнего повышения сотрудника</li>
+<li><code>YearsWithCurrManager</code> — сколько лет сотрудник работает с текущим HR-менеджером</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Исследовательский вопрос
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Какие факторы приводят к выгоранию сотрудников?</p>
+</div>
+</div>
+</section>
+<section id="f_4" class="level3">
+<h3 class="anchored" data-anchor-id="f_4">Датасет 3 // Music &amp; Mental Health</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-3/MxMH.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Музыкальная терапия, или МТ, — это использование музыки для снижения стресса, улучшения настроения и общего психического здоровья человека. МТ также признана научно обоснованной практикой, использующей музыку в качестве катализатора для «счастливых» гормонов, таких как окситоцин. Тем не менее, МТ использует широкий спектр различных жанров, варьирующихся от одной организации к другой. Набор данных MxMH направлен на выявление существующих корреляций между музыкальным вкусом человека и его психическим здоровьем, если таковые имеются. В идеале эти результаты могли бы способствовать более информированному применению МТ или просто предоставить интересные сведения о разуме.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание датасета
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Блок 0: Фон</strong>
+<ul>
+<li>Респонденты отвечают на общие вопросы, касающиеся музыкального фона и привычек прослушивания.</li>
+</ul></li>
+<li><strong>Блок 1: Музыкальные жанры</strong>
+<ul>
+<li>Респонденты оценивают, как часто они слушают 16 музыкальных жанров по шкале <em>Никогда</em> — <em>Редко</em> — <em>Иногда</em> — <em>Очень часто</em></li>
+</ul></li>
+<li><strong>Блок 2: Психическое здоровье</strong>
+<ul>
+<li>Респонденты оценивают тревогу, депрессию, бессонницу и обсессивно-компульсивное расстройство по шкале от 0 до 10, где:
+<ul>
+<li>0 — я не испытываю этого</li>
+<li>10 — Я испытываю это регулярно, постоянно/или до крайности.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Исследовательские вопросы
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Необходимо выбрать <strong>один</strong> исследовательский вопрос.</p>
+<ul>
+<li>Есть ли какая-либо связь между вкусовыми предпочтениями в музыке и наличием и выраженностью тех или иных ментальных расстройств?</li>
+<li>Есть ли какие-либо отличия по особенностям прослушивания музыки (платформа, длительность и т.д.) и предпочитаемыми музыкальными вкусами у тех, кто имеет ярко-выраженную депрессию? ОКР? Тревожное расстройство? Бессонницу?</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="датасет-4-game-addiction" class="level3">
+<h3 class="anchored" data-anchor-id="датасет-4-game-addiction">Датасет 4 // Game Addiction</h3>
+<p>Датасет об игре в Dota и игровой зависимости.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Файл
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/proj/data/f-4/GameAdddiction.csv"><strong>Данные</strong></a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Описание датасета
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Данные были собраны через Google Forms. В названиях переменных прописано их содержание.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Исследовательские вопросы
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Необходимо выбрать <strong>один</strong> исследовательский вопрос.</p>
+<ul>
+<li>Какие факторы связаны с игровой зависимостью?</li>
+<li>Можно ли отличить по игровым и / или демографическим характеристикам игроков с ярко выраженной зависимостью и без нее?</li>
+<li>Каковы игровые особенности игроков, использующих Dota как способ справиться со стрессом?</li>
+</ul>
+</div>
+</div>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Формат проекта основан на разработках А. Ангельгардта, Е. Рыбиной и Н. Колачева для курсов «Статистика для анализа данных» и «Научно-исследовательский семинар: Прикладной анализ данных в психологии», читаемых в бакалавриате НИУ ВШЭ.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -487,27 +841,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -522,10 +855,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -534,8 +871,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
