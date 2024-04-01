@@ -14,7 +14,9 @@ format:
 knitr::opts_chunk$set(echo=FALSE, 
                       message=FALSE, 
                       eval=TRUE,
-                      warning=FALSE)
+                      warning=FALSE,
+                      cache = TRUE
+                      )
 ```
 
 
@@ -29,14 +31,17 @@ knitr::opts_chunk$set(echo=FALSE,
 
 
 ## Libraries
-```{r pkgs}
+```{r pkgs, cache=FALSE}
 library(rytstat)
 library(googlesheets4)
 library(rgoogleclassroom)
 library(tidyverse)
+library(plotly)
+```
+
+```{r ggplot-theme, cache=FALSE}
 theme_set(theme_bw())
 theme_update(legend.position = "bottom")
-library(plotly)
 ```
 
 ```{r auth}
@@ -227,6 +232,22 @@ hw_tsks %>%
 #       full_join(q_scores, join_by(ID)) -> q_scores
 #   }
 # }
+
+
+
+
+## J project
+
+read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+           sheet = "J", col_types = "c") %>% 
+  anti_join(journal %>% 
+              select(Stream, ID) %>% 
+              filter(Stream == "test"),
+            join_by(ID)
+  ) -> j_journal
+
+
+## F project
 
 ```
 
@@ -2371,5 +2392,101 @@ a_ave_views_perc %>%
   ))
 ```
 
-# J & F // Проекты {#jf}
+# J // Промежуточный проект {#j}
+
+## Row
+
+```{r j-sent}
+j_journal %>% 
+  select(ID, matches("сдано")) %>% 
+  pivot_longer(-ID) %>% 
+  mutate(value = as.logical(value)) %>% 
+  summarise(n = sum(value),
+            .by = name) %>% 
+  ggplot(aes(name, n)) +
+  geom_col() +
+  geom_text(aes(y = n - 1,
+                label = round(n / n_partic * 100) %>% paste0("%")),
+            color = "white") +
+  labs(x = "Группа по дедлайну",
+       y = "Количество",
+       title = "J // Сдача проекта") -> j_sent
+
+j_sent %>% ggplotly()
+```
+
+```{r j-forms}
+j_journal %>% 
+  select(ID, Вариант) %>% 
+  drop_na() %>% 
+  summarise(n = n(),
+            .by = Вариант) %>% 
+  ggplot(aes(Вариант, n)) +
+  geom_col() +
+  labs(y = "Количество",
+       title = "J // Выбор вариантов") -> j_forms
+
+j_forms %>% ggplotly()
+```
+
+## Row
+
+```{r j-criteria}
+tibble(K1 = 2,
+       K2 = 1,
+       K3 = 2,
+       K4 = 2,
+       K5 = 2,
+       K6 = 1,
+       K7 = 4,
+       K8 = 2,
+       K9 = 1) %>% 
+  pivot_longer(cols = everything()) -> j_criteria_max
+
+j_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, all_of(paste0("K", 1:9))) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  summarise(mean = mean(value),
+            .by = name) %>% 
+  full_join(j_criteria_max,
+            join_by(name)) %>% 
+  mutate(difficulty = mean / value) -> j_criteria_difficulty
+
+j_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, all_of(paste0("K", 1:9))) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  ggplot(aes(name, value)) +
+  geom_point(position = position_jitter(width = .2, height = 0),
+             alpha = .3) +
+  geom_point(data = j_criteria_difficulty,
+             aes(name, mean),
+             color = "red3", size = 3) +
+  labs(x = "Критерий",
+       y = "Балл",
+       title = "J // Распределение баллов по критериям") -> j_criteria
+
+j_criteria %>% ggplotly()
+```
+
+## Row
+
+```{r j-difficulty}
+j_criteria_difficulty %>% 
+  ggplot(aes(name, difficulty)) +
+  geom_hline(yintercept = c(0.05, 0.95), linetype = "dashed") +
+  geom_point() +
+  labs(x = "Критерий",
+       y = "Балл",
+       title = "J // Трудность критериев") -> j_difficulty
+
+j_difficulty %>% ggplotly()
+```
+
+
+# F // Итоговый проект {#f}
+
 
