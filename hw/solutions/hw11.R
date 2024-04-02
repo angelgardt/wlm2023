@@ -167,7 +167,8 @@ prediction_metrics(data = heart_train$TenYearCHD,
 
 
 # 7
-predicted_test <- ifelse(predict(model1.8, heart_test, type = "response") > 0.6, 1, 0)
+predicted_test <- ifelse(predict(model1.8, heart_test, 
+                                 type = "response") > 0.6, 1, 0)
 mean(predicted_test) %>% round(3)
 
 
@@ -210,6 +211,7 @@ overdisp_fun <- function(model) {
     p = pval
   )
 }
+overdisp_fun(model1.8)
 
 ggplot(data = NULL,
        aes(x = predict(model1.8, type = "response"),
@@ -217,7 +219,6 @@ ggplot(data = NULL,
   geom_point() +
   geom_smooth(method = "loess")
 
-overdisp_fun(model1.8)
 
 
 # 10
@@ -238,4 +239,4 @@ prediction_metrics <- function(data, response, threshold) {
 
 prediction_metrics(data = heart_train$TenYearCHD,
                    response = predict(model1, type = "response"),
-                   threshold = 0.6)
+                   threshold = 0.6) # %>% round(3)
