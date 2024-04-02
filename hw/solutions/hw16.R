@@ -8,8 +8,15 @@ library(lavaan)
 
 
 # 1
+## a
 bffm <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw16/bffm.csv")
 str(bffm)
+
+## b
+### all correct
+
+## c
+bffm %>% is.na() %>% sum()
 
 
 # 2
@@ -34,8 +41,10 @@ fitmeasures(model1, c("CFI", "TLI", "SRMR", "RMSEA"))
 
 
 # 5
+## a
 smodel1 <- standardizedsolution(model1)
 
+## b
 smodel1 %>% 
   filter(op == "=~")
 
@@ -77,6 +86,7 @@ mis2 %>%
 
 
 # 9
+## a
 mdl3 <- "
 AGR =~ AGR1 + AGR2 + AGR3 + AGR4 + AGR5 + AGR6 + AGR7 + AGR8 + AGR9 + AGR10
 CSN =~ CSN1 + CSN2 + CSN3 + CSN4 + CSN5 + CSN6 + CSN7 + CSN8 + CSN9 + CSN10
@@ -98,6 +108,7 @@ CSN ~~ OPN
 
 model3 <- cfa(mdl3, bffm)
 
+## b
 fitmeasures(model1, c("CFI", "TLI", "SRMR", "RMSEA"))
 fitmeasures(model2, c("CFI", "TLI", "SRMR", "RMSEA"))
 fitmeasures(model3, c("CFI", "TLI", "SRMR", "RMSEA"))
