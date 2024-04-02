@@ -12,9 +12,15 @@ heart <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/d
 str(heart)
 
 ## b
-### no type correction needed
 heart %>% sapply(is.na) %>% apply(2, sum) ## has NA, let's remove them
-heart %>% drop_na() -> heart
+heart %>% 
+  drop_na() %>% 
+  mutate(male = as_factor(male),
+         currentSmoker = as_factor(currentSmoker),
+         BPMeds = as_factor(BPMeds),
+         prevalentStroke = as_factor(prevalentStroke),
+         prevalentHyp = as_factor(prevalentHyp),
+         diabetes = as_factor(diabetes)) -> heart
 nrow(heart)
 
 # 2
@@ -141,11 +147,23 @@ recall_tr09
 ### F1
 psych::harmonic.mean(c(precision_tr09, recall_tr09)) %>% round(3)
 
+
+prediction_metrics(data = heart_train$TenYearCHD,
+                   response = predict(model1, type = "response"),
+                   threshold = 0.6)
+prediction_metrics(data = heart_train$TenYearCHD,
+                   response = predict(model1, type = "response"),
+                   threshold = 0.7)
+prediction_metrics(data = heart_train$TenYearCHD,
+                   response = predict(model1, type = "response"),
+                   threshold = 0.8)
+prediction_metrics(data = heart_train$TenYearCHD,
+                   response = predict(model1, type = "response"),
+                   threshold = 0.9)
+
+
 ## b
-psych::harmonic.mean(c(precision_tr, recall_tr)) %>% round(3)
-psych::harmonic.mean(c(precision_tr07, recall_tr07)) %>% round(3)
-psych::harmonic.mean(c(precision_tr08, recall_tr08)) %>% round(3)
-psych::harmonic.mean(c(precision_tr09, recall_tr09)) %>% round(3)
+### 0.6 is the best threshold, the highest F1
 
 
 # 7
@@ -170,8 +188,8 @@ psych::harmonic.mean(c(precision_test, recall_test)) %>% round(3)
 
 ## b
 ### no code
-### accuracy higher which may be because of unbalanced data
-### precision, recall and F1 lower that is good bacause of no overfitting
+### accuracy higher which may be caused by unbalanced data
+### precision, recall and F1 lower that is good because of no overfiting
 
 
 # 9
