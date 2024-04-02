@@ -67,7 +67,22 @@ fitmeasures(model2, c("CFI", "TLI", "SRMR", "RMSEA"))
 mis2 <- modificationindices(model2) %>% arrange(desc(mi))
 
 ## corrs between item from same scale
-mis2 %>% filter(str_sub(lhs, 1, 3) == str_sub(rhs, 1, 3))
+mis2 %>% 
+  filter(str_sub(lhs, 1, 3) == str_sub(rhs, 1, 3)) %>% 
+  ggplot(aes(rhs, mi)) +
+  geom_point() +
+  facet_wrap(~ lhs, scales = "free")
+
+## corrs between item from different scale
+mis2 %>% 
+  filter(str_sub(lhs, 1, 3) != str_sub(rhs, 1, 3)) %>% 
+  filter(str_detect(lhs, "^[[:upper:]]{3}$")) %>% 
+  ggplot(aes(rhs, mi)) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~ lhs, scales = "free")
+
+
 
 # 9
 
