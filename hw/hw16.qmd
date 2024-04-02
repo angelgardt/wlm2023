@@ -5,19 +5,64 @@
 REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 -->
 ```
+
+```{r opts, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE)
+```
+
 ## Основные задания {#hw16_main}
+
+:::{.callout-note}
+
+## Данные
+
+Сегодня мы вновь работаем с датасетом по Большой пятерке (Big Five). Вспомнить структуру модели можно [тут](https://en.wikipedia.org/wiki/Big_Five_personality_traits).
+
+<center>
+<figure>
+<img src="pics/big_five_eng.png" width="100%">
+</figure>
+</center>
+
+Данные собирались с помощью опросника Big-Five Factor Markers. 
+На измерение каждого фактора в опроснике отведено по десять утверждений --- с этими переменными мы будем работать:
+
+* `EXT1`--`EXT10` --- extraversion
+* `EST1`--`EST10` --- neuroticism (emotional stability)
+* `AGR1`--`AGR10` --- agreeableness
+* `CSN1`--`CSN10` --- conscientiousness
+* `OPN1`--`OPN10` --- openness
+
+Подробное описание датасета можно найти в [этом файле](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/big_five_bffm_codebook.txt).
+
+[Оригинальный датасет](https://www.kaggle.com/tunguz/big-five-personality-test) содержит 1 015 342 наблюдения --- это очень много, возможно, не хватит оперативной памяти, поэтому мы будем работать [с его частью](https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw16/bffm.csv).
+
+:::
+
+```{r}
+library(tidyverse)
+library(lavaan)
+```
 
 ### #1
 
 <img id="hw16-1-level" class="level"/>
 
 ::: {#hw16-1-task .task}
-загрузить данные
+a. Загрузите данные. Проверьте их структуру и типы переменных.
+b. При необходимости скорректируйте типы переменных.
+c. Если в данных есть пропущенные значения или они возникли в ходе предобработки, удалите их из датасета.
 :::
+
+```{r}
+bffm <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw16/bffm.csv")
+str(bffm)
+bffm %>% is.na() %>% sum()
+```
 
 ::: {#hw16-1-autocheck .autocheck}
 ::: {#hw16-1-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите количество пропущенных значений в датасете.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-1" placeholder="Введите ответ…">
@@ -29,29 +74,15 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 :::
 
 ::: hints-wrapper
+
 <details class="hints" id="hw16-1-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
+Не ведитесь на то, что данные те же --- да, это то же исследование, но данные могут быть организованы не так, как в прошлый раз.
 
 </details>
 
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #2
@@ -59,10 +90,18 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <img id="hw16-2-level" class="level"/>
 
 ::: {#hw16-2-task .task}
-cormat
+
+a. Постройте и визуализируйте корреляционную матрицу по интересующим нас переменным (пунктам опросника).
+b. Что происходит в данных? Нужно ли что-либо поправить?
+c. Предобработайте данные, если это необходимо.
+
 :::
 
-::: {#hw16-2-autocheck .autocheck}
+```{r}
+bffm %>% cor() %>% ggcorrplot::ggcorrplot(colors = c("red3", "white", "blue3"))
+```
+
+::: {#hw16-2-autocheck .autocheck hidden="true"}
 ::: {#hw16-2-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -76,29 +115,15 @@ cormat
 :::
 
 ::: hints-wrapper
+
 <details class="hints" id="hw16-2-hints">
 
-<summary>Подсказки</summary>
+<summary>Подсказка</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
+Обратите внимание на силу корреляций, а также на их направление.
 
 </details>
 
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #3
@@ -106,12 +131,29 @@ cormat
 <img id="hw16-3-level" class="level"/>
 
 ::: {#hw16-3-task .task}
-базовая модель КФА
+
+Постройте базовую модель КФА (`model1`), соответствующую структуре модели Big Five.
+
+При описании структуры модели для обозначения факторов используйте сокращения `AGR`, `CSN`, `EST`, `EXT` и `OPN`.
+
 :::
+
+```{r}
+mdl1 <- "
+AGR =~ AGR1 + AGR2 + AGR3 + AGR4 + AGR5 + AGR6 + AGR7 + AGR8 + AGR9 + AGR10
+CSN =~ CSN1 + CSN2 + CSN3 + CSN4 + CSN5 + CSN6 + CSN7 + CSN8 + CSN9 + CSN10
+EST =~ EST1 + EST2 + EST3 + EST4 + EST5 + EST6 + EST7 + EST8 + EST9 + EST10
+EXT =~ EXT1 + EXT2 + EXT3 + EXT4 + EXT5 + EXT6 + EXT7 + EXT8 + EXT9 + EXT10
+OPN =~ OPN1 + OPN2 + OPN3 + OPN4 + OPN5 + OPN6 + OPN7 + OPN8 + OPN9 + OPN10
+"
+
+model1 <- cfa(mdl1, bffm)
+summary(model1)
+```
 
 ::: {#hw16-3-autocheck .autocheck}
 ::: {#hw16-3-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите число степеней свободы модели (`Degrees of freedom`) из аутпута функции `summary()`.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-3" placeholder="Введите ответ…">
@@ -123,29 +165,20 @@ cormat
 :::
 
 ::: hints-wrapper
+
 <details class="hints" id="hw16-3-hints">
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Чтобы построить модель, необходимо:
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+* задать структуру модели в виде строки с использованием операторов `=~`, `~~` и `+` --- удобнее сохранить её в какую-либо переменную
+* с помощью функции `cfa()` из пакета `lavaan` построить модель, указав структуру модели и данные, на которых будут подобны её параметры
+* в структуре модели Big Five есть только пять латентных переменных первого уровня (личностных черт), латентные переменные второго уровня отсутствуют
+* при отсутствии латентных переменных второго уровня корреляция между факторами первого уровня функцией `cfa()` по умолчанию включаются в модель
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #4
@@ -153,12 +186,18 @@ cormat
 <img id="hw16-4-level" class="level"/>
 
 ::: {#hw16-4-task .task}
-оценка пор метрикам качества
+Рассчитайте значение метрик качества модели. Помимо основных --- CFI, TLI, SRMR, RMSEA --- можете выбрать любые, которые считаете необходимыми.
+
+Сделайте вывод о качестве модели и её соответствии данным.
 :::
+
+```{r}
+fitmeasures(model1, c("CFI", "TLI", "SRMR", "RMSEA"))
+```
 
 ::: {#hw16-4-autocheck .autocheck}
 ::: {#hw16-4-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение RMSEA, округленное *до тысячных*. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-4" placeholder="Введите ответ…">
@@ -174,23 +213,10 @@ cormat
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Значения метрик качества модели можно получить с помощью функции `fitmeasures()`, во втором аргументе которой необходимо перечислить требуемые метрики в виде текстового вектора, если вы хотите сократить аутпут.
+* Для оценки качества модели можете использовать стандартные пороговые значения:
+    * для CFI и TLI --- 0.95
+    * для SRMR и RMSEA --- 0.05
 
 </details>
 :::
@@ -200,12 +226,28 @@ cormat
 <img id="hw16-5-level" class="level"/>
 
 ::: {#hw16-5-task .task}
-standardized solution
+a. Приведите результаты моделирования к стандартизированному виду.
+b. Изучите оценки параметров модели. Сделайте вывод о том, удалось ли обнаружить ожидаемую структуру в данных.
 :::
+
+```{r}
+
+smodel1 <- standardizedsolution(model1)
+
+smodel1 %>% 
+  filter(op == "=~") # %>% filter(pvalue > .05) %>% nrow()
+
+smodel1 %>% 
+  filter(op == "~~" & lhs == rhs)
+
+smodel1 %>% 
+  filter(op == "~~" & lhs != rhs)
+
+```
 
 ::: {#hw16-5-autocheck .autocheck}
 ::: {#hw16-5-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в модели ниже введите количество факторных нагрузок, которые оказались статистически незначимы.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-5" placeholder="Введите ответ…">
@@ -221,23 +263,9 @@ standardized solution
 
 <summary>Подсказки</summary>
 
-<details class="hint">
-
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* Привести аутпут к стандартизированному виду поможет функция `standardizedsolution()`.
+* Эта функция возвращает датафрейм, с которым можно взаимодействовать как с любым датафреймом.
+* Для удобства можете отдельно изучить факторные нагрузки, отдельно корреляции и отдельно --- остатки модели.
 
 </details>
 :::
@@ -247,12 +275,32 @@ standardized solution
 <img id="hw16-6-level" class="level"/>
 
 ::: {#hw16-6-task .task}
-индексы модификации
+
+Окей. Давайте выдвинем предположение, что всё-таки за пятью факторами скрывается единый фактор --- назовём его Personality. Хотя это не очень согласуется с тем, как была теоретически сформулирована модель, попробуем оценить, получается ли более хорошей модель с G-фактором на имеющихся данных.
+
+Постройте модель КФА (`model2`), в которой латентными переменными первого уровня будут пять личностных черт модели Big Five, а латентной переменной второго уровня --- фактор Personality.
+
+При описании структуры модели для обозначения факторов используйте сокращения `AGR`, `CSN`, `EST`, `EXT`, `OPN` и `PER` (для Personality).
+
 :::
+
+```{r}
+mdl2 <- "
+AGR =~ AGR1 + AGR2 + AGR3 + AGR4 + AGR5 + AGR6 + AGR7 + AGR8 + AGR9 + AGR10
+CSN =~ CSN1 + CSN2 + CSN3 + CSN4 + CSN5 + CSN6 + CSN7 + CSN8 + CSN9 + CSN10
+EST =~ EST1 + EST2 + EST3 + EST4 + EST5 + EST6 + EST7 + EST8 + EST9 + EST10
+EXT =~ EXT1 + EXT2 + EXT3 + EXT4 + EXT5 + EXT6 + EXT7 + EXT8 + EXT9 + EXT10
+OPN =~ OPN1 + OPN2 + OPN3 + OPN4 + OPN5 + OPN6 + OPN7 + OPN8 + OPN9 + OPN10
+PER =~ AGR + CSN + EST + EXT + OPN
+"
+
+model2 <- cfa(mdl2, bffm)
+summary(model2)
+```
 
 ::: {#hw16-6-autocheck .autocheck}
 ::: {#hw16-6-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите число степеней свободы модели (`Degrees of freedom`) из аутпута функции `summary()`.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-6" placeholder="Введите ответ…">
@@ -268,23 +316,12 @@ standardized solution
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Чтобы построить модель, необходимо:
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
+* задать структуру модели в виде строки с использованием операторов `=~`, `~~` и `+` --- удобнее сохранить её в какую-либо переменную
+* фактор второго уровня вводится в модель аналогично тому, как вводились факторы первого уровня, однако теперь в качестве «наблюдаемых» переменных выступают факторы первого уровня
+* с помощью функции `cfa()` из пакета `lavaan` построить модель, указав структуру модели и данные, на которых будут подобны её параметры
+* при наличии латентных переменных второго уровня корреляция между факторами первого уровня функцией `cfa()` в модель не включаются
 
 </details>
 :::
@@ -294,12 +331,25 @@ standardized solution
 <img id="hw16-7-level" class="level"/>
 
 ::: {#hw16-7-task .task}
-модель с латентной переменной второго уровня
+
+Сравните модели `model1` и `model2` друг с другом с помощью метрик качества модели.
+
+Какая из моделей лучше соответствует данным?
+
 :::
+
+```{r}
+fitmeasures(model1, c("CFI", "TLI", "SRMR", "RMSEA"))
+fitmeasures(model2, c("CFI", "TLI", "SRMR", "RMSEA"))
+
+fitmeasures(model1, c("CFI", "TLI", "SRMR", "RMSEA")) - fitmeasures(model2, c("CFI", "TLI", "SRMR", "RMSEA"))
+```
 
 ::: {#hw16-7-autocheck .autocheck}
 ::: {#hw16-7-ir .input-requirements}
-Описание формата инпута.
+
+Для самопроверки в поле ниже введите *абсолютную разницу* между значениями индекса CFI двух моделей, *округленную до тысячных*. В качестве десятичного разделителя используйте точку.
+
 :::
 
 <input class="autocheck-input" type="text" id="hw16-7" placeholder="Введите ответ…">
@@ -310,7 +360,7 @@ standardized solution
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw16-7-hints">
 
 <summary>Подсказки</summary>
@@ -341,12 +391,26 @@ standardized solution
 <img id="hw16-8-level" class="level"/>
 
 ::: {#hw16-8-task .task}
-оценка по метрикам качества, сравнение с базовой
+
+Изучите индексы модификации модели. Прежде всего интересно узнать, не потеряла ли модель что-то важное, когда из неё были удалены корреляции между личностными чертами.
+
+Выведите индексы модификации для корреляций между факторами первого уровня. Стоит ли включить эти корреляции в модель?
+
 :::
+
+```{r}
+mis2 <- modificationindices(model2) %>% arrange(desc(mi))
+
+mis2 %>% 
+  filter(lhs != rhs &
+           !str_detect(lhs, "\\d$") &
+           !str_detect(rhs, "\\d$")) # %>% select(lhs, op, rhs)
+
+```
 
 ::: {#hw16-8-autocheck .autocheck}
 ::: {#hw16-8-ir .input-requirements}
-Описание формата инпута.
+Для самопроверки в поле ниже введите значение наименьшего индекса модификации, округленное *до тысячных*. В качестве десятичного разделителя используйте точку.
 :::
 
 <input class="autocheck-input" type="text" id="hw16-8" placeholder="Введите ответ…">
@@ -358,29 +422,18 @@ standardized solution
 :::
 
 ::: hints-wrapper
+
 <details class="hints" id="hw16-8-hints">
 
 <summary>Подсказки</summary>
 
-<details class="hint">
+Чтобы отобрать необходимые индексы модификации, необходимо осуществить фильтрацию датафрейма по следующим условиям:
 
-<summary>Как делать задание?</summary>
-
-</details>
-
-<details class="hint">
-
-<summary>Что надо сделать?</summary>
+* в колонках `lhs` и `rhs` должны быть разные значения
+* в колонках `lhs` и `rhs` значения *не* должны заканчиваться на цифру
 
 </details>
 
-<details class="hint">
-
-<summary>Ответ неверный</summary>
-
-</details>
-
-</details>
 :::
 
 ### #9
@@ -388,10 +441,15 @@ standardized solution
 <img id="hw16-9-level" class="level"/>
 
 ::: {#hw16-9-task .task}
-индексы модификации
+
+a. На основании результатов предыдущего задания скорректируйте модель `model2`, включив в неё те корреляции, которые могли бы существенно улучшить модель. Постройте модель `model3`.
+b. Сравните три модели (`model1`, `model2` и `model3`) друг с другом с помощью метрик качества модели.
+
+Какая из моделей лучше соответствует данным?
+
 :::
 
-::: {#hw16-9-autocheck .autocheck}
+::: {#hw16-9-autocheck .autocheck hidde="true"}
 ::: {#hw16-9-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -404,7 +462,7 @@ standardized solution
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw16-9-hints">
 
 <summary>Подсказки</summary>
@@ -435,10 +493,14 @@ standardized solution
 <img id="hw16-10-level" class="level"/>
 
 ::: {#hw16-10-task .task}
-Текст задания.
+
+Сравните три модели (`model1`, `model2` и `model3`) друг с другом с помощью теста $\chi^2$.
+
+Стоит ли включать в модель латентную переменную второго уровня? Что важнее учесть в модели --- G-factor (Personality) или корреляции между факторами (личностными чертами)?
+
 :::
 
-::: {#hw16-10-autocheck .autocheck}
+::: {#hw16-10-autocheck .autocheck hidden="true"}
 ::: {#hw16-10-ir .input-requirements}
 Описание формата инпута.
 :::
@@ -451,7 +513,7 @@ standardized solution
 :::
 :::
 
-::: hints-wrapper
+::: {.hints-wrapper hidden="true"}
 <details class="hints" id="hw16-10-hints">
 
 <summary>Подсказки</summary>
@@ -476,6 +538,8 @@ standardized solution
 
 </details>
 :::
+
+<!---
 
 ## Дополнительные задания {#hw16_add}
 
@@ -713,6 +777,8 @@ standardized solution
 
 </details>
 :::
+
+--->
 
 ```{=html}
 <!--- CHANGE hw16 TO hw<n> IN THE LINES BELOW--->

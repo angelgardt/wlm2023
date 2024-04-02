@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.545">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -301,14 +301,6 @@ window.Quarto = {
   <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#9</a></li>
   <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">#10</a></li>
   </ul></li>
-  <li><a href="#hw16_add" id="toc-hw16_add" class="nav-link" data-scroll-target="#hw16_add">Дополнительные задания</a>
-  <ul class="collapse">
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">#1</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">#2</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">#3</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">#4</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">#5</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -339,15 +331,47 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 -->
 <section id="hw16_main" class="level2">
 <h2 class="anchored" data-anchor-id="hw16_main">Основные задания</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Данные
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Сегодня мы вновь работаем с датасетом по Большой пятерке (Big Five). Вспомнить структуру модели можно <a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits">тут</a>.</p>
+<center>
+<figure class="figure">
+<img src="pics/big_five_eng.png" width="100%" class="figure-img">
+</figure>
+</center>
+<p>Данные собирались с помощью опросника Big-Five Factor Markers. На измерение каждого фактора в опроснике отведено по десять утверждений — с этими переменными мы будем работать:</p>
+<ul>
+<li><code>EXT1</code>–<code>EXT10</code> — extraversion</li>
+<li><code>EST1</code>–<code>EST10</code> — neuroticism (emotional stability)</li>
+<li><code>AGR1</code>–<code>AGR10</code> — agreeableness</li>
+<li><code>CSN1</code>–<code>CSN10</code> — conscientiousness</li>
+<li><code>OPN1</code>–<code>OPN10</code> — openness</li>
+</ul>
+<p>Подробное описание датасета можно найти в <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw15/big_five_bffm_codebook.txt">этом файле</a>.</p>
+<p><a href="https://www.kaggle.com/tunguz/big-five-personality-test">Оригинальный датасет</a> содержит 1 015 342 наблюдения — это очень много, возможно, не хватит оперативной памяти, поэтому мы будем работать <a href="https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw16/bffm.csv">с его частью</a>.</p>
+</div>
+</div>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">#1</h3>
 <p><img id="hw16-1-level" class="level"></p>
 <div id="hw16-1-task" class="task">
-<p>Текст задания <code>переменная</code>.</p>
+<ol type="a">
+<li>Загрузите данные. Проверьте их структуру и типы переменных.</li>
+<li>При необходимости скорректируйте типы переменных.</li>
+<li>Если в данных есть пропущенные значения или они возникли в ходе предобработки, удалите их из датасета.</li>
+</ol>
 </div>
 <div id="hw16-1-autocheck" class="autocheck">
 <div id="hw16-1-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите количество пропущенных значений в датасете.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-1" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-1')"></p>
@@ -358,23 +382,9 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw16-1-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Не ведитесь на то, что данные те же — да, это то же исследование, но данные могут быть организованы не так, как в прошлый раз.</p>
 </details>
 </div>
 </section>
@@ -382,10 +392,13 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-1">#2</h3>
 <p><img id="hw16-2-level" class="level"></p>
 <div id="hw16-2-task" class="task">
-<p>Текст задания.</p>
-<p><span class="math display">\[\sin^2{\alpha} + \cos^2{\alpha} = 1\]</span></p>
+<ol type="a">
+<li>Постройте и визуализируйте корреляционную матрицу по интересующим нас переменным (пунктам опросника).</li>
+<li>Что происходит в данных? Нужно ли что-либо поправить?</li>
+<li>Предобработайте данные, если это необходимо.</li>
+</ol>
 </div>
-<div id="hw16-2-autocheck" class="autocheck">
+<div id="hw16-2-autocheck" class="autocheck" hidden="true">
 <div id="hw16-2-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -398,23 +411,9 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <div class="hints-wrapper">
 <details class="hints" id="hw16-2-hints">
 <summary>
-Подсказки
+Подсказка
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Обратите внимание на силу корреляций, а также на их направление.</p>
 </details>
 </div>
 </section>
@@ -422,11 +421,12 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-2">#3</h3>
 <p><img id="hw16-3-level" class="level"></p>
 <div id="hw16-3-task" class="task">
-<p>Текст задания.</p>
+<p>Постройте базовую модель КФА (<code>model1</code>), соответствующую структуре модели Big Five.</p>
+<p>При описании структуры модели для обозначения факторов используйте сокращения <code>AGR</code>, <code>CSN</code>, <code>EST</code>, <code>EXT</code> и <code>OPN</code>.</p>
 </div>
 <div id="hw16-3-autocheck" class="autocheck">
 <div id="hw16-3-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите число степеней свободы модели (<code>Degrees of freedom</code>) из аутпута функции <code>summary()</code>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-3" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-3')"></p>
@@ -439,21 +439,13 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы построить модель, необходимо:</p>
+<ul>
+<li>задать структуру модели в виде строки с использованием операторов <code>=~</code>, <code>~~</code> и <code>+</code> — удобнее сохранить её в какую-либо переменную</li>
+<li>с помощью функции <code>cfa()</code> из пакета <code>lavaan</code> построить модель, указав структуру модели и данные, на которых будут подобны её параметры</li>
+<li>в структуре модели Big Five есть только пять латентных переменных первого уровня (личностных черт), латентные переменные второго уровня отсутствуют</li>
+<li>при отсутствии латентных переменных второго уровня корреляция между факторами первого уровня функцией <code>cfa()</code> по умолчанию включаются в модель</li>
+</ul>
 </details>
 </div>
 </section>
@@ -461,11 +453,12 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-3">#4</h3>
 <p><img id="hw16-4-level" class="level"></p>
 <div id="hw16-4-task" class="task">
-<p>Текст задания.</p>
+<p>Рассчитайте значение метрик качества модели. Помимо основных — CFI, TLI, SRMR, RMSEA — можете выбрать любые, которые считаете необходимыми.</p>
+<p>Сделайте вывод о качестве модели и её соответствии данным.</p>
 </div>
 <div id="hw16-4-autocheck" class="autocheck">
 <div id="hw16-4-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение RMSEA, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-4" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-4')"></p>
@@ -478,21 +471,14 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Значения метрик качества модели можно получить с помощью функции <code>fitmeasures()</code>, во втором аргументе которой необходимо перечислить требуемые метрики в виде текстового вектора, если вы хотите сократить аутпут.</li>
+<li>Для оценки качества модели можете использовать стандартные пороговые значения:
+<ul>
+<li>для CFI и TLI — 0.95</li>
+<li>для SRMR и RMSEA — 0.05</li>
+</ul></li>
+</ul>
 </details>
 </div>
 </section>
@@ -500,11 +486,14 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-4">#5</h3>
 <p><img id="hw16-5-level" class="level"></p>
 <div id="hw16-5-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>Приведите результаты моделирования к стандартизированному виду.</li>
+<li>Изучите оценки параметров модели. Сделайте вывод о том, удалось ли обнаружить ожидаемую структуру в данных.</li>
+</ol>
 </div>
 <div id="hw16-5-autocheck" class="autocheck">
 <div id="hw16-5-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в модели ниже введите количество факторных нагрузок, которые оказались статистически незначимы.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-5" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-5')"></p>
@@ -517,21 +506,11 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<ul>
+<li>Привести аутпут к стандартизированному виду поможет функция <code>standardizedsolution()</code>.</li>
+<li>Эта функция возвращает датафрейм, с которым можно взаимодействовать как с любым датафреймом.</li>
+<li>Для удобства можете отдельно изучить факторные нагрузки, отдельно корреляции и отдельно — остатки модели.</li>
+</ul>
 </details>
 </div>
 </section>
@@ -539,11 +518,13 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-5">#6</h3>
 <p><img id="hw16-6-level" class="level"></p>
 <div id="hw16-6-task" class="task">
-<p>Текст задания.</p>
+<p>Окей. Давайте выдвинем предположение, что всё-таки за пятью факторами скрывается единый фактор — назовём его Personality. Хотя это не очень согласуется с тем, как была теоретически сформулирована модель, попробуем оценить, получается ли более хорошей модель с G-фактором на имеющихся данных.</p>
+<p>Постройте модель КФА (<code>model2</code>), в которой латентными переменными первого уровня будут пять личностных черт модели Big Five, а латентной переменной второго уровня — фактор Personality.</p>
+<p>При описании структуры модели для обозначения факторов используйте сокращения <code>AGR</code>, <code>CSN</code>, <code>EST</code>, <code>EXT</code>, <code>OPN</code> и <code>PER</code> (для Personality).</p>
 </div>
 <div id="hw16-6-autocheck" class="autocheck">
 <div id="hw16-6-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите число степеней свободы модели (<code>Degrees of freedom</code>) из аутпута функции <code>summary()</code>.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-6" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-6')"></p>
@@ -556,21 +537,13 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы построить модель, необходимо:</p>
+<ul>
+<li>задать структуру модели в виде строки с использованием операторов <code>=~</code>, <code>~~</code> и <code>+</code> — удобнее сохранить её в какую-либо переменную</li>
+<li>фактор второго уровня вводится в модель аналогично тому, как вводились факторы первого уровня, однако теперь в качестве «наблюдаемых» переменных выступают факторы первого уровня</li>
+<li>с помощью функции <code>cfa()</code> из пакета <code>lavaan</code> построить модель, указав структуру модели и данные, на которых будут подобны её параметры</li>
+<li>при наличии латентных переменных второго уровня корреляция между факторами первого уровня функцией <code>cfa()</code> в модель не включаются</li>
+</ul>
 </details>
 </div>
 </section>
@@ -578,11 +551,12 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-6">#7</h3>
 <p><img id="hw16-7-level" class="level"></p>
 <div id="hw16-7-task" class="task">
-<p>Текст задания.</p>
+<p>Сравните модели <code>model1</code> и <code>model2</code> друг с другом с помощью метрик качества модели.</p>
+<p>Какая из моделей лучше соответствует данным?</p>
 </div>
 <div id="hw16-7-autocheck" class="autocheck">
 <div id="hw16-7-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите <em>абсолютную разницу</em> между значениями индекса CFI двух моделей, <em>округленную до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-7" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-7')"></p>
@@ -590,7 +564,7 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw16-7-hints">
 <summary>
 Подсказки
@@ -617,11 +591,12 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-7">#8</h3>
 <p><img id="hw16-8-level" class="level"></p>
 <div id="hw16-8-task" class="task">
-<p>Текст задания.</p>
+<p>Изучите индексы модификации модели. Прежде всего интересно узнать, не потеряла ли модель что-то важное, когда из неё были удалены корреляции между личностными чертами.</p>
+<p>Выведите индексы модификации для корреляций между факторами первого уровня. Стоит ли включить эти корреляции в модель?</p>
 </div>
 <div id="hw16-8-autocheck" class="autocheck">
 <div id="hw16-8-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
+<p>Для самопроверки в поле ниже введите значение наименьшего индекса модификации, округленное <em>до тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
 </div>
 <p><input class="autocheck-input" type="text" id="hw16-8" placeholder="Введите ответ…"></p>
 <p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-8')"></p>
@@ -634,21 +609,11 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <summary>
 Подсказки
 </summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
+<p>Чтобы отобрать необходимые индексы модификации, необходимо осуществить фильтрацию датафрейма по следующим условиям:</p>
+<ul>
+<li>в колонках <code>lhs</code> и <code>rhs</code> должны быть разные значения</li>
+<li>в колонках <code>lhs</code> и <code>rhs</code> значения <em>не</em> должны заканчиваться на цифру</li>
+</ul>
 </details>
 </div>
 </section>
@@ -656,9 +621,13 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-8">#9</h3>
 <p><img id="hw16-9-level" class="level"></p>
 <div id="hw16-9-task" class="task">
-<p>Текст задания.</p>
+<ol type="a">
+<li>На основании результатов предыдущего задания скорректируйте модель <code>model2</code>, включив в неё те корреляции, которые могли бы существенно улучшить модель. Постройте модель <code>model3</code>.</li>
+<li>Сравните три модели (<code>model1</code>, <code>model2</code> и <code>model3</code>) друг с другом с помощью метрик качества модели.</li>
+</ol>
+<p>Какая из моделей лучше соответствует данным?</p>
 </div>
-<div id="hw16-9-autocheck" class="autocheck">
+<div id="hw16-9-autocheck" class="autocheck" data-hidde="true">
 <div id="hw16-9-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -668,7 +637,7 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw16-9-hints">
 <summary>
 Подсказки
@@ -695,9 +664,10 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 <h3 class="anchored" data-anchor-id="section-9">#10</h3>
 <p><img id="hw16-10-level" class="level"></p>
 <div id="hw16-10-task" class="task">
-<p>Текст задания.</p>
+<p>Сравните три модели (<code>model1</code>, <code>model2</code> и <code>model3</code>) друг с другом с помощью теста <span class="math inline">\(\chi^2\)</span>.</p>
+<p>Стоит ли включать в модель латентную переменную второго уровня? Что важнее учесть в модели — G-factor (Personality) или корреляции между факторами (личностными чертами)?</p>
 </div>
-<div id="hw16-10-autocheck" class="autocheck">
+<div id="hw16-10-autocheck" class="autocheck" hidden="true">
 <div id="hw16-10-ir" class="input-requirements">
 <p>Описание формата инпута.</p>
 </div>
@@ -707,7 +677,7 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 
 </div>
 </div>
-<div class="hints-wrapper">
+<div class="hints-wrapper" hidden="true">
 <details class="hints" id="hw16-10-hints">
 <summary>
 Подсказки
@@ -729,204 +699,246 @@ REPLACE ALL hw16 TO hw<n> WITH MATCH CASE
 </details>
 </details>
 </div>
-</section>
-</section>
-<section id="hw16_add" class="level2">
-<h2 class="anchored" data-anchor-id="hw16_add">Дополнительные задания</h2>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">#1</h3>
-<p><img id="hw16-11-level" class="level"></p>
-<div id="hw16-11-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw16-11-autocheck" class="autocheck">
-<div id="hw16-11-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw16-11" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-11')"></p>
-<div id="hw16-11-fb" class="autocheck-feedback">
+<!---
 
-</div>
-</div>
-<div class="hints-wrapper">
+## Дополнительные задания {#hw16_add}
+
+### #1
+
+<img id="hw16-11-level" class="level"/>
+
+::: {#hw16-11-task .task}
+Текст задания.
+:::
+
+::: {#hw16-11-autocheck .autocheck}
+::: {#hw16-11-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw16-11" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-11')">
+
+::: {#hw16-11-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw16-11-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">#2</h3>
-<p><img id="hw16-12-level" class="level"></p>
-<div id="hw16-12-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw16-12-autocheck" class="autocheck">
-<div id="hw16-12-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw16-12" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-12')"></p>
-<div id="hw16-12-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #2
+
+<img id="hw16-12-level" class="level"/>
+
+::: {#hw16-12-task .task}
+Текст задания.
+:::
+
+::: {#hw16-12-autocheck .autocheck}
+::: {#hw16-12-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw16-12" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-12')">
+
+::: {#hw16-12-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw16-12-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">#3</h3>
-<p><img id="hw16-13-level" class="level"></p>
-<div id="hw16-13-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw16-13-autocheck" class="autocheck">
-<div id="hw16-13-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw16-13" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-13')"></p>
-<div id="hw16-13-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #3
+
+<img id="hw16-13-level" class="level"/>
+
+::: {#hw16-13-task .task}
+Текст задания.
+:::
+
+::: {#hw16-13-autocheck .autocheck}
+::: {#hw16-13-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw16-13" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-13')">
+
+::: {#hw16-13-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw16-13-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">#4</h3>
-<p><img id="hw16-14-level" class="level"></p>
-<div id="hw16-14-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw16-14-autocheck" class="autocheck">
-<div id="hw16-14-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw16-14" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-14')"></p>
-<div id="hw16-14-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #4
+
+<img id="hw16-14-level" class="level"/>
+
+::: {#hw16-14-task .task}
+Текст задания.
+:::
+
+::: {#hw16-14-autocheck .autocheck}
+::: {#hw16-14-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw16-14" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-14')">
+
+::: {#hw16-14-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw16-14-hints">
-<summary>
-Подсказки
-</summary>
-<details class="hint">
-<summary>
-Как делать задание?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Что надо сделать?
-</summary>
-</details>
-<details class="hint">
-<summary>
-Ответ неверный
-</summary>
-</details>
-</details>
-</div>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">#5</h3>
-<p><img id="hw16-15-level" class="level"></p>
-<div id="hw16-15-task" class="task">
-<p>Текст задания.</p>
-</div>
-<div id="hw16-15-autocheck" class="autocheck">
-<div id="hw16-15-ir" class="input-requirements">
-<p>Описание формата инпута.</p>
-</div>
-<p><input class="autocheck-input" type="text" id="hw16-15" placeholder="Введите ответ…"></p>
-<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-15')"></p>
-<div id="hw16-15-fb" class="autocheck-feedback">
 
-</div>
-</div>
-<div class="hints-wrapper">
+<summary>Подсказки</summary>
+
+<details class="hint">
+
+<summary>Как делать задание?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Что надо сделать?</summary>
+
+</details>
+
+<details class="hint">
+
+<summary>Ответ неверный</summary>
+
+</details>
+
+</details>
+:::
+
+### #5
+
+<img id="hw16-15-level" class="level"/>
+
+::: {#hw16-15-task .task}
+Текст задания.
+:::
+
+::: {#hw16-15-autocheck .autocheck}
+::: {#hw16-15-ir .input-requirements}
+Описание формата инпута.
+:::
+
+<input class="autocheck-input" type="text" id="hw16-15" placeholder="Введите ответ…">
+
+<input class="autocheck-button" type="button" value="Проверить" onclick="check('hw16-15')">
+
+::: {#hw16-15-fb .autocheck-feedback}
+:::
+:::
+
+::: hints-wrapper
 <details class="hints" id="hw16-15-hints">
-<summary>
-Подсказки
-</summary>
+
+<summary>Подсказки</summary>
+
 <details class="hint">
-<summary>
-Как делать задание?
-</summary>
+
+<summary>Как делать задание?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Что надо сделать?
-</summary>
+
+<summary>Что надо сделать?</summary>
+
 </details>
+
 <details class="hint">
-<summary>
-Ответ неверный
-</summary>
+
+<summary>Ответ неверный</summary>
+
 </details>
+
 </details>
-</div>
+:::
+
+--->
 <!--- CHANGE hw16 TO hw<n> IN THE LINES BELOW--->
 <script type="text/javascript" src="./js/hw16.json"></script>
 <script type="text/javascript" src="./js/hw.js"></script>
