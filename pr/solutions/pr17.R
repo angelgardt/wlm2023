@@ -4,8 +4,12 @@
 
 # MAIN
 
-# pkgs <- c("lavaan", "semPlot", "googlesheets4")
-# install.packages(pkgs[!pkgs %in% installed.packages()])
+pkgs <- c("lavaan", "semPlot", "googlesheets4", "WebPower")
+install.packages(pkgs[!pkgs %in% installed.packages()])
+
+https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr17/tolerance_uncertainty.csv
+https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/pr17/taia.csv
+
 
 library(tidyverse)
 library(lavaan)
