@@ -74,8 +74,7 @@ hw_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV
 
 ## quizes
 q_sp <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
-                     sheet = "Q") %>% 
-  select(task_code, level, max_score)
+                     sheet = "Q")
 ```
 
 ### Calendar
@@ -166,7 +165,7 @@ hw_journal %>%
   pivot_longer(cols = -c(ID, Stream),
                names_to = "hw",
                values_to = "score") %>% 
-  filter(score == "NS") %>% 
+  filter(score != "NS") %>% 
   group_by(hw) %>% 
   summarise(n = n()) -> hws_ns
 
@@ -350,11 +349,11 @@ basics_by_videos %>%
 
 ### Classroom
 
-```{r get-classroom-data, eval=FALSE}
+```{r get-classroom-data}
 get_course_list() %>% 
   .$courses %>% 
   filter(name == "WLM 2023 // HSE UX LAB") %>% 
-  .$id -> course_id
+  pull(id) -> course_id
 
 get_coursework_list(course_id)$courseWork %>% 
   select(id, title) %>%
@@ -383,39 +382,102 @@ tibble(
 
 # get_coursework_properties(course_id, coursework_id)
 # get_form_properties(form_id = NULL, form_url = NULL)
+```
 
+```{r quizzes-preproc}
+q_props <- list()
+for(i in 1:15) {
+  get_form_properties(form_url = q_links$link[i]) %>% 
+    .$items %>% 
+    mutate(code = paste0("Q", i)) -> q_props[[i]]
+}
+
+q_resps <- list()
+for(i in 1:15) {
+  get_form_responses(form_url = q_links$link[i])$responses %>% 
+    filter(month(as_date(lastSubmittedTime)) > 10 | year(as_date(lastSubmittedTime)) > 2023) %>% 
+    mutate(code = paste0("Q", i))-> q_resps[[i]]
+}
+
+q_resps %>% 
+  map(function(x) {x %>% select(responseId, totalScore, lastSubmittedTime, code)}) -> q_ts
+
+q_total_scores <- tibble()
+for (i in 1:length(q_ts)) {
+  q_ts[[i]] %>% 
+    bind_rows(q_total_scores) -> q_total_scores
+}
+
+q_ts %>% 
+  map(function(x) nrow(x)) %>% 
+  as_tibble(.name_repair = "universal") %>% 
+  rename_with(str_replace_all, pattern = "\\.\\.\\.", replacement = "Q") %>% 
+  pivot_longer(cols = everything(),
+               names_to = "code", 
+               values_to = "n") -> q_n
+```
+
+```{r q-task-export, eval=FALSE}
+# q_tasks <- tibble()
+# for (i in 1:length(q_props)) {
+#   q_props[[i]] %>% 
+#     select(itemId, title, code) %>% 
+#     slice(-1) %>% 
+#     bind_rows(q_tasks) -> q_tasks
+# }
+# q_tasks %>% write_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+#                         sheet = "Q")
+
+# q_questions <- tibble()
+# for (i in 1:length(q_props)) {
+#   q_props[[i]]$questionItem$question %>% 
+#     select(questionId) %>% 
+#     mutate(code = paste0("Q", i)) %>% 
+#     slice(-1) %>% 
+#     bind_rows(q_questions) -> q_questions
+# }
+# q_questions %>% write_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+#                             sheet = "Q_questions")
+```
+
+```{r q-fix, eval=FALSE}
+# q_props[[1]]$questionItem$question$grading
+# q_props[[1]]$questionItem$question %>% select(questionId)
+# q_resps[[1]]$answers[[2]]$grade
+# q_resps[[1]]
+# 
+# q_props[[1]] %>% str()
+# q_resps[[1]]$answers$`430dd10a`$grade$correct
+# 
+# (q_resps[[7]]$answers %>% names())[
+#   !(q_resps[[7]]$answers %>% names()) %in% (q_props[[7]]$questionItem$question %>% select(questionId) %>% pull(questionId))
+# ]
+# 
+# #  "57cc894c" "45438f30" "7e2f5172" "0cef7aff" "400b60f4" "704c90b2" "6d08b363"
+# q_resps[[13]]$answers$`57cc894c`$textAnswers$answers %>% unlist()
+```
+
+```{r quizzes-spec-preproc}
 ## quiz specification preprocess
 q_sp %>% 
-  mutate(code = task_code %>% 
-           str_extract("^q\\d+") %>% 
-           toupper(),
-         task = task_code %>% 
-           str_extract("\\d+$") %>% 
-           factor(ordered = TRUE,
-                  levels = as.character(1:20)),
-         level = level %>% 
-           factor(ordered = TRUE,
-                  levels = c("easy", "medium", "hard", "extreme"))) -> q_spec
-
-q_spec %>% 
-  group_by(code) %>% 
-  summarise(max_total_score = sum(max_score)) -> q_max_total_scores
+  summarise(max_total_score = sum(max_score),
+            .by = code) -> q_max_total_score
 
 ### quizes preproc
-source("scripts/q-preproc/q1_preproc.R")
-source("scripts/q-preproc/q2_preproc.R")
+# source("scripts/q-preproc/q1_preproc.R")
+# source("scripts/q-preproc/q2_preproc.R")
 
 
-q1_total_scores %>% 
-  bind_rows(q2_total_scores) %>% 
-  left_join(q_max_total_scores,
-            join_by(code)) %>% 
-  mutate(lastSubmittedTime = as_datetime(lastSubmittedTime),
-         totalScore100 = (totalScore / max_total_score * 100) %>% round()) %>% 
-  filter(month(lastSubmittedTime) > 10) -> q_total_scores
-
-q1_item_score %>% 
-  bind_rows(q2_item_score) -> q_item_scores
+# q1_total_scores %>% 
+#   bind_rows(q2_total_scores) %>% 
+#   left_join(q_max_total_scores,
+#             join_by(code)) %>% 
+#   mutate(lastSubmittedTime = as_datetime(lastSubmittedTime),
+#          totalScore100 = (totalScore / max_total_score * 100) %>% round()) %>% 
+#   filter(month(lastSubmittedTime) > 10) -> q_total_scores
+# 
+# q1_item_score %>% 
+#   bind_rows(q2_item_score) -> q_item_scores
 
 
 
@@ -465,8 +527,49 @@ n_activities_weeks_blocks %>%
   filter(week != 7) %>% 
   mutate(previous_n_retention = lag(n_retention),
          `Relative Retention` = round(n_retention / previous_n_retention * 100, 2)) -> retention_weeks
+
+retention_weeks %>% 
+  filter(week == 1) %>% 
+  select(week, `Absolute Retention`) -> activation
+
+retention_weeks %>% 
+  filter(week == "21–22") %>% 
+  select(week, `Absolute Retention`) -> completion
+
+n_activities_weeks_blocks %>% 
+  summarise(n_retention = max(n),
+            .by = block) %>% 
+  mutate(previous_n_retention = lag(n_retention),
+         `Absolute Retention` = round(n_retention / n_partic * 100, 2),
+         `Relative Retention` = round(n_retention / previous_n_retention * 100, 2)) %>% 
+  filter(!is.na(block)) -> retention_blocks
 ```
 
+
+## Row
+
+```{r}
+#| content: valuebox
+#| title: "Activation"
+list(
+  icon = "check",
+  color = "#9AEBC6",
+  value = paste0(activation$`Absolute Retention`, "%")
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Completion Rate"
+list(
+  icon = "trophy",
+  color = "#95B4F5",
+  value = paste0(completion$`Absolute Retention`, "%")
+)
+```
+
+
+## Row
 ```{r retention-weeks}
 retention_weeks %>% pull(week) -> weeks
 retention_weeks %>% 
@@ -478,7 +581,13 @@ retention_weeks %>%
   geom_point() +
   geom_line(aes(group = name)) +
   # scale_color_discrete(labels = c(rel_retention = "Относительное удержание",
-  #                                 abs_retention = "Аболютное удержание")) +
+  #                                 abs_retention = "Абcолютное удержание")) +
+  # geom_point(data = activation,
+  #            aes(week, `Absolute Retention`),
+  #            size = 2, color = "green3") +
+  # geom_point(data = completion,
+  #            aes(week, `Absolute Retention`),
+  #            size = 2, color = "blue3") +
   labs(title = "Retention // Недели",
        x = "Неделя", y = "Процент",
        color = "Метрика") -> retention_weeks_plot
@@ -491,6 +600,37 @@ retention_weeks_plot %>%
   ))
 ```
 
+
+## Row
+
+```{r retention-blocks}
+retention_blocks %>% pull(block) -> blocks
+retention_blocks %>% 
+  pivot_longer(cols = c(`Absolute Retention`, `Relative Retention`)) %>% 
+  mutate(block = factor(block, 
+                          ordered = TRUE,
+         levels = blocks)) %>% 
+  ggplot(aes(block, value, color = name)) +
+  geom_point() +
+  geom_line(aes(group = name)) +
+  scale_x_discrete(labels = c("R", 
+                              "Промежуточный\nпроект",
+                              "Математика\nи статистика",
+                              "Анализ данных",
+                              "Итоговый\nпроект")) +
+  # scale_color_discrete(labels = c(rel_retention = "Относительное удержание",
+  #                                 abs_retention = "Абcолютное удержание")) +
+  labs(title = "Retention // Блоки",
+       x = "Неделя", y = "Процент",
+       color = "Метрика") -> retention_blocks_plot
+
+retention_blocks_plot %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
 
 # L // Лекции {#lec}
 
@@ -820,29 +960,90 @@ pr_ave_views_perc %>%
 
 # Q // Квизы {#q}
 
+## Row
+
+```{r q-n}
+q_n %>% 
+  mutate(code = factor(code, 
+                       ordered = TRUE, 
+                       levels = paste0("Q", 1:15))) %>% 
+  ggplot(aes(code, n)) +
+  geom_col() +
+  geom_text(aes(
+    y = n - 2,
+    label = (n / n_partic * 100) %>% round() %>% paste0("%")
+  ),
+  color = "white") +
+  labs(x = "Квиз",
+       y = "Количество ответов",
+       title = "Прохождение квизов") -> q_passed_graph
+
+q_passed_graph %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+## Row
+
+```{r}
+q_total_scores %>% 
+  full_join(q_max_total_score,
+            join_by(code)) %>% 
+  mutate(ten_score = round(totalScore / max_total_score * 10),
+         code = factor(code,
+                       ordered = TRUE,
+                       levels = paste0("Q", 1:15))) -> q_ten_scores
+
+q_ten_scores %>% 
+  summarise(mean = mean(ten_score),
+            sd = sd(ten_score),
+            .by = code) %>% 
+  pivot_longer(-code) %>% 
+  ggplot(aes(code, value, color = name, group = name)) +
+  geom_line() +
+  geom_point() +
+  geom_hline(yintercept = c(5, 10), linetype = "dashed") +
+  scale_color_discrete(labels = c(mean = "Среднее",
+                                  sd = "Стандартное отклонение")) +
+  labs(x = "Квиз", y = "Средний балл по 10-балльной шкале",
+       color = "Метрика",
+       title = "Средние баллы за квизы") -> q_means_graph
+
+q_means_graph %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
 ## Row {.tabset}
 
 ```{r q1-ts, eval=FALSE}
 #| title: Q1
 
-q_total_scores %>% 
-  filter(code == "Q1") %>% 
+q_total_scores %>%
+  filter(code == "Q1") %>%
   ggplot(aes(totalScore100)) +
   geom_histogram() +
   scale_x_continuous(breaks = seq(0, 100, by = 5))
 
-q_item_scores %>%
-  filter(str_detect(task_code, "^q1")) %>% 
-  summarise(score = sum(score),
-            .by = c(itemId, task_code, responseId)) %>% 
-  left_join(q_total_scores %>% 
-              filter(code == "Q1"),
-            join_by(responseId))
-  group_by(task_code) %>% 
-  
-  summarise(mean = mean(score)) %>% 
-  
-  left_join(q_spec, join_by())
+# q_item_scores %>%
+#   filter(str_detect(task_code, "^q1")) %>% 
+#   summarise(score = sum(score),
+#             .by = c(itemId, task_code, responseId)) %>% 
+#   left_join(q_total_scores %>% 
+#               filter(code == "Q1"),
+#             join_by(responseId))
+#   group_by(task_code) %>% 
+#   
+#   summarise(mean = mean(score)) %>% 
+#   
+#   left_join(q_spec, join_by())
 
 ```
 
@@ -853,17 +1054,20 @@ q_item_scores %>%
 ## Row
 
 ```{r hws-ns}
-hws_ns %>%
+hws_ns %>% # pull(hw) %>% unique()
+  mutate(hw = factor(hw,
+                     ordered = TRUE,
+                     levels = paste0("HW", 1:16))) %>% 
   ggplot(aes(hw, n)) +
   geom_col() +
   geom_text(aes(
-    y = n - 1,
+    y = n - 2,
     label = (n / n_partic * 100) %>% round() %>% paste0("%")
   ),
   color = "white") +
   labs(
     x = "Домашка",
-    y = "Количество не сдавших",
+    y = "Количество сданных домашек",
     title = "Динамика сдачи домашек",
     caption = "лейблы отображают процент не сдавших"
   ) -> hw_ns_graph
