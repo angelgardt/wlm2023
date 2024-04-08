@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo=FALSE,
                       message=FALSE, 
                       eval=TRUE,
                       warning=FALSE,
-                      cache = TRUE
+                      cache = FALSE
                       )
 ```
 
@@ -113,7 +113,7 @@ journal %>%
 pr_journal %>% 
   filter(Stream == "main") %>% 
   summarise(n = n()) %>% 
-  .$n -> n_partic
+  pull(n) -> n_partic
 
 ## practice presence
 pr_journal %>% 
@@ -430,6 +430,66 @@ aesth <- yaml::read_yaml("aesthetics.yml")
 
 
 
+
+
+# Метрики
+
+```{r merics}
+journal %>% 
+  filter(Stream == "main") %>% 
+  select(ID, Stream, matches("^HW\\d|^P\\d|^Q\\d|^C\\d|^J$|^F$")) %>% 
+  pivot_longer(cols = -c(ID, Stream),
+               names_to = "code") %>% 
+  separate(code, into = c("code", "part"), sep = "-") %>% 
+  mutate(value = as.numeric(value)) %>% 
+  summarise(done = sum(value, na.rm = TRUE) > 0,
+            .by = c(ID, code)) %>% 
+  summarise(n = sum(done),
+            .by = code) -> n_activities
+
+calendar %>% 
+  select(date, week, block, code_1, code_2) %>% 
+  filter(week != "—" & 
+           week != "0" &
+           code_1 != code_2) %>% 
+  pivot_longer(cols = -c(date, week, block), 
+               values_to = "code") %>% 
+  filter(code != "—") %>% 
+  right_join(n_activities,
+             join_by(code)) -> n_activities_weeks_blocks
+
+n_activities_weeks_blocks %>% 
+  summarise(n_retention = max(n),
+            .by = week) %>% 
+  mutate(`Absolute Retention` = round(n_retention / n_partic * 100, 2)) %>% 
+  filter(week != 7) %>% 
+  mutate(previous_n_retention = lag(n_retention),
+         `Relative Retention` = round(n_retention / previous_n_retention * 100, 2)) -> retention_weeks
+```
+
+```{r retention-weeks}
+retention_weeks %>% pull(week) -> weeks
+retention_weeks %>% 
+  pivot_longer(cols = c(`Absolute Retention`, `Relative Retention`)) %>% 
+  mutate(week = factor(week, 
+                          ordered = TRUE,
+         levels = weeks)) %>% 
+  ggplot(aes(week, value, color = name)) +
+  geom_point() +
+  geom_line(aes(group = name)) +
+  # scale_color_discrete(labels = c(rel_retention = "Относительное удержание",
+  #                                 abs_retention = "Аболютное удержание")) +
+  labs(title = "Retention // Недели",
+       x = "Неделя", y = "Процент",
+       color = "Метрика") -> retention_weeks_plot
+
+retention_weeks_plot %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
 
 
 # L // Лекции {#lec}
