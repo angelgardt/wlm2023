@@ -74,7 +74,10 @@ hw_spec <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV
 
 ## quizes
 q_sp <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
-                     sheet = "Q")
+                     sheet = "Q") %>% 
+  filter(!is.na(task_code))
+q_nulls <- read_sheet("https://docs.google.com/spreadsheets/d/1iCy8MDz-ER95OfylV-xAY6lIxfbCZiHq5NM3i4smm5M/edit?usp=sharing",
+                     sheet = "Q_NULLS")
 ```
 
 ### Calendar
@@ -468,6 +471,29 @@ q_sp %>%
 # source("scripts/q-preproc/q2_preproc.R")
 
 
+# map(
+#   q_resps[[4]]$answers,
+#   function(x) x$grade$correct
+# ) %>% enframe() %>% unnest("value", keep_empty = TRUE) %>% filter(name == "410b5ff6")
+
+# map(
+#   q_resps[[2]]$answers[-1],
+#   function(x) x$grade$correct
+# ) %>% 
+#   as_tibble() %>% 
+#   mutate(responseId = q_resps[[1]]$responseId,
+#          code = q_resps[[1]]$code) %>% 
+#   pivot_longer(cols = -c(responseId, code),
+#                names_to = "questionId",
+#                values_to = "correct") %>% 
+#   replace_na(list(correct = FALSE))
+#   
+#   
+# map(
+#   q_resps[[7]]$answers[-17],
+#   function(x) x$grade$correct
+# ) %>% as_tibble() %>% select("0621265c")
+
 # q1_total_scores %>% 
 #   bind_rows(q2_total_scores) %>% 
 #   left_join(q_max_total_scores,
@@ -479,9 +505,71 @@ q_sp %>%
 # q1_item_score %>% 
 #   bind_rows(q2_item_score) -> q_item_scores
 
-
-
 # get_form_responses(form_url = q_links$link[15]) -> q15
+
+
+q_questions <- tibble()
+for (i in 1:15) {
+  q_resps[[i]]$answers -> current_ans
+  map(
+    current_ans[!names(current_ans) %in% (q_nulls %>% filter(code == paste0("Q", i)) %>% pull(questionId))],
+    function(x) x$grade$correct
+    ) %>% 
+    as_tibble() %>% 
+    mutate(responseId = q_resps[[i]]$responseId,
+           code = q_resps[[i]]$code) %>% 
+    pivot_longer(cols = -c(responseId, code),
+                 names_to = "questionId",
+                 values_to = "correct") %>% 
+    replace_na(list(correct = FALSE)) %>% 
+    bind_rows(q_questions) -> q_questions
+}
+
+nrow(q_questions)
+nrow(q_sp)
+
+q_sp %>% 
+  filter(!is.na(questionId)) %>% # nrow()
+  separate(questionId, into = paste0("questionId", 1:7), sep = "\n") %>% 
+  pivot_longer(cols = paste0("questionId", 1:7),
+               names_to = "questionId_num", values_to = "questionId") %>% 
+  filter(!is.na(questionId)) %>% 
+  # full_join(q_questions, ## produce NA from buged questions q14_3 & q4_6
+  #           join_by(code, questionId)) %>% # View()
+  right_join(q_questions,
+             join_by(code, questionId)) %>% # View()
+  # nrow()
+  # pull(max_score) %>% is.na() %>% sum()
+  # pull(correct) %>% is.na() %>% sum()
+  # filter(is.na(correct))
+  group_by(code, responseId, itemId, task_code) %>% 
+  summarise(score = sum(correct)) %>% 
+  full_join(
+    q_sp %>% select(task_code, max_score),
+    join_by(task_code)
+  ) %>% # nrow()
+  full_join(q_total_scores %>% select(code, responseId, totalScore),
+            join_by(code, responseId)) -> q_questions_full
+
+q_questions_full %>% # sapply(is.na) %>% apply(2, sum)
+  filter(!is.na(code)) %>% 
+  ungroup() %>% 
+  group_by(code, task_code) %>% 
+  summarise(mean_score = mean(score)) %>% # nrow()
+  left_join(q_sp %>% select(code, task_code, max_score),
+            join_by(code, task_code)) %>% 
+  mutate(difficulty = mean_score / max_score) -> q_difficulty
+
+q_questions_full %>% # sapply(is.na) %>% apply(2, sum)
+  filter(!is.na(code)) %>% 
+  ungroup() %>% 
+  group_by(code, task_code) %>% 
+  summarise(discrimination = cor(score, totalScore)) %>% 
+  replace_na(list(discrimination = 0)) -> q_discrimination
+
+q_discrimination %>% 
+  full_join(q_difficulty %>% select(code, task_code, difficulty),
+            join_by(code, task_code)) -> q_psymet_props
 ```
 
 ```{r get-aesthetics}

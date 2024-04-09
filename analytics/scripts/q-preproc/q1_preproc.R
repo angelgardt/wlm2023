@@ -7,6 +7,8 @@ q1_resp %>%
 
 
 
+## ----
+
 ## find NAs in title ids and question ids
 
 # tibble(item_Id = q1_prop$items$itemId,
@@ -44,9 +46,12 @@ q1_resp %>%
 # `71e2017a` = "2cbb7358",
 # `71b24946` = "2cbb7358"
 
+
+### ----
+
 tibble(itemId = q1_prop$items$itemId[-1],
        title = q1_prop$items$title[-1],
-       task_code = q_spec %>% filter(code == "Q1") %>% .$task_code) -> q1_task_codes
+       task_code = q_spec %>% filter(code == "Q1") %>% pull(task_code)) -> q1_task_codes
 
 
 q1_resp$answers %>% 
