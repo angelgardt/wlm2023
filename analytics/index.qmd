@@ -1109,30 +1109,826 @@ q_means_graph %>%
   ))
 ```
 
+
 ## Row {.tabset}
 
-```{r q1-ts, eval=FALSE}
+```{r q1-ts-dist}
 #| title: Q1
 
-q_total_scores %>%
+q_ten_scores %>%
   filter(code == "Q1") %>%
-  ggplot(aes(totalScore100)) +
-  geom_histogram() +
-  scale_x_continuous(breaks = seq(0, 100, by = 5))
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q1_score_dist
 
-# q_item_scores %>%
-#   filter(str_detect(task_code, "^q1")) %>% 
-#   summarise(score = sum(score),
-#             .by = c(itemId, task_code, responseId)) %>% 
-#   left_join(q_total_scores %>% 
-#               filter(code == "Q1"),
-#             join_by(responseId))
-#   group_by(task_code) %>% 
-#   
-#   summarise(mean = mean(score)) %>% 
-#   
-#   left_join(q_spec, join_by())
+q1_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
 
+```{r q2-ts-dist}
+#| title: Q2
+
+q_ten_scores %>%
+  filter(code == "Q2") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q2_score_dist
+
+q2_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q3-ts-dist}
+#| title: Q3
+
+q_ten_scores %>%
+  filter(code == "Q3") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q3_score_dist
+
+q3_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q4-ts-dist}
+#| title: Q4
+
+q_ten_scores %>%
+  filter(code == "Q4") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q4_score_dist
+
+q4_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q5-ts-dist}
+#| title: Q5
+
+q_ten_scores %>%
+  filter(code == "Q5") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q5_score_dist
+
+q5_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q6-ts-dist}
+#| title: Q6
+
+q_ten_scores %>%
+  filter(code == "Q6") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q6_score_dist
+
+q6_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q7-ts-dist}
+#| title: Q7
+
+q_ten_scores %>%
+  filter(code == "Q7") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q7_score_dist
+
+q7_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q8-ts-dist}
+#| title: Q8
+
+q_ten_scores %>%
+  filter(code == "Q8") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q8_score_dist
+
+q8_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q9-ts-dist}
+#| title: Q9
+
+q_ten_scores %>%
+  filter(code == "Q9") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q9_score_dist
+
+q9_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q10-ts-dist}
+#| title: Q10
+
+q_ten_scores %>%
+  filter(code == "Q10") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q10_score_dist
+
+q10_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q11-ts-dist}
+#| title: Q11
+
+q_ten_scores %>%
+  filter(code == "Q11") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q11_score_dist
+
+q11_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q12-ts-dist}
+#| title: Q12
+
+q_ten_scores %>%
+  filter(code == "Q12") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q12_score_dist
+
+q12_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q13-ts-dist}
+#| title: Q13
+
+q_ten_scores %>%
+  filter(code == "Q13") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q13_score_dist
+
+q13_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q14-ts-dist}
+#| title: Q14
+
+q_ten_scores %>%
+  filter(code == "Q14") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q14_score_dist
+
+q14_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q15-ts-dist}
+#| title: Q15
+
+q_ten_scores %>%
+  filter(code == "Q2") %>%
+  summarise(n = n(),
+            .by = ten_score) %>% 
+  right_join(tibble(ten_score = 1:10)) %>% 
+  replace_na(list(n = 0)) %>% 
+  ggplot(aes(ten_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = 1:10) +
+  labs(x = "Балл по 10-балльной шкале",
+       y = "Количество",
+       title = "Распределение баллов за квиз") -> q15_score_dist
+
+q15_score_dist %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+
+
+## Row {.tabset}
+
+```{r q1-psy}
+#| title: Q1
+
+q_psymet_props %>%
+  pivot_longer(cols = c(discrimination, difficulty)) %>% 
+  separate(task_code, into = c("quiz", "task"), sep = "_") %>% 
+  mutate(task = as.numeric(task)) -> q_ps_graph
+
+q_ps_graph %>% 
+  filter(code == "Q1") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q1_psy
+
+q1_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q2-psy}
+#| title: Q2
+
+q_ps_graph %>% 
+  filter(code == "Q2") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q2_psy
+
+q2_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q3-psy}
+#| title: Q3
+
+q_ps_graph %>% 
+  filter(code == "Q3") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q3_psy
+
+q3_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q4-psy}
+#| title: Q4
+
+q_ps_graph %>% 
+  filter(code == "Q4") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q4_psy
+
+q4_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q5-psy}
+#| title: Q5
+
+q_ps_graph %>% 
+  filter(code == "Q5") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q5_psy
+
+q5_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q6-psy}
+#| title: Q6
+
+q_ps_graph %>% 
+  filter(code == "Q6") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q6_psy
+
+q6_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q7-psy}
+#| title: Q7
+
+q_ps_graph %>% 
+  filter(code == "Q7") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q7_psy
+
+q7_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q8-psy}
+#| title: Q8
+
+q_ps_graph %>% 
+  filter(code == "Q8") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q8_psy
+
+q8_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q9-psy}
+#| title: Q9
+
+q_ps_graph %>% 
+  filter(code == "Q9") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q9_psy
+
+q9_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q10-psy}
+#| title: Q10
+
+q_ps_graph %>% 
+  filter(code == "Q10") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q10_psy
+
+q10_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q11-psy}
+#| title: Q11
+
+q_ps_graph %>% 
+  filter(code == "Q11") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q11_psy
+
+q11_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q12-psy}
+#| title: Q12
+
+q_ps_graph %>% 
+  filter(code == "Q12") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q12_psy
+
+q12_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q13-psy}
+#| title: Q13
+
+q_ps_graph %>% 
+  filter(code == "Q13") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q13_psy
+
+q13_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q14-psy}
+#| title: Q14
+
+q_ps_graph %>% 
+  filter(code == "Q14") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q14_psy
+
+q14_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
+```
+
+```{r q15-psy}
+#| title: Q15
+
+q_ps_graph %>% 
+  filter(code == "Q15") %>%
+  ggplot(aes(task, value, color = name, shape = name)) +
+  geom_point(size = 2) +
+  geom_hline(
+    yintercept = c(.1, .9),
+    linetype = "dashed",
+    color = "gray50"
+  ) +
+  geom_hline(
+    yintercept = c(.25),
+    linetype = "dotted",
+    color = "gray50"
+  ) +
+  scale_x_continuous(breaks = 1:20) +
+  scale_color_manual(values = c(difficulty = "blue3", 
+                                discrimination = "red3")) +
+  labs(x = "Задание", y = "Значение", color = "Метрика", shape = "Метрика") -> q15_psy
+
+q15_psy %>% 
+  ggplotly() %>% 
+  layout(legend = list(
+    orientation = "h",
+    x = 0, y = -.3
+  ))
 ```
 
 
