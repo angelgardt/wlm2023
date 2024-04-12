@@ -576,6 +576,40 @@ q_discrimination %>%
 aesth <- yaml::read_yaml("aesthetics.yml")
 ```
 
+### FB5
+
+```{r get-fb5}
+fb5 <- read_sheet("https://docs.google.com/spreadsheets/d/1mttm7MFNfpopTqAj6KDmLSDiSsqNFMtzhDobhXazHFc/edit?usp=sharing",
+                  skip = 1) # %>% filter(!str_detect(name, "test"))
+fb5 %>% 
+  select(fb_o1, fb_o2, fb_o4) %>% 
+  mutate(fb_o1_groups = ifelse(fb_o1 >= 6, "good", "bad"),
+         fb_o2_groups = ifelse(fb_o2 >= 9, "enth", ifelse(fb_o2 <= 6, "dis", "norm")),
+         fb_o4_groups = ifelse(fb_o4 >= 9, "prom", ifelse(fb_o4 <= 6, "det", "neut"))) -> fb5_groups
+
+fb5_groups %>% pull(fb_o1) %>% mean() %>% round() %>% paste0(" / 10") -> csi
+fb5_groups %>% summarise(n = n(),
+                         .by = fb_o1_groups) %>% 
+  mutate(csat = round(n / sum(n) * 100)) %>% 
+  filter(fb_o1_groups == "good") %>% pull(csat) %>% paste0("%") -> csat
+
+fb5_groups %>% summarise(n = n(),
+                         .by = fb_o2_groups) %>% 
+  mutate(ers_perc = round(n / sum(n) * 100)) %>% 
+  pivot_wider(names_from = fb_o2_groups,
+              values_from = ers_perc) %>% 
+  transmute(ers = enth - dis) %>% 
+  pull(ers) -> ers
+
+fb5_groups %>% summarise(n = n(),
+                         .by = fb_o4_groups) %>% 
+  mutate(nps_perc = round(n / sum(n) * 100)) %>% 
+  pivot_wider(names_from = fb_o4_groups,
+              values_from = nps_perc) %>% 
+  transmute(nps = prom - det) %>% 
+  pull(nps) -> nps
+```
+
 :::
 
 
@@ -653,6 +687,48 @@ list(
   icon = "trophy",
   color = "#95B4F5",
   value = paste0(completion$`Absolute Retention`, "%")
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Customer Satisfaction Index"
+list(
+  icon = "bar-chart",
+  color = "#F0C281",
+  value = csi
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Customer Satisfaction Score"
+list(
+  icon = "bar-chart",
+  color = "#F0C281",
+  value = csat
+)
+```
+
+## Row
+
+```{r}
+#| content: valuebox
+#| title: "Net Promoter Score"
+list(
+  icon = "bar-chart",
+  color = "#F0E790",
+  value = as.character(nps)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Expectation/Reality Score"
+list(
+  icon = "bar-chart",
+  color = "#F0E790",
+  value = as.character(ers)
 )
 ```
 
