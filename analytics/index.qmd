@@ -138,7 +138,7 @@ pr_journal %>%
 
 ## consulations
 journal %>% 
-  select(ID, Stream, starts_with("C")) -> c_journal
+  select(ID, Stream, starts_with("C"), -Certificate) -> c_journal
 
 ## consulations presence
 c_journal %>% 
@@ -596,6 +596,11 @@ fb5_groups %>% summarise(n = n(),
 fb5_groups %>% summarise(n = n(),
                          .by = fb_o2_groups) %>% 
   mutate(ers_perc = round(n / sum(n) * 100)) %>% 
+  full_join(tibble(fb_o2_groups = c("norm", "enth", "dis"),
+                   ers_perc_ = 0),
+            join_by(fb_o2_groups)) %>% 
+  mutate(ers_perc = ifelse(is.na(ers_perc), ers_perc_, ers_perc)) %>% 
+  select(-n, -ers_perc_) %>% 
   pivot_wider(names_from = fb_o2_groups,
               values_from = ers_perc) %>% 
   transmute(ers = enth - dis) %>% 
@@ -604,6 +609,11 @@ fb5_groups %>% summarise(n = n(),
 fb5_groups %>% summarise(n = n(),
                          .by = fb_o4_groups) %>% 
   mutate(nps_perc = round(n / sum(n) * 100)) %>% 
+  full_join(tibble(fb_o4_groups = c("prom", "neut", "det"),
+                   nps_perc_ = 0),
+            join_by(fb_o4_groups)) %>% 
+  mutate(nps_perc = ifelse(is.na(nps_perc), nps_perc_, nps_perc)) %>% 
+  select(-n, -nps_perc_) %>% 
   pivot_wider(names_from = fb_o4_groups,
               values_from = nps_perc) %>% 
   transmute(nps = prom - det) %>% 
