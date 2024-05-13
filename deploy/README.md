@@ -3,17 +3,17 @@
 The main script is `run.sh`. To deploy with default mode `update`, run command below:
 
 ```
-bash deploy/run.sh
+deploy/run.sh
 ```
 
 To reset `docs` directory, run
 
 ```
-bash deploy/run.sh reset
+deploy/run.sh reset
 ```
 
-To render all `.qmd` files defore deploy, run
+To render all `.qmd` files before deploy, run
 
 ```
-bash deploy/run.sh render
+deploy/run.sh render
 ```
