@@ -251,6 +251,14 @@ read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOV
 
 ## F project
 
+read_sheet("https://docs.google.com/spreadsheets/d/1mNT6A3qJTnS5EXQJg6MKFNinRqOVmrGErMZdrfsN9To/edit?usp=sharing",
+           sheet = "F", col_types = "c") %>% 
+  anti_join(journal %>% 
+              select(Stream, ID) %>% 
+              filter(Stream == "test"),
+            join_by(ID)
+  ) -> f_journal
+
 ```
 
 ### YouTube
@@ -584,7 +592,7 @@ fb5 <- read_sheet("https://docs.google.com/spreadsheets/d/1mttm7MFNfpopTqAj6KDmL
 fb5 %>% 
   select(fb_o1, fb_o2, fb_o4) %>% 
   mutate(fb_o1_groups = ifelse(fb_o1 >= 6, "good", "bad"),
-         fb_o2_groups = ifelse(fb_o2 >= 9, "enth", ifelse(fb_o2 <= 6, "dis", "norm")),
+         fb_o2_groups = ifelse(fb_o2 >= 8, "enth", ifelse(fb_o2 <= 5, "dis", "norm")),
          fb_o4_groups = ifelse(fb_o4 >= 9, "prom", ifelse(fb_o4 <= 6, "det", "neut"))) -> fb5_groups
 
 fb5_groups %>% pull(fb_o1) %>% mean() %>% round() %>% paste0(" / 10") -> csi
@@ -3665,6 +3673,30 @@ j_forms %>% ggplotly()
 
 ## Row
 
+```{r j-total-score}
+j_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, all_of(paste0("K", 1:9))) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  summarise(total_score = sum(value),
+            .by = ID) -> j_total_score
+
+j_total_score %>% 
+  summarise(n = n(),
+            .by = total_score) %>% 
+  ggplot(aes(total_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = seq(0, 17, .5)) +
+  labs(x = "Количество",
+       y = "Балл",
+       title = "J // Распределение суммарного балла за проект") -> j_total_score_graph
+
+j_total_score_graph %>% ggplotly()
+```
+
+## Row
+
 ```{r j-criteria}
 tibble(K1 = 2,
        K2 = 1,
@@ -3723,4 +3755,108 @@ j_difficulty %>% ggplotly()
 
 # F // Итоговый проект {#f}
 
+## Row
 
+```{r f-sent}
+f_journal %>% 
+  select(ID, `Не сдано`) %>% 
+  summarise(n = n(),
+            .by = `Не сдано`) %>% 
+  mutate(p = round(n / sum(n) * 100, 2)) %>% 
+  ggplot(aes(`Не сдано`, n)) +
+  geom_col() +
+  geom_text(aes(y = n - 1,
+                label = p %>% paste0("%")),
+            color = "white") +
+  scale_x_discrete(labels = c(`FALSE` = "Да", `TRUE` = "Нет")) +
+  labs(x = "Сдано",
+       y = "Количество",
+       title = "F // Сдача проекта") -> f_sent
+
+f_sent %>% ggplotly()
+```
+
+## Row
+
+```{r f-total-score}
+f_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, matches("^F\\d_K\\d$")) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  summarise(total_score = sum(value),
+            .by = ID) -> f_total_score
+
+f_total_score %>% 
+  summarise(n = n(),
+            .by = total_score) %>% 
+  ggplot(aes(total_score, n)) +
+  geom_col() +
+  scale_x_continuous(breaks = seq(0, 20, .5)) +
+  labs(x = "Количество",
+       y = "Балл",
+       title = "F // Распределение суммарного балла за проект") -> f_total_score_graph
+
+f_total_score_graph %>% ggplotly()
+```
+
+## Row
+
+```{r f-criteria}
+tibble(F1_K1 = 3,
+       F1_K2 = 2,
+       F1_K3 = 3,
+       F1_K4 = 2,
+       F2_K1 = 2,
+       F2_K2 = 2,
+       F2_K3 = 2,
+       F2_K4 = 2,
+       F2_K5 = 2) %>% 
+  pivot_longer(cols = everything()) -> f_criteria_max
+
+f_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, matches("^F\\d_K\\d$")) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  summarise(mean = mean(value),
+            .by = name) %>% 
+  full_join(f_criteria_max,
+            join_by(name)) %>% 
+  mutate(difficulty = mean / value) -> f_criteria_difficulty
+
+f_journal %>% 
+  filter(TOTAL != "NS") %>% 
+  select(ID, matches("^F\\d_K\\d$")) %>% 
+  pivot_longer(cols = -ID) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  separate(name, into = c("stage", "criterion"), sep = "_") %>% 
+  ggplot(aes(criterion, value)) +
+  geom_point(position = position_jitter(width = .2, height = 0),
+             alpha = .3) +
+  geom_point(data = f_criteria_difficulty %>% separate(name, into = c("stage", "criterion"), sep = "_"),
+             aes(criterion, mean),
+             color = "red3", size = 3) +
+  facet_wrap(~ stage, ncol = 1, scales = "free") +
+  labs(x = "Критерий",
+       y = "Балл",
+       title = "F // Распределение баллов по критериям") -> f_criteria
+
+f_criteria %>% ggplotly()
+```
+
+## Row
+
+```{r f-difficulty}
+f_criteria_difficulty %>% 
+  separate(name, into = c("stage", "criterion"), sep = "_") %>% 
+  ggplot(aes(criterion, difficulty)) +
+  geom_hline(yintercept = c(0.05, 0.95), linetype = "dashed") +
+  geom_point() +
+  facet_wrap(~ stage, ncol = 1, scales = "free") +
+  labs(x = "Критерий",
+       y = "Балл",
+       title = "F // Трудность критериев") -> f_difficulty
+
+f_difficulty %>% ggplotly()
+```
