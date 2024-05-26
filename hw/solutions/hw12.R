@@ -24,7 +24,8 @@ GGally::ggpairs(pisa %>% select(-Country))
 
 # 2
 ## a
-gam1 <- gam(Overall ~ s(Interest) + s(Support) + s(Income) + s(Health), data = pisa)
+gam1 <- gam(Overall ~ s(Interest) + s(Support) + s(Income) + s(Health), 
+            data = pisa)
 
 ## b
 gam0 <- gam(Overall ~ 1, data = pisa)
@@ -37,14 +38,16 @@ anova(gam0, gam1, test = "Chisq")
 summary(gam1)
 
 ## b
-gam2 <- gam(Overall ~ s(Income) + s(Interest) + Support + Health, data = pisa)
+gam2 <- gam(Overall ~ s(Income) + s(Interest) + Support + Health, 
+            data = pisa)
 anova(gam1, gam2, test = "Chisq")
 summary(gam2)
 
 
 # 4
 ## a
-lm2 <- lm(Overall ~ Interest + Income + Support + Health, data = pisa)
+lm2 <- lm(Overall ~ Interest + Income + Support + Health, 
+          data = pisa)
 summary(lm2)
 
 ## b

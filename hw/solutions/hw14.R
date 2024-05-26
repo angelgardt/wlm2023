@@ -9,7 +9,7 @@ library(cluster)
 
 # 1
 ## a
-emp <- read_csv("../data/hw14/emp.csv")
+emp <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw14/emp.csv")
 str(emp)
 is.na(emp) %>% sum()
 

@@ -8,7 +8,7 @@ library(lme4)
 library(lmerTest)
 
 # 1
-laptops <- read_csv("https://raw.githubusercontent.com/angelgardt/da-2023-ranepa/master/data/laptop_price.csv")
+laptops <- read_csv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/data/hw13/laptop_price.csv")
 str(laptops)
 
 laptops %>% 
@@ -19,6 +19,7 @@ laptops %>%
            str_remove("kg") %>% 
            as.numeric()
          ) -> laptops
+str(laptops)
 
 # 2
 
@@ -31,7 +32,7 @@ model1 <- lmer(Price_euros ~ Inches + (1|Company), laptops)
 model0 <- lmer(Price_euros ~ 1 + (1|Company), laptops)
 anova(model0, model1, test = "Chi")
 summary(model1)
-anova(model1)
+anova(model1, test = "Chi")
 
 # 5
 # laptops$Ram %>% unique()
