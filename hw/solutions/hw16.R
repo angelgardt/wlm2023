@@ -119,22 +119,3 @@ fitmeasures(model3, c("CFI", "TLI", "SRMR", "RMSEA"))
 anova(model1, model2)
 anova(model1, model3)
 anova(model2, model3)
-
-
-
-# ADDITIONAL
-
-# 1
-
-
-# 2
-
-
-# 3
-
-
-# 4
-
-
-# 5
-

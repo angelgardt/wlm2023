@@ -111,22 +111,3 @@ factanal(bffm_q, factors = 9)
 # 10
 factanal(bffm_q, factors = 5, rotation = "promax")
 factanal(bffm_q, factors = 5, rotation = "oblimin")
-
-
-
-# ADDITIONAL
-
-# 1
-
-
-# 2
-
-
-# 3
-
-
-# 4
-
-
-# 5
-
