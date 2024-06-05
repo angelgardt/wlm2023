@@ -76,9 +76,6 @@ fitmeasures(model2, c("CFI", "TLI", "SRMR", "RMSEA"))
 
 # 8
 mis2 <- modificationindices(model2) %>% arrange(desc(mi))
-
-choose(5, 2)
-
 mis2 %>% 
   filter(lhs != rhs &
            !str_detect(lhs, "\\d$") &
