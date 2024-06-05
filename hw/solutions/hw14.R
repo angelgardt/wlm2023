@@ -108,11 +108,11 @@ d2 <- dist(empq2)
 
 
 # 3
-fviz_nbclust(x = empq2, FUNcluster = fanny, diss = d2, k.max = 10, memb.exp = 1.5)
+fviz_nbclust(x = empq2, FUNcluster = fanny, diss = d2, k.max = 10, memb.exp = 1.4)
 
 
 # 4
-fuzzy22 <- fanny(x = d2, k = 2, memb.exp = 1.5)
+fuzzy22 <- fanny(x = d2, k = 4, memb.exp = 1.5)
 fviz_cluster(object = list(data = d2,
                            clusters = fuzzy22$clustering),
              geom = "point")
