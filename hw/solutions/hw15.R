@@ -15,9 +15,6 @@ bffm <- read_tsv("https://raw.githubusercontent.com/angelgardt/wlm2023/master/da
 str(bffm)
 
 bffm %>% 
-  # select(matches("^[[:upper:]]{3}\\d+$")) %>% 
-  # colnames()
-  # sapply(unique)
   mutate(across(matches("^[[:upper:]]{3}\\d+$"), as.numeric)) %>% 
   drop_na() -> bffm
 
@@ -29,8 +26,8 @@ nrow(bffm)
 bffm %>% 
   select(matches("^[[:upper:]]{3}\\d+$")) -> bffm_q
 
-bffm %>% 
-  select(matches("^[[:upper:]]{3}\\d+$")) %>% colnames() -> cols
+# bffm %>% 
+#   select(matches("^[[:upper:]]{3}\\d+$")) %>% colnames() -> cols
 
 
 ## b
