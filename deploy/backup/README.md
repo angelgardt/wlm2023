@@ -1,16 +1,17 @@
 # Last deployment info
 
-**Date:** Mon 2024-08-19 14:58
+**Date:** Mon 2024-08-19 21:04
 
 **Mode:** render
 
 ## `docs` structure
 
 ```
-total 8
-drwxr-xr-x@  3 antonangelgardt  staff   96 Aug 19 14:53 .
-drwxr-xr-x  25 antonangelgardt  staff  800 Aug 19 14:53 ..
--rw-r--r--@  1 antonangelgardt  staff   99 Aug 19 14:58 README.md
+docs:
+total 12
+drwxrwxr-x  2 nglgrdt nglgrdt 4096 авг 19 20:57 .
+drwxrwxr-x 19 nglgrdt nglgrdt 4096 авг 19 20:57 ..
+-rw-rw-r--  1 nglgrdt nglgrdt   99 авг 19 21:04 README.md
 ```
 ## Log
 
@@ -370,10 +371,10 @@ Output created: _book/index.html
 
 proj rendered
 hub/_book/ removed
-[1/4] index.qmd
-[2/4] what-is-it.qmd
+[1/4] what-is-it.qmd
+[2/4] how-is-it-made.qmd
 [3/4] how-to-support.qmd
-[4/4] how-is-it-made.qmd
+[4/4] index.qmd
 
 Output created: _book/index.html
 
@@ -391,9 +392,15 @@ RUN SLIDES RENDERER
 html files copied
 _files folders copied
 pics folder copied
+
+
+processing file: s14.qmd
+  |                                                         |                                                 |   0%  |                                                         |....                                             |   8%                       |                                                         |........                                         |  15% [favicon-loader]      |                                                         |...........                                      |  23%                       |                                                         |...............                                  |  31% [opts]                |                                                         |...................                              |  38%                       |                                                         |.......................                          |  46% [pkgs]                |                                                         |..........................                       |  54%                       |                                                         |..............................                   |  62% [geomprob-square-14]  |                                                         |..................................               |  69%                       |                                                         |......................................           |  77% [geomprob-dots]       |                                                         |.........................................        |  85%                       |                                                         |.............................................    |  92% [geomprob-incircle]   |                                                         |.................................................| 100%                                                                                                                                    
+output file: s14.knit.md
+
 pandoc 
   to: revealjs
-  output-file: s4.html
+  output-file: s14.html
   standalone: true
   wrap: none
   default-image-extension: png
@@ -421,7 +428,7 @@ metadata
   pdfSeparateFragments: false
   lang: en
   auto-stretch: true
-  title: L4 // Теория измерений
+  title: L14 // Анализ главных компонент. Эксплораторный факторный анализ
   author: Антон Ангельгардт
   logo: pics/logo.png
   footer: WLM 2023
@@ -429,7 +436,7 @@ metadata
   scrollable: true
   smaller: false
   
-Output created: s4.html
+Output created: s14.html
 
 
 
@@ -479,13 +486,13 @@ Output created: s11.html
 
 
 
-processing file: s10.qmd
-  |                                                            |                                                    |   0%  |                                                            |....                                                |   8%                    |                                                            |........                                            |  15% [favicon-loader]   |                                                            |............                                        |  23%                    |                                                            |................                                    |  31% [opts]             |                                                            |....................                                |  38%                    |                                                            |........................                            |  46% [pkgs]             |                                                            |............................                        |  54%                    |                                                            |................................                    |  62% [unnamed-chunk-1]  |                                                            |....................................                |  69%                    |                                                            |........................................            |  77% [unnamed-chunk-2]  |                                                            |............................................        |  85%                    |                                                            |................................................    |  92% [unnamed-chunk-3]  |                                                            |....................................................| 100%                                                                                                                              
-output file: s10.knit.md
+processing file: s13.qmd
+  |                                                             |                                                     |   0%  |                                                             |........                                             |  14%                   |                                                             |...............                                      |  29% [favicon-loader]  |                                                             |.......................                              |  43%                   |                                                             |..............................                       |  57% [opts]            |                                                             |......................................               |  71%                   |                                                             |.............................................        |  86% [pkgs]            |                                                             |.....................................................| 100%                                                                                                                            
+output file: s13.knit.md
 
 pandoc 
   to: revealjs
-  output-file: s10.html
+  output-file: s13.html
   standalone: true
   wrap: none
   default-image-extension: png
@@ -513,7 +520,7 @@ metadata
   pdfSeparateFragments: false
   lang: en
   auto-stretch: true
-  title: L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия
+  title: L13 // Кластерный анализ
   author: Антон Ангельгардт
   logo: pics/logo.png
   footer: WLM 2023
@@ -521,99 +528,7 @@ metadata
   scrollable: true
   smaller: false
   
-Output created: s10.html
-
-
-
-processing file: s5.qmd
-  |                                                       |                                               |   0%  |                                                       |.                                              |   2%                         |                                                       |..                                             |   4% [favicon-loader]        |                                                       |...                                            |   7%                         |                                                       |....                                           |   9% [opts]                  |                                                       |.....                                          |  11%                         |                                                       |......                                         |  13% [pkgs]                  |                                                       |.......                                        |  16%                         |                                                       |........                                       |  18% [simple-random-pop]     |                                                       |.........                                      |  20%                         |                                                       |..........                                     |  22% [simple-random-sample]  |                                                       |...........                                    |  24%                         |                                                       |.............                                  |  27% [strat-pop]             |                                                       |..............                                 |  29%                         |                                                       |...............                                |  31% [strat-sample]          |                                                       |................                               |  33%                         |                                                       |.................                              |  36% [strat-pop-strata]      |                                                       |..................                             |  38%                         |                                                       |...................                            |  40% [cluster-pop]           |                                                       |....................                           |  42%                         |                                                       |.....................                          |  44% [cluster-clusters]      |                                                       |......................                         |  47%                         |                                                       |.......................                        |  49% [cluster-sample]        |                                                       |........................                       |  51%                         |                                                       |.........................                      |  53% [geomprob-square]       |                                                       |..........................                     |  56%                         |                                                       |...........................                    |  58% [geomprob-dots]         |                                                       |............................                   |  60%                         |                                                       |.............................                  |  62% [geomprob-incircle]     |                                                       |..............................                 |  64%                         |                                                       |...............................                |  67% [pmf-dice]              |                                                       |................................               |  69%                         |                                                       |.................................              |  71% [cfd-dice]              |                                                       |..................................             |  73%                         |                                                       |....................................           |  76% [pmf-dice-repeat]       |                                                       |.....................................          |  78%                         |                                                       |......................................         |  80% [pdf-segment-nolabs]    |                                                       |.......................................        |  82%                         |                                                       |........................................       |  84% [pmf-vs-pdf]            |                                                       |.........................................      |  87%                         |                                                       |..........................................     |  89% [pdf-inetrvals]         |                                                       |...........................................    |  91%                         |                                                       |............................................   |  93% [norm-dist]             |                                                       |.............................................  |  96%                         |                                                       |.............................................. |  98% [unnamed-chunk-1]       |                                                       |...............................................| 100%                                                                                                                                        
-output file: s5.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s5.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L5 // Введение в статистику. Случайный эксперимент и случайные величины
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s5.html
-
-
-
-processing file: s7.qmd
-  |                               |                       |   0%  |                               |                       |   1%                                                [favicon-loader]                                |                               |                       |   2%                                                 |                               |.                      |   3% [opts]                                                                                         |                               |.                      |   4% [andan-desc-pkgs]                               |                               |.                      |   5%                                                 |                               |.                      |   6% [mode-pmf]                                                                                     |                               |..                     |   7% [mode-continuous-data]                          |                               |..                     |   8%                                                [mode-continuous-freqs]                         |                               |..                     |   9%                                                 |                               |..                     |  10% [mode-continuous-mode]                                                                         |                               |...                    |  11% [mode-norm-mode]                                |                               |...                    |  12%                                                 |                               |...                    |  13% [mode-binom-mode]                                                                              |                               |...                    |  14% [mode-poiss-mode]                               |                               |...                    |  15%                                                 |                               |....                   |  15% [mode-norm-sample]                              |                               |....                   |  16%                                                 |                               |....                   |  17% [mode-norm]                                                                                    |                               |....                   |  18% [mode-bimodal]                                  |                               |....                   |  19%                                                 |                               |.....                  |  20% [mode-polymodal]                                                                               |                               |.....                  |  21% [mode-bimodal-struct]                           |                               |.....                  |  22%                                                [median-norm]                                   |                               |.....                  |  23%                                                 |                               |.....                  |  24% [median-left-skew]                              |                               |......                 |  24%                                                 |                               |......                 |  25% [median-right-skew]                             |                               |......                 |  26%                                                 |                               |......                 |  27% [median-bimodal]                                                                               |                               |......                 |  28% [creating_tibble_for_feature_vis_1]             |                               |.......                |  29%                                                [mean_feature_1]                                |                               |.......                |  30%                                                 |                               |.......                |  31% [creating_tibble_for_feature_vis_2]                                                            |                               |.......                |  32% [mean_feature_2]                                |                               |........               |  33%                                                 |                               |........               |  34% [df_polygons]                                                                                  |                               |........               |  35% [zero_deviation_sum]                            |                               |........               |  36%                                                [central_tendency_sampling]                     |                               |.........              |  37%                                                 |                               |.........              |  38% [central_tendency_symm]                                                                        |                               |.........              |  39% [central_tendency_asymm_right]                  |                               |.........              |  40%                                                 |                               |.........              |  41% [central_tendency_asymm_left]                                                                  |                               |..........             |  42% [marks_creating]                                |                               |..........             |  43%                                                [marks_vector]                                  |                               |..........             |  44%                                                 |                               |..........             |  45% [unnamed-chunk-1]                                                                              |                               |...........            |  46% [marks_creating_2]                              |                               |...........            |  47%                                                 |                               |...........            |  48% [marks_vector_2]                                                                               |                               |...........            |  49% [unnamed-chunk-2]                               |                               |...........            |  50%                                                 |                               |............           |  50% [central_tendency_bimodal]                      |                               |............           |  51%                                                 |                               |............           |  52% [distributions_with_the_same_means_generation]                                                 |                               |............           |  53% [creating_labeller]                             |                               |............           |  54%                                                 |                               |.............          |  55% [distributions_with_the_same_means_vis]                                                        |                               |.............          |  56% [distributions_with_the_same_means_mean]        |                               |.............          |  57%                                                [anat_marks_gen]                                |                               |.............          |  58%                                                 |                               |..............         |  59% [anat_marks]                                                                                   |                               |..............         |  60% [min_max_anat_marks]                            |                               |..............         |  61%                                                 |                               |..............         |  62% [intro_to_psy_gen]                                                                             |                               |..............         |  63% [intro_to_psy_marks]                            |                               |...............        |  64%                                                [range_problem]                                 |                               |...............        |  65%                                                 |                               |...............        |  66% [creating_tibble_for_feature_sd_vis_1]                                                         |                               |...............        |  67% [sd_feature_1]                                  |                               |................       |  68%                                                 |                               |................       |  69% [creating_tibble_for_feature_vis_4]                                                            |                               |................       |  70% [sd_feature_2]                                  |                               |................       |  71%                                                [taia_data]                                     |                               |.................      |  72%                                                 |                               |.................      |  73% [taia_score_vis]                                                                               |                               |.................      |  74% [fifth_vis]                                     |                               |.................      |  75%                                                 |                               |.................      |  76% [68_vis]                                        |                               |..................     |  76%                                                 |                               |..................     |  77% [99_vis]                                        |                               |..................     |  78%                                                [quartiles_vis]                                 |                               |..................     |  79%                                                 |                               |..................     |  80% [iqr_vis]                                                                                      |                               |...................    |  81% [boxplot]                                       |                               |...................    |  82%                                                 |                               |...................    |  83% [boxplot_annotated]                                                                            |                               |...................    |  84% [unnamed-chunk-3]                               |                               |...................    |  85%                                                 |                               |....................   |  85% [unnamed-chunk-4]                               |                               |....................   |  86%                                                 |                               |....................   |  87% [unnamed-chunk-5]                                                                              |                               |....................   |  88% [unnamed-chunk-6]                               |                               |....................   |  89%                                                 |                               |.....................  |  90% [unnamed-chunk-7]                                                                              |                               |.....................  |  91% [unnamed-chunk-8]                               |                               |.....................  |  92%                                                [corr-data]                                     |                               |.....................  |  93%                                                 |                               |...................... |  94% [unnamed-chunk-9]                                                                              |                               |...................... |  95% [unnamed-chunk-10]                              |                               |...................... |  96%                                                 |                               |...................... |  97% [unnamed-chunk-11]                                                                             |                               |.......................|  98% [unnamed-chunk-12]                              |                               |.......................|  99%                                                [unnamed-chunk-13]                              |                               |.......................| 100%                                                                                                                                                                                        
-output file: s7.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s7.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L7 // Описательные статистики. Корреляционный анализ
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s7.html
+Output created: s13.html
 
 
 
@@ -663,13 +578,13 @@ Output created: s12.html
 
 
 
-processing file: s13.qmd
-  |                                                             |                                                     |   0%  |                                                             |........                                             |  14%                   |                                                             |...............                                      |  29% [favicon-loader]  |                                                             |.......................                              |  43%                   |                                                             |..............................                       |  57% [opts]            |                                                             |......................................               |  71%                   |                                                             |.............................................        |  86% [pkgs]            |                                                             |.....................................................| 100%                                                                                                                            
-output file: s13.knit.md
+processing file: s15.qmd
+  |                                                             |                                                     |   0%  |                                                             |...........                                          |  20%                   |                                                             |.....................                                |  40% [favicon-loader]  |                                                             |................................                     |  60%                   |                                                             |..........................................           |  80% [opts]            |                                                             |.....................................................| 100%                                                                                                                            
+output file: s15.knit.md
 
 pandoc 
   to: revealjs
-  output-file: s13.html
+  output-file: s15.html
   standalone: true
   wrap: none
   default-image-extension: png
@@ -697,7 +612,7 @@ metadata
   pdfSeparateFragments: false
   lang: en
   auto-stretch: true
-  title: L13 // Кластерный анализ
+  title: L15 // Конфирматорный факторный анализ
   author: Антон Ангельгардт
   logo: pics/logo.png
   footer: WLM 2023
@@ -705,53 +620,7 @@ metadata
   scrollable: true
   smaller: false
   
-Output created: s13.html
-
-
-
-processing file: s6.qmd
-  |                                                            |                                                    |   0%  |                                                            |..                                                  |   4%                    |                                                            |....                                                |   7% [opts]             |                                                            |......                                              |  11%                    |                                                            |........                                            |  15% [pkgs]             |                                                            |..........                                          |  19%                    |                                                            |............                                        |  22% [favicon-loader]   |                                                            |.............                                       |  26%                    |                                                            |...............                                     |  30% [unnamed-chunk-1]  |                                                            |.................                                   |  33%                    |                                                            |...................                                 |  37% [unnamed-chunk-2]  |                                                            |.....................                               |  41%                    |                                                            |.......................                             |  44% [unnamed-chunk-3]  |                                                            |.........................                           |  48%                    |                                                            |...........................                         |  52% [unnamed-chunk-4]  |                                                            |.............................                       |  56%                    |                                                            |...............................                     |  59% [unnamed-chunk-5]  |                                                            |.................................                   |  63%                    |                                                            |...................................                 |  67% [unnamed-chunk-6]  |                                                            |.....................................               |  70%                    |                                                            |.......................................             |  74% [unnamed-chunk-7]  |                                                            |........................................            |  78%                    |                                                            |..........................................          |  81% [unnamed-chunk-8]  |                                                            |............................................        |  85%                    |                                                            |..............................................      |  89% [unnamed-chunk-9]  |                                                            |................................................    |  93%                    |                                                            |..................................................  |  96% [alpha-raise]      |                                                            |....................................................| 100%                                                                                                                              
-output file: s6.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s6.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s6.html
+Output created: s15.html
 
 
 
@@ -808,236 +677,6 @@ Output created: s2.html
 
 
 
-processing file: s3.qmd
-  |                                                           |                                                   |   0%  |                                                           |..                                                 |   3%                     |                                                           |....                                               |   7% [favicon-loader]    |                                                           |.....                                              |  10%                     |                                                           |.......                                            |  14% [pkgs]              |                                                           |.........                                          |  17%                     |                                                           |...........                                        |  21% [discrete-func]     |                                                           |............                                       |  24%                     |                                                           |..............                                     |  28% [func-graphs]       |                                                           |................                                   |  31%                     |                                                           |..................                                 |  34% [deriv1]            |                                                           |...................                                |  38%                     |                                                           |.....................                              |  41% [deriv2]            |                                                           |.......................                            |  45%                     |                                                           |.........................                          |  48% [deriv3]            |                                                           |..........................                         |  52%                     |                                                           |............................                       |  55% [deriv4]            |                                                           |..............................                     |  59%                     |                                                           |................................                   |  62% [deriv-graph]       |                                                           |.................................                  |  66%                     |                                                           |...................................                |  69% [2d-graph]          |                                                           |.....................................              |  72%                     |                                                           |.......................................            |  76% [unnamed-chunk-1]   |                                                           |........................................           |  79%                     |                                                           |..........................................         |  83% [integral-plot]     |                                                           |............................................       |  86%                     |                                                           |..............................................     |  90% [integral-plot01]   |                                                           |...............................................    |  93%                     |                                                           |.................................................  |  97% [integral-plot005]  |                                                           |...................................................| 100%                                                                                                                                
-output file: s3.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s3.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L3 // Математика для анализа данных
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s3.html
-
-
-
-processing file: s1.qmd
-  |                                                          |                                                  |   0%  |                                                          |                                                  |   1%                      |                                                          |.                                                 |   2% [favicon-loader]     |                                                          |.                                                 |   3%                      |                                                          |..                                                |   4% [opts]               |                                                          |..                                                |   5%                      |                                                          |...                                               |   6% [pkgs]               |                                                          |...                                               |   7%                      |                                                          |....                                              |   8% [maths1]             |                                                          |....                                              |   9%                      |                                                          |.....                                             |  10% [maths2]             |                                                          |.....                                             |  11%                      |                                                          |......                                            |  12% [funs1]              |                                                          |......                                            |  13%                      |                                                          |.......                                           |  14% [funs2]              |                                                          |.......                                           |  15%                      |                                                          |........                                          |  16% [funs3]              |                                                          |........                                          |  17%                      |                                                          |.........                                         |  17% [logic1]             |                                                          |.........                                         |  18%                      |                                                          |..........                                        |  19% [logic2]             |                                                          |..........                                        |  20%                      |                                                          |...........                                       |  21% [unnamed-chunk-1]    |                                                          |...........                                       |  22%                      |                                                          |............                                      |  23% [unnamed-chunk-2]    |                                                          |............                                      |  24%                      |                                                          |.............                                     |  25% [unnamed-chunk-3]    |                                                          |.............                                     |  26%                      |                                                          |..............                                    |  27% [unnamed-chunk-4]    |                                                          |..............                                    |  28%                      |                                                          |...............                                   |  29% [unnamed-chunk-5]    |                                                          |...............                                   |  30%                      |                                                          |................                                  |  31% [unnamed-chunk-6]    |                                                          |................                                  |  32%                      |                                                          |.................                                 |  33% [unnamed-chunk-7]    |                                                          |.................                                 |  34%                      |                                                          |.................                                 |  35% [unnamed-chunk-8]    |                                                          |..................                                |  36%                      |                                                          |..................                                |  37% [unnamed-chunk-9]    |                                                          |...................                               |  38%                      |                                                          |...................                               |  39% [unnamed-chunk-10]   |                                                          |....................                              |  40%                      |                                                          |....................                              |  41% [vec-classic]        |                                                          |.....................                             |  42%                      |                                                          |.....................                             |  43% [vec-free]           |                                                          |......................                            |  44%                      |                                                          |......................                            |  45% [vec-remove-vector]  |                                                          |.......................                           |  46%                      |                                                          |.......................                           |  47% [vec-same]           |                                                          |........................                          |  48%                      |                                                          |........................                          |  49% [vec-types]          |                                                          |.........................                         |  50%                     [vec-typer-print]    |                                                          |..........................                        |  51%                      |                                                          |..........................                        |  52% [unnamed-chunk-11]   |                                                          |...........................                       |  53%                      |                                                          |...........................                       |  54% [unnamed-chunk-12]   |                                                          |............................                      |  55%                      |                                                          |............................                      |  56% [unnamed-chunk-13]   |                                                          |.............................                     |  57%                      |                                                          |.............................                     |  58% [unnamed-chunk-14]   |                                                          |..............................                    |  59%                      |                                                          |..............................                    |  60% [unnamed-chunk-15]   |                                                          |...............................                   |  61%                      |                                                          |...............................                   |  62% [unnamed-chunk-16]   |                                                          |................................                  |  63%                      |                                                          |................................                  |  64% [unnamed-chunk-17]   |                                                          |.................................                 |  65%                      |                                                          |.................................                 |  66% [unnamed-chunk-18]   |                                                          |.................................                 |  67%                      |                                                          |..................................                |  68% [unnamed-chunk-19]   |                                                          |..................................                |  69%                      |                                                          |...................................               |  70% [unnamed-chunk-20]   |                                                          |...................................               |  71%                      |                                                          |....................................              |  72% [unnamed-chunk-21]   |                                                          |....................................              |  73%                      |                                                          |.....................................             |  74% [unnamed-chunk-22]   |                                                          |.....................................             |  75%                      |                                                          |......................................            |  76% [unnamed-chunk-23]   |                                                          |......................................            |  77%                      |                                                          |.......................................           |  78% [unnamed-chunk-24]   |                                                          |.......................................           |  79%                      |                                                          |........................................          |  80% [unnamed-chunk-25]   |                                                          |........................................          |  81%                      |                                                          |.........................................         |  82% [unnamed-chunk-26]   |                                                          |.........................................         |  83%                      |                                                          |..........................................        |  83% [unnamed-chunk-27]   |                                                          |..........................................        |  84%                      |                                                          |...........................................       |  85% [unnamed-chunk-28]   |                                                          |...........................................       |  86%                      |                                                          |............................................      |  87% [unnamed-chunk-29]   |                                                          |............................................      |  88%                      |                                                          |.............................................     |  89% [unnamed-chunk-30]   |                                                          |.............................................     |  90%                      |                                                          |..............................................    |  91% [unnamed-chunk-31]   |                                                          |..............................................    |  92%                      |                                                          |...............................................   |  93% [unnamed-chunk-32]   |                                                          |...............................................   |  94%                      |                                                          |................................................  |  95% [unnamed-chunk-33]   |                                                          |................................................  |  96%                      |                                                          |................................................. |  97% [unnamed-chunk-34]   |                                                          |................................................. |  98%                      |                                                          |..................................................|  99% [unnamed-chunk-35]   |                                                          |..................................................| 100%                                                                                                                                  
-output file: s1.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s1.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L1 // Основы R. Типы и структуры данных. Функции и управляющие конструкции
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s1.html
-
-
-
-processing file: s14.qmd
-  |                                                         |                                                 |   0%  |                                                         |....                                             |   8%                       |                                                         |........                                         |  15% [favicon-loader]      |                                                         |...........                                      |  23%                       |                                                         |...............                                  |  31% [opts]                |                                                         |...................                              |  38%                       |                                                         |.......................                          |  46% [pkgs]                |                                                         |..........................                       |  54%                       |                                                         |..............................                   |  62% [geomprob-square-14]  |                                                         |..................................               |  69%                       |                                                         |......................................           |  77% [geomprob-dots]       |                                                         |.........................................        |  85%                       |                                                         |.............................................    |  92% [geomprob-incircle]   |                                                         |.................................................| 100%                                                                                                                                    
-output file: s14.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s14.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L14 // Анализ главных компонент. Эксплораторный факторный анализ
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s14.html
-
-
-
-processing file: s15.qmd
-  |                                                             |                                                     |   0%  |                                                             |...........                                          |  20%                   |                                                             |.....................                                |  40% [favicon-loader]  |                                                             |................................                     |  60%                   |                                                             |..........................................           |  80% [opts]            |                                                             |.....................................................| 100%                                                                                                                            
-output file: s15.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: s15.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: L15 // Конфирматорный факторный анализ
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: s15.html
-
-
-
-processing file: template.qmd
-  |                                                            |                                                    |   0%  |                                                            |.......                                             |  14%                    |                                                            |...............                                     |  29% [favicon-loader]   |                                                            |......................                              |  43%                    |                                                            |..............................                      |  57% [unnamed-chunk-1]  |                                                            |.....................................               |  71%                    |                                                            |.............................................       |  86% [plot]             |                                                            |....................................................| 100%                                                                                                                              
-output file: template.knit.md
-
-pandoc 
-  to: revealjs
-  output-file: template.html
-  standalone: true
-  wrap: none
-  default-image-extension: png
-  html-math-method:
-    method: mathjax
-    url: >-
-      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
-  slide-level: 2
-  
-metadata
-  link-citations: true
-  width: 1050
-  height: 700
-  margin: 0.1
-  center: false
-  navigationMode: linear
-  controlsLayout: edges
-  controlsTutorial: false
-  hash: true
-  history: true
-  hashOneBasedIndex: false
-  fragmentInURL: false
-  transition: fade
-  backgroundTransition: none
-  pdfSeparateFragments: false
-  lang: en
-  auto-stretch: true
-  title: Заголовок презентации
-  author: Антон Ангельгардт
-  logo: pics/logo.png
-  footer: WLM 2023
-  theme: style.scss
-  scrollable: true
-  smaller: false
-  
-Output created: template.html
-
-
-
 processing file: s8.qmd
   |                                                           |                                                   |   0%  |                                                           |.                                                  |   2%                     |                                                           |..                                                 |   4% [favicon-loader]    |                                                           |...                                                |   6%                     |                                                           |....                                               |   9% [opts]              |                                                           |.....                                              |  11%                     |                                                           |.......                                            |  13% [andan-desc-pkgs]   |                                                           |........                                           |  15%                     |                                                           |.........                                          |  17% [unnamed-chunk-1]   |                                                           |..........                                         |  19%                     |                                                           |...........                                        |  21% [unnamed-chunk-2]   |                                                           |............                                       |  23%                     |                                                           |.............                                      |  26% [unnamed-chunk-3]   |                                                           |..............                                     |  28%                     |                                                           |...............                                    |  30% [unnamed-chunk-4]   |                                                           |................                                   |  32%                     |                                                           |.................                                  |  34% [unnamed-chunk-5]   |                                                           |..................                                 |  36%                     |                                                           |....................                               |  38% [unnamed-chunk-6]   |                                                           |.....................                              |  40%                     |                                                           |......................                             |  43% [unnamed-chunk-7]   |                                                           |.......................                            |  45%                     |                                                           |........................                           |  47% [unnamed-chunk-8]   |                                                           |.........................                          |  49%                     |                                                           |..........................                         |  51% [unnamed-chunk-9]   |                                                           |...........................                        |  53%                     |                                                           |............................                       |  55% [unnamed-chunk-10]  |                                                           |.............................                      |  57%                     |                                                           |..............................                     |  60% [unnamed-chunk-11]  |                                                           |...............................                    |  62%                     |                                                           |.................................                  |  64% [unnamed-chunk-12]  |                                                           |..................................                 |  66%                     |                                                           |...................................                |  68% [unnamed-chunk-13]  |                                                           |....................................               |  70%                     |                                                           |.....................................              |  72% [unnamed-chunk-14]  |                                                           |......................................             |  74%                     |                                                           |.......................................            |  77% [unnamed-chunk-15]  |                                                           |........................................           |  79%                     |                                                           |.........................................          |  81% [unnamed-chunk-16]  |                                                           |..........................................         |  83%                     |                                                           |...........................................        |  85% [unnamed-chunk-17]  |                                                           |............................................       |  87%                     |                                                           |..............................................     |  89% [unnamed-chunk-18]  |                                                           |...............................................    |  91%                     |                                                           |................................................   |  94% [unnamed-chunk-19]  |                                                           |.................................................  |  96%                     |                                                           |.................................................. |  98% [unnamed-chunk-20]  |                                                           |...................................................| 100%                                                                                                                                
 output file: s8.knit.md
@@ -1081,6 +720,52 @@ metadata
   smaller: false
   
 Output created: s8.html
+
+
+
+processing file: s6.qmd
+  |                                                            |                                                    |   0%  |                                                            |..                                                  |   4%                    |                                                            |....                                                |   7% [opts]             |                                                            |......                                              |  11%                    |                                                            |........                                            |  15% [pkgs]             |                                                            |..........                                          |  19%                    |                                                            |............                                        |  22% [favicon-loader]   |                                                            |.............                                       |  26%                    |                                                            |...............                                     |  30% [unnamed-chunk-1]  |                                                            |.................                                   |  33%                    |                                                            |...................                                 |  37% [unnamed-chunk-2]  |                                                            |.....................                               |  41%                    |                                                            |.......................                             |  44% [unnamed-chunk-3]  |                                                            |.........................                           |  48%                    |                                                            |...........................                         |  52% [unnamed-chunk-4]  |                                                            |.............................                       |  56%                    |                                                            |...............................                     |  59% [unnamed-chunk-5]  |                                                            |.................................                   |  63%                    |                                                            |...................................                 |  67% [unnamed-chunk-6]  |                                                            |.....................................               |  70%                    |                                                            |.......................................             |  74% [unnamed-chunk-7]  |                                                            |........................................            |  78%                    |                                                            |..........................................          |  81% [unnamed-chunk-8]  |                                                            |............................................        |  85%                    |                                                            |..............................................      |  89% [unnamed-chunk-9]  |                                                            |................................................    |  93%                    |                                                            |..................................................  |  96% [alpha-raise]      |                                                            |....................................................| 100%                                                                                                                              
+output file: s6.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s6.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s6.html
 
 
 
@@ -1129,6 +814,322 @@ metadata
 Output created: s9.html
 
 
+
+processing file: s5.qmd
+  |                                                       |                                               |   0%  |                                                       |.                                              |   2%                         |                                                       |..                                             |   4% [favicon-loader]        |                                                       |...                                            |   7%                         |                                                       |....                                           |   9% [opts]                  |                                                       |.....                                          |  11%                         |                                                       |......                                         |  13% [pkgs]                  |                                                       |.......                                        |  16%                         |                                                       |........                                       |  18% [simple-random-pop]     |                                                       |.........                                      |  20%                         |                                                       |..........                                     |  22% [simple-random-sample]  |                                                       |...........                                    |  24%                         |                                                       |.............                                  |  27% [strat-pop]             |                                                       |..............                                 |  29%                         |                                                       |...............                                |  31% [strat-sample]          |                                                       |................                               |  33%                         |                                                       |.................                              |  36% [strat-pop-strata]      |                                                       |..................                             |  38%                         |                                                       |...................                            |  40% [cluster-pop]           |                                                       |....................                           |  42%                         |                                                       |.....................                          |  44% [cluster-clusters]      |                                                       |......................                         |  47%                         |                                                       |.......................                        |  49% [cluster-sample]        |                                                       |........................                       |  51%                         |                                                       |.........................                      |  53% [geomprob-square]       |                                                       |..........................                     |  56%                         |                                                       |...........................                    |  58% [geomprob-dots]         |                                                       |............................                   |  60%                         |                                                       |.............................                  |  62% [geomprob-incircle]     |                                                       |..............................                 |  64%                         |                                                       |...............................                |  67% [pmf-dice]              |                                                       |................................               |  69%                         |                                                       |.................................              |  71% [cfd-dice]              |                                                       |..................................             |  73%                         |                                                       |....................................           |  76% [pmf-dice-repeat]       |                                                       |.....................................          |  78%                         |                                                       |......................................         |  80% [pdf-segment-nolabs]    |                                                       |.......................................        |  82%                         |                                                       |........................................       |  84% [pmf-vs-pdf]            |                                                       |.........................................      |  87%                         |                                                       |..........................................     |  89% [pdf-inetrvals]         |                                                       |...........................................    |  91%                         |                                                       |............................................   |  93% [norm-dist]             |                                                       |.............................................  |  96%                         |                                                       |.............................................. |  98% [unnamed-chunk-1]       |                                                       |...............................................| 100%                                                                                                                                        
+output file: s5.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s5.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L5 // Введение в статистику. Случайный эксперимент и случайные величины
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s5.html
+
+
+
+processing file: template.qmd
+  |                                                            |                                                    |   0%  |                                                            |.......                                             |  14%                    |                                                            |...............                                     |  29% [favicon-loader]   |                                                            |......................                              |  43%                    |                                                            |..............................                      |  57% [unnamed-chunk-1]  |                                                            |.....................................               |  71%                    |                                                            |.............................................       |  86% [plot]             |                                                            |....................................................| 100%                                                                                                                              
+output file: template.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: template.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: Заголовок презентации
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: template.html
+
+pandoc 
+  to: revealjs
+  output-file: s4.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L4 // Теория измерений
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s4.html
+
+
+
+processing file: s10.qmd
+  |                                                            |                                                    |   0%  |                                                            |....                                                |   8%                    |                                                            |........                                            |  15% [favicon-loader]   |                                                            |............                                        |  23%                    |                                                            |................                                    |  31% [opts]             |                                                            |....................                                |  38%                    |                                                            |........................                            |  46% [pkgs]             |                                                            |............................                        |  54%                    |                                                            |................................                    |  62% [unnamed-chunk-1]  |                                                            |....................................                |  69%                    |                                                            |........................................            |  77% [unnamed-chunk-2]  |                                                            |............................................        |  85%                    |                                                            |................................................    |  92% [unnamed-chunk-3]  |                                                            |....................................................| 100%                                                                                                                              
+output file: s10.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s10.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s10.html
+
+
+
+processing file: s3.qmd
+  |                                                           |                                                   |   0%  |                                                           |..                                                 |   3%                     |                                                           |....                                               |   7% [favicon-loader]    |                                                           |.....                                              |  10%                     |                                                           |.......                                            |  14% [pkgs]              |                                                           |.........                                          |  17%                     |                                                           |...........                                        |  21% [discrete-func]     |                                                           |............                                       |  24%                     |                                                           |..............                                     |  28% [func-graphs]       |                                                           |................                                   |  31%                     |                                                           |..................                                 |  34% [deriv1]            |                                                           |...................                                |  38%                     |                                                           |.....................                              |  41% [deriv2]            |                                                           |.......................                            |  45%                     |                                                           |.........................                          |  48% [deriv3]            |                                                           |..........................                         |  52%                     |                                                           |............................                       |  55% [deriv4]            |                                                           |..............................                     |  59%                     |                                                           |................................                   |  62% [deriv-graph]       |                                                           |.................................                  |  66%                     |                                                           |...................................                |  69% [2d-graph]          |                                                           |.....................................              |  72%                     |                                                           |.......................................            |  76% [unnamed-chunk-1]   |                                                           |........................................           |  79%                     |                                                           |..........................................         |  83% [integral-plot]     |                                                           |............................................       |  86%                     |                                                           |..............................................     |  90% [integral-plot01]   |                                                           |...............................................    |  93%                     |                                                           |.................................................  |  97% [integral-plot005]  |                                                           |...................................................| 100%                                                                                                                                
+output file: s3.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s3.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L3 // Математика для анализа данных
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s3.html
+
+
+
+processing file: s7.qmd
+  |                               |                       |   0%  |                               |                       |   1%                                                [favicon-loader]                                |                               |                       |   2%                                                 |                               |.                      |   3% [opts]                                                                                         |                               |.                      |   4% [andan-desc-pkgs]                               |                               |.                      |   5%                                                 |                               |.                      |   6% [mode-pmf]                                                                                     |                               |..                     |   7% [mode-continuous-data]                          |                               |..                     |   8%                                                [mode-continuous-freqs]                         |                               |..                     |   9%                                                 |                               |..                     |  10% [mode-continuous-mode]                                                                         |                               |...                    |  11% [mode-norm-mode]                                |                               |...                    |  12%                                                 |                               |...                    |  13% [mode-binom-mode]                                                                              |                               |...                    |  14% [mode-poiss-mode]                               |                               |...                    |  15%                                                 |                               |....                   |  15% [mode-norm-sample]                              |                               |....                   |  16%                                                 |                               |....                   |  17% [mode-norm]                                                                                    |                               |....                   |  18% [mode-bimodal]                                  |                               |....                   |  19%                                                 |                               |.....                  |  20% [mode-polymodal]                                                                               |                               |.....                  |  21% [mode-bimodal-struct]                           |                               |.....                  |  22%                                                [median-norm]                                   |                               |.....                  |  23%                                                 |                               |.....                  |  24% [median-left-skew]                              |                               |......                 |  24%                                                 |                               |......                 |  25% [median-right-skew]                             |                               |......                 |  26%                                                 |                               |......                 |  27% [median-bimodal]                                                                               |                               |......                 |  28% [creating_tibble_for_feature_vis_1]             |                               |.......                |  29%                                                [mean_feature_1]                                |                               |.......                |  30%                                                 |                               |.......                |  31% [creating_tibble_for_feature_vis_2]                                                            |                               |.......                |  32% [mean_feature_2]                                |                               |........               |  33%                                                 |                               |........               |  34% [df_polygons]                                                                                  |                               |........               |  35% [zero_deviation_sum]                            |                               |........               |  36%                                                [central_tendency_sampling]                     |                               |.........              |  37%                                                 |                               |.........              |  38% [central_tendency_symm]                                                                        |                               |.........              |  39% [central_tendency_asymm_right]                  |                               |.........              |  40%                                                 |                               |.........              |  41% [central_tendency_asymm_left]                                                                  |                               |..........             |  42% [marks_creating]                                |                               |..........             |  43%                                                [marks_vector]                                  |                               |..........             |  44%                                                 |                               |..........             |  45% [unnamed-chunk-1]                                                                              |                               |...........            |  46% [marks_creating_2]                              |                               |...........            |  47%                                                 |                               |...........            |  48% [marks_vector_2]                                                                               |                               |...........            |  49% [unnamed-chunk-2]                               |                               |...........            |  50%                                                 |                               |............           |  50% [central_tendency_bimodal]                      |                               |............           |  51%                                                 |                               |............           |  52% [distributions_with_the_same_means_generation]                                                 |                               |............           |  53% [creating_labeller]                             |                               |............           |  54%                                                 |                               |.............          |  55% [distributions_with_the_same_means_vis]                                                        |                               |.............          |  56% [distributions_with_the_same_means_mean]        |                               |.............          |  57%                                                [anat_marks_gen]                                |                               |.............          |  58%                                                 |                               |..............         |  59% [anat_marks]                                                                                   |                               |..............         |  60% [min_max_anat_marks]                            |                               |..............         |  61%                                                 |                               |..............         |  62% [intro_to_psy_gen]                                                                             |                               |..............         |  63% [intro_to_psy_marks]                            |                               |...............        |  64%                                                [range_problem]                                 |                               |...............        |  65%                                                 |                               |...............        |  66% [creating_tibble_for_feature_sd_vis_1]                                                         |                               |...............        |  67% [sd_feature_1]                                  |                               |................       |  68%                                                 |                               |................       |  69% [creating_tibble_for_feature_vis_4]                                                            |                               |................       |  70% [sd_feature_2]                                  |                               |................       |  71%                                                [taia_data]                                     |                               |.................      |  72%                                                 |                               |.................      |  73% [taia_score_vis]                                                                               |                               |.................      |  74% [fifth_vis]                                     |                               |.................      |  75%                                                 |                               |.................      |  76% [68_vis]                                        |                               |..................     |  76%                                                 |                               |..................     |  77% [99_vis]                                        |                               |..................     |  78%                                                [quartiles_vis]                                 |                               |..................     |  79%                                                 |                               |..................     |  80% [iqr_vis]                                                                                      |                               |...................    |  81% [boxplot]                                       |                               |...................    |  82%                                                 |                               |...................    |  83% [boxplot_annotated]                                                                            |                               |...................    |  84% [unnamed-chunk-3]                               |                               |...................    |  85%                                                 |                               |....................   |  85% [unnamed-chunk-4]                               |                               |....................   |  86%                                                 |                               |....................   |  87% [unnamed-chunk-5]                                                                              |                               |....................   |  88% [unnamed-chunk-6]                               |                               |....................   |  89%                                                 |                               |.....................  |  90% [unnamed-chunk-7]                                                                              |                               |.....................  |  91% [unnamed-chunk-8]                               |                               |.....................  |  92%                                                [corr-data]                                     |                               |.....................  |  93%                                                 |                               |...................... |  94% [unnamed-chunk-9]                                                                              |                               |...................... |  95% [unnamed-chunk-10]                              |                               |...................... |  96%                                                 |                               |...................... |  97% [unnamed-chunk-11]                                                                             |                               |.......................|  98% [unnamed-chunk-12]                              |                               |.......................|  99%                                                [unnamed-chunk-13]                              |                               |.......................| 100%                                                                                                                                                                                        
+output file: s7.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s7.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L7 // Описательные статистики. Корреляционный анализ
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s7.html
+
+
+
+processing file: s1.qmd
+  |                                                          |                                                  |   0%  |                                                          |                                                  |   1%                      |                                                          |.                                                 |   2% [favicon-loader]     |                                                          |.                                                 |   3%                      |                                                          |..                                                |   4% [opts]               |                                                          |..                                                |   5%                      |                                                          |...                                               |   6% [pkgs]               |                                                          |...                                               |   7%                      |                                                          |....                                              |   8% [maths1]             |                                                          |....                                              |   9%                      |                                                          |.....                                             |  10% [maths2]             |                                                          |.....                                             |  11%                      |                                                          |......                                            |  12% [funs1]              |                                                          |......                                            |  13%                      |                                                          |.......                                           |  14% [funs2]              |                                                          |.......                                           |  15%                      |                                                          |........                                          |  16% [funs3]              |                                                          |........                                          |  17%                      |                                                          |.........                                         |  17% [logic1]             |                                                          |.........                                         |  18%                      |                                                          |..........                                        |  19% [logic2]             |                                                          |..........                                        |  20%                      |                                                          |...........                                       |  21% [unnamed-chunk-1]    |                                                          |...........                                       |  22%                      |                                                          |............                                      |  23% [unnamed-chunk-2]    |                                                          |............                                      |  24%                      |                                                          |.............                                     |  25% [unnamed-chunk-3]    |                                                          |.............                                     |  26%                      |                                                          |..............                                    |  27% [unnamed-chunk-4]    |                                                          |..............                                    |  28%                      |                                                          |...............                                   |  29% [unnamed-chunk-5]    |                                                          |...............                                   |  30%                      |                                                          |................                                  |  31% [unnamed-chunk-6]    |                                                          |................                                  |  32%                      |                                                          |.................                                 |  33% [unnamed-chunk-7]    |                                                          |.................                                 |  34%                      |                                                          |.................                                 |  35% [unnamed-chunk-8]    |                                                          |..................                                |  36%                      |                                                          |..................                                |  37% [unnamed-chunk-9]    |                                                          |...................                               |  38%                      |                                                          |...................                               |  39% [unnamed-chunk-10]   |                                                          |....................                              |  40%                      |                                                          |....................                              |  41% [vec-classic]        |                                                          |.....................                             |  42%                      |                                                          |.....................                             |  43% [vec-free]           |                                                          |......................                            |  44%                      |                                                          |......................                            |  45% [vec-remove-vector]  |                                                          |.......................                           |  46%                      |                                                          |.......................                           |  47% [vec-same]           |                                                          |........................                          |  48%                      |                                                          |........................                          |  49% [vec-types]          |                                                          |.........................                         |  50%                     [vec-typer-print]    |                                                          |..........................                        |  51%                      |                                                          |..........................                        |  52% [unnamed-chunk-11]   |                                                          |...........................                       |  53%                      |                                                          |...........................                       |  54% [unnamed-chunk-12]   |                                                          |............................                      |  55%                      |                                                          |............................                      |  56% [unnamed-chunk-13]   |                                                          |.............................                     |  57%                      |                                                          |.............................                     |  58% [unnamed-chunk-14]   |                                                          |..............................                    |  59%                      |                                                          |..............................                    |  60% [unnamed-chunk-15]   |                                                          |...............................                   |  61%                      |                                                          |...............................                   |  62% [unnamed-chunk-16]   |                                                          |................................                  |  63%                      |                                                          |................................                  |  64% [unnamed-chunk-17]   |                                                          |.................................                 |  65%                      |                                                          |.................................                 |  66% [unnamed-chunk-18]   |                                                          |.................................                 |  67%                      |                                                          |..................................                |  68% [unnamed-chunk-19]   |                                                          |..................................                |  69%                      |                                                          |...................................               |  70% [unnamed-chunk-20]   |                                                          |...................................               |  71%                      |                                                          |....................................              |  72% [unnamed-chunk-21]   |                                                          |....................................              |  73%                      |                                                          |.....................................             |  74% [unnamed-chunk-22]   |                                                          |.....................................             |  75%                      |                                                          |......................................            |  76% [unnamed-chunk-23]   |                                                          |......................................            |  77%                      |                                                          |.......................................           |  78% [unnamed-chunk-24]   |                                                          |.......................................           |  79%                      |                                                          |........................................          |  80% [unnamed-chunk-25]   |                                                          |........................................          |  81%                      |                                                          |.........................................         |  82% [unnamed-chunk-26]   |                                                          |.........................................         |  83%                      |                                                          |..........................................        |  83% [unnamed-chunk-27]   |                                                          |..........................................        |  84%                      |                                                          |...........................................       |  85% [unnamed-chunk-28]   |                                                          |...........................................       |  86%                      |                                                          |............................................      |  87% [unnamed-chunk-29]   |                                                          |............................................      |  88%                      |                                                          |.............................................     |  89% [unnamed-chunk-30]   |                                                          |.............................................     |  90%                      |                                                          |..............................................    |  91% [unnamed-chunk-31]   |                                                          |..............................................    |  92%                      |                                                          |...............................................   |  93% [unnamed-chunk-32]   |                                                          |...............................................   |  94%                      |                                                          |................................................  |  95% [unnamed-chunk-33]   |                                                          |................................................  |  96%                      |                                                          |................................................. |  97% [unnamed-chunk-34]   |                                                          |................................................. |  98%                      |                                                          |..................................................|  99% [unnamed-chunk-35]   |                                                          |..................................................| 100%                                                                                                                                  
+output file: s1.knit.md
+
+pandoc 
+  to: revealjs
+  output-file: s1.html
+  standalone: true
+  wrap: none
+  default-image-extension: png
+  html-math-method:
+    method: mathjax
+    url: >-
+      https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full
+  slide-level: 2
+  
+metadata
+  link-citations: true
+  width: 1050
+  height: 700
+  margin: 0.1
+  center: false
+  navigationMode: linear
+  controlsLayout: edges
+  controlsTutorial: false
+  hash: true
+  history: true
+  hashOneBasedIndex: false
+  fragmentInURL: false
+  transition: fade
+  backgroundTransition: none
+  pdfSeparateFragments: false
+  lang: en
+  auto-stretch: true
+  title: L1 // Основы R. Типы и структуры данных. Функции и управляющие конструкции
+  author: Антон Ангельгардт
+  logo: pics/logo.png
+  footer: WLM 2023
+  theme: style.scss
+  scrollable: true
+  smaller: false
+  
+Output created: s1.html
+
+
 =====
 SLIDES RENDER COMPLETED
 =====
@@ -1138,21 +1139,26 @@ SLIDES RENDER COMPLETED
 RUN ANALYTICS RENDERER
 =====
 
-_filesfolder removed
-_cachefolder removed
-index.html removed
+rm: cannot remove 'analytics/index_files': No such file or directory
+_filesfolder remove warning
+rm: cannot remove 'analytics/index_cache': No such file or directory
+_cachefolder warning
+rm: cannot remove 'analytics/index.html': No such file or directory
+index.html remove warning
 
 
 processing file: index.qmd
-  |                                              |                                      |   0%                                  |                                              |                                      |   1% [opts]                           |                                              |.                                     |   1%                                  |                                              |.                                     |   2% [install-pkgs]                                                   |                                              |.                                     |   3% [pkgs]                         Error in `library()`:
-! there is no package called 'rytstat'
+  |                                              |                                      |   0%                                  |                                              |                                      |   1% [opts]                           |                                              |.                                     |   1%                                  |                                              |.                                     |   2% [install-pkgs]                                                   |                                              |.                                     |   3% [pkgs]                                                           |                                              |.                                     |   4% [ggplot-theme]                   |                                              |..                                    |   4%                                  |                                              |..                                    |   5% [auth]                                                           |                                              |..                                    |   6% [get-spec-data]                                                  |                                              |...                                   |   7% [get-calendar-data]                                              |                                              |...                                   |   8% [get-journal-data]                                               |                                              |...                                   |   9% [get-yt-data]                  Error in `select()`:
+! Can't select columns that don't exist.
+✖ Column `id_video_id` doesn't exist.
 Backtrace:
- 1. base::library(rytstat)
+ 1. ryt_get_videos() %>% select(id_video_id, title) %>% ...
+ 4. dplyr:::select.data.frame(., id_video_id, title)
+
+
+
+Quitting from lines 267-358 [get-yt-data] (index.qmd)
                                                                                                                           
-
-
-Quitting from lines 35-40 [pkgs] (index.qmd)
-
 Execution halted
 
 =====
@@ -1162,4 +1168,24 @@ Analytics render error
 =====
 =====
 
+```
+# Last deployment info
+
+**Date:** Mon 2024-08-19 21:05
+
+**Mode:** render
+
+## `docs` structure
+
+```
+docs:
+total 368
+drwxrwxr-x  2 nglgrdt nglgrdt   4096 авг 19 20:57 .
+drwxrwxr-x 19 nglgrdt nglgrdt   4096 авг 19 20:57 ..
+-rw-rw-r--  1 nglgrdt nglgrdt 365050 авг 19 21:05 README.md
+```
+## Log
+
+```
+deploy/run.sh: line 39: deploy: command not found
 ```
