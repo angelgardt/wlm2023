@@ -8,7 +8,7 @@
 <link href="s6_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s6_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s6_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.510">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Антон Ангельгардт">
   <title>L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</title>
@@ -340,7 +340,7 @@
 </section>
 <section id="что-будет" class="slide level2">
 <h2>Что будет?</h2>
-<!---  --->
+<!--- {{< include ../other/_symbols.qmd >}} --->
 <!--- Logic --->
 <!--- Number sets--->
 <!--- Linear Algebra --->
@@ -433,7 +433,7 @@ link.href = 'pics/favicon.png';
 </ul>
 
 <img data-src="s6_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="метод-моментов" class="slide level2">
+<section id="метод-моментов" class="slide level2 scrollable">
 <h2>Метод моментов</h2>
 <p>В методе моментов есть три этапа:</p>
 <ol type="1">
@@ -878,7 +878,7 @@ s^2 = \frac{n}{n-1} \cdot \hat \sigma^2 = \frac{n}{n-1} \cdot \frac{1}{n} \sum (
 <li>Если значение нашей статистики, которое мы рассчитали на выборке, <em>не попало в критическую область</em>, то мы <em>не получаем оснований для того, чтобы отклонить нулевую гипотезу</em>. Однако <em>мы также не получаем оснований, чтобы её «принять»</em>.</li>
 </ul>
 </section>
-<section id="stats-testing-algorithm" class="slide level2">
+<section id="stats-testing-algorithm" class="slide level2 scrollable">
 <h2>Агоритм тестирования статистических гипотез</h2>
 <h3 id="сценарий-1">Сценарий 1</h3>
 <ol type="1">
@@ -966,9 +966,11 @@ p &lt; \frac{\alpha}{n} \Rightarrow np &lt; \alpha
 <p>Антон Ангельгардт</p>
 </div>
 </div>
-
-<img src="pics/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="pics/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>WLM 2023</p>
+</div>
 </div>
 </section>
     </div>
@@ -1295,6 +1297,24 @@ p &lt; \frac{\alpha}{n} \Rightarrow np &lt; \alpha
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1331,7 +1351,11 @@ p &lt; \frac{\alpha}{n} \Rightarrow np &lt; \alpha
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

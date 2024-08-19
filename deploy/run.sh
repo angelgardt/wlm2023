@@ -14,19 +14,19 @@ mode="${1:-${modes[0]}}"
 
 ## check mode
 ## abort function if not valid
-mode_check="\<${mode}\>" # extract a regex that matches the exact value of the argument
+#mode_check="\<${mode}\>" # extract a regex that matches the exact value of the argument
 
-if [[ ! ${modes[@]} =~ $mode_check ]]
-then
-	
-	echo -e "${RED}\n=====\n=====${NC}"
-	echo -e "${RED}RUN FAILED${NC}"
-	echo -e "${RED}Unknown first inline argument${NC}"
-	echo -e "Valid options are ${GRAY}${modes[@]}${NC} (first is default)"
-	echo -e "${RED}=====\n=====\n${NC}"
-	exit
-	
-fi
+# if [[ ! ${modes[@]} =~ $mode_check ]]
+# then
+# 	
+# 	echo -e "${RED}\n=====\n=====${NC}"
+# 	echo -e "${RED}RUN FAILED${NC}"
+# 	echo -e "${RED}Unknown first inline argument${NC}"
+# 	echo -e "Valid options are ${GRAY}${modes[@]}${NC} (first is default)"
+# 	echo -e "${RED}=====\n=====\n${NC}"
+# 	exit
+# 	
+# fi
 
 
 if [ "$mode" = "restore" ]
