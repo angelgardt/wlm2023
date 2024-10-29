@@ -8,7 +8,7 @@
 <link href="s2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="s2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="s2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Антон Ангельгардт">
   <title>L2 // Предобработка данных. Дата и время. Визуализация данных</title>
@@ -1725,8 +1725,8 @@ cond1 cond2 cond3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href=""></a><span class="fu">stri_rand_strings</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">length =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "y1pX1" "BsPk2" "XmGmv" "PRmR2" "abBv4" "MZqA0" "9WeGM" "Zi03z" "Q2HBe"
-[10] "8QPtI"</code></pre>
+<pre><code> [1] "GVcFx" "eW6V9" "Lk49f" "WQzay" "4TT2w" "xGRuq" "TWt3v" "SvhCd" "Qzj8x"
+[10] "EhIyY"</code></pre>
 </div>
 </div>
 </section>
@@ -1782,16 +1782,16 @@ cond1 cond2 cond3
 <pre><code># A tibble: 150 × 4
       id scale  item score
    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
- 1     1 A         1     5
- 2     1 A         2     4
- 3     1 A         3     1
- 4     1 A         4     2
- 5     1 A         5     4
+ 1     1 A         1     1
+ 2     1 A         2     3
+ 3     1 A         3     2
+ 4     1 A         4     5
+ 5     1 A         5     2
  6     1 B         1     1
- 7     1 B         2     4
- 8     1 B         3     2
- 9     1 B         4     3
-10     1 B         5     1
+ 7     1 B         2     1
+ 8     1 B         3     3
+ 9     1 B         4     4
+10     1 B         5     3
 # ℹ 140 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb193"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a href=""></a>ds_1 <span class="sc">%&gt;%</span> </span>
@@ -1801,16 +1801,16 @@ cond1 cond2 cond3
 <pre><code># A tibble: 150 × 3
       id scale_item score
    &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
- 1     1 A_1            5
- 2     1 A_2            4
- 3     1 A_3            1
- 4     1 A_4            2
- 5     1 A_5            4
+ 1     1 A_1            1
+ 2     1 A_2            3
+ 3     1 A_3            2
+ 4     1 A_4            5
+ 5     1 A_5            2
  6     1 B_1            1
- 7     1 B_2            4
- 8     1 B_3            2
- 9     1 B_4            3
-10     1 B_5            1
+ 7     1 B_2            1
+ 8     1 B_3            3
+ 9     1 B_4            4
+10     1 B_5            3
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -1833,16 +1833,16 @@ cond1 cond2 cond3
 <pre><code># A tibble: 150 × 4
       id scale item  score
    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1     1 A     1         5
- 2     1 A     2         4
- 3     1 A     3         1
- 4     1 A     4         2
- 5     1 A     5         4
+ 1     1 A     1         1
+ 2     1 A     2         3
+ 3     1 A     3         2
+ 4     1 A     4         5
+ 5     1 A     5         2
  6     1 B     1         1
- 7     1 B     2         4
- 8     1 B     3         2
- 9     1 B     4         3
-10     1 B     5         1
+ 7     1 B     2         1
+ 8     1 B     3         3
+ 9     1 B     4         4
+10     1 B     5         3
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
@@ -2063,13 +2063,13 @@ cond1 cond2 cond3
 <div class="cell">
 <div class="sourceCode cell-code" id="cb245"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb245-1"><a href=""></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-08-19"</code></pre>
+<pre><code>[1] "2024-10-29"</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb247"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb247-1"><a href=""></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-08-19 21:10:20 MSK"</code></pre>
+<pre><code>[1] "2024-10-29 14:14:31 MSK"</code></pre>
 </div>
 </div>
 </section>
@@ -2091,7 +2091,7 @@ cond1 cond2 cond3
 <div class="sourceCode cell-code" id="cb249"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb249-1"><a href=""></a><span class="do">## текущий timestamp</span></span>
 <span id="cb249-2"><a href=""></a><span class="fu">as.numeric</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1724091020</code></pre>
+<pre><code>[1] 1730200471</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -2101,23 +2101,23 @@ cond1 cond2 cond3
 </div>
 <div class="sourceCode cell-code" id="cb253"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb253-1"><a href=""></a><span class="fu">month</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 8</code></pre>
+<pre><code>[1] 10</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb255"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb255-1"><a href=""></a><span class="fu">day</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 19</code></pre>
+<pre><code>[1] 29</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb257"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb257-1"><a href=""></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 21</code></pre>
+<pre><code>[1] 14</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb259"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb259-1"><a href=""></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 10</code></pre>
+<pre><code>[1] 14</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb261"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb261-1"><a href=""></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20.31961</code></pre>
+<pre><code>[1] 31.02602</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb263"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb263-1"><a href=""></a><span class="fu">difftime</span>(<span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 21:00"</span>), <span class="fu">ymd_hm</span>(<span class="st">"2023-01-21, 18:10"</span>), <span class="at">units =</span> <span class="st">"mins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2651,6 +2651,24 @@ cond1 cond2 cond3
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2687,7 +2705,11 @@ cond1 cond2 cond3
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
