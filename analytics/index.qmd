@@ -55,8 +55,11 @@ ryt_auth('course.wlm@gmail.com')
 gs4_auth("a.n.angelgardt@gmail.com")
 
 ## classroom
-load("/home/nglgrdt/tokens/classroom_token.Rdata")
+# token <- authorize()
+# save.image("/Users/antonangelgardt/tokens/classroom_token.Rdata")
+# load("/home/nglgrdt/tokens/classroom_token.Rdata")
 # load("/home/angelgardt/tokens/classroom_token.Rdata")
+load("/Users/antonangelgardt/tokens/classroom_token.Rdata")
 auth_from_secret(access_token = token$credentials$access_token,
                  refresh_token = token$credentials$refresh_token)
 ```
@@ -315,8 +318,8 @@ ryt_get_analytics_custom <- function (start_date = Sys.Date() - 14,
 
 
 ryt_get_videos() %>% 
-  select(id_video_id, title) %>%
-  filter(!str_detect(title, "внутряк")) -> videos
+  select(id_videoId, title) %>%
+  filter(!str_detect(title, "внутряк") & str_detect(title, "WLM2023")) -> videos
 
 # video_id_list <- paste0(head(videos$id_video_id, 500), collapse = ',')
 
@@ -327,10 +330,10 @@ ryt_get_analytics_custom(
   start_date = '2023-11-06', end_date = Sys.Date(),
   dimensions = dimensions,
   metrics    = metrics,
-  filters = str_glue('video=={str_c(head(videos$id_video_id, 500), collapse=",")}'), names_sep = ""
+  filters = str_glue('video=={str_c(head(videos$id_videoId, 500), collapse=",")}'), names_sep = ""
 ) %>% 
   set_names(c(dimensions, metrics)) %>% 
-  left_join(videos, join_by("video" == "id_video_id")) -> basics_by_videos
+  left_join(videos, join_by("video" == "id_videoId")) -> basics_by_videos
 
 basics_by_videos %>% 
   mutate(day = as_date(day)) %>% 
@@ -3323,10 +3326,10 @@ cons_visits %>%
   ))
 ```
 
-
+<!---
 ## Row
 
-```{r cons-views-by-day}
+```{r cons-views-by-day, eval=FALSE}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -3362,7 +3365,7 @@ cons_views %>%
 ```
 
 
-```{r cons-views-cumsum}
+```{r cons-views-cumsum, eval=FALSE}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -3403,7 +3406,7 @@ cons_cumsum %>%
 
 ## Row
 
-```{r cons-ave-view-dur-by-day}
+```{r cons-ave-view-dur-by-day, eval=FALSE}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -3440,7 +3443,7 @@ cons_ave_views_dur %>%
 ```
 
 
-```{r cons-ave-view-perc-by-day}
+```{r cons-ave-view-perc-by-day, eval=FALSE}
 calendar_assessment %>%
   filter(str_detect(code, "^HW")) %>%
   ggplot() +
@@ -3476,7 +3479,7 @@ cons_ave_views_perc %>%
   ))
 ```
 
-
+--->
 
 
 # A // Разборы {#a}
