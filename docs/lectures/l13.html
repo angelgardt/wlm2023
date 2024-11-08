@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 13&nbsp; L13 // Кластерный анализ</title>
+<title>L // WLM 2023 - 12&nbsp; L13 // Кластерный анализ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,7 +162,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l13.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l13.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,32 +254,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./l12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l13.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -298,44 +292,44 @@ window.Quarto = {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#геометрическая-интерпретация-задачи-кластеризации" id="toc-геометрическая-интерпретация-задачи-кластеризации" class="nav-link active" data-scroll-target="#геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">13.1</span> Геометрическая интерпретация задачи кластеризации</a></li>
-  <li><a href="#проблема-кластеризации" id="toc-проблема-кластеризации" class="nav-link" data-scroll-target="#проблема-кластеризации"><span class="header-section-number">13.2</span> Проблема кластеризации</a></li>
-  <li><a href="#расстояние-между-объектами" id="toc-расстояние-между-объектами" class="nav-link" data-scroll-target="#расстояние-между-объектами"><span class="header-section-number">13.3</span> Расстояние между объектами</a>
+  <li><a href="#геометрическая-интерпретация-задачи-кластеризации" id="toc-геометрическая-интерпретация-задачи-кластеризации" class="nav-link active" data-scroll-target="#геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">12.1</span> Геометрическая интерпретация задачи кластеризации</a></li>
+  <li><a href="#проблема-кластеризации" id="toc-проблема-кластеризации" class="nav-link" data-scroll-target="#проблема-кластеризации"><span class="header-section-number">12.2</span> Проблема кластеризации</a></li>
+  <li><a href="#расстояние-между-объектами" id="toc-расстояние-между-объектами" class="nav-link" data-scroll-target="#расстояние-между-объектами"><span class="header-section-number">12.3</span> Расстояние между объектами</a>
   <ul class="collapse">
-  <li><a href="#евклидово-расстояние" id="toc-евклидово-расстояние" class="nav-link" data-scroll-target="#евклидово-расстояние"><span class="header-section-number">13.3.1</span> Евклидово расстояние</a></li>
-  <li><a href="#манхэттеновское-расстояние" id="toc-манхэттеновское-расстояние" class="nav-link" data-scroll-target="#манхэттеновское-расстояние"><span class="header-section-number">13.3.2</span> Манхэттеновское расстояние</a></li>
-  <li><a href="#евклид-vs-манхэттен" id="toc-евклид-vs-манхэттен" class="nav-link" data-scroll-target="#евклид-vs-манхэттен"><span class="header-section-number">13.3.3</span> Евклид vs Манхэттен</a></li>
-  <li><a href="#другие-виды-расстояний" id="toc-другие-виды-расстояний" class="nav-link" data-scroll-target="#другие-виды-расстояний"><span class="header-section-number">13.3.4</span> Другие виды расстояний</a></li>
+  <li><a href="#евклидово-расстояние" id="toc-евклидово-расстояние" class="nav-link" data-scroll-target="#евклидово-расстояние"><span class="header-section-number">12.3.1</span> Евклидово расстояние</a></li>
+  <li><a href="#манхэттеновское-расстояние" id="toc-манхэттеновское-расстояние" class="nav-link" data-scroll-target="#манхэттеновское-расстояние"><span class="header-section-number">12.3.2</span> Манхэттеновское расстояние</a></li>
+  <li><a href="#евклид-vs-манхэттен" id="toc-евклид-vs-манхэттен" class="nav-link" data-scroll-target="#евклид-vs-манхэттен"><span class="header-section-number">12.3.3</span> Евклид vs Манхэттен</a></li>
+  <li><a href="#другие-виды-расстояний" id="toc-другие-виды-расстояний" class="nav-link" data-scroll-target="#другие-виды-расстояний"><span class="header-section-number">12.3.4</span> Другие виды расстояний</a></li>
   </ul></li>
-  <li><a href="#проблема-операционализации-расстояния" id="toc-проблема-операционализации-расстояния" class="nav-link" data-scroll-target="#проблема-операционализации-расстояния"><span class="header-section-number">13.4</span> Проблема операционализации расстояния</a></li>
-  <li><a href="#субъективность-кластерного-анализа" id="toc-субъективность-кластерного-анализа" class="nav-link" data-scroll-target="#субъективность-кластерного-анализа"><span class="header-section-number">13.5</span> Субъективность кластерного анализа</a></li>
-  <li><a href="#расстояние-между-кластерами" id="toc-расстояние-между-кластерами" class="nav-link" data-scroll-target="#расстояние-между-кластерами"><span class="header-section-number">13.6</span> Расстояние между кластерами</a>
+  <li><a href="#проблема-операционализации-расстояния" id="toc-проблема-операционализации-расстояния" class="nav-link" data-scroll-target="#проблема-операционализации-расстояния"><span class="header-section-number">12.4</span> Проблема операционализации расстояния</a></li>
+  <li><a href="#субъективность-кластерного-анализа" id="toc-субъективность-кластерного-анализа" class="nav-link" data-scroll-target="#субъективность-кластерного-анализа"><span class="header-section-number">12.5</span> Субъективность кластерного анализа</a></li>
+  <li><a href="#расстояние-между-кластерами" id="toc-расстояние-между-кластерами" class="nav-link" data-scroll-target="#расстояние-между-кластерами"><span class="header-section-number">12.6</span> Расстояние между кластерами</a>
   <ul class="collapse">
-  <li><a href="#среднее-невзвешенное-расстояние" id="toc-среднее-невзвешенное-расстояние" class="nav-link" data-scroll-target="#среднее-невзвешенное-расстояние"><span class="header-section-number">13.6.1</span> Среднее невзвешенное расстояние</a></li>
-  <li><a href="#центроидный-метод" id="toc-центроидный-метод" class="nav-link" data-scroll-target="#центроидный-метод"><span class="header-section-number">13.6.2</span> Центроидный метод</a></li>
-  <li><a href="#метод-дальнего-соседа" id="toc-метод-дальнего-соседа" class="nav-link" data-scroll-target="#метод-дальнего-соседа"><span class="header-section-number">13.6.3</span> Метод дальнего соседа</a></li>
-  <li><a href="#метод-ближайшего-соседа" id="toc-метод-ближайшего-соседа" class="nav-link" data-scroll-target="#метод-ближайшего-соседа"><span class="header-section-number">13.6.4</span> Метод ближайшего соседа</a></li>
+  <li><a href="#среднее-невзвешенное-расстояние" id="toc-среднее-невзвешенное-расстояние" class="nav-link" data-scroll-target="#среднее-невзвешенное-расстояние"><span class="header-section-number">12.6.1</span> Среднее невзвешенное расстояние</a></li>
+  <li><a href="#центроидный-метод" id="toc-центроидный-метод" class="nav-link" data-scroll-target="#центроидный-метод"><span class="header-section-number">12.6.2</span> Центроидный метод</a></li>
+  <li><a href="#метод-дальнего-соседа" id="toc-метод-дальнего-соседа" class="nav-link" data-scroll-target="#метод-дальнего-соседа"><span class="header-section-number">12.6.3</span> Метод дальнего соседа</a></li>
+  <li><a href="#метод-ближайшего-соседа" id="toc-метод-ближайшего-соседа" class="nav-link" data-scroll-target="#метод-ближайшего-соседа"><span class="header-section-number">12.6.4</span> Метод ближайшего соседа</a></li>
   </ul></li>
-  <li><a href="#иерархическая-кластеризация" id="toc-иерархическая-кластеризация" class="nav-link" data-scroll-target="#иерархическая-кластеризация"><span class="header-section-number">13.7</span> Иерархическая кластеризация</a>
+  <li><a href="#иерархическая-кластеризация" id="toc-иерархическая-кластеризация" class="nav-link" data-scroll-target="#иерархическая-кластеризация"><span class="header-section-number">12.7</span> Иерархическая кластеризация</a>
   <ul class="collapse">
-  <li><a href="#алгоритм-иерархического-кластерного-анализа" id="toc-алгоритм-иерархического-кластерного-анализа" class="nav-link" data-scroll-target="#алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">13.7.1</span> Алгоритм иерархического кластерного анализа</a></li>
-  <li><a href="#дендрограмма" id="toc-дендрограмма" class="nav-link" data-scroll-target="#дендрограмма"><span class="header-section-number">13.7.2</span> Дендрограмма</a></li>
-  <li><a href="#каменистая-осыпь" id="toc-каменистая-осыпь" class="nav-link" data-scroll-target="#каменистая-осыпь"><span class="header-section-number">13.7.3</span> Каменистая осыпь</a></li>
-  <li><a href="#когда-кластеризации-нет" id="toc-когда-кластеризации-нет" class="nav-link" data-scroll-target="#когда-кластеризации-нет"><span class="header-section-number">13.7.4</span> Когда кластеризации нет?</a></li>
-  <li><a href="#чем-плох-иерархический-кластерный-анализ" id="toc-чем-плох-иерархический-кластерный-анализ" class="nav-link" data-scroll-target="#чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">13.7.5</span> Чем плох иерархический кластерный анализ?</a></li>
+  <li><a href="#алгоритм-иерархического-кластерного-анализа" id="toc-алгоритм-иерархического-кластерного-анализа" class="nav-link" data-scroll-target="#алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">12.7.1</span> Алгоритм иерархического кластерного анализа</a></li>
+  <li><a href="#дендрограмма" id="toc-дендрограмма" class="nav-link" data-scroll-target="#дендрограмма"><span class="header-section-number">12.7.2</span> Дендрограмма</a></li>
+  <li><a href="#каменистая-осыпь" id="toc-каменистая-осыпь" class="nav-link" data-scroll-target="#каменистая-осыпь"><span class="header-section-number">12.7.3</span> Каменистая осыпь</a></li>
+  <li><a href="#когда-кластеризации-нет" id="toc-когда-кластеризации-нет" class="nav-link" data-scroll-target="#когда-кластеризации-нет"><span class="header-section-number">12.7.4</span> Когда кластеризации нет?</a></li>
+  <li><a href="#чем-плох-иерархический-кластерный-анализ" id="toc-чем-плох-иерархический-кластерный-анализ" class="nav-link" data-scroll-target="#чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">12.7.5</span> Чем плох иерархический кластерный анализ?</a></li>
   </ul></li>
-  <li><a href="#метод-k-средних-k-means" id="toc-метод-k-средних-k-means" class="nav-link" data-scroll-target="#метод-k-средних-k-means"><span class="header-section-number">13.8</span> Метод k-средних (k-means)</a>
+  <li><a href="#метод-k-средних-k-means" id="toc-метод-k-средних-k-means" class="nav-link" data-scroll-target="#метод-k-средних-k-means"><span class="header-section-number">12.8</span> Метод k-средних (k-means)</a>
   <ul class="collapse">
-  <li><a href="#алгоритм-метода-k-средних" id="toc-алгоритм-метода-k-средних" class="nav-link" data-scroll-target="#алгоритм-метода-k-средних"><span class="header-section-number">13.8.1</span> Алгоритм метода k-средних</a></li>
-  <li><a href="#ограничения-k-means" id="toc-ограничения-k-means" class="nav-link" data-scroll-target="#ограничения-k-means"><span class="header-section-number">13.8.2</span> Ограничения k-means</a></li>
-  <li><a href="#начальное-положение-кластеров" id="toc-начальное-положение-кластеров" class="nav-link" data-scroll-target="#начальное-положение-кластеров"><span class="header-section-number">13.8.3</span> Начальное положение кластеров</a></li>
+  <li><a href="#алгоритм-метода-k-средних" id="toc-алгоритм-метода-k-средних" class="nav-link" data-scroll-target="#алгоритм-метода-k-средних"><span class="header-section-number">12.8.1</span> Алгоритм метода k-средних</a></li>
+  <li><a href="#ограничения-k-means" id="toc-ограничения-k-means" class="nav-link" data-scroll-target="#ограничения-k-means"><span class="header-section-number">12.8.2</span> Ограничения k-means</a></li>
+  <li><a href="#начальное-положение-кластеров" id="toc-начальное-положение-кластеров" class="nav-link" data-scroll-target="#начальное-положение-кластеров"><span class="header-section-number">12.8.3</span> Начальное положение кластеров</a></li>
   </ul></li>
-  <li><a href="#метрики-качества-кластеризации" id="toc-метрики-качества-кластеризации" class="nav-link" data-scroll-target="#метрики-качества-кластеризации"><span class="header-section-number">13.9</span> Метрики качества кластеризации</a>
+  <li><a href="#метрики-качества-кластеризации" id="toc-метрики-качества-кластеризации" class="nav-link" data-scroll-target="#метрики-качества-кластеризации"><span class="header-section-number">12.9</span> Метрики качества кластеризации</a>
   <ul class="collapse">
-  <li><a href="#внешние-метрики" id="toc-внешние-метрики" class="nav-link" data-scroll-target="#внешние-метрики"><span class="header-section-number">13.9.1</span> Внешние метрики</a></li>
-  <li><a href="#внутренние-метрики" id="toc-внутренние-метрики" class="nav-link" data-scroll-target="#внутренние-метрики"><span class="header-section-number">13.9.2</span> Внутренние метрики</a></li>
+  <li><a href="#внешние-метрики" id="toc-внешние-метрики" class="nav-link" data-scroll-target="#внешние-метрики"><span class="header-section-number">12.9.1</span> Внешние метрики</a></li>
+  <li><a href="#внутренние-метрики" id="toc-внутренние-метрики" class="nav-link" data-scroll-target="#внутренние-метрики"><span class="header-section-number">12.9.2</span> Внутренние метрики</a></li>
   </ul></li>
-  <li><a href="#нечеткая-кластеризация" id="toc-нечеткая-кластеризация" class="nav-link" data-scroll-target="#нечеткая-кластеризация"><span class="header-section-number">13.10</span> Нечеткая кластеризация</a></li>
+  <li><a href="#нечеткая-кластеризация" id="toc-нечеткая-кластеризация" class="nav-link" data-scroll-target="#нечеткая-кластеризация"><span class="header-section-number">12.10</span> Нечеткая кластеризация</a></li>
   </ul>
 </nav>
     </div>
@@ -344,7 +338,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></h1>
 </div>
 
 
@@ -379,8 +373,8 @@ window.Quarto = {
 </ul>
 <p>Но нам часто бывает нужно определить, какие наблюдения наиболее похожи друг на друга, то есть разбить их на группы, при условии что нам неизвестно, какие это будут группы. Иначе говоря, мы хотим изучить, есть ли какая-то <em>структура</em> в наших данных. Структуру в данных можно искать разными способами — мы начнем с решения задачи кластеризации.</p>
 <p>Задача кластерного анализа — разбиение набора объектов на группы, при этом попутно определяется число этих групп. Группы, на которые разбивается выборка, называются <em>кластеры</em>.</p>
-<section id="геометрическая-интерпретация-задачи-кластеризации" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">13.1</span> Геометрическая интерпретация задачи кластеризации</h2>
+<section id="геометрическая-интерпретация-задачи-кластеризации" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">12.1</span> Геометрическая интерпретация задачи кластеризации</h2>
 <p>Напомним себе, что</p>
 <ul>
 <li>компьютер умеет работать только с числами</li>
@@ -403,8 +397,8 @@ window.Quarto = {
 <li>скопления точек — это искомые кластеры.</li>
 </ul>
 </section>
-<section id="проблема-кластеризации" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="проблема-кластеризации"><span class="header-section-number">13.2</span> Проблема кластеризации</h2>
+<section id="проблема-кластеризации" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="проблема-кластеризации"><span class="header-section-number">12.2</span> Проблема кластеризации</h2>
 <p>Посмотрим на простейший вариант — двухмерное признаковое пространство. Пусть у нас есть некоторые два признака, которые будут задавать два соответствующих измерения, и некоторое количество точек, которые располагаются примерно так:</p>
 <center>
 <figure class="figure">
@@ -431,19 +425,19 @@ window.Quarto = {
 </center>
 <p>Что мы здесь наблюдаем? Проблему. Разные методы кластеризации могут давать разные результаты. Какой из них верный? Неясно… так как истинная группировка данных нам неизвестна. Но мы будем пытаться как-то выживать в ситуаций такой неопределённости.</p>
 </section>
-<section id="расстояние-между-объектами" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="расстояние-между-объектами"><span class="header-section-number">13.3</span> Расстояние между объектами</h2>
+<section id="расстояние-между-объектами" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="расстояние-между-объектами"><span class="header-section-number">12.3</span> Расстояние между объектами</h2>
 <p>Обратим внимание на следующий важный момент. Мы оперируем терминами «близко» и «далеко» — но как мы определаем расстояние между объектами? Рассмотрим самые популярные и важные для нас варианты.</p>
-<section id="евклидово-расстояние" class="level3" data-number="13.3.1">
-<h3 data-number="13.3.1" class="anchored" data-anchor-id="евклидово-расстояние"><span class="header-section-number">13.3.1</span> Евклидово расстояние</h3>
+<section id="евклидово-расстояние" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="евклидово-расстояние"><span class="header-section-number">12.3.1</span> Евклидово расстояние</h3>
 <p>С одним из них мы знакомы ещё со школы — это евклидово расстояние между точками. По смыслу это длина отрезка, соединяющего две точки. Оно определяется как корень из суммы квадратов покоординатных разностей. Пусть у нас есть две точки — <span class="math inline">\((x_1, x_2, \dots, x_p)\)</span> и <span class="math inline">\((y_1, y_2, \dots, y_p)\)</span>. Евклидово расстояние будет определяться по формуле:</p>
 <p><span class="math display">\[
 d_{\text{Eucl},XY} = \sqrt{\sum_{j=1}^p (x_j - y_j)^2}
 \]</span></p>
 <p>Иногда также используется квадрат евклидова расстояния<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 </section>
-<section id="манхэттеновское-расстояние" class="level3" data-number="13.3.2">
-<h3 data-number="13.3.2" class="anchored" data-anchor-id="манхэттеновское-расстояние"><span class="header-section-number">13.3.2</span> Манхэттеновское расстояние</h3>
+<section id="манхэттеновское-расстояние" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="манхэттеновское-расстояние"><span class="header-section-number">12.3.2</span> Манхэттеновское расстояние</h3>
 <p>Оно же <em>блок-расстояние</em>, или <em>расстояние таксиста</em>, или <em>Майкопское расстояние</em>.</p>
 <p>Славный российский город Майкоп — а именно его улицы — устроен так:</p>
 <center>
@@ -474,27 +468,27 @@ d_{\text{Eucl},XY} = \sqrt{\sum_{j=1}^p (x_j - y_j)^2}
 d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 \]</span></p>
 </section>
-<section id="евклид-vs-манхэттен" class="level3" data-number="13.3.3">
-<h3 data-number="13.3.3" class="anchored" data-anchor-id="евклид-vs-манхэттен"><span class="header-section-number">13.3.3</span> Евклид vs Манхэттен</h3>
+<section id="евклид-vs-манхэттен" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored" data-anchor-id="евклид-vs-манхэттен"><span class="header-section-number">12.3.3</span> Евклид vs Манхэттен</h3>
 <p>Когда какое расстояние выбирать? Здесь два важных момента.</p>
 <p>Первый — математический. Как и в случае с дисперсией, мы возводим покоординатные разности в квадрат. Если переменные измерены в различных единицах, то вклад одной из них в суммарное расстояние может быть значительно выше, чем других. По этой причине необходимо принять решение: является ли большая разница значений по одной из переменных достаточным основанием для отнесения наблюдений к различным кластерам? Если да, то можно использовать такое расстояние, если нет, то либо необходима стандартизация переменных, либо использование расстояния Манхэттен.</p>
 <p>Второй — измерительный. Если переменные, по которым вы кластеризуете наблюдения, непрерывные, то можно использовать евклидово расстояние. Если переменные дискретные, то более логичным вариантом будет манхэттеновское расстояние.</p>
 </section>
-<section id="другие-виды-расстояний" class="level3" data-number="13.3.4">
-<h3 data-number="13.3.4" class="anchored" data-anchor-id="другие-виды-расстояний"><span class="header-section-number">13.3.4</span> Другие виды расстояний</h3>
+<section id="другие-виды-расстояний" class="level3" data-number="12.3.4">
+<h3 data-number="12.3.4" class="anchored" data-anchor-id="другие-виды-расстояний"><span class="header-section-number">12.3.4</span> Другие виды расстояний</h3>
 <p>Отметим, что есть и другие виды расстояний, когда мы работает не с числовыми объектами. Например, мы можем пытаться кластеризовать слова — задача непростая, но её можно пытаться решить. Например, с помощью расстояний Хэмминга или Левенштейна. Для более специфичных объектов могут понадобиться и более изощрённые метрики расстояний. Да и вообще «никакое время, потраченное на раздумья, какое расстояние выбрать, не будет потрачено зря»<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 </section>
 </section>
-<section id="проблема-операционализации-расстояния" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="проблема-операционализации-расстояния"><span class="header-section-number">13.4</span> Проблема операционализации расстояния</h2>
+<section id="проблема-операционализации-расстояния" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="проблема-операционализации-расстояния"><span class="header-section-number">12.4</span> Проблема операционализации расстояния</h2>
 <p>Но вообще нам надо здесь поговорить ещё вот о чём: как вообще мы определяем, что есть расстояние между объектами? То есть как мы его операционализируем?</p>
 <p>Например, мы хотим кластеризовать наших испытуемых на «эффективных решателей задачи» и «неэффективных решателей задачи». По каким параметрам мы это будем делать? Как вариант — время решения и число ошибок в ходе решения. А как мы будем замерять эти переменные? Первую, видимо, в непрерывной шкале, вторую — в дискретной. Далее будем решать вопрос о выборе конкретной метрики расстояния.</p>
 <p>Хорошо, а как нам кластеризовать менеджеров на «хороших», «плохих» и «средненьких продажников»? Можем использовать разные подходы: оценку 360, показатели KPI и т. д.</p>
 <p>А как нам определять расстояние между сайтами? По каким показателям? Здесь вариантов ещё больше и всё зависит от конкретной аналитической задачи.</p>
 <p>Это всё о чем? О том, что операционализировать расстояние не так-то просто и для разных задач расстояние между одними и теми же объектами может быть операционализировано по-разному.</p>
 </section>
-<section id="субъективность-кластерного-анализа" class="level2" data-number="13.5">
-<h2 data-number="13.5" class="anchored" data-anchor-id="субъективность-кластерного-анализа"><span class="header-section-number">13.5</span> Субъективность кластерного анализа</h2>
+<section id="субъективность-кластерного-анализа" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="субъективность-кластерного-анализа"><span class="header-section-number">12.5</span> Субъективность кластерного анализа</h2>
 <p>Мы плавно подъехали к ещё одной проблеме-особенности. Какова роль аналитика в кластерном анализе? Достаточно велика:</p>
 <ul>
 <li>отбор переменных для анализа</li>
@@ -522,11 +516,11 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </ul></li>
 </ul>
 </section>
-<section id="расстояние-между-кластерами" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="расстояние-между-кластерами"><span class="header-section-number">13.6</span> Расстояние между кластерами</h2>
+<section id="расстояние-между-кластерами" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="расстояние-между-кластерами"><span class="header-section-number">12.6</span> Расстояние между кластерами</h2>
 <p>Хорошо, мы поговорили о том, как считать расстояние между объектами, но нам надо понять, насколько (не)похожи получившиеся группы объектов. Для этого придется считать расстояние между кластерами. Варинатов, как обычно, масса.</p>
-<section id="среднее-невзвешенное-расстояние" class="level3" data-number="13.6.1">
-<h3 data-number="13.6.1" class="anchored" data-anchor-id="среднее-невзвешенное-расстояние"><span class="header-section-number">13.6.1</span> Среднее невзвешенное расстояние</h3>
+<section id="среднее-невзвешенное-расстояние" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="среднее-невзвешенное-расстояние"><span class="header-section-number">12.6.1</span> Среднее невзвешенное расстояние</h3>
 <p>Среднее невзвешенное рассрояние (Average linkage clustering) определяется так:</p>
 <ul>
 <li>находим расстояния между всеми парами объектов двух кластеров</li>
@@ -538,8 +532,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </figure>
 </center>
 </section>
-<section id="центроидный-метод" class="level3" data-number="13.6.2">
-<h3 data-number="13.6.2" class="anchored" data-anchor-id="центроидный-метод"><span class="header-section-number">13.6.2</span> Центроидный метод</h3>
+<section id="центроидный-метод" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="центроидный-метод"><span class="header-section-number">12.6.2</span> Центроидный метод</h3>
 <p>Ранее был самым популярным из-за вычислительной простоты. Определяется расстояние между центрами тяжести двух кластеров. В настоящее время используется крайне мало.</p>
 <center>
 <figure class="figure">
@@ -547,8 +541,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </figure>
 </center>
 </section>
-<section id="метод-дальнего-соседа" class="level3" data-number="13.6.3">
-<h3 data-number="13.6.3" class="anchored" data-anchor-id="метод-дальнего-соседа"><span class="header-section-number">13.6.3</span> Метод дальнего соседа</h3>
+<section id="метод-дальнего-соседа" class="level3" data-number="12.6.3">
+<h3 data-number="12.6.3" class="anchored" data-anchor-id="метод-дальнего-соседа"><span class="header-section-number">12.6.3</span> Метод дальнего соседа</h3>
 <p>Расстояние между кластерами определяется как расстояние между наиболее удалёнными объектами кластеров.</p>
 <center>
 <figure class="figure">
@@ -556,8 +550,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </figure>
 </center>
 </section>
-<section id="метод-ближайшего-соседа" class="level3" data-number="13.6.4">
-<h3 data-number="13.6.4" class="anchored" data-anchor-id="метод-ближайшего-соседа"><span class="header-section-number">13.6.4</span> Метод ближайшего соседа</h3>
+<section id="метод-ближайшего-соседа" class="level3" data-number="12.6.4">
+<h3 data-number="12.6.4" class="anchored" data-anchor-id="метод-ближайшего-соседа"><span class="header-section-number">12.6.4</span> Метод ближайшего соседа</h3>
 <p>Расстояние между кластерами определяется как расстояние между наиболее близкими объектами кластеров. Хорошо работает с ленточными кластерами.</p>
 <center>
 <figure class="figure">
@@ -566,10 +560,10 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </center>
 </section>
 </section>
-<section id="иерархическая-кластеризация" class="level2" data-number="13.7">
-<h2 data-number="13.7" class="anchored" data-anchor-id="иерархическая-кластеризация"><span class="header-section-number">13.7</span> Иерархическая кластеризация</h2>
-<section id="алгоритм-иерархического-кластерного-анализа" class="level3" data-number="13.7.1">
-<h3 data-number="13.7.1" class="anchored" data-anchor-id="алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">13.7.1</span> Алгоритм иерархического кластерного анализа</h3>
+<section id="иерархическая-кластеризация" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="иерархическая-кластеризация"><span class="header-section-number">12.7</span> Иерархическая кластеризация</h2>
+<section id="алгоритм-иерархического-кластерного-анализа" class="level3" data-number="12.7.1">
+<h3 data-number="12.7.1" class="anchored" data-anchor-id="алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">12.7.1</span> Алгоритм иерархического кластерного анализа</h3>
 <ol type="1">
 <li>Каждый объект объявляется кластером — из <span class="math inline">\(n\)</span> наблюдений получается <span class="math inline">\(n\)</span> кластеров.</li>
 <li>Выбираются два ближайших кластера — они объединяются.</li>
@@ -581,8 +575,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 <p>Звучит, как какой-то сюр — начали с <span class="math inline">\(n\)</span> кластеров по одному объекту, закончили один кластером, содержащим все объекты… Да, в таком исполнении, действительно, странная процедура. Однако если мы на каком-то этапе её прервём, то получим желаемый результат.</p>
 <p>На каком этапе стоит остановиться? Когда расстояния между объединяемыми кластерами становится большим, так как большое расстояние говорит о том, что мы объединяем непохожие объекты.</p>
 </section>
-<section id="дендрограмма" class="level3" data-number="13.7.2">
-<h3 data-number="13.7.2" class="anchored" data-anchor-id="дендрограмма"><span class="header-section-number">13.7.2</span> Дендрограмма</h3>
+<section id="дендрограмма" class="level3" data-number="12.7.2">
+<h3 data-number="12.7.2" class="anchored" data-anchor-id="дендрограмма"><span class="header-section-number">12.7.2</span> Дендрограмма</h3>
 <p>В иерархическом кластерном анализе есть удобный инструмент для определения момента, когда стоит остановиться в объединении кластеров. Он называется дендрограмма. По своей сути, это визуализация алгоритма иерархического кластерного анализа.</p>
 <p>Принцип построения дендрограммы следующий:</p>
 <ol type="1">
@@ -629,8 +623,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </center>
 <p>При анализе дендрограммя мы ищем скачок расстояний. Он обозначает момент, когда мы перешли к объединению непохожих (далёких друг от друга кластеров). Собственно, это и есть тот момент, когда необхожимо было прервать алгоритм и оставить те кластеры, которые образовались на текущий момент.</p>
 </section>
-<section id="каменистая-осыпь" class="level3" data-number="13.7.3">
-<h3 data-number="13.7.3" class="anchored" data-anchor-id="каменистая-осыпь"><span class="header-section-number">13.7.3</span> Каменистая осыпь</h3>
+<section id="каменистая-осыпь" class="level3" data-number="12.7.3">
+<h3 data-number="12.7.3" class="anchored" data-anchor-id="каменистая-осыпь"><span class="header-section-number">12.7.3</span> Каменистая осыпь</h3>
 <p>Ещё один способ определить число кластеров — это график «каменистая осыпь».</p>
 <p>В данном случае по оси <span class="math inline">\(x\)</span> располагаются шаги объединения, по оси <span class="math inline">\(y\)</span> — расстояние между кластерами в момент объединения. Как именно нам помогает такой график?</p>
 <center>
@@ -640,19 +634,19 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </center>
 <p>Мы видим, что сначала расстояние между объединяемыми кластерами растёт медленно, а затем происходит излом линнии, и после него расстояние начинает расти быстро. Это является указанием, что на шаге, где происходит излом линии, необходимо прервать процедуру объединения.</p>
 </section>
-<section id="когда-кластеризации-нет" class="level3" data-number="13.7.4">
-<h3 data-number="13.7.4" class="anchored" data-anchor-id="когда-кластеризации-нет"><span class="header-section-number">13.7.4</span> Когда кластеризации нет?</h3>
+<section id="когда-кластеризации-нет" class="level3" data-number="12.7.4">
+<h3 data-number="12.7.4" class="anchored" data-anchor-id="когда-кластеризации-нет"><span class="header-section-number">12.7.4</span> Когда кластеризации нет?</h3>
 <p>Как вы понимаете, паттерны дендрограммы и каменистой осыпи могут быть крайне разнообразны в зависимости от того, что есть в данных. Однако главный момент, который нам говорит о том, что кластеризаци нет — это отсутствие скачка расстояний на дендрограмме и/или отсутствие излома линии на графике «каменистая осыпь».</p>
 </section>
-<section id="чем-плох-иерархический-кластерный-анализ" class="level3" data-number="13.7.5">
-<h3 data-number="13.7.5" class="anchored" data-anchor-id="чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">13.7.5</span> Чем плох иерархический кластерный анализ?</h3>
+<section id="чем-плох-иерархический-кластерный-анализ" class="level3" data-number="12.7.5">
+<h3 data-number="12.7.5" class="anchored" data-anchor-id="чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">12.7.5</span> Чем плох иерархический кластерный анализ?</h3>
 <p>У иерархического кластерного анализа практически нет недостатков, за исключением одного очень важного технического — он требует, чтобы в оперативной памяти хранилась матрица попарных расстояний. Если у нас порядка ста объектов, то проблем никаких, а вот если объектов 100 000, уже возникают трудности. Невозможность работать с очень большими датасетами — основная проблема этого вида кластерного анализа.</p>
 </section>
 </section>
-<section id="метод-k-средних-k-means" class="level2" data-number="13.8">
-<h2 data-number="13.8" class="anchored" data-anchor-id="метод-k-средних-k-means"><span class="header-section-number">13.8</span> Метод k-средних (k-means)</h2>
-<section id="алгоритм-метода-k-средних" class="level3" data-number="13.8.1">
-<h3 data-number="13.8.1" class="anchored" data-anchor-id="алгоритм-метода-k-средних"><span class="header-section-number">13.8.1</span> Алгоритм метода k-средних</h3>
+<section id="метод-k-средних-k-means" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="метод-k-средних-k-means"><span class="header-section-number">12.8</span> Метод k-средних (k-means)</h2>
+<section id="алгоритм-метода-k-средних" class="level3" data-number="12.8.1">
+<h3 data-number="12.8.1" class="anchored" data-anchor-id="алгоритм-метода-k-средних"><span class="header-section-number">12.8.1</span> Алгоритм метода k-средних</h3>
 <p>Процедура кластерного анализа этим методом значительно отличается.</p>
 <ol type="1">
 <li>Заранее определяется число кластеров <span class="math inline">\(k\)</span>. Хотя вообще-то это невозможно, однако уже найдены способы, чтобы обойти это ограничение.</li>
@@ -669,8 +663,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 <p>Визуализацию можно посмотреть <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/">тут</a>.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/R2e3Ls9H_fc?si=EXDiqrMrFl12E-YX" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="ограничения-k-means" class="level3" data-number="13.8.2">
-<h3 data-number="13.8.2" class="anchored" data-anchor-id="ограничения-k-means"><span class="header-section-number">13.8.2</span> Ограничения k-means</h3>
+<section id="ограничения-k-means" class="level3" data-number="12.8.2">
+<h3 data-number="12.8.2" class="anchored" data-anchor-id="ограничения-k-means"><span class="header-section-number">12.8.2</span> Ограничения k-means</h3>
 <ul>
 <li>Необходимо заранее определить число кластеров</li>
 <li>Используется только евклидово растояние
@@ -680,8 +674,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 <li>Результат зависит от начальных центров кластеров</li>
 </ul>
 </section>
-<section id="начальное-положение-кластеров" class="level3" data-number="13.8.3">
-<h3 data-number="13.8.3" class="anchored" data-anchor-id="начальное-положение-кластеров"><span class="header-section-number">13.8.3</span> Начальное положение кластеров</h3>
+<section id="начальное-положение-кластеров" class="level3" data-number="12.8.3">
+<h3 data-number="12.8.3" class="anchored" data-anchor-id="начальное-положение-кластеров"><span class="header-section-number">12.8.3</span> Начальное положение кластеров</h3>
 <p>Если «бросать» центроиды совсем случайно, то это может привести к тому, что некоторые из них буду, например, слишком далеко от скопления точек — в результате работы алгоритма образуются пустые кластеры. Это нехорошо, поэтому есть два наиболее популярных подхода.</p>
 <ol type="1">
 <li>Forgy — Случайным образом выбираются <span class="math inline">\(k\)</span> наблюдений. Они объявляются начальными центрами кластеров.</li>
@@ -689,20 +683,20 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </ol>
 </section>
 </section>
-<section id="метрики-качества-кластеризации" class="level2" data-number="13.9">
-<h2 data-number="13.9" class="anchored" data-anchor-id="метрики-качества-кластеризации"><span class="header-section-number">13.9</span> Метрики качества кластеризации</h2>
+<section id="метрики-качества-кластеризации" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="метрики-качества-кластеризации"><span class="header-section-number">12.9</span> Метрики качества кластеризации</h2>
 <p>Вообще оценка качества кластеризации — задача крайне сложная и в строгом математическом смысле <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9A%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F#.D0.A2.D0.B5.D0.BE.D1.80.D0.B5.D0.BC.D0.B0_.D0.BD.D0.B5.D0.B2.D0.BE.D0.B7.D0.BC.D0.BE.D0.B6.D0.BD.D0.BE.D1.81.D1.82.D0.B8_.D0.9A.D0.BB.D0.B5.D0.B9.D0.BD.D0.B1.D0.B5.D1.80.D0.B3.D0.B0">невыполнимая</a>. Однако <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8">всякие разные метрики</a>, которые позволяют приблизиться к такой оценки всё же были придуманы. Они делятся на <em>внешние</em> и <em>внутренние</em>. Мы рассмотрим наиболее простые.</p>
-<section id="внешние-метрики" class="level3" data-number="13.9.1">
-<h3 data-number="13.9.1" class="anchored" data-anchor-id="внешние-метрики"><span class="header-section-number">13.9.1</span> Внешние метрики</h3>
+<section id="внешние-метрики" class="level3" data-number="12.9.1">
+<h3 data-number="12.9.1" class="anchored" data-anchor-id="внешние-метрики"><span class="header-section-number">12.9.1</span> Внешние метрики</h3>
 <p>Внешние метрики используют дополнитльную информацию о кластеризуемом множестве объектов. Например, распределение объектов по кластерам. То есть, чтобы посчитать метрику, мы должны знать, как данные распределяются на кластеры перед тем, как будем проводить кластерный анализ.</p>
 <p>Но зачем нам проводить кластерный анализ, если нам уже известны кластеры? Ведь это тогда не кластеры, а классы! И мы можем строить классификатор. Так-то оно, конечно, так — и нам, аналитикам, эти метрики не очень интересны. Для разработчиков алгоритмов же они могут быть очень полезны.</p>
 <p>Мы не будем на них останавливаться. Если хочется почитать и вникнуть, то <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8#.D0.92.D0.BD.D0.B5.D1.88.D0.BD.D0.B8.D0.B5_.D0.BC.D0.B5.D1.80.D1.8B_.D0.BE.D1.86.D0.B5.D0.BD.D0.BA.D0.B8_.D0.BA.D0.B0.D1.87.D0.B5.D1.81.D1.82.D0.B2.D0.B0">вот</a>.</p>
 </section>
-<section id="внутренние-метрики" class="level3" data-number="13.9.2">
-<h3 data-number="13.9.2" class="anchored" data-anchor-id="внутренние-метрики"><span class="header-section-number">13.9.2</span> Внутренние метрики</h3>
+<section id="внутренние-метрики" class="level3" data-number="12.9.2">
+<h3 data-number="12.9.2" class="anchored" data-anchor-id="внутренние-метрики"><span class="header-section-number">12.9.2</span> Внутренние метрики</h3>
 <p>Эти метрики не используют внешний информации о датасете, а опираются только на результаты кластеризации.</p>
-<section id="компактность-кластеров-cluster-cohesion" class="level4" data-number="13.9.2.1">
-<h4 data-number="13.9.2.1" class="anchored" data-anchor-id="компактность-кластеров-cluster-cohesion"><span class="header-section-number">13.9.2.1</span> Компактность кластеров (cluster cohesion)</h4>
+<section id="компактность-кластеров-cluster-cohesion" class="level4" data-number="12.9.2.1">
+<h4 data-number="12.9.2.1" class="anchored" data-anchor-id="компактность-кластеров-cluster-cohesion"><span class="header-section-number">12.9.2.1</span> Компактность кластеров (cluster cohesion)</h4>
 <p>Помним, что мы хотим собрать похожие наблюдения вместе, а похожие — это те, которые располагаются близко друг к другу. Соответственно, разделение на кластеры тем лучше, чем ближе объекты кластера находятся к его центру. Поэтому необхожимо минимизировать внутрикластерное расстояние:</p>
 <p><span class="math display">\[
 \text{WSS} = \sum_{j=1}^k \sum^{|C_j|}_{i=1} (x_{ij} − \bar x_j)^2,
@@ -710,8 +704,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 <p>где <span class="math inline">\(k\)</span> — число кластеров, <span class="math inline">\(|C_j|\)</span> — количество объектов в данном кластере.</p>
 <p>Это самая популярная метрика качества кластеризации.</p>
 </section>
-<section id="отделимость-кластеров-cluster-separation" class="level4" data-number="13.9.2.2">
-<h4 data-number="13.9.2.2" class="anchored" data-anchor-id="отделимость-кластеров-cluster-separation"><span class="header-section-number">13.9.2.2</span> Отделимость кластеров (cluster separation)</h4>
+<section id="отделимость-кластеров-cluster-separation" class="level4" data-number="12.9.2.2">
+<h4 data-number="12.9.2.2" class="anchored" data-anchor-id="отделимость-кластеров-cluster-separation"><span class="header-section-number">12.9.2.2</span> Отделимость кластеров (cluster separation)</h4>
 <p>Помним, что мы хотим собрать в разные кластеры непохожие друг на друга наблюдения — это те, которые располагаются далеко друг от друга. Соответственно, чем дальше находятся друг от друга центры кластеров, тем лучше. Поэтому необхожимо максимизировать межкластерное расстояние:</p>
 <p><span class="math display">\[
 \text{BSS} = n \cdot \sum_{j=1}^k (\bar x_j - \bar x)^2,
@@ -721,8 +715,8 @@ d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
 </section>
 </section>
 </section>
-<section id="нечеткая-кластеризация" class="level2" data-number="13.10">
-<h2 data-number="13.10" class="anchored" data-anchor-id="нечеткая-кластеризация"><span class="header-section-number">13.10</span> Нечеткая кластеризация</h2>
+<section id="нечеткая-кластеризация" class="level2" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="нечеткая-кластеризация"><span class="header-section-number">12.10</span> Нечеткая кластеризация</h2>
 <p>Два рассмотренных выше алгоритма кластеризации позволяют приписать каждому наблюдению некоторый <em>единственный</em> кластер. Такие подходы относятся к <strong>чёткой кластеризации</strong>. Но что если мы хотим получить какое-то более общее решение? И, скажем, оценить степень принадлежности наблюдений к каждому кластеру?</p>
 <p>Возникает справедливый вопрос — зачем? если чёткая кластеризации даёт более однозначные результаты? Решение, возвращающее степень принадлежности наблюдения к определенному кластеру, даёт нам больше возможностей для интерпретации результатов анализа, а также позволяет получить более подробную картину ситуации, которая происходит где-то «между кластерами», или когда явная кластеризация не выявляется.</p>
 <p>Для решения задачи нечёткой кластеризации (fuzzy clustering) используется метод C-средних (C-means), который является усовершенствованием метода k-средних. Он позволяет разбить наблюдения на заданное число <span class="math inline">\(k\)</span> нечетких кластеров. Нечеткость выражается как раз в том, что в ходе алгоритма рассчитывается степень принадлежности (membership value) наблюдения к каждому из кластеров.</p>
@@ -1418,12 +1412,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./l12.html" class="pagination-link" aria-label="L12 // Линейные модели со смешанными эффектами">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./l14.html" class="pagination-link" aria-label="L14 // Анализ главных компонент и эксплораторный факторный анализ">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 14&nbsp; L14 // Анализ главных компонент и эксплораторный факторный анализ</title>
+<title>L // WLM 2023 - 13&nbsp; L14 // Анализ главных компонент и эксплораторный факторный анализ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,7 +162,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l14.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l14.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,32 +254,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./l12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l14.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -298,24 +292,24 @@ window.Quarto = {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#проклятие-размености-curse-of-dimensionality" id="toc-проклятие-размености-curse-of-dimensionality" class="nav-link active" data-scroll-target="#проклятие-размености-curse-of-dimensionality"><span class="header-section-number">14.1</span> Проклятие размености (curse of dimensionality)</a>
+  <li><a href="#проклятие-размености-curse-of-dimensionality" id="toc-проклятие-размености-curse-of-dimensionality" class="nav-link active" data-scroll-target="#проклятие-размености-curse-of-dimensionality"><span class="header-section-number">13.1</span> Проклятие размености (curse of dimensionality)</a>
   <ul class="collapse">
-  <li><a href="#геометрическая-вероятность" id="toc-геометрическая-вероятность" class="nav-link" data-scroll-target="#геометрическая-вероятность"><span class="header-section-number">14.1.1</span> Геометрическая вероятность</a></li>
+  <li><a href="#геометрическая-вероятность" id="toc-геометрическая-вероятность" class="nav-link" data-scroll-target="#геометрическая-вероятность"><span class="header-section-number">13.1.1</span> Геометрическая вероятность</a></li>
   </ul></li>
-  <li><a href="#факторный-анализ-vs-анализ-главных-компонент" id="toc-факторный-анализ-vs-анализ-главных-компонент" class="nav-link" data-scroll-target="#факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">14.2</span> Факторный анализ vs анализ главных компонент</a></li>
-  <li><a href="#задачи-факторного-анализа-и-анализа-главных-компонент" id="toc-задачи-факторного-анализа-и-анализа-главных-компонент" class="nav-link" data-scroll-target="#задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">14.3</span> Задачи факторного анализа и анализа главных компонент</a></li>
-  <li><a href="#анализ-главных-компонент-principal-component-analysis" id="toc-анализ-главных-компонент-principal-component-analysis" class="nav-link" data-scroll-target="#анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">14.4</span> Анализ главных компонент (Principal Component Analysis)</a>
+  <li><a href="#факторный-анализ-vs-анализ-главных-компонент" id="toc-факторный-анализ-vs-анализ-главных-компонент" class="nav-link" data-scroll-target="#факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">13.2</span> Факторный анализ vs анализ главных компонент</a></li>
+  <li><a href="#задачи-факторного-анализа-и-анализа-главных-компонент" id="toc-задачи-факторного-анализа-и-анализа-главных-компонент" class="nav-link" data-scroll-target="#задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">13.3</span> Задачи факторного анализа и анализа главных компонент</a></li>
+  <li><a href="#анализ-главных-компонент-principal-component-analysis" id="toc-анализ-главных-компонент-principal-component-analysis" class="nav-link" data-scroll-target="#анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">13.4</span> Анализ главных компонент (Principal Component Analysis)</a>
   <ul class="collapse">
-  <li><a href="#математическая-модель-анализа-главных-компонент" id="toc-математическая-модель-анализа-главных-компонент" class="nav-link" data-scroll-target="#математическая-модель-анализа-главных-компонент"><span class="header-section-number">14.4.1</span> Математическая модель анализа главных компонент</a></li>
-  <li><a href="#поиск-главных-компонент-геометрически" id="toc-поиск-главных-компонент-геометрически" class="nav-link" data-scroll-target="#поиск-главных-компонент-геометрически"><span class="header-section-number">14.4.2</span> Поиск главных компонент геометрически</a></li>
-  <li><a href="#сокращение-размерности-признакового-пространства" id="toc-сокращение-размерности-признакового-пространства" class="nav-link" data-scroll-target="#сокращение-размерности-признакового-пространства"><span class="header-section-number">14.4.3</span> Сокращение размерности признакового пространства</a></li>
-  <li><a href="#информативность-компонент" id="toc-информативность-компонент" class="nav-link" data-scroll-target="#информативность-компонент"><span class="header-section-number">14.4.4</span> Информативность компонент</a></li>
-  <li><a href="#интерпретация-главных-компонент" id="toc-интерпретация-главных-компонент" class="nav-link" data-scroll-target="#интерпретация-главных-компонент"><span class="header-section-number">14.4.5</span> Интерпретация главных компонент</a></li>
+  <li><a href="#математическая-модель-анализа-главных-компонент" id="toc-математическая-модель-анализа-главных-компонент" class="nav-link" data-scroll-target="#математическая-модель-анализа-главных-компонент"><span class="header-section-number">13.4.1</span> Математическая модель анализа главных компонент</a></li>
+  <li><a href="#поиск-главных-компонент-геометрически" id="toc-поиск-главных-компонент-геометрически" class="nav-link" data-scroll-target="#поиск-главных-компонент-геометрически"><span class="header-section-number">13.4.2</span> Поиск главных компонент геометрически</a></li>
+  <li><a href="#сокращение-размерности-признакового-пространства" id="toc-сокращение-размерности-признакового-пространства" class="nav-link" data-scroll-target="#сокращение-размерности-признакового-пространства"><span class="header-section-number">13.4.3</span> Сокращение размерности признакового пространства</a></li>
+  <li><a href="#информативность-компонент" id="toc-информативность-компонент" class="nav-link" data-scroll-target="#информативность-компонент"><span class="header-section-number">13.4.4</span> Информативность компонент</a></li>
+  <li><a href="#интерпретация-главных-компонент" id="toc-интерпретация-главных-компонент" class="nav-link" data-scroll-target="#интерпретация-главных-компонент"><span class="header-section-number">13.4.5</span> Интерпретация главных компонент</a></li>
   </ul></li>
-  <li><a href="#эксплораторный-факторный-анализ-exploratory-factor-analysis" id="toc-эксплораторный-факторный-анализ-exploratory-factor-analysis" class="nav-link" data-scroll-target="#эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">14.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</a>
+  <li><a href="#эксплораторный-факторный-анализ-exploratory-factor-analysis" id="toc-эксплораторный-факторный-анализ-exploratory-factor-analysis" class="nav-link" data-scroll-target="#эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">13.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</a>
   <ul class="collapse">
-  <li><a href="#математическая-модель-эксплораторного-факторного-анализа" id="toc-математическая-модель-эксплораторного-факторного-анализа" class="nav-link" data-scroll-target="#математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">14.5.1</span> Математическая модель эксплораторного факторного анализа</a></li>
-  <li><a href="#вращение-факторов-factor-rotation" id="toc-вращение-факторов-factor-rotation" class="nav-link" data-scroll-target="#вращение-факторов-factor-rotation"><span class="header-section-number">14.5.2</span> Вращение факторов (factor rotation)</a></li>
+  <li><a href="#математическая-модель-эксплораторного-факторного-анализа" id="toc-математическая-модель-эксплораторного-факторного-анализа" class="nav-link" data-scroll-target="#математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">13.5.1</span> Математическая модель эксплораторного факторного анализа</a></li>
+  <li><a href="#вращение-факторов-factor-rotation" id="toc-вращение-факторов-factor-rotation" class="nav-link" data-scroll-target="#вращение-факторов-factor-rotation"><span class="header-section-number">13.5.2</span> Вращение факторов (factor rotation)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -325,7 +319,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></h1>
 </div>
 
 
@@ -353,11 +347,11 @@ window.Quarto = {
 <!--- Other --->
 <!--- Trig --->
 <!--- Stats --->
-<section id="проклятие-размености-curse-of-dimensionality" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="проклятие-размености-curse-of-dimensionality"><span class="header-section-number">14.1</span> Проклятие размености (curse of dimensionality)</h2>
+<section id="проклятие-размености-curse-of-dimensionality" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="проклятие-размености-curse-of-dimensionality"><span class="header-section-number">13.1</span> Проклятие размености (curse of dimensionality)</h2>
 <p>С данными могут случиться две проблемы: либо их слишком мало, либо их слишком много. С первой проблемой многие так или иначе сталкивались — во-первых, не достигается требуемая статистическая мощность анализа (мало наблюдений), во-вторых, упускаем какие-либо закономерности (мало переменных). А в чем может быть проблема, если данных много?</p>
-<section id="геометрическая-вероятность" class="level3" data-number="14.1.1">
-<h3 data-number="14.1.1" class="anchored" data-anchor-id="геометрическая-вероятность"><span class="header-section-number">14.1.1</span> Геометрическая вероятность</h3>
+<section id="геометрическая-вероятность" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="геометрическая-вероятность"><span class="header-section-number">13.1.1</span> Геометрическая вероятность</h3>
 <p>Возьмем квадрат, в который вписан круг:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -414,13 +408,13 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 <p>Что делать? Снижать размерность.</p>
 </section>
 </section>
-<section id="факторный-анализ-vs-анализ-главных-компонент" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">14.2</span> Факторный анализ vs анализ главных компонент</h2>
+<section id="факторный-анализ-vs-анализ-главных-компонент" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="факторный-анализ-vs-анализ-главных-компонент"><span class="header-section-number">13.2</span> Факторный анализ vs анализ главных компонент</h2>
 <p>Так сложилось, что под термином «факторный анализ» часто смешиваются две вещи: анализ главных компонент и собственно факторный анализ. Кроме того, собственно факторный анализ также подразделяется на эксплораторный — когда мы ищем факторы — и конфирматорный — когда у нас есть гипотеза о структуре факторов, и нам необходимо ее подтвердить.</p>
 <p>Анализ главных компонент и факторный анализ различаются в своей математической модели, своей изначальной идеологии, но дают сходные результаты и решают сходные задачи.</p>
 </section>
-<section id="задачи-факторного-анализа-и-анализа-главных-компонент" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">14.3</span> Задачи факторного анализа и анализа главных компонент</h2>
+<section id="задачи-факторного-анализа-и-анализа-главных-компонент" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="задачи-факторного-анализа-и-анализа-главных-компонент"><span class="header-section-number">13.3</span> Задачи факторного анализа и анализа главных компонент</h2>
 <ul>
 <li>Сокращение числа переменных</li>
 <li>Измерение неизмеримого (построение новых обобзеных показателей)</li>
@@ -431,10 +425,10 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 </ul>
 <p>и т.д.</p>
 </section>
-<section id="анализ-главных-компонент-principal-component-analysis" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">14.4</span> Анализ главных компонент (Principal Component Analysis)</h2>
-<section id="математическая-модель-анализа-главных-компонент" class="level3" data-number="14.4.1">
-<h3 data-number="14.4.1" class="anchored" data-anchor-id="математическая-модель-анализа-главных-компонент"><span class="header-section-number">14.4.1</span> Математическая модель анализа главных компонент</h3>
+<section id="анализ-главных-компонент-principal-component-analysis" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="анализ-главных-компонент-principal-component-analysis"><span class="header-section-number">13.4</span> Анализ главных компонент (Principal Component Analysis)</h2>
+<section id="математическая-модель-анализа-главных-компонент" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="математическая-модель-анализа-главных-компонент"><span class="header-section-number">13.4.1</span> Математическая модель анализа главных компонент</h3>
 <p>Рассмотрим случайный вектор (матрицу) <span class="math inline">\((\mathbf{X}_1, \mathbf{X}_2, \dots, \mathbf{X}_k)\)</span> (<span class="math inline">\(\mathbf{X}_i\)</span> — некоторый столбец [числовых] данных). Мы хотим найти такую линейную комбинацию наших данных, у которой дисперсия максимальна. При это мы хотим домножать матрицу данных на вектор коэффициентов единичной длины, чтобы искусственно не раздувать дисперсию.</p>
 <p>Формально,</p>
 <p><span class="math display">\[
@@ -479,8 +473,8 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 <p>Полученные <span class="math inline">\(Y_i\)</span> и будут искомые <strong>главные компоненты (principal components)</strong> — наши новые оси, с помощью которых мы будем смотреть на данные и описывать их.</p>
 <p>Если мы в качестве информативности компоненты используем её дисперсию, то можно сказать, что мы ищем наиболее информативные линейные комбинации. То есть, мы ищем некоторую «правильную систему координат».</p>
 </section>
-<section id="поиск-главных-компонент-геометрически" class="level3" data-number="14.4.2">
-<h3 data-number="14.4.2" class="anchored" data-anchor-id="поиск-главных-компонент-геометрически"><span class="header-section-number">14.4.2</span> Поиск главных компонент геометрически</h3>
+<section id="поиск-главных-компонент-геометрически" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="поиск-главных-компонент-геометрически"><span class="header-section-number">13.4.2</span> Поиск главных компонент геометрически</h3>
 <p>Чтобы лучше понять, что все это значит, посмотрим на картинку.</p>
 <center>
 <figure class="figure">
@@ -501,8 +495,8 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 </center>
 <p>Получаем что-то такое. Красные оси и есть наши главные компоненты. Их столько же, сколько изначально было переменных. Теперь мы можем рассматривать наши наблюдения относительно новой системы координат <span class="math inline">\(Y_1 O^′ Y_2\)</span>.</p>
 </section>
-<section id="сокращение-размерности-признакового-пространства" class="level3" data-number="14.4.3">
-<h3 data-number="14.4.3" class="anchored" data-anchor-id="сокращение-размерности-признакового-пространства"><span class="header-section-number">14.4.3</span> Сокращение размерности признакового пространства</h3>
+<section id="сокращение-размерности-признакового-пространства" class="level3" data-number="13.4.3">
+<h3 data-number="13.4.3" class="anchored" data-anchor-id="сокращение-размерности-признакового-пространства"><span class="header-section-number">13.4.3</span> Сокращение размерности признакового пространства</h3>
 <p>Итак, мы нашли новые координаты, но что-то переменных у нас меньше не стало — мы нашли <span class="math inline">\(k\)</span> новых переменных взамен <span class="math inline">\(k\)</span> старых. Мы же хотели, чтобы осей, то есть измерений признакового пространства, стало меньше.</p>
 <p>Теперь нам пригодится следующая идея лаваша.</p>
 <center>
@@ -519,8 +513,8 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 <p>Толщина лаваша практически «неинформативна» для нас<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, поэтому мы можем игнорировать его изменчивость по третьей оси.</p>
 <p>Таким образом, чтобы снизить размерность, мы волей, данной нам нами, выбрасываем малоинформативные главные компоненты.</p>
 </section>
-<section id="информативность-компонент" class="level3" data-number="14.4.4">
-<h3 data-number="14.4.4" class="anchored" data-anchor-id="информативность-компонент"><span class="header-section-number">14.4.4</span> Информативность компонент</h3>
+<section id="информативность-компонент" class="level3" data-number="13.4.4">
+<h3 data-number="13.4.4" class="anchored" data-anchor-id="информативность-компонент"><span class="header-section-number">13.4.4</span> Информативность компонент</h3>
 <p>Что же такое малоинформативные компоненты? И как нам решить, какие из компонент конкретного решения малоинформативны?</p>
 <p>Вновь рассмотрим картинку. В данном случае мы имеем дело с ситуацией, когда все наблюдения расположены более-менее вокруг одной прямой — первой главной компоненты <span class="math inline">\(\text{PC1}\)</span>:</p>
 <center>
@@ -571,8 +565,8 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 </tbody>
 </table>
 </section>
-<section id="интерпретация-главных-компонент" class="level3" data-number="14.4.5">
-<h3 data-number="14.4.5" class="anchored" data-anchor-id="интерпретация-главных-компонент"><span class="header-section-number">14.4.5</span> Интерпретация главных компонент</h3>
+<section id="интерпретация-главных-компонент" class="level3" data-number="13.4.5">
+<h3 data-number="13.4.5" class="anchored" data-anchor-id="интерпретация-главных-компонент"><span class="header-section-number">13.4.5</span> Интерпретация главных компонент</h3>
 <p>В принципе, анализ главных компонент может решать чисто техническую задачу сокращения размерности признакового пространства, и нас может и не интересовать содержательная интерпретация новых переменных.</p>
 <p>Однако решая аналитические задачи, мы часто заинтересованы в том, чтобы хотя бы как-то понимать, что же мы в итоге получили. Для этого воспользуемся <strong>матрицой нагрузок (matrix of variable loadings)</strong>.</p>
 <table class="table">
@@ -632,10 +626,10 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 <p>Нагрузки — это не что иное как коэффициенты <span class="math inline">\(a_{ij}\)</span> из математической модели. Чем они больше, тем сильнее исходные переменные связаны с главными компонентами. Обобщив связи, можно попробовать придумать адеватную исследовательской области интерпретацию.</p>
 </section>
 </section>
-<section id="эксплораторный-факторный-анализ-exploratory-factor-analysis" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">14.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</h2>
-<section id="математическая-модель-эксплораторного-факторного-анализа" class="level3" data-number="14.5.1">
-<h3 data-number="14.5.1" class="anchored" data-anchor-id="математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">14.5.1</span> Математическая модель эксплораторного факторного анализа</h3>
+<section id="эксплораторный-факторный-анализ-exploratory-factor-analysis" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="эксплораторный-факторный-анализ-exploratory-factor-analysis"><span class="header-section-number">13.5</span> Эксплораторный факторный анализ (Exploratory Factor Analysis)</h2>
+<section id="математическая-модель-эксплораторного-факторного-анализа" class="level3" data-number="13.5.1">
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="математическая-модель-эксплораторного-факторного-анализа"><span class="header-section-number">13.5.1</span> Математическая модель эксплораторного факторного анализа</h3>
 <p>У нас есть все та же матрица наблюдений <span class="math inline">\(X^\top = \pmatrix{X_1 &amp; X_2 &amp; \ldots X_k}\)</span>, только мы ее транспонировали для будущего удобства. Мы предполагаем, что под нашими наблюдениями спрятаны некие <strong>факторы</strong> в количестве <span class="math inline">\(p\)</span> штук, <span class="math inline">\(p &lt; k\)</span>. Их мы также можем оформить в матрицу <span class="math inline">\(F^\top = \pmatrix{F_1 &amp; F_2 &amp; \ldots &amp; F_p}\)</span>. Эти факторы объясняют имеющиеся переменные. Делают это они следующим образом:</p>
 <p><span class="math display">\[
 \begin{split}
@@ -676,8 +670,8 @@ k = 2n+1 &amp;, V = \frac{2 \cdot (2\pi)^n}{(2n+1)!!} r^{2n+1}
 <p>За такую неопределенность факторный анализа часто критикуют. Да и вообще, как вы могли заметить, в факторном анализе субъективность чуть ли не на каждом шагу.</p>
 </blockquote>
 </section>
-<section id="вращение-факторов-factor-rotation" class="level3" data-number="14.5.2">
-<h3 data-number="14.5.2" class="anchored" data-anchor-id="вращение-факторов-factor-rotation"><span class="header-section-number">14.5.2</span> Вращение факторов (factor rotation)</h3>
+<section id="вращение-факторов-factor-rotation" class="level3" data-number="13.5.2">
+<h3 data-number="13.5.2" class="anchored" data-anchor-id="вращение-факторов-factor-rotation"><span class="header-section-number">13.5.2</span> Вращение факторов (factor rotation)</h3>
 <p>Вращать вообще-то не обязательно. Если хочется, чтобы все было похоже на PCA, то можно ввести некоторое дополнительное условие и получить единственное решение.</p>
 <p>Однако вращение факторов позволяет получить иногда более интересные результаты. Самые используемые вращения таковы:</p>
 <ul>
@@ -1255,12 +1249,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./l13.html" class="pagination-link" aria-label="L13 // Кластерный анализ">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./l15.html" class="pagination-link" aria-label="L15 // Структурное моделирование и конфирматорный факторный анализ">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

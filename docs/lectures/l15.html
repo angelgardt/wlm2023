@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 15&nbsp; L15 // Структурное моделирование и конфирматорный факторный анализ</title>
+<title>L // WLM 2023 - 14&nbsp; L15 // Структурное моделирование и конфирматорный факторный анализ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,7 +162,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l15.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l15.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,32 +254,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./l11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L11 // Обобщенные аддитивные модели. Регуляризация регрессии</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./l12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l15.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -298,12 +292,12 @@ window.Quarto = {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#крайне-краткое-введение-в-структурное-моделирование" id="toc-крайне-краткое-введение-в-структурное-моделирование" class="nav-link active" data-scroll-target="#крайне-краткое-введение-в-структурное-моделирование"><span class="header-section-number">15.1</span> Крайне краткое введение в структурное моделирование</a></li>
-  <li><a href="#модель-конфирматорного-факторного-анализа" id="toc-модель-конфирматорного-факторного-анализа" class="nav-link" data-scroll-target="#модель-конфирматорного-факторного-анализа"><span class="header-section-number">15.2</span> Модель конфирматорного факторного анализа</a></li>
-  <li><a href="#оценка-качества-модели" id="toc-оценка-качества-модели" class="nav-link" data-scroll-target="#оценка-качества-модели"><span class="header-section-number">15.3</span> Оценка качества модели</a></li>
-  <li><a href="#изучение-параметров-модели" id="toc-изучение-параметров-модели" class="nav-link" data-scroll-target="#изучение-параметров-модели"><span class="header-section-number">15.4</span> Изучение параметров модели</a></li>
-  <li><a href="#модификация-модели" id="toc-модификация-модели" class="nav-link" data-scroll-target="#модификация-модели"><span class="header-section-number">15.5</span> Модификация модели</a></li>
-  <li><a href="#сравнение-моделей" id="toc-сравнение-моделей" class="nav-link" data-scroll-target="#сравнение-моделей"><span class="header-section-number">15.6</span> Сравнение моделей</a></li>
+  <li><a href="#крайне-краткое-введение-в-структурное-моделирование" id="toc-крайне-краткое-введение-в-структурное-моделирование" class="nav-link active" data-scroll-target="#крайне-краткое-введение-в-структурное-моделирование"><span class="header-section-number">14.1</span> Крайне краткое введение в структурное моделирование</a></li>
+  <li><a href="#модель-конфирматорного-факторного-анализа" id="toc-модель-конфирматорного-факторного-анализа" class="nav-link" data-scroll-target="#модель-конфирматорного-факторного-анализа"><span class="header-section-number">14.2</span> Модель конфирматорного факторного анализа</a></li>
+  <li><a href="#оценка-качества-модели" id="toc-оценка-качества-модели" class="nav-link" data-scroll-target="#оценка-качества-модели"><span class="header-section-number">14.3</span> Оценка качества модели</a></li>
+  <li><a href="#изучение-параметров-модели" id="toc-изучение-параметров-модели" class="nav-link" data-scroll-target="#изучение-параметров-модели"><span class="header-section-number">14.4</span> Изучение параметров модели</a></li>
+  <li><a href="#модификация-модели" id="toc-модификация-модели" class="nav-link" data-scroll-target="#модификация-модели"><span class="header-section-number">14.5</span> Модификация модели</a></li>
+  <li><a href="#сравнение-моделей" id="toc-сравнение-моделей" class="nav-link" data-scroll-target="#сравнение-моделей"><span class="header-section-number">14.6</span> Сравнение моделей</a></li>
   </ul>
 </nav>
     </div>
@@ -312,7 +306,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></h1>
 </div>
 
 
@@ -329,8 +323,8 @@ window.Quarto = {
 </header>
 
 
-<section id="крайне-краткое-введение-в-структурное-моделирование" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="крайне-краткое-введение-в-структурное-моделирование"><span class="header-section-number">15.1</span> Крайне краткое введение в структурное моделирование</h2>
+<section id="крайне-краткое-введение-в-структурное-моделирование" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="крайне-краткое-введение-в-структурное-моделирование"><span class="header-section-number">14.1</span> Крайне краткое введение в структурное моделирование</h2>
 <p>Вспомним, кто мы… Мы же с вами исследователи из области социальных и/или гуманитарных наук. А чем мы богаты? Теоретическими моделями, на которых мы основываем наши исследования! А какая теоретическая модель хороша? Та, которая получила эмпирическое подтверждение<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>!</p>
 <p>А как это?…</p>
 <p>Мы научились искать факторы, скрытые за наблюдаемыми переменными — это уже большой шаг. Однако недостаточный. И главное ограничение PCA и EFA — это то, что мы ищем независимые факторы/главные компоненты, в то время как структура взаимосвязей между латентными переменными может быть гораздо сложнее. Кроме того, эти скрытые переменные могут предсказывать другие наблюдаемые переменные: например, уровень вовлеченности сотрудников [возможно] будет предсказывать выполнение KPI, что в свою очередь предсказывает заработную плату. То есть в данным случае мы движемся не от наблюдаемых переменных к латентным, а в обратном направлении. А ведь влияние одних латентных конструктов могут быть опосредованы другими… И в итоге получается что-то такое:</p>
@@ -354,8 +348,8 @@ window.Quarto = {
 <p>Статистические расчеты дадут некоторый результат, но количество респондентов (наблюдений) часто оказывается далеко от необходимого —- статистика расходится к алгоритмами. Задача подбора SEM-моделей, конечно же, не имеет аналитического решения — с ним мы попрощались ещё на общих линейных моделях. Для того, чтобы параметры модели были достаточно точно подобраны,как правило, необходимо больше данных, чем говорят статистические расчеты.</p>
 <p>Есть мнение, что «структурное моделирование требует большого количества данных». Не очень понятно, что считать большим количеством, однако эвристика следующая: <strong>на один оцениваемый параметр нужно не менее 10–15 наблюдений</strong>. Выглядит как что-то приемлемое.</p>
 </section>
-<section id="модель-конфирматорного-факторного-анализа" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="модель-конфирматорного-факторного-анализа"><span class="header-section-number">15.2</span> Модель конфирматорного факторного анализа</h2>
+<section id="модель-конфирматорного-факторного-анализа" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="модель-конфирматорного-факторного-анализа"><span class="header-section-number">14.2</span> Модель конфирматорного факторного анализа</h2>
 <p>Мы кратко взглянули на то, что такое структурное моделирование. Если мы возьмем от него только часть, то получим <strong>конфирматорный факторый анализ (confirmatory factor analysis)</strong>. Осталось понять, какую часть надо взять.</p>
 <p>Наша задача — проверить факторную структуру данных, которую мы взяли из теории или нашли с помощью эксплораторного факторного анализа. То есть, в общем виде что-то такое:</p>
 <center>
@@ -381,8 +375,8 @@ window.Quarto = {
 <li>отличается ли дисперсия фактора от нуля? — ведь если нет, тогда этот фактор не информативен, то есть не дифференцирует респондентов</li>
 </ul>
 </section>
-<section id="оценка-качества-модели" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="оценка-качества-модели"><span class="header-section-number">15.3</span> Оценка качества модели</h2>
+<section id="оценка-качества-модели" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="оценка-качества-модели"><span class="header-section-number">14.3</span> Оценка качества модели</h2>
 <p>Чтобы проверить, согласуются ли эмпирические данные с теоретической моделью, хочется использовать какой-то статистический тест. Однако и тут есть проблема…</p>
 <p>Такой тест есть — это chi-squared for model fit. Его нулевая гипотеза гласит, что модель соответствует данным, а альтернативная — что модель не соответствует им. Проблема с этим тестом в том, что на больших выборках он всегда дает статистически значимые результаты, а значит мы всегда будем вынуждены отклонять нулевую гипотезу, чего делать нам крайне не хотелось бы. Поэтому на практике результаты этого статистического теста даже не приводятся, а вместо него используют <strong>метрики качества модели</strong>.</p>
 <p>Их много, но самых популярных шесть. Для каждой из них определены пороговые значения.</p>
@@ -421,8 +415,8 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="изучение-параметров-модели" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="изучение-параметров-модели"><span class="header-section-number">15.4</span> Изучение параметров модели</h2>
+<section id="изучение-параметров-модели" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="изучение-параметров-модели"><span class="header-section-number">14.4</span> Изучение параметров модели</h2>
 <p>КФА позволяет прямо статистически протестировать гипотезы о значимости параметров модели (факторных нагрузок, корреляций). Для этого используется следующая нехитрая таблица:</p>
 <table class="table">
 <thead>
@@ -457,8 +451,8 @@ window.Quarto = {
 <p>Аналогично можно протестировать и значимость остатков.</p>
 <p>Кроме статистической значимости, разумно посмотреть и на само значение оценки параметра. Так, если факторная нагрузка меньше 0.4, то можно рассмотреть вариант исключения вопроса из опросника, так как он не очень сильно связан с фактором (латентной переменной).</p>
 </section>
-<section id="модификация-модели" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="модификация-модели"><span class="header-section-number">15.5</span> Модификация модели</h2>
+<section id="модификация-модели" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="модификация-модели"><span class="header-section-number">14.5</span> Модификация модели</h2>
 <p>Конфирматорный факторный анализ предполагает наличие некоторой модели, структуру которой мы проверяем на данных. Однако вполне может быть, что наша изначальная модель не учитывыает что-то, что присутствует в данных.</p>
 <p>Допустим, наша изначальная модель выглядела так:</p>
 <center>
@@ -484,8 +478,8 @@ window.Quarto = {
 </figure>
 </center>
 </section>
-<section id="сравнение-моделей" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="сравнение-моделей"><span class="header-section-number">15.6</span> Сравнение моделей</h2>
+<section id="сравнение-моделей" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="сравнение-моделей"><span class="header-section-number">14.6</span> Сравнение моделей</h2>
 <p>Для сравнения моделей, во-первых, подойдут метрики качества моделей, а во-вторых, можно использоваться хи-квадрат тест, аналогично тому, как мы делали в обобщенных и смешанных линейных моделях. Также рассчитываются и информационные критерии, которые также позволяют сравнивать модели друг с другом.</p>
 
 
@@ -1054,7 +1048,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./l14.html" class="pagination-link" aria-label="L14 // Анализ главных компонент и эксплораторный факторный анализ">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

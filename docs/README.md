@@ -1,6 +1,6 @@
 # Last deployment info
 
-**Date:** Tue 2024-10-29 14:15
+**Date:** Fri 2024-11-08 17:30
 
 **Mode:** render
 
@@ -8,4699 +8,4698 @@
 
 ```
 total 16
-drwxr-xr-x@ 10 antonangelgardt  staff   320 Oct 29 14:15 .
-drwxr-xr-x  25 antonangelgardt  staff   800 Oct 29 14:09 ..
--rw-r--r--@  1 antonangelgardt  staff    99 Oct 29 14:15 README.md
-drwxr-xr-x@ 28 antonangelgardt  staff   896 Oct 29 14:15 homeworks
-drwxr-xr-x@ 10 antonangelgardt  staff   320 Oct 29 14:15 hub
--rw-r--r--@  1 antonangelgardt  staff   268 Oct 29 14:15 index.html
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 lectures
-drwxr-xr-x@ 24 antonangelgardt  staff   768 Oct 29 14:15 practice
-drwxr-xr-x@  9 antonangelgardt  staff   288 Oct 29 14:15 projects
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 slides
+drwxr-xr-x  10 antonangelgardt  staff   320 Nov  8 17:30 .
+drwxr-xr-x  25 antonangelgardt  staff   800 Nov  8 17:25 ..
+-rw-r--r--   1 antonangelgardt  staff    99 Nov  8 17:30 README.md
+drwxr-xr-x  28 antonangelgardt  staff   896 Nov  8 17:30 homeworks
+drwxr-xr-x  10 antonangelgardt  staff   320 Nov  8 17:30 hub
+-rw-r--r--@  1 antonangelgardt  staff   268 Nov  8 17:30 index.html
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 lectures
+drwxr-xr-x  24 antonangelgardt  staff   768 Nov  8 17:30 practice
+drwxr-xr-x   9 antonangelgardt  staff   288 Nov  8 17:30 projects
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 slides
 
 docs/homeworks:
 total 3056
-drwxr-xr-x@ 28 antonangelgardt  staff     896 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff     320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   70908 Oct 29 14:15 hw1.html
--rw-r--r--@  1 antonangelgardt  staff   72487 Oct 29 14:15 hw10.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 hw10_files
--rw-r--r--@  1 antonangelgardt  staff   74945 Oct 29 14:15 hw11.html
--rw-r--r--@  1 antonangelgardt  staff   69388 Oct 29 14:15 hw12.html
--rw-r--r--@  1 antonangelgardt  staff   60452 Oct 29 14:15 hw13.html
--rw-r--r--@  1 antonangelgardt  staff   69390 Oct 29 14:15 hw14.html
--rw-r--r--@  1 antonangelgardt  staff   58615 Oct 29 14:15 hw15.html
--rw-r--r--@  1 antonangelgardt  staff   61553 Oct 29 14:15 hw16.html
--rw-r--r--@  1 antonangelgardt  staff   79033 Oct 29 14:15 hw2.html
--rw-r--r--@  1 antonangelgardt  staff   64952 Oct 29 14:15 hw3.html
--rw-r--r--@  1 antonangelgardt  staff  109036 Oct 29 14:15 hw4.html
--rw-r--r--@  1 antonangelgardt  staff   67923 Oct 29 14:15 hw5.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 hw5_files
--rw-r--r--@  1 antonangelgardt  staff   80296 Oct 29 14:15 hw6.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 hw6_files
--rw-r--r--@  1 antonangelgardt  staff   69824 Oct 29 14:15 hw7.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 hw7_files
--rw-r--r--@  1 antonangelgardt  staff   60038 Oct 29 14:15 hw8.html
--rw-r--r--@  1 antonangelgardt  staff   72135 Oct 29 14:15 hw9.html
--rw-r--r--@  1 antonangelgardt  staff   34962 Oct 29 14:15 index.html
-drwxr-xr-x@ 19 antonangelgardt  staff     608 Oct 29 14:15 js
-drwxr-xr-x@  9 antonangelgardt  staff     288 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff   32994 Oct 29 14:15 references.html
--rw-r--r--@  1 antonangelgardt  staff  316297 Oct 29 14:15 search.json
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 site_libs
+drwxr-xr-x  28 antonangelgardt  staff     896 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff     320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   70908 Nov  8 17:30 hw1.html
+-rw-r--r--   1 antonangelgardt  staff   72487 Nov  8 17:30 hw10.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 hw10_files
+-rw-r--r--   1 antonangelgardt  staff   74945 Nov  8 17:30 hw11.html
+-rw-r--r--   1 antonangelgardt  staff   69388 Nov  8 17:30 hw12.html
+-rw-r--r--   1 antonangelgardt  staff   60452 Nov  8 17:30 hw13.html
+-rw-r--r--   1 antonangelgardt  staff   69390 Nov  8 17:30 hw14.html
+-rw-r--r--   1 antonangelgardt  staff   58615 Nov  8 17:30 hw15.html
+-rw-r--r--   1 antonangelgardt  staff   61553 Nov  8 17:30 hw16.html
+-rw-r--r--   1 antonangelgardt  staff   79033 Nov  8 17:30 hw2.html
+-rw-r--r--   1 antonangelgardt  staff   64952 Nov  8 17:30 hw3.html
+-rw-r--r--   1 antonangelgardt  staff  109036 Nov  8 17:30 hw4.html
+-rw-r--r--   1 antonangelgardt  staff   67923 Nov  8 17:30 hw5.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 hw5_files
+-rw-r--r--   1 antonangelgardt  staff   80296 Nov  8 17:30 hw6.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 hw6_files
+-rw-r--r--   1 antonangelgardt  staff   69824 Nov  8 17:30 hw7.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 hw7_files
+-rw-r--r--   1 antonangelgardt  staff   60038 Nov  8 17:30 hw8.html
+-rw-r--r--   1 antonangelgardt  staff   72135 Nov  8 17:30 hw9.html
+-rw-r--r--   1 antonangelgardt  staff   34962 Nov  8 17:30 index.html
+drwxr-xr-x  19 antonangelgardt  staff     608 Nov  8 17:30 js
+drwxr-xr-x   9 antonangelgardt  staff     288 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff   32994 Nov  8 17:30 references.html
+-rw-r--r--   1 antonangelgardt  staff  316297 Nov  8 17:30 search.json
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 site_libs
 
 docs/homeworks/hw10_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff  896 Oct 29 14:15 ..
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff  896 Nov  8 17:30 ..
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 figure-html
 
 docs/homeworks/hw10_files/figure-html:
 total 824
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  351511 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@ 1 antonangelgardt  staff   67525 Oct 29 14:15 unnamed-chunk-17-1.png
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  351511 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--  1 antonangelgardt  staff   67550 Nov  8 17:30 unnamed-chunk-17-1.png
 
 docs/homeworks/hw5_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff  896 Oct 29 14:15 ..
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff  896 Nov  8 17:30 ..
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 figure-html
 
 docs/homeworks/hw5_files/figure-html:
 total 1512
-drwxr-xr-x@ 6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  120708 Oct 29 14:15 12-1.png
--rw-r--r--@ 1 antonangelgardt  staff  171430 Oct 29 14:15 13-1.png
--rw-r--r--@ 1 antonangelgardt  staff  351511 Oct 29 14:15 15-1.png
--rw-r--r--@ 1 antonangelgardt  staff  124571 Oct 29 14:15 final-graph-1.png
+drwxr-xr-x  6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  120708 Nov  8 17:30 12-1.png
+-rw-r--r--  1 antonangelgardt  staff  171430 Nov  8 17:30 13-1.png
+-rw-r--r--  1 antonangelgardt  staff  351511 Nov  8 17:30 15-1.png
+-rw-r--r--  1 antonangelgardt  staff  124621 Nov  8 17:30 final-graph-1.png
 
 docs/homeworks/hw6_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff  896 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff  896 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 figure-html
 
 docs/homeworks/hw6_files/figure-html:
 total 120
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  61180 Oct 29 14:15 hw6-9-plot-1.png
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  61180 Nov  8 17:30 hw6-9-plot-1.png
 
 docs/homeworks/hw7_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff  896 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff  896 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 figure-html
 
 docs/homeworks/hw7_files/figure-html:
 total 176
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  87906 Oct 29 14:15 unnamed-chunk-1-1.png
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  87906 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/homeworks/js:
 total 136
-drwxr-xr-x@ 19 antonangelgardt  staff   608 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff   896 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  1533 Oct 29 14:15 hw.js
--rw-r--r--@  1 antonangelgardt  staff   872 Oct 29 14:15 hw1.json
--rw-r--r--@  1 antonangelgardt  staff   830 Oct 29 14:15 hw10.json
--rw-r--r--@  1 antonangelgardt  staff   820 Oct 29 14:15 hw11.json
--rw-r--r--@  1 antonangelgardt  staff   802 Oct 29 14:15 hw12.json
--rw-r--r--@  1 antonangelgardt  staff   811 Oct 29 14:15 hw13.json
--rw-r--r--@  1 antonangelgardt  staff   820 Oct 29 14:15 hw14.json
--rw-r--r--@  1 antonangelgardt  staff   800 Oct 29 14:15 hw15.json
--rw-r--r--@  1 antonangelgardt  staff   803 Oct 29 14:15 hw16.json
--rw-r--r--@  1 antonangelgardt  staff   828 Oct 29 14:15 hw2.json
--rw-r--r--@  1 antonangelgardt  staff   792 Oct 29 14:15 hw3.json
--rw-r--r--@  1 antonangelgardt  staff   825 Oct 29 14:15 hw4.json
--rw-r--r--@  1 antonangelgardt  staff   769 Oct 29 14:15 hw5.json
--rw-r--r--@  1 antonangelgardt  staff   816 Oct 29 14:15 hw6.json
--rw-r--r--@  1 antonangelgardt  staff   754 Oct 29 14:15 hw7.json
--rw-r--r--@  1 antonangelgardt  staff   760 Oct 29 14:15 hw8.json
--rw-r--r--@  1 antonangelgardt  staff   789 Oct 29 14:15 hw9.json
+drwxr-xr-x  19 antonangelgardt  staff   608 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff   896 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  1533 Nov  8 17:30 hw.js
+-rw-r--r--   1 antonangelgardt  staff   872 Nov  8 17:30 hw1.json
+-rw-r--r--   1 antonangelgardt  staff   830 Nov  8 17:30 hw10.json
+-rw-r--r--   1 antonangelgardt  staff   820 Nov  8 17:30 hw11.json
+-rw-r--r--   1 antonangelgardt  staff   802 Nov  8 17:30 hw12.json
+-rw-r--r--   1 antonangelgardt  staff   811 Nov  8 17:30 hw13.json
+-rw-r--r--   1 antonangelgardt  staff   820 Nov  8 17:30 hw14.json
+-rw-r--r--   1 antonangelgardt  staff   800 Nov  8 17:30 hw15.json
+-rw-r--r--   1 antonangelgardt  staff   803 Nov  8 17:30 hw16.json
+-rw-r--r--   1 antonangelgardt  staff   828 Nov  8 17:30 hw2.json
+-rw-r--r--   1 antonangelgardt  staff   792 Nov  8 17:30 hw3.json
+-rw-r--r--   1 antonangelgardt  staff   825 Nov  8 17:30 hw4.json
+-rw-r--r--   1 antonangelgardt  staff   769 Nov  8 17:30 hw5.json
+-rw-r--r--   1 antonangelgardt  staff   816 Nov  8 17:30 hw6.json
+-rw-r--r--   1 antonangelgardt  staff   754 Nov  8 17:30 hw7.json
+-rw-r--r--   1 antonangelgardt  staff   760 Nov  8 17:30 hw8.json
+-rw-r--r--   1 antonangelgardt  staff   789 Nov  8 17:30 hw9.json
 
 docs/homeworks/pics:
 total 1984
-drwxr-xr-x@  9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff     896 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  116002 Oct 29 14:15 big_five_eng.png
--rw-r--r--@  1 antonangelgardt  staff    6204 Oct 29 14:15 favicon.png
--rw-r--r--@  1 antonangelgardt  staff  282249 Oct 29 14:15 hw-cover.png
--rw-r--r--@  1 antonangelgardt  staff    4805 Oct 29 14:15 logo.png
--rw-r--r--@  1 antonangelgardt  staff  206157 Oct 29 14:15 vs-grid-2.jpg
--rw-r--r--@  1 antonangelgardt  staff  227082 Oct 29 14:15 vs-grid-3.jpg
--rw-r--r--@  1 antonangelgardt  staff  158120 Oct 29 14:15 vs-grid.jpg
+drwxr-xr-x   9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff     896 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  116002 Nov  8 17:30 big_five_eng.png
+-rw-r--r--   1 antonangelgardt  staff    6204 Nov  8 17:30 favicon.png
+-rw-r--r--   1 antonangelgardt  staff  282249 Nov  8 17:30 hw-cover.png
+-rw-r--r--   1 antonangelgardt  staff    4805 Nov  8 17:30 logo.png
+-rw-r--r--   1 antonangelgardt  staff  206157 Nov  8 17:30 vs-grid-2.jpg
+-rw-r--r--   1 antonangelgardt  staff  227082 Nov  8 17:30 vs-grid-3.jpg
+-rw-r--r--   1 antonangelgardt  staff  158120 Nov  8 17:30 vs-grid.jpg
 
 docs/homeworks/site_libs:
 total 0
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 .
-drwxr-xr-x@ 28 antonangelgardt  staff  896 Oct 29 14:15 ..
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 bootstrap
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 quarto-nav
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-search
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 .
+drwxr-xr-x  28 antonangelgardt  staff  896 Nov  8 17:30 ..
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 bootstrap
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 quarto-nav
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-search
 
 docs/homeworks/site_libs/bootstrap:
 total 2560
-drwxr-xr-x@ 8 antonangelgardt  staff     256 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  473916 Oct 29 14:15 bootstrap-dark.min.css
--rw-r--r--@ 1 antonangelgardt  staff   98163 Oct 29 14:15 bootstrap-icons.css
--rw-r--r--@ 1 antonangelgardt  staff  176200 Oct 29 14:15 bootstrap-icons.woff
--rw-r--r--@ 1 antonangelgardt  staff  474080 Oct 29 14:15 bootstrap.min.css
--rw-r--r--@ 1 antonangelgardt  staff   80668 Oct 29 14:15 bootstrap.min.js
-drwxr-xr-x@ 6 antonangelgardt  staff     192 Oct 29 14:15 pics
+drwxr-xr-x  8 antonangelgardt  staff     256 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  473916 Nov  8 17:30 bootstrap-dark.min.css
+-rw-r--r--  1 antonangelgardt  staff   98163 Nov  8 17:30 bootstrap-icons.css
+-rw-r--r--  1 antonangelgardt  staff  176200 Nov  8 17:30 bootstrap-icons.woff
+-rw-r--r--  1 antonangelgardt  staff  474080 Nov  8 17:30 bootstrap.min.css
+-rw-r--r--  1 antonangelgardt  staff   80668 Nov  8 17:30 bootstrap.min.js
+drwxr-xr-x  6 antonangelgardt  staff     192 Nov  8 17:30 pics
 
 docs/homeworks/site_libs/bootstrap/pics:
 total 200
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 8 antonangelgardt  staff    256 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  27028 Oct 29 14:15 lab_easy.png
--rw-r--r--@ 1 antonangelgardt  staff  27813 Oct 29 14:15 lab_extreme.png
--rw-r--r--@ 1 antonangelgardt  staff  19367 Oct 29 14:15 lab_hard.png
--rw-r--r--@ 1 antonangelgardt  staff  23693 Oct 29 14:15 lab_medium.png
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  8 antonangelgardt  staff    256 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  27028 Nov  8 17:30 lab_easy.png
+-rw-r--r--  1 antonangelgardt  staff  27813 Nov  8 17:30 lab_extreme.png
+-rw-r--r--  1 antonangelgardt  staff  19367 Nov  8 17:30 lab_hard.png
+-rw-r--r--  1 antonangelgardt  staff  23693 Nov  8 17:30 lab_medium.png
 
 docs/homeworks/site_libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/homeworks/site_libs/quarto-html:
 total 184
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   5888 Oct 29 14:15 anchor.min.js
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff   2770 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff   3135 Oct 29 14:15 quarto-syntax-highlighting.css
--rw-r--r--@ 1 antonangelgardt  staff  28427 Oct 29 14:15 quarto.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   5888 Nov  8 17:30 anchor.min.js
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff   2770 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff   3135 Nov  8 17:30 quarto-syntax-highlighting.css
+-rw-r--r--  1 antonangelgardt  staff  28427 Nov  8 17:30 quarto.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/homeworks/site_libs/quarto-nav:
 total 40
-drwxr-xr-x@ 4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  4570 Oct 29 14:15 headroom.min.js
--rw-r--r--@ 1 antonangelgardt  staff  8672 Oct 29 14:15 quarto-nav.js
+drwxr-xr-x  4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  4570 Nov  8 17:30 headroom.min.js
+-rw-r--r--  1 antonangelgardt  staff  8672 Nov  8 17:30 quarto-nav.js
 
 docs/homeworks/site_libs/quarto-search:
 total 312
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  92971 Oct 29 14:15 autocomplete.umd.js
--rw-r--r--@ 1 antonangelgardt  staff  23539 Oct 29 14:15 fuse.min.js
--rw-r--r--@ 1 antonangelgardt  staff  37117 Oct 29 14:15 quarto-search.js
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  92971 Nov  8 17:30 autocomplete.umd.js
+-rw-r--r--  1 antonangelgardt  staff  23539 Nov  8 17:30 fuse.min.js
+-rw-r--r--  1 antonangelgardt  staff  37117 Nov  8 17:30 quarto-search.js
 
 docs/hub:
 total 328
-drwxr-xr-x@ 10 antonangelgardt  staff    320 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff    320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  28182 Oct 29 14:15 how-is-it-made.html
--rw-r--r--@  1 antonangelgardt  staff  29899 Oct 29 14:15 how-to-support.html
--rw-r--r--@  1 antonangelgardt  staff  50323 Oct 29 14:15 index.html
-drwxr-xr-x@  4 antonangelgardt  staff    128 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff  14297 Oct 29 14:15 search.json
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 site_libs
--rw-r--r--@  1 antonangelgardt  staff     17 Oct 29 14:15 styles.css
--rw-r--r--@  1 antonangelgardt  staff  30919 Oct 29 14:15 what-is-it.html
+drwxr-xr-x  10 antonangelgardt  staff    320 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff    320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  28182 Nov  8 17:30 how-is-it-made.html
+-rw-r--r--   1 antonangelgardt  staff  29899 Nov  8 17:30 how-to-support.html
+-rw-r--r--   1 antonangelgardt  staff  50323 Nov  8 17:30 index.html
+drwxr-xr-x   4 antonangelgardt  staff    128 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff  14269 Nov  8 17:30 search.json
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 site_libs
+-rw-r--r--   1 antonangelgardt  staff     17 Nov  8 17:30 styles.css
+-rw-r--r--   1 antonangelgardt  staff  31033 Nov  8 17:30 what-is-it.html
 
 docs/hub/pics:
 total 32
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff   320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6204 Oct 29 14:15 favicon.png
--rw-r--r--@  1 antonangelgardt  staff  4805 Oct 29 14:15 logo.png
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff   320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6204 Nov  8 17:30 favicon.png
+-rw-r--r--   1 antonangelgardt  staff  4805 Nov  8 17:30 logo.png
 
 docs/hub/site_libs:
 total 0
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff  320 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 bootstrap
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 quarto-nav
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-search
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff  320 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 bootstrap
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 quarto-nav
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-search
 
 docs/hub/site_libs/bootstrap:
 total 2560
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  472798 Oct 29 14:15 bootstrap-dark.min.css
--rw-r--r--@ 1 antonangelgardt  staff   98163 Oct 29 14:15 bootstrap-icons.css
--rw-r--r--@ 1 antonangelgardt  staff  176200 Oct 29 14:15 bootstrap-icons.woff
--rw-r--r--@ 1 antonangelgardt  staff  472971 Oct 29 14:15 bootstrap.min.css
--rw-r--r--@ 1 antonangelgardt  staff   80668 Oct 29 14:15 bootstrap.min.js
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  472798 Nov  8 17:30 bootstrap-dark.min.css
+-rw-r--r--  1 antonangelgardt  staff   98163 Nov  8 17:30 bootstrap-icons.css
+-rw-r--r--  1 antonangelgardt  staff  176200 Nov  8 17:30 bootstrap-icons.woff
+-rw-r--r--  1 antonangelgardt  staff  472971 Nov  8 17:30 bootstrap.min.css
+-rw-r--r--  1 antonangelgardt  staff   80668 Nov  8 17:30 bootstrap.min.js
 
 docs/hub/site_libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/hub/site_libs/quarto-html:
 total 184
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   5888 Oct 29 14:15 anchor.min.js
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting.css
--rw-r--r--@ 1 antonangelgardt  staff  28427 Oct 29 14:15 quarto.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   5888 Nov  8 17:30 anchor.min.js
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting.css
+-rw-r--r--  1 antonangelgardt  staff  28427 Nov  8 17:30 quarto.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/hub/site_libs/quarto-nav:
 total 40
-drwxr-xr-x@ 4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  4570 Oct 29 14:15 headroom.min.js
--rw-r--r--@ 1 antonangelgardt  staff  8672 Oct 29 14:15 quarto-nav.js
+drwxr-xr-x  4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  4570 Nov  8 17:30 headroom.min.js
+-rw-r--r--  1 antonangelgardt  staff  8672 Nov  8 17:30 quarto-nav.js
 
 docs/hub/site_libs/quarto-search:
 total 312
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  92971 Oct 29 14:15 autocomplete.umd.js
--rw-r--r--@ 1 antonangelgardt  staff  23539 Oct 29 14:15 fuse.min.js
--rw-r--r--@ 1 antonangelgardt  staff  37117 Oct 29 14:15 quarto-search.js
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  92971 Nov  8 17:30 autocomplete.umd.js
+-rw-r--r--  1 antonangelgardt  staff  23539 Nov  8 17:30 fuse.min.js
+-rw-r--r--  1 antonangelgardt  staff  37117 Nov  8 17:30 quarto-search.js
 
 docs/lectures:
-total 5680
-drwxr-xr-x@ 36 antonangelgardt  staff    1152 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff     320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   35644 Oct 29 14:15 index.html
--rw-r--r--@  1 antonangelgardt  staff  158401 Oct 29 14:15 l1.html
--rw-r--r--@  1 antonangelgardt  staff  120130 Oct 29 14:15 l10.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l10_files
--rw-r--r--@  1 antonangelgardt  staff   47521 Oct 29 14:15 l11.html
--rw-r--r--@  1 antonangelgardt  staff   64175 Oct 29 14:15 l12.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l12_files
--rw-r--r--@  1 antonangelgardt  staff   99491 Oct 29 14:15 l13.html
--rw-r--r--@  1 antonangelgardt  staff   75318 Oct 29 14:15 l14.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l14_files
--rw-r--r--@  1 antonangelgardt  staff   58732 Oct 29 14:15 l15.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l1_files
--rw-r--r--@  1 antonangelgardt  staff  216979 Oct 29 14:15 l2.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l2_files
--rw-r--r--@  1 antonangelgardt  staff  285302 Oct 29 14:15 l3.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l3_files
--rw-r--r--@  1 antonangelgardt  staff  103527 Oct 29 14:15 l4.html
--rw-r--r--@  1 antonangelgardt  staff  127694 Oct 29 14:15 l5.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l5_files
--rw-r--r--@  1 antonangelgardt  staff  119107 Oct 29 14:15 l6.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l6_files
--rw-r--r--@  1 antonangelgardt  staff  192543 Oct 29 14:15 l7.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l7_files
--rw-r--r--@  1 antonangelgardt  staff  125738 Oct 29 14:15 l8.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l8_files
--rw-r--r--@  1 antonangelgardt  staff  113703 Oct 29 14:15 l9.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 l9_files
--rw-r--r--@  1 antonangelgardt  staff   35254 Oct 29 14:15 part-andan.html
--rw-r--r--@  1 antonangelgardt  staff   35089 Oct 29 14:15 part-math.html
--rw-r--r--@  1 antonangelgardt  staff   34839 Oct 29 14:15 part-r.html
-drwxr-xr-x@ 83 antonangelgardt  staff    2656 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff   35655 Oct 29 14:15 references.html
--rw-r--r--@  1 antonangelgardt  staff  780924 Oct 29 14:15 search.json
-drwxr-xr-x@ 15 antonangelgardt  staff     480 Oct 29 14:15 site_libs
+total 5560
+drwxr-xr-x  35 antonangelgardt  staff    1120 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff     320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   35267 Nov  8 17:30 index.html
+-rw-r--r--   1 antonangelgardt  staff  158024 Nov  8 17:30 l1.html
+-rw-r--r--   1 antonangelgardt  staff  119699 Nov  8 17:30 l10.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l10_files
+-rw-r--r--   1 antonangelgardt  staff   63884 Nov  8 17:30 l12.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l12_files
+-rw-r--r--   1 antonangelgardt  staff   99114 Nov  8 17:30 l13.html
+-rw-r--r--   1 antonangelgardt  staff   74941 Nov  8 17:30 l14.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l14_files
+-rw-r--r--   1 antonangelgardt  staff   58355 Nov  8 17:30 l15.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l1_files
+-rw-r--r--   1 antonangelgardt  staff  216602 Nov  8 17:30 l2.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l2_files
+-rw-r--r--   1 antonangelgardt  staff  284925 Nov  8 17:30 l3.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l3_files
+-rw-r--r--   1 antonangelgardt  staff  103150 Nov  8 17:30 l4.html
+-rw-r--r--   1 antonangelgardt  staff  127317 Nov  8 17:30 l5.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l5_files
+-rw-r--r--   1 antonangelgardt  staff  118730 Nov  8 17:30 l6.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l6_files
+-rw-r--r--   1 antonangelgardt  staff  192166 Nov  8 17:30 l7.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l7_files
+-rw-r--r--   1 antonangelgardt  staff  125361 Nov  8 17:30 l8.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l8_files
+-rw-r--r--   1 antonangelgardt  staff  113326 Nov  8 17:30 l9.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 l9_files
+-rw-r--r--   1 antonangelgardt  staff   34877 Nov  8 17:30 part-andan.html
+-rw-r--r--   1 antonangelgardt  staff   34712 Nov  8 17:30 part-math.html
+-rw-r--r--   1 antonangelgardt  staff   34462 Nov  8 17:30 part-r.html
+drwxr-xr-x  83 antonangelgardt  staff    2656 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff   35278 Nov  8 17:30 references.html
+-rw-r--r--   1 antonangelgardt  staff  777957 Nov  8 17:30 search.json
+drwxr-xr-x  15 antonangelgardt  staff     480 Nov  8 17:30 site_libs
 
 docs/lectures/l10_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 figure-html
 
 docs/lectures/l10_files/figure-html:
 total 472
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  84124 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@ 1 antonangelgardt  staff  67611 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@ 1 antonangelgardt  staff  85366 Oct 29 14:15 unnamed-chunk-3-1.png
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  84124 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--  1 antonangelgardt  staff  67611 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--  1 antonangelgardt  staff  85366 Nov  8 17:30 unnamed-chunk-3-1.png
 
 docs/lectures/l12_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff   224 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff   224 Nov  8 17:30 figure-html
 
 docs/lectures/l12_files/figure-html:
 total 1192
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   80762 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@ 1 antonangelgardt  staff   91143 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@ 1 antonangelgardt  staff  147000 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@ 1 antonangelgardt  staff  142199 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@ 1 antonangelgardt  staff  142293 Oct 29 14:15 unnamed-chunk-5-1.png
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   80762 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--  1 antonangelgardt  staff   91143 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--  1 antonangelgardt  staff  147000 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--  1 antonangelgardt  staff  142199 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--  1 antonangelgardt  staff  142293 Nov  8 17:30 unnamed-chunk-5-1.png
 
 docs/lectures/l14_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 figure-html
 
 docs/lectures/l14_files/figure-html:
 total 744
-drwxr-xr-x@ 5 antonangelgardt  staff     160 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   74848 Oct 29 14:15 geomprob-dots-1.png
--rw-r--r--@ 1 antonangelgardt  staff  236839 Oct 29 14:15 geomprob-incircle-1.png
--rw-r--r--@ 1 antonangelgardt  staff   63880 Oct 29 14:15 geomprob-square-14-1.png
+drwxr-xr-x  5 antonangelgardt  staff     160 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   74246 Nov  8 17:30 geomprob-dots-1.png
+-rw-r--r--  1 antonangelgardt  staff  233578 Nov  8 17:30 geomprob-incircle-1.png
+-rw-r--r--  1 antonangelgardt  staff   63880 Nov  8 17:30 geomprob-square-14-1.png
 
 docs/lectures/l1_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@  6 antonangelgardt  staff   192 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   6 antonangelgardt  staff   192 Nov  8 17:30 figure-html
 
 docs/lectures/l1_files/figure-html:
 total 432
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  48523 Oct 29 14:15 vec-classic-1.png
--rw-r--r--@ 1 antonangelgardt  staff  46339 Oct 29 14:15 vec-free-1.png
--rw-r--r--@ 1 antonangelgardt  staff  42802 Oct 29 14:15 vec-remove-vector-1.png
--rw-r--r--@ 1 antonangelgardt  staff  77753 Oct 29 14:15 vec-same-1.png
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  48523 Nov  8 17:30 vec-classic-1.png
+-rw-r--r--  1 antonangelgardt  staff  46339 Nov  8 17:30 vec-free-1.png
+-rw-r--r--  1 antonangelgardt  staff  42802 Nov  8 17:30 vec-remove-vector-1.png
+-rw-r--r--  1 antonangelgardt  staff  77753 Nov  8 17:30 vec-same-1.png
 
 docs/lectures/l2_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 17 antonangelgardt  staff   544 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  17 antonangelgardt  staff   544 Nov  8 17:30 figure-html
 
 docs/lectures/l2_files/figure-html:
 total 2904
-drwxr-xr-x@ 17 antonangelgardt  staff     544 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  213006 Oct 29 14:15 unnamed-chunk-103-1.png
--rw-r--r--@  1 antonangelgardt  staff   45933 Oct 29 14:15 unnamed-chunk-104-1.png
--rw-r--r--@  1 antonangelgardt  staff  150017 Oct 29 14:15 unnamed-chunk-105-1.png
--rw-r--r--@  1 antonangelgardt  staff  108790 Oct 29 14:15 unnamed-chunk-106-1.png
--rw-r--r--@  1 antonangelgardt  staff  118135 Oct 29 14:15 unnamed-chunk-107-1.png
--rw-r--r--@  1 antonangelgardt  staff   43181 Oct 29 14:15 unnamed-chunk-108-1.png
--rw-r--r--@  1 antonangelgardt  staff  117408 Oct 29 14:15 unnamed-chunk-109-1.png
--rw-r--r--@  1 antonangelgardt  staff   50565 Oct 29 14:15 unnamed-chunk-110-1.png
--rw-r--r--@  1 antonangelgardt  staff   49166 Oct 29 14:15 unnamed-chunk-111-1.png
--rw-r--r--@  1 antonangelgardt  staff  118783 Oct 29 14:15 unnamed-chunk-112-1.png
--rw-r--r--@  1 antonangelgardt  staff   45965 Oct 29 14:15 unnamed-chunk-113-1.png
--rw-r--r--@  1 antonangelgardt  staff   59940 Oct 29 14:15 unnamed-chunk-114-1.png
--rw-r--r--@  1 antonangelgardt  staff  126487 Oct 29 14:15 unnamed-chunk-115-1.png
--rw-r--r--@  1 antonangelgardt  staff  120981 Oct 29 14:15 unnamed-chunk-116-1.png
--rw-r--r--@  1 antonangelgardt  staff   86588 Oct 29 14:15 unnamed-chunk-99-1.png
+drwxr-xr-x  17 antonangelgardt  staff     544 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  213006 Nov  8 17:30 unnamed-chunk-103-1.png
+-rw-r--r--   1 antonangelgardt  staff   45933 Nov  8 17:30 unnamed-chunk-104-1.png
+-rw-r--r--   1 antonangelgardt  staff  150017 Nov  8 17:30 unnamed-chunk-105-1.png
+-rw-r--r--   1 antonangelgardt  staff  108790 Nov  8 17:30 unnamed-chunk-106-1.png
+-rw-r--r--   1 antonangelgardt  staff  118135 Nov  8 17:30 unnamed-chunk-107-1.png
+-rw-r--r--   1 antonangelgardt  staff   43181 Nov  8 17:30 unnamed-chunk-108-1.png
+-rw-r--r--   1 antonangelgardt  staff  117408 Nov  8 17:30 unnamed-chunk-109-1.png
+-rw-r--r--   1 antonangelgardt  staff   50565 Nov  8 17:30 unnamed-chunk-110-1.png
+-rw-r--r--   1 antonangelgardt  staff   49166 Nov  8 17:30 unnamed-chunk-111-1.png
+-rw-r--r--   1 antonangelgardt  staff  118783 Nov  8 17:30 unnamed-chunk-112-1.png
+-rw-r--r--   1 antonangelgardt  staff   45965 Nov  8 17:30 unnamed-chunk-113-1.png
+-rw-r--r--   1 antonangelgardt  staff   59940 Nov  8 17:30 unnamed-chunk-114-1.png
+-rw-r--r--   1 antonangelgardt  staff  126487 Nov  8 17:30 unnamed-chunk-115-1.png
+-rw-r--r--   1 antonangelgardt  staff  120981 Nov  8 17:30 unnamed-chunk-116-1.png
+-rw-r--r--   1 antonangelgardt  staff   86588 Nov  8 17:30 unnamed-chunk-99-1.png
 
 docs/lectures/l3_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 13 antonangelgardt  staff   416 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  13 antonangelgardt  staff   416 Nov  8 17:30 figure-html
 
 docs/lectures/l3_files/figure-html:
 total 1496
-drwxr-xr-x@ 13 antonangelgardt  staff     416 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   80684 Oct 29 14:15 deriv-graph-1.png
--rw-r--r--@  1 antonangelgardt  staff   58991 Oct 29 14:15 deriv1-1.png
--rw-r--r--@  1 antonangelgardt  staff   65028 Oct 29 14:15 deriv2-1.png
--rw-r--r--@  1 antonangelgardt  staff   71913 Oct 29 14:15 deriv3-1.png
--rw-r--r--@  1 antonangelgardt  staff   82150 Oct 29 14:15 deriv4-1.png
--rw-r--r--@  1 antonangelgardt  staff   48362 Oct 29 14:15 func-graphs-1.png
--rw-r--r--@  1 antonangelgardt  staff  106299 Oct 29 14:15 func_graphs-1.png
--rw-r--r--@  1 antonangelgardt  staff   57379 Oct 29 14:15 integral-plot-1.png
--rw-r--r--@  1 antonangelgardt  staff   61189 Oct 29 14:15 integral-plot005-1.png
--rw-r--r--@  1 antonangelgardt  staff   59740 Oct 29 14:15 integral-plot01-1.png
--rw-r--r--@  1 antonangelgardt  staff   56896 Oct 29 14:15 unnamed-chunk-1-1.png
+drwxr-xr-x  13 antonangelgardt  staff     416 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   80684 Nov  8 17:30 deriv-graph-1.png
+-rw-r--r--   1 antonangelgardt  staff   58991 Nov  8 17:30 deriv1-1.png
+-rw-r--r--   1 antonangelgardt  staff   65028 Nov  8 17:30 deriv2-1.png
+-rw-r--r--   1 antonangelgardt  staff   71913 Nov  8 17:30 deriv3-1.png
+-rw-r--r--   1 antonangelgardt  staff   82150 Nov  8 17:30 deriv4-1.png
+-rw-r--r--   1 antonangelgardt  staff   48362 Nov  8 17:30 func-graphs-1.png
+-rw-r--r--   1 antonangelgardt  staff  106299 Nov  8 17:30 func_graphs-1.png
+-rw-r--r--   1 antonangelgardt  staff   57379 Nov  8 17:30 integral-plot-1.png
+-rw-r--r--   1 antonangelgardt  staff   61189 Nov  8 17:30 integral-plot005-1.png
+-rw-r--r--   1 antonangelgardt  staff   59740 Nov  8 17:30 integral-plot01-1.png
+-rw-r--r--   1 antonangelgardt  staff   56896 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/lectures/l5_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 21 antonangelgardt  staff   672 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  21 antonangelgardt  staff   672 Nov  8 17:30 figure-html
 
 docs/lectures/l5_files/figure-html:
-total 6448
-drwxr-xr-x@ 21 antonangelgardt  staff     672 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   44872 Oct 29 14:15 cfd-dice-1.png
--rw-r--r--@  1 antonangelgardt  staff  145537 Oct 29 14:15 cluster-clusters-1.png
--rw-r--r--@  1 antonangelgardt  staff  153553 Oct 29 14:15 cluster-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  163468 Oct 29 14:15 cluster-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff   74963 Oct 29 14:15 geomprob-dots-1.png
--rw-r--r--@  1 antonangelgardt  staff  236002 Oct 29 14:15 geomprob-incircle-1.png
--rw-r--r--@  1 antonangelgardt  staff   63880 Oct 29 14:15 geomprob-square-1.png
--rw-r--r--@  1 antonangelgardt  staff  128327 Oct 29 14:15 norm-dist-1.png
--rw-r--r--@  1 antonangelgardt  staff   83945 Oct 29 14:15 pdf-inetrvals-1.png
--rw-r--r--@  1 antonangelgardt  staff   45535 Oct 29 14:15 pdf-segment-nolabs-1.png
--rw-r--r--@  1 antonangelgardt  staff   49444 Oct 29 14:15 pmf-dice-1.png
--rw-r--r--@  1 antonangelgardt  staff   49444 Oct 29 14:15 pmf-dice-repeat-1.png
--rw-r--r--@  1 antonangelgardt  staff  110536 Oct 29 14:15 pmf-vs-pdf-1.png
--rw-r--r--@  1 antonangelgardt  staff  296970 Oct 29 14:15 simple-random-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  290307 Oct 29 14:15 simple-random-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff  406849 Oct 29 14:15 strat-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  436096 Oct 29 14:15 strat-pop-strata-1.png
--rw-r--r--@  1 antonangelgardt  staff  364238 Oct 29 14:15 strat-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff  122392 Oct 29 14:15 unnamed-chunk-1-1.png
+total 6480
+drwxr-xr-x  21 antonangelgardt  staff     672 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   44872 Nov  8 17:30 cfd-dice-1.png
+-rw-r--r--   1 antonangelgardt  staff  146877 Nov  8 17:30 cluster-clusters-1.png
+-rw-r--r--   1 antonangelgardt  staff  154816 Nov  8 17:30 cluster-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  164393 Nov  8 17:30 cluster-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff   74460 Nov  8 17:30 geomprob-dots-1.png
+-rw-r--r--   1 antonangelgardt  staff  234062 Nov  8 17:30 geomprob-incircle-1.png
+-rw-r--r--   1 antonangelgardt  staff   63880 Nov  8 17:30 geomprob-square-1.png
+-rw-r--r--   1 antonangelgardt  staff  128327 Nov  8 17:30 norm-dist-1.png
+-rw-r--r--   1 antonangelgardt  staff   83945 Nov  8 17:30 pdf-inetrvals-1.png
+-rw-r--r--   1 antonangelgardt  staff   45535 Nov  8 17:30 pdf-segment-nolabs-1.png
+-rw-r--r--   1 antonangelgardt  staff   49444 Nov  8 17:30 pmf-dice-1.png
+-rw-r--r--   1 antonangelgardt  staff   49444 Nov  8 17:30 pmf-dice-repeat-1.png
+-rw-r--r--   1 antonangelgardt  staff  110536 Nov  8 17:30 pmf-vs-pdf-1.png
+-rw-r--r--   1 antonangelgardt  staff  298065 Nov  8 17:30 simple-random-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  295039 Nov  8 17:30 simple-random-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff  409575 Nov  8 17:30 strat-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  437493 Nov  8 17:30 strat-pop-strata-1.png
+-rw-r--r--   1 antonangelgardt  staff  366458 Nov  8 17:30 strat-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff  122392 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/lectures/l6_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 figure-html
 
 docs/lectures/l6_files/figure-html:
-total 2088
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   83797 Oct 29 14:15 alpha-raise-1.png
--rw-r--r--@  1 antonangelgardt  staff   71378 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff  112923 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  108240 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff  258257 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff   87466 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   71378 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff  112661 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff   46187 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff   93347 Oct 29 14:15 unnamed-chunk-9-1.png
+total 2144
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   83797 Nov  8 17:30 alpha-raise-1.png
+-rw-r--r--   1 antonangelgardt  staff   71378 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff  108920 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  135760 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff  262872 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff   87466 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   71378 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff  114301 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff   46187 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff   93347 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/lectures/l7_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 48 antonangelgardt  staff  1536 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  48 antonangelgardt  staff  1536 Nov  8 17:30 figure-html
 
 docs/lectures/l7_files/figure-html:
 total 6832
-drwxr-xr-x@ 48 antonangelgardt  staff    1536 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   48886 Oct 29 14:15 68_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   48283 Oct 29 14:15 99_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   40929 Oct 29 14:15 boxplot-1.png
--rw-r--r--@  1 antonangelgardt  staff   51889 Oct 29 14:15 boxplot_annotated-1.png
--rw-r--r--@  1 antonangelgardt  staff   68694 Oct 29 14:15 central_tendency_asymm_left-1.png
--rw-r--r--@  1 antonangelgardt  staff   77499 Oct 29 14:15 central_tendency_asymm_right-1.png
--rw-r--r--@  1 antonangelgardt  staff   75420 Oct 29 14:15 central_tendency_bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff   73197 Oct 29 14:15 central_tendency_symm-1.png
--rw-r--r--@  1 antonangelgardt  staff   72339 Oct 29 14:15 distributions_with_the_same_means_mean-1.png
--rw-r--r--@  1 antonangelgardt  staff   71310 Oct 29 14:15 distributions_with_the_same_means_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   47970 Oct 29 14:15 fifth_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   78175 Oct 29 14:15 fig-bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff  106719 Oct 29 14:15 fig-bimodal-struct-1.png
--rw-r--r--@  1 antonangelgardt  staff   60803 Oct 29 14:15 fig-binom-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff  106118 Oct 29 14:15 fig-continuous-freqs-1.png
--rw-r--r--@  1 antonangelgardt  staff   91187 Oct 29 14:15 fig-continuous-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   83735 Oct 29 14:15 fig-median-bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff   83940 Oct 29 14:15 fig-median-left-skew-1.png
--rw-r--r--@  1 antonangelgardt  staff  103943 Oct 29 14:15 fig-median-norm-1.png
--rw-r--r--@  1 antonangelgardt  staff   86652 Oct 29 14:15 fig-median-right-skew-1.png
--rw-r--r--@  1 antonangelgardt  staff   59143 Oct 29 14:15 fig-mode-nbinom-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff   71527 Oct 29 14:15 fig-mode-norm-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff   71074 Oct 29 14:15 fig-mode-pmf-1.png
--rw-r--r--@  1 antonangelgardt  staff   77781 Oct 29 14:15 fig-norm-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   55272 Oct 29 14:15 fig-poiss-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   79735 Oct 29 14:15 fig-polymodal-1.png
--rw-r--r--@  1 antonangelgardt  staff   48984 Oct 29 14:15 iqr_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff  109568 Oct 29 14:15 mean_feature_1-1.png
--rw-r--r--@  1 antonangelgardt  staff   91353 Oct 29 14:15 mean_feature_2-1.png
--rw-r--r--@  1 antonangelgardt  staff   53002 Oct 29 14:15 quartiles_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   71242 Oct 29 14:15 range_problem-1.png
--rw-r--r--@  1 antonangelgardt  staff  109568 Oct 29 14:15 sd_feature_1-1.png
--rw-r--r--@  1 antonangelgardt  staff   91353 Oct 29 14:15 sd_feature_2-1.png
--rw-r--r--@  1 antonangelgardt  staff   45957 Oct 29 14:15 taia_score_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   65698 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff   70136 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff   67705 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff   70825 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff   69088 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@  1 antonangelgardt  staff   74899 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff   70435 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   72749 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff   72722 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff   78875 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff   88713 Oct 29 14:15 unnamed-chunk-9-1.png
--rw-r--r--@  1 antonangelgardt  staff   96469 Oct 29 14:15 zero_deviation_sum-1.png
+drwxr-xr-x  48 antonangelgardt  staff    1536 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   48886 Nov  8 17:30 68_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   48283 Nov  8 17:30 99_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   40929 Nov  8 17:30 boxplot-1.png
+-rw-r--r--   1 antonangelgardt  staff   51889 Nov  8 17:30 boxplot_annotated-1.png
+-rw-r--r--   1 antonangelgardt  staff   68694 Nov  8 17:30 central_tendency_asymm_left-1.png
+-rw-r--r--   1 antonangelgardt  staff   77499 Nov  8 17:30 central_tendency_asymm_right-1.png
+-rw-r--r--   1 antonangelgardt  staff   75420 Nov  8 17:30 central_tendency_bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff   73197 Nov  8 17:30 central_tendency_symm-1.png
+-rw-r--r--   1 antonangelgardt  staff   72339 Nov  8 17:30 distributions_with_the_same_means_mean-1.png
+-rw-r--r--   1 antonangelgardt  staff   71310 Nov  8 17:30 distributions_with_the_same_means_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   47970 Nov  8 17:30 fifth_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   78175 Nov  8 17:30 fig-bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff  106719 Nov  8 17:30 fig-bimodal-struct-1.png
+-rw-r--r--   1 antonangelgardt  staff   60803 Nov  8 17:30 fig-binom-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff  106118 Nov  8 17:30 fig-continuous-freqs-1.png
+-rw-r--r--   1 antonangelgardt  staff   91187 Nov  8 17:30 fig-continuous-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   83735 Nov  8 17:30 fig-median-bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff   83940 Nov  8 17:30 fig-median-left-skew-1.png
+-rw-r--r--   1 antonangelgardt  staff  103943 Nov  8 17:30 fig-median-norm-1.png
+-rw-r--r--   1 antonangelgardt  staff   86652 Nov  8 17:30 fig-median-right-skew-1.png
+-rw-r--r--   1 antonangelgardt  staff   59143 Nov  8 17:30 fig-mode-nbinom-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff   71527 Nov  8 17:30 fig-mode-norm-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff   71074 Nov  8 17:30 fig-mode-pmf-1.png
+-rw-r--r--   1 antonangelgardt  staff   77781 Nov  8 17:30 fig-norm-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   55272 Nov  8 17:30 fig-poiss-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   79735 Nov  8 17:30 fig-polymodal-1.png
+-rw-r--r--   1 antonangelgardt  staff   48984 Nov  8 17:30 iqr_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff  109568 Nov  8 17:30 mean_feature_1-1.png
+-rw-r--r--   1 antonangelgardt  staff   91353 Nov  8 17:30 mean_feature_2-1.png
+-rw-r--r--   1 antonangelgardt  staff   53002 Nov  8 17:30 quartiles_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   71242 Nov  8 17:30 range_problem-1.png
+-rw-r--r--   1 antonangelgardt  staff  109568 Nov  8 17:30 sd_feature_1-1.png
+-rw-r--r--   1 antonangelgardt  staff   91353 Nov  8 17:30 sd_feature_2-1.png
+-rw-r--r--   1 antonangelgardt  staff   45957 Nov  8 17:30 taia_score_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   65698 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff   70136 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff   67705 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff   70825 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff   69088 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--   1 antonangelgardt  staff   74899 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff   70435 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   72749 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff   72722 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff   78875 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff   88713 Nov  8 17:30 unnamed-chunk-9-1.png
+-rw-r--r--   1 antonangelgardt  staff   96469 Nov  8 17:30 zero_deviation_sum-1.png
 
 docs/lectures/l8_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 22 antonangelgardt  staff   704 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  22 antonangelgardt  staff   704 Nov  8 17:30 figure-html
 
 docs/lectures/l8_files/figure-html:
 total 3432
-drwxr-xr-x@ 22 antonangelgardt  staff     704 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   84256 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff   75591 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff   71396 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff   89004 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff  109907 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff   77748 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@  1 antonangelgardt  staff  111791 Oct 29 14:15 unnamed-chunk-15-1.png
--rw-r--r--@  1 antonangelgardt  staff  104870 Oct 29 14:15 unnamed-chunk-16-1.png
--rw-r--r--@  1 antonangelgardt  staff   73748 Oct 29 14:15 unnamed-chunk-17-1.png
--rw-r--r--@  1 antonangelgardt  staff  113283 Oct 29 14:15 unnamed-chunk-18-1.png
--rw-r--r--@  1 antonangelgardt  staff   73714 Oct 29 14:15 unnamed-chunk-19-1.png
--rw-r--r--@  1 antonangelgardt  staff   98477 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  115753 Oct 29 14:15 unnamed-chunk-20-1.png
--rw-r--r--@  1 antonangelgardt  staff   85778 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff   78572 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff   78563 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   78316 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff   82744 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff   68261 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff   41880 Oct 29 14:15 unnamed-chunk-9-1.png
+drwxr-xr-x  22 antonangelgardt  staff     704 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   84256 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff   75591 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff   71396 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff   89004 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff  109907 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff   77748 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--   1 antonangelgardt  staff  111791 Nov  8 17:30 unnamed-chunk-15-1.png
+-rw-r--r--   1 antonangelgardt  staff  104870 Nov  8 17:30 unnamed-chunk-16-1.png
+-rw-r--r--   1 antonangelgardt  staff   73748 Nov  8 17:30 unnamed-chunk-17-1.png
+-rw-r--r--   1 antonangelgardt  staff  113283 Nov  8 17:30 unnamed-chunk-18-1.png
+-rw-r--r--   1 antonangelgardt  staff   73714 Nov  8 17:30 unnamed-chunk-19-1.png
+-rw-r--r--   1 antonangelgardt  staff   98477 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  115753 Nov  8 17:30 unnamed-chunk-20-1.png
+-rw-r--r--   1 antonangelgardt  staff   85778 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff   78572 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff   78563 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   78316 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff   82744 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff   68261 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff   41880 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/lectures/l9_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@ 24 antonangelgardt  staff   768 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  24 antonangelgardt  staff   768 Nov  8 17:30 figure-html
 
 docs/lectures/l9_files/figure-html:
 total 2792
-drwxr-xr-x@ 24 antonangelgardt  staff    768 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  63330 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff  70932 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff  82499 Oct 29 14:15 unnamed-chunk-10-2.png
--rw-r--r--@  1 antonangelgardt  staff  81554 Oct 29 14:15 unnamed-chunk-10-3.png
--rw-r--r--@  1 antonangelgardt  staff  71119 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff  63544 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff  36016 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff  42442 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@  1 antonangelgardt  staff  49818 Oct 29 14:15 unnamed-chunk-16-1.png
--rw-r--r--@  1 antonangelgardt  staff  57917 Oct 29 14:15 unnamed-chunk-17-1.png
--rw-r--r--@  1 antonangelgardt  staff  44587 Oct 29 14:15 unnamed-chunk-18-1.png
--rw-r--r--@  1 antonangelgardt  staff  57057 Oct 29 14:15 unnamed-chunk-19-1.png
--rw-r--r--@  1 antonangelgardt  staff  67008 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  50747 Oct 29 14:15 unnamed-chunk-20-1.png
--rw-r--r--@  1 antonangelgardt  staff  56479 Oct 29 14:15 unnamed-chunk-21-1.png
--rw-r--r--@  1 antonangelgardt  staff  70447 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff  71069 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff  65100 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff  63968 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff  69286 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff  75969 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff  74322 Oct 29 14:15 unnamed-chunk-9-1.png
+drwxr-xr-x  24 antonangelgardt  staff    768 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  63330 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff  70932 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff  82499 Nov  8 17:30 unnamed-chunk-10-2.png
+-rw-r--r--   1 antonangelgardt  staff  81554 Nov  8 17:30 unnamed-chunk-10-3.png
+-rw-r--r--   1 antonangelgardt  staff  71119 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff  63544 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff  36016 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff  42442 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--   1 antonangelgardt  staff  49818 Nov  8 17:30 unnamed-chunk-16-1.png
+-rw-r--r--   1 antonangelgardt  staff  57917 Nov  8 17:30 unnamed-chunk-17-1.png
+-rw-r--r--   1 antonangelgardt  staff  44587 Nov  8 17:30 unnamed-chunk-18-1.png
+-rw-r--r--   1 antonangelgardt  staff  57057 Nov  8 17:30 unnamed-chunk-19-1.png
+-rw-r--r--   1 antonangelgardt  staff  67008 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  50747 Nov  8 17:30 unnamed-chunk-20-1.png
+-rw-r--r--   1 antonangelgardt  staff  56479 Nov  8 17:30 unnamed-chunk-21-1.png
+-rw-r--r--   1 antonangelgardt  staff  70447 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff  71069 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff  65100 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff  63968 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff  69286 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff  75969 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff  74322 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/lectures/pics:
 total 17000
-drwxr-xr-x@ 83 antonangelgardt  staff    2656 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff    1152 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  331356 Oct 29 14:15 Correlation_examples.png
--rw-r--r--@  1 antonangelgardt  staff   38737 Oct 29 14:15 and.png
--rw-r--r--@  1 antonangelgardt  staff   42344 Oct 29 14:15 anti-join.png
--rw-r--r--@  1 antonangelgardt  staff  543353 Oct 29 14:15 antideriv.gif
--rw-r--r--@  1 antonangelgardt  staff   35172 Oct 29 14:15 auc1.jpg
--rw-r--r--@  1 antonangelgardt  staff   22237 Oct 29 14:15 auc2.jpg
--rw-r--r--@  1 antonangelgardt  staff   39335 Oct 29 14:15 auc3.jpg
--rw-r--r--@  1 antonangelgardt  staff   64657 Oct 29 14:15 auc4.jpg
--rw-r--r--@  1 antonangelgardt  staff   73082 Oct 29 14:15 auc5.jpg
--rw-r--r--@  1 antonangelgardt  staff   63152 Oct 29 14:15 bin_prob.jpg
--rw-r--r--@  1 antonangelgardt  staff   79841 Oct 29 14:15 bin_prob_curve.jpg
--rw-r--r--@  1 antonangelgardt  staff   92244 Oct 29 14:15 bin_prob_line.jpg
--rw-r--r--@  1 antonangelgardt  staff   39493 Oct 29 14:15 bin_y.jpg
--rw-r--r--@  1 antonangelgardt  staff   84128 Oct 29 14:15 cfa-model-0.jpg
--rw-r--r--@  1 antonangelgardt  staff   99843 Oct 29 14:15 cfa-model-1.jpg
--rw-r--r--@  1 antonangelgardt  staff   94088 Oct 29 14:15 cfa-model.jpg
--rw-r--r--@  1 antonangelgardt  staff  168134 Oct 29 14:15 cluster-dist-ave.jpg
--rw-r--r--@  1 antonangelgardt  staff   44583 Oct 29 14:15 cluster-dist-centr.jpg
--rw-r--r--@  1 antonangelgardt  staff   40484 Oct 29 14:15 cluster-dist-clos.jpg
--rw-r--r--@  1 antonangelgardt  staff   42538 Oct 29 14:15 cluster-dist-furth.jpg
--rw-r--r--@  1 antonangelgardt  staff   52025 Oct 29 14:15 cluster.jpg
--rw-r--r--@  1 antonangelgardt  staff  114463 Oct 29 14:15 cluster1.jpg
--rw-r--r--@  1 antonangelgardt  staff  112006 Oct 29 14:15 cluster2.jpg
--rw-r--r--@  1 antonangelgardt  staff  108403 Oct 29 14:15 cluster3.jpg
--rw-r--r--@  1 antonangelgardt  staff   32845 Oct 29 14:15 complement.png
--rw-r--r--@  1 antonangelgardt  staff   50113 Oct 29 14:15 decart-prod.png
--rw-r--r--@  1 antonangelgardt  staff   48030 Oct 29 14:15 dendr1.jpg
--rw-r--r--@  1 antonangelgardt  staff   95406 Oct 29 14:15 dendr2.jpg
--rw-r--r--@  1 antonangelgardt  staff   29383 Oct 29 14:15 deviance.jpg
--rw-r--r--@  1 antonangelgardt  staff   34012 Oct 29 14:15 difference.png
--rw-r--r--@  1 antonangelgardt  staff  105040 Oct 29 14:15 duplicate-keys.png
--rw-r--r--@  1 antonangelgardt  staff   76798 Oct 29 14:15 elbow.jpg
--rw-r--r--@  1 antonangelgardt  staff   38980 Oct 29 14:15 equivalence.png
--rw-r--r--@  1 antonangelgardt  staff    6204 Oct 29 14:15 favicon.png
--rw-r--r--@  1 antonangelgardt  staff   51111 Oct 29 14:15 full-join.png
--rw-r--r--@  1 antonangelgardt  staff   36104 Oct 29 14:15 implication.png
--rw-r--r--@  1 antonangelgardt  staff   38427 Oct 29 14:15 inner-join.png
--rw-r--r--@  1 antonangelgardt  staff   85990 Oct 29 14:15 interaction_main.jpg
--rw-r--r--@  1 antonangelgardt  staff   34287 Oct 29 14:15 intersection.png
--rw-r--r--@  1 antonangelgardt  staff   76558 Oct 29 14:15 joins-venn.png
--rw-r--r--@  1 antonangelgardt  staff   59113 Oct 29 14:15 kubik.jpg
--rw-r--r--@  1 antonangelgardt  staff  343210 Oct 29 14:15 lavash.jpg
--rw-r--r--@  1 antonangelgardt  staff  265948 Oct 29 14:15 lavash_dim.jpg
--rw-r--r--@  1 antonangelgardt  staff  283630 Oct 29 14:15 lec-cover.png
--rw-r--r--@  1 antonangelgardt  staff   44309 Oct 29 14:15 left-join.png
--rw-r--r--@  1 antonangelgardt  staff   56900 Oct 29 14:15 line.jpg
--rw-r--r--@  1 antonangelgardt  staff   52815 Oct 29 14:15 list-structure.png
--rw-r--r--@  1 antonangelgardt  staff   94074 Oct 29 14:15 list-vs-df.png
--rw-r--r--@  1 antonangelgardt  staff    4805 Oct 29 14:15 logo.png
--rw-r--r--@  1 antonangelgardt  staff  324886 Oct 29 14:15 maikop1.jpg
--rw-r--r--@  1 antonangelgardt  staff  326969 Oct 29 14:15 maikop2.jpg
--rw-r--r--@  1 antonangelgardt  staff  231289 Oct 29 14:15 majkop.png
--rw-r--r--@  1 antonangelgardt  staff   92622 Oct 29 14:15 manh.jpg
--rw-r--r--@  1 antonangelgardt  staff   27076 Oct 29 14:15 matrix-prod.png
--rw-r--r--@  1 antonangelgardt  staff  405334 Oct 29 14:15 native-pipe.png
--rw-r--r--@  1 antonangelgardt  staff   25101 Oct 29 14:15 negation.png
--rw-r--r--@  1 antonangelgardt  staff   37329 Oct 29 14:15 or.png
--rw-r--r--@  1 antonangelgardt  staff  120469 Oct 29 14:15 pc1.jpg
--rw-r--r--@  1 antonangelgardt  staff   86859 Oct 29 14:15 pca-1.jpg
--rw-r--r--@  1 antonangelgardt  staff  113155 Oct 29 14:15 pca-2.jpg
--rw-r--r--@  1 antonangelgardt  staff  123585 Oct 29 14:15 pca-3.jpg
--rw-r--r--@  1 antonangelgardt  staff   36407 Oct 29 14:15 replication.png
--rw-r--r--@  1 antonangelgardt  staff   45798 Oct 29 14:15 right-join.png
--rw-r--r--@  1 antonangelgardt  staff  280720 Oct 29 14:15 rproject-1.png
--rw-r--r--@  1 antonangelgardt  staff  319323 Oct 29 14:15 rproject-2.png
--rw-r--r--@  1 antonangelgardt  staff  287481 Oct 29 14:15 rproject-3.png
--rw-r--r--@  1 antonangelgardt  staff  331627 Oct 29 14:15 rproject-4.png
--rw-r--r--@  1 antonangelgardt  staff  281473 Oct 29 14:15 rproject-5.png
--rw-r--r--@  1 antonangelgardt  staff   55755 Oct 29 14:15 sem-model.jpg
--rw-r--r--@  1 antonangelgardt  staff   41642 Oct 29 14:15 semi-join.png
--rw-r--r--@  1 antonangelgardt  staff   29765 Oct 29 14:15 set-a.png
--rw-r--r--@  1 antonangelgardt  staff   36335 Oct 29 14:15 set-a1.png
--rw-r--r--@  1 antonangelgardt  staff   37643 Oct 29 14:15 set-func.png
--rw-r--r--@  1 antonangelgardt  staff   36804 Oct 29 14:15 symm-difference.png
--rw-r--r--@  1 antonangelgardt  staff   53638 Oct 29 14:15 tidy-2.jpg
--rw-r--r--@  1 antonangelgardt  staff   99582 Oct 29 14:15 tidy.jpg
--rw-r--r--@  1 antonangelgardt  staff   32449 Oct 29 14:15 union.png
--rw-r--r--@  1 antonangelgardt  staff   62016 Oct 29 14:15 vec-to-mat.png
--rw-r--r--@  1 antonangelgardt  staff   35775 Oct 29 14:15 wide-long.png
--rw-r--r--@  1 antonangelgardt  staff   42537 Oct 29 14:15 xor.png
--rw-r--r--@  1 antonangelgardt  staff   22992 Oct 29 14:15 xy.png
+drwxr-xr-x  83 antonangelgardt  staff    2656 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff    1120 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  331356 Nov  8 17:30 Correlation_examples.png
+-rw-r--r--   1 antonangelgardt  staff   38737 Nov  8 17:30 and.png
+-rw-r--r--   1 antonangelgardt  staff   42344 Nov  8 17:30 anti-join.png
+-rw-r--r--   1 antonangelgardt  staff  543353 Nov  8 17:30 antideriv.gif
+-rw-r--r--   1 antonangelgardt  staff   35172 Nov  8 17:30 auc1.jpg
+-rw-r--r--   1 antonangelgardt  staff   22237 Nov  8 17:30 auc2.jpg
+-rw-r--r--   1 antonangelgardt  staff   39335 Nov  8 17:30 auc3.jpg
+-rw-r--r--   1 antonangelgardt  staff   64657 Nov  8 17:30 auc4.jpg
+-rw-r--r--   1 antonangelgardt  staff   73082 Nov  8 17:30 auc5.jpg
+-rw-r--r--   1 antonangelgardt  staff   63152 Nov  8 17:30 bin_prob.jpg
+-rw-r--r--   1 antonangelgardt  staff   79841 Nov  8 17:30 bin_prob_curve.jpg
+-rw-r--r--   1 antonangelgardt  staff   92244 Nov  8 17:30 bin_prob_line.jpg
+-rw-r--r--   1 antonangelgardt  staff   39493 Nov  8 17:30 bin_y.jpg
+-rw-r--r--   1 antonangelgardt  staff   84128 Nov  8 17:30 cfa-model-0.jpg
+-rw-r--r--   1 antonangelgardt  staff   99843 Nov  8 17:30 cfa-model-1.jpg
+-rw-r--r--   1 antonangelgardt  staff   94088 Nov  8 17:30 cfa-model.jpg
+-rw-r--r--   1 antonangelgardt  staff  168134 Nov  8 17:30 cluster-dist-ave.jpg
+-rw-r--r--   1 antonangelgardt  staff   44583 Nov  8 17:30 cluster-dist-centr.jpg
+-rw-r--r--   1 antonangelgardt  staff   40484 Nov  8 17:30 cluster-dist-clos.jpg
+-rw-r--r--   1 antonangelgardt  staff   42538 Nov  8 17:30 cluster-dist-furth.jpg
+-rw-r--r--   1 antonangelgardt  staff   52025 Nov  8 17:30 cluster.jpg
+-rw-r--r--   1 antonangelgardt  staff  114463 Nov  8 17:30 cluster1.jpg
+-rw-r--r--   1 antonangelgardt  staff  112006 Nov  8 17:30 cluster2.jpg
+-rw-r--r--   1 antonangelgardt  staff  108403 Nov  8 17:30 cluster3.jpg
+-rw-r--r--   1 antonangelgardt  staff   32845 Nov  8 17:30 complement.png
+-rw-r--r--   1 antonangelgardt  staff   50113 Nov  8 17:30 decart-prod.png
+-rw-r--r--   1 antonangelgardt  staff   48030 Nov  8 17:30 dendr1.jpg
+-rw-r--r--   1 antonangelgardt  staff   95406 Nov  8 17:30 dendr2.jpg
+-rw-r--r--   1 antonangelgardt  staff   29383 Nov  8 17:30 deviance.jpg
+-rw-r--r--   1 antonangelgardt  staff   34012 Nov  8 17:30 difference.png
+-rw-r--r--   1 antonangelgardt  staff  105040 Nov  8 17:30 duplicate-keys.png
+-rw-r--r--   1 antonangelgardt  staff   76798 Nov  8 17:30 elbow.jpg
+-rw-r--r--   1 antonangelgardt  staff   38980 Nov  8 17:30 equivalence.png
+-rw-r--r--   1 antonangelgardt  staff    6204 Nov  8 17:30 favicon.png
+-rw-r--r--   1 antonangelgardt  staff   51111 Nov  8 17:30 full-join.png
+-rw-r--r--   1 antonangelgardt  staff   36104 Nov  8 17:30 implication.png
+-rw-r--r--   1 antonangelgardt  staff   38427 Nov  8 17:30 inner-join.png
+-rw-r--r--   1 antonangelgardt  staff   85990 Nov  8 17:30 interaction_main.jpg
+-rw-r--r--   1 antonangelgardt  staff   34287 Nov  8 17:30 intersection.png
+-rw-r--r--   1 antonangelgardt  staff   76558 Nov  8 17:30 joins-venn.png
+-rw-r--r--   1 antonangelgardt  staff   59113 Nov  8 17:30 kubik.jpg
+-rw-r--r--   1 antonangelgardt  staff  343210 Nov  8 17:30 lavash.jpg
+-rw-r--r--   1 antonangelgardt  staff  265948 Nov  8 17:30 lavash_dim.jpg
+-rw-r--r--   1 antonangelgardt  staff  283630 Nov  8 17:30 lec-cover.png
+-rw-r--r--   1 antonangelgardt  staff   44309 Nov  8 17:30 left-join.png
+-rw-r--r--   1 antonangelgardt  staff   56900 Nov  8 17:30 line.jpg
+-rw-r--r--   1 antonangelgardt  staff   52815 Nov  8 17:30 list-structure.png
+-rw-r--r--   1 antonangelgardt  staff   94074 Nov  8 17:30 list-vs-df.png
+-rw-r--r--   1 antonangelgardt  staff    4805 Nov  8 17:30 logo.png
+-rw-r--r--   1 antonangelgardt  staff  324886 Nov  8 17:30 maikop1.jpg
+-rw-r--r--   1 antonangelgardt  staff  326969 Nov  8 17:30 maikop2.jpg
+-rw-r--r--   1 antonangelgardt  staff  231289 Nov  8 17:30 majkop.png
+-rw-r--r--   1 antonangelgardt  staff   92622 Nov  8 17:30 manh.jpg
+-rw-r--r--   1 antonangelgardt  staff   27076 Nov  8 17:30 matrix-prod.png
+-rw-r--r--   1 antonangelgardt  staff  405334 Nov  8 17:30 native-pipe.png
+-rw-r--r--   1 antonangelgardt  staff   25101 Nov  8 17:30 negation.png
+-rw-r--r--   1 antonangelgardt  staff   37329 Nov  8 17:30 or.png
+-rw-r--r--   1 antonangelgardt  staff  120469 Nov  8 17:30 pc1.jpg
+-rw-r--r--   1 antonangelgardt  staff   86859 Nov  8 17:30 pca-1.jpg
+-rw-r--r--   1 antonangelgardt  staff  113155 Nov  8 17:30 pca-2.jpg
+-rw-r--r--   1 antonangelgardt  staff  123585 Nov  8 17:30 pca-3.jpg
+-rw-r--r--   1 antonangelgardt  staff   36407 Nov  8 17:30 replication.png
+-rw-r--r--   1 antonangelgardt  staff   45798 Nov  8 17:30 right-join.png
+-rw-r--r--   1 antonangelgardt  staff  280720 Nov  8 17:30 rproject-1.png
+-rw-r--r--   1 antonangelgardt  staff  319323 Nov  8 17:30 rproject-2.png
+-rw-r--r--   1 antonangelgardt  staff  287481 Nov  8 17:30 rproject-3.png
+-rw-r--r--   1 antonangelgardt  staff  331627 Nov  8 17:30 rproject-4.png
+-rw-r--r--   1 antonangelgardt  staff  281473 Nov  8 17:30 rproject-5.png
+-rw-r--r--   1 antonangelgardt  staff   55755 Nov  8 17:30 sem-model.jpg
+-rw-r--r--   1 antonangelgardt  staff   41642 Nov  8 17:30 semi-join.png
+-rw-r--r--   1 antonangelgardt  staff   29765 Nov  8 17:30 set-a.png
+-rw-r--r--   1 antonangelgardt  staff   36335 Nov  8 17:30 set-a1.png
+-rw-r--r--   1 antonangelgardt  staff   37643 Nov  8 17:30 set-func.png
+-rw-r--r--   1 antonangelgardt  staff   36804 Nov  8 17:30 symm-difference.png
+-rw-r--r--   1 antonangelgardt  staff   53638 Nov  8 17:30 tidy-2.jpg
+-rw-r--r--   1 antonangelgardt  staff   99582 Nov  8 17:30 tidy.jpg
+-rw-r--r--   1 antonangelgardt  staff   32449 Nov  8 17:30 union.png
+-rw-r--r--   1 antonangelgardt  staff   62016 Nov  8 17:30 vec-to-mat.png
+-rw-r--r--   1 antonangelgardt  staff   35775 Nov  8 17:30 wide-long.png
+-rw-r--r--   1 antonangelgardt  staff   42537 Nov  8 17:30 xor.png
+-rw-r--r--   1 antonangelgardt  staff   22992 Nov  8 17:30 xy.png
 
 docs/lectures/site_libs:
 total 0
-drwxr-xr-x@ 15 antonangelgardt  staff   480 Oct 29 14:15 .
-drwxr-xr-x@ 36 antonangelgardt  staff  1152 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff   224 Oct 29 14:15 bootstrap
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 clipboard
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 crosstalk-1.2.1
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 htmltools-fill-0.5.8.1
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 htmlwidgets-1.6.4
-drwxr-xr-x@  6 antonangelgardt  staff   192 Oct 29 14:15 jquery-3.5.1
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 plotly-binding-4.10.4
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 plotly-htmlwidgets-css-2.11.1
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 plotly-main-2.11.1
-drwxr-xr-x@  9 antonangelgardt  staff   288 Oct 29 14:15 quarto-html
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 quarto-nav
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 quarto-search
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 typedarray-0.1
+drwxr-xr-x  15 antonangelgardt  staff   480 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff   224 Nov  8 17:30 bootstrap
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 clipboard
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 crosstalk-1.2.1
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 htmltools-fill-0.5.8.1
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 htmlwidgets-1.6.4
+drwxr-xr-x   6 antonangelgardt  staff   192 Nov  8 17:30 jquery-3.5.1
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 plotly-binding-4.10.4
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 plotly-htmlwidgets-css-2.11.1
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 plotly-main-2.11.1
+drwxr-xr-x   9 antonangelgardt  staff   288 Nov  8 17:30 quarto-html
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 quarto-nav
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 quarto-search
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 typedarray-0.1
 
 docs/lectures/site_libs/bootstrap:
 total 2560
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff     480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  472851 Oct 29 14:15 bootstrap-dark.min.css
--rw-r--r--@  1 antonangelgardt  staff   98163 Oct 29 14:15 bootstrap-icons.css
--rw-r--r--@  1 antonangelgardt  staff  176200 Oct 29 14:15 bootstrap-icons.woff
--rw-r--r--@  1 antonangelgardt  staff  472873 Oct 29 14:15 bootstrap.min.css
--rw-r--r--@  1 antonangelgardt  staff   80668 Oct 29 14:15 bootstrap.min.js
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff     480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  472851 Nov  8 17:30 bootstrap-dark.min.css
+-rw-r--r--   1 antonangelgardt  staff   98163 Nov  8 17:30 bootstrap-icons.css
+-rw-r--r--   1 antonangelgardt  staff  176200 Nov  8 17:30 bootstrap-icons.woff
+-rw-r--r--   1 antonangelgardt  staff  472873 Nov  8 17:30 bootstrap.min.css
+-rw-r--r--   1 antonangelgardt  staff   80668 Nov  8 17:30 bootstrap.min.js
 
 docs/lectures/site_libs/clipboard:
 total 24
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff   480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff   480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/lectures/site_libs/crosstalk-1.2.1:
 total 0
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff  480 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 css
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 js
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 scss
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff  480 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 css
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 js
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 scss
 
 docs/lectures/site_libs/crosstalk-1.2.1/css:
 total 8
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  1306 Oct 29 14:15 crosstalk.min.css
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  1306 Nov  8 17:30 crosstalk.min.css
 
 docs/lectures/site_libs/crosstalk-1.2.1/js:
 total 352
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  49030 Oct 29 14:15 crosstalk.js
--rw-r--r--@ 1 antonangelgardt  staff  54853 Oct 29 14:15 crosstalk.js.map
--rw-r--r--@ 1 antonangelgardt  staff  18925 Oct 29 14:15 crosstalk.min.js
--rw-r--r--@ 1 antonangelgardt  staff  50338 Oct 29 14:15 crosstalk.min.js.map
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  49030 Nov  8 17:30 crosstalk.js
+-rw-r--r--  1 antonangelgardt  staff  54853 Nov  8 17:30 crosstalk.js.map
+-rw-r--r--  1 antonangelgardt  staff  18925 Nov  8 17:30 crosstalk.min.js
+-rw-r--r--  1 antonangelgardt  staff  50338 Nov  8 17:30 crosstalk.min.js.map
 
 docs/lectures/site_libs/crosstalk-1.2.1/scss:
 total 8
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  1816 Oct 29 14:15 crosstalk.scss
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  1816 Nov  8 17:30 crosstalk.scss
 
 docs/lectures/site_libs/htmltools-fill-0.5.8.1:
 total 8
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff  480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  585 Oct 29 14:15 fill.css
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff  480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  585 Nov  8 17:30 fill.css
 
 docs/lectures/site_libs/htmlwidgets-1.6.4:
 total 72
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff    480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  33190 Oct 29 14:15 htmlwidgets.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff    480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  33190 Nov  8 17:30 htmlwidgets.js
 
 docs/lectures/site_libs/jquery-3.5.1:
 total 1048
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff     480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   13369 Oct 29 14:15 jquery-AUTHORS.txt
--rw-r--r--@  1 antonangelgardt  staff  287630 Oct 29 14:15 jquery.js
--rw-r--r--@  1 antonangelgardt  staff   89476 Oct 29 14:15 jquery.min.js
--rw-r--r--@  1 antonangelgardt  staff  137986 Oct 29 14:15 jquery.min.map
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff     480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   13369 Nov  8 17:30 jquery-AUTHORS.txt
+-rw-r--r--   1 antonangelgardt  staff  287630 Nov  8 17:30 jquery.js
+-rw-r--r--   1 antonangelgardt  staff   89476 Nov  8 17:30 jquery.min.js
+-rw-r--r--   1 antonangelgardt  staff  137986 Nov  8 17:30 jquery.min.map
 
 docs/lectures/site_libs/plotly-binding-4.10.4:
 total 72
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff    480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  33758 Oct 29 14:15 plotly.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff    480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  33758 Nov  8 17:30 plotly.js
 
 docs/lectures/site_libs/plotly-htmlwidgets-css-2.11.1:
 total 8
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff  480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  173 Oct 29 14:15 plotly-htmlwidgets.css
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff  480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  173 Nov  8 17:30 plotly-htmlwidgets.css
 
 docs/lectures/site_libs/plotly-main-2.11.1:
 total 7160
-drwxr-xr-x@  3 antonangelgardt  staff       96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff      480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  3665833 Oct 29 14:15 plotly-latest.min.js
+drwxr-xr-x   3 antonangelgardt  staff       96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff      480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  3665833 Nov  8 17:30 plotly-latest.min.js
 
 docs/lectures/site_libs/quarto-html:
 total 184
-drwxr-xr-x@  9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff    480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   5888 Oct 29 14:15 anchor.min.js
--rw-r--r--@  1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@  1 antonangelgardt  staff   2770 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@  1 antonangelgardt  staff   3135 Oct 29 14:15 quarto-syntax-highlighting.css
--rw-r--r--@  1 antonangelgardt  staff  28427 Oct 29 14:15 quarto.js
--rw-r--r--@  1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@  1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x   9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff    480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   5888 Nov  8 17:30 anchor.min.js
+-rw-r--r--   1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--   1 antonangelgardt  staff   2770 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--   1 antonangelgardt  staff   3135 Nov  8 17:30 quarto-syntax-highlighting.css
+-rw-r--r--   1 antonangelgardt  staff  28427 Nov  8 17:30 quarto.js
+-rw-r--r--   1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--   1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/lectures/site_libs/quarto-nav:
 total 40
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff   480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  4570 Oct 29 14:15 headroom.min.js
--rw-r--r--@  1 antonangelgardt  staff  8672 Oct 29 14:15 quarto-nav.js
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff   480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  4570 Nov  8 17:30 headroom.min.js
+-rw-r--r--   1 antonangelgardt  staff  8672 Nov  8 17:30 quarto-nav.js
 
 docs/lectures/site_libs/quarto-search:
 total 312
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff    480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  92971 Oct 29 14:15 autocomplete.umd.js
--rw-r--r--@  1 antonangelgardt  staff  23539 Oct 29 14:15 fuse.min.js
--rw-r--r--@  1 antonangelgardt  staff  37117 Oct 29 14:15 quarto-search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff    480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  92971 Nov  8 17:30 autocomplete.umd.js
+-rw-r--r--   1 antonangelgardt  staff  23539 Nov  8 17:30 fuse.min.js
+-rw-r--r--   1 antonangelgardt  staff  37117 Nov  8 17:30 quarto-search.js
 
 docs/lectures/site_libs/typedarray-0.1:
 total 48
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 15 antonangelgardt  staff    480 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  22444 Oct 29 14:15 typedarray.min.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  15 antonangelgardt  staff    480 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  22444 Nov  8 17:30 typedarray.min.js
 
 docs/practice:
 total 2424
-drwxr-xr-x@ 24 antonangelgardt  staff     768 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff     320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   33016 Oct 29 14:15 index.html
-drwxr-xr-x@ 14 antonangelgardt  staff     448 Oct 29 14:15 js
-drwxr-xr-x@  5 antonangelgardt  staff     160 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff   85003 Oct 29 14:15 pr1.html
--rw-r--r--@  1 antonangelgardt  staff   93967 Oct 29 14:15 pr11.html
--rw-r--r--@  1 antonangelgardt  staff   72175 Oct 29 14:15 pr13.html
--rw-r--r--@  1 antonangelgardt  staff   76120 Oct 29 14:15 pr14.html
--rw-r--r--@  1 antonangelgardt  staff  107024 Oct 29 14:15 pr2.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 pr2_files
--rw-r--r--@  1 antonangelgardt  staff   65509 Oct 29 14:15 pr3.html
--rw-r--r--@  1 antonangelgardt  staff   85327 Oct 29 14:15 pr4.html
--rw-r--r--@  1 antonangelgardt  staff  104603 Oct 29 14:15 pr5.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 pr5_files
--rw-r--r--@  1 antonangelgardt  staff   72381 Oct 29 14:15 pr7.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 pr7_files
--rw-r--r--@  1 antonangelgardt  staff   64412 Oct 29 14:15 pr8.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 pr8_files
--rw-r--r--@  1 antonangelgardt  staff   89484 Oct 29 14:15 pr9.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 pr9_files
--rw-r--r--@  1 antonangelgardt  staff   32184 Oct 29 14:15 references.html
--rw-r--r--@  1 antonangelgardt  staff  239561 Oct 29 14:15 search.json
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 site_libs
+drwxr-xr-x  24 antonangelgardt  staff     768 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff     320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   33016 Nov  8 17:30 index.html
+drwxr-xr-x  14 antonangelgardt  staff     448 Nov  8 17:30 js
+drwxr-xr-x   5 antonangelgardt  staff     160 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff   85003 Nov  8 17:30 pr1.html
+-rw-r--r--   1 antonangelgardt  staff   93967 Nov  8 17:30 pr11.html
+-rw-r--r--   1 antonangelgardt  staff   72175 Nov  8 17:30 pr13.html
+-rw-r--r--   1 antonangelgardt  staff   76120 Nov  8 17:30 pr14.html
+-rw-r--r--   1 antonangelgardt  staff  107024 Nov  8 17:30 pr2.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 pr2_files
+-rw-r--r--   1 antonangelgardt  staff   65509 Nov  8 17:30 pr3.html
+-rw-r--r--   1 antonangelgardt  staff   85327 Nov  8 17:30 pr4.html
+-rw-r--r--   1 antonangelgardt  staff  104603 Nov  8 17:30 pr5.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 pr5_files
+-rw-r--r--   1 antonangelgardt  staff   72381 Nov  8 17:30 pr7.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 pr7_files
+-rw-r--r--   1 antonangelgardt  staff   64412 Nov  8 17:30 pr8.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 pr8_files
+-rw-r--r--   1 antonangelgardt  staff   89484 Nov  8 17:30 pr9.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 pr9_files
+-rw-r--r--   1 antonangelgardt  staff   32184 Nov  8 17:30 references.html
+-rw-r--r--   1 antonangelgardt  staff  239561 Nov  8 17:30 search.json
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 site_libs
 
 docs/practice/js:
 total 96
-drwxr-xr-x@ 14 antonangelgardt  staff   448 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff   768 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  1508 Oct 29 14:15 pr.js
--rw-r--r--@  1 antonangelgardt  staff  1454 Oct 29 14:15 pr1.json
--rw-r--r--@  1 antonangelgardt  staff  1540 Oct 29 14:15 pr11.json
--rw-r--r--@  1 antonangelgardt  staff  1516 Oct 29 14:15 pr13.json
--rw-r--r--@  1 antonangelgardt  staff  1516 Oct 29 14:15 pr14.json
--rw-r--r--@  1 antonangelgardt  staff  1456 Oct 29 14:15 pr2.json
--rw-r--r--@  1 antonangelgardt  staff  1443 Oct 29 14:15 pr3.json
--rw-r--r--@  1 antonangelgardt  staff  1450 Oct 29 14:15 pr4.json
--rw-r--r--@  1 antonangelgardt  staff  1459 Oct 29 14:15 pr5.json
--rw-r--r--@  1 antonangelgardt  staff  1445 Oct 29 14:15 pr7.json
--rw-r--r--@  1 antonangelgardt  staff  1425 Oct 29 14:15 pr8.json
--rw-r--r--@  1 antonangelgardt  staff  1425 Oct 29 14:15 pr9.json
+drwxr-xr-x  14 antonangelgardt  staff   448 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff   768 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  1508 Nov  8 17:30 pr.js
+-rw-r--r--   1 antonangelgardt  staff  1454 Nov  8 17:30 pr1.json
+-rw-r--r--   1 antonangelgardt  staff  1540 Nov  8 17:30 pr11.json
+-rw-r--r--   1 antonangelgardt  staff  1516 Nov  8 17:30 pr13.json
+-rw-r--r--   1 antonangelgardt  staff  1516 Nov  8 17:30 pr14.json
+-rw-r--r--   1 antonangelgardt  staff  1456 Nov  8 17:30 pr2.json
+-rw-r--r--   1 antonangelgardt  staff  1443 Nov  8 17:30 pr3.json
+-rw-r--r--   1 antonangelgardt  staff  1450 Nov  8 17:30 pr4.json
+-rw-r--r--   1 antonangelgardt  staff  1459 Nov  8 17:30 pr5.json
+-rw-r--r--   1 antonangelgardt  staff  1445 Nov  8 17:30 pr7.json
+-rw-r--r--   1 antonangelgardt  staff  1425 Nov  8 17:30 pr8.json
+-rw-r--r--   1 antonangelgardt  staff  1425 Nov  8 17:30 pr9.json
 
 docs/practice/pics:
 total 584
-drwxr-xr-x@  5 antonangelgardt  staff     160 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff     768 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    6204 Oct 29 14:15 favicon.png
--rw-r--r--@  1 antonangelgardt  staff    4805 Oct 29 14:15 logo.png
--rw-r--r--@  1 antonangelgardt  staff  282143 Oct 29 14:15 pr-cover.png
+drwxr-xr-x   5 antonangelgardt  staff     160 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff     768 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    6204 Nov  8 17:30 favicon.png
+-rw-r--r--   1 antonangelgardt  staff    4805 Nov  8 17:30 logo.png
+-rw-r--r--   1 antonangelgardt  staff  282143 Nov  8 17:30 pr-cover.png
 
 docs/practice/pr2_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff  768 Oct 29 14:15 ..
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff  768 Nov  8 17:30 ..
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 figure-html
 
 docs/practice/pr2_files/figure-html:
 total 240
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  59722 Oct 29 14:15 15-vis-1.png
--rw-r--r--@ 1 antonangelgardt  staff  60309 Oct 29 14:15 18-vis-1.png
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  59722 Nov  8 17:30 15-vis-1.png
+-rw-r--r--  1 antonangelgardt  staff  60309 Nov  8 17:30 18-vis-1.png
 
 docs/practice/pr5_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff   768 Oct 29 14:15 ..
-drwxr-xr-x@ 40 antonangelgardt  staff  1280 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff   768 Nov  8 17:30 ..
+drwxr-xr-x  40 antonangelgardt  staff  1280 Nov  8 17:30 figure-html
 
 docs/practice/pr5_files/figure-html:
 total 6968
-drwxr-xr-x@ 40 antonangelgardt  staff    1280 Oct 29 14:15 .
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   41177 Oct 29 14:15 12a-1.png
--rw-r--r--@  1 antonangelgardt  staff   45714 Oct 29 14:15 12b-1.png
--rw-r--r--@  1 antonangelgardt  staff   72713 Oct 29 14:15 12c-1.png
--rw-r--r--@  1 antonangelgardt  staff   66570 Oct 29 14:15 13a-1.png
--rw-r--r--@  1 antonangelgardt  staff  175538 Oct 29 14:15 13b-1.png
--rw-r--r--@  1 antonangelgardt  staff   63116 Oct 29 14:15 15-1.png
--rw-r--r--@  1 antonangelgardt  staff   96689 Oct 29 14:15 16a-1.png
--rw-r--r--@  1 antonangelgardt  staff  123281 Oct 29 14:15 16b-1.png
--rw-r--r--@  1 antonangelgardt  staff  181823 Oct 29 14:15 16c-1.png
--rw-r--r--@  1 antonangelgardt  staff   78297 Oct 29 14:15 17-1.png
--rw-r--r--@  1 antonangelgardt  staff  150721 Oct 29 14:15 18-1.png
--rw-r--r--@  1 antonangelgardt  staff  113370 Oct 29 14:15 19b-1.png
--rw-r--r--@  1 antonangelgardt  staff  120468 Oct 29 14:15 20-1.png
--rw-r--r--@  1 antonangelgardt  staff   95179 Oct 29 14:15 21-1.png
--rw-r--r--@  1 antonangelgardt  staff   95110 Oct 29 14:15 22-1.png
--rw-r--r--@  1 antonangelgardt  staff   98880 Oct 29 14:15 23-1.png
--rw-r--r--@  1 antonangelgardt  staff   65538 Oct 29 14:15 24-1.png
--rw-r--r--@  1 antonangelgardt  staff   39102 Oct 29 14:15 25-1.png
--rw-r--r--@  1 antonangelgardt  staff   59149 Oct 29 14:15 26-1.png
--rw-r--r--@  1 antonangelgardt  staff  123395 Oct 29 14:15 27-1.png
--rw-r--r--@  1 antonangelgardt  staff  173583 Oct 29 14:15 28-1.png
--rw-r--r--@  1 antonangelgardt  staff  176615 Oct 29 14:15 29-1.png
--rw-r--r--@  1 antonangelgardt  staff   27065 Oct 29 14:15 2a-1.png
--rw-r--r--@  1 antonangelgardt  staff   38607 Oct 29 14:15 2b-1.png
--rw-r--r--@  1 antonangelgardt  staff  176739 Oct 29 14:15 30-1.png
--rw-r--r--@  1 antonangelgardt  staff   76950 Oct 29 14:15 3a-1.png
--rw-r--r--@  1 antonangelgardt  staff   93933 Oct 29 14:15 3b-1.png
--rw-r--r--@  1 antonangelgardt  staff  144470 Oct 29 14:15 4-1.png
--rw-r--r--@  1 antonangelgardt  staff   50843 Oct 29 14:15 5a-1.png
--rw-r--r--@  1 antonangelgardt  staff   45935 Oct 29 14:15 5b-1.png
--rw-r--r--@  1 antonangelgardt  staff   71517 Oct 29 14:15 6a-1.png
--rw-r--r--@  1 antonangelgardt  staff   71250 Oct 29 14:15 6b-1.png
--rw-r--r--@  1 antonangelgardt  staff   71155 Oct 29 14:15 6c-1.png
--rw-r--r--@  1 antonangelgardt  staff   71183 Oct 29 14:15 7a-1.png
--rw-r--r--@  1 antonangelgardt  staff   70628 Oct 29 14:15 7b-1.png
--rw-r--r--@  1 antonangelgardt  staff   70567 Oct 29 14:15 8-1.png
--rw-r--r--@  1 antonangelgardt  staff   94957 Oct 29 14:15 9-1.png
--rw-r--r--@  1 antonangelgardt  staff   40871 Oct 29 14:15 unnamed-chunk-1-1.png
+drwxr-xr-x  40 antonangelgardt  staff    1280 Nov  8 17:30 .
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   41177 Nov  8 17:30 12a-1.png
+-rw-r--r--   1 antonangelgardt  staff   45714 Nov  8 17:30 12b-1.png
+-rw-r--r--   1 antonangelgardt  staff   72713 Nov  8 17:30 12c-1.png
+-rw-r--r--   1 antonangelgardt  staff   66570 Nov  8 17:30 13a-1.png
+-rw-r--r--   1 antonangelgardt  staff  175538 Nov  8 17:30 13b-1.png
+-rw-r--r--   1 antonangelgardt  staff   63116 Nov  8 17:30 15-1.png
+-rw-r--r--   1 antonangelgardt  staff   96689 Nov  8 17:30 16a-1.png
+-rw-r--r--   1 antonangelgardt  staff  123281 Nov  8 17:30 16b-1.png
+-rw-r--r--   1 antonangelgardt  staff  181823 Nov  8 17:30 16c-1.png
+-rw-r--r--   1 antonangelgardt  staff   78297 Nov  8 17:30 17-1.png
+-rw-r--r--   1 antonangelgardt  staff  150721 Nov  8 17:30 18-1.png
+-rw-r--r--   1 antonangelgardt  staff  113370 Nov  8 17:30 19b-1.png
+-rw-r--r--   1 antonangelgardt  staff  120468 Nov  8 17:30 20-1.png
+-rw-r--r--   1 antonangelgardt  staff   95179 Nov  8 17:30 21-1.png
+-rw-r--r--   1 antonangelgardt  staff   95110 Nov  8 17:30 22-1.png
+-rw-r--r--   1 antonangelgardt  staff   98880 Nov  8 17:30 23-1.png
+-rw-r--r--   1 antonangelgardt  staff   65538 Nov  8 17:30 24-1.png
+-rw-r--r--   1 antonangelgardt  staff   39102 Nov  8 17:30 25-1.png
+-rw-r--r--   1 antonangelgardt  staff   59149 Nov  8 17:30 26-1.png
+-rw-r--r--   1 antonangelgardt  staff  123395 Nov  8 17:30 27-1.png
+-rw-r--r--   1 antonangelgardt  staff  173583 Nov  8 17:30 28-1.png
+-rw-r--r--   1 antonangelgardt  staff  176615 Nov  8 17:30 29-1.png
+-rw-r--r--   1 antonangelgardt  staff   27065 Nov  8 17:30 2a-1.png
+-rw-r--r--   1 antonangelgardt  staff   38607 Nov  8 17:30 2b-1.png
+-rw-r--r--   1 antonangelgardt  staff  176739 Nov  8 17:30 30-1.png
+-rw-r--r--   1 antonangelgardt  staff   76950 Nov  8 17:30 3a-1.png
+-rw-r--r--   1 antonangelgardt  staff   93933 Nov  8 17:30 3b-1.png
+-rw-r--r--   1 antonangelgardt  staff  144470 Nov  8 17:30 4-1.png
+-rw-r--r--   1 antonangelgardt  staff   50843 Nov  8 17:30 5a-1.png
+-rw-r--r--   1 antonangelgardt  staff   45935 Nov  8 17:30 5b-1.png
+-rw-r--r--   1 antonangelgardt  staff   71517 Nov  8 17:30 6a-1.png
+-rw-r--r--   1 antonangelgardt  staff   71250 Nov  8 17:30 6b-1.png
+-rw-r--r--   1 antonangelgardt  staff   71155 Nov  8 17:30 6c-1.png
+-rw-r--r--   1 antonangelgardt  staff   71183 Nov  8 17:30 7a-1.png
+-rw-r--r--   1 antonangelgardt  staff   70628 Nov  8 17:30 7b-1.png
+-rw-r--r--   1 antonangelgardt  staff   70567 Nov  8 17:30 8-1.png
+-rw-r--r--   1 antonangelgardt  staff   94957 Nov  8 17:30 9-1.png
+-rw-r--r--   1 antonangelgardt  staff   40871 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/practice/pr7_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff  768 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff  768 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 figure-html
 
 docs/practice/pr7_files/figure-html:
 total 696
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  98196 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@ 1 antonangelgardt  staff  80726 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@ 1 antonangelgardt  staff  40773 Oct 29 14:15 unnamed-chunk-15-1.png
--rw-r--r--@ 1 antonangelgardt  staff  70834 Oct 29 14:15 unnamed-chunk-15-2.png
--rw-r--r--@ 1 antonangelgardt  staff  61432 Oct 29 14:15 unnamed-chunk-6-1.png
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  98196 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--  1 antonangelgardt  staff  80726 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--  1 antonangelgardt  staff  40773 Nov  8 17:30 unnamed-chunk-15-1.png
+-rw-r--r--  1 antonangelgardt  staff  70834 Nov  8 17:30 unnamed-chunk-15-2.png
+-rw-r--r--  1 antonangelgardt  staff  61432 Nov  8 17:30 unnamed-chunk-6-1.png
 
 docs/practice/pr8_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff  768 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff  768 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 figure-html
 
 docs/practice/pr8_files/figure-html:
 total 176
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  86236 Oct 29 14:15 p8-1-dists-1.png
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  86236 Nov  8 17:30 p8-1-dists-1.png
 
 docs/practice/pr9_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff  768 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 figure-html
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff  768 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 figure-html
 
 docs/practice/pr9_files/figure-html:
 total 1800
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff      96 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  918690 Oct 29 14:15 pr9-20-1.png
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff      96 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  918690 Nov  8 17:30 pr9-20-1.png
 
 docs/practice/site_libs:
 total 0
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 .
-drwxr-xr-x@ 24 antonangelgardt  staff  768 Oct 29 14:15 ..
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 bootstrap
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 quarto-nav
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-search
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 .
+drwxr-xr-x  24 antonangelgardt  staff  768 Nov  8 17:30 ..
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 bootstrap
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 quarto-nav
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-search
 
 docs/practice/site_libs/bootstrap:
 total 2560
-drwxr-xr-x@ 8 antonangelgardt  staff     256 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  473940 Oct 29 14:15 bootstrap-dark.min.css
--rw-r--r--@ 1 antonangelgardt  staff   98163 Oct 29 14:15 bootstrap-icons.css
--rw-r--r--@ 1 antonangelgardt  staff  176200 Oct 29 14:15 bootstrap-icons.woff
--rw-r--r--@ 1 antonangelgardt  staff  474104 Oct 29 14:15 bootstrap.min.css
--rw-r--r--@ 1 antonangelgardt  staff   80668 Oct 29 14:15 bootstrap.min.js
-drwxr-xr-x@ 6 antonangelgardt  staff     192 Oct 29 14:15 pics
+drwxr-xr-x  8 antonangelgardt  staff     256 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  473940 Nov  8 17:30 bootstrap-dark.min.css
+-rw-r--r--  1 antonangelgardt  staff   98163 Nov  8 17:30 bootstrap-icons.css
+-rw-r--r--  1 antonangelgardt  staff  176200 Nov  8 17:30 bootstrap-icons.woff
+-rw-r--r--  1 antonangelgardt  staff  474104 Nov  8 17:30 bootstrap.min.css
+-rw-r--r--  1 antonangelgardt  staff   80668 Nov  8 17:30 bootstrap.min.js
+drwxr-xr-x  6 antonangelgardt  staff     192 Nov  8 17:30 pics
 
 docs/practice/site_libs/bootstrap/pics:
 total 200
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 8 antonangelgardt  staff    256 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  27028 Oct 29 14:15 lab_easy.png
--rw-r--r--@ 1 antonangelgardt  staff  27813 Oct 29 14:15 lab_extreme.png
--rw-r--r--@ 1 antonangelgardt  staff  19367 Oct 29 14:15 lab_hard.png
--rw-r--r--@ 1 antonangelgardt  staff  23693 Oct 29 14:15 lab_medium.png
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  8 antonangelgardt  staff    256 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  27028 Nov  8 17:30 lab_easy.png
+-rw-r--r--  1 antonangelgardt  staff  27813 Nov  8 17:30 lab_extreme.png
+-rw-r--r--  1 antonangelgardt  staff  19367 Nov  8 17:30 lab_hard.png
+-rw-r--r--  1 antonangelgardt  staff  23693 Nov  8 17:30 lab_medium.png
 
 docs/practice/site_libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/practice/site_libs/quarto-html:
 total 184
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   5888 Oct 29 14:15 anchor.min.js
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff   2770 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff   3135 Oct 29 14:15 quarto-syntax-highlighting.css
--rw-r--r--@ 1 antonangelgardt  staff  28427 Oct 29 14:15 quarto.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   5888 Nov  8 17:30 anchor.min.js
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff   2770 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff   3135 Nov  8 17:30 quarto-syntax-highlighting.css
+-rw-r--r--  1 antonangelgardt  staff  28427 Nov  8 17:30 quarto.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/practice/site_libs/quarto-nav:
 total 40
-drwxr-xr-x@ 4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  4570 Oct 29 14:15 headroom.min.js
--rw-r--r--@ 1 antonangelgardt  staff  8672 Oct 29 14:15 quarto-nav.js
+drwxr-xr-x  4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  4570 Nov  8 17:30 headroom.min.js
+-rw-r--r--  1 antonangelgardt  staff  8672 Nov  8 17:30 quarto-nav.js
 
 docs/practice/site_libs/quarto-search:
 total 312
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  92971 Oct 29 14:15 autocomplete.umd.js
--rw-r--r--@ 1 antonangelgardt  staff  23539 Oct 29 14:15 fuse.min.js
--rw-r--r--@ 1 antonangelgardt  staff  37117 Oct 29 14:15 quarto-search.js
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  92971 Nov  8 17:30 autocomplete.umd.js
+-rw-r--r--  1 antonangelgardt  staff  23539 Nov  8 17:30 fuse.min.js
+-rw-r--r--  1 antonangelgardt  staff  37117 Nov  8 17:30 quarto-search.js
 
 docs/projects:
 total 400
-drwxr-xr-x@  9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff    320 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  54407 Oct 29 14:15 f.html
--rw-r--r--@  1 antonangelgardt  staff  30071 Oct 29 14:15 index.html
--rw-r--r--@  1 antonangelgardt  staff  48948 Oct 29 14:15 j.html
-drwxr-xr-x@  6 antonangelgardt  staff    192 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff  29556 Oct 29 14:15 references.html
--rw-r--r--@  1 antonangelgardt  staff  31017 Oct 29 14:15 search.json
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 site_libs
+drwxr-xr-x   9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff    320 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  54249 Nov  8 17:30 f.html
+-rw-r--r--   1 antonangelgardt  staff  30071 Nov  8 17:30 index.html
+-rw-r--r--   1 antonangelgardt  staff  48941 Nov  8 17:30 j.html
+drwxr-xr-x   6 antonangelgardt  staff    192 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff  29556 Nov  8 17:30 references.html
+-rw-r--r--   1 antonangelgardt  staff  30891 Nov  8 17:30 search.json
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 site_libs
 
 docs/projects/pics:
 total 1296
-drwxr-xr-x@ 6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff    6204 Oct 29 14:15 favicon.png
--rw-r--r--@ 1 antonangelgardt  staff    4805 Oct 29 14:15 logo.png
--rw-r--r--@ 1 antonangelgardt  staff  364337 Oct 29 14:15 mr-shepard.png
--rw-r--r--@ 1 antonangelgardt  staff  282293 Oct 29 14:15 proj-cover.png
+drwxr-xr-x  6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff    6204 Nov  8 17:30 favicon.png
+-rw-r--r--  1 antonangelgardt  staff    4805 Nov  8 17:30 logo.png
+-rw-r--r--  1 antonangelgardt  staff  364337 Nov  8 17:30 mr-shepard.png
+-rw-r--r--  1 antonangelgardt  staff  282293 Nov  8 17:30 proj-cover.png
 
 docs/projects/site_libs:
 total 0
-drwxr-xr-x@ 7 antonangelgardt  staff  224 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 ..
-drwxr-xr-x@ 8 antonangelgardt  staff  256 Oct 29 14:15 bootstrap
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 quarto-nav
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 quarto-search
+drwxr-xr-x  7 antonangelgardt  staff  224 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 ..
+drwxr-xr-x  8 antonangelgardt  staff  256 Nov  8 17:30 bootstrap
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 quarto-nav
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 quarto-search
 
 docs/projects/site_libs/bootstrap:
 total 2560
-drwxr-xr-x@ 8 antonangelgardt  staff     256 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  473936 Oct 29 14:15 bootstrap-dark.min.css
--rw-r--r--@ 1 antonangelgardt  staff   98163 Oct 29 14:15 bootstrap-icons.css
--rw-r--r--@ 1 antonangelgardt  staff  176200 Oct 29 14:15 bootstrap-icons.woff
--rw-r--r--@ 1 antonangelgardt  staff  474100 Oct 29 14:15 bootstrap.min.css
--rw-r--r--@ 1 antonangelgardt  staff   80668 Oct 29 14:15 bootstrap.min.js
-drwxr-xr-x@ 6 antonangelgardt  staff     192 Oct 29 14:15 pics
+drwxr-xr-x  8 antonangelgardt  staff     256 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  473936 Nov  8 17:30 bootstrap-dark.min.css
+-rw-r--r--  1 antonangelgardt  staff   98163 Nov  8 17:30 bootstrap-icons.css
+-rw-r--r--  1 antonangelgardt  staff  176200 Nov  8 17:30 bootstrap-icons.woff
+-rw-r--r--  1 antonangelgardt  staff  474100 Nov  8 17:30 bootstrap.min.css
+-rw-r--r--  1 antonangelgardt  staff   80668 Nov  8 17:30 bootstrap.min.js
+drwxr-xr-x  6 antonangelgardt  staff     192 Nov  8 17:30 pics
 
 docs/projects/site_libs/bootstrap/pics:
 total 200
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 8 antonangelgardt  staff    256 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  27028 Oct 29 14:15 lab_easy.png
--rw-r--r--@ 1 antonangelgardt  staff  27813 Oct 29 14:15 lab_extreme.png
--rw-r--r--@ 1 antonangelgardt  staff  19367 Oct 29 14:15 lab_hard.png
--rw-r--r--@ 1 antonangelgardt  staff  23693 Oct 29 14:15 lab_medium.png
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  8 antonangelgardt  staff    256 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  27028 Nov  8 17:30 lab_easy.png
+-rw-r--r--  1 antonangelgardt  staff  27813 Nov  8 17:30 lab_extreme.png
+-rw-r--r--  1 antonangelgardt  staff  19367 Nov  8 17:30 lab_hard.png
+-rw-r--r--  1 antonangelgardt  staff  23693 Nov  8 17:30 lab_medium.png
 
 docs/projects/site_libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/projects/site_libs/quarto-html:
 total 184
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   5888 Oct 29 14:15 anchor.min.js
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff   2770 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff   3135 Oct 29 14:15 quarto-syntax-highlighting.css
--rw-r--r--@ 1 antonangelgardt  staff  28427 Oct 29 14:15 quarto.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   5888 Nov  8 17:30 anchor.min.js
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff   2770 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff   3135 Nov  8 17:30 quarto-syntax-highlighting.css
+-rw-r--r--  1 antonangelgardt  staff  28427 Nov  8 17:30 quarto.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/projects/site_libs/quarto-nav:
 total 40
-drwxr-xr-x@ 4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff   224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  4570 Oct 29 14:15 headroom.min.js
--rw-r--r--@ 1 antonangelgardt  staff  8672 Oct 29 14:15 quarto-nav.js
+drwxr-xr-x  4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff   224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  4570 Nov  8 17:30 headroom.min.js
+-rw-r--r--  1 antonangelgardt  staff  8672 Nov  8 17:30 quarto-nav.js
 
 docs/projects/site_libs/quarto-search:
 total 312
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  92971 Oct 29 14:15 autocomplete.umd.js
--rw-r--r--@ 1 antonangelgardt  staff  23539 Oct 29 14:15 fuse.min.js
--rw-r--r--@ 1 antonangelgardt  staff  37117 Oct 29 14:15 quarto-search.js
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  92971 Nov  8 17:30 autocomplete.umd.js
+-rw-r--r--  1 antonangelgardt  staff  23539 Nov  8 17:30 fuse.min.js
+-rw-r--r--  1 antonangelgardt  staff  37117 Nov  8 17:30 quarto-search.js
 
 docs/slides:
 total 2624
-drwxr-xr-x@ 35 antonangelgardt  staff    1120 Oct 29 14:15 .
-drwxr-xr-x@ 10 antonangelgardt  staff     320 Oct 29 14:15 ..
-drwxr-xr-x@ 87 antonangelgardt  staff    2784 Oct 29 14:15 pics
--rw-r--r--@  1 antonangelgardt  staff  119348 Oct 29 14:15 s1.html
--rw-r--r--@  1 antonangelgardt  staff   69112 Oct 29 14:15 s10.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s10_files
--rw-r--r--@  1 antonangelgardt  staff   47408 Oct 29 14:15 s11.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s11_files
--rw-r--r--@  1 antonangelgardt  staff   48034 Oct 29 14:15 s12.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s12_files
--rw-r--r--@  1 antonangelgardt  staff   54447 Oct 29 14:15 s13.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 s13_files
--rw-r--r--@  1 antonangelgardt  staff   50511 Oct 29 14:15 s14.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s14_files
--rw-r--r--@  1 antonangelgardt  staff   42713 Oct 29 14:15 s15.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 s15_files
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s1_files
--rw-r--r--@  1 antonangelgardt  staff  162690 Oct 29 14:15 s2.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s2_files
--rw-r--r--@  1 antonangelgardt  staff  240432 Oct 29 14:15 s3.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s3_files
--rw-r--r--@  1 antonangelgardt  staff   67775 Oct 29 14:15 s4.html
-drwxr-xr-x@  3 antonangelgardt  staff      96 Oct 29 14:15 s4_files
--rw-r--r--@  1 antonangelgardt  staff   71918 Oct 29 14:15 s5.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s5_files
--rw-r--r--@  1 antonangelgardt  staff   71535 Oct 29 14:15 s6.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s6_files
--rw-r--r--@  1 antonangelgardt  staff   87149 Oct 29 14:15 s7.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s7_files
--rw-r--r--@  1 antonangelgardt  staff   63056 Oct 29 14:15 s8.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s8_files
--rw-r--r--@  1 antonangelgardt  staff   75906 Oct 29 14:15 s9.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 s9_files
--rw-r--r--@  1 antonangelgardt  staff   39723 Oct 29 14:15 template.html
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 template_files
+drwxr-xr-x  35 antonangelgardt  staff    1120 Nov  8 17:30 .
+drwxr-xr-x  10 antonangelgardt  staff     320 Nov  8 17:30 ..
+drwxr-xr-x  87 antonangelgardt  staff    2784 Nov  8 17:30 pics
+-rw-r--r--   1 antonangelgardt  staff  119348 Nov  8 17:30 s1.html
+-rw-r--r--   1 antonangelgardt  staff   69112 Nov  8 17:30 s10.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s10_files
+-rw-r--r--   1 antonangelgardt  staff   47408 Nov  8 17:30 s11.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s11_files
+-rw-r--r--   1 antonangelgardt  staff   48034 Nov  8 17:30 s12.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s12_files
+-rw-r--r--   1 antonangelgardt  staff   54447 Nov  8 17:30 s13.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 s13_files
+-rw-r--r--   1 antonangelgardt  staff   50511 Nov  8 17:30 s14.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s14_files
+-rw-r--r--   1 antonangelgardt  staff   42713 Nov  8 17:30 s15.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 s15_files
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s1_files
+-rw-r--r--   1 antonangelgardt  staff  162689 Nov  8 17:30 s2.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s2_files
+-rw-r--r--   1 antonangelgardt  staff  240432 Nov  8 17:30 s3.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s3_files
+-rw-r--r--   1 antonangelgardt  staff   67775 Nov  8 17:30 s4.html
+drwxr-xr-x   3 antonangelgardt  staff      96 Nov  8 17:30 s4_files
+-rw-r--r--   1 antonangelgardt  staff   71918 Nov  8 17:30 s5.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s5_files
+-rw-r--r--   1 antonangelgardt  staff   71535 Nov  8 17:30 s6.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s6_files
+-rw-r--r--   1 antonangelgardt  staff   87149 Nov  8 17:30 s7.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s7_files
+-rw-r--r--   1 antonangelgardt  staff   63056 Nov  8 17:30 s8.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s8_files
+-rw-r--r--   1 antonangelgardt  staff   75906 Nov  8 17:30 s9.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 s9_files
+-rw-r--r--   1 antonangelgardt  staff   39723 Nov  8 17:30 template.html
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 template_files
 
 docs/slides/pics:
 total 17952
-drwxr-xr-x@ 87 antonangelgardt  staff    2784 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff    1120 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  331356 Oct 29 14:15 Correlation_examples.png
--rw-r--r--@  1 antonangelgardt  staff   38737 Oct 29 14:15 and.png
--rw-r--r--@  1 antonangelgardt  staff   74403 Oct 29 14:15 anscombe.png
--rw-r--r--@  1 antonangelgardt  staff   42344 Oct 29 14:15 anti-join.png
--rw-r--r--@  1 antonangelgardt  staff  543353 Oct 29 14:15 antideriv.gif
--rw-r--r--@  1 antonangelgardt  staff   96881 Oct 29 14:15 antideriv.png
--rw-r--r--@  1 antonangelgardt  staff   35172 Oct 29 14:15 auc1.jpg
--rw-r--r--@  1 antonangelgardt  staff   22237 Oct 29 14:15 auc2.jpg
--rw-r--r--@  1 antonangelgardt  staff   39335 Oct 29 14:15 auc3.jpg
--rw-r--r--@  1 antonangelgardt  staff   64657 Oct 29 14:15 auc4.jpg
--rw-r--r--@  1 antonangelgardt  staff   73082 Oct 29 14:15 auc5.jpg
--rw-r--r--@  1 antonangelgardt  staff   63152 Oct 29 14:15 bin_prob.jpg
--rw-r--r--@  1 antonangelgardt  staff   79841 Oct 29 14:15 bin_prob_curve.jpg
--rw-r--r--@  1 antonangelgardt  staff   92244 Oct 29 14:15 bin_prob_line.jpg
--rw-r--r--@  1 antonangelgardt  staff   39493 Oct 29 14:15 bin_y.jpg
--rw-r--r--@  1 antonangelgardt  staff   84128 Oct 29 14:15 cfa-model-0.jpg
--rw-r--r--@  1 antonangelgardt  staff   99843 Oct 29 14:15 cfa-model-1.jpg
--rw-r--r--@  1 antonangelgardt  staff   94088 Oct 29 14:15 cfa-model.jpg
--rw-r--r--@  1 antonangelgardt  staff  168134 Oct 29 14:15 cluster-dist-ave.jpg
--rw-r--r--@  1 antonangelgardt  staff   44583 Oct 29 14:15 cluster-dist-centr.jpg
--rw-r--r--@  1 antonangelgardt  staff   40484 Oct 29 14:15 cluster-dist-clos.jpg
--rw-r--r--@  1 antonangelgardt  staff   42538 Oct 29 14:15 cluster-dist-furth.jpg
--rw-r--r--@  1 antonangelgardt  staff   52025 Oct 29 14:15 cluster.jpg
--rw-r--r--@  1 antonangelgardt  staff  114463 Oct 29 14:15 cluster1.jpg
--rw-r--r--@  1 antonangelgardt  staff  112006 Oct 29 14:15 cluster2.jpg
--rw-r--r--@  1 antonangelgardt  staff  108403 Oct 29 14:15 cluster3.jpg
--rw-r--r--@  1 antonangelgardt  staff   32845 Oct 29 14:15 complement.png
--rw-r--r--@  1 antonangelgardt  staff  344139 Oct 29 14:15 datasaurus.png
--rw-r--r--@  1 antonangelgardt  staff   50113 Oct 29 14:15 decart-prod.png
--rw-r--r--@  1 antonangelgardt  staff   48030 Oct 29 14:15 dendr1.jpg
--rw-r--r--@  1 antonangelgardt  staff   95406 Oct 29 14:15 dendr2.jpg
--rw-r--r--@  1 antonangelgardt  staff   29383 Oct 29 14:15 deviance.jpg
--rw-r--r--@  1 antonangelgardt  staff   34012 Oct 29 14:15 difference.png
--rw-r--r--@  1 antonangelgardt  staff  105040 Oct 29 14:15 duplicate-keys.png
--rw-r--r--@  1 antonangelgardt  staff   76798 Oct 29 14:15 elbow.jpg
--rw-r--r--@  1 antonangelgardt  staff   38980 Oct 29 14:15 equivalence.png
--rw-r--r--@  1 antonangelgardt  staff    6204 Oct 29 14:15 favicon.png
--rw-r--r--@  1 antonangelgardt  staff   51111 Oct 29 14:15 full-join.png
--rw-r--r--@  1 antonangelgardt  staff   36104 Oct 29 14:15 implication.png
--rw-r--r--@  1 antonangelgardt  staff   38427 Oct 29 14:15 inner-join.png
--rw-r--r--@  1 antonangelgardt  staff   85990 Oct 29 14:15 interaction_main.jpg
--rw-r--r--@  1 antonangelgardt  staff   34287 Oct 29 14:15 intersection.png
--rw-r--r--@  1 antonangelgardt  staff   76558 Oct 29 14:15 joins-venn.png
--rw-r--r--@  1 antonangelgardt  staff   59113 Oct 29 14:15 kubik.jpg
--rw-r--r--@  1 antonangelgardt  staff  343210 Oct 29 14:15 lavash.jpg
--rw-r--r--@  1 antonangelgardt  staff  265948 Oct 29 14:15 lavash_dim.jpg
--rw-r--r--@  1 antonangelgardt  staff   44309 Oct 29 14:15 left-join.png
--rw-r--r--@  1 antonangelgardt  staff   79432 Oct 29 14:15 lekala.png
--rw-r--r--@  1 antonangelgardt  staff  725187 Oct 29 14:15 lekalo_curve.png
--rw-r--r--@  1 antonangelgardt  staff  123999 Oct 29 14:15 likertscale.png
--rw-r--r--@  1 antonangelgardt  staff   56900 Oct 29 14:15 line.jpg
--rw-r--r--@  1 antonangelgardt  staff   52815 Oct 29 14:15 list-structure.png
--rw-r--r--@  1 antonangelgardt  staff   94074 Oct 29 14:15 list-vs-df.png
--rw-r--r--@  1 antonangelgardt  staff    4805 Oct 29 14:15 logo.png
--rw-r--r--@  1 antonangelgardt  staff  324886 Oct 29 14:15 maikop1.jpg
--rw-r--r--@  1 antonangelgardt  staff  326969 Oct 29 14:15 maikop2.jpg
--rw-r--r--@  1 antonangelgardt  staff  231289 Oct 29 14:15 majkop.png
--rw-r--r--@  1 antonangelgardt  staff   92622 Oct 29 14:15 manh.jpg
--rw-r--r--@  1 antonangelgardt  staff   27076 Oct 29 14:15 matrix-prod.png
--rw-r--r--@  1 antonangelgardt  staff   25101 Oct 29 14:15 negation.png
--rw-r--r--@  1 antonangelgardt  staff  273483 Oct 29 14:15 nonlin_plot.jpeg
--rw-r--r--@  1 antonangelgardt  staff   37329 Oct 29 14:15 or.png
--rw-r--r--@  1 antonangelgardt  staff  140378 Oct 29 14:15 painscale.jpg
--rw-r--r--@  1 antonangelgardt  staff  120469 Oct 29 14:15 pc1.jpg
--rw-r--r--@  1 antonangelgardt  staff   86859 Oct 29 14:15 pca-1.jpg
--rw-r--r--@  1 antonangelgardt  staff  113155 Oct 29 14:15 pca-2.jpg
--rw-r--r--@  1 antonangelgardt  staff  123585 Oct 29 14:15 pca-3.jpg
--rw-r--r--@  1 antonangelgardt  staff   36407 Oct 29 14:15 replication.png
--rw-r--r--@  1 antonangelgardt  staff   45798 Oct 29 14:15 right-join.png
--rw-r--r--@  1 antonangelgardt  staff  211766 Oct 29 14:15 rstudio-interface.png
--rw-r--r--@  1 antonangelgardt  staff   55755 Oct 29 14:15 sem-model.jpg
--rw-r--r--@  1 antonangelgardt  staff   41642 Oct 29 14:15 semi-join.png
--rw-r--r--@  1 antonangelgardt  staff   29765 Oct 29 14:15 set-a.png
--rw-r--r--@  1 antonangelgardt  staff   36335 Oct 29 14:15 set-a1.png
--rw-r--r--@  1 antonangelgardt  staff   37643 Oct 29 14:15 set-func.png
--rw-r--r--@  1 antonangelgardt  staff  296171 Oct 29 14:15 splines_connected.jpg
--rw-r--r--@  1 antonangelgardt  staff  293049 Oct 29 14:15 splines_separate.jpg
--rw-r--r--@  1 antonangelgardt  staff   36804 Oct 29 14:15 symm-difference.png
--rw-r--r--@  1 antonangelgardt  staff   53638 Oct 29 14:15 tidy-2.jpg
--rw-r--r--@  1 antonangelgardt  staff   99582 Oct 29 14:15 tidy.jpg
--rw-r--r--@  1 antonangelgardt  staff   32449 Oct 29 14:15 union.png
--rw-r--r--@  1 antonangelgardt  staff   62016 Oct 29 14:15 vec-to-mat.png
--rw-r--r--@  1 antonangelgardt  staff   35775 Oct 29 14:15 wide-long.png
--rw-r--r--@  1 antonangelgardt  staff   42537 Oct 29 14:15 xor.png
--rw-r--r--@  1 antonangelgardt  staff   22992 Oct 29 14:15 xy.png
+drwxr-xr-x  87 antonangelgardt  staff    2784 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff    1120 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  331356 Nov  8 17:30 Correlation_examples.png
+-rw-r--r--   1 antonangelgardt  staff   38737 Nov  8 17:30 and.png
+-rw-r--r--   1 antonangelgardt  staff   74403 Nov  8 17:30 anscombe.png
+-rw-r--r--   1 antonangelgardt  staff   42344 Nov  8 17:30 anti-join.png
+-rw-r--r--   1 antonangelgardt  staff  543353 Nov  8 17:30 antideriv.gif
+-rw-r--r--   1 antonangelgardt  staff   96881 Nov  8 17:30 antideriv.png
+-rw-r--r--   1 antonangelgardt  staff   35172 Nov  8 17:30 auc1.jpg
+-rw-r--r--   1 antonangelgardt  staff   22237 Nov  8 17:30 auc2.jpg
+-rw-r--r--   1 antonangelgardt  staff   39335 Nov  8 17:30 auc3.jpg
+-rw-r--r--   1 antonangelgardt  staff   64657 Nov  8 17:30 auc4.jpg
+-rw-r--r--   1 antonangelgardt  staff   73082 Nov  8 17:30 auc5.jpg
+-rw-r--r--   1 antonangelgardt  staff   63152 Nov  8 17:30 bin_prob.jpg
+-rw-r--r--   1 antonangelgardt  staff   79841 Nov  8 17:30 bin_prob_curve.jpg
+-rw-r--r--   1 antonangelgardt  staff   92244 Nov  8 17:30 bin_prob_line.jpg
+-rw-r--r--   1 antonangelgardt  staff   39493 Nov  8 17:30 bin_y.jpg
+-rw-r--r--   1 antonangelgardt  staff   84128 Nov  8 17:30 cfa-model-0.jpg
+-rw-r--r--   1 antonangelgardt  staff   99843 Nov  8 17:30 cfa-model-1.jpg
+-rw-r--r--   1 antonangelgardt  staff   94088 Nov  8 17:30 cfa-model.jpg
+-rw-r--r--   1 antonangelgardt  staff  168134 Nov  8 17:30 cluster-dist-ave.jpg
+-rw-r--r--   1 antonangelgardt  staff   44583 Nov  8 17:30 cluster-dist-centr.jpg
+-rw-r--r--   1 antonangelgardt  staff   40484 Nov  8 17:30 cluster-dist-clos.jpg
+-rw-r--r--   1 antonangelgardt  staff   42538 Nov  8 17:30 cluster-dist-furth.jpg
+-rw-r--r--   1 antonangelgardt  staff   52025 Nov  8 17:30 cluster.jpg
+-rw-r--r--   1 antonangelgardt  staff  114463 Nov  8 17:30 cluster1.jpg
+-rw-r--r--   1 antonangelgardt  staff  112006 Nov  8 17:30 cluster2.jpg
+-rw-r--r--   1 antonangelgardt  staff  108403 Nov  8 17:30 cluster3.jpg
+-rw-r--r--   1 antonangelgardt  staff   32845 Nov  8 17:30 complement.png
+-rw-r--r--   1 antonangelgardt  staff  344139 Nov  8 17:30 datasaurus.png
+-rw-r--r--   1 antonangelgardt  staff   50113 Nov  8 17:30 decart-prod.png
+-rw-r--r--   1 antonangelgardt  staff   48030 Nov  8 17:30 dendr1.jpg
+-rw-r--r--   1 antonangelgardt  staff   95406 Nov  8 17:30 dendr2.jpg
+-rw-r--r--   1 antonangelgardt  staff   29383 Nov  8 17:30 deviance.jpg
+-rw-r--r--   1 antonangelgardt  staff   34012 Nov  8 17:30 difference.png
+-rw-r--r--   1 antonangelgardt  staff  105040 Nov  8 17:30 duplicate-keys.png
+-rw-r--r--   1 antonangelgardt  staff   76798 Nov  8 17:30 elbow.jpg
+-rw-r--r--   1 antonangelgardt  staff   38980 Nov  8 17:30 equivalence.png
+-rw-r--r--   1 antonangelgardt  staff    6204 Nov  8 17:30 favicon.png
+-rw-r--r--   1 antonangelgardt  staff   51111 Nov  8 17:30 full-join.png
+-rw-r--r--   1 antonangelgardt  staff   36104 Nov  8 17:30 implication.png
+-rw-r--r--   1 antonangelgardt  staff   38427 Nov  8 17:30 inner-join.png
+-rw-r--r--   1 antonangelgardt  staff   85990 Nov  8 17:30 interaction_main.jpg
+-rw-r--r--   1 antonangelgardt  staff   34287 Nov  8 17:30 intersection.png
+-rw-r--r--   1 antonangelgardt  staff   76558 Nov  8 17:30 joins-venn.png
+-rw-r--r--@  1 antonangelgardt  staff   59113 Nov  8 17:30 kubik.jpg
+-rw-r--r--   1 antonangelgardt  staff  343210 Nov  8 17:30 lavash.jpg
+-rw-r--r--   1 antonangelgardt  staff  265948 Nov  8 17:30 lavash_dim.jpg
+-rw-r--r--   1 antonangelgardt  staff   44309 Nov  8 17:30 left-join.png
+-rw-r--r--   1 antonangelgardt  staff   79432 Nov  8 17:30 lekala.png
+-rw-r--r--   1 antonangelgardt  staff  725187 Nov  8 17:30 lekalo_curve.png
+-rw-r--r--@  1 antonangelgardt  staff  123999 Nov  8 17:30 likertscale.png
+-rw-r--r--   1 antonangelgardt  staff   56900 Nov  8 17:30 line.jpg
+-rw-r--r--   1 antonangelgardt  staff   52815 Nov  8 17:30 list-structure.png
+-rw-r--r--   1 antonangelgardt  staff   94074 Nov  8 17:30 list-vs-df.png
+-rw-r--r--   1 antonangelgardt  staff    4805 Nov  8 17:30 logo.png
+-rw-r--r--   1 antonangelgardt  staff  324886 Nov  8 17:30 maikop1.jpg
+-rw-r--r--   1 antonangelgardt  staff  326969 Nov  8 17:30 maikop2.jpg
+-rw-r--r--   1 antonangelgardt  staff  231289 Nov  8 17:30 majkop.png
+-rw-r--r--   1 antonangelgardt  staff   92622 Nov  8 17:30 manh.jpg
+-rw-r--r--   1 antonangelgardt  staff   27076 Nov  8 17:30 matrix-prod.png
+-rw-r--r--   1 antonangelgardt  staff   25101 Nov  8 17:30 negation.png
+-rw-r--r--@  1 antonangelgardt  staff  273483 Nov  8 17:30 nonlin_plot.jpeg
+-rw-r--r--   1 antonangelgardt  staff   37329 Nov  8 17:30 or.png
+-rw-r--r--@  1 antonangelgardt  staff  140378 Nov  8 17:30 painscale.jpg
+-rw-r--r--   1 antonangelgardt  staff  120469 Nov  8 17:30 pc1.jpg
+-rw-r--r--   1 antonangelgardt  staff   86859 Nov  8 17:30 pca-1.jpg
+-rw-r--r--   1 antonangelgardt  staff  113155 Nov  8 17:30 pca-2.jpg
+-rw-r--r--   1 antonangelgardt  staff  123585 Nov  8 17:30 pca-3.jpg
+-rw-r--r--   1 antonangelgardt  staff   36407 Nov  8 17:30 replication.png
+-rw-r--r--   1 antonangelgardt  staff   45798 Nov  8 17:30 right-join.png
+-rw-r--r--   1 antonangelgardt  staff  211766 Nov  8 17:30 rstudio-interface.png
+-rw-r--r--   1 antonangelgardt  staff   55755 Nov  8 17:30 sem-model.jpg
+-rw-r--r--   1 antonangelgardt  staff   41642 Nov  8 17:30 semi-join.png
+-rw-r--r--   1 antonangelgardt  staff   29765 Nov  8 17:30 set-a.png
+-rw-r--r--   1 antonangelgardt  staff   36335 Nov  8 17:30 set-a1.png
+-rw-r--r--   1 antonangelgardt  staff   37643 Nov  8 17:30 set-func.png
+-rw-r--r--   1 antonangelgardt  staff  296171 Nov  8 17:30 splines_connected.jpg
+-rw-r--r--   1 antonangelgardt  staff  293049 Nov  8 17:30 splines_separate.jpg
+-rw-r--r--   1 antonangelgardt  staff   36804 Nov  8 17:30 symm-difference.png
+-rw-r--r--   1 antonangelgardt  staff   53638 Nov  8 17:30 tidy-2.jpg
+-rw-r--r--   1 antonangelgardt  staff   99582 Nov  8 17:30 tidy.jpg
+-rw-r--r--   1 antonangelgardt  staff   32449 Nov  8 17:30 union.png
+-rw-r--r--   1 antonangelgardt  staff   62016 Nov  8 17:30 vec-to-mat.png
+-rw-r--r--   1 antonangelgardt  staff   35775 Nov  8 17:30 wide-long.png
+-rw-r--r--   1 antonangelgardt  staff   42537 Nov  8 17:30 xor.png
+-rw-r--r--   1 antonangelgardt  staff   22992 Nov  8 17:30 xy.png
 
 docs/slides/s10_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s10_files/figure-revealjs:
 total 552
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  96613 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@ 1 antonangelgardt  staff  82070 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@ 1 antonangelgardt  staff  97119 Oct 29 14:15 unnamed-chunk-3-1.png
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  96613 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--  1 antonangelgardt  staff  82070 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--  1 antonangelgardt  staff  97119 Nov  8 17:30 unnamed-chunk-3-1.png
 
 docs/slides/s10_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s10_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s10_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s10_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s10_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s10_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s10_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s10_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s10_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s10_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s10_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s10_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s10_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s10_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s10_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s10_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s10_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s10_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s11_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff   288 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff   288 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s11_files/figure-revealjs:
 total 1856
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   80257 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@ 1 antonangelgardt  staff  112414 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@ 1 antonangelgardt  staff  308631 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@ 1 antonangelgardt  staff  104894 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@ 1 antonangelgardt  staff  103398 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@ 1 antonangelgardt  staff   98448 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@ 1 antonangelgardt  staff  124961 Oct 29 14:15 unnamed-chunk-8-1.png
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   80257 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--  1 antonangelgardt  staff  112414 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--  1 antonangelgardt  staff  308631 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--  1 antonangelgardt  staff  104894 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--  1 antonangelgardt  staff  103398 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--  1 antonangelgardt  staff   98448 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--  1 antonangelgardt  staff  124961 Nov  8 17:30 unnamed-chunk-8-1.png
 
 docs/slides/s11_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s11_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s11_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s11_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s11_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s11_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s11_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s11_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s11_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s11_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s11_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s11_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s11_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s11_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s11_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s11_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s11_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s11_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s12_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff   224 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff   224 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s12_files/figure-revealjs:
 total 1376
-drwxr-xr-x@ 7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   92807 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@ 1 antonangelgardt  staff  102157 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@ 1 antonangelgardt  staff  174396 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@ 1 antonangelgardt  staff  163234 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@ 1 antonangelgardt  staff  167876 Oct 29 14:15 unnamed-chunk-5-1.png
+drwxr-xr-x  7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   92807 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--  1 antonangelgardt  staff  102157 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--  1 antonangelgardt  staff  174396 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--  1 antonangelgardt  staff  163234 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--  1 antonangelgardt  staff  167876 Nov  8 17:30 unnamed-chunk-5-1.png
 
 docs/slides/s12_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s12_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s12_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s12_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s12_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s12_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s12_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s12_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s12_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s12_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s12_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s12_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s12_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s12_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s12_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s12_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s12_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s12_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s13_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s13_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s13_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s13_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s13_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s13_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s13_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s13_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s13_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s13_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s13_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s13_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s13_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s13_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s13_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s13_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s13_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s13_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s13_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s14_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s14_files/figure-revealjs:
-total 832
-drwxr-xr-x@ 5 antonangelgardt  staff     160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   85351 Oct 29 14:15 geomprob-dots-1.png
--rw-r--r--@ 1 antonangelgardt  staff  260242 Oct 29 14:15 geomprob-incircle-1.png
--rw-r--r--@ 1 antonangelgardt  staff   73780 Oct 29 14:15 geomprob-square-14-1.png
+total 840
+drwxr-xr-x  5 antonangelgardt  staff     160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   86078 Nov  8 17:30 geomprob-dots-1.png
+-rw-r--r--  1 antonangelgardt  staff  259170 Nov  8 17:30 geomprob-incircle-1.png
+-rw-r--r--  1 antonangelgardt  staff   73780 Nov  8 17:30 geomprob-square-14-1.png
 
 docs/slides/s14_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s14_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s14_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s14_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s14_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s14_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s14_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s14_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s14_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s14_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s14_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s14_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s14_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s14_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s14_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s14_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s14_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s14_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s15_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s15_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s15_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s15_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s15_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s15_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s15_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s15_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s15_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s15_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s15_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s15_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s15_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s15_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s15_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s15_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s15_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s15_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s15_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s1_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  6 antonangelgardt  staff   192 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   6 antonangelgardt  staff   192 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s1_files/figure-revealjs:
 total 520
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  58342 Oct 29 14:15 vec-classic-1.png
--rw-r--r--@ 1 antonangelgardt  staff  56255 Oct 29 14:15 vec-free-1.png
--rw-r--r--@ 1 antonangelgardt  staff  52442 Oct 29 14:15 vec-remove-vector-1.png
--rw-r--r--@ 1 antonangelgardt  staff  90512 Oct 29 14:15 vec-same-1.png
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  58342 Nov  8 17:30 vec-classic-1.png
+-rw-r--r--  1 antonangelgardt  staff  56255 Nov  8 17:30 vec-free-1.png
+-rw-r--r--  1 antonangelgardt  staff  52442 Nov  8 17:30 vec-remove-vector-1.png
+-rw-r--r--  1 antonangelgardt  staff  90512 Nov  8 17:30 vec-same-1.png
 
 docs/slides/s1_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s1_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s1_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s1_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s1_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s1_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s1_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s1_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s1_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s1_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s1_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s1_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s1_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s1_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s1_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s1_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s1_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s1_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s2_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 17 antonangelgardt  staff   544 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  17 antonangelgardt  staff   544 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s2_files/figure-revealjs:
 total 3416
-drwxr-xr-x@ 17 antonangelgardt  staff     544 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  269917 Oct 29 14:15 unnamed-chunk-103-1.png
--rw-r--r--@  1 antonangelgardt  staff   55181 Oct 29 14:15 unnamed-chunk-105-1.png
--rw-r--r--@  1 antonangelgardt  staff  164179 Oct 29 14:15 unnamed-chunk-106-1.png
--rw-r--r--@  1 antonangelgardt  staff  121437 Oct 29 14:15 unnamed-chunk-107-1.png
--rw-r--r--@  1 antonangelgardt  staff  138415 Oct 29 14:15 unnamed-chunk-108-1.png
--rw-r--r--@  1 antonangelgardt  staff   53187 Oct 29 14:15 unnamed-chunk-109-1.png
--rw-r--r--@  1 antonangelgardt  staff  144304 Oct 29 14:15 unnamed-chunk-110-1.png
--rw-r--r--@  1 antonangelgardt  staff   67595 Oct 29 14:15 unnamed-chunk-111-1.png
--rw-r--r--@  1 antonangelgardt  staff   59352 Oct 29 14:15 unnamed-chunk-112-1.png
--rw-r--r--@  1 antonangelgardt  staff  139891 Oct 29 14:15 unnamed-chunk-113-1.png
--rw-r--r--@  1 antonangelgardt  staff   56450 Oct 29 14:15 unnamed-chunk-114-1.png
--rw-r--r--@  1 antonangelgardt  staff   70905 Oct 29 14:15 unnamed-chunk-115-1.png
--rw-r--r--@  1 antonangelgardt  staff  145437 Oct 29 14:15 unnamed-chunk-116-1.png
--rw-r--r--@  1 antonangelgardt  staff  132399 Oct 29 14:15 unnamed-chunk-117-1.png
--rw-r--r--@  1 antonangelgardt  staff   99009 Oct 29 14:15 unnamed-chunk-99-1.png
+drwxr-xr-x  17 antonangelgardt  staff     544 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  269917 Nov  8 17:30 unnamed-chunk-103-1.png
+-rw-r--r--   1 antonangelgardt  staff   55181 Nov  8 17:30 unnamed-chunk-105-1.png
+-rw-r--r--   1 antonangelgardt  staff  164179 Nov  8 17:30 unnamed-chunk-106-1.png
+-rw-r--r--   1 antonangelgardt  staff  121437 Nov  8 17:30 unnamed-chunk-107-1.png
+-rw-r--r--   1 antonangelgardt  staff  138415 Nov  8 17:30 unnamed-chunk-108-1.png
+-rw-r--r--   1 antonangelgardt  staff   53187 Nov  8 17:30 unnamed-chunk-109-1.png
+-rw-r--r--   1 antonangelgardt  staff  144304 Nov  8 17:30 unnamed-chunk-110-1.png
+-rw-r--r--   1 antonangelgardt  staff   67595 Nov  8 17:30 unnamed-chunk-111-1.png
+-rw-r--r--   1 antonangelgardt  staff   59352 Nov  8 17:30 unnamed-chunk-112-1.png
+-rw-r--r--   1 antonangelgardt  staff  139891 Nov  8 17:30 unnamed-chunk-113-1.png
+-rw-r--r--   1 antonangelgardt  staff   56450 Nov  8 17:30 unnamed-chunk-114-1.png
+-rw-r--r--   1 antonangelgardt  staff   70905 Nov  8 17:30 unnamed-chunk-115-1.png
+-rw-r--r--   1 antonangelgardt  staff  145437 Nov  8 17:30 unnamed-chunk-116-1.png
+-rw-r--r--   1 antonangelgardt  staff  132399 Nov  8 17:30 unnamed-chunk-117-1.png
+-rw-r--r--   1 antonangelgardt  staff   99009 Nov  8 17:30 unnamed-chunk-99-1.png
 
 docs/slides/s2_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s2_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s2_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s2_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s2_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s2_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s2_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s2_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s2_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s2_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s2_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s2_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s2_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s2_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s2_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s2_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s2_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s2_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s3_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 13 antonangelgardt  staff   416 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@ 13 antonangelgardt  staff   416 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  13 antonangelgardt  staff   416 Nov  8 17:30 figure-revealjs
+drwxr-xr-x  13 antonangelgardt  staff   416 Nov  8 17:30 libs
 
 docs/slides/s3_files/figure-revealjs:
 total 1784
-drwxr-xr-x@ 13 antonangelgardt  staff     416 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   95037 Oct 29 14:15 deriv-graph-1.png
--rw-r--r--@  1 antonangelgardt  staff   70575 Oct 29 14:15 deriv1-1.png
--rw-r--r--@  1 antonangelgardt  staff   77466 Oct 29 14:15 deriv2-1.png
--rw-r--r--@  1 antonangelgardt  staff   85404 Oct 29 14:15 deriv3-1.png
--rw-r--r--@  1 antonangelgardt  staff   96557 Oct 29 14:15 deriv4-1.png
--rw-r--r--@  1 antonangelgardt  staff   58718 Oct 29 14:15 discrete-func-1.png
--rw-r--r--@  1 antonangelgardt  staff  124561 Oct 29 14:15 func-graphs-1.png
--rw-r--r--@  1 antonangelgardt  staff   69357 Oct 29 14:15 integral-plot-1.png
--rw-r--r--@  1 antonangelgardt  staff   74728 Oct 29 14:15 integral-plot005-1.png
--rw-r--r--@  1 antonangelgardt  staff   72105 Oct 29 14:15 integral-plot01-1.png
--rw-r--r--@  1 antonangelgardt  staff   68312 Oct 29 14:15 unnamed-chunk-1-1.png
+drwxr-xr-x  13 antonangelgardt  staff     416 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   95037 Nov  8 17:30 deriv-graph-1.png
+-rw-r--r--   1 antonangelgardt  staff   70575 Nov  8 17:30 deriv1-1.png
+-rw-r--r--   1 antonangelgardt  staff   77466 Nov  8 17:30 deriv2-1.png
+-rw-r--r--   1 antonangelgardt  staff   85404 Nov  8 17:30 deriv3-1.png
+-rw-r--r--   1 antonangelgardt  staff   96557 Nov  8 17:30 deriv4-1.png
+-rw-r--r--   1 antonangelgardt  staff   58718 Nov  8 17:30 discrete-func-1.png
+-rw-r--r--   1 antonangelgardt  staff  124561 Nov  8 17:30 func-graphs-1.png
+-rw-r--r--   1 antonangelgardt  staff   69357 Nov  8 17:30 integral-plot-1.png
+-rw-r--r--   1 antonangelgardt  staff   74728 Nov  8 17:30 integral-plot005-1.png
+-rw-r--r--   1 antonangelgardt  staff   72105 Nov  8 17:30 integral-plot01-1.png
+-rw-r--r--   1 antonangelgardt  staff   68312 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/slides/s3_files/libs:
 total 0
-drwxr-xr-x@ 13 antonangelgardt  staff  416 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 crosstalk-1.2.1
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 htmltools-fill-0.5.8.1
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 htmlwidgets-1.6.4
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 jquery-3.5.1
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 plotly-binding-4.10.4
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 plotly-htmlwidgets-css-2.11.1
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 plotly-main-2.11.1
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 typedarray-0.1
+drwxr-xr-x  13 antonangelgardt  staff  416 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 crosstalk-1.2.1
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 htmltools-fill-0.5.8.1
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 htmlwidgets-1.6.4
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 jquery-3.5.1
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 plotly-binding-4.10.4
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 plotly-htmlwidgets-css-2.11.1
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 plotly-main-2.11.1
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 typedarray-0.1
 
 docs/slides/s3_files/libs/clipboard:
 total 24
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff   416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff   416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s3_files/libs/crosstalk-1.2.1:
 total 0
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff  416 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 css
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 js
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 scss
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff  416 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 css
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 js
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 scss
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/css:
 total 8
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  1306 Oct 29 14:15 crosstalk.min.css
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  1306 Nov  8 17:30 crosstalk.min.css
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/js:
 total 352
-drwxr-xr-x@ 6 antonangelgardt  staff    192 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  49030 Oct 29 14:15 crosstalk.js
--rw-r--r--@ 1 antonangelgardt  staff  54853 Oct 29 14:15 crosstalk.js.map
--rw-r--r--@ 1 antonangelgardt  staff  18925 Oct 29 14:15 crosstalk.min.js
--rw-r--r--@ 1 antonangelgardt  staff  50338 Oct 29 14:15 crosstalk.min.js.map
+drwxr-xr-x  6 antonangelgardt  staff    192 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  49030 Nov  8 17:30 crosstalk.js
+-rw-r--r--  1 antonangelgardt  staff  54853 Nov  8 17:30 crosstalk.js.map
+-rw-r--r--  1 antonangelgardt  staff  18925 Nov  8 17:30 crosstalk.min.js
+-rw-r--r--  1 antonangelgardt  staff  50338 Nov  8 17:30 crosstalk.min.js.map
 
 docs/slides/s3_files/libs/crosstalk-1.2.1/scss:
 total 8
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  1816 Oct 29 14:15 crosstalk.scss
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  1816 Nov  8 17:30 crosstalk.scss
 
 docs/slides/s3_files/libs/htmltools-fill-0.5.8.1:
 total 8
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff  416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  585 Oct 29 14:15 fill.css
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff  416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  585 Nov  8 17:30 fill.css
 
 docs/slides/s3_files/libs/htmlwidgets-1.6.4:
 total 72
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff    416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  33190 Oct 29 14:15 htmlwidgets.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff    416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  33190 Nov  8 17:30 htmlwidgets.js
 
 docs/slides/s3_files/libs/jquery-3.5.1:
 total 1048
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff     416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   13369 Oct 29 14:15 jquery-AUTHORS.txt
--rw-r--r--@  1 antonangelgardt  staff  287630 Oct 29 14:15 jquery.js
--rw-r--r--@  1 antonangelgardt  staff   89476 Oct 29 14:15 jquery.min.js
--rw-r--r--@  1 antonangelgardt  staff  137986 Oct 29 14:15 jquery.min.map
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff     416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   13369 Nov  8 17:30 jquery-AUTHORS.txt
+-rw-r--r--   1 antonangelgardt  staff  287630 Nov  8 17:30 jquery.js
+-rw-r--r--   1 antonangelgardt  staff   89476 Nov  8 17:30 jquery.min.js
+-rw-r--r--   1 antonangelgardt  staff  137986 Nov  8 17:30 jquery.min.map
 
 docs/slides/s3_files/libs/plotly-binding-4.10.4:
 total 72
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff    416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  33758 Oct 29 14:15 plotly.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff    416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  33758 Nov  8 17:30 plotly.js
 
 docs/slides/s3_files/libs/plotly-htmlwidgets-css-2.11.1:
 total 8
-drwxr-xr-x@  3 antonangelgardt  staff   96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff  416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  173 Oct 29 14:15 plotly-htmlwidgets.css
+drwxr-xr-x   3 antonangelgardt  staff   96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff  416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  173 Nov  8 17:30 plotly-htmlwidgets.css
 
 docs/slides/s3_files/libs/plotly-main-2.11.1:
 total 7160
-drwxr-xr-x@  3 antonangelgardt  staff       96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff      416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  3665833 Oct 29 14:15 plotly-latest.min.js
+drwxr-xr-x   3 antonangelgardt  staff       96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff      416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  3665833 Nov  8 17:30 plotly-latest.min.js
 
 docs/slides/s3_files/libs/quarto-html:
 total 144
-drwxr-xr-x@  9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff    416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@  1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@  1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@  1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@  1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@  1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@  1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x   9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff    416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--   1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--   1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--   1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--   1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--   1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--   1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s3_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff  416 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff  416 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s3_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s3_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s3_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s3_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s3_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s3_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s3_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s3_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s3_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s3_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s3_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s3_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s3_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s3_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s3_files/libs/typedarray-0.1:
 total 48
-drwxr-xr-x@  3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 13 antonangelgardt  staff    416 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  22444 Oct 29 14:15 typedarray.min.js
+drwxr-xr-x   3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  13 antonangelgardt  staff    416 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  22444 Nov  8 17:30 typedarray.min.js
 
 docs/slides/s4_files:
 total 0
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s4_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s4_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s4_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s4_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s4_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s4_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s4_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s4_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s4_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s4_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s4_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s4_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s4_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s4_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s4_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s4_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s4_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s4_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s5_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 21 antonangelgardt  staff   672 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  21 antonangelgardt  staff   672 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s5_files/figure-revealjs:
-total 7344
-drwxr-xr-x@ 21 antonangelgardt  staff     672 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   54808 Oct 29 14:15 cfd-dice-1.png
--rw-r--r--@  1 antonangelgardt  staff  173998 Oct 29 14:15 cluster-clusters-1.png
--rw-r--r--@  1 antonangelgardt  staff  183144 Oct 29 14:15 cluster-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  185201 Oct 29 14:15 cluster-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff   85843 Oct 29 14:15 geomprob-dots-1.png
--rw-r--r--@  1 antonangelgardt  staff  255786 Oct 29 14:15 geomprob-incircle-1.png
--rw-r--r--@  1 antonangelgardt  staff   73780 Oct 29 14:15 geomprob-square-1.png
--rw-r--r--@  1 antonangelgardt  staff  152548 Oct 29 14:15 norm-dist-1.png
--rw-r--r--@  1 antonangelgardt  staff  100059 Oct 29 14:15 pdf-inetrvals-1.png
--rw-r--r--@  1 antonangelgardt  staff   55895 Oct 29 14:15 pdf-segment-nolabs-1.png
--rw-r--r--@  1 antonangelgardt  staff   59767 Oct 29 14:15 pmf-dice-1.png
--rw-r--r--@  1 antonangelgardt  staff   59767 Oct 29 14:15 pmf-dice-repeat-1.png
--rw-r--r--@  1 antonangelgardt  staff  126381 Oct 29 14:15 pmf-vs-pdf-1.png
--rw-r--r--@  1 antonangelgardt  staff  354180 Oct 29 14:15 simple-random-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  334198 Oct 29 14:15 simple-random-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff  441440 Oct 29 14:15 strat-pop-1.png
--rw-r--r--@  1 antonangelgardt  staff  474785 Oct 29 14:15 strat-pop-strata-1.png
--rw-r--r--@  1 antonangelgardt  staff  409913 Oct 29 14:15 strat-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff  141476 Oct 29 14:15 unnamed-chunk-1-1.png
+total 7368
+drwxr-xr-x  21 antonangelgardt  staff     672 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   54808 Nov  8 17:30 cfd-dice-1.png
+-rw-r--r--   1 antonangelgardt  staff  178413 Nov  8 17:30 cluster-clusters-1.png
+-rw-r--r--   1 antonangelgardt  staff  187484 Nov  8 17:30 cluster-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  188581 Nov  8 17:30 cluster-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff   85799 Nov  8 17:30 geomprob-dots-1.png
+-rw-r--r--   1 antonangelgardt  staff  258602 Nov  8 17:30 geomprob-incircle-1.png
+-rw-r--r--   1 antonangelgardt  staff   73780 Nov  8 17:30 geomprob-square-1.png
+-rw-r--r--   1 antonangelgardt  staff  152548 Nov  8 17:30 norm-dist-1.png
+-rw-r--r--   1 antonangelgardt  staff  100059 Nov  8 17:30 pdf-inetrvals-1.png
+-rw-r--r--   1 antonangelgardt  staff   55895 Nov  8 17:30 pdf-segment-nolabs-1.png
+-rw-r--r--   1 antonangelgardt  staff   59767 Nov  8 17:30 pmf-dice-1.png
+-rw-r--r--   1 antonangelgardt  staff   59767 Nov  8 17:30 pmf-dice-repeat-1.png
+-rw-r--r--   1 antonangelgardt  staff  126381 Nov  8 17:30 pmf-vs-pdf-1.png
+-rw-r--r--   1 antonangelgardt  staff  351528 Nov  8 17:30 simple-random-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  334713 Nov  8 17:30 simple-random-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff  442342 Nov  8 17:30 strat-pop-1.png
+-rw-r--r--   1 antonangelgardt  staff  474910 Nov  8 17:30 strat-pop-strata-1.png
+-rw-r--r--   1 antonangelgardt  staff  412852 Nov  8 17:30 strat-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff  141476 Nov  8 17:30 unnamed-chunk-1-1.png
 
 docs/slides/s5_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s5_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s5_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s5_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s5_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s5_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s5_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s5_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s5_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s5_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s5_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s5_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s5_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s5_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s5_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s5_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s5_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s5_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s6_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s6_files/figure-revealjs:
-total 2648
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   99964 Oct 29 14:15 alpha-raise-1.png
--rw-r--r--@  1 antonangelgardt  staff   87923 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff  121805 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  166731 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff  372885 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff  103548 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   87923 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff  122994 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff   56451 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff  110617 Oct 29 14:15 unnamed-chunk-9-1.png
+total 2632
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   99964 Nov  8 17:30 alpha-raise-1.png
+-rw-r--r--   1 antonangelgardt  staff   87923 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff  120840 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  151446 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff  379788 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff  103548 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   87923 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff  130384 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff   56451 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff  110617 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/slides/s6_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s6_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s6_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s6_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s6_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s6_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s6_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s6_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s6_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s6_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s6_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s6_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s6_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s6_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s6_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s6_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s6_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s6_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s7_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 48 antonangelgardt  staff  1536 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  48 antonangelgardt  staff  1536 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s7_files/figure-revealjs:
 total 8224
-drwxr-xr-x@ 48 antonangelgardt  staff    1536 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   57115 Oct 29 14:15 68_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   57268 Oct 29 14:15 99_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   50288 Oct 29 14:15 boxplot-1.png
--rw-r--r--@  1 antonangelgardt  staff   62392 Oct 29 14:15 boxplot_annotated-1.png
--rw-r--r--@  1 antonangelgardt  staff   84137 Oct 29 14:15 central_tendency_asymm_left-1.png
--rw-r--r--@  1 antonangelgardt  staff   95000 Oct 29 14:15 central_tendency_asymm_right-1.png
--rw-r--r--@  1 antonangelgardt  staff   92013 Oct 29 14:15 central_tendency_bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff   89957 Oct 29 14:15 central_tendency_symm-1.png
--rw-r--r--@  1 antonangelgardt  staff   83710 Oct 29 14:15 distributions_with_the_same_means_mean-1.png
--rw-r--r--@  1 antonangelgardt  staff   82185 Oct 29 14:15 distributions_with_the_same_means_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   56467 Oct 29 14:15 fifth_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   57474 Oct 29 14:15 iqr_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff  132748 Oct 29 14:15 mean_feature_1-1.png
--rw-r--r--@  1 antonangelgardt  staff  111122 Oct 29 14:15 mean_feature_2-1.png
--rw-r--r--@  1 antonangelgardt  staff  101147 Oct 29 14:15 median-bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff  100842 Oct 29 14:15 median-left-skew-1.png
--rw-r--r--@  1 antonangelgardt  staff  122091 Oct 29 14:15 median-norm-1.png
--rw-r--r--@  1 antonangelgardt  staff  103173 Oct 29 14:15 median-right-skew-1.png
--rw-r--r--@  1 antonangelgardt  staff   95629 Oct 29 14:15 mode-bimodal-1.png
--rw-r--r--@  1 antonangelgardt  staff  128323 Oct 29 14:15 mode-bimodal-struct-1.png
--rw-r--r--@  1 antonangelgardt  staff   71895 Oct 29 14:15 mode-binom-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff  124330 Oct 29 14:15 mode-continuous-freqs-1.png
--rw-r--r--@  1 antonangelgardt  staff  108649 Oct 29 14:15 mode-continuous-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   71490 Oct 29 14:15 mode-norm-1.png
--rw-r--r--@  1 antonangelgardt  staff   94677 Oct 29 14:15 mode-norm-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   87423 Oct 29 14:15 mode-norm-sample-1.png
--rw-r--r--@  1 antonangelgardt  staff   82267 Oct 29 14:15 mode-pmf-1.png
--rw-r--r--@  1 antonangelgardt  staff   65728 Oct 29 14:15 mode-poiss-mode-1.png
--rw-r--r--@  1 antonangelgardt  staff   95437 Oct 29 14:15 mode-polymodal-1.png
--rw-r--r--@  1 antonangelgardt  staff   61218 Oct 29 14:15 quartiles_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   82588 Oct 29 14:15 range_problem-1.png
--rw-r--r--@  1 antonangelgardt  staff  132748 Oct 29 14:15 sd_feature_1-1.png
--rw-r--r--@  1 antonangelgardt  staff  111122 Oct 29 14:15 sd_feature_2-1.png
--rw-r--r--@  1 antonangelgardt  staff   54198 Oct 29 14:15 taia_score_vis-1.png
--rw-r--r--@  1 antonangelgardt  staff   82683 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff   84793 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff   86143 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff   83956 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff   91436 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff   85750 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff   88858 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   90037 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff   98490 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff  111859 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff   77353 Oct 29 14:15 unnamed-chunk-9-1.png
--rw-r--r--@  1 antonangelgardt  staff  115917 Oct 29 14:15 zero_deviation_sum-1.png
+drwxr-xr-x  48 antonangelgardt  staff    1536 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   57115 Nov  8 17:30 68_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   57268 Nov  8 17:30 99_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   50288 Nov  8 17:30 boxplot-1.png
+-rw-r--r--   1 antonangelgardt  staff   62392 Nov  8 17:30 boxplot_annotated-1.png
+-rw-r--r--   1 antonangelgardt  staff   84137 Nov  8 17:30 central_tendency_asymm_left-1.png
+-rw-r--r--   1 antonangelgardt  staff   95000 Nov  8 17:30 central_tendency_asymm_right-1.png
+-rw-r--r--   1 antonangelgardt  staff   92013 Nov  8 17:30 central_tendency_bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff   89957 Nov  8 17:30 central_tendency_symm-1.png
+-rw-r--r--   1 antonangelgardt  staff   83710 Nov  8 17:30 distributions_with_the_same_means_mean-1.png
+-rw-r--r--   1 antonangelgardt  staff   82185 Nov  8 17:30 distributions_with_the_same_means_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   56467 Nov  8 17:30 fifth_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   57474 Nov  8 17:30 iqr_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff  132748 Nov  8 17:30 mean_feature_1-1.png
+-rw-r--r--   1 antonangelgardt  staff  111122 Nov  8 17:30 mean_feature_2-1.png
+-rw-r--r--   1 antonangelgardt  staff  101147 Nov  8 17:30 median-bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff  100842 Nov  8 17:30 median-left-skew-1.png
+-rw-r--r--   1 antonangelgardt  staff  122091 Nov  8 17:30 median-norm-1.png
+-rw-r--r--   1 antonangelgardt  staff  103173 Nov  8 17:30 median-right-skew-1.png
+-rw-r--r--   1 antonangelgardt  staff   95629 Nov  8 17:30 mode-bimodal-1.png
+-rw-r--r--   1 antonangelgardt  staff  128323 Nov  8 17:30 mode-bimodal-struct-1.png
+-rw-r--r--   1 antonangelgardt  staff   71895 Nov  8 17:30 mode-binom-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff  124330 Nov  8 17:30 mode-continuous-freqs-1.png
+-rw-r--r--   1 antonangelgardt  staff  108649 Nov  8 17:30 mode-continuous-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   71490 Nov  8 17:30 mode-norm-1.png
+-rw-r--r--   1 antonangelgardt  staff   94677 Nov  8 17:30 mode-norm-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   87423 Nov  8 17:30 mode-norm-sample-1.png
+-rw-r--r--   1 antonangelgardt  staff   82267 Nov  8 17:30 mode-pmf-1.png
+-rw-r--r--   1 antonangelgardt  staff   65728 Nov  8 17:30 mode-poiss-mode-1.png
+-rw-r--r--   1 antonangelgardt  staff   95437 Nov  8 17:30 mode-polymodal-1.png
+-rw-r--r--   1 antonangelgardt  staff   61218 Nov  8 17:30 quartiles_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   82588 Nov  8 17:30 range_problem-1.png
+-rw-r--r--   1 antonangelgardt  staff  132748 Nov  8 17:30 sd_feature_1-1.png
+-rw-r--r--   1 antonangelgardt  staff  111122 Nov  8 17:30 sd_feature_2-1.png
+-rw-r--r--   1 antonangelgardt  staff   54198 Nov  8 17:30 taia_score_vis-1.png
+-rw-r--r--   1 antonangelgardt  staff   82683 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff   84793 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff   86143 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff   83956 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff   91436 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff   85750 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff   88858 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   90037 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff   98490 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff  111859 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff   77353 Nov  8 17:30 unnamed-chunk-9-1.png
+-rw-r--r--   1 antonangelgardt  staff  115917 Nov  8 17:30 zero_deviation_sum-1.png
 
 docs/slides/s7_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s7_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s7_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s7_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s7_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s7_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s7_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s7_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s7_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s7_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s7_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s7_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s7_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s7_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s7_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s7_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s7_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s7_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s8_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 22 antonangelgardt  staff   704 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  22 antonangelgardt  staff   704 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s8_files/figure-revealjs:
 total 3992
-drwxr-xr-x@ 22 antonangelgardt  staff     704 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  100121 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff   93879 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff   82816 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff  104211 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff  128125 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff   82532 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@  1 antonangelgardt  staff  129302 Oct 29 14:15 unnamed-chunk-15-1.png
--rw-r--r--@  1 antonangelgardt  staff  120506 Oct 29 14:15 unnamed-chunk-16-1.png
--rw-r--r--@  1 antonangelgardt  staff   84759 Oct 29 14:15 unnamed-chunk-17-1.png
--rw-r--r--@  1 antonangelgardt  staff  133226 Oct 29 14:15 unnamed-chunk-18-1.png
--rw-r--r--@  1 antonangelgardt  staff   84355 Oct 29 14:15 unnamed-chunk-19-1.png
--rw-r--r--@  1 antonangelgardt  staff  116986 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  133759 Oct 29 14:15 unnamed-chunk-20-1.png
--rw-r--r--@  1 antonangelgardt  staff  101683 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff   92832 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff   93369 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff   93813 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff   97835 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff   83791 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff   51724 Oct 29 14:15 unnamed-chunk-9-1.png
+drwxr-xr-x  22 antonangelgardt  staff     704 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  100121 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff   93879 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff   82816 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff  104211 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff  128125 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff   82532 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--   1 antonangelgardt  staff  129302 Nov  8 17:30 unnamed-chunk-15-1.png
+-rw-r--r--   1 antonangelgardt  staff  120506 Nov  8 17:30 unnamed-chunk-16-1.png
+-rw-r--r--   1 antonangelgardt  staff   84759 Nov  8 17:30 unnamed-chunk-17-1.png
+-rw-r--r--   1 antonangelgardt  staff  133226 Nov  8 17:30 unnamed-chunk-18-1.png
+-rw-r--r--   1 antonangelgardt  staff   84355 Nov  8 17:30 unnamed-chunk-19-1.png
+-rw-r--r--   1 antonangelgardt  staff  116986 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  133759 Nov  8 17:30 unnamed-chunk-20-1.png
+-rw-r--r--   1 antonangelgardt  staff  101683 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff   92832 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff   93369 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff   93813 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff   97835 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff   83791 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff   51724 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/slides/s8_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s8_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s8_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s8_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s8_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s8_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s8_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s8_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s8_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s8_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s8_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s8_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s8_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s8_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s8_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s8_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s8_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s8_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/s9_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@ 24 antonangelgardt  staff   768 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x  24 antonangelgardt  staff   768 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/s9_files/figure-revealjs:
 total 3304
-drwxr-xr-x@ 24 antonangelgardt  staff    768 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  74829 Oct 29 14:15 unnamed-chunk-1-1.png
--rw-r--r--@  1 antonangelgardt  staff  83033 Oct 29 14:15 unnamed-chunk-10-1.png
--rw-r--r--@  1 antonangelgardt  staff  94638 Oct 29 14:15 unnamed-chunk-10-2.png
--rw-r--r--@  1 antonangelgardt  staff  93586 Oct 29 14:15 unnamed-chunk-10-3.png
--rw-r--r--@  1 antonangelgardt  staff  83209 Oct 29 14:15 unnamed-chunk-11-1.png
--rw-r--r--@  1 antonangelgardt  staff  74844 Oct 29 14:15 unnamed-chunk-12-1.png
--rw-r--r--@  1 antonangelgardt  staff  46138 Oct 29 14:15 unnamed-chunk-13-1.png
--rw-r--r--@  1 antonangelgardt  staff  52374 Oct 29 14:15 unnamed-chunk-14-1.png
--rw-r--r--@  1 antonangelgardt  staff  61406 Oct 29 14:15 unnamed-chunk-16-1.png
--rw-r--r--@  1 antonangelgardt  staff  71383 Oct 29 14:15 unnamed-chunk-17-1.png
--rw-r--r--@  1 antonangelgardt  staff  56201 Oct 29 14:15 unnamed-chunk-18-1.png
--rw-r--r--@  1 antonangelgardt  staff  70175 Oct 29 14:15 unnamed-chunk-19-1.png
--rw-r--r--@  1 antonangelgardt  staff  77532 Oct 29 14:15 unnamed-chunk-2-1.png
--rw-r--r--@  1 antonangelgardt  staff  67250 Oct 29 14:15 unnamed-chunk-20-1.png
--rw-r--r--@  1 antonangelgardt  staff  70840 Oct 29 14:15 unnamed-chunk-21-1.png
--rw-r--r--@  1 antonangelgardt  staff  81559 Oct 29 14:15 unnamed-chunk-3-1.png
--rw-r--r--@  1 antonangelgardt  staff  82715 Oct 29 14:15 unnamed-chunk-4-1.png
--rw-r--r--@  1 antonangelgardt  staff  76385 Oct 29 14:15 unnamed-chunk-5-1.png
--rw-r--r--@  1 antonangelgardt  staff  75270 Oct 29 14:15 unnamed-chunk-6-1.png
--rw-r--r--@  1 antonangelgardt  staff  81283 Oct 29 14:15 unnamed-chunk-7-1.png
--rw-r--r--@  1 antonangelgardt  staff  87770 Oct 29 14:15 unnamed-chunk-8-1.png
--rw-r--r--@  1 antonangelgardt  staff  85882 Oct 29 14:15 unnamed-chunk-9-1.png
+drwxr-xr-x  24 antonangelgardt  staff    768 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  74829 Nov  8 17:30 unnamed-chunk-1-1.png
+-rw-r--r--   1 antonangelgardt  staff  83033 Nov  8 17:30 unnamed-chunk-10-1.png
+-rw-r--r--   1 antonangelgardt  staff  94638 Nov  8 17:30 unnamed-chunk-10-2.png
+-rw-r--r--   1 antonangelgardt  staff  93586 Nov  8 17:30 unnamed-chunk-10-3.png
+-rw-r--r--   1 antonangelgardt  staff  83209 Nov  8 17:30 unnamed-chunk-11-1.png
+-rw-r--r--   1 antonangelgardt  staff  74844 Nov  8 17:30 unnamed-chunk-12-1.png
+-rw-r--r--   1 antonangelgardt  staff  46138 Nov  8 17:30 unnamed-chunk-13-1.png
+-rw-r--r--   1 antonangelgardt  staff  52374 Nov  8 17:30 unnamed-chunk-14-1.png
+-rw-r--r--   1 antonangelgardt  staff  61406 Nov  8 17:30 unnamed-chunk-16-1.png
+-rw-r--r--   1 antonangelgardt  staff  71383 Nov  8 17:30 unnamed-chunk-17-1.png
+-rw-r--r--   1 antonangelgardt  staff  56201 Nov  8 17:30 unnamed-chunk-18-1.png
+-rw-r--r--   1 antonangelgardt  staff  70175 Nov  8 17:30 unnamed-chunk-19-1.png
+-rw-r--r--   1 antonangelgardt  staff  77532 Nov  8 17:30 unnamed-chunk-2-1.png
+-rw-r--r--   1 antonangelgardt  staff  67250 Nov  8 17:30 unnamed-chunk-20-1.png
+-rw-r--r--   1 antonangelgardt  staff  70840 Nov  8 17:30 unnamed-chunk-21-1.png
+-rw-r--r--   1 antonangelgardt  staff  81559 Nov  8 17:30 unnamed-chunk-3-1.png
+-rw-r--r--   1 antonangelgardt  staff  82715 Nov  8 17:30 unnamed-chunk-4-1.png
+-rw-r--r--   1 antonangelgardt  staff  76385 Nov  8 17:30 unnamed-chunk-5-1.png
+-rw-r--r--   1 antonangelgardt  staff  75270 Nov  8 17:30 unnamed-chunk-6-1.png
+-rw-r--r--   1 antonangelgardt  staff  81283 Nov  8 17:30 unnamed-chunk-7-1.png
+-rw-r--r--   1 antonangelgardt  staff  87770 Nov  8 17:30 unnamed-chunk-8-1.png
+-rw-r--r--   1 antonangelgardt  staff  85882 Nov  8 17:30 unnamed-chunk-9-1.png
 
 docs/slides/s9_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/s9_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/s9_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/s9_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/s9_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/s9_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/s9_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/s9_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/s9_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/s9_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/s9_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/s9_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/s9_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/s9_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/s9_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/s9_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/s9_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/s9_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 
 docs/slides/template_files:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 35 antonangelgardt  staff  1120 Oct 29 14:15 ..
-drwxr-xr-x@  3 antonangelgardt  staff    96 Oct 29 14:15 figure-revealjs
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 libs
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  35 antonangelgardt  staff  1120 Nov  8 17:30 ..
+drwxr-xr-x   3 antonangelgardt  staff    96 Nov  8 17:30 figure-revealjs
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 libs
 
 docs/slides/template_files/figure-revealjs:
 total 160
-drwxr-xr-x@ 3 antonangelgardt  staff     96 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  81538 Oct 29 14:15 plot-1.png
+drwxr-xr-x  3 antonangelgardt  staff     96 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  81622 Nov  8 17:30 plot-1.png
 
 docs/slides/template_files/libs:
 total 0
-drwxr-xr-x@ 5 antonangelgardt  staff  160 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@ 3 antonangelgardt  staff   96 Oct 29 14:15 clipboard
-drwxr-xr-x@ 9 antonangelgardt  staff  288 Oct 29 14:15 quarto-html
-drwxr-xr-x@ 4 antonangelgardt  staff  128 Oct 29 14:15 revealjs
+drwxr-xr-x  5 antonangelgardt  staff  160 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x  3 antonangelgardt  staff   96 Nov  8 17:30 clipboard
+drwxr-xr-x  9 antonangelgardt  staff  288 Nov  8 17:30 quarto-html
+drwxr-xr-x  4 antonangelgardt  staff  128 Nov  8 17:30 revealjs
 
 docs/slides/template_files/libs/clipboard:
 total 24
-drwxr-xr-x@ 3 antonangelgardt  staff    96 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff   160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff  9160 Oct 29 14:15 clipboard.min.js
+drwxr-xr-x  3 antonangelgardt  staff    96 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff   160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff  9160 Nov  8 17:30 clipboard.min.js
 
 docs/slides/template_files/libs/quarto-html:
 total 144
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 .
-drwxr-xr-x@ 5 antonangelgardt  staff    160 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff   2810 Oct 29 14:15 light-border.css
--rw-r--r--@ 1 antonangelgardt  staff  20084 Oct 29 14:15 popper.min.js
--rw-r--r--@ 1 antonangelgardt  staff      1 Oct 29 14:15 quarto-html.min.css
--rw-r--r--@ 1 antonangelgardt  staff   2579 Oct 29 14:15 quarto-syntax-highlighting-dark.css
--rw-r--r--@ 1 antonangelgardt  staff  11289 Oct 29 14:15 tabby.min.js
--rw-r--r--@ 1 antonangelgardt  staff   1409 Oct 29 14:15 tippy.css
--rw-r--r--@ 1 antonangelgardt  staff  24033 Oct 29 14:15 tippy.umd.min.js
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 .
+drwxr-xr-x  5 antonangelgardt  staff    160 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff   2810 Nov  8 17:30 light-border.css
+-rw-r--r--  1 antonangelgardt  staff  20084 Nov  8 17:30 popper.min.js
+-rw-r--r--  1 antonangelgardt  staff      1 Nov  8 17:30 quarto-html.min.css
+-rw-r--r--  1 antonangelgardt  staff   2579 Nov  8 17:30 quarto-syntax-highlighting-dark.css
+-rw-r--r--  1 antonangelgardt  staff  11289 Nov  8 17:30 tabby.min.js
+-rw-r--r--  1 antonangelgardt  staff   1409 Nov  8 17:30 tippy.css
+-rw-r--r--  1 antonangelgardt  staff  24033 Nov  8 17:30 tippy.umd.min.js
 
 docs/slides/template_files/libs/revealjs:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 ..
-drwxr-xr-x@  9 antonangelgardt  staff  288 Oct 29 14:15 dist
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 plugin
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 ..
+drwxr-xr-x   9 antonangelgardt  staff  288 Nov  8 17:30 dist
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 plugin
 
 docs/slides/template_files/libs/revealjs/dist:
 total 2456
-drwxr-xr-x@ 9 antonangelgardt  staff     288 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     871 Oct 29 14:15 reset.css
--rw-r--r--@ 1 antonangelgardt  staff   47065 Oct 29 14:15 reveal.css
--rw-r--r--@ 1 antonangelgardt  staff   88904 Oct 29 14:15 reveal.esm.js
--rw-r--r--@ 1 antonangelgardt  staff  351303 Oct 29 14:15 reveal.esm.js.map
--rw-r--r--@ 1 antonangelgardt  staff  145280 Oct 29 14:15 reveal.js
--rw-r--r--@ 1 antonangelgardt  staff  614239 Oct 29 14:15 reveal.js.map
-drwxr-xr-x@ 4 antonangelgardt  staff     128 Oct 29 14:15 theme
+drwxr-xr-x  9 antonangelgardt  staff     288 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     871 Nov  8 17:30 reset.css
+-rw-r--r--  1 antonangelgardt  staff   47065 Nov  8 17:30 reveal.css
+-rw-r--r--  1 antonangelgardt  staff   88904 Nov  8 17:30 reveal.esm.js
+-rw-r--r--  1 antonangelgardt  staff  351303 Nov  8 17:30 reveal.esm.js.map
+-rw-r--r--  1 antonangelgardt  staff  145280 Nov  8 17:30 reveal.js
+-rw-r--r--  1 antonangelgardt  staff  614239 Nov  8 17:30 reveal.js.map
+drwxr-xr-x  4 antonangelgardt  staff     128 Nov  8 17:30 theme
 
 docs/slides/template_files/libs/revealjs/dist/theme:
 total 64
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 .
-drwxr-xr-x@ 9 antonangelgardt  staff    288 Oct 29 14:15 ..
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 fonts
--rw-r--r--@ 1 antonangelgardt  staff  30194 Oct 29 14:15 quarto.css
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 .
+drwxr-xr-x  9 antonangelgardt  staff    288 Nov  8 17:30 ..
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 fonts
+-rw-r--r--  1 antonangelgardt  staff  30194 Nov  8 17:30 quarto.css
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts:
 total 0
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 league-gothic
-drwxr-xr-x@ 16 antonangelgardt  staff  512 Oct 29 14:15 source-sans-pro
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 league-gothic
+drwxr-xr-x  16 antonangelgardt  staff  512 Nov  8 17:30 source-sans-pro
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts/league-gothic:
 total 264
-drwxr-xr-x@ 7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 4 antonangelgardt  staff    128 Oct 29 14:15 ..
--rw-r--r--@ 1 antonangelgardt  staff     92 Oct 29 14:15 LICENSE
--rw-r--r--@ 1 antonangelgardt  staff    317 Oct 29 14:15 league-gothic.css
--rwxr-xr-x@ 1 antonangelgardt  staff  25696 Oct 29 14:15 league-gothic.eot
--rwxr-xr-x@ 1 antonangelgardt  staff  64256 Oct 29 14:15 league-gothic.ttf
--rwxr-xr-x@ 1 antonangelgardt  staff  30764 Oct 29 14:15 league-gothic.woff
+drwxr-xr-x  7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  4 antonangelgardt  staff    128 Nov  8 17:30 ..
+-rw-r--r--  1 antonangelgardt  staff     92 Nov  8 17:30 LICENSE
+-rw-r--r--  1 antonangelgardt  staff    317 Nov  8 17:30 league-gothic.css
+-rwxr-xr-x  1 antonangelgardt  staff  25696 Nov  8 17:30 league-gothic.eot
+-rwxr-xr-x  1 antonangelgardt  staff  64256 Nov  8 17:30 league-gothic.ttf
+-rwxr-xr-x  1 antonangelgardt  staff  30764 Nov  8 17:30 league-gothic.woff
 
 docs/slides/template_files/libs/revealjs/dist/theme/fonts/source-sans-pro:
 total 3608
-drwxr-xr-x@ 16 antonangelgardt  staff     512 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff     128 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    4632 Oct 29 14:15 LICENSE
--rwxr-xr-x@  1 antonangelgardt  staff   75720 Oct 29 14:15 source-sans-pro-italic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  238084 Oct 29 14:15 source-sans-pro-italic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98556 Oct 29 14:15 source-sans-pro-italic.woff
--rwxr-xr-x@  1 antonangelgardt  staff   88070 Oct 29 14:15 source-sans-pro-regular.eot
--rwxr-xr-x@  1 antonangelgardt  staff  288008 Oct 29 14:15 source-sans-pro-regular.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  114324 Oct 29 14:15 source-sans-pro-regular.woff
--rwxr-xr-x@  1 antonangelgardt  staff   89897 Oct 29 14:15 source-sans-pro-semibold.eot
--rwxr-xr-x@  1 antonangelgardt  staff  284640 Oct 29 14:15 source-sans-pro-semibold.ttf
--rwxr-xr-x@  1 antonangelgardt  staff  115648 Oct 29 14:15 source-sans-pro-semibold.woff
--rwxr-xr-x@  1 antonangelgardt  staff   75706 Oct 29 14:15 source-sans-pro-semibolditalic.eot
--rwxr-xr-x@  1 antonangelgardt  staff  240944 Oct 29 14:15 source-sans-pro-semibolditalic.ttf
--rwxr-xr-x@  1 antonangelgardt  staff   98816 Oct 29 14:15 source-sans-pro-semibolditalic.woff
--rw-r--r--@  1 antonangelgardt  staff    1457 Oct 29 14:15 source-sans-pro.css
+drwxr-xr-x  16 antonangelgardt  staff     512 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff     128 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    4632 Nov  8 17:30 LICENSE
+-rwxr-xr-x   1 antonangelgardt  staff   75720 Nov  8 17:30 source-sans-pro-italic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  238084 Nov  8 17:30 source-sans-pro-italic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98556 Nov  8 17:30 source-sans-pro-italic.woff
+-rwxr-xr-x   1 antonangelgardt  staff   88070 Nov  8 17:30 source-sans-pro-regular.eot
+-rwxr-xr-x   1 antonangelgardt  staff  288008 Nov  8 17:30 source-sans-pro-regular.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  114324 Nov  8 17:30 source-sans-pro-regular.woff
+-rwxr-xr-x   1 antonangelgardt  staff   89897 Nov  8 17:30 source-sans-pro-semibold.eot
+-rwxr-xr-x   1 antonangelgardt  staff  284640 Nov  8 17:30 source-sans-pro-semibold.ttf
+-rwxr-xr-x   1 antonangelgardt  staff  115648 Nov  8 17:30 source-sans-pro-semibold.woff
+-rwxr-xr-x   1 antonangelgardt  staff   75706 Nov  8 17:30 source-sans-pro-semibolditalic.eot
+-rwxr-xr-x   1 antonangelgardt  staff  240944 Nov  8 17:30 source-sans-pro-semibolditalic.ttf
+-rwxr-xr-x   1 antonangelgardt  staff   98816 Nov  8 17:30 source-sans-pro-semibolditalic.woff
+-rw-r--r--   1 antonangelgardt  staff    1457 Nov  8 17:30 source-sans-pro.css
 
 docs/slides/template_files/libs/revealjs/plugin:
 total 0
-drwxr-xr-x@ 12 antonangelgardt  staff  384 Oct 29 14:15 .
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 ..
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 markdown
-drwxr-xr-x@  8 antonangelgardt  staff  256 Oct 29 14:15 math
-drwxr-xr-x@  6 antonangelgardt  staff  192 Oct 29 14:15 notes
-drwxr-xr-x@  4 antonangelgardt  staff  128 Oct 29 14:15 pdf-export
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-line-highlight
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 quarto-support
-drwxr-xr-x@  7 antonangelgardt  staff  224 Oct 29 14:15 reveal-menu
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 search
-drwxr-xr-x@  5 antonangelgardt  staff  160 Oct 29 14:15 zoom
+drwxr-xr-x  12 antonangelgardt  staff  384 Nov  8 17:30 .
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 ..
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 markdown
+drwxr-xr-x   8 antonangelgardt  staff  256 Nov  8 17:30 math
+drwxr-xr-x   6 antonangelgardt  staff  192 Nov  8 17:30 notes
+drwxr-xr-x   4 antonangelgardt  staff  128 Nov  8 17:30 pdf-export
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-line-highlight
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 quarto-support
+drwxr-xr-x   7 antonangelgardt  staff  224 Nov  8 17:30 reveal-menu
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 search
+drwxr-xr-x   5 antonangelgardt  staff  160 Nov  8 17:30 zoom
 
 docs/slides/template_files/libs/revealjs/plugin/highlight:
 total 3728
-drwxr-xr-x@  7 antonangelgardt  staff     224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  940090 Oct 29 14:15 highlight.esm.js
--rw-r--r--@  1 antonangelgardt  staff  940037 Oct 29 14:15 highlight.js
--rw-r--r--@  1 antonangelgardt  staff     940 Oct 29 14:15 monokai.css
--rw-r--r--@  1 antonangelgardt  staff   16332 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff     947 Oct 29 14:15 zenburn.css
+drwxr-xr-x   7 antonangelgardt  staff     224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  940090 Nov  8 17:30 highlight.esm.js
+-rw-r--r--   1 antonangelgardt  staff  940037 Nov  8 17:30 highlight.js
+-rw-r--r--   1 antonangelgardt  staff     940 Nov  8 17:30 monokai.css
+-rw-r--r--   1 antonangelgardt  staff   16332 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff     947 Nov  8 17:30 zenburn.css
 
 docs/slides/template_files/libs/revealjs/plugin/markdown:
 total 400
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  91179 Oct 29 14:15 markdown.esm.js
--rw-r--r--@  1 antonangelgardt  staff  91331 Oct 29 14:15 markdown.js
--rwxr-xr-x@  1 antonangelgardt  staff  13819 Oct 29 14:15 plugin.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  91179 Nov  8 17:30 markdown.esm.js
+-rw-r--r--   1 antonangelgardt  staff  91331 Nov  8 17:30 markdown.js
+-rwxr-xr-x   1 antonangelgardt  staff  13819 Nov  8 17:30 plugin.js
 
 docs/slides/template_files/libs/revealjs/plugin/math:
 total 160
-drwxr-xr-x@  8 antonangelgardt  staff    256 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rwxr-xr-x@  1 antonangelgardt  staff   2574 Oct 29 14:15 katex.js
--rw-r--r--@  1 antonangelgardt  staff  31199 Oct 29 14:15 math.esm.js
--rw-r--r--@  1 antonangelgardt  staff  31388 Oct 29 14:15 math.js
--rw-r--r--@  1 antonangelgardt  staff   2094 Oct 29 14:15 mathjax2.js
--rw-r--r--@  1 antonangelgardt  staff   2216 Oct 29 14:15 mathjax3.js
--rw-r--r--@  1 antonangelgardt  staff    334 Oct 29 14:15 plugin.js
+drwxr-xr-x   8 antonangelgardt  staff    256 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rwxr-xr-x   1 antonangelgardt  staff   2574 Nov  8 17:30 katex.js
+-rw-r--r--   1 antonangelgardt  staff  31199 Nov  8 17:30 math.esm.js
+-rw-r--r--   1 antonangelgardt  staff  31388 Nov  8 17:30 math.js
+-rw-r--r--   1 antonangelgardt  staff   2094 Nov  8 17:30 mathjax2.js
+-rw-r--r--   1 antonangelgardt  staff   2216 Nov  8 17:30 mathjax3.js
+-rw-r--r--   1 antonangelgardt  staff    334 Nov  8 17:30 plugin.js
 
 docs/slides/template_files/libs/revealjs/plugin/notes:
 total 480
-drwxr-xr-x@  6 antonangelgardt  staff     192 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff     384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  104248 Oct 29 14:15 notes.esm.js
--rw-r--r--@  1 antonangelgardt  staff  104435 Oct 29 14:15 notes.js
--rw-r--r--@  1 antonangelgardt  staff    6014 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff   23384 Oct 29 14:15 speaker-view.html
+drwxr-xr-x   6 antonangelgardt  staff     192 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff     384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  104248 Nov  8 17:30 notes.esm.js
+-rw-r--r--   1 antonangelgardt  staff  104435 Nov  8 17:30 notes.js
+-rw-r--r--   1 antonangelgardt  staff    6014 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff   23384 Nov  8 17:30 speaker-view.html
 
 docs/slides/template_files/libs/revealjs/plugin/pdf-export:
 total 16
-drwxr-xr-x@  4 antonangelgardt  staff   128 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  2848 Oct 29 14:15 pdfexport.js
--rw-r--r--@  1 antonangelgardt  staff    37 Oct 29 14:15 plugin.yml
+drwxr-xr-x   4 antonangelgardt  staff   128 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  2848 Nov  8 17:30 pdfexport.js
+-rw-r--r--   1 antonangelgardt  staff    37 Nov  8 17:30 plugin.yml
 
 docs/slides/template_files/libs/revealjs/plugin/quarto-line-highlight:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff    481 Oct 29 14:15 line-highlight.css
--rw-r--r--@  1 antonangelgardt  staff  11502 Oct 29 14:15 line-highlight.js
--rw-r--r--@  1 antonangelgardt  staff    164 Oct 29 14:15 plugin.yml
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff    481 Nov  8 17:30 line-highlight.css
+-rw-r--r--   1 antonangelgardt  staff  11502 Nov  8 17:30 line-highlight.js
+-rw-r--r--   1 antonangelgardt  staff    164 Nov  8 17:30 plugin.yml
 
 docs/slides/template_files/libs/revealjs/plugin/quarto-support:
 total 40
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   1856 Oct 29 14:15 footer.css
--rw-r--r--@  1 antonangelgardt  staff     87 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff  10730 Oct 29 14:15 support.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   1856 Nov  8 17:30 footer.css
+-rw-r--r--   1 antonangelgardt  staff     87 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff  10730 Nov  8 17:30 support.js
 
 docs/slides/template_files/libs/revealjs/plugin/reveal-menu:
 total 120
-drwxr-xr-x@  7 antonangelgardt  staff    224 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   8192 Oct 29 14:15 menu.css
--rw-r--r--@  1 antonangelgardt  staff  37128 Oct 29 14:15 menu.js
--rw-r--r--@  1 antonangelgardt  staff    205 Oct 29 14:15 plugin.yml
--rw-r--r--@  1 antonangelgardt  staff   3860 Oct 29 14:15 quarto-menu.css
--rw-r--r--@  1 antonangelgardt  staff   1262 Oct 29 14:15 quarto-menu.js
+drwxr-xr-x   7 antonangelgardt  staff    224 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   8192 Nov  8 17:30 menu.css
+-rw-r--r--   1 antonangelgardt  staff  37128 Nov  8 17:30 menu.js
+-rw-r--r--   1 antonangelgardt  staff    205 Nov  8 17:30 plugin.yml
+-rw-r--r--   1 antonangelgardt  staff   3860 Nov  8 17:30 quarto-menu.css
+-rw-r--r--   1 antonangelgardt  staff   1262 Nov  8 17:30 quarto-menu.js
 
 docs/slides/template_files/libs/revealjs/plugin/search:
 total 96
-drwxr-xr-x@  5 antonangelgardt  staff    160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff    384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff   6490 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  17041 Oct 29 14:15 search.esm.js
--rw-r--r--@  1 antonangelgardt  staff  17245 Oct 29 14:15 search.js
+drwxr-xr-x   5 antonangelgardt  staff    160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff    384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff   6490 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  17041 Nov  8 17:30 search.esm.js
+-rw-r--r--   1 antonangelgardt  staff  17245 Nov  8 17:30 search.js
 
 docs/slides/template_files/libs/revealjs/plugin/zoom:
 total 32
-drwxr-xr-x@  5 antonangelgardt  staff   160 Oct 29 14:15 .
-drwxr-xr-x@ 12 antonangelgardt  staff   384 Oct 29 14:15 ..
--rw-r--r--@  1 antonangelgardt  staff  6779 Oct 29 14:15 plugin.js
--rw-r--r--@  1 antonangelgardt  staff  2718 Oct 29 14:15 zoom.esm.js
--rw-r--r--@  1 antonangelgardt  staff  2951 Oct 29 14:15 zoom.js
+drwxr-xr-x   5 antonangelgardt  staff   160 Nov  8 17:30 .
+drwxr-xr-x  12 antonangelgardt  staff   384 Nov  8 17:30 ..
+-rw-r--r--   1 antonangelgardt  staff  6779 Nov  8 17:30 plugin.js
+-rw-r--r--   1 antonangelgardt  staff  2718 Nov  8 17:30 zoom.esm.js
+-rw-r--r--   1 antonangelgardt  staff  2951 Nov  8 17:30 zoom.js
 ```
 ## Log
 
@@ -4739,16 +4738,16 @@ Directories to render:
     hub
 
 lec/_book/ removed
-[ 1/20] index.qmd
-[ 2/20] part-r.qmd
-[ 3/20] l1.qmd
+[ 1/19] index.qmd
+[ 2/19] part-r.qmd
+[ 3/19] l1.qmd
 
 
 processing file: l1.qmd
   |                                                          |                                                  |   0%  |                                                          |                                                  |   1%                      |                                                          |.                                                 |   2% [unnamed-chunk-1]    |                                                          |.                                                 |   3%                      |                                                          |..                                                |   4% [maths1]             |                                                          |..                                                |   5%                      |                                                          |...                                               |   6% [maths2]             |                                                          |...                                               |   7%                      |                                                          |....                                              |   8% [funs1]              |                                                          |....                                              |   9%                      |                                                          |.....                                             |  10% [funs2]              |                                                          |.....                                             |  11%                      |                                                          |......                                            |  12% [funs3]              |                                                          |......                                            |  13%                      |                                                          |.......                                           |  14% [unnamed-chunk-2]    |                                                          |.......                                           |  15%                      |                                                          |........                                          |  16% [logic1]             |                                                          |........                                          |  17%                      |                                                          |.........                                         |  17% [logic2]             |                                                          |.........                                         |  18%                      |                                                          |..........                                        |  19% [unnamed-chunk-3]    |                                                          |..........                                        |  20%                      |                                                          |...........                                       |  21% [unnamed-chunk-4]    |                                                          |...........                                       |  22%                      |                                                          |............                                      |  23% [unnamed-chunk-5]    |                                                          |............                                      |  24%                      |                                                          |.............                                     |  25% [unnamed-chunk-6]    |                                                          |.............                                     |  26%                      |                                                          |..............                                    |  27% [unnamed-chunk-7]    |                                                          |..............                                    |  28%                      |                                                          |...............                                   |  29% [unnamed-chunk-8]    |                                                          |...............                                   |  30%                      |                                                          |................                                  |  31% [unnamed-chunk-9]    |                                                          |................                                  |  32%                      |                                                          |.................                                 |  33% [unnamed-chunk-10]   |                                                          |.................                                 |  34%                      |                                                          |.................                                 |  35% [unnamed-chunk-11]   |                                                          |..................                                |  36%                      |                                                          |..................                                |  37% [unnamed-chunk-12]   |                                                          |...................                               |  38%                      |                                                          |...................                               |  39% [unnamed-chunk-13]   |                                                          |....................                              |  40%                      |                                                          |....................                              |  41% [vec-classic]        |                                                          |.....................                             |  42%                      |                                                          |.....................                             |  43% [vec-free]           |                                                          |......................                            |  44%                      |                                                          |......................                            |  45% [vec-remove-vector]  |                                                          |.......................                           |  46%                      |                                                          |.......................                           |  47% [vec-same]           |                                                          |........................                          |  48%                      |                                                          |........................                          |  49% [vec-types]          |                                                          |.........................                         |  50%                     [vec-typer-print]    |                                                          |..........................                        |  51%                      |                                                          |..........................                        |  52% [unnamed-chunk-14]   |                                                          |...........................                       |  53%                      |                                                          |...........................                       |  54% [unnamed-chunk-15]   |                                                          |............................                      |  55%                      |                                                          |............................                      |  56% [unnamed-chunk-16]   |                                                          |.............................                     |  57%                      |                                                          |.............................                     |  58% [unnamed-chunk-17]   |                                                          |..............................                    |  59%                      |                                                          |..............................                    |  60% [unnamed-chunk-18]   |                                                          |...............................                   |  61%                      |                                                          |...............................                   |  62% [unnamed-chunk-19]   |                                                          |................................                  |  63%                      |                                                          |................................                  |  64% [unnamed-chunk-20]   |                                                          |.................................                 |  65%                      |                                                          |.................................                 |  66% [unnamed-chunk-21]   |                                                          |.................................                 |  67%                      |                                                          |..................................                |  68% [unnamed-chunk-22]   |                                                          |..................................                |  69%                      |                                                          |...................................               |  70% [unnamed-chunk-23]   |                                                          |...................................               |  71%                      |                                                          |....................................              |  72% [unnamed-chunk-24]   |                                                          |....................................              |  73%                      |                                                          |.....................................             |  74% [unnamed-chunk-25]   |                                                          |.....................................             |  75%                      |                                                          |......................................            |  76% [unnamed-chunk-26]   |                                                          |......................................            |  77%                      |                                                          |.......................................           |  78% [unnamed-chunk-27]   |                                                          |.......................................           |  79%                      |                                                          |........................................          |  80% [unnamed-chunk-28]   |                                                          |........................................          |  81%                      |                                                          |.........................................         |  82% [unnamed-chunk-29]   |                                                          |.........................................         |  83%                      |                                                          |..........................................        |  83% [unnamed-chunk-30]   |                                                          |..........................................        |  84%                      |                                                          |...........................................       |  85% [unnamed-chunk-31]   |                                                          |...........................................       |  86%                      |                                                          |............................................      |  87% [unnamed-chunk-32]   |                                                          |............................................      |  88%                      |                                                          |.............................................     |  89% [unnamed-chunk-33]   |                                                          |.............................................     |  90%                      |                                                          |..............................................    |  91% [unnamed-chunk-34]   |                                                          |..............................................    |  92%                      |                                                          |...............................................   |  93% [unnamed-chunk-35]   |                                                          |...............................................   |  94%                      |                                                          |................................................  |  95% [unnamed-chunk-36]   |                                                          |................................................  |  96%                      |                                                          |................................................. |  97% [unnamed-chunk-37]   |                                                          |................................................. |  98%                      |                                                          |..................................................|  99% [unnamed-chunk-38]   |                                                          |..................................................| 100%                                                                                                                                  
 output file: l1.knit.md
 
-[ 4/20] l2.qmd
+[ 4/19] l2.qmd
 
 
 processing file: l2.qmd
@@ -4760,84 +4759,81 @@ Warning messages:
   Unknown language engine 'JSON' (must be registered via knit_engines$set()).
 2: In get_engine(options$engine) :
   Unknown language engine 'XML' (must be registered via knit_engines$set()).
-WARNING: Warning: The computation used to determine source line information from the engine timed out.
-Line number information will be unavailable and/or inaccurate.
-[ 5/20] part-math.qmd
-[ 6/20] l3.qmd
+[ 5/19] part-math.qmd
+[ 6/19] l3.qmd
 
 
 processing file: l3.qmd
   |                                                           |                                                   |   0%  |                                                           |..                                                 |   3%                     |                                                           |....                                               |   7% [opts]              |                                                           |.....                                              |  10%                     |                                                           |.......                                            |  14% [pkgs]              |                                                           |.........                                          |  17%                     |                                                           |...........                                        |  21% [func_graphs]       |                                                           |............                                       |  24%                     |                                                           |..............                                     |  28% [func-graphs]       |                                                           |................                                   |  31%                     |                                                           |..................                                 |  34% [deriv1]            |                                                           |...................                                |  38%                     |                                                           |.....................                              |  41% [deriv2]            |                                                           |.......................                            |  45%                     |                                                           |.........................                          |  48% [deriv3]            |                                                           |..........................                         |  52%                     |                                                           |............................                       |  55% [deriv4]            |                                                           |..............................                     |  59%                     |                                                           |................................                   |  62% [deriv-graph]       |                                                           |.................................                  |  66%                     |                                                           |...................................                |  69% [2d-graph]          |                                                           |.....................................              |  72%                     |                                                           |.......................................            |  76% [unnamed-chunk-1]   |                                                           |........................................           |  79%                     |                                                           |..........................................         |  83% [integral-plot]     |                                                           |............................................       |  86%                     |                                                           |..............................................     |  90% [integral-plot01]   |                                                           |...............................................    |  93%                     |                                                           |.................................................  |  97% [integral-plot005]  |                                                           |...................................................| 100%                                                                                                                                
 output file: l3.knit.md
 
-[ 7/20] l4.qmd
-[ 8/20] l5.qmd
+[ 7/19] l4.qmd
+[ 8/19] l5.qmd
 
 
 processing file: l5.qmd
   |                                                       |                                               |   0%  |                                                       |.                                              |   2%                         |                                                       |..                                             |   5% [opts]                  |                                                       |...                                            |   7%                         |                                                       |....                                           |   9% [pkgs]                  |                                                       |.....                                          |  12%                         |                                                       |.......                                        |  14% [simple-random-pop]     |                                                       |........                                       |  16%                         |                                                       |.........                                      |  19% [simple-random-sample]  |                                                       |..........                                     |  21%                         |                                                       |...........                                    |  23% [strat-pop]             |                                                       |............                                   |  26%                         |                                                       |.............                                  |  28% [strat-sample]          |                                                       |..............                                 |  30%                         |                                                       |...............                                |  33% [strat-pop-strata]      |                                                       |................                               |  35%                         |                                                       |.................                              |  37% [cluster-pop]           |                                                       |...................                            |  40%                         |                                                       |....................                           |  42% [cluster-clusters]      |                                                       |.....................                          |  44%                         |                                                       |......................                         |  47% [cluster-sample]        |                                                       |.......................                        |  49%                         |                                                       |........................                       |  51% [geomprob-square]       |                                                       |.........................                      |  53%                         |                                                       |..........................                     |  56% [geomprob-dots]         |                                                       |...........................                    |  58%                         |                                                       |............................                   |  60% [geomprob-incircle]     |                                                       |..............................                 |  63%                         |                                                       |...............................                |  65% [pmf-dice]              |                                                       |................................               |  67%                         |                                                       |.................................              |  70% [cfd-dice]              |                                                       |..................................             |  72%                         |                                                       |...................................            |  74% [pmf-dice-repeat]       |                                                       |....................................           |  77%                         |                                                       |.....................................          |  79% [pdf-segment-nolabs]    |                                                       |......................................         |  81%                         |                                                       |.......................................        |  84% [pmf-vs-pdf]            |                                                       |........................................       |  86%                         |                                                       |..........................................     |  88% [pdf-inetrvals]         |                                                       |...........................................    |  91%                         |                                                       |............................................   |  93% [norm-dist]             |                                                       |.............................................  |  95%                         |                                                       |.............................................. |  98% [unnamed-chunk-1]       |                                                       |...............................................| 100%                                                                                                                                        
 output file: l5.knit.md
 
-[ 9/20] l6.qmd
+[ 9/19] l6.qmd
 
 
 processing file: l6.qmd
   |                                                            |                                                    |   0%  |                                                            |..                                                  |   4%                    |                                                            |....                                                |   8% [opts]             |                                                            |......                                              |  12%                    |                                                            |........                                            |  16% [pkgs]             |                                                            |..........                                          |  20%                    |                                                            |............                                        |  24% [unnamed-chunk-1]  |                                                            |...............                                     |  28%                    |                                                            |.................                                   |  32% [unnamed-chunk-2]  |                                                            |...................                                 |  36%                    |                                                            |.....................                               |  40% [unnamed-chunk-3]  |                                                            |.......................                             |  44%                    |                                                            |.........................                           |  48% [unnamed-chunk-4]  |                                                            |...........................                         |  52%                    |                                                            |.............................                       |  56% [unnamed-chunk-5]  |                                                            |...............................                     |  60%                    |                                                            |.................................                   |  64% [unnamed-chunk-6]  |                                                            |...................................                 |  68%                    |                                                            |.....................................               |  72% [unnamed-chunk-7]  |                                                            |........................................            |  76%                    |                                                            |..........................................          |  80% [unnamed-chunk-8]  |                                                            |............................................        |  84%                    |                                                            |..............................................      |  88% [unnamed-chunk-9]  |                                                            |................................................    |  92%                    |                                                            |..................................................  |  96% [alpha-raise]      |                                                            |....................................................| 100%                                                                                                                              
 output file: l6.knit.md
 
-[10/20] part-andan.qmd
-[11/20] l7.qmd
+[10/19] part-andan.qmd
+[11/19] l7.qmd
 
 
 processing file: l7.qmd
   |                               |                       |   0%  |                               |                       |   1%                                                [opts]                                          |                               |                       |   2%                                                 |                               |.                      |   3% [andan-desc-pkgs]                                                                              |                               |.                      |   4% [fig-mode-pmf]                                  |                               |.                      |   5%                                                 |                               |.                      |   6% [mode-continuous-data]                                                                         |                               |..                     |   7% [fig-continuous-freqs]                          |                               |..                     |   8%                                                [fig-continuous-mode]                           |                               |..                     |   9%                                                 |                               |..                     |  10% [fig-norm-mode]                                                                                |                               |...                    |  11% [fig-binom-mode]                                |                               |...                    |  12%                                                 |                               |...                    |  13% [fig-poiss-mode]                                                                               |                               |...                    |  14% [fig-mode-norm-sample]                          |                               |...                    |  15%                                                 |                               |....                   |  15% [fig-mode-nbinom-sample]                        |                               |....                   |  16%                                                 |                               |....                   |  17% [fig-bimodal]                                                                                  |                               |....                   |  18% [fig-polymodal]                                 |                               |....                   |  19%                                                 |                               |.....                  |  20% [fig-bimodal-struct]                                                                           |                               |.....                  |  21% [fig-median-norm]                               |                               |.....                  |  22%                                                [fig-median-left-skew]                          |                               |.....                  |  23%                                                 |                               |.....                  |  24% [fig-median-right-skew]                         |                               |......                 |  24%                                                 |                               |......                 |  25% [fig-median-bimodal]                            |                               |......                 |  26%                                                 |                               |......                 |  27% [creating_tibble_for_feature_vis_1]                                                            |                               |......                 |  28% [mean_feature_1]                                |                               |.......                |  29%                                                [creating_tibble_for_feature_vis_2]             |                               |.......                |  30%                                                 |                               |.......                |  31% [mean_feature_2]                                                                               |                               |.......                |  32% [df_polygons]                                   |                               |........               |  33%                                                 |                               |........               |  34% [zero_deviation_sum]                                                                           |                               |........               |  35% [central_tendency_sampling]                     |                               |........               |  36%                                                [central_tendency_symm]                         |                               |.........              |  37%                                                 |                               |.........              |  38% [central_tendency_asymm_right]                                                                 |                               |.........              |  39% [central_tendency_asymm_left]                   |                               |.........              |  40%                                                 |                               |.........              |  41% [marks_creating]                                                                               |                               |..........             |  42% [marks_vector]                                  |                               |..........             |  43%                                                [unnamed-chunk-1]                               |                               |..........             |  44%                                                 |                               |..........             |  45% [marks_creating_2]                                                                             |                               |...........            |  46% [marks_vector_2]                                |                               |...........            |  47%                                                 |                               |...........            |  48% [unnamed-chunk-2]                                                                              |                               |...........            |  49% [central_tendency_bimodal]                      |                               |...........            |  50%                                                 |                               |............           |  50% [distributions_with_the_same_means_generation]  |                               |............           |  51%                                                 |                               |............           |  52% [creating_labeller]                                                                            |                               |............           |  53% [distributions_with_the_same_means_vis]         |                               |............           |  54%                                                 |                               |.............          |  55% [distributions_with_the_same_means_mean]                                                       |                               |.............          |  56% [anat_marks_gen]                                |                               |.............          |  57%                                                [anat_marks]                                    |                               |.............          |  58%                                                 |                               |..............         |  59% [min_max_anat_marks]                                                                           |                               |..............         |  60% [intro_to_psy_gen]                              |                               |..............         |  61%                                                 |                               |..............         |  62% [intro_to_psy_marks]                                                                           |                               |..............         |  63% [unnamed-chunk-3]                               |                               |...............        |  64%                                                [range_problem]                                 |                               |...............        |  65%                                                 |                               |...............        |  66% [creating_tibble_for_feature_sd_vis_1]                                                         |                               |...............        |  67% [sd_feature_1]                                  |                               |................       |  68%                                                 |                               |................       |  69% [creating_tibble_for_feature_vis_4]                                                            |                               |................       |  70% [sd_feature_2]                                  |                               |................       |  71%                                                [taia_data]                                     |                               |.................      |  72%                                                 |                               |.................      |  73% [taia_score_vis]                                                                               |                               |.................      |  74% [fifth_vis]                                     |                               |.................      |  75%                                                 |                               |.................      |  76% [68_vis]                                        |                               |..................     |  76%                                                 |                               |..................     |  77% [99_vis]                                        |                               |..................     |  78%                                                [quartiles_vis]                                 |                               |..................     |  79%                                                 |                               |..................     |  80% [iqr_vis]                                                                                      |                               |...................    |  81% [boxplot]                                       |                               |...................    |  82%                                                 |                               |...................    |  83% [boxplot_annotated]                                                                            |                               |...................    |  84% [unnamed-chunk-4]                               |                               |...................    |  85%                                                 |                               |....................   |  85% [unnamed-chunk-5]                               |                               |....................   |  86%                                                 |                               |....................   |  87% [unnamed-chunk-6]                                                                              |                               |....................   |  88% [unnamed-chunk-7]                               |                               |....................   |  89%                                                 |                               |.....................  |  90% [unnamed-chunk-8]                                                                              |                               |.....................  |  91% [unnamed-chunk-9]                               |                               |.....................  |  92%                                                [corr-data]                                     |                               |.....................  |  93%                                                 |                               |...................... |  94% [unnamed-chunk-10]                                                                             |                               |...................... |  95% [unnamed-chunk-11]                              |                               |...................... |  96%                                                 |                               |...................... |  97% [unnamed-chunk-12]                                                                             |                               |.......................|  98% [unnamed-chunk-13]                              |                               |.......................|  99%                                                [unnamed-chunk-14]                              |                               |.......................| 100%                                                                                                                                                                                        
 output file: l7.knit.md
 
-[12/20] l8.qmd
+[12/19] l8.qmd
 
 
 processing file: l8.qmd
   |                                                           |                                                   |   0%  |                                                           |.                                                  |   2%                     |                                                           |..                                                 |   4% [opts]              |                                                           |...                                                |   7%                     |                                                           |.....                                              |   9% [andan-desc-pkgs]   |                                                           |......                                             |  11%                     |                                                           |.......                                            |  13% [unnamed-chunk-1]   |                                                           |........                                           |  16%                     |                                                           |.........                                          |  18% [unnamed-chunk-2]   |                                                           |..........                                         |  20%                     |                                                           |...........                                        |  22% [unnamed-chunk-3]   |                                                           |............                                       |  24%                     |                                                           |..............                                     |  27% [unnamed-chunk-4]   |                                                           |...............                                    |  29%                     |                                                           |................                                   |  31% [unnamed-chunk-5]   |                                                           |.................                                  |  33%                     |                                                           |..................                                 |  36% [unnamed-chunk-6]   |                                                           |...................                                |  38%                     |                                                           |....................                               |  40% [unnamed-chunk-7]   |                                                           |......................                             |  42%                     |                                                           |.......................                            |  44% [unnamed-chunk-8]   |                                                           |........................                           |  47%                     |                                                           |.........................                          |  49% [unnamed-chunk-9]   |                                                           |..........................                         |  51%                     |                                                           |...........................                        |  53% [unnamed-chunk-10]  |                                                           |............................                       |  56%                     |                                                           |.............................                      |  58% [unnamed-chunk-11]  |                                                           |...............................                    |  60%                     |                                                           |................................                   |  62% [unnamed-chunk-12]  |                                                           |.................................                  |  64%                     |                                                           |..................................                 |  67% [unnamed-chunk-13]  |                                                           |...................................                |  69%                     |                                                           |....................................               |  71% [unnamed-chunk-14]  |                                                           |.....................................              |  73%                     |                                                           |.......................................            |  76% [unnamed-chunk-15]  |                                                           |........................................           |  78%                     |                                                           |.........................................          |  80% [unnamed-chunk-16]  |                                                           |..........................................         |  82%                     |                                                           |...........................................        |  84% [unnamed-chunk-17]  |                                                           |............................................       |  87%                     |                                                           |.............................................      |  89% [unnamed-chunk-18]  |                                                           |..............................................     |  91%                     |                                                           |................................................   |  93% [unnamed-chunk-19]  |                                                           |.................................................  |  96%                     |                                                           |.................................................. |  98% [unnamed-chunk-20]  |                                                           |...................................................| 100%                                                                                                                                
 output file: l8.knit.md
 
-[13/20] l9.qmd
+[13/19] l9.qmd
 
 
 processing file: l9.qmd
   |                                                           |                                                   |   0%  |                                                           |.                                                  |   2%                     |                                                           |..                                                 |   4% [opts]              |                                                           |...                                                |   6%                     |                                                           |....                                               |   9% [andan-desc-pkgs]   |                                                           |.....                                              |  11%                     |                                                           |.......                                            |  13% [unnamed-chunk-1]   |                                                           |........                                           |  15%                     |                                                           |.........                                          |  17% [unnamed-chunk-2]   |                                                           |..........                                         |  19%                     |                                                           |...........                                        |  21% [unnamed-chunk-3]   |                                                           |............                                       |  23%                     |                                                           |.............                                      |  26% [unnamed-chunk-4]   |                                                           |..............                                     |  28%                     |                                                           |...............                                    |  30% [unnamed-chunk-5]   |                                                           |................                                   |  32%                     |                                                           |.................                                  |  34% [unnamed-chunk-6]   |                                                           |..................                                 |  36%                     |                                                           |....................                               |  38% [unnamed-chunk-7]   |                                                           |.....................                              |  40%                     |                                                           |......................                             |  43% [unnamed-chunk-8]   |                                                           |.......................                            |  45%                     |                                                           |........................                           |  47% [unnamed-chunk-9]   |                                                           |.........................                          |  49%                     |                                                           |..........................                         |  51% [unnamed-chunk-10]  |                                                           |...........................                        |  53%                     |                                                           |............................                       |  55% [unnamed-chunk-11]  |                                                           |.............................                      |  57%                     |                                                           |..............................                     |  60% [unnamed-chunk-12]  |                                                           |...............................                    |  62%                     |                                                           |.................................                  |  64% [unnamed-chunk-13]  |                                                           |..................................                 |  66%                     |                                                           |...................................                |  68% [unnamed-chunk-14]  |                                                           |....................................               |  70%                     |                                                           |.....................................              |  72% [unnamed-chunk-15]  |                                                           |......................................             |  74%                     |                                                           |.......................................            |  77% [unnamed-chunk-16]  |                                                           |........................................           |  79%                     |                                                           |.........................................          |  81% [unnamed-chunk-17]  |                                                           |..........................................         |  83%                     |                                                           |...........................................        |  85% [unnamed-chunk-18]  |                                                           |............................................       |  87%                     |                                                           |..............................................     |  89% [unnamed-chunk-19]  |                                                           |...............................................    |  91%                     |                                                           |................................................   |  94% [unnamed-chunk-20]  |                                                           |.................................................  |  96%                     |                                                           |.................................................. |  98% [unnamed-chunk-21]  |                                                           |...................................................| 100%                                                                                                                                
 output file: l9.knit.md
 
-[14/20] l10.qmd
+[14/19] l10.qmd
 
 
 processing file: l10.qmd
   |                                                            |                                                    |   0%  |                                                            |.....                                               |   9%                    |                                                            |.........                                           |  18% [opts]             |                                                            |..............                                      |  27%                    |                                                            |...................                                 |  36% [pkgs]             |                                                            |........................                            |  45%                    |                                                            |............................                        |  55% [unnamed-chunk-1]  |                                                            |.................................                   |  64%                    |                                                            |......................................              |  73% [unnamed-chunk-2]  |                                                            |...........................................         |  82%                    |                                                            |...............................................     |  91% [unnamed-chunk-3]  |                                                            |....................................................| 100%                                                                                                                              
 output file: l10.knit.md
 
-[15/20] l11.qmd
-[16/20] l12.qmd
+[15/19] l12.qmd
 
 
 processing file: l12.qmd
   |                                                            |                                                    |   0%  |                                                            |...                                                 |   7%                    |                                                            |.......                                             |  13% [opts]             |                                                            |..........                                          |  20%                    |                                                            |..............                                      |  27% [pkgs]             |                                                            |.................                                   |  33%                    |                                                            |.....................                               |  40% [unnamed-chunk-1]  |                                                            |........................                            |  47%                    |                                                            |............................                        |  53% [unnamed-chunk-2]  |                                                            |...............................                     |  60%                    |                                                            |...................................                 |  67% [unnamed-chunk-3]  |                                                            |......................................              |  73%                    |                                                            |..........................................          |  80% [unnamed-chunk-4]  |                                                            |.............................................       |  87%                    |                                                            |.................................................   |  93% [unnamed-chunk-5]  |                                                            |....................................................| 100%                                                                                                                              
 output file: l12.knit.md
 
-[17/20] l13.qmd
+[16/19] l13.qmd
 
 
 processing file: l13.qmd
   |                                                                       |                                                               |   0%  |                                                                       |.............                                                  |  20%         |                                                                       |.........................                                      |  40% [opts]  |                                                                       |......................................                         |  60%         |                                                                       |..................................................             |  80% [pkgs]  |                                                                       |...............................................................| 100%                                                                                                        
 output file: l13.knit.md
 
-[18/20] l14.qmd
+[17/19] l14.qmd
 
 
 processing file: l14.qmd
   |                                                         |                                                 |   0%  |                                                         |....                                             |   9%                       |                                                         |.........                                        |  18% [opts]                |                                                         |.............                                    |  27%                       |                                                         |..................                               |  36% [pkgs]                |                                                         |......................                           |  45%                       |                                                         |...........................                      |  55% [geomprob-square-14]  |                                                         |...............................                  |  64%                       |                                                         |....................................             |  73% [geomprob-dots]       |                                                         |........................................         |  82%                       |                                                         |.............................................    |  91% [geomprob-incircle]   |                                                         |.................................................| 100%                                                                                                                                    
 output file: l14.knit.md
 
-[19/20] l15.qmd
-[20/20] references.qmd
+[18/19] l15.qmd
+[19/19] references.qmd
 
 Output created: _book/index.html
 
