@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>L // WLM 2023 - 12&nbsp; L13 // Кластерный анализ</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./l14.html" rel="next">
+<link href="./l12.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../hub/index.html"> 
+<span class="menu-text">Хаб</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l13.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">R</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">L1 // Основы R. Типы и структура данных. Функции и управляющие конструкции</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Математика и статистика</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">L3 // Математика для анализа данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">L4 // Теория измерений</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">L6 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Анализ данных</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">L7 // Описательные статистики. Корреляционный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">L8 // Общие линейные модели. Простая и множественная линейная регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l13.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./l15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#геометрическая-интерпретация-задачи-кластеризации" id="toc-геометрическая-интерпретация-задачи-кластеризации" class="nav-link active" data-scroll-target="#геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">12.1</span> Геометрическая интерпретация задачи кластеризации</a></li>
+  <li><a href="#проблема-кластеризации" id="toc-проблема-кластеризации" class="nav-link" data-scroll-target="#проблема-кластеризации"><span class="header-section-number">12.2</span> Проблема кластеризации</a></li>
+  <li><a href="#расстояние-между-объектами" id="toc-расстояние-между-объектами" class="nav-link" data-scroll-target="#расстояние-между-объектами"><span class="header-section-number">12.3</span> Расстояние между объектами</a>
+  <ul class="collapse">
+  <li><a href="#евклидово-расстояние" id="toc-евклидово-расстояние" class="nav-link" data-scroll-target="#евклидово-расстояние"><span class="header-section-number">12.3.1</span> Евклидово расстояние</a></li>
+  <li><a href="#манхэттеновское-расстояние" id="toc-манхэттеновское-расстояние" class="nav-link" data-scroll-target="#манхэттеновское-расстояние"><span class="header-section-number">12.3.2</span> Манхэттеновское расстояние</a></li>
+  <li><a href="#евклид-vs-манхэттен" id="toc-евклид-vs-манхэттен" class="nav-link" data-scroll-target="#евклид-vs-манхэттен"><span class="header-section-number">12.3.3</span> Евклид vs Манхэттен</a></li>
+  <li><a href="#другие-виды-расстояний" id="toc-другие-виды-расстояний" class="nav-link" data-scroll-target="#другие-виды-расстояний"><span class="header-section-number">12.3.4</span> Другие виды расстояний</a></li>
+  </ul></li>
+  <li><a href="#проблема-операционализации-расстояния" id="toc-проблема-операционализации-расстояния" class="nav-link" data-scroll-target="#проблема-операционализации-расстояния"><span class="header-section-number">12.4</span> Проблема операционализации расстояния</a></li>
+  <li><a href="#субъективность-кластерного-анализа" id="toc-субъективность-кластерного-анализа" class="nav-link" data-scroll-target="#субъективность-кластерного-анализа"><span class="header-section-number">12.5</span> Субъективность кластерного анализа</a></li>
+  <li><a href="#расстояние-между-кластерами" id="toc-расстояние-между-кластерами" class="nav-link" data-scroll-target="#расстояние-между-кластерами"><span class="header-section-number">12.6</span> Расстояние между кластерами</a>
+  <ul class="collapse">
+  <li><a href="#среднее-невзвешенное-расстояние" id="toc-среднее-невзвешенное-расстояние" class="nav-link" data-scroll-target="#среднее-невзвешенное-расстояние"><span class="header-section-number">12.6.1</span> Среднее невзвешенное расстояние</a></li>
+  <li><a href="#центроидный-метод" id="toc-центроидный-метод" class="nav-link" data-scroll-target="#центроидный-метод"><span class="header-section-number">12.6.2</span> Центроидный метод</a></li>
+  <li><a href="#метод-дальнего-соседа" id="toc-метод-дальнего-соседа" class="nav-link" data-scroll-target="#метод-дальнего-соседа"><span class="header-section-number">12.6.3</span> Метод дальнего соседа</a></li>
+  <li><a href="#метод-ближайшего-соседа" id="toc-метод-ближайшего-соседа" class="nav-link" data-scroll-target="#метод-ближайшего-соседа"><span class="header-section-number">12.6.4</span> Метод ближайшего соседа</a></li>
+  </ul></li>
+  <li><a href="#иерархическая-кластеризация" id="toc-иерархическая-кластеризация" class="nav-link" data-scroll-target="#иерархическая-кластеризация"><span class="header-section-number">12.7</span> Иерархическая кластеризация</a>
+  <ul class="collapse">
+  <li><a href="#алгоритм-иерархического-кластерного-анализа" id="toc-алгоритм-иерархического-кластерного-анализа" class="nav-link" data-scroll-target="#алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">12.7.1</span> Алгоритм иерархического кластерного анализа</a></li>
+  <li><a href="#дендрограмма" id="toc-дендрограмма" class="nav-link" data-scroll-target="#дендрограмма"><span class="header-section-number">12.7.2</span> Дендрограмма</a></li>
+  <li><a href="#каменистая-осыпь" id="toc-каменистая-осыпь" class="nav-link" data-scroll-target="#каменистая-осыпь"><span class="header-section-number">12.7.3</span> Каменистая осыпь</a></li>
+  <li><a href="#когда-кластеризации-нет" id="toc-когда-кластеризации-нет" class="nav-link" data-scroll-target="#когда-кластеризации-нет"><span class="header-section-number">12.7.4</span> Когда кластеризации нет?</a></li>
+  <li><a href="#чем-плох-иерархический-кластерный-анализ" id="toc-чем-плох-иерархический-кластерный-анализ" class="nav-link" data-scroll-target="#чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">12.7.5</span> Чем плох иерархический кластерный анализ?</a></li>
+  </ul></li>
+  <li><a href="#метод-k-средних-k-means" id="toc-метод-k-средних-k-means" class="nav-link" data-scroll-target="#метод-k-средних-k-means"><span class="header-section-number">12.8</span> Метод k-средних (k-means)</a>
+  <ul class="collapse">
+  <li><a href="#алгоритм-метода-k-средних" id="toc-алгоритм-метода-k-средних" class="nav-link" data-scroll-target="#алгоритм-метода-k-средних"><span class="header-section-number">12.8.1</span> Алгоритм метода k-средних</a></li>
+  <li><a href="#ограничения-k-means" id="toc-ограничения-k-means" class="nav-link" data-scroll-target="#ограничения-k-means"><span class="header-section-number">12.8.2</span> Ограничения k-means</a></li>
+  <li><a href="#начальное-положение-кластеров" id="toc-начальное-положение-кластеров" class="nav-link" data-scroll-target="#начальное-положение-кластеров"><span class="header-section-number">12.8.3</span> Начальное положение кластеров</a></li>
+  </ul></li>
+  <li><a href="#метрики-качества-кластеризации" id="toc-метрики-качества-кластеризации" class="nav-link" data-scroll-target="#метрики-качества-кластеризации"><span class="header-section-number">12.9</span> Метрики качества кластеризации</a>
+  <ul class="collapse">
+  <li><a href="#внешние-метрики" id="toc-внешние-метрики" class="nav-link" data-scroll-target="#внешние-метрики"><span class="header-section-number">12.9.1</span> Внешние метрики</a></li>
+  <li><a href="#внутренние-метрики" id="toc-внутренние-метрики" class="nav-link" data-scroll-target="#внутренние-метрики"><span class="header-section-number">12.9.2</span> Внутренние метрики</a></li>
+  </ul></li>
+  <li><a href="#нечеткая-кластеризация" id="toc-нечеткая-кластеризация" class="nav-link" data-scroll-target="#нечеткая-кластеризация"><span class="header-section-number">12.10</span> Нечеткая кластеризация</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">L13 // Кластерный анализ</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--- {{< include ../other/_symbols.qmd >}} --->
+<!--- Logic --->
+<!--- Number sets--->
+<!--- Linear Algebra --->
+<!--- vectors and matrices --->
+<!--- transposed matrix --->
+<!--- Probability, Random Vars --->
+<!--- Distributions --->
+<!--- Other --->
+<!--- Trig --->
+<!--- Stats --->
+<p>К этому моменту мы с вами уже научились решать много разных аналитических задач, которые глобально можно объединить в две группы:</p>
+<ul>
+<li><strong>задачи регрессии</strong> — когда нам необходимо выяснить влияние определенных факторов на количественную переменную, а также предсказать её значение (простая и множественная линейная регрессия, регуляризованная регрессия, пуассоновкая регрессия, дисперсионный анализ).</li>
+<li><strong>задачи классификации</strong> — когда нам необходимо определить, к какому классу относиться объект на основе признаков, которыми он обладает (биномиальная регрессия).</li>
+</ul>
+<p>Но нам часто бывает нужно определить, какие наблюдения наиболее похожи друг на друга, то есть разбить их на группы, при условии что нам неизвестно, какие это будут группы. Иначе говоря, мы хотим изучить, есть ли какая-то <em>структура</em> в наших данных. Структуру в данных можно искать разными способами — мы начнем с решения задачи кластеризации.</p>
+<p>Задача кластерного анализа — разбиение набора объектов на группы, при этом попутно определяется число этих групп. Группы, на которые разбивается выборка, называются <em>кластеры</em>.</p>
+<section id="геометрическая-интерпретация-задачи-кластеризации" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="геометрическая-интерпретация-задачи-кластеризации"><span class="header-section-number">12.1</span> Геометрическая интерпретация задачи кластеризации</h2>
+<p>Напомним себе, что</p>
+<ul>
+<li>компьютер умеет работать только с числами</li>
+<li>упорядоченое множество объектов одного типа есть вектор</li>
+<li>каждый вектор мы [когда-то давно] договаривались начинать из начала координат, а значит, может описать его только координатами конца</li>
+</ul>
+<p>Теперь посмотрим на данные. Как мы знаем,</p>
+<ul>
+<li>столбцы — это переменные, или характеристики объектов</li>
+<li>строки — это сами объекты.</li>
+</ul>
+<p>Любой объект мы можем описать числовым вектором, где числа задают значение характеристик объектов. Если это количественные характеристики, то тут всё понятно — это сами числовые значения переменных. А если характеристики качественные? Никаких проблем — мы их перекодируем в числа! Если это бинарные переменные (например, пол или ступень обучения «бакалавр»/«магистр»), то одну категорию обозначим 0, другую — 1. Если категорий больше, то у нас просто будет больше чисел-индикаторов. Итого, каждое наблюдение описывается числовым вектором, а следовательно, и некоторой точкой в пространстве.</p>
+<p>Каково это пространство? Оси — это переменные, то есть характеристики объектов. Измерений в этом признаковом пространстве столько, сколько переменных в нашем датасете.</p>
+<p>Наша задача — объединить похожие наблюдения в группы. А какие наблюдения являются похожими? Логично допустить, что те, которые обдалают схожими характеристиками. Если характеристики объектов схожи, то в признаковом пространстве они будут располагаться близко друг к другу.</p>
+<p>Итого, summary геометрической задачи:</p>
+<ul>
+<li>каждый из <span class="math inline">\(n\)</span> рассматриваемых объектов — это точка в некотором <span class="math inline">\(p\)</span>-мерном признаковом пространстве;</li>
+<li>похожие объекты будут располагаться «близко» друг с другу;</li>
+<li>различающиеся объекты будут располагаться «далеко» друг от друга;</li>
+<li>скопления точек — это искомые кластеры.</li>
+</ul>
+</section>
+<section id="проблема-кластеризации" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="проблема-кластеризации"><span class="header-section-number">12.2</span> Проблема кластеризации</h2>
+<p>Посмотрим на простейший вариант — двухмерное признаковое пространство. Пусть у нас есть некоторые два признака, которые будут задавать два соответствующих измерения, и некоторое количество точек, которые располагаются примерно так:</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster.jpg" class="figure-img">
+</figure>
+</center>
+<p>Сколько здесь кластеров? Кто-то скажет, что их три:</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster1.jpg" class="figure-img">
+</figure>
+</center>
+<p>Кто-то скажет, что их четыре:</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster2.jpg" class="figure-img">
+</figure>
+</center>
+<p>Кто-то скажет, что их всё же три, но выглядят они по-другому:</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster3.jpg" class="figure-img">
+</figure>
+</center>
+<p>Что мы здесь наблюдаем? Проблему. Разные методы кластеризации могут давать разные результаты. Какой из них верный? Неясно… так как истинная группировка данных нам неизвестна. Но мы будем пытаться как-то выживать в ситуаций такой неопределённости.</p>
+</section>
+<section id="расстояние-между-объектами" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="расстояние-между-объектами"><span class="header-section-number">12.3</span> Расстояние между объектами</h2>
+<p>Обратим внимание на следующий важный момент. Мы оперируем терминами «близко» и «далеко» — но как мы определаем расстояние между объектами? Рассмотрим самые популярные и важные для нас варианты.</p>
+<section id="евклидово-расстояние" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="евклидово-расстояние"><span class="header-section-number">12.3.1</span> Евклидово расстояние</h3>
+<p>С одним из них мы знакомы ещё со школы — это евклидово расстояние между точками. По смыслу это длина отрезка, соединяющего две точки. Оно определяется как корень из суммы квадратов покоординатных разностей. Пусть у нас есть две точки — <span class="math inline">\((x_1, x_2, \dots, x_p)\)</span> и <span class="math inline">\((y_1, y_2, \dots, y_p)\)</span>. Евклидово расстояние будет определяться по формуле:</p>
+<p><span class="math display">\[
+d_{\text{Eucl},XY} = \sqrt{\sum_{j=1}^p (x_j - y_j)^2}
+\]</span></p>
+<p>Иногда также используется квадрат евклидова расстояния<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="манхэттеновское-расстояние" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="манхэттеновское-расстояние"><span class="header-section-number">12.3.2</span> Манхэттеновское расстояние</h3>
+<p>Оно же <em>блок-расстояние</em>, или <em>расстояние таксиста</em>, или <em>Майкопское расстояние</em>.</p>
+<p>Славный российский город Майкоп — а именно его улицы — устроен так:</p>
+<center>
+<figure class="figure">
+<img src="pics/majkop.png" class="figure-img">
+</figure>
+</center>
+<p>Какое расстояние проедет таксист из точки <span class="math inline">\(A\)</span> в точку <span class="math inline">\(B\)</span>?</p>
+<center>
+<figure class="figure">
+<img src="pics/maikop1.jpg" class="figure-img">
+</figure>
+</center>
+<p>Правильно, вот такое<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<center>
+<figure class="figure">
+<img src="pics/maikop2.jpg" class="figure-img">
+</figure>
+</center>
+<p>Схожая логика может быть использована и при расчёте расстояния между точками<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
+<center>
+<figure class="figure">
+<img src="pics/manh.jpg" class="figure-img">
+</figure>
+</center>
+<p>Математически это будет определено так:</p>
+<p><span class="math display">\[
+d_{\text{Manh},XY} = \sum^p_{j=1} |x_j - y_j|
+\]</span></p>
+</section>
+<section id="евклид-vs-манхэттен" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored" data-anchor-id="евклид-vs-манхэттен"><span class="header-section-number">12.3.3</span> Евклид vs Манхэттен</h3>
+<p>Когда какое расстояние выбирать? Здесь два важных момента.</p>
+<p>Первый — математический. Как и в случае с дисперсией, мы возводим покоординатные разности в квадрат. Если переменные измерены в различных единицах, то вклад одной из них в суммарное расстояние может быть значительно выше, чем других. По этой причине необходимо принять решение: является ли большая разница значений по одной из переменных достаточным основанием для отнесения наблюдений к различным кластерам? Если да, то можно использовать такое расстояние, если нет, то либо необходима стандартизация переменных, либо использование расстояния Манхэттен.</p>
+<p>Второй — измерительный. Если переменные, по которым вы кластеризуете наблюдения, непрерывные, то можно использовать евклидово расстояние. Если переменные дискретные, то более логичным вариантом будет манхэттеновское расстояние.</p>
+</section>
+<section id="другие-виды-расстояний" class="level3" data-number="12.3.4">
+<h3 data-number="12.3.4" class="anchored" data-anchor-id="другие-виды-расстояний"><span class="header-section-number">12.3.4</span> Другие виды расстояний</h3>
+<p>Отметим, что есть и другие виды расстояний, когда мы работает не с числовыми объектами. Например, мы можем пытаться кластеризовать слова — задача непростая, но её можно пытаться решить. Например, с помощью расстояний Хэмминга или Левенштейна. Для более специфичных объектов могут понадобиться и более изощрённые метрики расстояний. Да и вообще «никакое время, потраченное на раздумья, какое расстояние выбрать, не будет потрачено зря»<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+</section>
+</section>
+<section id="проблема-операционализации-расстояния" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="проблема-операционализации-расстояния"><span class="header-section-number">12.4</span> Проблема операционализации расстояния</h2>
+<p>Но вообще нам надо здесь поговорить ещё вот о чём: как вообще мы определяем, что есть расстояние между объектами? То есть как мы его операционализируем?</p>
+<p>Например, мы хотим кластеризовать наших испытуемых на «эффективных решателей задачи» и «неэффективных решателей задачи». По каким параметрам мы это будем делать? Как вариант — время решения и число ошибок в ходе решения. А как мы будем замерять эти переменные? Первую, видимо, в непрерывной шкале, вторую — в дискретной. Далее будем решать вопрос о выборе конкретной метрики расстояния.</p>
+<p>Хорошо, а как нам кластеризовать менеджеров на «хороших», «плохих» и «средненьких продажников»? Можем использовать разные подходы: оценку 360, показатели KPI и т. д.</p>
+<p>А как нам определять расстояние между сайтами? По каким показателям? Здесь вариантов ещё больше и всё зависит от конкретной аналитической задачи.</p>
+<p>Это всё о чем? О том, что операционализировать расстояние не так-то просто и для разных задач расстояние между одними и теми же объектами может быть операционализировано по-разному.</p>
+</section>
+<section id="субъективность-кластерного-анализа" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="субъективность-кластерного-анализа"><span class="header-section-number">12.5</span> Субъективность кластерного анализа</h2>
+<p>Мы плавно подъехали к ещё одной проблеме-особенности. Какова роль аналитика в кластерном анализе? Достаточно велика:</p>
+<ul>
+<li>отбор переменных для анализа</li>
+<li>какие переменные включать в анализ? все? или необходимо проводить отбор?</li>
+<li>возможно наличие переменных, которые будут хорошо работать с точки зрения поиска схожих объектов, но это не то сходство, которое мы ищем</li>
+<li>одни переменные могут быть косвенно заменены другими (уровень дохода — профессия, образование, стаж работы)</li>
+<li>«ковариаты» могут быть важны при формировании кластеров (число учащихся и учителей в школах)</li>
+<li>правильный выбор переменных крайне важен</li>
+<li>критерием при отборе переменных выступает ясность интерпретации полученного результата и «интуиция исследователя»</li>
+<li>метод стандартизации
+<ul>
+<li>качество кластеризации может зависит от выбранного метода стандартизации</li>
+</ul></li>
+<li>выбор метрики для расстояния между объектами</li>
+<li>выбор метрики для расстояния между кластерами
+<ul>
+<li>если кластеры выражены, то метрика не важна</li>
+<li>если появляются кластеры сложной формы (например, ленточные), то всё становится сложнее</li>
+</ul></li>
+<li>[иногда] определение числа кластеров</li>
+<li>интерпретация результатов
+<ul>
+<li>результаты кластерного анализа нуждаются в интерпретации (если он не решает чисто техническую задачу сокращения размерности данных)</li>
+<li>лучший результат кластеризации — это тот, который вы смогли понять и проинтерпретировать</li>
+</ul></li>
+</ul>
+</section>
+<section id="расстояние-между-кластерами" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="расстояние-между-кластерами"><span class="header-section-number">12.6</span> Расстояние между кластерами</h2>
+<p>Хорошо, мы поговорили о том, как считать расстояние между объектами, но нам надо понять, насколько (не)похожи получившиеся группы объектов. Для этого придется считать расстояние между кластерами. Варинатов, как обычно, масса.</p>
+<section id="среднее-невзвешенное-расстояние" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="среднее-невзвешенное-расстояние"><span class="header-section-number">12.6.1</span> Среднее невзвешенное расстояние</h3>
+<p>Среднее невзвешенное рассрояние (Average linkage clustering) определяется так:</p>
+<ul>
+<li>находим расстояния между всеми парами объектов двух кластеров</li>
+<li>усредняем их</li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/cluster-dist-ave.jpg" class="figure-img">
+</figure>
+</center>
+</section>
+<section id="центроидный-метод" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="центроидный-метод"><span class="header-section-number">12.6.2</span> Центроидный метод</h3>
+<p>Ранее был самым популярным из-за вычислительной простоты. Определяется расстояние между центрами тяжести двух кластеров. В настоящее время используется крайне мало.</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster-dist-centr.jpg" class="figure-img">
+</figure>
+</center>
+</section>
+<section id="метод-дальнего-соседа" class="level3" data-number="12.6.3">
+<h3 data-number="12.6.3" class="anchored" data-anchor-id="метод-дальнего-соседа"><span class="header-section-number">12.6.3</span> Метод дальнего соседа</h3>
+<p>Расстояние между кластерами определяется как расстояние между наиболее удалёнными объектами кластеров.</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster-dist-furth.jpg" class="figure-img">
+</figure>
+</center>
+</section>
+<section id="метод-ближайшего-соседа" class="level3" data-number="12.6.4">
+<h3 data-number="12.6.4" class="anchored" data-anchor-id="метод-ближайшего-соседа"><span class="header-section-number">12.6.4</span> Метод ближайшего соседа</h3>
+<p>Расстояние между кластерами определяется как расстояние между наиболее близкими объектами кластеров. Хорошо работает с ленточными кластерами.</p>
+<center>
+<figure class="figure">
+<img src="pics/cluster-dist-clos.jpg" class="figure-img">
+</figure>
+</center>
+</section>
+</section>
+<section id="иерархическая-кластеризация" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="иерархическая-кластеризация"><span class="header-section-number">12.7</span> Иерархическая кластеризация</h2>
+<section id="алгоритм-иерархического-кластерного-анализа" class="level3" data-number="12.7.1">
+<h3 data-number="12.7.1" class="anchored" data-anchor-id="алгоритм-иерархического-кластерного-анализа"><span class="header-section-number">12.7.1</span> Алгоритм иерархического кластерного анализа</h3>
+<ol type="1">
+<li>Каждый объект объявляется кластером — из <span class="math inline">\(n\)</span> наблюдений получается <span class="math inline">\(n\)</span> кластеров.</li>
+<li>Выбираются два ближайших кластера — они объединяются.</li>
+<li>Выбираются два ближайших кластера — они объединяются [2].</li>
+<li>Выбираются два ближайших кластера — они объединяются [3].</li>
+<li>Так происходит до тех пор, пока не остается два кластера.</li>
+<li>Оставшиеся два кластера являются ближайшими друг с другу — поэтому объединяются в один.</li>
+</ol>
+<p>Звучит, как какой-то сюр — начали с <span class="math inline">\(n\)</span> кластеров по одному объекту, закончили один кластером, содержащим все объекты… Да, в таком исполнении, действительно, странная процедура. Однако если мы на каком-то этапе её прервём, то получим желаемый результат.</p>
+<p>На каком этапе стоит остановиться? Когда расстояния между объединяемыми кластерами становится большим, так как большое расстояние говорит о том, что мы объединяем непохожие объекты.</p>
+</section>
+<section id="дендрограмма" class="level3" data-number="12.7.2">
+<h3 data-number="12.7.2" class="anchored" data-anchor-id="дендрограмма"><span class="header-section-number">12.7.2</span> Дендрограмма</h3>
+<p>В иерархическом кластерном анализе есть удобный инструмент для определения момента, когда стоит остановиться в объединении кластеров. Он называется дендрограмма. По своей сути, это визуализация алгоритма иерархического кластерного анализа.</p>
+<p>Принцип построения дендрограммы следующий:</p>
+<ol type="1">
+<li>На прямой располагаются все наблюдения как отдельные кластеры.</li>
+<li>Каждому кластеру соответствует вертикальная линия.</li>
+<li>Каждому объединению кластеров соответствует горизонтальная линия.</li>
+<li>Высота, на которой кластеры соединяются, отражает расстояние между кластерами.</li>
+</ol>
+<p>Разберемся с этим на примере.</p>
+<center>
+<figure class="figure">
+<img src="pics/dendr1.jpg" class="figure-img">
+</figure>
+</center>
+<ul>
+<li>У нас есть пять наблюдений. Первоначально мы объявляем все их кластерами — получаем пять кластеров. - - Договоримся, что расстояние между наблюдениями у нас манхэттеновское, а расстояние между кластерами — среднее невзвешенное, ибо так проще считать.</li>
+<li>[Итерация 1]
+<ul>
+<li>Далее ищем два ближайших — это кластеры 1 и 2.</li>
+<li>Объединяем их.</li>
+<li>Отображаем это на дендрограмме — соединяем линии 1 и 2 между собой на высоте 1, так как расстояние между объединяемым кластерами равно единице.</li>
+<li>Теперь у нас четыре кластера.</li>
+</ul></li>
+<li>[Итерация 2]
+<ul>
+<li>Снова ищем два ближайших кластера — это 4 и 5.</li>
+<li>Объединяем их на высоте 2, так как расстояние между ними равно двум.</li>
+<li>Остаётся три кластера.</li>
+</ul></li>
+<li>[Итерация 3]
+<ul>
+<li>Снова ищем два ближайщих кластера — на этот раз это 3 и 4-5.</li>
+<li>Объединяем их на высоте 3, так как расстояние между ними равно трём.</li>
+</ul></li>
+<li>[Итерация 4]
+<ul>
+<li>Остаётся только два кластера — соединяем их на каком-то большом расстоянии.</li>
+</ul></li>
+</ul>
+<center>
+<figure class="figure">
+<img src="pics/dendr2.jpg" class="figure-img">
+</figure>
+</center>
+<p>При анализе дендрограммя мы ищем скачок расстояний. Он обозначает момент, когда мы перешли к объединению непохожих (далёких друг от друга кластеров). Собственно, это и есть тот момент, когда необхожимо было прервать алгоритм и оставить те кластеры, которые образовались на текущий момент.</p>
+</section>
+<section id="каменистая-осыпь" class="level3" data-number="12.7.3">
+<h3 data-number="12.7.3" class="anchored" data-anchor-id="каменистая-осыпь"><span class="header-section-number">12.7.3</span> Каменистая осыпь</h3>
+<p>Ещё один способ определить число кластеров — это график «каменистая осыпь».</p>
+<p>В данном случае по оси <span class="math inline">\(x\)</span> располагаются шаги объединения, по оси <span class="math inline">\(y\)</span> — расстояние между кластерами в момент объединения. Как именно нам помогает такой график?</p>
+<center>
+<figure class="figure">
+<img src="pics/elbow.jpg" class="figure-img">
+</figure>
+</center>
+<p>Мы видим, что сначала расстояние между объединяемыми кластерами растёт медленно, а затем происходит излом линнии, и после него расстояние начинает расти быстро. Это является указанием, что на шаге, где происходит излом линии, необходимо прервать процедуру объединения.</p>
+</section>
+<section id="когда-кластеризации-нет" class="level3" data-number="12.7.4">
+<h3 data-number="12.7.4" class="anchored" data-anchor-id="когда-кластеризации-нет"><span class="header-section-number">12.7.4</span> Когда кластеризации нет?</h3>
+<p>Как вы понимаете, паттерны дендрограммы и каменистой осыпи могут быть крайне разнообразны в зависимости от того, что есть в данных. Однако главный момент, который нам говорит о том, что кластеризаци нет — это отсутствие скачка расстояний на дендрограмме и/или отсутствие излома линии на графике «каменистая осыпь».</p>
+</section>
+<section id="чем-плох-иерархический-кластерный-анализ" class="level3" data-number="12.7.5">
+<h3 data-number="12.7.5" class="anchored" data-anchor-id="чем-плох-иерархический-кластерный-анализ"><span class="header-section-number">12.7.5</span> Чем плох иерархический кластерный анализ?</h3>
+<p>У иерархического кластерного анализа практически нет недостатков, за исключением одного очень важного технического — он требует, чтобы в оперативной памяти хранилась матрица попарных расстояний. Если у нас порядка ста объектов, то проблем никаких, а вот если объектов 100 000, уже возникают трудности. Невозможность работать с очень большими датасетами — основная проблема этого вида кластерного анализа.</p>
+</section>
+</section>
+<section id="метод-k-средних-k-means" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="метод-k-средних-k-means"><span class="header-section-number">12.8</span> Метод k-средних (k-means)</h2>
+<section id="алгоритм-метода-k-средних" class="level3" data-number="12.8.1">
+<h3 data-number="12.8.1" class="anchored" data-anchor-id="алгоритм-метода-k-средних"><span class="header-section-number">12.8.1</span> Алгоритм метода k-средних</h3>
+<p>Процедура кластерного анализа этим методом значительно отличается.</p>
+<ol type="1">
+<li>Заранее определяется число кластеров <span class="math inline">\(k\)</span>. Хотя вообще-то это невозможно, однако уже найдены способы, чтобы обойти это ограничение.</li>
+<li>Для анализа выбирается <span class="math inline">\(k\)</span> точек — центры кластеров.</li>
+<li>Объект приписывается к тому кластеру, чей центр ближайший.</li>
+<li>Центр кластера — центр тяжести объектов кластера.</li>
+</ol>
+<ul>
+<li>центр тяжести множества точек с координатами <span class="math inline">\((x_{i1}, x_{i2}, \dots, x_{ip})\)</span> — это точка с координатами <span class="math inline">\((\bar x_1, \bar x_2, \dots, \bar x_p)\)</span>.</li>
+</ul>
+<ol start="5" type="1">
+<li>Повторяем поочерёдно пункты 3 и 4 до тех пор, пока центры кластеров не перестанут двигаться.</li>
+</ol>
+<p>Визуализацию можно посмотреть <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/">тут</a>.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/R2e3Ls9H_fc?si=EXDiqrMrFl12E-YX" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="ограничения-k-means" class="level3" data-number="12.8.2">
+<h3 data-number="12.8.2" class="anchored" data-anchor-id="ограничения-k-means"><span class="header-section-number">12.8.2</span> Ограничения k-means</h3>
+<ul>
+<li>Необходимо заранее определить число кластеров</li>
+<li>Используется только евклидово растояние
+<ul>
+<li>хотя этот недостаток исправляется в других модификациях метода</li>
+</ul></li>
+<li>Результат зависит от начальных центров кластеров</li>
+</ul>
+</section>
+<section id="начальное-положение-кластеров" class="level3" data-number="12.8.3">
+<h3 data-number="12.8.3" class="anchored" data-anchor-id="начальное-положение-кластеров"><span class="header-section-number">12.8.3</span> Начальное положение кластеров</h3>
+<p>Если «бросать» центроиды совсем случайно, то это может привести к тому, что некоторые из них буду, например, слишком далеко от скопления точек — в результате работы алгоритма образуются пустые кластеры. Это нехорошо, поэтому есть два наиболее популярных подхода.</p>
+<ol type="1">
+<li>Forgy — Случайным образом выбираются <span class="math inline">\(k\)</span> наблюдений. Они объявляются начальными центрами кластеров.</li>
+<li>Случайное разбиение (Random Partition) — Каждое наблюдение случайным образом приписывается к одному из кластеров. Находятся центры тяжести кластеров. Они объявляются начальными центрами кластеров.</li>
+</ol>
+</section>
+</section>
+<section id="метрики-качества-кластеризации" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="метрики-качества-кластеризации"><span class="header-section-number">12.9</span> Метрики качества кластеризации</h2>
+<p>Вообще оценка качества кластеризации — задача крайне сложная и в строгом математическом смысле <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9A%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F#.D0.A2.D0.B5.D0.BE.D1.80.D0.B5.D0.BC.D0.B0_.D0.BD.D0.B5.D0.B2.D0.BE.D0.B7.D0.BC.D0.BE.D0.B6.D0.BD.D0.BE.D1.81.D1.82.D0.B8_.D0.9A.D0.BB.D0.B5.D0.B9.D0.BD.D0.B1.D0.B5.D1.80.D0.B3.D0.B0">невыполнимая</a>. Однако <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8">всякие разные метрики</a>, которые позволяют приблизиться к такой оценки всё же были придуманы. Они делятся на <em>внешние</em> и <em>внутренние</em>. Мы рассмотрим наиболее простые.</p>
+<section id="внешние-метрики" class="level3" data-number="12.9.1">
+<h3 data-number="12.9.1" class="anchored" data-anchor-id="внешние-метрики"><span class="header-section-number">12.9.1</span> Внешние метрики</h3>
+<p>Внешние метрики используют дополнитльную информацию о кластеризуемом множестве объектов. Например, распределение объектов по кластерам. То есть, чтобы посчитать метрику, мы должны знать, как данные распределяются на кластеры перед тем, как будем проводить кластерный анализ.</p>
+<p>Но зачем нам проводить кластерный анализ, если нам уже известны кластеры? Ведь это тогда не кластеры, а классы! И мы можем строить классификатор. Так-то оно, конечно, так — и нам, аналитикам, эти метрики не очень интересны. Для разработчиков алгоритмов же они могут быть очень полезны.</p>
+<p>Мы не будем на них останавливаться. Если хочется почитать и вникнуть, то <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8#.D0.92.D0.BD.D0.B5.D1.88.D0.BD.D0.B8.D0.B5_.D0.BC.D0.B5.D1.80.D1.8B_.D0.BE.D1.86.D0.B5.D0.BD.D0.BA.D0.B8_.D0.BA.D0.B0.D1.87.D0.B5.D1.81.D1.82.D0.B2.D0.B0">вот</a>.</p>
+</section>
+<section id="внутренние-метрики" class="level3" data-number="12.9.2">
+<h3 data-number="12.9.2" class="anchored" data-anchor-id="внутренние-метрики"><span class="header-section-number">12.9.2</span> Внутренние метрики</h3>
+<p>Эти метрики не используют внешний информации о датасете, а опираются только на результаты кластеризации.</p>
+<section id="компактность-кластеров-cluster-cohesion" class="level4" data-number="12.9.2.1">
+<h4 data-number="12.9.2.1" class="anchored" data-anchor-id="компактность-кластеров-cluster-cohesion"><span class="header-section-number">12.9.2.1</span> Компактность кластеров (cluster cohesion)</h4>
+<p>Помним, что мы хотим собрать похожие наблюдения вместе, а похожие — это те, которые располагаются близко друг к другу. Соответственно, разделение на кластеры тем лучше, чем ближе объекты кластера находятся к его центру. Поэтому необхожимо минимизировать внутрикластерное расстояние:</p>
+<p><span class="math display">\[
+\text{WSS} = \sum_{j=1}^k \sum^{|C_j|}_{i=1} (x_{ij} − \bar x_j)^2,
+\]</span></p>
+<p>где <span class="math inline">\(k\)</span> — число кластеров, <span class="math inline">\(|C_j|\)</span> — количество объектов в данном кластере.</p>
+<p>Это самая популярная метрика качества кластеризации.</p>
+</section>
+<section id="отделимость-кластеров-cluster-separation" class="level4" data-number="12.9.2.2">
+<h4 data-number="12.9.2.2" class="anchored" data-anchor-id="отделимость-кластеров-cluster-separation"><span class="header-section-number">12.9.2.2</span> Отделимость кластеров (cluster separation)</h4>
+<p>Помним, что мы хотим собрать в разные кластеры непохожие друг на друга наблюдения — это те, которые располагаются далеко друг от друга. Соответственно, чем дальше находятся друг от друга центры кластеров, тем лучше. Поэтому необхожимо максимизировать межкластерное расстояние:</p>
+<p><span class="math display">\[
+\text{BSS} = n \cdot \sum_{j=1}^k (\bar x_j - \bar x)^2,
+\]</span></p>
+<p>где <span class="math inline">\(k\)</span> — число кластеров.</p>
+<p>О других внутренних метриках кластеризации можно посмотреть <a href="https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8#.D0.92.D0.BD.D1.83.D1.82.D1.80.D0.B5.D0.BD.D0.BD.D0.B8.D0.B5_.D0.BC.D0.B5.D1.80.D1.8B_.D0.BE.D1.86.D0.B5.D0.BD.D0.BA.D0.B8_.D0.BA.D0.B0.D1.87.D0.B5.D1.81.D1.82.D0.B2.D0.B0">тут</a>.</p>
+</section>
+</section>
+</section>
+<section id="нечеткая-кластеризация" class="level2" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="нечеткая-кластеризация"><span class="header-section-number">12.10</span> Нечеткая кластеризация</h2>
+<p>Два рассмотренных выше алгоритма кластеризации позволяют приписать каждому наблюдению некоторый <em>единственный</em> кластер. Такие подходы относятся к <strong>чёткой кластеризации</strong>. Но что если мы хотим получить какое-то более общее решение? И, скажем, оценить степень принадлежности наблюдений к каждому кластеру?</p>
+<p>Возникает справедливый вопрос — зачем? если чёткая кластеризации даёт более однозначные результаты? Решение, возвращающее степень принадлежности наблюдения к определенному кластеру, даёт нам больше возможностей для интерпретации результатов анализа, а также позволяет получить более подробную картину ситуации, которая происходит где-то «между кластерами», или когда явная кластеризация не выявляется.</p>
+<p>Для решения задачи нечёткой кластеризации (fuzzy clustering) используется метод C-средних (C-means), который является усовершенствованием метода k-средних. Он позволяет разбить наблюдения на заданное число <span class="math inline">\(k\)</span> нечетких кластеров. Нечеткость выражается как раз в том, что в ходе алгоритма рассчитывается степень принадлежности (membership value) наблюдения к каждому из кластеров.</p>
+<p>Рассмотрим шаги алгоритма для простейшего случая. Пусть исходно имеются четыре наблюдения в двумерном признаковом пространстве с координатами <span class="math inline">\((1,3), (2,5), (6,8), (7,9)\)</span>. Эти наблюдения мы будем разбивать на <em>два</em> кластера.</p>
+<ol type="1">
+<li><strong>Каждому наблюдению присваивается случайное число, задающее его принадлежность к кластеру.</strong></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Кластер</th>
+<th style="text-align: center;"><span class="math inline">\((1,3)\)</span></th>
+<th><span class="math inline">\((2,5)\)</span></th>
+<th><span class="math inline">\((4,8)\)</span></th>
+<th><span class="math inline">\((7,9)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.8</td>
+<td>0.7</td>
+<td>0.2</td>
+<td>0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.2</td>
+<td>0.3</td>
+<td>0.8</td>
+<td>0.9</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><strong>Вычисляются центры (центроиды) кластеров.</strong></li>
+</ol>
+<p><span class="math display">\[
+V_{ij} = \frac{\sum_{k=1}^n \gamma_{ik}^m x^{(j)}_k}{\sum_{k=1}^n \gamma_{ik}^m},
+\]</span></p>
+<p>где <span class="math inline">\(\gamma\)</span> — membership value, <span class="math inline">\(m\)</span> — fuzziness parameter (степень нечеткости кластеров, стандартное значение — от 1.2 до 2), <span class="math inline">\(x^{(j)}_k\)</span> — координата наблюдения, <span class="math inline">\(i\)</span> — номер кластера, <span class="math inline">\(j\)</span> — номера координаты.</p>
+<p>Для представленной таблицы координаты центроидов будут таковы:</p>
+<p><span class="math display">\[
+\begin{split}
+\mathbf{V}_1 &amp;= (V_{11}, V_{12}) = (1.568, 4.051) \\
+\mathbf{V}_1 &amp;= (V_{21}, V_{22}) = (5.350, 8.215)
+\end{split}
+\]</span></p>
+<ol start="3" type="1">
+<li><strong>Расчитываются расстояния от каждого наблюдения до центров (центроидов) кластеров.</strong></li>
+</ol>
+<p>Если использовать евклидово расстояние, то для рассматриваемого примера они будут такими:</p>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Кластер</th>
+<th style="text-align: center;"><span class="math inline">\((1,3)\)</span></th>
+<th><span class="math inline">\((2,5)\)</span></th>
+<th><span class="math inline">\((4,8)\)</span></th>
+<th><span class="math inline">\((7,9)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\(d_{11} = 1.2\)</span></td>
+<td><span class="math inline">\(d_{21} = 1.04\)</span></td>
+<td><span class="math inline">\(d_{31} = 4.63\)</span></td>
+<td><span class="math inline">\(d_{41} = 7.34\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="math inline">\(d_{12} = 6.79\)</span></td>
+<td><span class="math inline">\(d_{22} = 4.64\)</span></td>
+<td><span class="math inline">\(d_{32} = 1.36\)</span></td>
+<td><span class="math inline">\(d_{42} = 1.82\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="1">
+<li><strong>Обновляются значения membership values для наблюдений</strong> по следующей формуле:</li>
+</ol>
+<p><span class="math display">\[
+\gamma_{pi} = \Bigg( \sum_{j=1}^J \Big( \frac{d_{pi}^2}{d_{pj}^2} \Big) ^{\frac{1}{m-1}} \Bigg)^{-1},
+\]</span></p>
+<p>где <span class="math inline">\(i\)</span> — номер кластера, <span class="math inline">\(p\)</span> — номер наблюдения, <span class="math inline">\(d\)</span> — расстояние между наблюдением и центром кластера, <span class="math inline">\(J\)</span> — количество кластеров, <span class="math inline">\(m\)</span> — fuzziness parameter.</p>
+<p>В рассматриваемом примере получатся такие значения:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Кластер</th>
+<th style="text-align: center;"><span class="math inline">\((1,3)\)</span></th>
+<th><span class="math inline">\((2,5)\)</span></th>
+<th><span class="math inline">\((4,8)\)</span></th>
+<th><span class="math inline">\((7,9)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.97</td>
+<td>0.95</td>
+<td>0.08</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.03</td>
+<td>0.05</td>
+<td>0.92</td>
+<td>0.94</td>
+</tr>
+</tbody>
+</table>
+<ol start="5" type="1">
+<li><strong>Повторяются шаги 2–4 до тех пор, пока значения membership values не перестанут меняться.</strong></li>
+</ol>
+<p>По полученой таблице и определяется структура данных — или её отсутствие.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Хотя математически эта метрика не является расстоянием, так как может нарушаться неравенство треугольника. Однако для задач кластерного анализа это не имеет большого значения.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Заметьте, что в количестве кварталов все расстояния равны.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Заметьте, что длина всех траекторий также будет одинакова.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Вадим Аббакумов, лекция в Computer Science Center<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./l12.html" class="pagination-link" aria-label="L12 // Линейные модели со смешанными эффектами">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./l14.html" class="pagination-link" aria-label="L14 // Анализ главных компонент и эксплораторный факторный анализ">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">L14 // Анализ главных компонент и эксплораторный факторный анализ</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

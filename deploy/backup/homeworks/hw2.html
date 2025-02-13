@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HW // WLM 2023 - HW2 // Матрицы и списки. Функции</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./hw3.html" rel="next">
+<link href="./hw1.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../hub/index.html"> 
+<span class="menu-text">Хаб</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw2.html">HW2 // Матрицы и списки. Функции</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">HW2 // Матрицы и списки. Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW4 // Предобработка данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW5 // Визуализация данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#hw2_main" id="toc-hw2_main" class="nav-link active" data-scroll-target="#hw2_main">Основные задания</a>
+  <ul class="collapse">
+  <li><a href="#hw2-1-title" id="toc-hw2-1-title" class="nav-link" data-scroll-target="#hw2-1-title">#1</a></li>
+  <li><a href="#hw2-2-title" id="toc-hw2-2-title" class="nav-link" data-scroll-target="#hw2-2-title">#2</a></li>
+  <li><a href="#hw2-3-title" id="toc-hw2-3-title" class="nav-link" data-scroll-target="#hw2-3-title">#3</a></li>
+  <li><a href="#hw2-4-title" id="toc-hw2-4-title" class="nav-link" data-scroll-target="#hw2-4-title">#4</a></li>
+  <li><a href="#hw2-5-title" id="toc-hw2-5-title" class="nav-link" data-scroll-target="#hw2-5-title">#5</a></li>
+  <li><a href="#hw2-6-title" id="toc-hw2-6-title" class="nav-link" data-scroll-target="#hw2-6-title">#6</a></li>
+  <li><a href="#hw2-7-title" id="toc-hw2-7-title" class="nav-link" data-scroll-target="#hw2-7-title">#7</a></li>
+  <li><a href="#hw2-8-title" id="toc-hw2-8-title" class="nav-link" data-scroll-target="#hw2-8-title">#8</a></li>
+  <li><a href="#hw2-9-title" id="toc-hw2-9-title" class="nav-link" data-scroll-target="#hw2-9-title">#9</a></li>
+  <li><a href="#hw2-10-title" id="toc-hw2-10-title" class="nav-link" data-scroll-target="#hw2-10-title">#10</a></li>
+  </ul></li>
+  <li><a href="#hw2_add" id="toc-hw2_add" class="nav-link" data-scroll-target="#hw2_add">Дополнительные задания</a>
+  <ul class="collapse">
+  <li><a href="#hw2-11-title" id="toc-hw2-11-title" class="nav-link" data-scroll-target="#hw2-11-title">#1</a></li>
+  <li><a href="#hw2-12-title" id="toc-hw2-12-title" class="nav-link" data-scroll-target="#hw2-12-title">#2</a></li>
+  <li><a href="#hw2-13-title" id="toc-hw2-13-title" class="nav-link" data-scroll-target="#hw2-13-title">#3</a></li>
+  <li><a href="#hw2-14-title" id="toc-hw2-14-title" class="nav-link" data-scroll-target="#hw2-14-title">#4</a></li>
+  <li><a href="#hw2-15-title" id="toc-hw2-15-title" class="nav-link" data-scroll-target="#hw2-15-title">#5</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="hw2" class="quarto-section-identifier">HW2 // Матрицы и списки. Функции</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+REPLACE ALL hw2 TO hw<n> WITH MATCH CASE
+-->
+<section id="hw2_main" class="level2">
+<h2 class="anchored" data-anchor-id="hw2_main">Основные задания</h2>
+<section id="hw2-1-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-1-title">#1</h3>
+<p><img id="hw2-1-level" class="level"></p>
+<div id="hw2-1-task" class="task">
+<p>Сгенерируйте две матрицы, которые будут содержать по 50 выборок, объемом по 70 наблюдений, из генеральной совокупности, в которой распределение некоторого признака подчиняется нормальному распределению (<code>rnorm()</code>) с параметрами <code>mean = 20.5</code> и <code>sd = 3.48</code>. Каждой выборке в матрице должен соответствовать один столбец. Сохраните результаты генерации в перемененые <code>sim1</code> и <code>sim2</code>.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ослабим контроль случайности
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Так как задание подразумевает генерацию случайных чисел, для воспроизводимых результатов нужно установить зерно датчика случайных чисел. Однако нам нужно сгенерировать две разные матрицы — нет смысла работать с двумя одинаковыми. Если же мы установим одинаковое зерно датчика перед обоими строками с генерацией матриц, то получим как раз две одинаковые матрицы. Поэтому в данном задании <code>set.seed</code> нужно выполнить один раз перед двумя последующими генерациями. Шаблон кода будет выглядеть так</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">420</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sim1 <span class="ot">&lt;-</span> ...</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sim2 <span class="ot">&lt;-</span> ...</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Автопроверка настроена на результаты, получаемые при значении зерна датчика случайных чисел <code>set.seed(420)</code>.</p>
+</div>
+</div>
+</div>
+<div id="hw2-1-autocheck" class="autocheck">
+<div id="hw2-1-ir" class="input-requirements">
+<p>В качестве самопроверки введите значения из первой строки первого солбца первой и второй матриц (иммено в таком порядке). Значения округлите до сотых по арифметическим правилам и разделите запятой. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-1')"></p>
+<div id="hw2-1-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-1-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Используя функцию <code>rnorm()</code> нужно сгенерировать вектор, длиной равной количеству выборок, умноженному на количество наблюдений в одной выборке.</li>
+<li>Затем «сложить» вектор в матрицу, размером число наблюдений в выборке × число выборок.</li>
+<li>Сохранить результат генерации в переменную <code>sim1</code>.</li>
+<li>Повторить шаги генерации и сохранить результат в переменную <code>sim2</code>.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте, выполнили ли вы строчку строчку с установкой зерна датчика случайных чисел перед генерацией вектора.</li>
+<li>Проверьте, разделили ли вы значения запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-2-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-2-title">#2</h3>
+<p><img id="hw2-2-level" class="level"></p>
+<div id="hw2-2-task" class="task">
+<p>Напишите функцию <code>mean_sd</code>, которая будет вычислять среднее (<code>mean()</code>) и стандартное отклонение (<code>sd()</code>) по всем выборкам (столбцам) одной матрицы.</p>
+<p>Функция должна принимать на вход матрицу произвольного размера и возвращать матрицу, в которой первой строкой будут средние по каждому столбцу матрицы, а второй — стандартные отклонения. Количество столбцов матрицы аутпута (результата работы функции) должно совпадать с количеством столбцов входной матрицы.</p>
+</div>
+<div id="hw2-2-autocheck" class="autocheck">
+<div id="hw2-2-ir" class="input-requirements">
+<p>Для проверки корректности работы функции выполните её на матрице</p>
+<p><span class="math display">\[
+\pmatrix{1 &amp; 4 &amp; 7 \\ 2 &amp; 5 &amp; 8 \\ 3 &amp; 6 &amp; 9}
+\]</span> В поле ответа введите сначала строку со средними, разделив их запятыми, затем точку с запятой, а затем строку со стандартными отклонениями, также разделив их запятыми. Проверка проигнорирует все пробелы, поэтому для удобства ввода можете их использовать.</p>
+<p>Привет формата ответа:</p>
+<p><code>1.2, 2.3, 3.4; 0.1, 0.2, 0.3</code>.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-2')"></p>
+<div id="hw2-2-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-2-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>В функции необходимо вызвать функцию <code>apply()</code> для расчета каждой из статистик — среднего и стандартного отклонения.</li>
+<li>Результаты работы функций необходимо объединить в матрицу — можно воспользоваться <code>matrix()</code> или <code>rbind()</code>.</li>
+<li>При использовании <code>matrix()</code> необходимо указать число столбцов, которое равно числу столбцов входной матрицы.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте правильность создания или генерации тестовой матрицы.</li>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-3-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-3-title">#3</h3>
+<p><img id="hw2-3-level" class="level"></p>
+<div id="hw2-3-task" class="task">
+<p>Примените функцию, написанную в <a href="#hw2-2-title">задании 2</a>, к матрице <code>sim1</code>.</p>
+</div>
+<div id="hw2-3-autocheck" class="autocheck">
+<div id="hw2-3-ir" class="input-requirements">
+<p>Для самопроверки введи в поле ответа первые три средних, разделённые запятыми, далее точку с запятой и затем первые три стандартных отклонения, также разделенные запятыми. Значения округлите до сотых по арифметическим правилам. Проверка проигнорирует все пробелы, поэтому для удобства ввода можете их использовать.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-3')"></p>
+<div id="hw2-3-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-3-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Необходимо вызвать созданную функцию <code>mean_sd()</code> на ранее сгенерированной матрице <code>sim1</code>.</li>
+<li>Для округления можно использоваться функцию <code>round()</code>, где вторым аргументом указать <code>2</code>.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте, разделили ли вы значения строк запятыми.</li>
+<li>Проверьте, разделили ли вы строки матрицы точкой с запятой.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-4-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-4-title">#4</h3>
+<p><img id="hw2-4-level" class="level"></p>
+<div id="hw2-4-task" class="task">
+<p>Выполните t-тест на первых колонках матриц <code>sim1</code> и <code>sim2</code> и сохраните результат в переменную <code>ttest_res</code>.</p>
+<p>t-тест выполняется с помощью функции <code>t.test()</code>, в которую необходимо передать в качестве аргументов два вектора. Синтаксис выглядит так:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(vector1, vector2)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Понимание статистики, стоящей за данной функцией, для выполнения задания не требуется.</p>
+</div>
+<div id="hw2-4-autocheck" class="autocheck">
+<div id="hw2-4-ir" class="input-requirements">
+<p>В качестве ответа для самопроверки введите t-значение (<code>statistics</code>), полученное при выполнении теста, округленная до сотых по арифметическим правилам.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-4')"></p>
+<div id="hw2-4-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-4-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Выделите первые колонки сгенерированных матриц <code>sim1</code> и <code>sim2</code></li>
+<li>Передайте их в функцию <code>t.test()</code></li>
+<li>Сохраните результат работы функции в переменную <code>ttest</code></li>
+<li>Выведите содержимое переменной в консоль, чтобы получить значение для ввода в поле самопроверки.</li>
+</ul>
+</details>
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте, что из матриц были выделены колонки.</li>
+<li>Проверьте, что были выделены имеено первые колонки.</li>
+<li>Проверьте, что в поле самопроверки вы вводите именно значение t-статистики.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
+</details>
+
+</div>
+</section>
+<section id="hw2-5-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-5-title">#5</h3>
+<p><img id="hw2-5-level" class="level"></p>
+<div id="hw2-5-task" class="task">
+<p>Извлеките из результатов t-теста оценки средних по выборкам (<code>estimate</code>), значение статистики (<code>statistic</code>) и p-value (<code>p.value</code>).</p>
+</div>
+<div id="hw2-5-autocheck" class="autocheck">
+<div id="hw2-5-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-5')"></p>
+<div id="hw2-5-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-5-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Изучите структуру переменной <code>ttest</code> — это список.</li>
+<li>Проиндексируйте список с помощью имен его элементов.</li>
+<li>Выведите значения в консоль.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-6-title">#6</h3>
+<p><img id="hw2-6-level" class="level"></p>
+<div id="hw2-6-task" class="task">
+<p>Объедините извлеченные значения в именнованый список. Названия элементов сохраните исходными — <code>estimate</code>, <code>statistic</code> и <code>p.value</code> соответственно.</p>
+</div>
+<div id="hw2-6-autocheck" class="autocheck">
+<div id="hw2-6-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-6')"></p>
+<div id="hw2-6-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-6-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Необходимо создать список, в который сохранить часть значений из переменной <code>ttest</code>.</li>
+<li>Список должен состоять из трех элементов, которым необходимо присвоить при создании имена, указанные в задании.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-7-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-7-title">#7</h3>
+<p><img id="hw2-7-level" class="level"></p>
+<div id="hw2-7-task" class="task">
+<p>У нас есть кирпичики для сбора новой функции.</p>
+<p>Основываясь на предыдущих заданиях, напишите функцию, которая выполняет серию t-тестов на соответствующих выборках (столбцах матриц). Сохраните функцию в переменную <code>stat_testing</code>.</p>
+<p>Функция должна:</p>
+<ul>
+<li>принимать на вход две матрицы</li>
+<li>возвращать список, каждый элементов которого является результат одного t-теста</li>
+<li>каждый результат t-теста также является списком и состоит из трех элементов — <code>estimate</code>, <code>statistic</code> и <code>p.value</code> (как в <a href="#hw2-6-title">задании 6</a>)</li>
+</ul>
+<p>Пример синтаксиса функции и результата её работы на матрицах <code>A</code> и <code>B</code>:</p>
+<p><span class="math display">\[
+A = \pmatrix{1 &amp; 4 &amp; 7 \\ 2 &amp; 5 &amp; 8 \\ 3 &amp; 6 &amp; 9}, \quad
+B = \pmatrix{10 &amp; 40 &amp; 70 \\ 20 &amp; 50 &amp; 80 \\ 30 &amp; 60 &amp; 90}
+\]</span></p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stat_testing</span>(A, B) <span class="co"># A and B both are matrices</span></span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[[1]]$estimate
+mean of x mean of y 
+        2        20 
+
+[[1]]$statistic
+        t 
+-3.102219 
+
+[[1]]$p.value
+[1] 0.0878746
+
+
+[[2]]
+[[2]]$estimate
+mean of x mean of y 
+        5        50 
+
+[[2]]$statistic
+        t 
+-7.755547 
+
+[[2]]$p.value
+[1] 0.0153293
+
+
+[[3]]
+[[3]]$estimate
+mean of x mean of y 
+        8        80 
+
+[[3]]$statistic
+        t 
+-12.40888 
+
+[[3]]$p.value
+[1] 0.005968456</code></pre>
+</div>
+</div>
+<div id="hw2-7-autocheck" class="autocheck">
+<div id="hw2-7-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-7')"></p>
+<div id="hw2-7-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-7-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Необходимо создать функцию, аргументами которой будут две матрицы</li>
+<li>Внутри функции должен быть цикл, который будет перебирать столбцы матриц и выполнять на них t-тест</li>
+<li>Из результатов t-тесты необходимо извлекать три значения, аналогично заданию 6.</li>
+<li>Извлеченные результаты должны сохраняться в список результатов, который необходимо создать в начале функции.</li>
+<li>В конце тела функции с помощью <code>return()</code> нужно вернуть получившийся список с результатами.</li>
+<li>Количество элементов списка результатов должно совпадать с числом колонок входных матриц.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-8-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-8-title">#8</h3>
+<p><img id="hw2-8-level" class="level"></p>
+<div id="hw2-8-task" class="task">
+<p>Выполните функцию из <a href="#hw2-7-title">задания 7</a> на матрицах <code>sim1</code> и <code>sim2</code>. Результат работы функции сохраните в переменную <code>stat_testing_res</code>.</p>
+</div>
+<div id="hw2-8-autocheck" class="autocheck">
+<div id="hw2-8-ir" class="input-requirements">
+<p>Для самопроверки в качестве ответа введите среднее значение (<code>estimate</code>) по выборке <code>y</code> (<code>mean of y</code>) из 30-го t-теста, округленное до сотых по арифметическим правилам.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-8')"></p>
+<div id="hw2-8-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-8-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-9-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-9-title">#9</h3>
+<p><img id="hw2-9-level" class="level"></p>
+<div id="hw2-9-task" class="task">
+<p>Извлеките из списка <code>stat_testing_res</code> вектор p-значений (<code>p.value</code>).</p>
+</div>
+<div id="hw2-9-autocheck" class="autocheck">
+<div id="hw2-9-ir" class="input-requirements">
+<p>Для самопроверки в качестве ответа введите десятое значение получившегося вектора, округленное до сотых по арифметическим правилам.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-9')"></p>
+<div id="hw2-9-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw2-9-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+<ul>
+<li>Чтобы извлечь p-значения, необходимо выполнить функцию, которая извлекает p-значения, на элементах списка.</li>
+<li>Используйте для этого функцию <code>Map()</code></li>
+<li>В качестве её первого аргумента пропишите анонимную функцию, которая вытаскивает элемент <code>p.value</code> из списка путем индексации по имени.</li>
+<li>Функция <code>Map()</code> возвращается список, который необходимо превратить в вектор с помощью функции <code>unlist()</code>.</li>
+</ul>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+<ul>
+<li>Проверьте, что в вектор извлекаются именно p-значения.</li>
+<li>Проверьте, что индексируете необходимый элемент вектора.</li>
+<li>Проверьте округление — округлить необходимо по арифметическим правилам: <span class="math inline">\(9.434 \rightarrow 9.43, \, 9.435 \rightarrow 9.44\)</span>.</li>
+</ul>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-10-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-10-title">#10</h3>
+<p><img id="hw2-10-level" class="level"></p>
+<div id="hw2-10-task" class="task">
+<p>Проверьте, сколько результатов тестов было статистически значимым. Считайте статистически значимым те результаты, где p-значение было меньше 0.05.</p>
+</div>
+<div id="hw2-10-autocheck" class="autocheck">
+<div id="hw2-10-ir" class="input-requirements">
+<p>Для самопроверки в поле ниже введите получившееся значение.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-10')"></p>
+<div id="hw2-10-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-10-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+</section>
+<section id="hw2_add" class="level2">
+<h2 class="anchored" data-anchor-id="hw2_add">Дополнительные задания</h2>
+<section id="hw2-11-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-11-title">#1</h3>
+<p><img id="hw2-11-level" class="level"></p>
+<div id="hw2-11-task" class="task">
+<p>Модифицируйте функцию из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте строки были подписаны соответственно <code>mean</code> и <code>sd</code>.</p>
+<p>Сохраните модифицированную функцию в переменную <code>mean_sd_1</code>.</p>
+</div>
+<div id="hw2-11-autocheck" class="autocheck">
+<div id="hw2-11-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-11" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-11')"></p>
+<div id="hw2-11-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-11-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-12-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-12-title">#2</h3>
+<p><img id="hw2-12-level" class="level"></p>
+<div id="hw2-12-task" class="task">
+<p>Продолжите модификацию функции из <a href="#hw2-2-title">задания 2</a>, чтобы в её аутпуте столбцы унаследовали названия из входной матрицы, если они есть.</p>
+<p>Сохраните модифицированную функцию в переменную <code>mean_sd_2</code>.</p>
+</div>
+<div id="hw2-12-autocheck" class="autocheck">
+<div id="hw2-12-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-12" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-12')"></p>
+<div id="hw2-12-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-12-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-13-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-13-title">#3</h3>
+<p><img id="hw2-13-level" class="level"></p>
+<div id="hw2-13-task" class="task">
+<p>Модифицируйте функцию из <a href="#hw2-7-title">задания 7</a>, чтобы:</p>
+<ul>
+<li>она проверяла, совпадает ли количество столбцов во входных матрицах,
+<ul>
+<li>в случае совпадения выполняла свой основной код</li>
+<li>в случае несовпадения заканчивала свою работу с ошибкой <code>Number of columns does not match</code></li>
+</ul></li>
+<li>можно было задать параметр <code>paired</code> для t-тестов с дефолтным значением таким же, как у функции <code>t.test()</code></li>
+</ul>
+</div>
+<div id="hw2-13-autocheck" class="autocheck">
+<div id="hw2-13-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-13" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-13')"></p>
+<div id="hw2-13-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-13-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-14-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-14-title">#4</h3>
+<p><img id="hw2-14-level" class="level"></p>
+<div id="hw2-14-task" class="task">
+<p>Модифицируйте функцию из <a href="#hw2-13-title">предыдущего задания</a>, чтобы можно было использовать для статистических тестов не только функцию <code>t.test()</code>, но и другие. Функция должна без ошибок обрабатывать входные параметры внутренних статистических функций. Сохраните модифицированную функцию в переменную <code>stat_testing_2</code>.</p>
+</div>
+<div id="hw2-14-autocheck" class="autocheck">
+<div id="hw2-14-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-14" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-14')"></p>
+<div id="hw2-14-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-14-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+</section>
+<section id="hw2-15-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw2-15-title">#5</h3>
+<p><img id="hw2-15-level" class="level"></p>
+<div id="hw2-14-task" class="task">
+<p>Напишите функцию, которая решает квадратные уравнения.</p>
+<p>Квадратное уравнение задается тремя коэффициентами <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span>:</p>
+<p><span class="math display">\[
+ax^2 + bx + c = 0
+\]</span></p>
+<p>Функция должна:</p>
+<ul>
+<li>принимать на вход три аргумента — коэффициенты квадратного уравнения <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span>
+<ul>
+<li>коэффициент <span class="math inline">\(a\)</span> является обязательным, иначе уравнение не является квадратным
+<ul>
+<li>значение <span class="math inline">\(a\)</span> не может равняться нулю по той же причине — функция должна в этом случае выдать ошибку <code>The equation is not quadratic</code></li>
+</ul></li>
+<li>если какой-либо из коэффициентов <span class="math inline">\(b\)</span> и <span class="math inline">\(c\)</span> не передан в функцию, его значение считается равным нулю</li>
+</ul></li>
+<li>возвращать именованный вектор решений квадратного уравнения
+<ul>
+<li>если два решения различны, необходимо вернуть оба с именами <code>x1</code> и <code>x2</code> в порядке возрастания</li>
+<li>если два решения совпадают, необходимо вернуть только одно с именем <code>x</code></li>
+<li>если решений нет, необходимо вернуть пропущенное значение и сообщение <code>No solutions</code></li>
+</ul></li>
+</ul>
+<p>Известно, что уравнения вида <span class="math inline">\(x^2 + 1 = 0\)</span> в общем случае корректны, и функция должна уметь их решать.</p>
+<ul>
+<li>По умолчанию функция должна решать уравнение в вещественных числах.</li>
+<li>Если пользователь хочет, чтобы уравнение решалось в комплексных числах, ему необходимо указать аргумент функции <code>complex = TRUE</code>.</li>
+</ul>
+<p>Сохраните функцию в переменную <code>quadeqsolve</code>.</p>
+<p>Примеры работы функции представлены ниже.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">c =</span> <span class="dv">4</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x1 x2 
+ 1  4 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">b =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in quadeqsolve(b = -3, c = 2): argument "a" is missing, with no default</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">0</span>, <span class="at">b =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in quadeqsolve(a = 0, b = -3, c = 2): The equation is not quadratic</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        x1         x2 
+ 0.7071068 -0.7071068 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>No solutions</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quadeqsolve</span>(<span class="at">a =</span> <span class="dv">3</span>, <span class="at">c =</span> <span class="dv">2</span>, <span class="at">complex =</span> <span class="cn">TRUE</span>)</span></code><button title="Копировать" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          x1           x2 
+0-0.8164966i 0+0.8164966i</code></pre>
+</div>
+</div>
+<div id="hw2-15-autocheck" class="autocheck">
+<div id="hw2-15-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw2-15" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw2-15')"></p>
+<div id="hw2-15-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper" hidden="true">
+<details class="hints" id="hw2-15-hints">
+<summary>
+Подсказки
+</summary>
+<details class="hint">
+<summary>
+Как делать задание?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Что надо сделать?
+</summary>
+</details>
+<details class="hint">
+<summary>
+Ответ неверный
+</summary>
+</details>
+</details>
+</div>
+<!--- CHANGE hw2 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw2.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./hw1.html" class="pagination-link" aria-label="HW1 // Введение в R. Типы данных. Векторы">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW1 // Введение в R. Типы данных. Векторы</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./hw3.html" class="pagination-link" aria-label="HW3 // Датафреймы. Исследование данных">
+        <span class="nav-page-text">HW3 // Датафреймы. Исследование данных</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

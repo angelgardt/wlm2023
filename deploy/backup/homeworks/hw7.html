@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HW // WLM 2023 - HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./hw8.html" rel="next">
+<link href="./hw6.html" rel="prev">
+<link href="./pics/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ничего не найдено",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Отмена",
+    "search-submit-button-title": "Отправить",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./pics/logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WLM 2023 // HSE UX LAB</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./../hub/index.html"> 
+<span class="menu-text">Хаб</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../lectures/index.html"> 
+<span class="menu-text">Лекции</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../practice/index.html"> 
+<span class="menu-text">Практики</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../homeworks/index.html"> 
+<span class="menu-text">Домашки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./../projects/index.html"> 
+<span class="menu-text">Проекты</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw7.html">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Вступление</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW1 // Введение в R. Типы данных. Векторы</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW2 // Матрицы и списки. Функции</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW3 // Датафреймы. Исследование данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW4 // Предобработка данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW5 // Визуализация данных</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW6 // Случайный эксперимент. Случайные величины</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW8 // Описательные статистики. Корреляционный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW9 // Простая линейная регрессия. Множественная линейная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW10 // Дисперсионный анализ. Ковариационный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW11 // Логистическая регрессия. Пуассоновская регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW12 // Обобщенные аддитивные модели. Регуляризованная регрессия</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW13 // Смешанные линейные модели</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW14 // Кластерный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW15 // Анализ главных компонент. Эксплораторный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW16 // Конфирматорный факторный анализ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Источники</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#hw7_main" id="toc-hw7_main" class="nav-link active" data-scroll-target="#hw7_main">Основные задания</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">#1</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">#2</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">#3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">#4</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">#5</a></li>
+  <li><a href="#hw7-6-title" id="toc-hw7-6-title" class="nav-link" data-scroll-target="#hw7-6-title">#6</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">#7</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">#8</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">#9</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">#10</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="hw7" class="quarto-section-identifier">HW7 // Оценивание параметров в практике статистического анализа. Тестирование статистических гипотез</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+REPLACE ALL hw7 TO hw<n> WITH MATCH CASE
+-->
+<section id="hw7_main" class="level2">
+<h2 class="anchored" data-anchor-id="hw7_main">Основные задания</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">#1</h3>
+<p><img id="hw7-1-level" class="level"></p>
+<div id="hw7-1-task" class="task">
+<p>Нам вновь потребуются сгенерированные данные.</p>
+<p>Сгенерируйте 1000 независимых выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>.</p>
+<p>В качестве зерна датчика случайных чисел используйте 333 (<code>set.seed(333)</code>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw7_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="hw7-1-autocheck" class="autocheck" hidden="true">
+<div id="hw7-1-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-1" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-1')"></p>
+<div id="hw7-1-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-1-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Требуется сгенерировать матрицу, размером 100×1000, в каждой колонке которой будут содержаться наблюдения одной выборки.</li>
+<li>Так как выборки независимы, сгенерировать 1000 выборок по 100 наблюдений это то же самое, что сгенерировать одну большую выборку из 100&nbsp;000 наблюдений, а затем сложить в матрицу по колонкам.</li>
+<li>Сгенерировать выборку поможет функция <code>rchisq()</code>, которая работает аналогично хорошо знакомой <code>rnorm()</code>, только принимает в себя один параметр <code>df</code> (помимо количества наблюдений, которые нужно сгенерировать).</li>
+<li>По заданию <code>df = 3</code>, именно такое значение параметра и нужно передать в функцию.</li>
+<li>Сложить сгенерированный вектор в матрицу поможет функция <code>matrix()</code>.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">#2</h3>
+<p><img id="hw7-2-level" class="level"></p>
+<div id="hw7-2-task" class="task">
+<p>На практике мы посмотрели, что центральная предельная теорема (ЦПТ) выполняется в случае с симметричным распределением, а именно с нормальным. Однако сама по себе ЦПТ не оговаривает какие-либо специальные требования к форме исходного распределения. Покажите с помощью симуляции, что распределение выборочных средних большого числа ассиметричных случайных величин будет стремиться к нормальному распределению.</p>
+<p>Используйте матрицу <code>sim1</code>.</p>
+</div>
+<div id="hw7-2-autocheck" class="autocheck" hidden="true">
+<div id="hw7-2-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-2" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-2')"></p>
+<div id="hw7-2-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-2-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Сгенерированная в предыдущем задании матрица содержит 1000 выборок, на каждой из которых необходимо рассчитать среднее значение.</li>
+<li>Для того, чтобы выполнить какую-либо функцию на каждой из колонок, можно воспользоваться функцией <code>apply()</code>.</li>
+<li>Функция <code>apply()</code> вернет вектор из средних значений, который дальше необходимо визуализировать средствами пакета <code>ggplot2</code>.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">#3</h3>
+<p><img id="hw7-3-level" class="level"></p>
+<div id="hw7-3-task" class="task">
+<p>Мы также увидели на практике, что среднее арифметическое является несмещенной оценкой математического ожидания. Ну, в какой-то мере это был ожидаемый результат — распределение всё-таки у нас было симметричное. Не вполне ясно, будет ли сохранться несмещенность оценки, если наше распределение в генеральной совокупности теперь асимметрично.</p>
+<p>Проверьте, является ли среднее арифметическое несмещенной оценкой математического ожидания в случае асимметричного распределения. Математическое ожидание распределения <span class="math inline">\(\chi^2(3)\)</span> равно 3: <span class="math inline">\(\mathbb E \big( \chi^2(3) \big) = 3\)</span>. Используйте матрицу <code>sim1</code>.</p>
+<p>Сделайте вывод о (не)смещенности оценки.</p>
+</div>
+<div id="hw7-3-autocheck" class="autocheck" hidden="true">
+<div id="hw7-3-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-3" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-3')"></p>
+<div id="hw7-3-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-3-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>За основу возьмите график из предыдущего задания — ровно он нам и нужен.</li>
+<li>На график необходимо добавить две линии: одна будет обозначать генеральное среднее, другая — среднее выборочных средних.</li>
+<li>Обе линии визализируются с помощью <code>geom_vline()</code>, однако в первом случае функция <code>aes()</code> не используется, а во втором — используется, так как среднее средних рассчитается на основе данных.</li>
+<li>Генеральное среднее в случае распределение хи-квадрат будет совпадать с параметром <code>df</code>.</li>
+<li>Если линии находятся близко друг к другу, то оценку можно считать несмещенной. Если оценка значительно отклоняется от параметра генеральной совокупности, то оценка является смещенной.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">#4</h3>
+<p><img id="hw7-4-level" class="level"></p>
+<div id="hw7-4-task" class="task">
+<p>Вопрос про состоятельность также возникает в случае асимметричного распределения. Потребуется другая структура данных, чтобы проверить сохранение этого свойства оценки.</p>
+<p>Сгенерируйте 1000 выборок, объемом от 1 до 1000 наблюдений, из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq()</code>) с параметром 3 (<code>df = 3</code>) — <span class="math inline">\(X \sim \chi^2(3)\)</span>. Результаты генерации сохраните в список <code>sim2</code>.</p>
+</div>
+<div id="hw7-4-autocheck" class="autocheck" hidden="true">
+<div id="hw7-4-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-4" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-4')"></p>
+<div id="hw7-4-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-4-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>В случае проверки оценки на состоятельность необходимы выборки разного объема, поэтому сложить их в матрицу будет сложнее — проще использовать список.</li>
+<li>Создайте пустой список <code>sim2</code>, а затем с помощью цикла сложите в него выборки, объемом от 1 до 1000 наблюдений, из того же распределения, что и в первом задании.</li>
+<li>В функции <code>rchisq()</code> один из параметров теперь будет меняться — в качестве этого параметра необходимо передать итератор (обычно <code>i</code>) из условия цикла.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">#5</h3>
+<p><img id="hw7-5-level" class="level"></p>
+<div id="hw7-5-task" class="task">
+<p>На сгенерированных в предыдущем задании данных проверьте, является ли выборочная дисперсия <code>s^2</code> (<code>var()</code>) состоятельной оценкой дисперсии генеральной совокупности в случае асимметричного распределения. Дисперсия распределения <span class="math inline">\(\chi^2(3)\)</span> равна 6 — <span class="math inline">\(\mathbb D \big( \chi^2 (3) \big) = 6\)</span>.</p>
+</div>
+<div id="hw7-5-autocheck" class="autocheck" hidden="true">
+<div id="hw7-5-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-5" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-5')"></p>
+<div id="hw7-5-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-5-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>На каждом элементе списка <code>sim2</code> необходимо рассчитать дисперсию с помощью функции <code>var()</code>.</li>
+<li>Прогнать функцию по всем элементам списка поможет функция <code>map()</code>.</li>
+<li>Результатом функции <code>map()</code> является список, который необходимо прекратить в вектор, чтобы с ним дальше было удобно работать на визуализации. Здесь пригодится функция <code>unlist()</code>.</li>
+<li>При построении визуализации нужно отобразить, как меняется оценка дисперсии с ростом выборки, а также добавить горзионтальную линию, обозначающую дисперсию генеральной совокупности, чтобы из графика было видно, куда сходится оценка.</li>
+<li>Дисперсия генеральной совокупности в случае распределения хи-квадрат равна <span class="math inline">\(2 \times \text{df}\)</span>, то есть в нашем случае 6.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="hw7-6-title" class="level3">
+<h3 class="anchored" data-anchor-id="hw7-6-title">#6</h3>
+<p><img id="hw7-6-level" class="level"></p>
+<div id="hw7-6-task" class="task">
+<p>Напишите функцию <code>ci</code> для вычисления 90% доверительного интервала для среднего. Считайте, что мы работем с выборокой большого объема (порядка 100 наблюдений).</p>
+<p>Пороговыми значениями стандартного нормального распределения считайте следующие: <span class="math inline">\(z_{0.05} = -1.64\)</span>, <span class="math inline">\(z_{0.95} = 1.64\)</span>.</p>
+</div>
+<div id="hw7-6-autocheck" class="autocheck">
+<div id="hw7-6-ir" class="input-requirements">
+<p>Для самопроверки в поле ответа введите доверительный интервал для среднего первой выборки из симуляции <code>sim1</code> в формате <code>lower,upper</code>. Значения округлите <em>до сотых</em>. Проверка игнорирует все пробелы.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-6" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-6')"></p>
+<div id="hw7-6-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-6-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Логика расчета границ доверительного интервала всегда одна и та же — <span class="math inline">\([\text{se}_X \cdot z_q + \bar X, \text{se}_X \cdot z_{1-q} + \bar X]\)</span>.</li>
+<li>Если в случае 95% доверительного интервала <span class="math inline">\(z_q = -1.96\)</span>, а <span class="math inline">\(z_{1-q} = 1.96\)</span>, то в случае 90% доверительного интервала — <span class="math inline">\(z_q = -1.64\)</span>, а <span class="math inline">\(z_{1-q} = 1.64\)</span>.</li>
+<li>Таким образом, можно просто изменить значения, умножаемые на стандартрую ошибку, в коде из практики.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до сотых) и формат ввода (значения разделяются запятой, десятичный разделитель — точка).</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">#7</h3>
+<p><img id="hw7-7-level" class="level"></p>
+<div id="hw7-7-task" class="task">
+<ol type="a">
+<li>Постройте визуализацию, выражающую статистически корректную интерпретацию 90% доверительного интервала для среднего. Используйте матрицу <code>sim1</code>.</li>
+<li>Рассчитайте долю доверительных интервалов симуляции <code>sim1</code>, в границы которых попало значение параметра генеральной совокупности.</li>
+</ol>
+</div>
+<div id="hw7-7-autocheck" class="autocheck">
+<div id="hw7-7-ir" class="input-requirements">
+<p>Для самопроверки в поле ответа введите значение, получившееся в пункте <em>b</em>. Значение округлите до <em>тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-7" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-7')"></p>
+<div id="hw7-7-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-7-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Чтобы визуализировать статистически корректную интерпретацию доверительного интервала, необходимо отобразить все доверительные интервалы, полученные в симуляции (1000 штук), и генеральное среднее (удобнее всего в виде линии).</li>
+<li>Цветом необходимо обозначить, попало ли генеральное среднее в конкретный доверительный интервал, или нет. Для этого в данных нужно создать колонку (например, логического типа), в которой для каждого доверительного интервала будет указано, принадлежит ли ему значение среднего генеральной совокупности, или не принадлежит.</li>
+<li>По этой колонке можно рассчитать и долю доверительных интервалов, содержащих генеральное среднее, с помощью функции <code>mean()</code> (если колонка была типа <code>logical</code>).</li>
+<li>Сами данные для визуализации получаются применением функции <code>ci</code>, созданной в предыдущем задании, к матрице <code>sim1</code> с помощью функции <code>apply()</code>.</li>
+<li>Результатом работы функции <code>apply()</code> будет матрица 3×1000, которую необходимо привести к датафрейму (тибблу), предварительно транспонировав фунцией <code>t()</code> — так будет удобнее с ней работать.</li>
+<li>Также для удобства визуализации можно создать в получившемся тиббле колонку с номером выборки в симуляции.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до тысячных) и формат ввода (десятичный разделитель — точка).</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">#8</h3>
+<p><img id="hw7-8-level" class="level"></p>
+<div id="hw7-8-task" class="task">
+<ol type="a">
+<li>Постройте визуализацию, показывающую графически смысл <em>capture percentage</em>. Считайте, что мы работаем с 1000-ой выборкой из симуляции <code>sim1</code> — capture percentage именно для этого доверительного интервала нас интересует.</li>
+<li>Рассчитайте capture percentage для этого доверительного интервала.</li>
+</ol>
+</div>
+<div id="hw7-8-autocheck" class="autocheck">
+<div id="hw7-8-ir" class="input-requirements">
+<p>Для самопроверки в поле ответа введите значение, получившееся в пункте <em>b</em>. Значение округлите до <em>тысячных</em>. В качестве десятичного разделителя используйте точку.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-8" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-8')"></p>
+<div id="hw7-8-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-8-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Чтобы визуализировать capture percentage, аналогично предыдущему заданию, необходимо отобразить все доверительные интервалы, полученные в симуляции (1000 штук). Генеральное среднее также можно отобразить (удобнее всего в виде линии).</li>
+<li>Цветом необходимо обозначить те средние (с доверительными интервалами), которые попали в доверительный интервал для какого-либо отдельного среднего.</li>
+<li>АНалогично предыдущему заданию, необходимо создать колонку в данных визуализации. По заданию мы работаем с доверительным интервалом 1000-ой выборки симуляции, поэтому при создании колонки (например, логического типа) необходимо проверить, попадают ли средние все выборок в доверительных интервал среднего 1000-ой выборки.</li>
+<li>По этой колонке можно рассчитать и capture percentage рассматриваемого доверительного интервала, с помощью функции <code>mean()</code> (если колонка была типа <code>logical</code>).</li>
+<li>Сами данные для визуализации получаются применением функции <code>ci</code>, созданной в предыдущем задании, к матрице <code>sim1</code> с помощью функции <code>apply()</code>, то есть абсолютно аналогично предыдущему заданию.</li>
+<li>Результатом работы функции <code>apply()</code> будет матрица 3×1000, которую необходимо привести к датафрейму (тибблу), предварительно транспонировав фунцией <code>t()</code> — так будет удобнее с ней работать.</li>
+<li>Также для удобства визуализации можно создать в получившемся тиббле колонку с номером выборки в симуляции.</li>
+<li>Если в самопроверке ответ неверный, то проверьте округление (должно быть до тысячных) и формат ввода (десятичный разделитель — точка).</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">#9</h3>
+<p><img id="hw7-9-level" class="level"></p>
+<div id="hw7-9-task" class="task">
+<p>Согласно формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, стандартная ошибка должна уменьшаться с ростом объема выборки. Соответственно, границы доверительных интервалов также должны становиться более узкими.</p>
+<p>Используя симуляцию <code>sim2</code> покажите графически, что:</p>
+<ol type="a">
+<li>стандартная ошибка среднего уменьшается с ростом объема выборки</li>
+<li>доверительные интервалы становятся более узкими с ростом объема выборки</li>
+</ol>
+<p><em>Для расчета доверительного интервала используйте функцию <code>ci</code>, написанную в <a href="#hw7-6-title">задании 6</a>. Для визуализации доверительных интервало в этом задании лучше подойдет <code>geom_errorbar()</code>.</em></p>
+</div>
+<div id="hw7-9-autocheck" class="autocheck" hidden="true">
+<div id="hw7-9-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-9" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-9')"></p>
+<div id="hw7-9-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-9-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Чтобы отобразить искомые закономерности, нам необходимо построить графики, на которых по оси <code>x</code> будет располагаться объем выборки (он же будет её порядковым номером — такова структура списка <code>sim2</code>), а по оси <code>y</code> — стандартная ошибка или доверительный интервал.</li>
+<li>Аналогично симуляции для проверки состоятельности оценки, необходимо выполнить функции <code>se()</code> и <code>ci()</code> соответственно на элементах списка <code>sim2</code>. Вновь пригодится функция <code>map()</code>.</li>
+<li>В случае с функцией <code>se()</code> можно написать такую функцию отдельно, а можно воспользоваться анонимными функциями.</li>
+<li>Результат работы функции <code>map()</code> необходимо преобразовать к датафрейму (тибблу) — это будет данными для визуализации.</li>
+<li>Далее построить соответствующие графики — для стандартной ошибки подойдет <code>geom_point()</code>, а для доверительных интервалов — <code>geom_errorbar()</code>, так как он не отображает среднее и визуализация будет менее нагружена.</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">#10</h3>
+<p><img id="hw7-10-level" class="level"></p>
+<div id="hw7-10-task" class="task">
+<p>Согласно всё той же формуле расчета стандартной ошибки среднего <span class="math inline">\(\text{se}_X = \frac{\text{sd}_X}{\sqrt{n}}\)</span>, она должна расти с увеличением дисперсии. Соответственно, границы доверительных интервалов также должны становиться более широкими.</p>
+<ol type="a">
+<li>Сгенерируйте 200 выборок по 100 наблюдений из генеральной совокупности, в которой некоторый признак подчиняется распределению хи-квадрат (<code>rchisq(n, df = k)</code>) <span class="math inline">\(X \sim \chi^2(k)\)</span>, а параметр <span class="math inline">\(k\)</span> меняется от 1 до 200. Сохраните результаты в список <code>sim3</code>. В качестве зерна датчика случайных чисел используйте значение 555 (<code>set.seed(555)</code>).</li>
+</ol>
+<p>Используя полученную симуляцию <code>sim3</code> покажите графически, что:</p>
+<ol start="2" type="a">
+<li>стандартная ошибка растет с увеличением дисперсии выборки</li>
+<li>доверительные интервалы становятся более широкими с увеличением дисперсии выборки</li>
+</ol>
+<p><em>Для расчета доверительного интервала используйте функцию <code>ci</code>, написанную в <a href="#hw7-6-title">задании 6</a>. Для визуализации доверительных интервало в этом задании лучше подойдет <code>geom_errorbar()</code>.</em></p>
+</div>
+<div id="hw7-10-autocheck" class="autocheck" hidden="true">
+<div id="hw7-10-ir" class="input-requirements">
+<p>Описание формата инпута.</p>
+</div>
+<p><input class="autocheck-input" type="text" id="hw7-10" placeholder="Введите ответ…"></p>
+<p><input class="autocheck-button" type="button" value="Проверить" onclick="check('hw7-10')"></p>
+<div id="hw7-10-fb" class="autocheck-feedback">
+
+</div>
+</div>
+<div class="hints-wrapper">
+<details class="hints" id="hw7-10-hints">
+<summary>
+Подсказки
+</summary>
+<ul>
+<li>Чтобы отобразить искомые закономерности, нам необходимо построить графики, на которых по оси <code>x</code> будет располагаться значение параметра распределения хи-квадрат (он же будет её порядковым номером, а также будет связан с дисперсией — таково устройство распределения хи-квадрат), а по оси <code>y</code> — стандартная ошибка или доверительный интервал.</li>
+<li>Симуляция <code>sim3</code> для этого задания создается аналогично симуляции <code>sim2</code>, только теперь варьироваться будет не количество наблюдений, а параметр распределения (<code>df</code>) — именно ему нужно передать итератора (обычно <code>i</code>) из условия цикла.</li>
+<li>Далее необходимо выполнить функции <code>se()</code> и <code>ci()</code> соответственно на элементах списка <code>sim3</code>. Вновь пригодится функция <code>map()</code>.</li>
+<li>В случае с функцией <code>se()</code> можно написать такую функцию отдельно, а можно воспользоваться анонимными функциями.</li>
+<li>Результат работы функции <code>map()</code> необходимо преобразовать к датафрейму (тибблу) аналогично предыдущему заданию — это будет данными для визуализации.</li>
+<li>Далее построить соответствующие графики — для стандартной ошибки подойдет <code>geom_point()</code>, а для доверительных интервалов — <code>geom_errorbar()</code>, так как он не отображает среднее и визуализация будет менее нагружена.</li>
+</ul>
+</details>
+</div>
+<!--- CHANGE hw7 TO hw<n> IN THE LINES BELOW--->
+<script type="text/javascript" src="./js/hw7.json"></script>
+<script type="text/javascript" src="./js/hw.js"></script>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./hw6.html" class="pagination-link" aria-label="HW6 // Случайный эксперимент. Случайные величины">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW6 // Случайный эксперимент. Случайные величины</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./hw8.html" class="pagination-link" aria-label="HW8 // Описательные статистики. Корреляционный анализ">
+        <span class="nav-page-text">HW8 // Описательные статистики. Корреляционный анализ</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
