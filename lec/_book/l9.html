@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 9&nbsp; L9 // Дисперсионный анализ. Ковариационный анализ</title>
+<title>9&nbsp; L9 // Дисперсионный анализ. Ковариационный анализ – L // WLM 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3f14476484311c28f16e4ef7388d5d41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-317518b595e9c4efdce348cd04e6c053.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -125,7 +125,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -152,18 +152,18 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l9.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">L9 // Дисперсионный анализ. Ковариационный анализ</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -193,7 +193,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время. Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -381,7 +381,7 @@ I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &amp;: \hat y_i = b_0 + b_2 &amp;
 \end{cases}
 \]</span></p>
 <p>Мы вводили в модели переменные-индикаторы для того, чтобы обозначит категориальные переменные и понять, как они меняют модель. Теперь же, когда мы работаем только с категориальными предикторами, мы можем обозначить перемеренные-индикаторы как <span class="math inline">\(x_j\)</span>, чтобы еще более наглядно увидеть, что модель с категориальными предикторами полностью совпадает с моделью обычной линейной регрессии. Значениями, которые принимают переменные-индикаторы, кодируются группы наблюдений. Мы можем составить следующую таблицу кодировки:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">Группа</th>
@@ -415,7 +415,7 @@ I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &amp;: \hat y_i = b_0 + b_2 &amp;
 <p><span class="math display">\[
 \hat y_i = b_0 + b_1 x_1 + b_2 x_2 + \dots + b_{k-1}x_{k-1}
 \]</span></p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
 <col style="width: 14%">
@@ -485,7 +485,7 @@ I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &amp;: \hat y_i = b_0 + b_2 &amp;
 </tr>
 </tbody>
 </table>
-<p>Однако вернемся к случаю трех групп, так как этот случай достаточно прост и удобен для рассмотрения имеющейся ситуации. Попробуем визуализировать связь между некоторой целевой каоличественной переменной и категориальным предиктором. Получится следующая картинка:</p>
+<p>Однако вернемся к случаю трех групп, так как этот случай достаточно прост и удобен для рассмотрения имеющейся ситуации. Попробуем визуализировать связь между некоторой целевой количественной переменной и категориальным предиктором. Получится следующая картинка:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -549,7 +549,7 @@ I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &amp;: \hat y_i = b_0 + b_2 &amp;
 \hat y_i = b_0 + b_1 x_1 + b_2 x_2
 \]</span></p>
 <p>однако интерпретация коэффициент здесь будет иная: теперь коэффициенты показывают отклонения [средних] групп от общего среднего, то есть коэффициенты показывают <em>эффект</em> предиктора для конкретной группы. Данный способ подбора называется <strong>параметризацией эффектов (effects coding, sum-to-zero parameterization)</strong>. Отдельная интересность здесь в том, как считается интерсепт для третьей группы <code>Gr₃</code> — он оказывает равен <span class="math inline">\(b_0 - b_1 - b_2\)</span>. Это связано с таблицей кодировки, использующейся в данном способе подбора коэффициентов:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">Группа</th>
@@ -675,7 +675,7 @@ I_{\text{Gr}_2} = 0 \wedge I_{\text{Gr}_3} = 1 &amp;: \hat y_i = b_0 + b_2 &amp;
 <p>где <span class="math inline">\(n\)</span> — общее количество наблюдений, <span class="math inline">\(n_j\)</span> — количество наблюдений в конкретной <span class="math inline">\(j\)</span>-ой группе, <span class="math inline">\(k\)</span> — количество групп.</p>
 <p>Окей, с самой структурой изменчивости разобрались. Теперь вернемся к двум ситуациям, которые мы хотели описать:</p>
 <ol type="1">
-<li>связь межде предиктором и целевой переменной есть:</li>
+<li>связь между предиктором и целевой переменной есть:</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
@@ -737,11 +737,11 @@ F = \frac{\text{MS}_X}{\text{MS}_e} \overset{H_0}{\thicksim} F(\text{df}_{\text{
 <p>Когда мы обсуждали тестирование статистических гипотез, мы также упоминали о размере эффекта — метрики, которая позволяет оценить силу связи между переменными. В случае корреляционного анализа нам повезло, и сам коэффициент корреляции был размером эффекта для себя же. В случае линейной регрессии мы вроде бы не говорили о размере эффекта, однако если мы внимательно всмотримся в <span class="math inline">\(R^2\)</span>, то осознаем, что он и является метрикой, позволяющей говорить о силе связи между переменными — в случае множественной линейной регрессии о силе связи между целевой переменной и несколькими предикторами сразу.</p>
 <p>Для дисперсионного анализа также необходима специальная метрика. Она придумана и называется <span class="math inline">\(\eta^2\)</span>. Она считается следующим образом:</p>
 <p><span class="math display">\[
-\eta^2 = \frac{\text{ESS}}{\text{TSS}} = \frac{\text{SS}_X}{\text{SS}_e}
+\eta^2 = \frac{\text{ESS}}{\text{TSS}} = \frac{\text{SS}_X}{\text{SS}_t}
 \]</span></p>
 <p>Из формулы видно, что <strong>размер эффекта — это доля объясненной фактором дисперсии от всей дисперсии данных</strong>, что в общем-то весьма логично.</p>
 <p>Для интерпретации значения размера эффекта предлагаются следующие пороговые значения:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">Значение <span class="math inline">\(\eta^2\)</span></th>
@@ -766,7 +766,7 @@ F = \frac{\text{MS}_X}{\text{MS}_e} \overset{H_0}{\thicksim} F(\text{df}_{\text{
 </section>
 <section id="попарные-сравнения" class="level3" data-number="9.2.4">
 <h3 data-number="9.2.4" class="anchored" data-anchor-id="попарные-сравнения"><span class="header-section-number">9.2.4</span> Попарные сравнения</h3>
-<p>Статистически значимый результат дисперсионного анализа приводит нас к интересному выводу: хотя бы двумя групами есть различия — но между какими? Ответа на этот вопрос дисперсионный анализ не дает, а знать ответ критически хочется. Отсюда возникаются попарные сравнения.</p>
+<p>Статистически значимый результат дисперсионного анализа приводит нас к интересному выводу: хотя бы двумя группами есть различия — но между какими? Ответа на этот вопрос дисперсионный анализ не дает, а знать ответ критически хочется. Отсюда возникают попарные сравнения.</p>
 <p>Задача попарных сравнений, которую можно нехитро вывести из их названия — сравнить попарно все группы наблюдений друг с другом и выяснить, есть ли между ними различия. F-статистика для этой задачи уже не подходит, поэтому берется <strong>t-статистика</strong>.</p>
 <p>Мы уже видели так называемый <em>одновыборочный t-тест</em> в корреляционном анализе (при тестировании статистической значимости коэффициента корреляции) и регрессии (при тестировании статистической значимости коэффициента регрессионной модели). Однако t-тест позволяет сравнить и две выборки друг с другом. Формула его расчета несколько изменится, но общая логика останется той же — в числителе стоят сравниваемые средние, а в знаменателе расположена их стандартная ошибка:</p>
 <p><span class="math display">\[
@@ -843,7 +843,7 @@ F = t^2
 </section>
 <section id="многофакторный-дисперсионный-анализ" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="многофакторный-дисперсионный-анализ"><span class="header-section-number">9.4</span> Многофакторный дисперсионный анализ</h2>
-<p>Подойдем к изучению моделей с несколькими категориальными предикторами с графической стороны. Посколько в случае нескольких факторов картинка может значительно усложнится, не будет визуализировать отдельные наблюдения, как мы делали выше, а воспользуемся изображением средних с доверительными интервалами. Для начала посмотрим, как такие графики будут выглядеть в случае с одним предиктором (фактором).</p>
+<p>Подойдем к изучению моделей с несколькими категориальными предикторами с графической стороны. Поскольку в случае нескольких факторов картинка может значительно усложнится, не будет визуализировать отдельные наблюдения, как мы делали выше, а воспользуемся изображением средних с доверительными интервалами. Для начала посмотрим, как такие графики будут выглядеть в случае с одним предиктором (фактором).</p>
 <p>Для случая, когда связь есть, мы имеем что-то такое:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -953,7 +953,7 @@ F = t^2
 <section id="повторные-измерения" class="level3" data-number="9.5.1">
 <h3 data-number="9.5.1" class="anchored" data-anchor-id="повторные-измерения"><span class="header-section-number">9.5.1</span> Повторные измерения</h3>
 <p>Отдельно оговорим ситуацию, когда у нас возникают внутригрупповые эффекты. В этом случае, напомним, каждый респондент проходит все условия эксперимента, в результате чего наблюдения оказываются связанными друг с другом — то есть нарушается допущение о независимости наблюдений. В силу этого нам нужна модификация исходной модели — <strong>дисперсионный анализ с повторными измерениями (repeated measures ANOVA, rm ANOVA)</strong>. У этой модифицированной модели есть ещё одно допущение/требование к данным — сферичность.</p>
-<p><strong>Сферичность (sphericity)</strong> — это допущение, согласно которому дисперсии разностей между всеми парами уровней фактора равны. Нарушение допущение о сферичности — то есть отсутствие равенства дисперсий между парами уровней фактора — является серьезной проблемой для ANOVA, так как при этом тест становится слишком либеральным, то есть увеличение вероятность ошибки I рода.</p>
+<p><strong>Сферичность (sphericity)</strong> — это допущение, согласно которому дисперсии разностей между всеми парами уровней фактора равны. Нарушение допущения о сферичности — то есть отсутствие равенства дисперсий между парами уровней фактора — является серьезной проблемой для ANOVA, так как при этом тест становится слишком либеральным, то есть увеличению вероятность ошибки I рода.</p>
 <p>К нашему счастью, если есть нарушение сферичности данных, то машина сама нам об этом сообщит, а также применит необходимые поправки, чтобы избежать рост вероятности ошибки I рода.</p>
 </section>
 <section id="типы-сумм-квадратов" class="level3" data-number="9.5.2">
@@ -979,7 +979,7 @@ F = t^2
 </section>
 <section id="контрасты" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="контрасты"><span class="header-section-number">9.6</span> Контрасты</h2>
-<p>Иногда может случиться довольно экзотичная ситуация: даже при наличии нескольких групп наблюдений нас могут интересовать не все различия, а вполне определенные — то есть нам не нужно сравнивать все группы со всеми, а необходимо сравить, скажем, одну группу со всеми остальными сразу. Например, у нас ситуация исследования в области образования. Мы хотим понять, как сказывается на качестве образования комбинация разных форматов обучения. Пусть целевой переменной будет итоговый балл студента по курсу. Есть три академические группы студентов: в одной освоение теоретической части курса происходит в формате лекций (<span class="math inline">\(\text{L}\)</span>), во второй — в формате групповой дискуссии (<span class="math inline">\(\text{G}\)</span>), в третьей реализован комбинированный формат (и лекции, и групповая дискуссия — <span class="math inline">\(\text{C}\)</span>). Сделать настоящую контрольную группу здесь не получается, поскольку нет какого-то нейтрального формата освоения теоретическая части, да и исключить полностью теоретическую часть из курса тоже как-то программа не очень позволяет.</p>
+<p>Иногда может случиться довольно экзотичная ситуация: даже при наличии нескольких групп наблюдений нас могут интересовать не все различия, а вполне определенные — то есть нам не нужно сравнивать все группы со всеми, а необходимо сравнить, скажем, одну группу со всеми остальными сразу. Например, у нас ситуация исследования в области образования. Мы хотим понять, как сказывается на качестве образования комбинация разных форматов обучения. Пусть целевой переменной будет итоговый балл студента по курсу. Есть три академические группы студентов: в одной освоение теоретической части курса происходит в формате лекций (<span class="math inline">\(\text{L}\)</span>), во второй — в формате групповой дискуссии (<span class="math inline">\(\text{G}\)</span>), в третьей реализован комбинированный формат (и лекции, и групповая дискуссия — <span class="math inline">\(\text{C}\)</span>). Сделать настоящую контрольную группу здесь не получается, поскольку нет какого-то нейтрального формата освоения теоретическая части, да и исключить полностью теоретическую часть из курса тоже как-то программа не очень позволяет.</p>
 <p>При такой постановке задачи нас не интересуют различия между группами <span class="math inline">\(\text{L}\)</span> и <span class="math inline">\(\text{G}\)</span>. Наверное, они будут различаться, но нам эта разница совершенно не важна, так как для нас обе эти группы выступают как контрольные. Интересует же нас различие между группами <span class="math inline">\(\text{C}\)</span> и <span class="math inline">\(\text{L+G}\)</span>.</p>
 <p>Мы можем, безусловно, подойти к решению этой задачи так, как предполагает дисперсионный анализ — изучить структуру изменчивости данных. Однако мы понимаем, что просто взять и соединить две группы <span class="math inline">\(\text{L}\)</span> и <span class="math inline">\(\text{G}\)</span> было бы не очень правомерно — все жё (1) могут различаться их средние, (2) хотелось бы учесть «истинную» (с учетом разделения на эти группы) случайную изменчивость. Для этого существуют <strong>контрасты</strong>.</p>
 <p>Логика статистического теста остается похожей. У нас есть статистические гипотезы — в данном случае такие:</p>
@@ -1033,7 +1033,7 @@ F = \frac{\text{MS}_\text{cont}}{\text{MS}_e},
 &amp; = n_\text{C} \cdot (\bar y - \bar y_\text{C})^2 + n_\text{G} \cdot (\bar y - \bar y_\text{G})^2
 \end{split}
 \]</span></p>
-<p>Поскольку в случае контрастов мы делаем конкретные сравнения либо группами наблюдений, делать попарные сравнения нам не нужно — результаты контрастов уже показывают интересующие нас различия.</p>
+<p>Поскольку в случае контрастов мы делаем конкретные сравнения каких-либо групп наблюдений, делать попарные сравнения нам не нужно — результаты контрастов уже показывают интересующие нас различия.</p>
 </section>
 <section id="ковариационный-анализ" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="ковариационный-анализ"><span class="header-section-number">9.7</span> Ковариационный анализ</h2>
@@ -1228,18 +1228,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1271,7 +1260,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1279,7 +1288,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1376,7 +1385,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
