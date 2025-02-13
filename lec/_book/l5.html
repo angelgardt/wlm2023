@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 5&nbsp; L5 // Введение в статистику. Случайный эксперимент и случайные величины</title>
+<title>5&nbsp; L5 // Введение в статистику. Случайный эксперимент и случайные величины – L // WLM 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3f14476484311c28f16e4ef7388d5d41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-317518b595e9c4efdce348cd04e6c053.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -125,7 +125,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -152,18 +152,18 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">L5 // Введение в статистику. Случайный эксперимент и случайные величины</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -193,7 +193,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время. Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -350,7 +350,7 @@ window.Quarto = {
 <!--- Stats --->
 <section id="введение-в-математическую-статистику" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="введение-в-математическую-статистику"><span class="header-section-number">5.1</span> Введение в математическую статистику</h2>
-<p><strong>Статистика</strong> — это междисциплинарная область знаний, а также практической деятельности, изучающая массовые явления, а также прицнипи и методы работы с данными, характеризующими эти явления.</p>
+<p><strong>Статистика</strong> — это междисциплинарная область знаний, а также практической деятельности, изучающая массовые явления, а также приципы и методы работы с данными, характеризующими эти явления.</p>
 <p>Массовые явления затрагивают огромные массы людей. Огромность масс, конечно, различна. Скажем, базовые перцептивные закономерности, связанные с тем, как устроена зрительная система, охватывают <em>всех людей</em>. Уровень удовлетворенности жизнью россиян охватывает только <em>население России</em>. Городские блага москвичей — только для <em>жителей Москвы</em>. Учебная мотивация студентов департамента психологии НИУ ВШЭ — это только про <em>людей с психологических бакалариата и магистратур НИУ ВШЭ</em>.</p>
 <section id="генеральная-совокупность" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="генеральная-совокупность"><span class="header-section-number">5.1.1</span> Генеральная совокупность</h3>
@@ -394,7 +394,7 @@ window.Quarto = {
 <p>Таким образом, закон больших чисел гарантирует устойчивость для средних значений некоторых случайных событий при достаточно длинной серии экспериментов.</p>
 <p><strong>Центральная предельная теорема</strong></p>
 <blockquote class="blockquote">
-<p>Распределение случайной величины, которая получена в результате сложения большого числа независимых случайных величин (ни одно из которых не доминирует, не вносит в сумму определяющего вклада и имеет дисперсию значительно меньше по сравнению с дисперсией суммы) имеет распределение, близкое к нормальному.</p>
+<p>Распределение случайной величины, которая получена в результате сложения большого числа независимых случайных величин (ни одна из которых не доминирует, не вносит в сумму определяющего вклада и имеет дисперсию значительно меньше по сравнению с дисперсией суммы) имеет распределение, близкое к нормальному.</p>
 </blockquote>
 <p>Из ЦПТ следует, что ошибки выборки также подчиняются нормальному распределению.</p>
 <hr>
@@ -405,7 +405,7 @@ window.Quarto = {
 <section id="способы-формирования-репрезентативной-выборки" class="level4" data-number="5.1.2.3">
 <h4 data-number="5.1.2.3" class="anchored" data-anchor-id="способы-формирования-репрезентативной-выборки"><span class="header-section-number">5.1.2.3</span> Способы формирования репрезентативной выборки</h4>
 <blockquote class="blockquote">
-<p>Здесь представлены три классических способа формирования выборки. В конкретном исследовании мы можем использовать и какие-либо другие способы формирования выборки, однако нам нужно будет обосновать, почему с нашем случае тот или иной способ позволяет собрать репрезентативную выборку.</p>
+<p>Здесь представлены три классических способа формирования выборки. В конкретном исследовании мы можем использовать и какие-либо другие способы формирования выборки, однако нам нужно будет обосновать, почему в нашем случае тот или иной способ позволяет собрать репрезентативную выборку.</p>
 </blockquote>
 <section id="простая-случайная-выборка-simple-random-sample" class="level5" data-number="5.1.2.3.1">
 <h5 data-number="5.1.2.3.1" class="anchored" data-anchor-id="простая-случайная-выборка-simple-random-sample"><span class="header-section-number">5.1.2.3.1</span> Простая случайная выборка (simple random sample)</h5>
@@ -499,7 +499,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Теперь из этих кластеров наберем выборку (допустим, по 20 наблюдений из кластера) случайным образом (объекты, попавшие в итоговую выборку отмечены черным контуром, не попавшие — серым):</p>
+<p>Теперь из этих кластеров наберем выборку (допустим, по 20 наблюдений из кластера или пропорционально объему отобранных кластеров) случайным образом (объекты, попавшие в итоговую выборку отмечены черным контуром, не попавшие — серым):</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -519,7 +519,7 @@ window.Quarto = {
 <section id="характетистики-объектов-выборки-и-генеральной-совокупности" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="характетистики-объектов-выборки-и-генеральной-совокупности"><span class="header-section-number">5.1.3</span> Характетистики объектов выборки и генеральной совокупности</h3>
 <p>Объекты генеральной совокупности обладают определенными <strong>признаками</strong>, которые мы и хотели бы изучать. Признаки <em>количественно выражены</em> в определенных <strong>показателях</strong>. Например,</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -657,7 +657,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6\}
 \]</span></p>
-<p>В общем случае, когда возможны <span class="math inline">\(n\)</span> случайный исходов случайного эксперимента, пространство элементарных событий будет выглядеть так:</p>
+<p>В общем случае, когда возможны <span class="math inline">\(n\)</span> случайных исходов случайного эксперимента, пространство элементарных событий будет выглядеть так:</p>
 <p><span class="math display">\[
 \Omega = \{\omega_1, \omega_2, \dots, \omega_{n-1}, \omega_n\}
 \]</span></p>
@@ -781,7 +781,7 @@ window.Quarto = {
 <p>Такое подход к определению вероятности называется <strong>геометрической вероятностью</strong>.</p>
 <p>Отметим, что плоский случай можно обобщить и до объемного. В случае куба и шара вероятность будет равна</p>
 <p><span class="math display">\[
-\mathbb{P}(A) = \frac{V_\text{circle}}{V_\text{square}} = \frac{\frac{4}{3}\pi r^3}{a^3} = \frac{1}{6} \pi \approx 0.523
+\mathbb{P}(A) = \frac{V_\text{sphere}}{V_\text{cube}} = \frac{\frac{4}{3}\pi r^3}{a^3} = \frac{1}{6} \pi \approx 0.523
 \]</span></p>
 <!---
 #### Условная вероятность
@@ -798,9 +798,9 @@ window.Quarto = {
 </section>
 <section id="случайные-величины" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="случайные-величины"><span class="header-section-number">5.3</span> Случайные величины</h2>
-<p>Когда мы первый раз обратились к игральному кубику,мы сказали, что бросание игрального кубика — это <em>случайный эксперимент</em>, а выпавшее число — это <em>случайная величина</em>. Со случайным экспериментом разобрались, приступим к случайным величинам.</p>
+<p>Когда мы первый раз обратились к игральному кубику, мы сказали, что бросание игрального кубика — это <em>случайный эксперимент</em>, а выпавшее число — это <em>случайная величина</em>. Со случайным экспериментом разобрались, приступим к случайным величинам.</p>
 <p><strong>Случайная величина</strong> — это некоторая переменная, значения которой представляют собой численные исходы некоторого случайного эксперимента.</p>
-<p>В частности, исход бросания кубика — выпавшее число, исход фиксации времени реакции в эксперименте — количество миллисекунд (число), исход измерения псиометрического конструкта — суммарный балл по опроснику (число) и т.д.</p>
+<p>В частности, исход бросания кубика — выпавшее число, исход фиксации времени реакции в эксперименте — количество миллисекунд (число), исход измерения психометрического конструкта — суммарный балл по опроснику (число) и т.д.</p>
 <p>Сами исходы случайного эксперимента числами быть в общем случае не обязаны, поэтому формально случайную величину <span class="math inline">\(\xi\)</span> определяют как функцию <span class="math inline">\(y = \xi(\omega)\)</span>, или <span class="math inline">\(\xi: \Omega \rightarrow \mathbb{R}\)</span>, на вероятностном пространстве <span class="math inline">\((\Omega, \mathcal A, \mathbb{P})\)</span>, которая сопоставляет исходам случайного эксперимента некоторые числа.</p>
 <p>Поскольку случайная величина это численное выражения исходов случайного эксперимента, а сами исходы осуществляются с определенными вероятностями, чтобы мочь работать со случайной величиной, необходимо <em>задать</em> эту самую случайную величину, то есть <em>описать её вероятностные свойства</em>. Эти мы далее и займемся.</p>
 <p>В зависимости от того, какое пространство элементарных событий было в случайном эксперименте — дискретное или непрерывное — случайные величины также могут быть дискретными или непрерывными.</p>
@@ -901,7 +901,7 @@ F(x) = \sum_{x' \leq x} f(x')
 </div>
 </div>
 <p>По оси <span class="math inline">\(x\)</span> у нас идут значения случайной величины — от 0 до 1. За этими пределами чисел мы не набираем, поэтому линия туда не продолжается. Внутри этого отрезка у нас прямая линия, которая выражает идею равновероятного выбора любой точки из отрезка. Вопрос только один: <strong>что по оси <span class="math inline">\(y\)</span>???</strong></p>
-<p>Чтобы это понять, дайате сравним два графика ниже:</p>
+<p>Чтобы это понять, давайте сравним два графика ниже:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -926,7 +926,7 @@ F(x) = \sum_{x' \leq x} f(x')
 <p>Действительно, такой способ отображения вероятности согласуется с тем, что вы получили аналитически — если мы сократим <span class="math inline">\(\Delta x\)</span> до нуля, то и площадь сократится до нуля, что будет означать нулевую вероятность принятия случайной величиной своего конкретного значения.</p>
 <p>Хорошо, мы нашли вероятность. Но что же отображено на оси <span class="math inline">\(y\)</span>? Это и есть та самая <em>плотность вероятности</em>.</p>
 <p>Формально <strong>плотность вероятности</strong> случайной величины <span class="math inline">\(\xi\)</span> — это числовая фукнция <span class="math inline">\(f(x)\)</span>, отношение <span class="math inline">\(\dfrac{f(x_1)}{f(x_2)}\)</span> значений которой в точках <span class="math inline">\(x_1\)</span> и <span class="math inline">\(x_2\)</span> задаёт отношение вероятностей попадания случайной величины <span class="math inline">\(\xi\)</span> в интервалы <span class="math inline">\([x_1, x_1 + \Delta x]\)</span> и <span class="math inline">\([x_2, x_2 + \Delta x]\)</span> при <span class="math inline">\(\Delta x \rightarrow 0\)</span>. Получается, что эта функция действительно отражает то, что определенные значения встречаются чаще, чем другие. График, который мы рассматривали выше, называется графиком <strong>функции плотности вероятности (probability density function, PDF)</strong>.</p>
-<p>Таким образом, введение концепта плотности вероятности для непрерывных случайных величин позволяет визуально изучать их аналогично дискретным случайным величинам. Отличия проявляются в аналитической работе с вероятностью. Поскольку вероятность того, что непрерывная случайная величина примет своё конктреное значение, равняется нулю, мы не можем работать с вероятностями отдельных значений. Однако можем работать с вероятностями интервалов значений непрерывной случайной величины. То есть, вероятность попадания значения случайной величины в интервал <span class="math inline">\([a, b]\)</span> определяется как интеграл функции плоности вероятности:</p>
+<p>Таким образом, введение концепта плотности вероятности для непрерывных случайных величин позволяет визуально изучать их аналогично дискретным случайным величинам. Отличия проявляются в аналитической работе с вероятностью. Поскольку вероятность того, что непрерывная случайная величина примет своё конкретное значение, равняется нулю, мы не можем работать с вероятностями отдельных значений. Однако можем работать с вероятностями интервалов значений непрерывной случайной величины. То есть, вероятность попадания значения случайной величины в интервал <span class="math inline">\([a, b]\)</span> определяется как интеграл функции плотности вероятности:</p>
 <p><span class="math display">\[
 \mathbb{P}(a \leq X \leq b) = \int_a^b f(x) dx
 \]</span></p>
@@ -964,7 +964,7 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\tfrac{(x - \mu)^2}{2\sigma^2}},
 </div>
 </div>
 </div>
-<p>Математическое ожидание <code>\mu</code> задает положение середины «колокола» на оси <span class="math inline">\(x\)</span>, а дисперсия <span class="math inline">\(\sigma^2\)</span> — ширину колокола.</p>
+<p>Математическое ожидание <span class="math inline">\(\mu\)</span> задает положение середины «колокола» на оси <span class="math inline">\(x\)</span>, а дисперсия <span class="math inline">\(\sigma^2\)</span> — ширину колокола.</p>
 <p>Помимо математического ожидания и дисперсии, нормальное распределение характеризуется также коэффициентом асимметрии и коэффициентом эксцесса. Первый показывает, насколько симметрично распределение относительно математического ожидания, а второй — насколько оно сжато по бокам или, наоборот, растянуто вдоль оси <span class="math inline">\(x\)</span>.</p>
 <ul>
 <li>Поскольку любое нормальное распределение симметрично относительно математического ожидания, то коэффициент асимметрии любого нормального распределения равен нулю.</li>
@@ -1190,18 +1190,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1233,7 +1222,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1241,7 +1250,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1338,7 +1347,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
