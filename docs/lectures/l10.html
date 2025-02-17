@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 10&nbsp; L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</title>
+<title>10&nbsp; L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия – L // WLM 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3f14476484311c28f16e4ef7388d5d41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-317518b595e9c4efdce348cd04e6c053.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -125,7 +125,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -152,18 +152,18 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">L10 // Обобщенные линейные модели. Логистическая регрессия. Пуассоновская регрессия</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -193,7 +193,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время. Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -351,7 +351,7 @@ window.Quarto = {
 <!--- Stats --->
 <section id="ограничения-общих-линейных-моделей" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="ограничения-общих-линейных-моделей"><span class="header-section-number">10.1</span> Ограничения общих линейных моделей</h2>
-<p>Модели, которые мы изучали на предыдущих занятиях носят название <strong>общих линейных моделей (general linear models)</strong>. Они достаточно просты и удобны в большинстве случаев, однако имеют существенное ограничений.</p>
+<p>Модели, которые мы изучали на предыдущих занятиях носят название <strong>общих линейных моделей (general linear models)</strong>. Они достаточно просты и удобны в большинстве случаев, однако имеют существенное ограничение.</p>
 <p>Вспомним, как выглядит уравнение такой модели:</p>
 <p><span class="math display">\[
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_p x_p + \varepsilon
@@ -368,12 +368,12 @@ y \thicksim \mathcal{N}(\mu, \sigma^2)
 </section>
 <section id="идея-обобщенных-линейных-моделей" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="идея-обобщенных-линейных-моделей"><span class="header-section-number">10.2</span> Идея обобщенных линейных моделей</h2>
-<p>Тем не менее, мы из своего опыта знаем, что существует много величин, распределение которых отличается от нормального. И дело даже не столько в асимметрии или эксцессе — здесь разговор о самой природе величин. Так, например, есть величина «поступление в вуз», у которой только два возможных значения — «поступил» и «не поступил». Или же, скажем, количество детей в семьей, варьирующееся в небольших пределах и принимающее только положительные целочисленые значения.</p>
-<p>Нам хочется моделировать связь таких величин с предикторами так же, как мы делали в случае общих линейных моделей, или хотя бы в той же логике, которая нам хороша знакома из линейной регрессии. Для того, чтобы этого достичь, в модель вводится новый компонент — <strong>функция связи (link function)</strong>.</p>
+<p>Тем не менее, мы из своего опыта знаем, что существует много величин, распределение которых отличается от&nbsp;нормального. И дело даже не столько в асимметрии или эксцессе — здесь разговор о самой природе величин. Так, например, есть величина «поступление в вуз», у которой только два возможных значения — «поступил» и «не поступил». Или же, скажем, количество детей в семьей, варьирующееся в небольших пределах и принимающее только положительные целочисленные значения.</p>
+<p>Нам хочется моделировать связи таких величин с&nbsp;предикторами так же, как мы делали в случае общих линейных моделей, или хотя бы в той же логике, которая нам хороша знакома из линейной регрессии. Для того, чтобы этого достичь, в модель вводится новый компонент — <strong>функция связи (link function)</strong>.</p>
 <ul>
 <li>Пусть у нас есть некоторая переменная <span class="math inline">\(y\)</span>, которая подчиняется какому-то закону распределения <span class="math inline">\(f(y|\theta)\)</span>, где <span class="math inline">\(\theta\)</span> — параметр(ы) распределения, и этот закон отличается от нормального.</li>
 <li>Мы всё так же хотим моделировать «среднее» значение, а точнее, <em>математическое ожидание</em>, переменной <span class="math inline">\(\mathbb{E}(y)\)</span>.</li>
-<li>Давайте возьмем некоторое преобразование (функцию) <span class="math inline">\(g \big( \mathbb{E}(y) \big) = \eta\)</span>, которое будет преобразовывать математическое ожидание нашей целевой переменной, <em>линеаризуя его</em>. Она и будет называться <strong>функцией связи</strong>.</li>
+<li>Давайте возьмем некоторое преобразование (функцию) <span class="math inline">\(g \big( \mathbb{E}(y) \big) = \eta\)</span>, которое будет преобразовывать математическое ожидание нашей целевой переменной, <em>линеаризуя его</em>. Такое преобразование и будет называться <strong>функцией связи</strong>.</li>
 <li>Теперь у нас есть линейная величина <span class="math inline">\(\eta\)</span>, которую можно моделировать с помощью уже хорошо знакомой нам модели:</li>
 </ul>
 <p><span class="math display">\[
@@ -390,14 +390,14 @@ g \big( \mathbb{E}(y_i) \big) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dot
 <p><span class="math display">\[
 g \big( \mathbb{E}(y_i) \big) = \mu_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \varepsilon_i
 \]</span></p>
-<p>То есть мы получили обычную хорошо нам знакомую линейную регрессию. В этом смысле <em>обобщенные</em> линейные модели действительно <em>обобщают</em> случай обычной линейной регрессии на другие случай распределения целевой переменной.</p>
+<p>То есть мы получили обычную хорошо нам знакомую линейную регрессию. В этом смысле <em>обобщенные</em> линейные модели действительно <em>обобщают</em> случай обычной линейной регрессии на другие распределения целевой переменной.</p>
 </section>
 <section id="биноминальная-регрессия" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="биноминальная-регрессия"><span class="header-section-number">10.3</span> Биноминальная регрессия</h2>
 <p>Рассмотрение фреймворка обобщенных линейных моделей мы начнем с биномиальной, или логистической, регрессии, которая позволяет моделировать бинарные переменные.</p>
 <section id="бинарные-переменные-и-биномиальное-распределение" class="level3" data-number="10.3.1">
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="бинарные-переменные-и-биномиальное-распределение"><span class="header-section-number">10.3.1</span> Бинарные переменные и биномиальное распределение</h3>
-<p>Бинарными называются переменные, которые могут принимать только два значения — вообще, любых, но так как нам нужнв такие обозначения, которые сможет переварить математика, используем <span class="math inline">\(0\)</span> и <span class="math inline">\(1\)</span>. Для нас это будут просто лейблы классов, так как мы, заменив обозначения, остались в рамках номинальной шкалы.</p>
+<p>Бинарными называются переменные, которые могут принимать только два значения — вообще, любых, но так как нам нужны такие обозначения, которые сможет переварить математика, используем <span class="math inline">\(0\)</span> и <span class="math inline">\(1\)</span>. Для нас это будут просто лейблы классов, так как мы, заменив обозначения, остались в рамках номинальной шкалы.</p>
 <p>В теме про случайные величины мы вычисляли вероятность случайного прохождения теста из <span class="math inline">\(n\)</span> вопросов, каждый из которых мог быть решен правильно («успех», <span class="math inline">\(1\)</span>) или неправильно («неудача», <span class="math inline">\(0\)</span>), и описывали вероятность получить <span class="math inline">\(k\)</span> «успехов» в <span class="math inline">\(n\)</span> испытаниях как</p>
 <p><span class="math display">\[
 \mathbb{P}(X = k) = C_n^k \, p^k \, q^{n-k}
@@ -435,16 +435,16 @@ g \big( \mathbb{E}(y_i) \big) = \mu_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2
 <img src="pics/bin_prob_line.jpg" class="figure-img">
 </figure>
 </center>
-<p>Переменная, которую мы получили, определяет <em>вероятность</em>, а значит она ограничена — <span class="math inline">\(0 \leq \mathbb{P}(Y=1|x_i) \leq 1\)</span>. К тому же, чисто визуально заметно, что эта вероятность изменяется нелинейной, а по некоторой кривой — примерно так:</p>
+<p>Переменная, которую мы получили, определяет <em>вероятность</em>, а значит она ограничена — <span class="math inline">\(0 \leq \mathbb{P}(Y=1|x_i) \leq 1\)</span>. К тому же, чисто визуально заметно, что эта вероятность изменяется нелинейно, а по некоторой кривой — примерно так:</p>
 <center>
 <figure class="figure">
 <img src="pics/bin_prob_curve.jpg" class="figure-img">
 </figure>
 </center>
-<p>Супер… Теперь еще и искать кривую…</p>
+<p>Супер… Теперь еще и кривую искать…</p>
 <section id="логистическая-кривая" class="level4" data-number="10.3.2.1">
 <h4 data-number="10.3.2.1" class="anchored" data-anchor-id="логистическая-кривая"><span class="header-section-number">10.3.2.1</span> Логистическая кривая</h4>
-<p>К счаcтью, математики поработали за нас, и сообщили нам, что такая закономерность хорошо моделируется <strong>логистической кривой (logistic curve)</strong> — отсюда второй название рассматриваемой нами модели (логистическая регрессия):</p>
+<p>К счастью, математики поработали за нас, и сообщили нам, что такая закономерность хорошо моделируется <strong>логистической кривой (logistic curve)</strong> — отсюда второе название рассматриваемой нами модели (логистическая регрессия):</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -472,11 +472,11 @@ y = \frac{e^x}{1 + e^x}
 </section>
 <section id="шансы-и-логиты" class="level4" data-number="10.3.2.2">
 <h4 data-number="10.3.2.2" class="anchored" data-anchor-id="шансы-и-логиты"><span class="header-section-number">10.3.2.2</span> Шансы и логиты</h4>
-<p>Мы победили дискретность целевой переменной <span class="math inline">\(y\)</span> и подобрали кривую, которая хорошо моделирует зависимость искомой вероятности от значений предиктора. Однако кривая всё ещё ограничена нулем и единицей, а значит смоделировать её м помощью линейной регрессии не получится.</p>
+<p>Мы победили дискретность целевой переменной <span class="math inline">\(y\)</span> и подобрали кривую, которая хорошо моделирует зависимость искомой вероятности от значений предиктора. Однако кривая всё ещё ограничена нулем и единицей, а значит смоделировать её с помощью линейной регрессии не получится.</p>
 <p>Для того, чтобы победить ограниченность логистической кривой, используются шансы.</p>
-<p><strong>Шанс (отношение шансов, odds, odds ratio)</strong> — это отношение вреоятности «успеха» (<span class="math inline">\(1\)</span>) к вероятности «неудачи» (<span class="math inline">\(0\)</span>). Эта величина хороша тем, что изменяется от <span class="math inline">\(0\)</span> до <span class="math inline">\(+\infty\)</span>. Получается,</p>
+<p><strong>Шанс (отношение шансов, odds, odds ratio)</strong> — это отношение вероятности «успеха» (<span class="math inline">\(1\)</span>) к&nbsp;вероятности «неудачи» (<span class="math inline">\(0\)</span>). Эта величина хороша тем, что изменяется от <span class="math inline">\(0\)</span> до <span class="math inline">\(+\infty\)</span>. Получается,</p>
 <p><span class="math display">\[
-\text{odds}_i = \frac{\mathbb{P}(Y=1|x_i)}{1 - \mathbb{P}(Y=1|x_i)} = \frac{p_i}{1 - p_i}
+\text{odds}_i = \frac{\mathbb{P}(Y=1|x_i)}{1 - \mathbb{P}(Y=1|x_i)} = \frac{p_i}{1 - p_i} \in [0, +\infty]
 \]</span></p>
 <p>Отлично, мы побороли ограниченность логистической кривой сверху — движемся к успеху.</p>
 </section>
@@ -484,14 +484,14 @@ y = \frac{e^x}{1 + e^x}
 <h4 data-number="10.3.2.3" class="anchored" data-anchor-id="logit-преобразование"><span class="header-section-number">10.3.2.3</span> Logit-преобразование</h4>
 <p>Для того, чтобы победить ограниченность кривой снизу, возьмем логарифм от шанса. Получим следующее:</p>
 <p><span class="math display">\[
-\text{logit}(p_i) = \ln \left(\frac{p_i}{1 - p_i} \right)
+\text{logit}(p_i) = \ln \left(\frac{p_i}{1 - p_i} \right)\in (-\infty, +\infty)
 \]</span></p>
-<p>Такое преобразование вероятности разывается логит-преобразованием (logit-transformation). Значения логитов варьируются от <span class="math inline">\(-\infty\)</span> до <span class="math inline">\(+\infty\)</span>, симметричны относительно нуля, и их удобно брать в каечестве целевой переменной для построения линейной модели. Кроме того, логит-преобразование еще и <em>линеаризует логистическую кривую</em>! Очень хорошее преобразование! Просто замечательное.</p>
+<p>Такое преобразование вероятности называется логит-преобразованием (logit-transformation). Значения логитов варьируются от <span class="math inline">\(-\infty\)</span> до <span class="math inline">\(+\infty\)</span>, симметричны относительно нуля, и их удобно брать в качестве целевой переменной для построения линейной модели. Кроме того, логит-преобразование еще и <em>линеаризует логистическую кривую</em>! Очень хорошее преобразование! Просто замечательное.</p>
 <details>
 <summary>
 Линеаризация логистической кривой через logit-преобразование
 </summary>
-<p>Возьмем случай в одним предиктором, чтобы было попроще. Логистическая кривая, моделирующая вероятность, имеет такой вид:</p>
+<p>Возьмем случай с одним предиктором, чтобы было попроще. Логистическая кривая, моделирующая вероятность, имеет такой вид:</p>
 <p><span class="math display">\[
 p_i = \frac{e^{\beta_0 + \beta_1 x_{i1}}}
 {1 + e^{\beta_0 + \beta_1 x_{i1}}}
@@ -561,7 +561,7 @@ p_i = \frac{e^{\eta_i}}{1 + e^{\eta_i}}
 <p>Все эти модификации модели приводят к тому, что задача индентификации модели логистической регрессии — то есть вычисления значений коэффициентов модели — <strong>не имеет аналитического решения</strong>. То есть мы не можем вычислить коэффциент просто имея значения целевой переменной и предикторов. По этой причине используются численные методы для получения оценок коэффициентов.</p>
 <section id="метод-максимального-правдоподобия" class="level4" data-number="10.3.3.1">
 <h4 data-number="10.3.3.1" class="anchored" data-anchor-id="метод-максимального-правдоподобия"><span class="header-section-number">10.3.3.1</span> Метод максимального правдоподобия</h4>
-<p>В частности, метод <strong>максимального правдоподобия (maximuum likelihood)</strong>, который позволяет получить несмешенные и состоятельные и эффективные оценки коэффициентов.</p>
+<p>В частности, метод <strong>максимального правдоподобия (maximuum likelihood)</strong>, который позволяет получить несмещенные, состоятельные и эффективные оценки коэффициентов.</p>
 <p><strong>Правдоподобие (likelihood)</strong> — это способ измерить соответствие имеющихся данных тому, что можно получить при определенных значениях параметров модели.</p>
 <p>Вычисляется значение правдоподобия как произведение вероятностей получения каждой из точек данных:</p>
 <p><span class="math display">\[
@@ -675,7 +675,7 @@ d_\text{null} - d_\text{resid} &amp;= \\
 </section>
 <section id="проверка-на-сверхдисперсию" class="level4" data-number="10.3.4.5">
 <h4 data-number="10.3.4.5" class="anchored" data-anchor-id="проверка-на-сверхдисперсию"><span class="header-section-number">10.3.4.5</span> Проверка на сверхдисперсию</h4>
-<p>Новое допущение связано с тем, что для биномиального распределения характерна связт между математическим ожиданием и дисперсией — этого не было у нормального распределения. Для биномиального распределения:</p>
+<p>Новое допущение связано с тем, что для биномиального распределения характерна связь между математическим ожиданием и дисперсией — этого не было у нормального распределения. Для биномиального распределения:</p>
 <p><span class="math display">\[
 \begin{split}
 &amp; \mathbb{E}(X) = np \\
@@ -683,7 +683,7 @@ d_\text{null} - d_\text{resid} &amp;= \\
 \end{split}
 \]</span></p>
 <p>где <span class="math inline">\(n\)</span> — количество испытаний, <span class="math inline">\(p\)</span> — вероятность «успеха» в одном испытании.</p>
-<p>Если в модели обнаруживается свердисперсия, то мы на может гарантировать, что искомая закономерность смоделирована точно. В детали расчета и проверки гипотезы мы прогружать не будет, на практике воспользуемся специальной функцией для проверки этого допущения.</p>
+<p>Если в модели обнаруживается сверхдисперсия, то мы не можем гарантировать, что искомая закономерность смоделирована точно. В детали расчета и проверки гипотезы мы погружаться не будем, на практике воспользуемся специальной функцией для проверки этого допущения.</p>
 </section>
 </section>
 <section id="тестирование-значимости-предикторов" class="level3" data-number="10.3.5">
@@ -752,7 +752,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <section id="confusion-mattrix" class="level4" data-number="10.3.7.1">
 <h4 data-number="10.3.7.1" class="anchored" data-anchor-id="confusion-mattrix"><span class="header-section-number">10.3.7.1</span> Confusion mattrix</h4>
 <p>Когда мы перевели вероятности в нули и единицы, мы можем построить <strong>confusion matrix</strong> — — это таблица частот по модельным и реальным значениям нашей целевой переменной. Её общая структура выглядит так:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;"></th>
@@ -820,14 +820,14 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 </section>
 <section id="roc-auc" class="level4" data-number="10.3.7.2">
 <h4 data-number="10.3.7.2" class="anchored" data-anchor-id="roc-auc"><span class="header-section-number">10.3.7.2</span> ROC-AUC</h4>
-<p>Все описанные выше метрики качестве основывались на confusion matrix — их значения будут зависеть от выбранного порога при переводе непрерывных предсказаний в дискретные. А можно как-то без это зависимости?</p>
+<p>Все описанные выше метрики качестве основывались на confusion matrix — их значения будут зависеть от&nbsp;выбранного порога при&nbsp;переводе непрерывных предсказаний в&nbsp;дискретные. А можно как-то без этой зависимости?</p>
 <p>Можно. Напоследок ещё одна метрика качества модели. Однако логика её расчёта не такая простая.</p>
 <p>Чем хороша эта метрика? Тем, что она работает не с предсказанными значениями (0 и 1), а с предсказанными вероятностями. Таким образом, она избавляет нас от вмешательства <em>нас же</em> в предсказания, ведь когда мы выбираем порог, мы хотя и опираемся на какое-то содержательное основание, тем не менее, глобально выбираем его условно произвольно.</p>
 <p>Что рассчитать значение этой метрики нужно сделать следующее (разберём на некотором вымышленном примере):</p>
 <ol type="1">
 <li>Упорядочить объекты по убыванию значения предсказанной вероятности:</li>
 </ol>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">№ наблюдения</th>
@@ -880,7 +880,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <ol start="2" type="1">
 <li>Добавить столбец истинных значений (0 и 1)</li>
 </ol>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">№ наблюдения</th>
@@ -978,7 +978,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <img src="pics/auc4.jpg" class="figure-img">
 </figure>
 </center>
-<p>Каждая точка на этой кривой соответствует некоторому порогу вероятности отсечения объектов. Например, выделенная точка c координатами <span class="math inline">\((\frac{1}{6}), \frac{3}{4})\)</span> соответствует порогу вероятности <span class="math inline">\(0.6\)</span>. Это означает, что если при переходе к предсказаниями модели мы будем использовать порог <span class="math inline">\(0.6\)</span>, то доля True Positive, или True Positive Rate (TRP) окажется равной <span class="math inline">\(\frac{3}{4}\)</span>, а доля False Positive, или False Positive Rate (FPR) окажется равной <span class="math inline">\(\frac{1}{6}\)</span>.</p>
+<p>Каждая точка на этой кривой соответствует некоторому порогу вероятности отсечения объектов. Например, точка c координатами <span class="math inline">\((\frac{1}{6}, \frac{3}{4})\)</span> соответствует порогу вероятности <span class="math inline">\(0.6\)</span>. Это означает, что если при переходе к предсказаниями модели мы будем использовать порог <span class="math inline">\(0.6\)</span>, то доля True Positive, или True Positive Rate (TRP) окажется равной <span class="math inline">\(\frac{3}{4}\)</span>, а доля False Positive, или False Positive Rate (FPR) окажется равной <span class="math inline">\(\frac{1}{6}\)</span>.</p>
 <p>Построенная кривая называется <strong>ROC-кривой (receiver operating characteristic).</strong></p>
 <ol start="4" type="1">
 <li>Определяем площадь фигуры под ROC-кривой — это и будет <strong>значением метрики ROC-AUC</strong> (AUC — area under a curve).</li>
@@ -988,7 +988,7 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <img src="pics/auc5.jpg" class="figure-img">
 </figure>
 </center>
-<p>В случае идеального упорядочивания наблюдений по предсказанной вероятности площадь под кривой будет равна единице. Чем ближе значение ROC-AUC к единице, тем модель работает лучше. Значение <span class="math inline">\(0.5\)</span> указывает на то, что модель совсем не ухватывает закономерность и точность её предсказаний на уровне случайного угадывания — ROC-кривая в этом случае будет проходить близко к диагонали <span class="math inline">\([(0,0),(1,1)]\)</span>.</p>
+<p>В случае идеальной упорядоченности наблюдений по предсказанной вероятности площадь под кривой будет равна единице. Чем ближе значение ROC-AUC к единице, тем модель работает лучше. Значение <span class="math inline">\(0.5\)</span> указывает на то, что модель совсем не ухватывает закономерность и точность её предсказаний на уровне случайного угадывания — ROC-кривая в этом случае будет проходить близко к диагонали <span class="math inline">\([(0,0),(1,1)]\)</span>.</p>
 </section>
 </section>
 </section>
@@ -996,13 +996,13 @@ z = \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \thicksi
 <h2 data-number="10.4" class="anchored" data-anchor-id="пуассоновская-регрессия"><span class="header-section-number">10.4</span> Пуассоновская регрессия</h2>
 <section id="счетные-данные" class="level3" data-number="10.4.1">
 <h3 data-number="10.4.1" class="anchored" data-anchor-id="счетные-данные"><span class="header-section-number">10.4.1</span> Счетные данные</h3>
-<p>В жизни и практике мы часто сталкиваемся с так называемыми счётными величинами. Например, число комнат в квартире, количество детей в семье, число книг на полке, число людей, прошедших через турникет и т.д. Глобально — любые количества. Также как счётные величины можно рассмотреть шкалу Лайкерта или оценки по десятибалльной шкале — по сути, это количество набранных баллов<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>В жизни и практике мы часто сталкиваемся с так называемыми счётными величинами. Например, число комнат в квартире, количество детей в семье, число книг на полке, число людей, прошедших через турникет и т.&nbsp;д. Глобально — любые количества. Также как счётные величины можно рассмотреть шкалу Ликерта или оценки по&nbsp;десятибалльной шкале — по сути, это количество набранных баллов<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Какими свойствами обладают такие величины?</p>
 <ul>
 <li>Они могут принимать только неотрицательные целочисленные значения (<span class="math inline">\(x_i \in \mathbb{N}_{0}\)</span>)</li>
 <li>Разброс значений зависит от среднего значения (<span class="math inline">\(\text{var}(X) \propto \mathbb{E}(X)\)</span>)</li>
 </ul>
-<p>Общие линейные модели, строго говоря, применимые только к непрерывным величинам1. Иногда свойства данных позволяют использовать такие методы для моделирования счётных величин, однако так бывает далеко не всегда.</p>
+<p>Общие линейные модели, строго говоря, применимы только к непрерывным величинам. Иногда свойства данных позволяют использовать такие методы для моделирования счётных величин, однако так бывает далеко не всегда.</p>
 <p>Здесь мы обсудим самый простой подход к моделированию счетных величин, а также одну его модификацию, которая может быть полезна.</p>
 <p>Модели для счётных данных базируются на распределении Пуассона.</p>
 </section>
@@ -1036,10 +1036,10 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 </section>
 <section id="почему-общие-линейные-модели-плохо-работают" class="level3" data-number="10.4.3">
 <h3 data-number="10.4.3" class="anchored" data-anchor-id="почему-общие-линейные-модели-плохо-работают"><span class="header-section-number">10.4.3</span> Почему общие линейные модели плохо работают?</h3>
-<p>Два свойства счетны случайных величин, оговоренные в самом начале раздела, объясняют, почему общие линейные модели плохо работают (или, по крайне мере, могут плохо работать) на счетных данных.</p>
-<p>Первое свойство нам говорит о том, что количество не может быть отрицательным, и это логично. Обчная линейнная регрессия не имеет подобных ограничений, поэтому в предсказаниях будут появляться отрицательные значения. Что с ними делать не очень понятно.</p>
+<p>Два свойства счётных случайных величин, оговоренные в самом начале раздела, объясняют, почему общие линейные модели плохо работают (или, по крайне мере, могут плохо работать) на счетных данных.</p>
+<p>Первое свойство нам говорит о том, что количество не может быть отрицательным, и это логично. Обычная линейная регрессия не имеет подобных ограничений, поэтому в предсказаниях будут появляться отрицательные значения. Что с ними делать не очень понятно.</p>
 <p>Второе свойство говорит нам о том, что <em>изначально не будет выполнено допущение гомоскедастичности остатков</em>, так как чем выше математичекое ожидание, тем выше дисперсия. В итоге мы будем наблюдать воронкообразный паттер в распределении остатков.</p>
-<p>Таким образом, оценки коэффициентов модели будут неточны, ошибки завышены, а следовательно, и результатам тестирования статистической значимости параметров модели доверять нельзя.</p>
+<p>Таким образом, оценки коэффициентов модели будут неточны, ошибки завышены, а&nbsp;следовательно, и результатам тестирования статистической значимости параметров модели доверять нельзя.</p>
 <p>Что делать? Можно пойти простым путём — <em>логарифмировать целевую переменную</em> и построить модель для получившейся величины.</p>
 <p>Но более корректным вариантом будет построить модель, основанную на распределении, подходящем для счётных данных. В частности, пуассоновском распределении.</p>
 </section>
@@ -1072,7 +1072,7 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 <p>Так как пуассоновская модель исходит из предположения равенства дисперсии и математического ожидания, если мы не обнаруживаем сверхдисперсии, то все хорошо. Если же это допущение не выполнено, то</p>
 <ul>
 <li>оценки стандартных ошибок коэффициентов будут занижены</li>
-<li>тесты Вальда для коэффициентов модели дадут неправильные результаты — из-за того, что оценки стандартных ошибок занижены— уровень значимости будет занижен</li>
+<li>тесты Вальда для коэффициентов модели дадут неправильные результаты — из-за того, что оценки стандартных ошибок занижены&nbsp;— уровень значимости будет занижен</li>
 <li>тесты, основанные на сравнении правдоподобий, дадут смещенные результаты, так как соотношение девианс уже не будет подчиняться распределению <span class="math inline">\(\chi^2\)</span></li>
 </ul>
 <p>Происходят все эти проблемы из-за того, что для распределения Пуассона справедливы следующие соотношения:</p>
@@ -1111,7 +1111,7 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 <p>Также есть отличия и в статистических тестах:</p>
 <ul>
 <li>для анализа девиансы используются F-тесты</li>
-<li>для тестирования эначимости коэффициентов используются t-тесты</li>
+<li>для тестирования значимости коэффициентов используются t-тесты</li>
 </ul>
 <p>Это ключевые отличия квазипуассоновских моделей от пуассоновских — в остальном они полностью вписываются во фреймворк GLM.</p>
 
@@ -1122,7 +1122,7 @@ f(y) = \frac{\mu^y e - \mu}{y!}
 <hr>
 <ol>
 <li id="fn1"><p>А <a href="https://mathworld.wolfram.com/BernoulliDistribution.html">распределению Бернулли</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Хотя тут можно поспорить.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Хотя тут можно поспорить: для моделирования балла по шкале Ликерта для отдельного вопроса лучше использовать порядковую регрессию.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1306,18 +1306,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1349,7 +1338,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1357,7 +1366,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1454,7 +1463,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
