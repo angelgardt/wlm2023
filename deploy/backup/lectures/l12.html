@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>L // WLM 2023 - 11&nbsp; L12 // Линейные модели со смешанными эффектами</title>
+<title>11&nbsp; L12 // Линейные модели со&nbsp;смешанными эффектами – L // WLM 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3f14476484311c28f16e4ef7388d5d41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-317518b595e9c4efdce348cd04e6c053.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -125,7 +125,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -152,18 +152,18 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l12.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./l12.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со&nbsp;смешанными эффектами</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -193,7 +193,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время Визуализация данных</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">L2 // Предобработка данных. Дата и время. Визуализация данных</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -255,7 +255,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l12.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со&nbsp;смешанными эффектами</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -273,7 +273,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./l15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и конфирматорный факторный анализ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">L15 // Структурное моделирование и&nbsp;конфирматорный факторный анализ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -317,7 +317,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со смешанными эффектами</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">L12 // Линейные модели со&nbsp;смешанными эффектами</span></h1>
 </div>
 
 
@@ -347,28 +347,28 @@ window.Quarto = {
 <!--- Stats --->
 <section id="ограничения-изученных-ранее-линейных-моделей" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="ограничения-изученных-ранее-линейных-моделей"><span class="header-section-number">11.1</span> Ограничения изученных ранее линейных моделей</h2>
-<p>При построении обычных линейных моделей мы предполагаем, что наши наблюдения независимы. Однако зачастую это требование не выполняется в полной мере, и наши данные имеют некоторую группировку (clustered data), которую, возможно, мы даже не планировали.</p>
+<p>При построении обычных линейных моделей мы предполагаем, что наши наблюдения независимы. Однако зачастую это требование не выполняется в полной мере, и наши данные имеют некоторую группировку (clustered data), которую, возможно, мы даже не&nbsp;планировали.</p>
 <p>Примеры возможных группировок:</p>
 <ul>
 <li>измерения в разные периоды времени (разные партии химических реактивов, разные настройки аппаратуры)</li>
 <li>измерения в разных участках пространства (мониторы компьютеров могут различаться)</li>
 <li>повторные измерения (испытуемые / респонденты различаются между собой)</li>
-<li>измерения на разных группах испытуемых / респондентов (школьники разных классов в одной параллели могут различаться)</li>
+<li>измерения на разных группах испытуемых / респондентов (школьники разных классов в&nbsp;одной параллели могут различаться)</li>
 </ul>
-<p>Возникают <strong>внутригрупповые корреляции (intraclass correlations)</strong> — наблюдения из одной группы более похожи друг на друга, чем наблюдениях из разных групп.</p>
+<p>Возникают <strong>внутригрупповые корреляции (intraclass correlations)</strong> — наблюдения из&nbsp;одной группы более похожи друг на&nbsp;друга, чем наблюдениях из&nbsp;разных групп.</p>
 <ul>
 <li>Подобную структуру данных некорректно игнорировать — увеличивается вероятность ошибиться с выводами.</li>
 <li>Интуитивное решение: включить группирующие факторы в модель в качестве предикторов — технически так, безусловно, сделать можно, однако такой подход,
 <ul>
 <li>во-первых, значительно усложняет модель (чрезмерно увеличивается количество параметров),</li>
-<li>а во-вторых, ограничивает широту обобщения результатов (интерпретаировать параметры модели можно только для конкретных испытуемых / респондентов / учебных классов).</li>
+<li>а во-вторых, ограничивает широту обобщения результатов (интерпретировать параметры модели можно только для&nbsp;конкретных испытуемых / респондентов / учебных классов).</li>
 </ul></li>
 </ul>
 <p>Чтобы решить возникающие трудности, необходимо ввести в модель <strong>случайные факторы</strong>.</p>
 </section>
 <section id="случайные-vs-фиксированные-факторы" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="случайные-vs-фиксированные-факторы"><span class="header-section-number">11.2</span> Случайные vs фиксированные факторы</h2>
-<p>До сих пор мы работали только с <strong>фиксированными факторами</strong> — моделировали среднее значение для каждго уровня фактора.</p>
+<p>До сих пор мы работали только с <strong>фиксированными факторами</strong> — моделировали среднее значение для каждого уровня фактора.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -398,7 +398,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -429,7 +429,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>На один и тот же фактор можно смотреть и как на случайный, и как на фиксированный в зависимости от задач исследователя. Так как мы хотим моделировать дисперсию, то у случайного фактора должно быть минимум пять градаций.</p>
+<p>На один и тот же фактор можно смотреть и как на случайный, и как на фиксированный в&nbsp;зависимости от&nbsp;задач исследователя. Так как мы хотим моделировать дисперсию, считается, что у&nbsp;случайного фактора должно быть минимум пять градаций.</p>
 </section>
 <section id="виды-glmm-и-их-математическая-формулировка" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="виды-glmm-и-их-математическая-формулировка"><span class="header-section-number">11.3</span> Виды GLMM и их математическая формулировка</h2>
@@ -479,32 +479,43 @@ y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \vareps
 <section id="методы-подбора-параметров-в-смешанных-моделях" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="методы-подбора-параметров-в-смешанных-моделях"><span class="header-section-number">11.4</span> Методы подбора параметров в смешанных моделях</h2>
 <p>Параметры в смешанных моделях могут подбираться двумя методами. Первый из них — <strong>метод максимального правдоподобия (maximum likelihood, ML)</strong>.</p>
-<p>Однако когда мы пытаемся оценить дисперсию методом максимального правдоподобия, оценки получаются смещенными. Это происходит потому, что сразу приходится оценивать и <span class="math inline">\(\beta\)</span>, и дисперсии.</p>
+<p>Однако когда мы пытаемся оценить дисперсию методом максимального правдоподобия, оценки получаются смещенными. Это происходит потому, что сразу приходится оценивать и&nbsp;<span class="math inline">\(\beta\)</span>, и&nbsp;дисперсии.</p>
 <p>Этого можно избежать, применяя метод <strong>ограниченного максимального правдоподобия (restricted maximum likelihood, REML)</strong>. Данный метод позволяет с помощью математических преобразований занулить <span class="math inline">\(\beta\)</span> и получить несмещенные оценки дисперсий.</p>
 <p>REML-оценки <span class="math inline">\(\beta\)</span> стремятся к ML-оценкам при увеличении объема выборки.</p>
-<p><strong>Так что же использовать, REML или ML?</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Так что же использовать, REML или ML?
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Если нужны точные оценки фиксированных эффектов — ML.</li>
-<li>Если нужны точные оценки случайных эффектов — REML.</li>
-<li>Если нужно работать с правдоподобиями — следите, чтобы в моделях, подобранных REML была одинаковая фиксированная часть.</li>
-<li>Для обобщенных негауссовских смешанных линейных моделей REML не определен — там используется ML.</li>
+<li>Если нужны точные оценки фиксированных эффектов&nbsp;— ML.</li>
+<li>Если нужны точные оценки случайных эффектов&nbsp;— REML.</li>
+<li>Если нужно работать с правдоподобиями&nbsp;— следите, чтобы в моделях, подобранных REML была одинаковая фиксированная часть.</li>
+<li>Для обобщенных негауссовских смешанных линейных моделей REML не&nbsp;определен&nbsp;— там используется ML.</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="диагностика-модели" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="диагностика-модели"><span class="header-section-number">11.5</span> Диагностика модели</h2>
 <section id="индуцированные-корреляции" class="level3" data-number="11.5.1">
 <h3 data-number="11.5.1" class="anchored" data-anchor-id="индуцированные-корреляции"><span class="header-section-number">11.5.1</span> Индуцированные корреляции</h3>
-<p>Появление в модели случайного фактора позволяет учесть взаимосвязь наблюдений для каждого из респондентов — «индуцированные» корреляции.</p>
+<p>Появление в модели случайного фактора позволяет учесть взаимосвязь наблюдений для каждого из респондентов&nbsp;— «индуцированные» корреляции.</p>
 <p>Посмотрим внимательно на случайную часть модели.</p>
-<p>Случайные эффекты, распределенные нормально со средним 0 и некоторой дисперсией</p>
+<p>Случайные эффекты, распределенные нормально со средним <span class="math inline">\(0\)</span> и некоторой дисперсией <span class="math inline">\(\sigma^2_\eta\)</span></p>
 <p><span class="math display">\[
 \eta \thicksim \mathcal{N}(0, \sigma^2_\eta)
 \]</span></p>
-<p>Остатки модели, независимые распределенные нормально со средним 0 и некоторой дисперсией</p>
+<p>Остатки модели, независимые распределенные нормально со средним 0 и&nbsp;некоторой дисперсией</p>
 <p><span class="math display">\[
 \varepsilon \overset{\text{i.i.d}}{\thicksim} \mathcal{N}(0, \sigma^2)
 \]</span></p>
-<p>Путем математических преобразований матриц ковариаций можно получить, что корреляция между наблюдениями одного субъекта равна следующему выражению.</p>
+<p>Путем математических преобразований матриц ковариаций можно получить, что&nbsp;корреляция между наблюдениями одного субъекта равна следующему выражению.</p>
 <p><span class="math display">\[
 \text{ICC} = \frac{\sigma^2_\eta}{\sigma^2_\eta + \sigma^2}
 \]</span></p>
@@ -530,7 +541,7 @@ y_{ij} &amp;= \beta_0 + \beta_1 x_{ij} + \eta_{0i} + \eta_{1ij} x_{ij} + \vareps
 <li>распределение остатков</li>
 <li>(не)зависимость остатков от предсказанных значений</li>
 </ul>
-<p>Но так как в модели темерь есть и случайные факторы, мы можем изучать зависимость остатков от случайных факторов.</p>
+<p>Но так как в модели теперь есть и случайные факторы, мы можем изучать зависимость остатков от случайных факторов.</p>
 </section>
 </section>
 <section id="тестирование-гипотез" class="level2" data-number="11.6">
@@ -583,8 +594,8 @@ t &amp;= \frac{b_k - \beta_k}{\text{se}_{b_k}} = \frac{b_k}{\text{se}_{b_k}} \th
 <li>В основе анализа стоит подбор параметров логистической регрессионной модели</li>
 <li>Параметры логистической регрессии подбираются методом максимального правдоподобия</li>
 <li>Угловые коэффициенты логистической регрессии позволяют сказать, во сколько раз изменяется соотношение шансов для события при увеличении предиктора на единицу (или при переходе от базового уровня фактора к данному уровню)</li>
-<li>Для визуализации результатов лучше проводить обратное логит-преобразование и отражать зависимую переменную в терминах вероятностей</li>
-<li>Группирующие факторы могут определять дисперсию свободного члена модели или дисперсию углового коэффициента и свободного члена модели</li>
+<li>Для визуализации результатов лучше проводить обратное логит-преобразование и отражать зависимую переменную в&nbsp;терминах вероятностей</li>
+<li>Группирующие факторы могут определять дисперсию свободного члена модели или дисперсию углового коэффициента и&nbsp;свободного члена модели</li>
 <li>Внутриклассовые корреляции могут быть вычислены лишь приблизительно, но их рассмотрение дает важную информацию. Если ICC равен нулю, то лучше отказаться от рассмотрения случайных факторов и применить обычную GLM.</li>
 </ul>
 <p>Аналогично можно получить смешанные модели для счетных переменных.</p>
@@ -772,18 +783,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -815,7 +815,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -823,7 +843,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -920,7 +940,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
